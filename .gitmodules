@@ -1,0 +1,3 @@
+[submodule "expression-theme"]
+	path = expression-theme
+	url = https://gitlab.v7digital.com/cossette-vancouver/expression-theme.git

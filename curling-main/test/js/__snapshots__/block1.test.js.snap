@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Posts component Applies className to outermost element 1`] = `
+<div
+  className="food"
+>
+  <p>
+    Hi Roys
+  </p>
+</div>
+`;
+
+exports[`Posts component Matches snapshot with basic props 1`] = `
+<div
+  className="post-list-wrapper"
+>
+  <p>
+    Hi Roys
+  </p>
+</div>
+`;

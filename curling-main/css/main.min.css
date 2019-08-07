@@ -1,0 +1,478 @@
+/**
+ * Base imports
+ */
+/**
+ * Primary Palette
+ */
+/**
+ * Secondary Palette
+ */
+@font-face {
+  font-family: "Knockout";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Knockout-49Liteweight_gdi.woff");
+}
+
+@font-face {
+  font-family: "Meta Serif Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/KMetaSerifPro-Book_gdi.woff");
+}
+
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Adobe Garamond Pro.woff");
+}
+
+/*-------------------------------------------------------------------
+	Mixins
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	Media queries
+-------------------------------------------------------------------*/
+/*-------------------------------------------------------------------
+	Fonts
+-------------------------------------------------------------------*/
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+  background-color: #d8d8d8;
+  color: #ffffff;
+  font-family: "Knockout";
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-feature-settings: '"liga", "dlig"';
+  -ms-font-feature-settings: '"liga", "dlig"';
+  -webkit-font-feature-settings: '"liga", "dlig"';
+  font-feature-settings: '"liga", "dlig"';
+}
+
+.highlight {
+  font-family: "Knockout";
+  font-size: 200px;
+  color: #000000;
+  letter-spacing: 3.08px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: "Knockout";
+  font-size: 120px;
+  color: #000000;
+  letter-spacing: 0.95px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Knockout";
+  font-size: 60px;
+  color: #000000;
+  letter-spacing: 0.6px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: "Knockout";
+  font-size: 35px;
+  color: #000000;
+  letter-spacing: 1px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+h4 {
+  font-family: "Knockout";
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0.8px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.quotes {
+  font-family: "Meta Serif Pro";
+  font-size: 35px;
+  color: #000000;
+  letter-spacing: 0.54px;
+  line-height: 40px;
+}
+
+p {
+  font-family: "Meta Serif Pro";
+  font-size: 16px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 20px;
+}
+
+p a {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+p a:hover {
+  cursor: pointer;
+  color: #f16682;
+}
+
+li {
+  font-family: "Meta Serif Pro";
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23px;
+}
+
+.inverted {
+  color: #ffffff;
+}
+
+/**
+ * Layout imports
+ */
+.header-red .nav-menu-top {
+  background-color: #4c4c4e;
+  color: #ffffff;
+}
+
+.header-red .nav-menu-primary {
+  background-color: #ed1940;
+  color: #ffffff;
+}
+
+.nav-menu-top-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-menu-primary-wrapper {
+  display: flex;
+  align-items: center;
+  height: 120px;
+}
+
+.menu-logo {
+  margin-top: 20px;
+  margin-bottom: 21px;
+  margin-right: 32px;
+}
+
+.menu-nav {
+  display: flex;
+  list-style-type: none;
+  height: 100%;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  padding-left: 19px;
+  padding-right: 19px;
+}
+
+.menu-item:hover {
+  background-color: #ffffff;
+  color: #000000;
+  cursor: pointer;
+}
+
+.menu-item:hover .inverted {
+  color: #000000;
+}
+
+/**
+ * Modules imports
+ */
+.btn {
+  padding: 16px 52px 14px;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  border: none;
+  background-color: #ed1940;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Knockout";
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 15px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  font-size: 20px;
+  max-width: 100%;
+  white-space: normal;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.btn img {
+  margin-left: 14px;
+  vertical-align: middle;
+}
+
+.btn:hover {
+  background-color: #fff26e;
+  color: #000000;
+  cursor: pointer;
+}
+
+.btn-black {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn-yellow {
+  background-color: #fff26e;
+  color: #000000;
+}
+
+.btn-secondary {
+  font-family: "Adobe Garamond Pro";
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23px;
+}
+
+.btn-secondary span {
+  position: relative;
+}
+
+.btn-secondary:after {
+  display: inline-block;
+  margin-left: 10px;
+  vertical-align: middle;
+  content: '';
+  cursor: pointer;
+  height: 3px;
+  background: #F16681;
+  -webkit-transition: all 150ms;
+  -o-transition: all 150ms;
+  transition: all 150ms;
+  width: 30px;
+}
+
+.btn-secondary:hover {
+  display: block;
+  cursor: pointer;
+}
+
+.btn-secondary:hover span:before,
+.btn-secondary:hover span:after {
+  display: block;
+  position: absolute;
+  right: -41px;
+  height: 3px;
+  width: 15px;
+  opacity: 1;
+  content: '';
+  background: #f16682;
+  -webkit-transition: all 150ms;
+  -o-transition: all 150ms;
+  transition: all 150ms;
+}
+
+.btn-secondary:hover span:before {
+  top: calc(50% - 6px);
+  -webkit-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+}
+
+.btn-secondary:hover span:after {
+  top: calc(50% + 4px);
+  -webkit-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+}
+
+.btn-inverted {
+  color: #ffffff;
+}
+
+.checkbox-container {
+  display: block;
+  position: relative;
+  margin-bottom: 2px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  padding-left: 41px;
+  padding-right: 11px;
+  font-family: "Meta Serif Pro";
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkbox,
+.radio {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  height: 23px;
+  width: 23px;
+  border: 3px solid #000000;
+  transform: translate(0, -50%);
+}
+
+.radio {
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .checkbox {
+  background-color: #000000;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-container input:checked ~ .checkbox {
+  background-color: #000000;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-container:hover input ~ .radio:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 3px;
+  left: 3px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 3px solid #000000;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.checkbox-container input:checked ~ .radio:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkbox-container .radio:after {
+  top: 3px;
+  left: 3px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: #000000;
+}
+
+.checkbox-error {
+  background-color: #ed1940;
+  color: #ffffff;
+}
+
+.checkbox-error .checkbox,
+.checkbox-error .radio {
+  border: 3px solid #ffffff;
+}
+
+.checkbox-error-message {
+  font-family: "Knockout";
+  font-size: 16px;
+  color: #ed1940;
+  letter-spacing: 0;
+  line-height: 25px;
+}
+
+/**
+ * Test imports
+ */
+.content-fixed {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1440px;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.footer-nav-wrapper {
+  display: flex;
+}
+
+.footer-nav-left-items {
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 200px;
+}
+
+.footer-nav-left,
+.footer-nav-right {
+  flex: 1 0 50%;
+}
+
+.footer-nav-legal-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}

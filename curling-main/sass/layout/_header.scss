@@ -1,0 +1,52 @@
+.header-red {
+    .nav-menu-top {
+        background-color: $grey;
+        color: $white;
+    }
+
+    .nav-menu-primary {
+        background-color: $red;
+        color: $white;
+    }
+}
+
+.nav-menu-top-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-menu-primary-wrapper {
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+.menu-logo {
+    margin-top: 20px;
+    margin-bottom: 21px;
+    margin-right: 32px;
+}
+
+.menu-nav {
+    display: flex;
+    list-style-type: none; 
+    height: 100%;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 14px;
+    padding-left: 19px;
+    padding-right: 19px;
+    &:hover {
+        background-color: $white;
+        color: $black;
+        cursor: pointer;
+    }
+
+    &:hover .inverted {
+        color: $black;
+    }
+}
