@@ -3,6 +3,12 @@
 ?>
 
 <html <?php language_attributes(); ?>>
+
+<?php
+	set_query_var('header_config', [
+		'header_color' => 'red'
+	]);
+?>
 <?php get_header(); ?>
 
 <body class="<?php echo join(' ', get_body_class()); ?>">

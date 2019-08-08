@@ -1,10 +1,3 @@
-<?php
-    $menu_locations = get_nav_menu_locations();
-    $top_left_menu_items = wp_get_nav_menu_items( $menu_locations['top-menu'] );
-    $top_right_menu_items = wp_get_nav_menu_items( 'Top Right' );
-    $primary_menu_items = wp_get_nav_menu_items( $menu_locations['primary'] );
-?>
-
 <?php echo !WP_DEBUG ?: "<!-- Begin output from ".basename(__FILE__)."-->"; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
@@ -27,64 +20,7 @@
 </head>
 
 <body class="<?php echo join(' ', get_body_class()); ?>">
-    <header class="header-red">
-        <div class="nav-menu-top">
-            <div class="nav-menu-top-wrapper content-fixed">
-                <div class="nav-menu-top-left-wrapper">
-                    <?php
-                        if ($top_left_menu_items) {
-                    ?>
-                        <ul class="menu-nav">
-                            <?php
-                                foreach( $top_left_menu_items as $menu_item ) {
-                            ?>
-                                <li class="menu-item"><h4 class="inverted"><?php echo $menu_item->title; ?></h4></li>
-                            <?php
-                                }
-                            ?>
-                        </ul>
-                    <?php
-                        }
-                    ?>
-                </div>
-                <div class="nav-menu-top-right-wrapper">
-                    <?php
-                        if ($top_right_menu_items) {
-                    ?>
-                        <ul class="menu-nav">
-                            <?php
-                                foreach( $top_right_menu_items as $menu_item ) {
-                            ?>
-                                <li class="menu-item"><h4 class="inverted"><?php echo $menu_item->title; ?></h4></li>
-                            <?php
-                                }
-                            ?>
-                        </ul>
-                    <?php
-                        }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="nav-menu-primary">
-            <div class="nav-menu-primary-wrapper content-fixed">
-                <img class="menu-logo" src="<?php echo get_stylesheet_directory_uri()."/images/logo-full.svg"; ?>" alt="Site Logo" />
-                <?php
-                    if ($primary_menu_items) {
-                ?>
-                    <ul class="menu-nav">
-                        <?php
-                            foreach( $primary_menu_items as $menu_item ) {
-                        ?>
-                            <li class="menu-item"><h4 class="inverted"><?php echo $menu_item->title; ?></h4></li>
-                        <?php
-                            }
-                        ?>
-                    </ul>
-                <?php
-                    }
-                ?>
-            </div>
-        </div>
+    <header>
+        <?php get_template_part('template-parts/content', 'nav'); ?>
     </header>
 <?php echo !WP_DEBUG ?: "<!-- End output from ".basename(__FILE__)."-->"; ?>

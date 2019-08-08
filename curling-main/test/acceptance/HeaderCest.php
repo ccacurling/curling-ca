@@ -1,6 +1,6 @@
 <?php 
 
-class BasicCest
+class HeaderCest
 {
     public function _before(AcceptanceTester $I)
     {
@@ -9,6 +9,6 @@ class BasicCest
     public function tryToTest(AcceptanceTester $I)
     {
         $I->amOnPage('/');
-        $I->see('Curling');  
+        $I->seeElement('.header-grey');
     }
 }

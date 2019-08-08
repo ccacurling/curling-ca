@@ -14,9 +14,10 @@
 
 <?php echo !WP_DEBUG ?: "<!-- Begin output from ".basename(__FILE__)."-->"; ?>
 <footer id="footer" class="site-footer">
-    <div class="footer-nav">
+    <div class="footer-nav footer-nav-red">
         <div class="footer-nav-wrapper content-fixed">
             <div class="footer-nav-left">
+                <img class="footer-logo" src="<?php echo get_stylesheet_directory_uri()."/images/logo-full.svg"; ?>" alt="Site Logo" />
                 <?php
                     if ($top_left_menu_items) {
                 ?>
@@ -37,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="footer-nav-legal">
+    <div class="footer-nav-legal footer-nav-legal-red">
         <div class="footer-nav-legal-wrapper content-fixed">
             <?php
                 if ($primary_menu_items) {

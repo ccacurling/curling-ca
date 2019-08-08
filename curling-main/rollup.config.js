@@ -7,35 +7,67 @@ import fs from 'fs';
 
 const configs = [];
 
-const files = fs.readdirSync('src/blocks');
+const jsFiles = fs.readdirSync('./js/');
+const blockFiles = fs.readdirSync('js/blocks');
 
-files.forEach(file => {
-  var i = file.lastIndexOf(".");
+jsFiles.forEach(file => {
+  var i = file.lastIndexOf(".js");
   var filename = i < 0 ? file : file.substr(0, i);
 
-  for (var z = 0; z < 2; z++) {
-    configs.push({
-      input: [ `src/blocks/${file}/src/index.js` ],
-      output: {
-        name: filename,
-        file: z==0 ? `src/blocks/${file}/js/index.js` : `dist/${file}.min.js`,
-        format: "cjs"
-      },
-      plugins: [
-        multiEntry(),
-        babel({
-          exclude: "node_modules/**",
-          presets: ["@babel/env", "@babel/preset-react"]
-        }),
-        resolve({
-          browser: true,
-          mainFields: ["jsnext:main"]
-        }),
-        commonjs(),
-        z==0 ? null : uglify()
-      ]
-    });
+  if (i < 0) {
+    return;
   }
+
+  configs.push({
+    input: [ './js/' + file ],
+    output: {
+      name: filename,
+      file: `./js/dist/${filename}.min.js`,
+      format: "cjs"
+    },
+    plugins: [
+      multiEntry(),
+      babel({
+        exclude: "dist/**",
+        presets: ["@babel/env", "@babel/preset-react"]
+      }),
+      resolve({
+        browser: true,
+        mainFields: ["jsnext:main"]
+      }),
+      commonjs(),
+      uglify()
+    ]
+  });
 });
+
+// blockFiles.forEach(file => {
+//   var i = file.lastIndexOf(".");
+//   var filename = i < 0 ? file : file.substr(0, i);
+
+//   for (var z = 0; z < 2; z++) {
+//     configs.push({
+//       input: [ `js/blocks/${file}/src/index.js` ],
+//       output: {
+//         name: filename,
+//         file: z==0 ? `js/blocks/${file}/js/index.js` : `js/dist/${file}.min.js`,
+//         format: "cjs"
+//       },
+//       plugins: [
+//         multiEntry(),
+//         babel({
+//           exclude: "node_modules/**",
+//           presets: ["@babel/env", "@babel/preset-react"]
+//         }),
+//         resolve({
+//           browser: true,
+//           mainFields: ["jsnext:main"]
+//         }),
+//         commonjs(),
+//         z==0 ? null : uglify()
+//       ]
+//     });
+//   }
+// });
 
 export default configs;

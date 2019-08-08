@@ -17,6 +17,19 @@
     color: $black;
 }
 
+.footer-nav {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    margin-top: 11px;
+}
+
+.footer-nav-red {
+    background-color: $red;
+}
+
 .footer-nav-wrapper {
     display: flex;
 }
@@ -32,7 +45,17 @@
     flex: 1 0 50%;
 }
 
+.footer-nav-left {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer-nav-legal-red {
+    background-color: $red;
+}
+
 .footer-nav-legal-wrapper {
     display: flex;
     justify-content: flex-end;
+    border-top: 1px solid $white;
 }

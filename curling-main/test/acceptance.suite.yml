@@ -11,3 +11,7 @@ modules:
             url: http://local.curling.ca
             browser: chrome
         - \Helper\Acceptance
+extensions:
+    enabled:
+        - Codeception\Extension\RunProcess:
+            - chromedriver
