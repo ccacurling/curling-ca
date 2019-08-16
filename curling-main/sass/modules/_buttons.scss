@@ -33,8 +33,21 @@
     }
 }
 
+.btn-small {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 4px;
+}
+
 .btn-black {
     background-color: $black;
+    color: $white;
+}
+
+.btn-grey {
+    background-color: $grey;
     color: $white;
 }
 

@@ -9,53 +9,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-left: 135px;
+    padding-right: 135px;
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-color: $white;
     color: $black;
 }
 
-.footer-nav {
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-.footer-logo {
-    margin-top: 11px;
-}
-
-.footer-nav-red {
-    background-color: $red;
-}
-
-.footer-nav-wrapper {
-    display: flex;
-}
-
-.footer-nav-left-items  {
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 200px;
-}
-
-.footer-nav-left,
-.footer-nav-right {
-    flex: 1 0 50%;
-}
-
-.footer-nav-left {
-    display: flex;
-    align-items: flex-start;
-}
-
-.footer-nav-legal-red {
-    background-color: $red;
-}
-
-.footer-nav-legal-wrapper {
-    display: flex;
-    justify-content: flex-end;
-    border-top: 1px solid $white;
+.content-fixed-padding {
+    padding-left: 135px;
+    padding-right: 135px;
 }

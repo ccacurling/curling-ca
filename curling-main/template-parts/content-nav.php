@@ -1,8 +1,7 @@
 <?php
-    $menu_locations = get_nav_menu_locations();
-    $top_left_menu_items = wp_get_nav_menu_items( $menu_locations['top-menu'] );
-    $top_right_menu_items = wp_get_nav_menu_items( 'Top Right' );
-    $primary_menu_items = wp_get_nav_menu_items( $menu_locations['primary'] );
+    $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Top Left' );
+    $top_right_menu_items = wp_get_nav_menu_items( 'Menu - Top Right' );
+    $primary_menu_items = wp_get_nav_menu_items( 'Menu - Main' );
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
@@ -31,9 +30,9 @@
     ];
 ?>
 
-<div class="header-<?php echo $header_color; ?>">
+<div class="header header-<?php echo $header_color; ?>">
     <div class="nav-menu-top">
-        <div class="nav-menu-top-wrapper content-fixed">
+        <div class="nav-menu-top-wrapper content-fixed content-fixed-padding">
             <div class="nav-menu-top-left-wrapper">
                 <?php
                     if ($top_left_menu_items) {
@@ -63,6 +62,10 @@
                         <?php
                             }
                         ?>
+                        <li class="menu-item menu-item-donate"><h4 class="menu-item-title">Donate</h4></li>
+                    </ul>
+                    <ul class="menu-nav menu-nav-language">
+                        <li class="menu-item"><h4 class="menu-item-title">Fr</h4></li>
                     </ul>
                 <?php
                     }
@@ -71,7 +74,7 @@
         </div>
     </div>
     <div class="nav-menu-primary">
-        <div class="nav-menu-primary-wrapper content-fixed">
+        <div class="nav-menu-primary-wrapper content-fixed content-fixed-padding">
             <img class="menu-logo" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
             <?php
                 if ($primary_menu_items) {
@@ -115,7 +118,7 @@ function create_menu_bar($name, $menu_items) {
   if ($menu_items) {
 ?>
   <div class="nav-menu-popup" data-name="<?php echo $name; ?>">
-    <div class="nav-menu-popup-wrapper content-fixed">
+    <div class="nav-menu-popup-wrapper content-fixed content-fixed-padding">
       <ul class="menu-nav">
         <?php
           foreach( $menu_items as $menu_item ) {
