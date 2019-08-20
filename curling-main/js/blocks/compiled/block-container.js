@@ -4,6 +4,7 @@ var __ = wp.i18n.__;
 var registerBlockType = wp.blocks.registerBlockType;
 var InnerBlocks = wp.editor.InnerBlocks;
 var createElement = wp.element.createElement;
+var withDispatch = wp.data.withDispatch;
 registerBlockType("cossette/block-container", {
   title: "Block Container",
   icon: React.createElement("svg", {
@@ -23,14 +24,18 @@ registerBlockType("cossette/block-container", {
       type: "string"
     }
   },
-  edit: function edit(_ref) {
+  // TODO: This is a hack which forces the template to appear valid.
+  // See https://github.com/WordPress/gutenberg/issues/11681
+  edit: withDispatch(function (dispatch) {
+    dispatch('core/editor').setTemplateValidity(true);
+  })(function (_ref) {
     var className = _ref.className;
     return React.createElement("div", {
       className: className
     }, React.createElement(InnerBlocks, {
       templateLock: false
     }));
-  },
+  }),
   save: function save() {
     return React.createElement("div", null, React.createElement(InnerBlocks.Content, null));
   }

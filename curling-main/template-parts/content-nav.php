@@ -57,14 +57,14 @@
                         <?php
                             foreach( $top_right_menu_items as $menu_item ) {
                         ?>
-                            <li class="menu-item"><h4 class="menu-item-title menu-nav-small"><?php echo $menu_item->title; ?></h4></li>
+                            <li class="menu-item"><h4 class="menu-item-title menu-item-small"><?php echo $menu_item->title; ?></h4></li>
                         <?php
                             }
                         ?>
-                        <li class="menu-item menu-item-donate"><h4 class="menu-item-title menu-nav-small">Donate</h4></li>
+                        <li class="menu-item menu-item-donate"><h4 class="menu-item-title menu-item-small">Donate</h4></li>
                     </ul>
                     <ul class="menu-nav menu-nav-language">
-                        <li class="menu-item menu-item-language"><h4 class="menu-item-title menu-nav-small">Fr</h4></li>
+                        <li class="menu-item menu-item-language"><h4 class="menu-item-title menu-item-small">Fr</h4></li>
                     </ul>
                 <?php
                     }
@@ -129,43 +129,43 @@ function create_menu_bar($name, $menu_items) {
     $first_item = array_shift($menu_items);
     $is_events = $first_item->title === '[EVENTS]';
 ?>
-  <div class="nav-menu-popup <?php echo $is_events ? 'nav-menu-popup-event' : 'nav-left-offset '; ?>" data-name="<?php echo $name; ?>">
+  <div class="nav-menu-popup <?php echo $is_events ? 'nav-menu-popup-event' : 'nav-left-offset'; ?>" data-name="<?php echo $name; ?>">
     <div class="nav-menu-popup-wrapper content-fixed content-fixed-padding">
-      <div class="nav-menu-popup-left">
+      <div class="<?php echo $is_events ? 'nav-menu-popup-event-left' : 'nav-menu-popup-left'; ?>">
         <?php
           if ($is_events) {
         ?>
           <h2 class="menu-h2 gray">EXPLORE ALL UPCOMING EVENTS</h2>
           <ul class="menu-nav menu-nav-events">
-            <li class="menu-subitem">
+            <li class="menu-subitem menu-subitem-event">
               <div class="menu-subitem-wrapper">
                 <span class="menu-item-title menu-item-subtitle gray">HOME HARDWARE CANADA CUP</span>
                 <span class="menu-item-title menu-item-subtitle menu-item-info gray">November 27–Dececember 1, 2019</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
-            <li class="menu-subitem">
+            <li class="menu-subitem menu-subitem-event">
               <div class="menu-subitem-wrapper">
                 <span class="menu-item-title menu-item-subtitle gray">CONTINENTAL CUP</span>
                 <span class="menu-item-title menu-item-subtitle menu-item-info gray">January 9–12, 2020</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
-            <li class="menu-subitem">
+            <li class="menu-subitem menu-subitem-event">
               <div class="menu-subitem-wrapper">
                 <span class="menu-item-title menu-item-subtitle gray">SCOTTIES TOURNAMENT OF HEARTS</span>
                 <span class="menu-item-title menu-item-subtitle menu-item-info gray">February 15-23, 2020</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
-            <li class="menu-subitem">
+            <li class="menu-subitem menu-subitem-event">
               <div class="menu-subitem-wrapper">
                 <span class="menu-item-title menu-item-subtitle gray">TIM HORTONS BRIER</span>
                 <span class="menu-item-title menu-item-subtitle menu-item-info gray">February 28–March 8, 2020</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
-            <li class="menu-subitem">
+            <li class="menu-subitem menu-subitem-event">
               <div class="menu-subitem-wrapper">
                 <span class="menu-item-title menu-item-subtitle gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</span>
                 <span class="menu-item-title menu-item-subtitle menu-item-info gray">March 14-22, 2020</span>
@@ -182,7 +182,7 @@ function create_menu_bar($name, $menu_items) {
           }
         ?>
       </div>
-      <div class="nav-menu-popup-centre">
+      <div class="<?php echo $is_events ? 'nav-menu-popup-event-centre' : 'nav-menu-popup-centre'; ?>">
         <?php
           if ($is_events) {
         ?>
@@ -191,11 +191,11 @@ function create_menu_bar($name, $menu_items) {
         <?php
           } else {
         ?>
-        <ul class="menu-nav">
+        <ul class="nav-menu-popup-centre-menu-nav">
           <?php
             foreach( $menu_items as $menu_item ) {
           ?>
-            <li class="menu-subitem"><span class="menu-item-title menu-item-subtitle gray"><?php echo $menu_item->title; ?></span><img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" /></li>
+            <li class="nav-menu-popup-centre-menu-subitem menu-subitem"><span class="menu-item-title menu-item-subtitle gray"><?php echo $menu_item->title; ?></span><img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" /></li>
           <?php
             }
           ?>
@@ -204,7 +204,7 @@ function create_menu_bar($name, $menu_items) {
           }
         ?>
       </div>
-      <div class="nav-menu-popup-right">
+      <div class="<?php echo $is_events ? 'nav-menu-popup-event-right' : 'nav-menu-popup-right'; ?>">
         <img class="ad" src="<?php echo get_stylesheet_directory_uri()."/images/img-ad-sample.png"; ?>" alt="Ad" />
       </div>
     </div>

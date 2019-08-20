@@ -27,16 +27,19 @@ registerBlockType("cossette/block-container", {
       type: "string"
     }
   },
-
-  edit({ className }) {
+  // TODO: This is a hack which forces the template to appear valid.
+  // See https://github.com/WordPress/gutenberg/issues/11681
+  edit: withDispatch(dispatch => {
+    dispatch('core/editor').setTemplateValidity(true);
+  })(({ className }) => {
     return (
       <div className={className}>
         <InnerBlocks templateLock={false} />
       </div>
     );
-  },
+  }),
 
-  save() {
+  save: () => {
     return (
       <div>
         <InnerBlocks.Content />

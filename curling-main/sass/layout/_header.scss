@@ -1,0 +1,53 @@
+
+.header-red {
+    .nav-menu-top-wrapper {
+      background-color: $white;
+      color: $gray;
+  
+      .menu-item {
+        .menu-item-title {
+          color: $gray;
+        }
+  
+        &.menu-item-donate {
+          background-color: $red;
+          .menu-item-title {
+            color: $white;
+          }
+        }
+      }
+  
+      .menu-item:hover { 
+        .menu-item-title {
+          color: $red;
+        }
+      }
+  
+      .menu-item .menu-item-title.menu-item-selected {
+        color: $red;
+      }
+    }
+  
+    .nav-menu-primary-wrapper {
+      background-color: $red;
+      color: $white;
+  
+      .menu-item {
+        .menu-item-title {
+          color: $white;
+        }
+      }
+  
+      .menu-item.active {
+        background-color: $white;
+        .menu-item-title {
+          color: $gray;
+        }
+      }
+  
+      .menu-item .menu-item-title.menu-item-selected {
+        color: $gray;
+      }
+    }
+  }
+  
