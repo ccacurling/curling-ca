@@ -11,7 +11,7 @@ body {
     font-family: $knockout;
 
     // TODO: TEMP
-    background-color: $light-grey;
+    background-color: $white;
     background-image: linear-gradient(45deg, $off-white 25%, transparent 25%, transparent 75%, $off-white 75%, $off-white),
     linear-gradient(45deg, $off-white 25%, transparent 25%, transparent 75%, $off-white 75%, $off-white);
     background-size: 120px 120px;
@@ -22,6 +22,11 @@ body {
 *:before,
 *:after {
     box-sizing: inherit;
+}
+
+.content {
+    font-size: 0;
+    line-height: 0;
 }
 
 body,
@@ -43,6 +48,11 @@ ul {
     -ms-font-feature-settings: '"liga", "dlig"';
     -webkit-font-feature-settings: '"liga", "dlig"';
     font-feature-settings: '"liga", "dlig"';
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .highlight {
@@ -69,7 +79,7 @@ h2 {
     font-size: 60px;
     color: $black;
     letter-spacing: 0.6px;
-    // line-height: 52px;
+    line-height: 36px;
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -88,8 +98,8 @@ h4 {
     font-family: $knockout;
     font-size: 20px;
     color: $black;
-    letter-spacing: 0.8px;
-    // line-height: 20px;
+    letter-spacing: 1px;
+    line-height: 26px;
     font-weight: 300;
     text-transform: uppercase;
 }
@@ -132,6 +142,6 @@ li {
     color: $white;
 }
 
-.grey {
-    color: $grey;
+.gray {
+    color: $gray;
 }

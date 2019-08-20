@@ -43,7 +43,7 @@
     border-radius: 50%;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add a gray background color */
 .checkbox-container:hover input ~ .checkbox {
     background-color: $black;
 }
@@ -53,7 +53,7 @@
     background-color: $black;
 }
 
-/* On mouse-over, add a grey background color */
+/* On mouse-over, add a gray background color */
 .checkbox-container:hover input ~ .radio {
     &:after {
         content: "";

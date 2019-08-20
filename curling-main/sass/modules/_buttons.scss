@@ -41,13 +41,18 @@
     border-radius: 4px;
 }
 
+.btn-red {
+    background-color: $red;
+    color: $white;
+}
+
 .btn-black {
     background-color: $black;
     color: $white;
 }
 
-.btn-grey {
-    background-color: $grey;
+.btn-gray {
+    background-color: $gray;
     color: $white;
 }
 
@@ -57,7 +62,6 @@
 }
 
 .btn-secondary {
-    font-family: $adobe-garamond-pro;
     font-size: 20px;
     color: $black;
     letter-spacing: 0;

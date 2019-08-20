@@ -41,33 +41,37 @@ jsFiles.forEach(file => {
   });
 });
 
-// blockFiles.forEach(file => {
-//   var i = file.lastIndexOf(".");
-//   var filename = i < 0 ? file : file.substr(0, i);
+blockFiles.forEach(file => {
+  var i = file.lastIndexOf(".js");
+  var filename = i < 0 ? file : file.substr(0, i);
 
-//   for (var z = 0; z < 2; z++) {
-//     configs.push({
-//       input: [ `js/blocks/${file}/src/index.js` ],
-//       output: {
-//         name: filename,
-//         file: z==0 ? `js/blocks/${file}/js/index.js` : `js/dist/${file}.min.js`,
-//         format: "cjs"
-//       },
-//       plugins: [
-//         multiEntry(),
-//         babel({
-//           exclude: "node_modules/**",
-//           presets: ["@babel/env", "@babel/preset-react"]
-//         }),
-//         resolve({
-//           browser: true,
-//           mainFields: ["jsnext:main"]
-//         }),
-//         commonjs(),
-//         z==0 ? null : uglify()
-//       ]
-//     });
-//   }
-// });
+  if (i < 0) {
+    return;
+  }
+
+  for (var z = 0; z < 2; z++) {
+    configs.push({
+      input: [ `js/blocks/${filename}.js` ],
+      output: {
+        name: filename,
+        file: z==0 ? `js/blocks/compiled/${filename}.js` : `js/dist/${filename}.min.js`,
+        format: "cjs"
+      },
+      plugins: [
+        multiEntry(),
+        babel({
+          exclude: "node_modules/**",
+          presets: ["@babel/env", "@babel/preset-react"]
+        }),
+        resolve({
+          browser: true,
+          mainFields: ["jsnext:main"]
+        }),
+        commonjs(),
+        z==0 ? null : uglify()
+      ]
+    });
+  }
+});
 
 export default configs;

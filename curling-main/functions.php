@@ -1,12 +1,34 @@
 <?php
 
-include 'functions_test.php';
 
 add_action('init', 'create_taxonomy');
 add_action('init', 'create_post_type');
 
+include 'blocks/functions.php';
+
 add_action('wp_enqueue_scripts', 'add_curling_styles');
 // add_action('admin_menu', 'remove_admin_menus' );
+add_action('init', 'block_container_init');
+
+function block_container_init() {
+    $file = get_stylesheet_directory_uri().'/js/blocks/compiled/block-container.js';
+    $filem = get_stylesheet_directory().'/js/blocks/compiled/block-container.js';
+    wp_register_script(
+        'cossette-block-container',
+        $file,
+        array('wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n'),
+        filemtime($filem)
+    );
+
+    register_block_type('cossette/block-container', array(
+        'editor_script' => 'cossette-block-container',
+        'render_callback' => function() {
+            return 'Block Container';
+        },
+        'attributes' => [
+		]
+    ));
+}
 
 function add_curling_styles() {
     wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css');
@@ -21,22 +43,6 @@ function remove_admin_menus() {
 function create_taxonomy() {
 
 }
-
-function new_nav_menu_items($items,$args) {
-	if (function_exists('icl_get_languages')) {
-		$languages = icl_get_languages('skip_missing=0');
-		if(1 < count($languages)){
-			foreach($languages as $l){
-				if(!$l['active']){
-					if( $args->theme_location == 'top-menu' )
-					$items = $items.'<li id="menu-item-7777" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7777 gdlr-normal-menu"><a href="'.$l['url'].'">'.$l['native_name'].'</a></li>';
-				}
-			}
-		}
-	}
-	return $items;
-}
-add_filter( 'wp_nav_menu_items', 'new_nav_menu_items',10,2 );
 
 function create_post_type() {
     register_post_type('Events', [

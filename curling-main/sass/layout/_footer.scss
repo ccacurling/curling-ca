@@ -7,7 +7,7 @@
     padding-top: 40px;
     padding-bottom: 60px;
     align-items: center;
-    background-color: $red;
+    background-color: $gray;
     color: $white;
 }
 
@@ -34,13 +34,15 @@
 }
 
 .footer-nav-legal-wrapper {
-    background-color: $red;
+    background-color: $gray;
 }
 
 .footer-nav-legal-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
     border-top: 1px solid $white;
 }
 
@@ -62,4 +64,8 @@
 .footer-social {
     // width: 21px;
     margin-right: 21px;
+}
+
+.legal {
+    color: $light-gray;
 }
