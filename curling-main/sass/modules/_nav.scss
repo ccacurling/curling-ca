@@ -1,4 +1,10 @@
 .menu-h2 {
+  margin-bottom: 24px;
+  font-size: 40px;
+  padding-right: 20px;
+}
+
+.menu-event-h2 {
   margin-bottom: 12px;
   font-size: 40px;
 }
@@ -33,18 +39,22 @@
 
 
 .nav-menu-popup {
-  display: none;
+  display: block;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
   width: 100%;
   max-width: 1440px;
+  max-height: 0%;
   background-color: $white;
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
   box-shadow: 0 8px 12px 0 rgba(0,0,0,0.15);
   z-index: 1;
 
   &.active {
-    display: block;
+    max-height: 100%;
+    z-index: 2;
   }
 }
 
@@ -179,6 +189,11 @@
   letter-spacing: 0.4px;
 }
 
+.menu-item-top-nav {
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
 .menu-item-small {
   font-size: 15px;
   letter-spacing: 0.75px;
@@ -190,10 +205,10 @@
   letter-spacing: 0.27px;
   line-height: 14px;
   text-transform: uppercase;
-  &:hover {
-    cursor: pointer;
-    color: $red;
-  }
+}
+
+.menu-item-selectable:hover {
+  cursor: pointer;
 }
 
 .menu-item-subtitle-event {

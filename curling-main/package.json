@@ -7,10 +7,11 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node_modules/jest/bin/jest.js",
-    "codecept": "php vendor/codeception/codeception/codecept run",
-    "rollup": "node_modules/rollup/dist/bin/rollup -c",
-    "rollup:watch": "node_modules/rollup/dist/bin/rollup -c -w"
+    "test": "node_modules/.bin/jest.js",
+    "codecept:start": "node_modules/.bin/selenium-standalone start &",
+    "codecept": "php vendor/bin/codecept run",
+    "rollup": "node_modules/.bin/rollup -c",
+    "rollup:watch": "node_modules/.bin/rollup -c -w"
   },
   "keywords": [
     "wordpress",

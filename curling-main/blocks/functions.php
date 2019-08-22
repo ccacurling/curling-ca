@@ -3,12 +3,8 @@
 add_action('acf/init', 'afc_block_hero_init');
 
 function afc_block_hero_init() {
-	
-	// check function exists
 	if( function_exists('acf_register_block') ) {
-		
-		// register a testimonial block
-		$test = acf_register_block([
+		acf_register_block([
 			'name'				=> 'hero',
 			'title'				=> __('Hero'),
 			'description'		=> __('A hero block.'),
@@ -16,6 +12,15 @@ function afc_block_hero_init() {
 			'category'			=> 'common',
 			'icon'				=> 'admin-comments',
             'keywords'			=> [ 'hero' ]
+		]);
+		acf_register_block([
+			'name'				=> 'timer',
+			'title'				=> __('Timer'),
+			'description'		=> __('A timer block.'),
+			'render_callback'	=> 'block_timer_render_callback',
+			'category'			=> 'common',
+			'icon'				=> 'admin-comments',
+            'keywords'			=> [ 'timer' ]
         ]);
     }
     
@@ -29,7 +34,15 @@ function afc_block_hero_init() {
 }
 
 function block_hero_render_callback( $block ) {
-	// convert name ("acf/testimonial") into path friendly slug ("testimonial")
+	$slug = str_replace('acf/', '', $block['name']);
+    
+    $file = get_stylesheet_directory() . "/blocks/block-{$slug}.php";
+	if( file_exists( $file ) ) {
+		include( $file );
+	}
+}
+
+function block_timer_render_callback( $block ) {
 	$slug = str_replace('acf/', '', $block['name']);
     
     $file = get_stylesheet_directory() . "/blocks/block-{$slug}.php";

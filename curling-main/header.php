@@ -21,6 +21,6 @@
 
 <body class="<?php echo join(' ', get_body_class()); ?>">
     <header>
-        <?php get_template_part('template-parts/content', 'nav'); ?>
+        <?php get_template_part('template-parts/content', 'header'); ?>
     </header>
 <?php echo !WP_DEBUG ?: "<!-- End output from ".basename(__FILE__)."-->"; ?>

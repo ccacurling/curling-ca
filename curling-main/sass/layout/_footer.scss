@@ -1,69 +1,92 @@
+.footer-gray {
+    .footer-wrapper {
+        background-color: $gray;
+    }
+
+    .menu-item-selectable:hover .menu-item-content {
+        color: #ed1940;
+    }
+}
+
+.footer-legal-gray {
+    .footer-legal-wrapper {
+        background-color: $gray;
+    }
+
+    .menu-item-selectable:hover .menu-item-content {
+        color: #ed1940;
+    }
+}
+
 .footer-logo {
     margin-top: 11px;
 }
 
-.footer-nav-wrapper {
+.footer-wrapper {
     display: flex;
-    padding-top: 40px;
+    justify-content: space-between;
+    padding-top: 29px;
     padding-bottom: 60px;
-    align-items: center;
+    align-items: flex-start;
     background-color: $gray;
     color: $white;
+    max-height: 347px;
 }
 
-.footer-nav-left-items  {
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-height: 200px;
+.footer-content-left-wrapper {
+    padding-left: 19px;
+    width: 137px;
 }
 
-.footer-nav-left,
-.footer-nav-right {
-    flex: 1 0 50%;
+.footer-content-centre-wrapper {
+    width: 610px;
 }
 
-.footer-nav-left {
-    display: flex;
-    align-items: flex-start;
+.footer-content-right-wrapper {
+    width: 470px;
 }
 
-.footer-nav-right {
-    display: flex;
-    align-self: flex-start;
-    flex-direction: column;
-}
-
-.footer-nav-legal-wrapper {
-    background-color: $gray;
-}
-
-.footer-nav-legal-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-top: 1px solid $white;
+.newsletter-signup-title {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 16px;
+    line-height: 14px;
 }
 
 .newsletter-signup-input {
-    width: 350px;
+    width: 340px;
     height: 40px;
-    margin-right: 20px;
 }
 
-.footer-form {
-    display: flex;
-    margin-top: 17px;
-    margin-bottom: 35px;
+.newsletter-signup-submit {
+    margin-left: 20px;
 }
 
-.newsletter-signup-submit{
+.footer-nav-menu  {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 110px;
+    padding-right: 110px;
 }
 
-.footer-social {
+.footer-menu-item {
+    width: 50%;
+}
+
+.footer-nav-menu-social {
+    padding-top: 34px;
+}
+
+.menu-item-social {
     // width: 21px;
     margin-right: 21px;
+}
+
+.footer-legal-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid $light-gray;
 }
 
 .legal {

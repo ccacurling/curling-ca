@@ -39,7 +39,9 @@
                             $is_first = true; // TODO: TEMP
                             foreach( $top_left_menu_items as $menu_item ) {
                         ?>
-                            <li class="menu-item"><h4 class="menu-item-title <?php echo $is_first ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4></li>
+                            <li class="menu-item menu-item-selectable">
+                              <h4 class="menu-item-top-nav menu-item-content <?php echo $is_first ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
+                            </li>
                         <?php
                               $is_first = false;
                             }
@@ -57,14 +59,20 @@
                         <?php
                             foreach( $top_right_menu_items as $menu_item ) {
                         ?>
-                            <li class="menu-item"><h4 class="menu-item-title menu-item-small"><?php echo $menu_item->title; ?></h4></li>
+                            <li class="menu-item menu-item-selectable">
+                              <h4 class="menu-item-content menu-item-small"><?php echo $menu_item->title; ?></h4>
+                            </li>
                         <?php
                             }
                         ?>
-                        <li class="menu-item menu-item-donate"><h4 class="menu-item-title menu-item-small">Donate</h4></li>
+                        <li class="menu-item menu-item-donate">
+                          <h4 class="menu-item-small inverted">Donate</h4>
+                        </li>
                     </ul>
                     <ul class="menu-nav menu-nav-language">
-                        <li class="menu-item menu-item-language"><h4 class="menu-item-title menu-item-small">Fr</h4></li>
+                        <li class="menu-item menu-item-language menu-item-selectable">
+                          <h4 class="menu-item-content menu-item-small">Fr</h4>
+                        </li>
                     </ul>
                 <?php
                     }
@@ -84,7 +92,7 @@
                             $test = $item->children;
                     ?>
                         <li class="menu-item" data-menu="<?php echo $id; ?>">
-                            <h4 class="menu-item-title"><?php echo $item->title; ?></h4>
+                            <h4 class="menu-item-content menu-item-title"><?php echo $item->title; ?></h4>
                             <?php 
                                 if ($item->children != null && count($item->children) > 0) {
                             ?>
@@ -135,40 +143,40 @@ function create_menu_bar($name, $menu_items) {
         <?php
           if ($is_events) {
         ?>
-          <h2 class="menu-h2 gray">EXPLORE ALL UPCOMING EVENTS</h2>
+          <h2 class="menu-event-h2 gray">EXPLORE ALL UPCOMING EVENTS</h2>
           <ul class="menu-nav menu-nav-events">
             <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper">
-                <span class="menu-item-title menu-item-subtitle gray">HOME HARDWARE CANADA CUP</span>
-                <span class="menu-item-title menu-item-subtitle menu-item-info gray">November 27–Dececember 1, 2019</span>
+              <div class="menu-subitem-wrapper menu-item-selectable">
+                <span class="menu-item-content menu-item-title menu-item-subtitle gray">HOME HARDWARE CANADA CUP</span>
+                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">November 27–Dececember 1, 2019</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
             <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper">
-                <span class="menu-item-title menu-item-subtitle gray">CONTINENTAL CUP</span>
-                <span class="menu-item-title menu-item-subtitle menu-item-info gray">January 9–12, 2020</span>
+              <div class="menu-subitem-wrapper menu-item-selectable">
+                <span class="menu-item-content menu-item-title menu-item-subtitle gray">CONTINENTAL CUP</span>
+                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">January 9–12, 2020</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
             <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper">
-                <span class="menu-item-title menu-item-subtitle gray">SCOTTIES TOURNAMENT OF HEARTS</span>
-                <span class="menu-item-title menu-item-subtitle menu-item-info gray">February 15-23, 2020</span>
+              <div class="menu-subitem-wrapper menu-item-selectable">
+                <span class="menu-item-content menu-item-title menu-item-subtitle gray">SCOTTIES TOURNAMENT OF HEARTS</span>
+                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">February 15-23, 2020</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
             <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper">
-                <span class="menu-item-title menu-item-subtitle gray">TIM HORTONS BRIER</span>
-                <span class="menu-item-title menu-item-subtitle menu-item-info gray">February 28–March 8, 2020</span>
+              <div class="menu-subitem-wrapper menu-item-selectable">
+                <span class="menu-item-content menu-item-title menu-item-subtitle gray">TIM HORTONS BRIER</span>
+                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">February 28–March 8, 2020</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
             <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper">
-                <span class="menu-item-title menu-item-subtitle gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</span>
-                <span class="menu-item-title menu-item-subtitle menu-item-info gray">March 14-22, 2020</span>
+              <div class="menu-subitem-wrapper menu-item-selectable">
+                <span class="menu-item-content menu-item-title menu-item-subtitle gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</span>
+                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">March 14-22, 2020</span>
               </div>
               <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
             </li>
@@ -177,7 +185,10 @@ function create_menu_bar($name, $menu_items) {
           } else {
         ?>
           <h2 class="menu-h2 gray"><?php echo $first_item->title; ?></h2>
-          <span class="menu-item-title menu-item-subtitle gray">SEE ALL</span><img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+          <div class="menu-item-selectable">
+            <span class="menu-item-content menu-item-title menu-item-subtitle gray">SEE ALL</span>
+            <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+          </div>
         <?php
           }
         ?>
@@ -195,7 +206,12 @@ function create_menu_bar($name, $menu_items) {
           <?php
             foreach( $menu_items as $menu_item ) {
           ?>
-            <li class="nav-menu-popup-centre-menu-subitem menu-subitem"><span class="menu-item-title menu-item-subtitle gray"><?php echo $menu_item->title; ?></span><img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" /></li>
+            <li class="nav-menu-popup-centre-menu-subitem menu-subitem">
+              <div class="menu-item-selectable">
+                <span class="menu-item-content menu-item-title menu-item-subtitle gray"><?php echo $menu_item->title; ?></span>
+                <img class="menu-item-content arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+              </div>
+            </li>
           <?php
             }
           ?>
