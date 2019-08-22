@@ -3,7 +3,7 @@
     $primary_menu_items = wp_get_nav_menu_items( 'Menu - Legal' );
 ?>
 
-<?php echo !WP_DEBUG ?: "<!-- Begin output from ".basename(__FILE__)."-->"; ?>
+<?php echo !WP_DEBUG ? '' : "<!-- Begin output from ".basename(__FILE__)."-->"; ?>
 <div class="footer footer-gray">
   <div class="footer-wrapper content-fixed content-fixed-padding">
       <div class="footer-content-left-wrapper">
@@ -72,4 +72,4 @@
       </div>
   </div>
 </div>
-<?php echo !WP_DEBUG ?: "<!-- End output from ".basename(__FILE__)." -->" ?>
+<?php echo !WP_DEBUG ? '' : "<!-- End output from ".basename(__FILE__)." -->" ?>
