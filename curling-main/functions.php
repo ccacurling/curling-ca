@@ -7,7 +7,7 @@ add_action('init', 'create_post_type');
 include 'blocks/functions.php';
 
 add_action('wp_enqueue_scripts', 'add_curling_styles');
-add_action('admin_enqueue_scripts', 'add_curling_styles');
+add_action('admin_enqueue_scripts', 'add_curling_admin_styles');
 // add_action('admin_menu', 'remove_admin_menus' );
 add_action('init', 'block_container_init');
 
@@ -33,6 +33,15 @@ function block_container_init() {
 
 function add_curling_styles() {
     wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css');
+
+    // Blocks
+    wp_enqueue_script('block-timer', get_stylesheet_directory_uri() . '/js/dist/block-timer.min.js', [ 'jquery' ], '0.0.1');
+
+    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery' ], '3.1.0');
+}
+
+function add_curling_admin_styles() {
+    wp_enqueue_style('admin', get_stylesheet_directory_uri() . '/css/admin.min.css');
 
     wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery' ], '3.1.0');
 }

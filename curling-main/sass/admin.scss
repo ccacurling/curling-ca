@@ -1,0 +1,31 @@
+/**
+ * Base imports
+ */
+ @import "base/fonts";
+
+ .edit-post-layout__content {
+    @import "base/colors";
+    @import "base/variables";
+    @import "base/mixins";
+    @import "base/base";
+    @import "base/functions";
+
+    /**
+    * Layout imports
+    */
+    @import "layout/header";
+    @import "layout/footer";
+
+    /**
+    * Modules imports
+    */
+    @import "modules/block-timer";
+    @import "modules/buttons";
+    @import "modules/checkbox";
+    @import "modules/nav";
+
+    /**
+    * Test imports
+    */
+    @import "layout/test";
+}

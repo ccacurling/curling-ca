@@ -1,5 +1,9 @@
 
 .header-red {
+  .nav-menu-top-right-mobile {
+    background-color: $red;
+  }
+
   .menu-item-selectable:hover {
     .menu-item-content {
       color: $red;
@@ -39,7 +43,7 @@
     color: $red;
   }
 
-  .nav-menu-primary-wrapper {
+  .nav-menu-primary {
     background-color: $red;
     color: $white;
 

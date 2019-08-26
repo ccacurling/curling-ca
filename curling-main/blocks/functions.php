@@ -13,6 +13,7 @@ function afc_block_hero_init() {
 			'icon'				=> 'admin-comments',
             'keywords'			=> [ 'hero' ]
 		]);
+
 		acf_register_block([
 			'name'				=> 'timer',
 			'title'				=> __('Timer'),

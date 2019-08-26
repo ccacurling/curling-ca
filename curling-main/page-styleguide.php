@@ -87,4 +87,4 @@
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
-<?php echo !WP_DEBUG ?: "<!-- End output from ".basename(__FILE__)."-->"; ?>
+<?php echo !WP_DEBUG ? '' : "<!-- End output from ".basename(__FILE__)."-->"; ?>

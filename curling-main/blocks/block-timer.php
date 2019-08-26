@@ -4,6 +4,7 @@
  * Block Name: Hero
  *
  * This is the template that displays the hero block.
+ * TODO: Need to edit date selection to account for timezones
  */
 
 $start_date_value = get_field( 'start_date' );
@@ -62,8 +63,8 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 		</div>
 		<div class="block-timer-info-container">
 			<div class="block-timer-info-top">
-				<h3 class="inverted"><?php echo $start_date_string; ?> - <?php echo $end_date_string; ?></h3>
-				<h3 class="inverted">ROGER'S ARENA AT THE BC PLACE STADIUM</h3>
+				<h3 class="block-timer-info-date inverted"><?php echo $start_date_string; ?> - <?php echo $end_date_string; ?></h3>
+				<h3 class="block-timer-info-location inverted">ROGER'S ARENA AT THE BC PLACE STADIUM</h3>
 			</div>
 			<div class="block-timer-info-link-container">
 				<h4 class="block-timer-info-link inverted">MORE DETAILS</h4>

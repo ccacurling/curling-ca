@@ -1,22 +1,22 @@
 <?php
-    $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Top Left' );
     $top_right_menu_items = wp_get_nav_menu_items( 'Menu - Top Right' );
     $primary_menu_items = wp_get_nav_menu_items( 'Menu - Main' );
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
 
+    $current_page = 497698; // TODO: FIX!
+    
     $menu_items = buildTree($primary_menu_items);
 
     function buildTree( array &$elements, $parentId = 0 ) {
         $branch = array();
-        foreach ( $elements as &$element )
-        {
-            if ( $element->menu_item_parent == $parentId )
-            {
+        foreach ( $elements as &$element ) {
+            if ( $element->menu_item_parent == $parentId ) {
                 $children = buildTree( $elements, $element->ID );
-                if ( $children )
+                if ( $children ) {
                     $element->children = $children;
+                }
 
                 $branch[$element->ID] = $element;
                 unset( $element );
@@ -27,29 +27,51 @@
 
 ?>
 
-<div class="header header-<?php echo $header_color; ?>">
-    <div class="nav-menu-top">
-        <div class="nav-menu-top-wrapper content-fixed content-fixed-padding">
+<div class="header header-<?php echo $header_color; ?> header-mobile">
+  <div class="nav-menu-top-mobile">
+    <img class="menu-logo-mobile" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
+    <img class="menu-hamburger-mobile" src="<?php echo get_stylesheet_directory_uri()."/images/img-hamburger.svg"; ?>" alt="Hamburger" />
+  </div>
+  <div class="nav-menu-popout-mobile">
+    <div class="menu-nav-popout-item" data-id="0" data-parent="-1">
+      <div class="nav-menu-top-right-mobile">
+          <ul class="menu-nav">
+          <?php
+              foreach( $top_right_menu_items as $menu_item ) {
+          ?>
+              <h4 class="menu-item menu-item-small inverted"><?php echo $menu_item->title; ?></h4>
+          <?php
+              }
+          ?>
+          </ul>
+      </div>
+      <?php
+        create_popout_item($menu_items, 0);
+      ?>
+    </div>
+    <?php
+      foreach ($menu_items as $key => $menu_item) {
+        create_popout($menu_item, 1);
+      }
+    ?>
+  </div>
+</div>
+
+<div class="header header-<?php echo $header_color; ?> header-desktop">
+    <div class="nav-menu-top content-fixed">
+        <div class="nav-menu-top-wrapper content-container">
             <div class="nav-menu-top-left-wrapper">
-                <?php
-                    if ($top_left_menu_items) {
-                ?>
-                    <ul class="menu-nav">
-                        <?php
-                            $is_first = true; // TODO: TEMP
-                            foreach( $top_left_menu_items as $menu_item ) {
-                        ?>
-                            <li class="menu-item menu-item-selectable">
-                              <h4 class="menu-item-top-nav menu-item-content <?php echo $is_first ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
-                            </li>
-                        <?php
-                              $is_first = false;
-                            }
-                        ?>
-                    </ul>
-                <?php
-                    }
-                ?>
+                <ul class="menu-nav">
+                    <?php
+                        foreach( $menu_items as $menu_item ) {
+                    ?>
+                        <li class="menu-item menu-item-selectable">
+                          <h4 class="menu-item-top-nav menu-item-content <?php echo $menu_item->ID === $current_page ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
+                        </li>
+                    <?php
+                        }
+                    ?>
+                </ul>
             </div>
             <div class="nav-menu-top-right-wrapper">
                 <?php
@@ -80,15 +102,15 @@
             </div>
         </div>
     </div>
-    <div class="nav-menu-primary">
-        <div class="nav-menu-primary-wrapper content-fixed content-fixed-padding">
+    <div class="nav-menu-primary content-fixed">
+        <div class="nav-menu-primary-wrapper content-container">
             <img class="menu-logo" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
             <?php
-                if ($primary_menu_items) {
+                if (array_key_exists($current_page, $menu_items)) {
             ?>
                 <ul class="menu-nav nav-left-offset">
                     <?php
-                        foreach ($menu_items as $id => $item) {
+                        foreach ($menu_items[$current_page]->children as $id => $item) {
                             $test = $item->children;
                     ?>
                         <li class="menu-item" data-menu="<?php echo $id; ?>">
@@ -132,6 +154,98 @@
 </div>
 
 <?php
+function create_popout($menu_item, $level) {
+  if (isset($menu_item->children) && count ($menu_item->children) > 0) {
+    foreach ($menu_item->children as $key => $menu_subitem) {
+      if (isset($menu_subitem->children) && count ($menu_subitem->children) > 0) {
+?>
+        <div class="menu-nav-popout-item" data-id="<?php echo $menu_subitem->ID; ?>" data-parent="0">
+          <div class="nav-menu-top-right-mobile">
+            <img src="<?php echo get_stylesheet_directory_uri()."/images/triangle-left-white.svg"; ?>" alt="triangle left" />
+              <h3 class="menu-item inverted"><?php echo $menu_subitem->title; ?></h3>
+          </div>
+          <?php
+            create_popout_item($menu_subitem->children, $level);
+          ?>
+        </div>
+<?php
+      }
+    }
+  }
+}
+
+function create_popout_item($menu_items, $level) {
+?>
+  <div class="nav-menu-mobile">
+    <?php
+      if ($menu_items) {
+    ?>
+      <ul class="nav-menu-list-mobile">
+        <?php
+          foreach( $menu_items as $menu_item ) {
+        ?>
+          <li class="menu-item-mobile menu-item-main-mobile">
+            <div class="menu-item-container-mobile">
+              <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
+              <?php
+                if (isset($menu_item->children) && count ($menu_item->children) > 0) {
+              ?>
+                <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
+              <?php
+                }
+              ?>
+            </div>
+            <?php
+              create_submenu($menu_item, $level);
+            ?>
+          </li>
+        <?php
+          }
+        ?>
+      </ul>
+    <?php
+      }
+    ?>
+  </div>
+<?php
+}
+?>
+
+<?php
+function create_submenu($items, $level) {
+    if (isset($items->children) && count ($items->children) > 0) {
+      $extras = [];
+?>
+        <ul class="menu-list">
+<?php
+        foreach( $items->children as $menu_subitem ) {
+          if ($level > 0) {
+            array_push($extras, $menu_subitem);
+          }
+?>
+            <li class="menu-item-mobile">
+                <div class="menu-item-container-mobile menu-item-subcontainer-mobile blex" data-id="<?php echo $menu_subitem->ID; ?>">
+                    <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subitem->title.' '.$level; ?></h4>
+                    <?php
+                        if (isset($menu_subitem->children) && count ($menu_subitem->children) > 0) {
+                    ?>
+                        <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-left.svg"; ?>" alt="triangle right" />
+                    <?php
+                        }
+                    ?>
+                </div>
+    <?php
+        }
+    ?>
+            </li>
+        </ul>
+<?php
+      foreach ($extras as $key => $value) {
+        create_popout($value, $level + 1);
+      }
+    }
+}
+
 function create_menu_bar($name, $menu_items) {
   if ($menu_items && count($menu_items) > 0) {
     $first_item = array_shift($menu_items);
