@@ -10,6 +10,18 @@
     }
   }
 
+  .menu-item-donate {
+    background-color: $red;
+    .menu-item-title {
+      color: $white;
+    }
+    &:hover {
+      .menu-item-title {
+          color: $white;
+      }
+    }
+  }
+
   .nav-menu-top-wrapper {
     background-color: $white;
     color: $gray;
@@ -17,18 +29,6 @@
     .menu-item {
       .menu-item-title {
         color: $gray;
-      }
-
-      &.menu-item-donate {
-        background-color: $red;
-        .menu-item-title {
-          color: $white;
-        }
-        &:hover {
-          .menu-item-title {
-              color: $white;
-          }
-        }
       }
     }
 

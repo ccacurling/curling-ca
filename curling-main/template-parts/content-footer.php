@@ -35,11 +35,11 @@
               <button class="newsletter-signup-submit btn btn-small btn-red" type="submit">Submit</button>
           </form>
           <div class="footer-nav-menu-social">
-              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook.svg"; ?>" alt="social" />
-              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter.svg"; ?>" alt="social" />
-              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-instagram.svg"; ?>" alt="social" />
-              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-youtube.svg"; ?>" alt="social" />
-              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-linkedin.svg"; ?>" alt="social" />
+              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook-white.svg"; ?>" alt="social" />
+              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter-white.svg"; ?>" alt="social" />
+              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-instagram-white.svg"; ?>" alt="social" />
+              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-youtube-white.svg"; ?>" alt="social" />
+              <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-linkedin-white.svg"; ?>" alt="social" />
           </div>
       </div>
   </div>

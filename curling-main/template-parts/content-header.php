@@ -27,37 +27,18 @@
 
 ?>
 
-<div class="header header-<?php echo $header_color; ?> header-mobile">
-  <div class="nav-menu-top-mobile">
+<div class="header header-<?php echo $header_color; ?> header-mobile js-curling-nav-mobile">
+  <div class="nav-menu-top-mobile js-cta-topmenu-mobile">
     <img class="menu-logo-mobile" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
-    <img class="menu-hamburger-mobile" src="<?php echo get_stylesheet_directory_uri()."/images/img-hamburger.svg"; ?>" alt="Hamburger" />
+    <img class="menu-hamburger-mobile js-cta-menu-mobile-hamburger" src="<?php echo get_stylesheet_directory_uri()."/images/img-hamburger.svg"; ?>" alt="Hamburger" />
   </div>
-  <div class="nav-menu-popout-mobile">
-    <div class="menu-nav-popout-item" data-id="0" data-parent="-1">
-      <div class="nav-menu-top-right-mobile">
-          <ul class="menu-nav">
-          <?php
-              foreach( $top_right_menu_items as $menu_item ) {
-          ?>
-              <h4 class="menu-item menu-item-small inverted"><?php echo $menu_item->title; ?></h4>
-          <?php
-              }
-          ?>
-          </ul>
-      </div>
-      <?php
-        create_popout_item($menu_items, 0);
-      ?>
-    </div>
-    <?php
-      foreach ($menu_items as $key => $menu_item) {
-        create_popout($menu_item, 1);
-      }
-    ?>
-  </div>
+  <?php
+    create_main_menu_mobile($top_right_menu_items, $menu_items);
+    create_submenus_mobile($menu_items);
+  ?>
 </div>
 
-<div class="header header-<?php echo $header_color; ?> header-desktop">
+<div class="header header-<?php echo $header_color; ?> header-desktop js-curling-nav">
     <div class="nav-menu-top content-fixed">
         <div class="nav-menu-top-wrapper content-container">
             <div class="nav-menu-top-left-wrapper">
@@ -138,114 +119,214 @@
                 create_menu_bar_item($menu_item->ID, $menu_item->children);
             }
         }
-
-        function create_menu_bar_item($parent_id, $menu_items) {
-            if (count($menu_items) > 0) {
-                create_menu_bar($parent_id, $menu_items);
-
-                foreach( $menu_items as $id => $menu_item ) {
-                    if ($menu_item->children) {
-                        create_menu_bar_item($menu_item->ID, $menu_item->children);
-                    }
-                }
-            }
-        }
     ?>
 </div>
 
 <?php
-function create_popout($menu_item, $level) {
-  if (isset($menu_item->children) && count ($menu_item->children) > 0) {
-    foreach ($menu_item->children as $key => $menu_subitem) {
-      if (isset($menu_subitem->children) && count ($menu_subitem->children) > 0) {
+function create_main_menu_mobile($top_menu_items, $nav_items) {
 ?>
-        <div class="menu-nav-popout-item" data-id="<?php echo $menu_subitem->ID; ?>" data-parent="0">
-          <div class="nav-menu-top-right-mobile">
-            <img src="<?php echo get_stylesheet_directory_uri()."/images/triangle-left-white.svg"; ?>" alt="triangle left" />
-              <h3 class="menu-item inverted"><?php echo $menu_subitem->title; ?></h3>
+  <div class="nav-menu-popout-mobile js-cta-popout-mobile" data-id="0">
+    <div class="nav-menu-top-right-mobile">
+      <div class="menu-nav-mobile">
+      <?php
+          foreach( $top_menu_items as $menu_item ) {
+      ?>
+        <h4 class="nav-menu-item-mobile inverted"><?php echo $menu_item->title; ?></h4>
+      <?php
+          }
+      ?>
+      </div>
+    </div>
+    <?php
+        foreach( $nav_items as $menu_item ) {
+    ?>
+      <ul class="menu-list-mobile js-cta-menu-list-mobile">
+        <li class="menu-item-mobile menu-item-main-mobile">
+          <div class="menu-item-container-mobile js-cta-menu-item-mobile">
+            <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
+            <?php
+              if (isset($menu_item->children) && count ($menu_item->children) > 0) {
+            ?>
+              <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
+            <?php
+              }
+            ?>
           </div>
           <?php
-            create_popout_item($menu_subitem->children, $level);
+            if (isset($menu_item->children) && count ($menu_item->children) > 0) {
           ?>
-        </div>
-<?php
-      }
-    }
-  }
-}
-
-function create_popout_item($menu_items, $level) {
-?>
-  <div class="nav-menu-mobile">
-    <?php
-      if ($menu_items) {
-    ?>
-      <ul class="nav-menu-list-mobile">
-        <?php
-          foreach( $menu_items as $menu_item ) {
-        ?>
-          <li class="menu-item-mobile menu-item-main-mobile">
-            <div class="menu-item-container-mobile">
-              <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
-              <?php
-                if (isset($menu_item->children) && count ($menu_item->children) > 0) {
-              ?>
-                <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
-              <?php
-                }
-              ?>
-            </div>
+          <ul class="menu-list-mobile js-cta-menu-list-mobile">
             <?php
-              create_submenu($menu_item, $level);
+            foreach( $menu_item->children as $menu_subitem ) {
             ?>
-          </li>
-        <?php
-          }
-        ?>
+              <li class="menu-item-mobile">
+                <div class="menu-item-container-mobile menu-item-subcontainer-mobile js-cta-menu-subitem-mobile" data-id="<?php echo $menu_subitem->ID; ?>">
+                  <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subitem->title; ?></h4>
+                    <?php
+                      if (isset($menu_subitem->children) && count ($menu_subitem->children) > 0) {
+                    ?>
+                      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right.svg"; ?>" alt="triangle right" />
+                    <?php
+                      }
+                    ?>
+                </div>
+              </li>
+            <?php
+            }
+            ?>
+          </ul>
+          <?php
+            }
+          ?>
+        </li>
       </ul>
     <?php
-      }
+        }
     ?>
+    <div class="nav-menu-popout-bottom-mobile">
+      <div class="menu-item menu-item-donate">
+        <h4 class="menu-item-small inverted">Donate</h4>
+      </div>
+      <div class="nav-menu-social-mobile">
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook.svg"; ?>" alt="social" />
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter.svg"; ?>" alt="social" />
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-instagram.svg"; ?>" alt="social" />
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-youtube.svg"; ?>" alt="social" />
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-linkedin.svg"; ?>" alt="social" />
+      </div>
+    </div>
   </div>
 <?php
 }
 ?>
 
 <?php
-function create_submenu($items, $level) {
-    if (isset($items->children) && count ($items->children) > 0) {
-      $extras = [];
-?>
-        <ul class="menu-list">
-<?php
-        foreach( $items->children as $menu_subitem ) {
-          if ($level > 0) {
-            array_push($extras, $menu_subitem);
-          }
-?>
-            <li class="menu-item-mobile">
-                <div class="menu-item-container-mobile menu-item-subcontainer-mobile blex" data-id="<?php echo $menu_subitem->ID; ?>">
-                    <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subitem->title.' '.$level; ?></h4>
-                    <?php
-                        if (isset($menu_subitem->children) && count ($menu_subitem->children) > 0) {
-                    ?>
-                        <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-left.svg"; ?>" alt="triangle right" />
-                    <?php
-                        }
-                    ?>
-                </div>
-    <?php
-        }
-    ?>
-            </li>
-        </ul>
-<?php
-      foreach ($extras as $key => $value) {
-        create_popout($value, $level + 1);
+function create_submenus_mobile($nav_items, $parent = NULL) {
+  foreach( $nav_items as $menu_item ) {
+    if ($menu_item->children && count($menu_item->children) > 0) {
+      foreach( $menu_item->children as $menu_subitem ) {
+        create_popup_mobile($menu_subitem);
       }
     }
+  }
 }
+?>
 
+<?php
+function create_popup_mobile($menu_subitem, $parent = NULL) {
+    if ($menu_subitem->children && count($menu_subitem->children) > 0) {
+?>
+  <div class="nav-menu-popout-mobile js-cta-popout-mobile" data-id="<?php echo $menu_subitem->ID; ?>" data-parent="<?php echo $parent ? $parent->ID : 0; ?>">
+    <div class="nav-menu-top-right-mobile">
+      <div class="menu-nav-mobile menu-subnav-mobile js-cta-subnav-back">
+        <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-left-white.svg"; ?>" alt="triangle left" />
+        <h3 class="nav-menu-item-mobile nav-menu-subitem-mobile inverted"><?php echo $menu_subitem->title; ?></h3>
+      </div>
+    </div>
+    <ul class="menu-list-mobile js-cta-menu-list-mobile">
+    <?php
+      foreach( $menu_subitem->children as $menu_subsubitem ) {
+        if ($menu_subsubitem->post_title === '[EVENTS]') { // TODO: TEMP
+    ?>
+      <li class="menu-item-mobile">
+        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile">
+          <h3 class="menu-item-toptitle-mobile gray">EXPLORE ALL UPCOMING EVENTS</h3>
+        </div>
+      </li>
+      <li class="menu-item-mobile">
+        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+          <div class="menu-item-wrapper-mobile">
+            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">HOME HARDWARE CANADA CUP</h4>
+            <span class="menu-item-description-mobile">November 27–December 1, 2019</span>
+          </div>
+          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+        </div>
+      </li>
+      <li class="menu-item-mobile">
+        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+          <div class="menu-item-wrapper-mobile">
+            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">CONTINENTAL CUP</h4>
+            <span class="menu-item-description-mobile">January 9-12, 2020</span>
+          </div>
+          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+        </div>
+      </li>
+      <li class="menu-item-mobile">
+        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+          <div class="menu-item-wrapper-mobile">
+            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">SCOTTIES TOURNAMENT OF HEARTS</h4>
+            <span class="menu-item-description-mobile">February 15-23, 2020</span>
+          </div>
+          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+        </div>
+      </li>
+      <li class="menu-item-mobile">
+        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+          <div class="menu-item-wrapper-mobile">
+            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">TIM HORTONS BRIER</h4>
+            <span class="menu-item-description-mobile">February 28–March 8, 2020</span>
+          </div>
+          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+        </div>
+      </li>
+      <li class="menu-item-mobile">
+        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+          <div class="menu-item-wrapper-mobile">
+            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</h4>
+            <span class="menu-item-description-mobile">March 14-22, 2020</span>
+          </div>
+          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+        </div>
+      </li>
+      <li class="menu-item-events-mobile">
+        <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample1.png"; ?>" alt="Event1" />
+      </li>
+    <?php
+        } else {
+    ?>
+      <li class="menu-item-mobile">
+        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="<?php echo $menu_subsubitem->ID; ?>">
+          <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subsubitem->title; ?></h4>
+          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+        </div>
+      </li>
+    <?php
+        }
+      }
+    ?>
+    </ul>
+    <div class="nav-menu-popout-bottom-mobile">
+      <div class="menu-item menu-item-donate">
+        <h4 class="menu-item-small inverted">Donate</h4>
+      </div>
+      <div class="nav-menu-social-mobile">
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook.svg"; ?>" alt="social" />
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter.svg"; ?>" alt="social" />
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-instagram.svg"; ?>" alt="social" />
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-youtube.svg"; ?>" alt="social" />
+        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-linkedin.svg"; ?>" alt="social" />
+      </div>
+    </div>
+  </div>
+<?php
+  }
+}
+?>
+
+<?php
+function create_menu_bar_item($parent_id, $menu_items) {
+  if (count($menu_items) > 0) {
+      create_menu_bar($parent_id, $menu_items);
+
+      foreach( $menu_items as $id => $menu_item ) {
+          if ($menu_item->children) {
+              create_menu_bar_item($menu_item->ID, $menu_item->children);
+          }
+      }
+  }
+}
+?>
+<?php
 function create_menu_bar($name, $menu_items) {
   if ($menu_items && count($menu_items) > 0) {
     $first_item = array_shift($menu_items);

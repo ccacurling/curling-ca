@@ -9,6 +9,8 @@
 
 $start_date_value = get_field( 'start_date' );
 
+$start_date_value = $start_date_value ? $start_date_value : '2019-01-01 00:00:00';
+
 $start_date = date_create_from_format('Y-m-d H:i:s', $start_date_value);
 $current_date = new DateTime();
 
