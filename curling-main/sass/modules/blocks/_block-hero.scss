@@ -1,0 +1,21 @@
+.block-hero {
+  display: flex;
+  align-items: center;
+  height: 700px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.block-hero-medium {
+  height: 600px;
+}
+
+.block-hero-small {
+  height: 430px;
+}
+
+.block-hero-inner {
+  flex-basis: 25%;
+  margin-left: 10%;
+}

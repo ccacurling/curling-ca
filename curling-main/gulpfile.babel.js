@@ -1,10 +1,17 @@
 import gulp from 'gulp';
+
+// SASS
 import sass from 'gulp-sass';
 import nodesass from 'node-sass';
 import rename from 'gulp-rename';
 import sourcemaps from 'gulp-sourcemaps';
-import fs from 'fs';
-import path from 'path';
+
+// Rollup
+import rollup from 'gulp-better-rollup';
+import babel from 'rollup-plugin-babel';
+import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
+import { uglify } from "rollup-plugin-uglify";
 
 sass.compiler = nodesass;
 
@@ -22,6 +29,37 @@ gulp.task('sass', () => {
     .pipe(gulp.dest('css/'));
 });
 
+gulp.task('rollup', () => {
+  return gulp.src(['js/main.js', 'js/blocks/*.js'])
+    .pipe(sourcemaps.init()) // TODO: Change to dev env only
+    .pipe(rollup({
+      plugins: [
+        babel({
+          exclude: "dist/**",
+          presets: ["@babel/env", "@babel/preset-react"]
+        }),
+        resolve({
+          browser: true,
+          mainFields: ["jsnext:main"]
+        }),
+        commonjs(),
+        uglify()
+      ]
+    }, {
+      name: 'main',
+      format: 'cjs',
+    }))
+    .pipe(rename((function (path) {
+      path.extname = ".min.js";
+    })))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('js/dist'))
+});
+
 gulp.task('sass:watch', () => {
   gulp.watch('sass/**/*.scss', gulp.series(['sass']));
+});
+
+gulp.task('rollup:watch', () => {
+  gulp.watch(['js/**/*.js', '!js/dist/**/*.js', '!js/vendor/**/*.js'], gulp.series(['rollup']));
 });

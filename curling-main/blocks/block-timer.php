@@ -8,19 +8,25 @@
  */
 
 $start_date_value = get_field( 'start_date' );
+$end_date_value = get_field( 'end_date' );
+$timezone = get_field('timezone');
 
-$start_date_value = $start_date_value ? $start_date_value : '2019-01-01 00:00:00';
+$start_date_value = $start_date_value ? $start_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
+$end_date_value = $end_date_value ? $end_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
 
-$start_date = date_create_from_format('Y-m-d H:i:s', $start_date_value);
+$start_date = date_create_from_format('Y-m-d H:i:s e', $start_date_value);
+$end_date = date_create_from_format('Y-m-d H:i:s e', $end_date_value);
 $current_date = new DateTime();
 
 $start_date_unix = date_format($start_date, 'U');
 $current_date_unix = date_format($current_date, 'U');
 
 $start_date_string = $start_date->format('F j');
-$end_date_string = $start_date->format('F j Y');
+$end_date_short_string = $end_date->format('F j');
+$end_date_string = $end_date->format('F j Y');
 
 $totalseconds = ((int)$start_date_unix - (int)$current_date_unix);
+$totalseconds = $totalseconds < 0 ? 0 : $totalseconds;
 $days = floor($totalseconds / (3600 * 24));
 $hours = floor(($totalseconds - ($days * (3600 * 24))) / 3600);
 $minutes = floor(($totalseconds - ($days * (3600 * 24)) - ($hours * 3600)) / 60);
@@ -65,7 +71,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 		</div>
 		<div class="block-timer-info-container">
 			<div class="block-timer-info-top">
-				<h3 class="block-timer-info-date inverted"><?php echo $start_date_string; ?> - <?php echo $end_date_string; ?></h3>
+				<h3 class="block-timer-info-date inverted"><?php echo $start_date_string; ?><?php echo $start_date_string !== $end_date_short_string ? ' - '.$end_date_string : ''; ?></h3>
 				<h3 class="block-timer-info-location inverted">ROGER'S ARENA AT THE BC PLACE STADIUM</h3>
 			</div>
 			<div class="block-timer-info-link-container">
