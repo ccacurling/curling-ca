@@ -1,50 +1,99 @@
 .footer-gray {
-    .footer-wrapper {
-        background-color: $gray;
-    }
+  .footer-wrapper {
+    background-color: $gray;
+  }
 
-    .menu-item-selectable:hover .menu-item-content {
-        color: #ed1940;
-    }
+  .menu-item-selectable:hover .menu-item-content {
+    color: #ed1940;
+  }
 }
 
 .footer-legal-gray {
-    .footer-legal-wrapper {
-        background-color: $gray;
-    }
+  .footer-legal-wrapper {
+    background-color: $gray;
+  }
 
-    .menu-item-selectable:hover .menu-item-content {
-        color: #ed1940;
-    }
+  .menu-item-selectable:hover .menu-item-content {
+    color: #ed1940;
+  }
 }
 
 .footer-logo {
-    margin-top: 11px;
+  width: 46px;
+  margin-top: 11px;
+  @include responsive-min($responsive-tablet) {
+    width: 90px;
+  }
 }
 
 .footer-wrapper {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: flex-start;
     padding-top: 29px;
     padding-bottom: 60px;
-    align-items: flex-start;
+    padding-left: 15px;
+    padding-right: 15px;
     background-color: $gray;
     color: $white;
-    max-height: 347px;
+    @include responsive-min($responsive-tablet) {
+      flex-direction: row;
+      padding-left: 115px;
+      padding-right: 115px;
+    }
 }
 
 .footer-content-left-wrapper {
-    padding-left: 19px;
-    width: 137px;
+  margin-left: 0;
+  margin-right: 0;
+  @include responsive-min($responsive-tablet) {
+    flex-grow: 1;
+    flex-shrink: 0.3;
+    flex-basis: 16%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 .footer-content-centre-wrapper {
-    width: 610px;
+  @include responsive-min($responsive-tablet) {
+    flex-grow: 1;
+    flex-shrink: 0.3;
+    flex-basis: 50%;
+  }
 }
 
 .footer-content-right-wrapper {
-    width: 470px;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 100%;
+  @include responsive-min($responsive-tablet) {
+    flex-grow: 1;
+    flex-shrink: 0.3;
+    flex-basis: 33%;
+    flex-direction: column;
+    padding-left: 18px;
+    padding-right: 18px;
+    width: auto;
+  }
 }
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  @include responsive-min($responsive-tablet) {
+    flex-direction: row;
+  }
+  .newsletter-signup-submit {
+    max-width: 100px;
+  }
+}
+
+.newsletter-signup-input {
+  flex-grow: 1;
+}
+
 
 .newsletter-signup-title {
     padding-top: 12px;
@@ -54,23 +103,34 @@
 }
 
 .newsletter-signup-input {
-    width: 340px;
     height: 40px;
 }
 
 .newsletter-signup-submit {
+  @include responsive-min($responsive-tablet) {
     margin-left: 20px;
+  }
 }
 
 .footer-nav-menu  {
+  flex-direction: column;
+  flex-wrap: nowrap;
+  @include responsive-min($responsive-tablet) {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 110px;
-    padding-right: 110px;
+    // padding-left: 110px;
+    // padding-right: 110px;
+  }
 }
 
-.footer-menu-item {
+.footer-menu-item.menu-item {
+  padding-left: 0;
+  padding-right: 0;
+  @include responsive-min($responsive-tablet) {
+    padding-left: 19px;
+    padding-right: 19px;
     width: 50%;
+  }
 }
 
 .footer-nav-menu-social {
@@ -84,11 +144,21 @@
 
 .footer-legal-content {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
     border-top: 1px solid $light-gray;
+    @include responsive-min($responsive-tablet) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
 }
 
 .legal {
     color: $light-gray;
+}
+
+.footer-legal-content-left-wrapper {
+  padding-left: 15px;
 }
