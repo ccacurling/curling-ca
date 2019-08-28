@@ -1,0 +1,318 @@
+/*
+ Theme Name:   Eventum Child
+ Theme URI:    http://demo.themeum.com/wordpress/eventum
+ Description:  Eventum Child Theme - Modified by Flewid Inc.
+ Author:       Flewid Inc.
+ Author URI:   httpS://flewid.ca/
+ Template:     eventum
+ Version:      1.0A
+ Tags:         light, dark, two-columns, right-sidebar, responsive-layout, accessibility-ready
+ Text Domain:  eventum-child
+*/
+
+
+@import url("../eventum/style.css");
+@import url("fonts.css");
+
+
+
+/* new colors for curling canada microsite - EDIT HERE */
+
+#main-menu .nav>li.ticket-menu a {
+	background-color: #127ABF;
+    	color: #fff !important;
+    	text-shadow: none !important;
+}
+
+#main-menu .nav>li.ticket-menu a:hover {
+	background-color: #22518F;
+}
+
+.home-contact-form .wpcf7-form-control.wpcf7-submit {
+	background: #127ABF;
+}
+
+.sponsorLogo {
+    width:145px;
+    height:68px;
+    margin:auto;
+}
+
+/* 
+ * DO NOT CHANGE BELOW THIS LINE 
+ * 
+ */
+
+ 
+
+
+
+/* Font settings for Curling Canada */ 
+body {
+	font-family:MetaSerifPro-Book !important;
+}
+
+h1 {
+	font-family:Knockout-49Liteweight !important; 
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+h2 {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+h3 {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+h4 {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+h5 {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+h6 {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+p {
+	font-family:MetaSerifPro-Book;
+	line-height: 29px;
+}
+
+.themeum-button {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+.vc_table_content {
+	font-family:MetaSerifPro-Book ;
+}
+
+
+.vc-th {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 16px;
+}
+
+.vc-th .vc_table_content {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 16px;
+}
+
+table.vc-table-plugin-theme-classic_pink tr.vc-th td {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 16px;
+}
+
+
+.wpcf7-form-control.wpcf7-submit {
+	color: #fff;
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 20px;
+}
+
+.pricing-btn {
+	color: #fff;
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font-size: 20px;
+}
+
+h3.style-title {
+	margin-top: 0px;
+}
+
+.wpb_wrapper p {
+	text-align: justify;
+}
+
+.widget ul li {
+	font-weight: bold;
+	text-transform: capitalize; 
+	padding-left: 5px;
+}
+
+.widget ul li a:hover {
+	color: #AA2030;
+}
+
+.wpb_wrapper {
+	/* padding-right: 15px; */
+}
+
+
+.vcmp-socials {
+	text-align: right;
+	padding-right: 12px !important;
+	float: right;
+	position: relative;
+}
+
+.circularCountdown {
+text-transform: uppercase;
+	letter-spacing: 4px;
+    font-family: Knockout-49Liteweight !important;
+}
+
+/* 
+CHANGE FONT ON NAVIGATION MENU
+*/
+#main-menu .nav>li>a {
+	font-family:Knockout-49Liteweight !important;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	color: #000 !important;
+}
+
+#main-menu .nav>li>ul li a {
+	font-family:MetaSerifPro-Book;
+	line-height: 29px;
+	letter-spacing: 2px;
+	text-transform: capitalize;
+	font-size: 18px !important;
+}
+
+#main-menu .nav>li>a {
+	font-size: 18px !important;
+	text-shadow: 1px 1px #ffffff;
+}
+
+.curlshadow {
+	text-shadow: 1px 1px #3c3c3c;
+}
+
+#main-menu {
+	padding-top: 30px;
+}
+
+.sp-speaker .speaker-designation {
+	line-height: 20px;
+}
+
+#masthead.sticky .navbar-brand>img {
+	width: 120px;
+}
+
+.logo_showcase .slick-slide img {
+	border: none !important;
+}
+
+
+/* change spacing on headers */
+
+.sub-title-inner h2 {
+	background-image: none !important;
+}
+
+/* center and make the sponsors logo's 70% width */
+
+.logo_showcase {
+	padding: 0 30px 20px 30px !important;
+	margin: 0 auto 0 auto !important; 
+	width:70%;
+}
+
+/* tables header smaller */
+
+table.vc-table-plugin-theme-classic_pink tr.vc-th td {
+    padding: 0px 0px 0px 13px !important;
+}
+
+/* main header */
+.navbar-brand>img {
+	max-height: 100px;
+}
+
+.header {
+	background: none !important;
+	background: rgba(226,226,226,1);
+	background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(10%, rgba(229,229,229,1)), color-stop(100%, rgba(254,254,254,0))) !important;
+	background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 ) !important;
+}
+
+/* main header / masthead background always on */
+.page-template-homepage .site-header {
+	background-color: #ccc;
+	top: 0px !important;
+	background: rgba(226,226,226,1);
+	background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(10%, rgba(229,229,229,1)), color-stop(100%, rgba(254,254,254,0)));
+	background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%);
+	background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%);
+	background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%);
+	background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+}
+
+
+
+#masthead.sticky {
+    	background-color: none !important;
+	box-shadow: none !important;
+	background: rgba(226,226,226,1) !important;
+	background: -moz-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(226,226,226,1)), color-stop(10%, rgba(229,229,229,1)), color-stop(100%, rgba(254,254,254,0))) !important;
+	background: -webkit-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	background: -o-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	background: -ms-linear-gradient(top, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	background: linear-gradient(to bottom, rgba(226,226,226,1) 0%, rgba(229,229,229,1) 10%, rgba(254,254,254,0) 100%) !important;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 ) !important;
+}
+#navigation .navbar-header .navbar-toggle {
+	background: none;
+}
+
+.navbar-toggle .icon-bar {
+	background-color: #127ABF;
+    	width: 27px;
+    	height: 4px;
+    	border-radius: 2px;
+}
+
+.navbar-toggle:hover .icon-bar {
+	background-color: #22518F;
+}
+
+.wpcf7-form-control.wpcf7-submit {
+background-color: #127ABF ;
+}
+
+
+.wpcf7-form-control.wpcf7-submit:hover {
+background-color: #22518F;
+}
+
+
+#sponsors {
+margin-right: 30px;
+    padding-right: 0px !important;
+}
