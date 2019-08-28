@@ -1,0 +1,83 @@
+/* Custom Fonts for Curling Canada */
+
+@font-face {
+	font-family: 'MetaSerifPro-BoldItalic';
+	src: url('./fonts/FontFont_-_MetaSerifPro-BoldItalic.eot?') format('eot'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-BoldItalic.woff') format('woff'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-BoldItalic.ttf')  format('truetype'),
+	     url('./fonts/FontFont_-_MetaSerifPro-BoldItalic.svg#./fonts/FontFont_-_MetaSerifPro-BoldItalic') format('svg');
+}
+
+@font-face {
+	font-family: 'MetaSerifPro-BoldItalic';
+	src: url('./fonts/FontFont_-_MetaSerifPro-BoldItalic.eot?') format('eot'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-BoldItalic.woff') format('woff'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-BoldItalic.ttf')  format('truetype'),
+	     url('./fonts/FontFont_-_MetaSerifPro-BoldItalic.svg#./fonts/FontFont_-_MetaSerifPro-BoldItalic') format('svg');
+}
+
+@font-face {
+	font-family: 'MetaSerifPro-Bold';
+	src: url('./fonts/FontFont_-_MetaSerifPro-Bold.eot?') format('eot'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-Bold.woff') format('woff'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-Bold.ttf')  format('truetype'),
+	     url('./fonts/FontFont_-_MetaSerifPro-Bold.svg#./fonts/FontFont_-_MetaSerifPro-Bold') format('svg');
+}
+
+@font-face {
+	font-family: 'MetaSerifPro-Bold';
+	src: url('./fonts/FontFont_-_MetaSerifPro-Bold.eot?') format('eot'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-Bold.woff') format('woff'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-Bold.ttf')  format('truetype'),
+	     url('./fonts/FontFont_-_MetaSerifPro-Bold.svg#./fonts/FontFont_-_MetaSerifPro-Bold') format('svg');
+}
+
+
+
+@font-face {
+	font-family: 'MetaSerifPro-BookItalic';
+	src: url('./fonts/FontFont_-_MetaSerifPro-BookItalic.eot?') format('eot'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-BookItalic.woff') format('woff'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-BookItalic.ttf')  format('truetype'),
+	     url('./fonts/FontFont_-_MetaSerifPro-BookItalic.svg#./fonts/FontFont_-_MetaSerifPro-BookItalic') format('svg');
+}
+
+@font-face {
+	font-family: 'MetaSerifPro-BookItalic';
+	src: url('./fonts/FontFont_-_MetaSerifPro-BookItalic.eot?') format('eot'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-BookItalic.woff') format('woff'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-BookItalic.ttf')  format('truetype'),
+	     url('./fonts/FontFont_-_MetaSerifPro-BookItalic.svg#./fonts/FontFont_-_MetaSerifPro-BookItalic') format('svg');
+}
+
+@font-face {
+	font-family: 'MetaSerifPro-Book';
+	src: url('./fonts/FontFont_-_MetaSerifPro-Book.eot?') format('eot'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-Book.woff') format('woff'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-Book.ttf')  format('truetype'),
+	     url('./fonts/FontFont_-_MetaSerifPro-Book.svg#./fonts/FontFont_-_MetaSerifPro-Book') format('svg');
+}
+
+@font-face {
+	font-family: 'MetaSerifPro-Book';
+	src: url('./fonts/FontFont_-_MetaSerifPro-Book.eot?') format('eot'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-Book.woff') format('woff'), 
+	     url('./fonts/FontFont_-_MetaSerifPro-Book.ttf')  format('truetype'),
+	     url('./fonts/FontFont_-_MetaSerifPro-Book.svg#./fonts/FontFont_-_MetaSerifPro-Book') format('svg');
+}
+
+@font-face {
+	font-family: 'Knockout-49Liteweight';
+	src: url('./fonts/Knockout-49.eot?') format('eot'), 
+	     url('./fonts/Knockout-49.woff') format('woff'), 
+	     url('./fonts/Knockout-49.ttf')  format('truetype'),
+	     url('./fonts/Knockout-49.svg#./fonts/Knockout-49') format('svg');
+}
+
+@font-face {
+	font-family: 'Knockout-49Liteweight';
+	src: url('./fonts/Knockout-49.eot?') format('eot'), 
+	     url('./fonts/Knockout-49.woff') format('woff'), 
+	     url('./fonts/Knockout-49.ttf')  format('truetype'),
+	     url('./fonts/Knockout-49.svg#./fonts/Knockout-49') format('svg');
+}
