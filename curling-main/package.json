@@ -9,9 +9,7 @@
   "scripts": {
     "test": "node_modules/.bin/jest.js",
     "codecept:start": "node_modules/.bin/selenium-standalone start &",
-    "codecept": "php vendor/bin/codecept run",
-    "rollup": "node_modules/.bin/rollup -c",
-    "rollup:watch": "node_modules/.bin/rollup -c -w"
+    "codecept": "php vendor/bin/codecept run"
   },
   "keywords": [
     "wordpress",
@@ -30,6 +28,7 @@
     "babel-jest": "^24.9.0",
     "babel-register": "^6.26.0",
     "gulp": "^4.0.2",
+    "gulp-better-rollup": "^4.0.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.5",

@@ -4,6 +4,7 @@
  @import "base/fonts";
 
  .edit-post-layout__content {
+    @import "base/admin";
     @import "base/colors";
     @import "base/variables";
     @import "base/mixins";
@@ -19,10 +20,11 @@
     /**
     * Modules imports
     */
-    @import "modules/block-timer";
     @import "modules/buttons";
     @import "modules/checkbox";
     @import "modules/nav";
+    @import "modules/blocks/block-hero";
+    @import "modules/blocks/block-timer";
 
     /**
     * Test imports
