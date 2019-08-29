@@ -17,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
     padding-top: 39px;
-    padding-bottom: 39px;
+    padding-bottom: 28px;
     padding-left: 57px;
     padding-right: 61px;
     max-width: 971px;
@@ -28,6 +28,9 @@
 
 .promo-name {
   line-height: 50px;
+  @include responsive-min($responsive-laptop) {
+    line-height: 52px;
+  }
 }
 
 .promo-price-container-mobile,
@@ -35,8 +38,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 12px;
+  margin-top: 0;
   padding-left: 2px;
+  @include responsive-min($responsive-laptop) {
+    margin-top: 12px;
+  }
 }
 
 .promo-price-container-mobile {
@@ -54,6 +60,7 @@
 
 .promo-wrapper {
   @include responsive-min($responsive-laptop) {
+    margin-right: 10px;
     max-width: 400px;
   }
 }
@@ -64,6 +71,7 @@
   align-items: center;
   @include responsive-min($responsive-laptop) {
     align-items: flex-start;
+    margin-right: 10px;
   }
 }
 
@@ -76,6 +84,14 @@
   }
 }
 
+.promo-price-cents {
+  @include responsive-min($responsive-laptop) {
+    position: relative;
+    left: -8px;
+    margin-top: 14px;
+  }
+}
+
 .promo-price-dollar {
   line-height: 106px;
   @include responsive-min($responsive-laptop) {
@@ -84,12 +100,14 @@
 }
 
 .promo-price-info {
-  margin-top: 31px;
+  margin-top: 22px;
   margin-left: 25px;
   margin-right: 25px;
   letter-spacing: 0.8px;
   @include responsive-min($responsive-laptop) {
     margin-top: 9px;
+    margin-left: 36px;
+    margin-right: 36px;
   }
 }
 
@@ -98,8 +116,17 @@
   padding-bottom: 25px;
   border-bottom: 1px solid $light-gray;
 
+  @include responsive-min($responsive-laptop) {
+    padding-top: 17px;
+    padding-bottom: 26px;
+  }
+
   h1, h2, h3, h4 {
     margin-bottom: 18px;
+    @include responsive-min($responsive-laptop) {
+      margin-bottom: 16px;
+      letter-spacing: 0.7px;
+    }
   }
 }
 
@@ -109,6 +136,14 @@
   padding-bottom: 23px;
   padding-left: 42px;
   padding-right: 38px;
+  @include responsive-min($responsive-laptop) {
+    margin-top: 20px;
+    margin-bottom: 11px;
+    padding-top: 17px;
+    padding-bottom: 22px;
+    padding-right: 35px;
+    letter-spacing: 1.3px;
+  }
 }
 
 .promo-button-text {

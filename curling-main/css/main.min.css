@@ -1292,7 +1292,7 @@ li {
     align-items: center;
     justify-content: space-between;
     padding-top: 39px;
-    padding-bottom: 39px;
+    padding-bottom: 28px;
     padding-left: 57px;
     padding-right: 61px;
     max-width: 971px;
@@ -1305,13 +1305,26 @@ li {
   line-height: 50px;
 }
 
+@media only screen and (min-width: 999px) {
+  .promo-name {
+    line-height: 52px;
+  }
+}
+
 .promo-price-container-mobile,
 .promo-price-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-top: 12px;
+  margin-top: 0;
   padding-left: 2px;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-price-container-mobile,
+  .promo-price-container {
+    margin-top: 12px;
+  }
 }
 
 @media only screen and (min-width: 999px) {
@@ -1332,6 +1345,7 @@ li {
 
 @media only screen and (min-width: 999px) {
   .promo-wrapper {
+    margin-right: 10px;
     max-width: 400px;
   }
 }
@@ -1345,6 +1359,7 @@ li {
 @media only screen and (min-width: 999px) {
   .promo-price-wrapper {
     align-items: flex-start;
+    margin-right: 10px;
   }
 }
 
@@ -1361,6 +1376,14 @@ li {
   }
 }
 
+@media only screen and (min-width: 999px) {
+  .promo-price-cents {
+    position: relative;
+    left: -8px;
+    margin-top: 14px;
+  }
+}
+
 .promo-price-dollar {
   line-height: 106px;
 }
@@ -1372,7 +1395,7 @@ li {
 }
 
 .promo-price-info {
-  margin-top: 31px;
+  margin-top: 22px;
   margin-left: 25px;
   margin-right: 25px;
   letter-spacing: 0.8px;
@@ -1381,6 +1404,8 @@ li {
 @media only screen and (min-width: 999px) {
   .promo-price-info {
     margin-top: 9px;
+    margin-left: 36px;
+    margin-right: 36px;
   }
 }
 
@@ -1390,8 +1415,22 @@ li {
   border-bottom: 1px solid #d8d8d8;
 }
 
+@media only screen and (min-width: 999px) {
+  .promo-info-container {
+    padding-top: 17px;
+    padding-bottom: 26px;
+  }
+}
+
 .promo-info-container h1, .promo-info-container h2, .promo-info-container h3, .promo-info-container h4 {
   margin-bottom: 18px;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-info-container h1, .promo-info-container h2, .promo-info-container h3, .promo-info-container h4 {
+    margin-bottom: 16px;
+    letter-spacing: 0.7px;
+  }
 }
 
 .promo-button-container {
@@ -1400,6 +1439,17 @@ li {
   padding-bottom: 23px;
   padding-left: 42px;
   padding-right: 38px;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-button-container {
+    margin-top: 20px;
+    margin-bottom: 11px;
+    padding-top: 17px;
+    padding-bottom: 22px;
+    padding-right: 35px;
+    letter-spacing: 1.3px;
+  }
 }
 
 .promo-button-text {
