@@ -32,6 +32,7 @@ registerBlockType("cossette/block-container", {
   edit: withDispatch(dispatch => {
     dispatch('core/editor').setTemplateValidity(true);
   })(({ className }) => {
+    console.log(className);
     return (
       <div className={className}>
         <InnerBlocks templateLock={false} />

@@ -1,0 +1,116 @@
+.block-promo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 95px;
+  padding-bottom: 43px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 389px;
+  background-image: url('../images/symbol-slash.svg');
+  background-size: 205px 120px;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+
+  @include responsive-min($responsive-laptop) {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    padding-left: 57px;
+    padding-right: 61px;
+    max-width: 971px;
+    background-image: url('../images/symbol-slash-large.svg');
+    background-size: 252px 146px;
+  }
+}
+
+.promo-name {
+  line-height: 50px;
+}
+
+.promo-price-container-mobile,
+.promo-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 12px;
+  padding-left: 2px;
+}
+
+.promo-price-container-mobile {
+  @include responsive-min($responsive-laptop) {
+    display: none;
+  }
+}
+
+.promo-price-container {
+  display: none;
+  @include responsive-min($responsive-laptop) {
+    display: flex;
+  }
+}
+
+.promo-wrapper {
+  @include responsive-min($responsive-laptop) {
+    max-width: 400px;
+  }
+}
+
+.promo-price-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @include responsive-min($responsive-laptop) {
+    align-items: flex-start;
+  }
+}
+
+.promo-price-dollar-symbol,
+.promo-price-cents {
+  margin-bottom: 18px;
+  @include responsive-min($responsive-laptop) {
+    margin-top: 19px;
+    margin-bottom: 0;
+  }
+}
+
+.promo-price-dollar {
+  line-height: 106px;
+  @include responsive-min($responsive-laptop) {
+    line-height: 150px;
+  }
+}
+
+.promo-price-info {
+  margin-top: 31px;
+  margin-left: 25px;
+  margin-right: 25px;
+  letter-spacing: 0.8px;
+  @include responsive-min($responsive-laptop) {
+    margin-top: 9px;
+  }
+}
+
+.promo-info-container {
+  padding-top: 38px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $light-gray;
+
+  h1, h2, h3, h4 {
+    margin-bottom: 18px;
+  }
+}
+
+.promo-button-container {
+  margin-top: 32px;
+  padding-top: 19px;
+  padding-bottom: 23px;
+  padding-left: 42px;
+  padding-right: 38px;
+}
+
+.promo-button-text {
+  font-size: 34px;
+}

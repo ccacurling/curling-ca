@@ -86,6 +86,12 @@ ul {
   font-feature-settings: '"liga", "dlig"';
 }
 
+a.clear {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: inherit;
+}
+
 img {
   max-width: 100%;
   max-height: 100%;
@@ -93,40 +99,73 @@ img {
 
 .highlight {
   font-family: "Knockout";
-  font-size: 200px;
+  font-size: 126px;
+  letter-spacing: 1.94px;
+  line-height: 126px;
   color: #000000;
-  letter-spacing: 3.08px;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 999px) {
+  .highlight {
+    font-size: 200px;
+    letter-spacing: 3.08px;
+    line-height: 160px;
+  }
 }
 
 h1 {
   font-family: "Knockout";
-  font-size: 120px;
   color: #000000;
-  letter-spacing: 0.95px;
-  line-height: 104px;
+  font-size: 80px;
+  line-height: 64px;
+  letter-spacing: 0.63px;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 999px) {
+  h1 {
+    font-size: 120px;
+    line-height: 104px;
+    letter-spacing: 0.95px;
+  }
 }
 
 h2 {
   font-family: "Knockout";
-  font-size: 60px;
   color: #000000;
-  letter-spacing: 0.6px;
-  line-height: 36px;
+  font-size: 50.4px;
+  letter-spacing: 0.5px;
+  line-height: 50.4px;
   font-weight: 300;
   text-transform: uppercase;
 }
 
+@media only screen and (min-width: 999px) {
+  h2 {
+    font-size: 60px;
+    letter-spacing: 0.6px;
+    line-height: 36px;
+  }
+}
+
 h3 {
   font-family: "Knockout";
-  font-size: 35px;
   color: #000000;
+  font-size: 25px;
   letter-spacing: 1px;
-  line-height: 32px;
+  line-height: 25px;
   font-weight: 300;
   text-transform: uppercase;
+}
+
+@media only screen and (min-width: 999px) {
+  h3 {
+    font-size: 35px;
+    letter-spacing: 1px;
+    line-height: 32px;
+  }
 }
 
 h4 {
@@ -134,7 +173,7 @@ h4 {
   font-size: 20px;
   color: #000000;
   letter-spacing: 1px;
-  line-height: 26px;
+  line-height: 20px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -149,10 +188,18 @@ h4 {
 
 p {
   font-family: "Meta Serif Pro";
-  font-size: 16px;
-  color: #000000;
+  font-size: 14.7px;
   letter-spacing: 0;
-  line-height: 20px;
+  line-height: 19px;
+  color: #000000;
+}
+
+@media only screen and (min-width: 999px) {
+  p {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
 }
 
 p a {
@@ -179,6 +226,10 @@ li {
 
 .gray {
   color: #4c4c4e;
+}
+
+.red {
+  color: #ed1940;
 }
 
 /**
@@ -1084,10 +1135,13 @@ li {
 .block-hero {
   display: flex;
   align-items: center;
-  height: 700px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.block-hero-large {
+  height: 700px;
 }
 
 .block-hero-medium {
@@ -1215,6 +1269,141 @@ li {
 
 .arrow-right-large {
   margin-left: 14px;
+}
+
+.block-promo {
+  display: flex;
+  flex-direction: column;
+  padding-top: 95px;
+  padding-bottom: 43px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 389px;
+  background-image: url("../images/symbol-slash.svg");
+  background-size: 205px 120px;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+@media only screen and (min-width: 999px) {
+  .block-promo {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    padding-left: 57px;
+    padding-right: 61px;
+    max-width: 971px;
+    background-image: url("../images/symbol-slash-large.svg");
+    background-size: 252px 146px;
+  }
+}
+
+.promo-name {
+  line-height: 50px;
+}
+
+.promo-price-container-mobile,
+.promo-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 12px;
+  padding-left: 2px;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-price-container-mobile {
+    display: none;
+  }
+}
+
+.promo-price-container {
+  display: none;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-price-container {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-wrapper {
+    max-width: 400px;
+  }
+}
+
+.promo-price-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-price-wrapper {
+    align-items: flex-start;
+  }
+}
+
+.promo-price-dollar-symbol,
+.promo-price-cents {
+  margin-bottom: 18px;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-price-dollar-symbol,
+  .promo-price-cents {
+    margin-top: 19px;
+    margin-bottom: 0;
+  }
+}
+
+.promo-price-dollar {
+  line-height: 106px;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-price-dollar {
+    line-height: 150px;
+  }
+}
+
+.promo-price-info {
+  margin-top: 31px;
+  margin-left: 25px;
+  margin-right: 25px;
+  letter-spacing: 0.8px;
+}
+
+@media only screen and (min-width: 999px) {
+  .promo-price-info {
+    margin-top: 9px;
+  }
+}
+
+.promo-info-container {
+  padding-top: 38px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.promo-info-container h1, .promo-info-container h2, .promo-info-container h3, .promo-info-container h4 {
+  margin-bottom: 18px;
+}
+
+.promo-button-container {
+  margin-top: 32px;
+  padding-top: 19px;
+  padding-bottom: 23px;
+  padding-left: 42px;
+  padding-right: 38px;
+}
+
+.promo-button-text {
+  font-size: 34px;
 }
 
 /**

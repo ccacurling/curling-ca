@@ -1,10 +1,13 @@
 .block-hero {
   display: flex;
   align-items: center;
-  height: 700px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+
+.block-hero-large {
+  height: 700px;
 }
 
 .block-hero-medium {
