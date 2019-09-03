@@ -6,7 +6,6 @@
   padding-left: 20px;
   padding-right: 20px;
   max-width: 389px;
-  background-image: url('../images/symbol-slash.svg');
   background-size: 205px 120px;
   background-position: 0% 0%;
   background-repeat: no-repeat;
@@ -21,8 +20,66 @@
     padding-left: 57px;
     padding-right: 61px;
     max-width: 971px;
-    background-image: url('../images/symbol-slash-large.svg');
     background-size: 252px 146px;
+  }
+}
+
+.block-promo-white {
+  background-color: $white;
+  background-image: url('../images/symbol-slash.svg');
+  @include responsive-min($responsive-laptop) {
+    background-image: url('../images/symbol-slash-large.svg');
+  }
+
+  .promo-name {
+    color: $black;
+  }
+}
+
+.block-promo-gray {
+  background-color: $gray;
+  background-image: url('../images/symbol-slash.svg');
+  @include responsive-min($responsive-laptop) {
+    background-image: url('../images/symbol-slash-large.svg');
+  }
+
+  .promo-name {
+    color: $white;
+  }
+
+  .promo-info-container {
+    h1, h2, h3, h4, p {
+      color: $white;
+    }
+  }
+}
+
+.block-promo-red {
+  background-color: $red;
+  background-image: url('../images/symbol-slash-white.svg');
+
+  .promo-name {
+    color: $white;
+  }
+
+  .promo-info-container {
+    h1, h2, h3, h4, p {
+      color: $white;
+    }
+  }
+
+  @include responsive-min($responsive-laptop) {
+    background-image: url('../images/symbol-slash-large-white.svg');
+
+    .promo-name {
+      color: $black;
+    }
+
+    .promo-info-container {
+      h1, h2, h3, h4, p {
+        color: $black;
+      }
+    }
   }
 }
 

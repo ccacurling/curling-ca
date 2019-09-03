@@ -97,7 +97,7 @@ img {
   max-height: 100%;
 }
 
-.highlight {
+.text-highlight {
   font-family: "Knockout";
   font-size: 126px;
   letter-spacing: 1.94px;
@@ -107,7 +107,7 @@ img {
 }
 
 @media only screen and (min-width: 999px) {
-  .highlight {
+  .text-highlight {
     font-size: 200px;
     letter-spacing: 3.08px;
     line-height: 160px;
@@ -524,6 +524,11 @@ li {
 .btn-red {
   background-color: #ed1940;
   color: #ffffff;
+}
+
+.btn-white {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .btn-black {
@@ -1279,7 +1284,6 @@ li {
   padding-left: 20px;
   padding-right: 20px;
   max-width: 389px;
-  background-image: url("../images/symbol-slash.svg");
   background-size: 205px 120px;
   background-position: 0% 0%;
   background-repeat: no-repeat;
@@ -1296,8 +1300,66 @@ li {
     padding-left: 57px;
     padding-right: 61px;
     max-width: 971px;
-    background-image: url("../images/symbol-slash-large.svg");
     background-size: 252px 146px;
+  }
+}
+
+.block-promo-white {
+  background-color: #ffffff;
+  background-image: url("../images/symbol-slash.svg");
+}
+
+@media only screen and (min-width: 999px) {
+  .block-promo-white {
+    background-image: url("../images/symbol-slash-large.svg");
+  }
+}
+
+.block-promo-white .promo-name {
+  color: #000000;
+}
+
+.block-promo-gray {
+  background-color: #4c4c4e;
+  background-image: url("../images/symbol-slash.svg");
+}
+
+@media only screen and (min-width: 999px) {
+  .block-promo-gray {
+    background-image: url("../images/symbol-slash-large.svg");
+  }
+}
+
+.block-promo-gray .promo-name {
+  color: #ffffff;
+}
+
+.block-promo-gray .promo-info-container h1, .block-promo-gray .promo-info-container h2, .block-promo-gray .promo-info-container h3, .block-promo-gray .promo-info-container h4, .block-promo-gray .promo-info-container p {
+  color: #ffffff;
+}
+
+.block-promo-red {
+  background-color: #ed1940;
+  background-image: url("../images/symbol-slash-white.svg");
+}
+
+.block-promo-red .promo-name {
+  color: #ffffff;
+}
+
+.block-promo-red .promo-info-container h1, .block-promo-red .promo-info-container h2, .block-promo-red .promo-info-container h3, .block-promo-red .promo-info-container h4, .block-promo-red .promo-info-container p {
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-promo-red {
+    background-image: url("../images/symbol-slash-large-white.svg");
+  }
+  .block-promo-red .promo-name {
+    color: #000000;
+  }
+  .block-promo-red .promo-info-container h1, .block-promo-red .promo-info-container h2, .block-promo-red .promo-info-container h3, .block-promo-red .promo-info-container h4, .block-promo-red .promo-info-container p {
+    color: #000000;
   }
 }
 
@@ -1454,6 +1516,120 @@ li {
 
 .promo-button-text {
   font-size: 34px;
+}
+
+.block-ticket {
+  display: flex;
+  flex-direction: column;
+  padding-top: 21px;
+  padding-bottom: 43px;
+  padding-left: 14px;
+  padding-right: 14px;
+  max-width: 290px;
+  background-size: 205px 120px;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.block-ticket-white {
+  background-color: #ffffff;
+}
+
+.block-ticket-gray {
+  background-color: #4c4c4e;
+}
+
+.ticket-header {
+  margin-left: 3px;
+  margin-bottom: 17px;
+  max-width: 200px;
+  min-height: 100px;
+}
+
+.ticket-title {
+  line-height: 52px;
+}
+
+.ticket-price-title {
+  margin-left: 6px;
+}
+
+.ticket-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+.ticket-price-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ticket-price-dollar-symbol,
+.ticket-price-cents {
+  margin-bottom: 27px;
+}
+
+.ticket-price-dollar {
+  margin-left: 2px;
+  font-size: 120px;
+  line-height: 85px;
+  letter-spacing: 0;
+}
+
+.ticket-price-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 28px;
+  margin-right: 28px;
+  letter-spacing: 0.8px;
+}
+
+.ticket-option-title {
+  margin-bottom: 10px;
+}
+
+.ticket-options-wrapper {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.ticket-option-price-container {
+  margin-bottom: 18px;
+}
+
+.ticket-option-price {
+  margin-bottom: 10px;
+}
+
+.ticket-button-text {
+  font-size: 34px;
+}
+
+.ticket-button-container {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 39px;
+  padding-right: 36px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+}
+
+.ticket-legal-wrapper {
+  margin-top: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.ticket-legal {
+  font-size: 14px;
 }
 
 /**

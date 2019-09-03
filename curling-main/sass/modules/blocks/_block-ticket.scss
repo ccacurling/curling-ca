@@ -1,0 +1,114 @@
+.block-ticket {
+  display: flex;
+  flex-direction: column;
+  padding-top: 21px;
+  padding-bottom: 43px;
+  padding-left: 14px;
+  padding-right: 14px;
+  max-width: 290px;
+  background-size: 205px 120px;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.block-ticket-white {
+  background-color: $white;
+}
+
+.block-ticket-gray {
+  background-color: $gray;
+}
+
+.ticket-header {
+  margin-left: 3px;
+  margin-bottom: 17px;
+  max-width: 200px;
+  min-height: 100px;
+}
+
+.ticket-title {
+  line-height: 52px;
+}
+
+.ticket-price-title {
+  margin-left: 6px;
+}
+
+.ticket-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+}
+
+.ticket-price-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ticket-price-dollar-symbol,
+.ticket-price-cents {
+  margin-bottom: 27px;
+}
+
+.ticket-price-dollar {
+  margin-left: 2px;
+  font-size: 120px;
+  line-height: 85px;
+  letter-spacing: 0;
+
+}
+
+.ticket-price-info {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 28px;
+  margin-right: 28px;
+  letter-spacing: 0.8px;
+}
+
+.ticket-option-title {
+  margin-bottom: 10px;
+}
+
+.ticket-options-wrapper {
+  margin-top: 14px;
+  margin-bottom: 8px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.ticket-option-price-container {
+  margin-bottom: 18px;
+}
+
+.ticket-option-price {
+  margin-bottom: 10px;
+}
+
+.ticket-button-text {
+  font-size: 34px;
+}
+
+.ticket-button-container {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 19px;
+  padding-bottom: 20px;
+  padding-left: 39px;
+  padding-right: 36px;
+  font-weight: 400;
+  letter-spacing: 1.4px;
+}
+
+.ticket-legal-wrapper {
+  margin-top: 12px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.ticket-legal {
+  font-size: 14px;
+}

@@ -23,6 +23,15 @@ function afc_blocks_init() {
 			'category'			=> 'common',
 			'icon'				=> 'admin-comments',
       'keywords'			=> [ 'promo' ]
+    ]);
+    acf_register_block([
+			'name'				=> 'ticket',
+			'title'				=> __('Ticket'),
+			'description'		=> __('A ticket block.'),
+			'render_callback'	=> 'block_render_callback',
+			'category'			=> 'common',
+			'icon'				=> 'admin-comments',
+      'keywords'			=> [ 'ticket' ]
 		]);
   }
   
