@@ -2,9 +2,9 @@
 
 include 'blocks-setup.php';
 
-add_action('acf/init', 'afc_blocks_init');
+add_action('acf/init', 'acf_blocks_init');
 
-function afc_blocks_init() {
+function acf_blocks_init() {
 	if( function_exists('acf_register_block') ) {
 		acf_register_block([
 			'name'				=> 'hero',
@@ -32,16 +32,18 @@ function afc_blocks_init() {
 			'category'			=> 'common',
 			'icon'				=> 'admin-comments',
       'keywords'			=> [ 'ticket' ]
-		]);
+    ]);
+    
+    acf_add_options_page('Options');
   }
   
-  $post_type_object = get_post_type_object( 'page' );
-  $post_type_object->template = [ 
-      [ 'acf/hero' ],
-      [ 'cossette/block-container' ]
-  ];
+  // $post_type_object = get_post_type_object( 'page' );
+  // $post_type_object->template = [ 
+  //     [ 'acf/hero' ],
+  //     [ 'cossette/block-container' ]
+  // ];
       
-  $post_type_object->template_lock = 'all';
+  // // $post_type_object->template_lock = 'all';
 }
 
 function block_render_callback( $block ) {
