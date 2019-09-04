@@ -1633,6 +1633,83 @@ li {
 }
 
 /**
+ * Primary Palette
+ */
+/**
+ * Secondary Palette
+ */
+.event-location-container {
+  max-width: 1170px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  margin: 5rem auto;
+  -webkit-box-shadow: 0px 5px 12px 0px #ccc;
+  -moz-box-shadow: 0px 5px 12px 0px #ccc;
+  box-shadow: 0px 5px 12px 0px #ccc;
+}
+
+.event-location-container .info-section {
+  width: 50%;
+  padding: 1.5rem 5.75rem;
+}
+
+.event-location-container .info-section h2, .event-location-container .info-section h3 {
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+.event-location-container .info-section p {
+  font-size: 2rem;
+  font-family: 'knockout';
+  line-height: 2rem;
+}
+
+.event-location-container .info-section hr {
+  margin: 2rem 0;
+  opacity: 0.5;
+}
+
+.event-location-container .info-section .event-date-label {
+  margin-top: 1.75rem;
+}
+
+.event-location-container .info-section .event-links {
+  display: flex;
+}
+
+.event-location-container .info-section .event-links div {
+  width: 50%;
+}
+
+.event-location-container .info-section .event-links div p {
+  font-size: 1rem;
+}
+
+.event-location-container .info-section .event-links div p a {
+  color: #ed1940;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.event-location-container .info-section .event-links div p a b {
+  margin-left: 0.25rem;
+}
+
+.event-location-container .map-section {
+  width: 50%;
+  height: 100%;
+}
+
+.event-location-container .map-section .wpgmza_sl_main_div {
+  display: none;
+}
+
+.event-location-container .map-section .wpgmza-infowindow {
+  color: black;
+}
+
+/**
  * Test imports
  */
 .content-fixed {
@@ -1673,6 +1750,11 @@ li {
 
 .content .xdebug-error th {
   background-color: #4c4c4e !important;
+}
+
+.content {
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=main.min.css.map */
