@@ -2032,4 +2032,9 @@
   background-color: #4c4c4e !important;
 }
 
+.edit-post-layout__content .content {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=admin.min.css.map */
