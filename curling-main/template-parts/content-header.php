@@ -6,6 +6,13 @@
     $header_color = parse_config($header_config, 'header_color', 'red');
 
     $current_page = 497698; // TODO: FIX!
+
+    $languages = icl_get_languages();
+    foreach ($languages as $key => $language) {
+      if ($language['active']) {
+        unset($languages[$key]);
+      }
+    }
     
     $menu_items = buildTree($primary_menu_items);
 
@@ -47,7 +54,9 @@
                         foreach( $menu_items as $menu_item ) {
                     ?>
                         <li class="menu-item menu-item-selectable">
-                          <h4 class="menu-item-top-nav menu-item-content <?php echo $menu_item->ID === $current_page ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
+                          <a href="">
+                            <h4 class="menu-item-top-nav menu-item-content <?php echo $menu_item->ID === $current_page ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
+                          </a>
                         </li>
                     <?php
                         }
@@ -63,26 +72,42 @@
                             foreach( $top_right_menu_items as $menu_item ) {
                         ?>
                             <li class="menu-item menu-item-selectable">
-                              <h4 class="menu-item-content menu-item-small"><?php echo $menu_item->title; ?></h4>
+                              <a href="">
+                                <h4 class="menu-item-content menu-item-small"><?php echo $menu_item->title; ?></h4>
+                              </a>
                             </li>
                         <?php
                             }
                         ?>
                         <li class="menu-item menu-item-donate">
-                          <h4 class="menu-item-small inverted">Donate</h4>
+                          <a href="">
+                            <h4 class="menu-item-small inverted">Donate</h4>
+                          </a>
                         </li>
                     </ul>
+                    <?php
+                      if (count($languages) > 0) {
+                    ?>
                     <ul class="menu-nav menu-nav-language">
+                      <?php 
+                        foreach ($languages as $key => $language) {
+                      ?>
                         <li class="menu-item menu-item-language menu-item-selectable">
-                          <h4 class="menu-item-content menu-item-small">Fr</h4>
+                          <a href="<?php echo $language['url']; ?>">
+                            <h4 class="menu-item-content menu-item-small"><?php echo $language['code']; ?></h4>
+                          </a>
                         </li>
+                      <?php
+                        }
+                      ?>
                     </ul>
                 <?php
                     }
+                  }
                 ?>
             </div>
+          </div>
         </div>
-    </div>
     <div class="nav-menu-primary content-fixed">
         <div class="nav-menu-primary-wrapper content-container">
             <img class="menu-logo" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
@@ -95,6 +120,7 @@
                             $test = $item->children;
                     ?>
                         <li class="menu-item" data-menu="<?php echo $id; ?>">
+                          <a href="">
                             <h4 class="menu-item-content menu-item-title"><?php echo $item->title; ?></h4>
                             <?php 
                                 if ($item->children != null && count($item->children) > 0) {
@@ -103,6 +129,7 @@
                             <?php
                                 }
                             ?>
+                          </a>
                         </li>
                     <?php
                         }

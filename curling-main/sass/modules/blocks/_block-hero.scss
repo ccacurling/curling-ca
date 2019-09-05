@@ -1,24 +1,324 @@
 .block-hero {
   display: flex;
+  flex-direction: column;
+  position: relative;
   align-items: center;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
+  overflow: hidden;
+
+  @include responsive-min($responsive-tablet) {
+    flex-direction: row;
+  }
+
+  .hidden {
+    display: none;
+  }  
+}
+
+.hero-media-container {
+  position: relative;
+  width: 100%;
+
+  @include responsive-min($responsive-tablet) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.hero-background-video-container {
+  height: 100%;
+}
+
+.hero-background-image {
+  object-fit: cover;
+}
+
+.hero-background-video {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  background-color: $black;
+  cursor: pointer;
+
+  @include responsive-min($responsive-tablet) {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.hero-background-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $black;
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+.hero-background-play-image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .block-hero-large {
-  height: 700px;
+  @include responsive-min($responsive-tablet) {
+    height: 700px;
+  }
+
+  .hero-media-container {
+    height: 350px;
+
+    @include responsive-min($responsive-tablet) {
+      height: 100%;
+    }
+  }
 }
 
 .block-hero-medium {
-  height: 600px;
+  @include responsive-min($responsive-tablet) {
+    height: 600px;
+  }
+
+  .hero-media-container {
+    height: 300px;
+
+    @include responsive-min($responsive-tablet) {
+      height: 100%;
+    }
+  }
 }
 
 .block-hero-small {
-  height: 430px;
+  @include responsive-min($responsive-tablet) {
+    height: 430px;
+  }
+
+  .hero-media-container {
+    height: 250px;
+
+    @include responsive-min($responsive-tablet) {
+      height: 100%;
+    }
+  }
 }
 
 .block-hero-inner {
-  flex-basis: 25%;
-  margin-left: 10%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-bottom: 1px solid $light-gray;
+
+  @include responsive-min($responsive-tablet) {
+    position: absolute;
+    left: 10%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 30%;
+    min-width: 200px;
+    border-bottom: none;
+  }
+  
+  &.left {
+    .hero-title-container {
+      padding-top: 20px;
+      padding-bottom: 26px;
+      width: 55%;
+      @include responsive-min($responsive-tablet) {
+        padding-bottom: 40px;
+      }
+    }
+
+    .hero-title,
+    .hero-date,
+    .hero-body {
+      color: $black;
+
+      @include responsive-min($responsive-tablet) {
+        color: $white;
+      }
+    }
+
+    .hero-link {
+      color: $red;
+
+      @include responsive-min($responsive-tablet) {
+        color: $white;
+      }
+    }
+  }
+
+  &.centre {
+    background-color: $white;
+    height: 100%;
+
+    @include responsive-min($responsive-tablet) {
+      left: 51.65%;
+      padding-top: 65px;
+      padding-left: 4.7%;
+      padding-right: 4.7%;
+      width: 39.2%;
+    }
+
+    .hero-title-container {
+      padding-top: 20px;
+      padding-bottom: 26px;
+      width: 50%;
+      min-width: 200px;
+
+      @include responsive-min($responsive-tablet) {
+        padding-bottom: 40px;
+      }
+    }
+
+    .hero-title,
+    .hero-date,
+    .hero-body {
+      color: $black;
+    }
+
+    .hero-link {
+      color: $red;
+    }
+  }
+}
+
+.hero-post-type-container-mobile {
+  display: block;
+  position: absolute;
+  top: 19px;
+  left: 16px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 64px;
+  background-color: $gray;
+  border-radius: 2px;
+  text-align: center;
+  min-height: 24px;
+
+  @include responsive-min($responsive-tablet) {
+    display: none;
+  }
+}
+
+.hero-post-type-container {
+  display: none;
+  margin-left: 1px;
+  margin-bottom: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-width: 64px;
+  background-color: $gray;
+  border-radius: 2px;
+  text-align: center;
+  min-height: 24px;
+
+  @include responsive-min($responsive-tablet) {
+    display: block;
+  }
+}
+
+.hero-post-type {
+  font-family: $knockout;
+  font-size: 12px;
+  color: $white;
+  letter-spacing: 0.2px;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+.hero-no-post-type {
+  margin-top: 44px;
+}
+
+.hero-title {
+  line-height: 48px;
+  @include responsive-min($responsive-tablet) {
+    line-height: 52px;
+  }
+}
+
+.hero-body-container {
+  padding-top: 16px;
+  padding-bottom: 26px;
+  
+  @include responsive-min($responsive-tablet) {
+    padding-top: 21px;
+    border-bottom: 1px solid $light-gray;
+  }
+}
+
+.hero-link-container {
+  padding-top: 6px;
+  padding-bottom: 36px;
+
+  @include responsive-min($responsive-tablet) {
+    padding-top: 32px;
+    padding-bottom: 0;
+  }
+}
+
+.hero-link {
+  font-size: 19px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.hero-caption-container-mobile {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+
+  @include responsive-min($responsive-tablet) {
+    display: none;
+  }
+}
+
+.hero-caption-wrapper-mobile {
+  display: inline-block;
+  margin-left: 26px;
+  margin-right: 26px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: $off-white;
+  border-radius: 2px;
+}
+
+.hero-caption-container {
+  display: none;
+  position: absolute;
+  left: 10%;
+  bottom: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $off-white;
+  max-width: 566px;
+  border-radius: 2px;
+
+  @include responsive-min($responsive-tablet) {
+    display: block;
+  }
+}
+
+.hero-caption {
+  font-size: 12px;
+  line-height: 13px;
+  color: $gray;
 }

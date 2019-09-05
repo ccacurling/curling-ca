@@ -306,19 +306,29 @@
   display: flex;
   position: relative;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 19px;
-  padding-right: 19px;
   &:hover {
     cursor: pointer;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    height: 100%;
+    text-decoration: inherit;
   }
 }
 
 .menu-item-language {
   margin-right: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
+  a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .menu-item-donate {

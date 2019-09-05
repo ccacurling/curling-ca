@@ -36,14 +36,6 @@ function acf_blocks_init() {
     
     acf_add_options_page('Options');
   }
-  
-  // $post_type_object = get_post_type_object( 'page' );
-  // $post_type_object->template = [ 
-  //     [ 'acf/hero' ],
-  //     [ 'cossette/block-container' ]
-  // ];
-      
-  // // $post_type_object->template_lock = 'all';
 }
 
 function block_render_callback( $block ) {

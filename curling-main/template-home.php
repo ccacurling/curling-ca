@@ -3,12 +3,5 @@
 /*
  * Template Name:  Home Page 
  */
+include 'page.php';
 ?>
-
-<?php get_header(); ?>
-
-    <div class="container">
-		<code>Hello, World.</code>
-	</div>
-
-<?php get_footer(); ?>

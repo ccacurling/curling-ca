@@ -1,0 +1,538 @@
+[
+    {
+        "key": "group_5d5591cdbb942",
+        "title": "Hero",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/hero"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d56da661e123": {
+                "key": "field_5d56da661e123",
+                "name": "hero_image",
+                "type": "image",
+                "parent": "group_5d5591cdbb942",
+                "label": "Image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            "field_5d65a7325d1a2": {
+                "key": "field_5d65a7325d1a2",
+                "name": "hero_size",
+                "type": "select",
+                "parent": "group_5d5591cdbb942",
+                "label": "Hero Size",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "large": "Large",
+                    "medium": "Medium",
+                    "small": "Small"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d65ac034846d": {
+                "key": "field_5d65ac034846d",
+                "name": "hero_headline",
+                "type": "textarea",
+                "parent": "group_5d5591cdbb942",
+                "label": "Headline",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            "field_5d65aeb611f84": {
+                "key": "field_5d65aeb611f84",
+                "name": "has_timer",
+                "type": "true_false",
+                "parent": "group_5d5591cdbb942",
+                "label": "Has Timer",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d65b989afd5d": {
+                "key": "field_5d65b989afd5d",
+                "name": "timezone",
+                "type": "timezone_picker",
+                "parent": "group_5d5591cdbb942",
+                "label": "Timezone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d65aeb611f84",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_time_zone": ""
+            },
+            "field_5d65aecc11f85": {
+                "key": "field_5d65aecc11f85",
+                "name": "start_date",
+                "type": "date_time_picker",
+                "parent": "group_5d5591cdbb942",
+                "label": "Start Date",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d65aeb611f84",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y g:i a",
+                "return_format": "Y-m-d H:i:s",
+                "first_day": 0
+            },
+            "field_5d65b0a81ff52": {
+                "key": "field_5d65b0a81ff52",
+                "name": "end_date",
+                "type": "date_time_picker",
+                "parent": "group_5d5591cdbb942",
+                "label": "End Date",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d65aeb611f84",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y g:i a",
+                "return_format": "Y-m-d H:i:s",
+                "first_day": 1
+            }
+        }
+    },
+    {
+        "key": "group_5d680deb699b7",
+        "title": "Ticket Promo",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/promo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d68556025b23": {
+                "key": "field_5d68556025b23",
+                "name": "promo_colour",
+                "type": "select",
+                "parent": "group_5d680deb699b7",
+                "label": "Colour",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "gray": "Gray",
+                    "red": "Red"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d680dfcb0e3c": {
+                "key": "field_5d680dfcb0e3c",
+                "name": "promo_name",
+                "type": "text",
+                "parent": "group_5d680deb699b7",
+                "label": "Name",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d680e0db0e3d": {
+                "key": "field_5d680e0db0e3d",
+                "name": "promo_price",
+                "type": "price",
+                "parent": "group_5d680deb699b7",
+                "label": "Price",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "format": "|2\/.\/ |"
+            },
+            "field_5d680e36b0e3e": {
+                "key": "field_5d680e36b0e3e",
+                "name": "promo_price_info",
+                "type": "text",
+                "parent": "group_5d680deb699b7",
+                "label": "Price Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d680e63b0e3f": {
+                "key": "field_5d680e63b0e3f",
+                "name": "promo_info",
+                "type": "wysiwyg",
+                "parent": "group_5d680deb699b7",
+                "label": "Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            "field_5d68233ae7d68": {
+                "key": "field_5d68233ae7d68",
+                "name": "promo_link",
+                "type": "link",
+                "parent": "group_5d680deb699b7",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
+        "key": "group_5d6ea1fac0e37",
+        "title": "Ticket",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/ticket"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d6ebefa548d5": {
+                "key": "field_5d6ebefa548d5",
+                "name": "ticket_colour",
+                "type": "select",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Colour",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "gray": "Gray"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d6ea23a00b15": {
+                "key": "field_5d6ea23a00b15",
+                "name": "ticket_title",
+                "type": "text",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d6ea24c00b16": {
+                "key": "field_5d6ea24c00b16",
+                "name": "ticket_price",
+                "type": "price",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Price",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "format": "|2\/.\/,|"
+            },
+            "field_5d6ea462cf0b9": {
+                "key": "field_5d6ea462cf0b9",
+                "name": "ticket_price_info",
+                "type": "text",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Price Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d6ea28000b17": {
+                "key": "field_5d6ea28000b17",
+                "name": "ticket_options",
+                "type": "repeater",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Options",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Add Option",
+                "sub_fields": [
+                    {
+                        "key": "field_5d6ea29c00b18",
+                        "label": "Option Price",
+                        "name": "option_price",
+                        "type": "price",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "format": "|2\/.\/,|"
+                    },
+                    {
+                        "key": "field_5d6ea2af00b19",
+                        "label": "Option Description",
+                        "name": "option_description",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            "field_5d6ea2c200b1a": {
+                "key": "field_5d6ea2c200b1a",
+                "name": "ticket_link",
+                "type": "link",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            "field_5d6ea2ce00b1b": {
+                "key": "field_5d6ea2ce00b1b",
+                "name": "ticket_legal",
+                "type": "text",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Legal",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        }
+    }
+]
