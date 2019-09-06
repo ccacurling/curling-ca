@@ -518,6 +518,237 @@ if( function_exists('acf_add_local_field_group') ):
 // 	'description' => '',
 // ));
 
+acf_add_local_field_group(array(
+	'key' => 'group_5d7039036b0c1',
+	'title' => 'Event Location Block',
+	'fields' => array(
+		array(
+			'key' => 'field_5d703915b40b0',
+			'label' => 'Event CTA One',
+			'name' => 'event_cta_one',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+		),
+		array(
+			'key' => 'field_5d703920b40b1',
+			'label' => 'Event CTA Two',
+			'name' => 'event_cta_two',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+		),
+		array(
+			'key' => 'field_5d70392bb40b2',
+			'label' => 'Event CTA Three',
+			'name' => 'event_cta_three',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+		),
+		array(
+			'key' => 'field_5d70393cb40b3',
+			'label' => 'Event CTA Four',
+			'name' => 'event_cta_four',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/event-location',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
+	'key' => 'group_5d6ee5c2ab260',
+	'title' => 'Site Settings',
+	'fields' => array(
+		array(
+			'key' => 'field_5d6ee8579a50d',
+			'label' => 'Event Location Title',
+			'name' => 'event_location_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d71507b94d5f',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d6ee86b9a50e',
+			'label' => 'Event Date Start',
+			'name' => 'event_date_start',
+			'type' => 'date_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d71507b94d5f',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'display_format' => 'F. j -',
+			'return_format' => 'F. j -',
+			'first_day' => 1,
+		),
+		array(
+			'key' => 'field_5d6eea44f0ae6',
+			'label' => 'Event Date End',
+			'name' => 'event_date_end',
+			'type' => 'date_picker',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d71507b94d5f',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'display_format' => 'F. j, Y',
+			'return_format' => 'F. j, Y',
+			'first_day' => 1,
+		),
+		array(
+			'key' => 'field_5d701bb3ac464',
+			'label' => 'Event Map Id',
+			'name' => 'event_map_id',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d71507b94d5f',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d71507b94d5f',
+			'label' => 'Is Event',
+			'name' => 'is_event',
+			'type' => 'true_false',
+			'instructions' => 'This field should be checked off is this microsite is for an event.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => 'Checked === true',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 endif;
 ?>
 
