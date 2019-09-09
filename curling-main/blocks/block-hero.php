@@ -39,7 +39,7 @@ if ($image) {
 }
 ?>
 
-<section class="block-hero <?php echo $hero_class; ?> js-hero-container content-fixed">
+<section class="block-hero <?php echo $hero_class; ?> js-hero-container">
   <div class="hero-media-container">
   <?php
       if ((!$is_embeded_video && $video) || ($is_embeded_video && $external_video)) {

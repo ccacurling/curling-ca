@@ -6,9 +6,15 @@
  */
 
   $event_location_title = strtoupper( get_field( 'event_location_title', 'option' ) );
-  $event_date_start = strtoupper( get_field( 'event_date_start', 'option' ) );
-  $event_date_end = strtoupper( get_field( 'event_date_end', 'option' ) );
+  $event_date_start = get_field( 'event_date_start', 'option' );
+  $event_date_end = get_field( 'event_date_end', 'option' );
   $event_map_id = get_field( 'event_map_id', 'option' );
+
+  $start_date = date_create_from_format('Y-m-d H:i:s', $event_date_start);
+  $end_date = date_create_from_format('Y-m-d H:i:s', $event_date_end);
+
+  $start_date_string = strtoupper($start_date->format('M. j'));
+  $end_date_string = strtoupper($end_date->format('M. j, Y'));
 
   $event_cta_one = get_field( 'event_cta_one' );
   $event_cta_two = get_field( 'event_cta_two' );
@@ -24,7 +30,7 @@
     <h2 class="event-location-label">LOCATION</h2>
     <p class="event-location"><?php echo $event_location_title ?></p>
     <h3 class="event-date-label">DATE</h3>
-    <p class="event-date"><?php echo $event_date_start ?> <?php echo $event_date_end ?></p>
+    <p class="event-date"><?php echo $start_date_string ?> - <?php echo $end_date_string ?></p>
     <hr />
     <div class="event-links">
       <div>

@@ -19,7 +19,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body class="<?php echo join(' ', get_body_class()); ?>">
+<body class="<?php echo join(' ', get_body_class()); ?> content-fixed">
     <header>
         <?php get_template_part('template-parts/content', 'header'); ?>
     </header>

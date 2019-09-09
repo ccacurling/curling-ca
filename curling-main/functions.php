@@ -24,7 +24,7 @@ function block_container_init() {
     register_block_type('cossette/block-container', array(
         'editor_script' => 'cossette-block-container',
         'render_callback' => function( $attributes, $content = '' ) {
-            return '<div class="content-fixed">'.$content.'</div>';
+            return '<div class="block-container">'.$content.'</div>';
         },
         'attributes' => [
 		]

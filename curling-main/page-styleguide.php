@@ -13,7 +13,7 @@
 
 <body class="<?php echo join(' ', get_body_class()); ?>">
     <div class="content">
-        <div class="content-wrapper content-fixed">
+        <div class="content-wrapper">
 
             <div><span class="highlight">LOREM</span></div>
             <div><h1>Title Heading</h1></div>

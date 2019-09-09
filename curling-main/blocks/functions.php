@@ -19,13 +19,31 @@ function acf_blocks_init() {
       'keywords'				=> [ 'hero' ]
     ]);
     acf_register_block([
-			'name'						=> 'promo',
-			'title'						=> __('Promo'),
-			'description'			=> __('A promo block.'),
+			'name'						=> 'hero-carousel',
+			'title'						=> __('Hero Carousel'),
+			'description'			=> __('A hero carousel block'),
 			'render_callback'	=> 'block_render_callback',
 			'category'				=> 'common',
 			'icon'						=> 'admin-comments',
-      'keywords'				=> [ 'promo' ]
+      'keywords'				=> [ 'hero', 'carousel' ]
+    ]);
+    acf_register_block([
+			'name'						=> 'package',
+			'title'						=> __('Package'),
+			'description'			=> __('A package block.'),
+			'render_callback'	=> 'block_render_callback',
+			'category'				=> 'common',
+			'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'package' ]
+    ]);
+    acf_register_block([
+			'name'						=> 'package-small',
+			'title'						=> __('Package - Small'),
+			'description'			=> __('A small package block.'),
+			'render_callback'	=> 'block_render_callback',
+			'category'				=> 'common',
+			'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'package' ]
     ]);
     acf_register_block([
 			'name'						=> 'ticket',
@@ -36,6 +54,7 @@ function acf_blocks_init() {
 			'icon'						=> 'admin-comments',
       'keywords'				=> [ 'ticket' ]
     ]);
+
     acf_register_block([
 			'name'						=> 'event-location',
 			'title'						=> __('Event Location'),
@@ -46,16 +65,26 @@ function acf_blocks_init() {
       'keywords'				=> [ 'event location', 'map' ]
     ]);
 	
-	//Module 10 - News/News Promo
-	acf_register_block([
-	'name'				=> 'news-promo',
-	'title'				=> __('News Promo'),
-	'description'		=> __('Used to display your latest or a featured post'),
-	'render_callback'	=> 'block_render_callback',
-	'category'			=> 'common',
-	'icon'				=> 'admin-comments',
-	  'keywords'			=> [ 'news', 'promo', 'featured', 'post' ]
-	]);
+    //Module 10 - News/News Promo
+    acf_register_block([
+    'name'				=> 'news-promo',
+    'title'				=> __('News Promo'),
+    'description'		=> __('Used to display your latest or a featured post'),
+    'render_callback'	=> 'block_render_callback',
+    'category'			=> 'common',
+    'icon'				=> 'admin-comments',
+      'keywords'			=> [ 'news', 'promo', 'featured', 'post' ]
+    ]);
+
+    acf_register_block([
+			'name'						=> 'prefooter',
+			'title'						=> __('Pre-Footer'),
+			'description'			=> __('A block to display before the footer'),
+			'render_callback'	=> 'block_render_callback',
+			'category'				=> 'common',
+			'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'footer' ]
+    ]);
 
     acf_add_options_page('Options');
   }
