@@ -13,7 +13,7 @@ $promo_post = get_field('promo_post'); //Selected Post
 <section class="block-news-promo block-news-promo-<?php echo $promo_colour; ?>">
 
   <div>
-    <p>Featured News</p>
+    <p class='featured-indicator'>Featured News</p>
   </div>
 
   <div>
