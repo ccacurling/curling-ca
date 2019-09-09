@@ -2724,6 +2724,16 @@ li {
   }
 }
 
+.prefooter-slash-2 {
+  transform: translate(-50%, calc(12% - 880px));
+}
+
+@media only screen and (min-width: 1201px) {
+  .prefooter-slash-2 {
+    transform: translate(-50%, -880px);
+  }
+}
+
 .block-news-promo {
   max-width: 770px;
 }
@@ -2759,6 +2769,7 @@ li {
   padding-bottom: 98px;
   padding-left: 30px;
   padding-right: 20px;
+  background-color: white;
 }
 
 .news-promo-title {
@@ -2787,6 +2798,7 @@ li {
   flex-direction: column;
   height: 100%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+  background-color: white;
 }
 
 .callout-thumbnail-container {

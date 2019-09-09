@@ -34,7 +34,8 @@ $prefooter_enable_background = get_field( 'prefooter_enable_background' );
     <?php
       }
     ?>
-    <img class="prefooter-slash" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large.svg" alt="" />
+    <img class="prefooter-slash prefooter-slash-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large.svg" alt="" />
+    <img class="prefooter-slash prefooter-slash-2" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide.svg" alt="" />
   <?php
     }
   ?>
