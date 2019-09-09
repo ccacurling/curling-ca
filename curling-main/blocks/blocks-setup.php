@@ -1336,10 +1336,83 @@ if( function_exists('acf_add_local_field_group') ):
     'active' => true,
     'description' => '',
   ));
+
+  //News Promo Module
+  acf_add_local_field_group(array(
+	'key' => 'group_5d704ec0c5d4d',
+	'title' => 'News Promo',
+	'fields' => array(
+		array(
+			'key' => 'field_5d70511d50418',
+			'label' => 'Selected Post',
+			'name' => 'promo_post',
+			'type' => 'post_object',
+			'instructions' => 'Select a Post to be promoted',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'post',
+			),
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'multiple' => 0,
+			'return_format' => 'object',
+			'ui' => 1,
+		),
+		array(
+			'key' => 'field_5d704f55b5c81',
+			'label' => 'Background Colour',
+			'name' => 'background_colour',
+			'type' => 'select',
+			'instructions' => 'Select a background colour',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'white' => 'White',
+				'grey' => 'Grey',
+			),
+			'default_value' => array(
+				0 => 'white',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/news-promo',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
   
   endif;
 ?>
-
 <?php
 
 // -----
