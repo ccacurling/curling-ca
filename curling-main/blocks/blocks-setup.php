@@ -3,6 +3,49 @@
 if( function_exists('acf_add_local_field_group') ):
 
   acf_add_local_field_group(array(
+    'key' => 'group_5d76cb304c380',
+    'title' => 'Featured Image Caption',
+    'fields' => array(
+      array(
+        'key' => 'field_5d76cb3ef2094',
+        'label' => 'Caption',
+        'name' => 'featured_image_caption',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'post',
+        ),
+      ),
+    ),
+    'menu_order' => -100,
+    'position' => 'side',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
     'key' => 'group_5d76be9f07926',
     'title' => 'Callout',
     'fields' => array(
@@ -174,6 +217,67 @@ if( function_exists('acf_add_local_field_group') ):
           'param' => 'block',
           'operator' => '==',
           'value' => 'acf/event-location',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
+    'key' => 'group_5d76d15367870',
+    'title' => 'Featured Team',
+    'fields' => array(
+      array(
+        'key' => 'field_5d76d1608f13a',
+        'label' => 'Featured Team',
+        'name' => 'featured_team',
+        'type' => 'post_object',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'post_type' => array(
+          0 => 'team',
+        ),
+        'taxonomy' => '',
+        'allow_null' => 0,
+        'multiple' => 0,
+        'return_format' => 'object',
+        'ui' => 1,
+      ),
+      array(
+        'key' => 'field_5d76d4112cb44',
+        'label' => 'Link',
+        'name' => 'featured_team_link',
+        'type' => 'link',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'return_format' => 'array',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/featured-team',
         ),
       ),
     ),
@@ -1018,6 +1122,89 @@ if( function_exists('acf_add_local_field_group') ):
           'param' => 'block',
           'operator' => '==',
           'value' => 'acf/package-small',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
+    'key' => 'group_5d76cf28edf86',
+    'title' => 'Post - Team',
+    'fields' => array(
+      array(
+        'key' => 'field_5d76cf474fd19',
+        'label' => 'Team Members',
+        'name' => 'team_members',
+        'type' => 'repeater',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'collapsed' => '',
+        'min' => 0,
+        'max' => 0,
+        'layout' => 'table',
+        'button_label' => '',
+        'sub_fields' => array(
+          array(
+            'key' => 'field_5d76cf694fd1a',
+            'label' => 'Position',
+            'name' => 'team_member_position',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+          ),
+          array(
+            'key' => 'field_5d76cf7f4fd1b',
+            'label' => 'Name',
+            'name' => 'team_member_name',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+          ),
+        ),
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'team',
         ),
       ),
     ),

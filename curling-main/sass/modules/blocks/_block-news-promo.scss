@@ -16,6 +16,7 @@
 
 .news-promo-thumbnail-container {
   flex-basis: 61%;
+  position: relative;
 }
 
 .news-promo-thumbnail {
@@ -49,4 +50,29 @@
 
 .news-promo-link {
   margin-top: 42px;
+}
+
+.news-promo-caption-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+}
+
+.news-promo-caption-wrapper {
+  margin-left: 16px;
+  margin-right: 16px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $off-white;
+  border-radius: 2px;
+}
+
+.news-promo-caption {
+  font-size: 12px;
+  line-height: 13px;
+  color: $gray;
 }

@@ -96,6 +96,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'callout' ]
     ]);
 
+    acf_register_block([
+			'name'						=> 'featured-team',
+			'title'						=> __('Featured Team'),
+			'description'			=> __('A block to feature a Team'),
+			'render_callback'	=> 'block_render_callback',
+			'category'				=> 'common',
+			'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'team' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

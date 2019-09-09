@@ -9,6 +9,7 @@ $promo_colour = get_field( 'background_colour' ); //Grey or White
 $promo_post = get_field( 'promo_post' ); //Selected Post
 $promo_thumbnail = get_the_post_thumbnail_url( $promo_post, 'large' );
 $promo_date = $promo_post->post_date;
+$promo_image_caption = get_field( 'featured_image_caption', $promo_post );
 
 $date = date_create_from_format('Y-m-d H:i:s', $promo_date);
 $date_string = $date->format('F j, Y');
@@ -25,6 +26,17 @@ $date_string = $date->format('F j, Y');
     ?>
       <div class="news-promo-thumbnail-container">
         <img class="news-promo-thumbnail" src="<?php echo $promo_thumbnail; ?>" alt="" />
+        <?php
+          if ($promo_image_caption) {
+        ?>
+          <div class="news-promo-caption-container">
+            <div class="news-promo-caption-wrapper">
+              <p class="news-promo-caption"><?php echo $promo_image_caption; ?></p>
+            </div>
+          </div>
+        <?php 
+          }
+        ?>
       </div>
     <?php
       }
