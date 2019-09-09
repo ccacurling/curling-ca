@@ -12,6 +12,11 @@
 
 .nav-menu-popout-mobile {
   display: none;
+  position: relative;
+  z-index: 2;
+  background-color: $white;
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.15);
+
   &.active {
     display: block;
   }
@@ -60,6 +65,14 @@
   font-size: 40px;
 }
 
+.menu-event-logo {
+  position: absolute;
+  top: 12px;
+  height: 60px;
+  max-height: 60px;
+  z-index: 3;
+}
+
 .menu-logo-mobile {
   width: 46px;
 }
@@ -86,6 +99,7 @@
   padding-bottom: 10px;
   padding-left: 16px;
   padding-right: 16px;
+  height: 90px;
 }
 
 .nav-menu-item-mobile {
@@ -128,6 +142,7 @@
 
 .nav-menu-top-right-mobile {
   display: flex;
+  background-color: $red;
 }
 
 .nav-menu-top-right-wrapper {
@@ -141,6 +156,11 @@
   height: 120px;
 }
 
+.nav-menu-primary-event {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+}
 
 .nav-menu-popup {
   display: block;
@@ -160,6 +180,11 @@
     max-height: 100%;
     z-index: 2;
   }
+}
+
+.nav-menu-popup-list {
+  display: flex;
+  flex-direction: row;
 }
 
 .nav-menu-popup-wrapper {
@@ -306,19 +331,29 @@
   display: flex;
   position: relative;
   align-items: center;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 19px;
-  padding-right: 19px;
   &:hover {
     cursor: pointer;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 19px;
+    padding-right: 19px;
+    height: 100%;
+    text-decoration: inherit;
   }
 }
 
 .menu-item-language {
   margin-right: 18px;
-  padding-left: 20px;
-  padding-right: 20px;
+  a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .menu-item-donate {
@@ -331,6 +366,13 @@
   padding-left: 14px;
   padding-right: 14px;
   border-radius: 4px;
+}
+
+.nav-menu-popout-mobile .menu-item-donate {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 20px;
+  padding-right: 20px
 }
 
 .menu-item-arrow {
@@ -371,6 +413,7 @@
 
 .menu-item-selectable {
   display: flex;
+  position: relative;
 }
 
 .menu-item-selectable:hover {
@@ -402,6 +445,25 @@
   &:hover {
     cursor: pointer;
   }
+}
+
+.menu-event-subitem {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.menu-item-underline {
+  display: none;
+  position: absolute;
+  bottom: -5px;
+  height: 4px;
+  width: 100%;
+  background-color: $white;
 }
 
 .menu-subitem-event {

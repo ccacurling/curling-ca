@@ -41,6 +41,19 @@
     border-radius: 4px;
 }
 
+.btn-large {
+  padding-top: 19px;
+  padding-bottom: 26px;
+  border-radius: 4px;
+  font-size: 33px;
+  letter-spacing: 2px;
+  
+  @include responsive-min($responsive-desktop-wide) {
+    padding-left: 75px;
+    padding-right: 75px;  
+  }
+}
+
 .btn-red {
     background-color: $red;
     color: $white;
@@ -68,7 +81,6 @@
 
 .btn-secondary {
     font-size: 20px;
-    color: $black;
     letter-spacing: 0;
     line-height: 23px;
 

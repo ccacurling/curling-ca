@@ -24,7 +24,7 @@ function block_container_init() {
     register_block_type('cossette/block-container', array(
         'editor_script' => 'cossette-block-container',
         'render_callback' => function( $attributes, $content = '' ) {
-            return '<div class="content-fixed">'.$content.'</div>';
+            return '<div class="block-container">'.$content.'</div>';
         },
         'attributes' => [
 		]
@@ -33,13 +33,16 @@ function block_container_init() {
 
 function add_curling_styles() {
     wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css');
+    wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css");
+
     wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery' ], '3.1.0');
+    wp_enqueue_script('litty', get_stylesheet_directory_uri() . "/js/vendor/lity.min.js", [ 'jquery' ], '3.1.0');
 }
 
 function add_curling_admin_styles() {
     wp_enqueue_style('admin', get_stylesheet_directory_uri() . '/css/admin.min.css');
 
-    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery' ], '3.1.0');
+    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery' ], '2.4.0');
 }
 
 function remove_admin_menus() {

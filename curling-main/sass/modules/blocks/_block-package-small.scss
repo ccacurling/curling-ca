@@ -1,0 +1,121 @@
+.block-package-small {
+  display: flex;
+  flex-direction: column;
+  padding-top: 95px;
+  padding-bottom: 43px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 389px;
+  background-size: 205px 120px;
+  background-position: 0% 0%;
+  background-repeat: no-repeat;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.block-package-small-white {
+  background-color: $white;
+  background-image: url('../images/symbol-slash.svg');
+
+  .package-small-name {
+    color: $black;
+  }
+}
+
+.block-package-small-gray {
+  background-color: $gray;
+  background-image: url('../images/symbol-slash.svg');
+
+  .package-small-name {
+    color: $white;
+  }
+
+  .package-small-info-container {
+    h1, h2, h3, h4, p {
+      color: $white;
+    }
+  }
+}
+
+.block-package-small-red {
+  background-color: $red;
+  background-image: url('../images/symbol-slash-white.svg');
+
+  .package-small-name {
+    color: $white;
+  }
+
+  .package-small-info-container {
+    h1, h2, h3, h4, p {
+      color: $white;
+    }
+  }
+}
+
+.package-small-name {
+  font-size: 48px;
+  letter-spacing: 0.48px;
+  line-height: 50px;
+}
+
+.package-small-price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 0;
+  padding-left: 2px;
+}
+
+.package-small-price-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.package-small-price-dollar-symbol,
+.package-small-price-cents {
+  margin-bottom: 18px;
+  font-size: 48px;
+  letter-spacing: 0.48px;
+  line-height: 48px;
+}
+
+.package-small-price-dollar {
+  font-size: 120px;
+  letter-spacing: 1.85px;
+  line-height: 94px;
+}
+
+.package-small-price-info {
+  margin-top: 22px;
+  margin-left: 25px;
+  margin-right: 25px;
+  letter-spacing: 0.8px;
+}
+
+.package-small-info-container {
+  padding-top: 38px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid $light-gray;
+
+  h1, h2, h3, h4 {
+    margin-bottom: 18px;
+  }
+
+  p {
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 14px;
+  }
+}
+
+.package-small-button-container {
+  margin-top: 32px;
+  padding-top: 19px;
+  padding-bottom: 23px;
+  padding-left: 42px;
+  padding-right: 38px;
+}
+
+.package-small-button-text {
+  font-size: 34px;
+}

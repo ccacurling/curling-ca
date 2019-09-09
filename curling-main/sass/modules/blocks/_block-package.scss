@@ -1,4 +1,4 @@
-.block-promo {
+.block-package {
   display: flex;
   flex-direction: column;
   padding-top: 95px;
@@ -24,45 +24,45 @@
   }
 }
 
-.block-promo-white {
+.block-package-white {
   background-color: $white;
   background-image: url('../images/symbol-slash.svg');
   @include responsive-min($responsive-laptop) {
     background-image: url('../images/symbol-slash-large.svg');
   }
 
-  .promo-name {
+  .package-name {
     color: $black;
   }
 }
 
-.block-promo-gray {
+.block-package-gray {
   background-color: $gray;
   background-image: url('../images/symbol-slash.svg');
   @include responsive-min($responsive-laptop) {
     background-image: url('../images/symbol-slash-large.svg');
   }
 
-  .promo-name {
+  .package-name {
     color: $white;
   }
 
-  .promo-info-container {
+  .package-info-container {
     h1, h2, h3, h4, p {
       color: $white;
     }
   }
 }
 
-.block-promo-red {
+.block-package-red {
   background-color: $red;
   background-image: url('../images/symbol-slash-white.svg');
 
-  .promo-name {
+  .package-name {
     color: $white;
   }
 
-  .promo-info-container {
+  .package-info-container {
     h1, h2, h3, h4, p {
       color: $white;
     }
@@ -71,11 +71,11 @@
   @include responsive-min($responsive-laptop) {
     background-image: url('../images/symbol-slash-large-white.svg');
 
-    .promo-name {
+    .package-name {
       color: $black;
     }
 
-    .promo-info-container {
+    .package-info-container {
       h1, h2, h3, h4, p {
         color: $black;
       }
@@ -83,15 +83,15 @@
   }
 }
 
-.promo-name {
+.package-name {
   line-height: 50px;
   @include responsive-min($responsive-laptop) {
     line-height: 52px;
   }
 }
 
-.promo-price-container-mobile,
-.promo-price-container {
+.package-price-container-mobile,
+.package-price-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -102,27 +102,27 @@
   }
 }
 
-.promo-price-container-mobile {
+.package-price-container-mobile {
   @include responsive-min($responsive-laptop) {
     display: none;
   }
 }
 
-.promo-price-container {
+.package-price-container {
   display: none;
   @include responsive-min($responsive-laptop) {
     display: flex;
   }
 }
 
-.promo-wrapper {
+.package-wrapper {
   @include responsive-min($responsive-laptop) {
     margin-right: 10px;
     max-width: 400px;
   }
 }
 
-.promo-price-wrapper {
+.package-price-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -132,8 +132,8 @@
   }
 }
 
-.promo-price-dollar-symbol,
-.promo-price-cents {
+.package-price-dollar-symbol,
+.package-price-cents {
   margin-bottom: 18px;
   @include responsive-min($responsive-laptop) {
     margin-top: 19px;
@@ -141,7 +141,7 @@
   }
 }
 
-.promo-price-cents {
+.package-price-cents {
   @include responsive-min($responsive-laptop) {
     position: relative;
     left: -8px;
@@ -149,14 +149,14 @@
   }
 }
 
-.promo-price-dollar {
+.package-price-dollar {
   line-height: 106px;
   @include responsive-min($responsive-laptop) {
     line-height: 150px;
   }
 }
 
-.promo-price-info {
+.package-price-info {
   margin-top: 22px;
   margin-left: 25px;
   margin-right: 25px;
@@ -168,7 +168,7 @@
   }
 }
 
-.promo-info-container {
+.package-info-container {
   padding-top: 38px;
   padding-bottom: 25px;
   border-bottom: 1px solid $light-gray;
@@ -187,7 +187,7 @@
   }
 }
 
-.promo-button-container {
+.package-button-container {
   margin-top: 32px;
   padding-top: 19px;
   padding-bottom: 23px;
@@ -203,6 +203,6 @@
   }
 }
 
-.promo-button-text {
+.package-button-text {
   font-size: 34px;
 }

@@ -20,6 +20,7 @@ jQuery(document).ready(function($) {
       this.menuItems.each((index, element) => {
         const $this = $(element);
         const menu_name = $this.data('menu');
+        console.log(menu_name);
         const $popup = $(`.nav-menu-popup[data-name='${menu_name}']`);
         const $multi = $this.add(`.nav-menu-popup[data-name='${menu_name}']`);
         $multi.mouseenter(() => {

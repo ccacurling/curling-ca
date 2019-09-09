@@ -107,7 +107,9 @@
 }
 
 .newsletter-signup-submit {
+  margin-top: 10px;
   @include responsive-min($responsive-tablet) {
+    margin-top: 0;
     margin-left: 20px;
   }
 }

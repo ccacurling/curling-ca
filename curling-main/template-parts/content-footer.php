@@ -5,7 +5,7 @@
 
 <?php echo !WP_DEBUG ? '' : "<!-- Begin output from ".basename(__FILE__)."-->"; ?>
 <div class="footer footer-gray">
-  <div class="footer-wrapper content-fixed">
+  <div class="footer-wrapper">
       <div class="footer-content-left-wrapper">
         <img class="footer-logo" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main-footer.svg"; ?>" alt="Site Logo" />
       </div>
@@ -18,7 +18,9 @@
                         foreach( $top_left_menu_items as $menu_item ) {
                     ?>
                         <li class="footer-menu-item menu-item menu-item-selectable">
-                          <h4 class="menu-item-content menu-item-title menu-item-subtitle inverted"><?php echo $menu_item->title; ?></h4>
+                          <a href="">
+                            <h4 class="menu-item-content menu-item-title menu-item-subtitle inverted"><?php echo $menu_item->title; ?></h4>
+                          </a>
                         </li>
                     <?php
                         }
@@ -47,7 +49,7 @@
   </div>
 </div>
 <div class="footer-legal footer-legal-gray">
-  <div class="footer-legal-wrapper content-fixed">
+  <div class="footer-legal-wrapper">
       <div class="footer-legal-content">
           <div class="footer-legal-content-left-wrapper">
               <p class="legal">© 2019 CURLING CANADA. ALL RIGHTS RESERVED.</p>
@@ -61,7 +63,9 @@
                           foreach( $primary_menu_items as $menu_item ) {
                       ?>
                           <li class="menu-item-selectable menu-item">
-                            <h4 class="menu-item-content legal"><?php echo $menu_item->title; ?></h4>
+                            <a href="">
+                              <h4 class="menu-item-content legal"><?php echo $menu_item->title; ?></h4>
+                            </a>
                           </li>
                       <?php
                           }
