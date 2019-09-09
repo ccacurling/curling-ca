@@ -1372,6 +1372,7 @@ if( function_exists('acf_add_local_field_group') ):
 // -----
 // UNCOMMENT THIS CODE TO EXPORT A JSON FILE OF THE ACF FIELDS
 // -----get_local_field_groups();
+// $groups = acf_get_local_field_groups();
 // $json = [];
 
 // foreach ($groups as $group) {
@@ -1399,6 +1400,5 @@ if( function_exists('acf_add_local_field_group') ):
 // // the current theme directory.
 // $file = get_template_directory() . '/bin/json/acf-import.json';
 // file_put_contents($file, $json );
-// $groups = acf_
 
 ?>

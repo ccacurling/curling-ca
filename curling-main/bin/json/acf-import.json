@@ -953,6 +953,26 @@
                 "append": "",
                 "maxlength": ""
             },
+            "field_5d7690fb90cb5": {
+                "key": "field_5d7690fb90cb5",
+                "name": "prefooter_enable_background",
+                "type": "true_false",
+                "parent": "group_5d72cc221cbfa",
+                "label": "Enable Background",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
             "field_5d72cc647d966": {
                 "key": "field_5d72cc647d966",
                 "name": "prefooter_image",
@@ -961,7 +981,15 @@
                 "label": "Image",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d7690fb90cb5",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
