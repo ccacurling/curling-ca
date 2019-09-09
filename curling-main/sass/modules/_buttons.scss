@@ -140,3 +140,21 @@
 .btn-inverted {
     color: $white;
 }
+
+.btn-link {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-link-text {
+  display: inline-block;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+.btn-link-arrow {
+  margin-left: 8px;
+}

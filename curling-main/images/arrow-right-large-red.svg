@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="19px" height="10px" viewBox="0 0 19 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Item/Header/Widget" transform="translate(-680.000000, -147.000000)">
+            <g id="Right-Side-Information">
+                <g transform="translate(560.000000, 0.000000)">
+                    <g id="Link-Button" transform="translate(18.000000, 139.000000)">
+                        <g id="Icon/Arrow" transform="translate(102.956140, 8.350000)">
+                            <polygon id="Triangle-4" fill="#ed1940" fill-rule="evenodd" points="18.0438596 4.725 11.6754386 9.45 11.6754386 -5.4534155e-13"></polygon>
+                            <path d="M12.2061404,4.65 L0.530701754,4.65" id="Line-24" stroke="#ed1940" stroke-width="2" stroke-linecap="square"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

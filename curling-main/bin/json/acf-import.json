@@ -1416,5 +1416,81 @@
                 "maxlength": ""
             }
         }
+    },
+    {
+        "key": "group_5d704ec0c5d4d",
+        "title": "News Promo",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/news-promo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d70511d50418": {
+                "key": "field_5d70511d50418",
+                "name": "promo_post",
+                "type": "post_object",
+                "parent": "group_5d704ec0c5d4d",
+                "label": "Selected Post",
+                "instructions": "Select a Post to be promoted",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "post"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            "field_5d704f55b5c81": {
+                "key": "field_5d704f55b5c81",
+                "name": "background_colour",
+                "type": "select",
+                "parent": "group_5d704ec0c5d4d",
+                "label": "Background Colour",
+                "instructions": "Select a background colour",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "grey": "Grey"
+                },
+                "default_value": [
+                    "white"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            }
+        }
     }
 ]
