@@ -52,20 +52,17 @@
 }
 
 .package-small-name {
+  font-size: 48px;
+  letter-spacing: 0.48px;
   line-height: 50px;
 }
 
-.package-small-price-container-mobile,
 .package-small-price-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   margin-top: 0;
   padding-left: 2px;
-}
-
-.package-small-price-container {
-  display: none;
 }
 
 .package-small-price-wrapper {
@@ -77,10 +74,15 @@
 .package-small-price-dollar-symbol,
 .package-small-price-cents {
   margin-bottom: 18px;
+  font-size: 48px;
+  letter-spacing: 0.48px;
+  line-height: 48px;
 }
 
 .package-small-price-dollar {
-  line-height: 106px;
+  font-size: 120px;
+  letter-spacing: 1.85px;
+  line-height: 94px;
 }
 
 .package-small-price-info {
@@ -97,6 +99,12 @@
 
   h1, h2, h3, h4 {
     margin-bottom: 18px;
+  }
+
+  p {
+    line-height: 18px;
+    letter-spacing: 0;
+    font-size: 14px;
   }
 }
 

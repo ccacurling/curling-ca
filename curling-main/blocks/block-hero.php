@@ -130,9 +130,15 @@ if ($image) {
           }
         ?>
       </div>
-      <div class="hero-date-container">
-        <h4 class="hero-date"><?php echo get_the_date('M j, Y'); ?></h4>
-      </div>
+      <?php
+        if ($show_date) {
+      ?>
+        <div class="hero-date-container">
+          <h4 class="hero-date"><?php echo get_the_date('M j, Y'); ?></h4>
+        </div>
+      <?php
+        }
+      ?>
       <div class="hero-body-container">
         <p class="hero-body"><?php echo $body ?></p>
       </div>

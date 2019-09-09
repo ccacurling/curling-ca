@@ -19,17 +19,9 @@ $package_small_btn_text_colour = $package_small_colour === 'white' || $package_s
 ?>
 
 <section class="block-package-small block-package-small-<?php echo $package_small_colour; ?>">
-  <div class="package-small-price-container">
-    <div class="package-small-price-wrapper">
-      <h2 class="package-small-price-dollar-symbol <?php echo $package_small_price_colour; ?>">$</h2>
-      <span class="package-small-price-dollar text-highlight <?php echo $package_small_price_colour; ?>"><?php echo $package_small_price_split[0]; ?></span>
-      <h2 class="package-small-price-cents <?php echo $package_small_price_colour; ?>">.<?php echo $package_small_price_split[1]; ?></h2>
-  </div>
-    <h4 class="package-small-price-info <?php echo $package_small_price_colour; ?>"><?php echo $package_small_price_info; ?></h4>
-  </div>
   <div class="package-small-wrapper">
     <h2 class="package-small-name"><?php echo $package_small_name; ?></h2>
-    <div class="package-small-price-container-mobile">
+    <div class="package-small-price-container">
       <div class="package-small-price-wrapper">
         <h2 class="package-small-price-dollar-symbol <?php echo $package_small_price_colour; ?>">$</h2>
         <span class="package-small-price-dollar text-highlight <?php echo $package_small_price_colour; ?>"><?php echo $package_small_price_split[0]; ?></span>
