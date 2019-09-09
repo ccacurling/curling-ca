@@ -900,13 +900,40 @@ if( function_exists('acf_add_local_field_group') ):
         'maxlength' => '',
       ),
       array(
+        'key' => 'field_5d7690fb90cb5',
+        'label' => 'Enable Background',
+        'name' => 'prefooter_enable_background',
+        'type' => 'true_false',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'message' => '',
+        'default_value' => 0,
+        'ui' => 0,
+        'ui_on_text' => '',
+        'ui_off_text' => '',
+      ),
+      array(
         'key' => 'field_5d72cc647d966',
         'label' => 'Image',
         'name' => 'prefooter_image',
         'type' => 'image',
         'instructions' => '',
         'required' => 0,
-        'conditional_logic' => 0,
+        'conditional_logic' => array(
+          array(
+            array(
+              'field' => 'field_5d7690fb90cb5',
+              'operator' => '==',
+              'value' => '1',
+            ),
+          ),
+        ),
         'wrapper' => array(
           'width' => '',
           'class' => '',
