@@ -1,0 +1,42 @@
+.block-callout {
+  max-width: 570px;
+  // max-height: 500px;
+}
+
+.callout-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.callout-thumbnail-container {
+  height: 288px;
+}
+
+.callout-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: $black;
+}
+
+.callout-info {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  padding-left: 21px;
+  padding-right: 21px;
+}
+
+.callout-title {
+  margin-bottom: 17px;
+  max-width: 50%;
+}
+
+.callout-excerpt {
+  padding-bottom: 10px;
+}
+
+.callout-link {
+  margin-top: 12px;
+}

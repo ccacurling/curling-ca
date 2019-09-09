@@ -3,6 +3,107 @@
 if( function_exists('acf_add_local_field_group') ):
 
   acf_add_local_field_group(array(
+    'key' => 'group_5d76be9f07926',
+    'title' => 'Callout',
+    'fields' => array(
+      array(
+        'key' => 'field_5d76bf000b48e',
+        'label' => 'Image',
+        'name' => 'callout_image',
+        'type' => 'image',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'return_format' => 'array',
+        'preview_size' => 'medium',
+        'library' => 'all',
+        'min_width' => '',
+        'min_height' => '',
+        'min_size' => '',
+        'max_width' => '',
+        'max_height' => '',
+        'max_size' => '',
+        'mime_types' => '',
+      ),
+      array(
+        'key' => 'field_5d76bf1efe292',
+        'label' => 'Title',
+        'name' => 'callout_title',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+      array(
+        'key' => 'field_5d76bf2aad2df',
+        'label' => 'Body Text',
+        'name' => 'callout_body_text',
+        'type' => 'textarea',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'maxlength' => '',
+        'rows' => '',
+        'new_lines' => '',
+      ),
+      array(
+        'key' => 'field_5d76bf3b176d6',
+        'label' => 'Link',
+        'name' => 'callout_link',
+        'type' => 'link',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'return_format' => 'array',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/callout',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
     'key' => 'group_5d7039036b0c1',
     'title' => 'Event Location Block',
     'fields' => array(
@@ -568,6 +669,79 @@ if( function_exists('acf_add_local_field_group') ):
           'param' => 'block',
           'operator' => '==',
           'value' => 'acf/hero-carousel',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
+    'key' => 'group_5d704ec0c5d4d',
+    'title' => 'News Promo',
+    'fields' => array(
+      array(
+        'key' => 'field_5d70511d50418',
+        'label' => 'Selected Post',
+        'name' => 'promo_post',
+        'type' => 'post_object',
+        'instructions' => 'Select a Post to be promoted',
+        'required' => 1,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'post_type' => array(
+          0 => 'post',
+        ),
+        'taxonomy' => '',
+        'allow_null' => 0,
+        'multiple' => 0,
+        'return_format' => 'object',
+        'ui' => 1,
+      ),
+      array(
+        'key' => 'field_5d704f55b5c81',
+        'label' => 'Background Colour',
+        'name' => 'background_colour',
+        'type' => 'select',
+        'instructions' => 'Select a background colour',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'choices' => array(
+          'white' => 'White',
+          'grey' => 'Grey',
+        ),
+        'default_value' => array(
+          0 => 'white',
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+        'ui' => 0,
+        'return_format' => 'value',
+        'ajax' => 0,
+        'placeholder' => '',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/news-promo',
         ),
       ),
     ),
@@ -1363,80 +1537,6 @@ if( function_exists('acf_add_local_field_group') ):
     'active' => true,
     'description' => '',
   ));
-
-  //News Promo Module
-  acf_add_local_field_group(array(
-	'key' => 'group_5d704ec0c5d4d',
-	'title' => 'News Promo',
-	'fields' => array(
-		array(
-			'key' => 'field_5d70511d50418',
-			'label' => 'Selected Post',
-			'name' => 'promo_post',
-			'type' => 'post_object',
-			'instructions' => 'Select a Post to be promoted',
-			'required' => 1,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'post_type' => array(
-				0 => 'post',
-			),
-			'taxonomy' => '',
-			'allow_null' => 0,
-			'multiple' => 0,
-			'return_format' => 'object',
-			'ui' => 1,
-		),
-		array(
-			'key' => 'field_5d704f55b5c81',
-			'label' => 'Background Colour',
-			'name' => 'background_colour',
-			'type' => 'select',
-			'instructions' => 'Select a background colour',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				'white' => 'White',
-				'grey' => 'Grey',
-			),
-			'default_value' => array(
-				0 => 'white',
-			),
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'block',
-				'operator' => '==',
-				'value' => 'acf/news-promo',
-			),
-		),
-	),
-	'menu_order' => 0,
-	'position' => 'normal',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
-));
   
   endif;
 ?>
