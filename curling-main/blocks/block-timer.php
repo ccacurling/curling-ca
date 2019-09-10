@@ -75,9 +75,9 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 				<h3 class="block-timer-info-date inverted"><?php echo $start_date_string; ?><?php echo $start_date_string !== $end_date_short_string ? ' - '.$end_date_string : ''; ?></h3>
 				<h3 class="block-timer-info-location inverted"><?php echo $location; ?></h3>
 			</div>
-			<div class="block-timer-info-link-container">
-				<h4 class="block-timer-info-link inverted">MORE DETAILS</h4>
-				<img class="arrow-right-large" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-white.svg"; ?>" alt="arrow-right" />
+			<div class="btn-link-container">
+				<h4 class="btn-link-text inverted">MORE DETAILS</h4>
+				<img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-white.svg"; ?>" alt="arrow-right" />
 			</div>
 		</div>
 	</div>

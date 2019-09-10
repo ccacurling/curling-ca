@@ -1,5 +1,156 @@
 [
     {
+        "key": "group_5d76cb304c380",
+        "title": "Featured Image Caption",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": -100,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d76cb3ef2094": {
+                "key": "field_5d76cb3ef2094",
+                "name": "featured_image_caption",
+                "type": "text",
+                "parent": "group_5d76cb304c380",
+                "label": "Caption",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d76be9f07926",
+        "title": "Callout",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/callout"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d76bf000b48e": {
+                "key": "field_5d76bf000b48e",
+                "name": "callout_image",
+                "type": "image",
+                "parent": "group_5d76be9f07926",
+                "label": "Image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            "field_5d76bf1efe292": {
+                "key": "field_5d76bf1efe292",
+                "name": "callout_title",
+                "type": "text",
+                "parent": "group_5d76be9f07926",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d76bf2aad2df": {
+                "key": "field_5d76bf2aad2df",
+                "name": "callout_body_text",
+                "type": "textarea",
+                "parent": "group_5d76be9f07926",
+                "label": "Body Text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            "field_5d76bf3b176d6": {
+                "key": "field_5d76bf3b176d6",
+                "name": "callout_link",
+                "type": "link",
+                "parent": "group_5d76be9f07926",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
         "key": "group_5d7039036b0c1",
         "title": "Event Location Block",
         "location": [
@@ -76,6 +227,70 @@
                 "type": "link",
                 "parent": "group_5d7039036b0c1",
                 "label": "Event CTA Four",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
+        "key": "group_5d76d15367870",
+        "title": "Featured Team",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/featured-team"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d76d1608f13a": {
+                "key": "field_5d76d1608f13a",
+                "name": "featured_team",
+                "type": "post_object",
+                "parent": "group_5d76d15367870",
+                "label": "Featured Team",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "team"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            "field_5d76d4112cb44": {
+                "key": "field_5d76d4112cb44",
+                "name": "featured_team_link",
+                "type": "link",
+                "parent": "group_5d76d15367870",
+                "label": "Link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -603,6 +818,82 @@
         }
     },
     {
+        "key": "group_5d704ec0c5d4d",
+        "title": "News Promo",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/news-promo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d70511d50418": {
+                "key": "field_5d70511d50418",
+                "name": "promo_post",
+                "type": "post_object",
+                "parent": "group_5d704ec0c5d4d",
+                "label": "Selected Post",
+                "instructions": "Select a Post to be promoted",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "post"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            "field_5d704f55b5c81": {
+                "key": "field_5d704f55b5c81",
+                "name": "background_colour",
+                "type": "select",
+                "parent": "group_5d704ec0c5d4d",
+                "label": "Background Colour",
+                "instructions": "Select a background colour",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "grey": "Grey"
+                },
+                "default_value": [
+                    "white"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            }
+        }
+    },
+    {
         "key": "group_5d680deb699b7",
         "title": "Package",
         "location": [
@@ -891,6 +1182,91 @@
         }
     },
     {
+        "key": "group_5d76cf28edf86",
+        "title": "Post - Team",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "team"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d76cf474fd19": {
+                "key": "field_5d76cf474fd19",
+                "name": "team_members",
+                "type": "repeater",
+                "parent": "group_5d76cf28edf86",
+                "label": "Team Members",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5d76cf694fd1a",
+                        "label": "Position",
+                        "name": "team_member_position",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d76cf7f4fd1b",
+                        "label": "Name",
+                        "name": "team_member_name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        }
+    },
+    {
         "key": "group_5d72cc221cbfa",
         "title": "Pre Footer",
         "location": [
@@ -953,6 +1329,26 @@
                 "append": "",
                 "maxlength": ""
             },
+            "field_5d7690fb90cb5": {
+                "key": "field_5d7690fb90cb5",
+                "name": "prefooter_enable_background",
+                "type": "true_false",
+                "parent": "group_5d72cc221cbfa",
+                "label": "Enable Background",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
             "field_5d72cc647d966": {
                 "key": "field_5d72cc647d966",
                 "name": "prefooter_image",
@@ -961,7 +1357,15 @@
                 "label": "Image",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d7690fb90cb5",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",

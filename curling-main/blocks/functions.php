@@ -97,6 +97,26 @@ function acf_blocks_init() {
       'keywords'				=> [ 'footer' ]
     ]);
 
+    acf_register_block([
+			'name'						=> 'callout',
+			'title'						=> __('Callout'),
+			'description'			=> __('A block to display callouts'),
+			'render_callback'	=> 'block_render_callback',
+			'category'				=> 'common',
+			'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'callout' ]
+    ]);
+
+    acf_register_block([
+			'name'						=> 'featured-team',
+			'title'						=> __('Featured Team'),
+			'description'			=> __('A block to feature a Team'),
+			'render_callback'	=> 'block_render_callback',
+			'category'				=> 'common',
+			'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'team' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

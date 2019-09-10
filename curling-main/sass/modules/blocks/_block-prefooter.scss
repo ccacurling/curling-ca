@@ -139,3 +139,11 @@
     transform: translate(-50%, 0);
   }
 }
+
+.prefooter-slash-2 {
+  transform: translate(-50%, calc(12% - 880px));
+
+  @include responsive-min($responsive-desktop) {
+    transform: translate(-50%, -880px);
+  }
+}
