@@ -2941,6 +2941,13 @@ li {
   flex-grow: 1;
 }
 
+@media only screen and (max-width: 1171px) {
+  .block-single-callout .callout-inner {
+    border-left: 2px solid #ffffff;
+    margin: 20px;
+  }
+}
+
 .callout-left {
   max-width: 694px;
   border-left: 2px solid #ffffff;
@@ -2959,8 +2966,27 @@ li {
   font-family: Helvetica;
 }
 
+@media only screen and (max-width: 1171px) {
+  .callout-left {
+    border-left: none;
+    padding: 0px 0px 0px 30px;
+    margin: 0;
+  }
+  .callout-left p {
+    padding: 24px 0px 0px;
+  }
+}
+
 .callout-right {
   margin: auto;
+}
+
+@media only screen and (max-width: 1171px) {
+  .callout-right {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
 }
 
 .cta-button {
@@ -2972,6 +2998,13 @@ li {
   /*font-size: 36px;*/
   font-size: 2.25rem;
   letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1171px) {
+  .cta-button {
+    padding: 20px 85px;
+    font-size: 1.6rem;
+  }
 }
 
 .block-single-callout-red {

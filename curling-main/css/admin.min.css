@@ -2934,6 +2934,98 @@
   padding-right: 10px;
 }
 
+.edit-post-layout__content .block-single-callout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.edit-post-layout__content .block-single-callout .callout-inner {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 1171px) {
+  .edit-post-layout__content .block-single-callout .callout-inner {
+    border-left: 2px solid #ffffff;
+    margin: 20px;
+  }
+}
+
+.edit-post-layout__content .callout-left {
+  max-width: 694px;
+  border-left: 2px solid #ffffff;
+  padding: 0px 0px 0px 40px;
+  margin: 20px auto;
+}
+
+.edit-post-layout__content .callout-left h3 {
+  font-size: 3.5rem;
+  padding-top: 2px;
+}
+
+.edit-post-layout__content .callout-left p {
+  padding: 20px 0px;
+  font-size: 1rem;
+  font-family: Helvetica;
+}
+
+@media only screen and (max-width: 1171px) {
+  .edit-post-layout__content .callout-left {
+    border-left: none;
+    padding: 0px 0px 0px 30px;
+    margin: 0;
+  }
+  .edit-post-layout__content .callout-left p {
+    padding: 24px 0px 0px;
+  }
+}
+
+.edit-post-layout__content .callout-right {
+  margin: auto;
+}
+
+@media only screen and (max-width: 1171px) {
+  .edit-post-layout__content .callout-right {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+}
+
+.edit-post-layout__content .cta-button {
+  padding: 18px 130px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  /*font-size: 36px;*/
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1171px) {
+  .edit-post-layout__content .cta-button {
+    padding: 20px 85px;
+    font-size: 1.6rem;
+  }
+}
+
+.edit-post-layout__content .block-single-callout-red {
+  background-color: #ed1940;
+  color: #ffffff;
+}
+
+.edit-post-layout__content .block-single-callout-red h3, .edit-post-layout__content .block-single-callout-red p {
+  color: #ffffff;
+}
+
 .edit-post-layout__content .content-fixed {
   margin-left: auto;
   margin-right: auto;

@@ -12,6 +12,12 @@
     justify-content: space-between;
     align-items: center;
     flex-grow: 1;
+
+    @include responsive-max($full-width-wrapper){
+      border-left: 2px solid #ffffff;
+      margin: 20px;
+    }
+
   }
 }
 
@@ -29,9 +35,22 @@
     font-size: 1rem;
     font-family: Helvetica;
   }
+  @include responsive-max($full-width-wrapper){
+    border-left: none;
+    padding: 0px 0px 0px 30px;
+    margin: 0;
+    p {
+      padding: 24px 0px 0px;
+    }
+  }
 }
 .callout-right {
   margin: auto;
+  @include responsive-max($full-width-wrapper){
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
 }
 
 .callout-link {
@@ -47,6 +66,10 @@
   /*font-size: 36px;*/
   font-size: 2.25rem;
   letter-spacing: 1px;
+  @include responsive-max($full-width-wrapper){
+    padding: 20px 85px;
+    font-size: 1.6rem;
+  }
 }
 
 .block-single-callout-red {
