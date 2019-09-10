@@ -2945,7 +2945,7 @@ li {
   max-width: 694px;
   border-left: 2px solid #ffffff;
   padding: 0px 0px 0px 40px;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 
 .callout-left h3 {
@@ -2957,6 +2957,10 @@ li {
   padding: 20px 0px;
   font-size: 1rem;
   font-family: Helvetica;
+}
+
+.callout-right {
+  margin: auto;
 }
 
 .cta-button {
