@@ -1,19 +1,62 @@
 .block-single-callout {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 
   .callout-inner {
     max-width: 1170px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /*justify-content: flex-start; */
-    /*align-items: center; */
-    border-left: 2px solid $white;
-    padding: 20px 0;    
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
   }
+}
+
+.callout-left {
+  max-width: 694px;
+  border-left: 2px solid #ffffff;
+  padding: 0px 0px 0px 40px;
+  margin: 20px 0;
+  h3 {
+    font-size: 3.5rem;
+    padding-top: 2px;
+  }
+  p {
+    padding: 20px 0px;
+    font-size: 1rem;
+    font-family: Helvetica;
+  }
+}
+.callout-right {
+  
+}
+
+.callout-link {
+
+}
+
+.cta-button {
+  padding: 18px 130px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  background-color: $white;
+  /*font-size: 36px;*/
+  font-size: 2.25rem;
+  letter-spacing: 1px;
 }
 
 .block-single-callout-red {
   background-color: $red;
   color: $white;
+  h3, p {
+    color: $white;
+  }
 }
+
+
+
+

@@ -24,7 +24,7 @@ if ( !isset($link_label) || empty($link_label) ){
     </div>
 <?php if ( isset($link) && !empty($link) ) { ?>
     <div class="callout-right">
-      <a href="<?php echo $link; ?>" class="callout-link"><?php echo $link_label; ?></a>
+      <a href="<?php echo $link; ?>" class="callout-link cta-button"><?php echo $link_label; ?></a>
     </div>
 <?php } ?>
   </div>

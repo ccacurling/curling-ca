@@ -1724,7 +1724,6 @@ if( function_exists('acf_add_local_field_group') ):
     'active' => true,
     'description' => '',
   ));
-<<<<<<< HEAD
 
   //News Promo Module
   acf_add_local_field_group(array(
@@ -1897,8 +1896,6 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
-=======
->>>>>>> 7828d2714ff4eff059607f8171aa53adf1735f19
   
   endif;
 ?>

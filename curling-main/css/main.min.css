@@ -2924,6 +2924,61 @@ li {
   padding-right: 10px;
 }
 
+.block-single-callout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.block-single-callout .callout-inner {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.callout-left {
+  max-width: 694px;
+  border-left: 2px solid #ffffff;
+  padding: 0px 0px 0px 40px;
+  margin: 20px 0;
+}
+
+.callout-left h3 {
+  font-size: 3.5rem;
+  padding-top: 2px;
+}
+
+.callout-left p {
+  padding: 20px 0px;
+  font-size: 1rem;
+  font-family: Helvetica;
+}
+
+.cta-button {
+  padding: 18px 130px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  /*font-size: 36px;*/
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+}
+
+.block-single-callout-red {
+  background-color: #ed1940;
+  color: #ffffff;
+}
+
+.block-single-callout-red h3, .block-single-callout-red p {
+  color: #ffffff;
+}
+
 /**
  * Test imports
  */
