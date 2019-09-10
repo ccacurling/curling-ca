@@ -2,6 +2,33 @@
   position: relative;
   font-size: 0;
   line-height: 0;
+
+}
+
+.block-prefooter-simple {
+  border-top: 1px solid $light-gray;
+
+  .block-prefooter-info {
+    padding-top: 36px;
+    padding-bottom: 98px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 770px;
+
+    @include responsive-min($responsive-tablet) {
+      text-align: center;
+    }
+  }
+
+  .block-prefooter-info-body {
+    margin-top: 41px;
+    margin-bottom: 37px;
+    color: $black;
+  }
+
+  .block-prefooter-info-btns {
+    justify-content: center;
+  }
 }
 
 .block-prefooter-content {
@@ -11,30 +38,44 @@
 .block-prefooter-info {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
-  padding-bottom: 188px;
+  padding-top: 122px;
+  padding-bottom: 161px;
+  padding-left: 11px;
+  padding-right: 11px;
   
   @include responsive-min($responsive-tablet) {
     margin-left: 46.8%;
     padding-top: 200px;
     padding-bottom: 330px;
+    padding-left: 0;
+    padding-right: 0;
     width: 50%;
     max-width: 570px;
   }
 }
 
 .block-prefooter-info-body {
-  margin-top: 22px;
-  margin-bottom: 28px;
+  margin-top: 29px;
+  margin-bottom: 17px;
+  padding-left: 9px;
   color: $white;
+  @include responsive-min($responsive-tablet) {
+    margin-top: 22px;
+    margin-bottom: 28px;
+    padding-left: 0;
+  }
 }
 
 .block-prefooter-info-btns {
   display: flex;
   flex-direction: column;
+  padding-left: 5px;
+  padding-right: 5px;
 
   @include responsive-min($responsive-tablet) {
     flex-direction: row;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .block-prefooter-info-btn {
@@ -45,13 +86,19 @@
   }
 
   .block-prefooter-info-btn:nth-child(1) {
+    margin-bottom: 10px;
+
     @include responsive-min($responsive-tablet) {
       margin-right: 10px;
+      margin-bottom: 0;
     }
   }
 
   .block-prefooter-info-btn:nth-child(2) {
+    margin-top: 10px;
+
     @include responsive-min($responsive-tablet) {
+      margin-top: 0;
       margin-left: 10px;
     }
   }
@@ -82,9 +129,21 @@
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, 12%);
   width: 1440px;
   max-width: none;
   max-height: none;
   z-index: -1;
+
+  @include responsive-min($responsive-desktop) {
+    transform: translate(-50%, 0);
+  }
+}
+
+.prefooter-slash-2 {
+  transform: translate(-50%, calc(12% - 880px));
+
+  @include responsive-min($responsive-desktop) {
+    transform: translate(-50%, -880px);
+  }
 }

@@ -59,19 +59,19 @@ function create_taxonomy() {
 }
 
 function create_post_type() {
-    register_post_type('Events', [
+    register_post_type('Team', [
         'labels' => [
-            'name' => __('Events'),
-            'singular_name' => __('Event'),
+            'name' => __('Team'),
+            'singular_name' => __('Team'),
         ],
         'menu_icon' => 'dashicons-megaphone',
         'public' => true,
-        // 'taxonomies' => [ 'event_tag' ],
-        'supports' => ['title', 'editor', 'thumbnail'],
+        // 'taxonomies' => [ 'team_tag' ],
+        'supports' => ['title', 'thumbnail'],
         'has_archive' => true,
         'show_in_rest' => true,
         'rewrite' => [
-            'slug' => 'event'
+            'slug' => 'team'
         ]
     ]);
 }

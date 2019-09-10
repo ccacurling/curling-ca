@@ -3,6 +3,150 @@
 if( function_exists('acf_add_local_field_group') ):
 
   acf_add_local_field_group(array(
+    'key' => 'group_5d76cb304c380',
+    'title' => 'Featured Image Caption',
+    'fields' => array(
+      array(
+        'key' => 'field_5d76cb3ef2094',
+        'label' => 'Caption',
+        'name' => 'featured_image_caption',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'post',
+        ),
+      ),
+    ),
+    'menu_order' => -100,
+    'position' => 'side',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
+    'key' => 'group_5d76be9f07926',
+    'title' => 'Callout',
+    'fields' => array(
+      array(
+        'key' => 'field_5d76bf000b48e',
+        'label' => 'Image',
+        'name' => 'callout_image',
+        'type' => 'image',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'return_format' => 'array',
+        'preview_size' => 'medium',
+        'library' => 'all',
+        'min_width' => '',
+        'min_height' => '',
+        'min_size' => '',
+        'max_width' => '',
+        'max_height' => '',
+        'max_size' => '',
+        'mime_types' => '',
+      ),
+      array(
+        'key' => 'field_5d76bf1efe292',
+        'label' => 'Title',
+        'name' => 'callout_title',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+      array(
+        'key' => 'field_5d76bf2aad2df',
+        'label' => 'Body Text',
+        'name' => 'callout_body_text',
+        'type' => 'textarea',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'maxlength' => '',
+        'rows' => '',
+        'new_lines' => '',
+      ),
+      array(
+        'key' => 'field_5d76bf3b176d6',
+        'label' => 'Link',
+        'name' => 'callout_link',
+        'type' => 'link',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'return_format' => 'array',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/callout',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
     'key' => 'group_5d7039036b0c1',
     'title' => 'Event Location Block',
     'fields' => array(
@@ -73,6 +217,67 @@ if( function_exists('acf_add_local_field_group') ):
           'param' => 'block',
           'operator' => '==',
           'value' => 'acf/event-location',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
+    'key' => 'group_5d76d15367870',
+    'title' => 'Featured Team',
+    'fields' => array(
+      array(
+        'key' => 'field_5d76d1608f13a',
+        'label' => 'Featured Team',
+        'name' => 'featured_team',
+        'type' => 'post_object',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'post_type' => array(
+          0 => 'team',
+        ),
+        'taxonomy' => '',
+        'allow_null' => 0,
+        'multiple' => 0,
+        'return_format' => 'object',
+        'ui' => 1,
+      ),
+      array(
+        'key' => 'field_5d76d4112cb44',
+        'label' => 'Link',
+        'name' => 'featured_team_link',
+        'type' => 'link',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'return_format' => 'array',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/featured-team',
         ),
       ),
     ),
@@ -582,6 +787,79 @@ if( function_exists('acf_add_local_field_group') ):
   ));
   
   acf_add_local_field_group(array(
+    'key' => 'group_5d704ec0c5d4d',
+    'title' => 'News Promo',
+    'fields' => array(
+      array(
+        'key' => 'field_5d70511d50418',
+        'label' => 'Selected Post',
+        'name' => 'promo_post',
+        'type' => 'post_object',
+        'instructions' => 'Select a Post to be promoted',
+        'required' => 1,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'post_type' => array(
+          0 => 'post',
+        ),
+        'taxonomy' => '',
+        'allow_null' => 0,
+        'multiple' => 0,
+        'return_format' => 'object',
+        'ui' => 1,
+      ),
+      array(
+        'key' => 'field_5d704f55b5c81',
+        'label' => 'Background Colour',
+        'name' => 'background_colour',
+        'type' => 'select',
+        'instructions' => 'Select a background colour',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'choices' => array(
+          'white' => 'White',
+          'grey' => 'Grey',
+        ),
+        'default_value' => array(
+          0 => 'white',
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+        'ui' => 0,
+        'return_format' => 'value',
+        'ajax' => 0,
+        'placeholder' => '',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/news-promo',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
     'key' => 'group_5d680deb699b7',
     'title' => 'Package',
     'fields' => array(
@@ -858,6 +1136,89 @@ if( function_exists('acf_add_local_field_group') ):
   ));
   
   acf_add_local_field_group(array(
+    'key' => 'group_5d76cf28edf86',
+    'title' => 'Post - Team',
+    'fields' => array(
+      array(
+        'key' => 'field_5d76cf474fd19',
+        'label' => 'Team Members',
+        'name' => 'team_members',
+        'type' => 'repeater',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'collapsed' => '',
+        'min' => 0,
+        'max' => 0,
+        'layout' => 'table',
+        'button_label' => '',
+        'sub_fields' => array(
+          array(
+            'key' => 'field_5d76cf694fd1a',
+            'label' => 'Position',
+            'name' => 'team_member_position',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+          ),
+          array(
+            'key' => 'field_5d76cf7f4fd1b',
+            'label' => 'Name',
+            'name' => 'team_member_name',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+          ),
+        ),
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'team',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+  
+  acf_add_local_field_group(array(
     'key' => 'group_5d72cc221cbfa',
     'title' => 'Pre Footer',
     'fields' => array(
@@ -900,13 +1261,40 @@ if( function_exists('acf_add_local_field_group') ):
         'maxlength' => '',
       ),
       array(
+        'key' => 'field_5d7690fb90cb5',
+        'label' => 'Enable Background',
+        'name' => 'prefooter_enable_background',
+        'type' => 'true_false',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'message' => '',
+        'default_value' => 0,
+        'ui' => 0,
+        'ui_on_text' => '',
+        'ui_off_text' => '',
+      ),
+      array(
         'key' => 'field_5d72cc647d966',
         'label' => 'Image',
         'name' => 'prefooter_image',
         'type' => 'image',
         'instructions' => '',
         'required' => 0,
-        'conditional_logic' => 0,
+        'conditional_logic' => array(
+          array(
+            array(
+              'field' => 'field_5d7690fb90cb5',
+              'operator' => '==',
+              'value' => '1',
+            ),
+          ),
+        ),
         'wrapper' => array(
           'width' => '',
           'class' => '',
@@ -1336,15 +1724,187 @@ if( function_exists('acf_add_local_field_group') ):
     'active' => true,
     'description' => '',
   ));
+
+  //News Promo Module
+  acf_add_local_field_group(array(
+	'key' => 'group_5d704ec0c5d4d',
+	'title' => 'News Promo',
+	'fields' => array(
+		array(
+			'key' => 'field_5d70511d50418',
+			'label' => 'Selected Post',
+			'name' => 'promo_post',
+			'type' => 'post_object',
+			'instructions' => 'Select a Post to be promoted',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'post',
+			),
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'multiple' => 0,
+			'return_format' => 'object',
+			'ui' => 1,
+		),
+		array(
+			'key' => 'field_5d704f55b5c81',
+			'label' => 'Background Colour',
+			'name' => 'background_colour',
+			'type' => 'select',
+			'instructions' => 'Select a background colour',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'white' => 'White',
+				'grey' => 'Grey',
+			),
+			'default_value' => array(
+				0 => 'white',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/news-promo',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+//Single Callout Module
+acf_add_local_field_group(array(
+	'key' => 'group_5d76d79563a90',
+	'title' => 'Single Callout',
+	'fields' => array(
+		array(
+			'key' => 'field_5d76d7a50622d',
+			'label' => 'Title',
+			'name' => 'title',
+			'type' => 'text',
+			'instructions' => 'Callout Title',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d76d7cb0622e',
+			'label' => 'Description',
+			'name' => 'description',
+			'type' => 'textarea',
+			'instructions' => 'This is the text that will be displayed along with the title',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_5d76d7f70622f',
+			'label' => 'Callout Link',
+			'name' => 'link',
+			'type' => 'url',
+			'instructions' => 'CTA Link',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5d76dacae58f4',
+			'label' => 'Callout Link Label',
+			'name' => 'link_label',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/single-callout',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
   
   endif;
 ?>
-
 <?php
 
 // -----
 // UNCOMMENT THIS CODE TO EXPORT A JSON FILE OF THE ACF FIELDS
 // -----get_local_field_groups();
+// $groups = acf_get_local_field_groups();
 // $json = [];
 
 // foreach ($groups as $group) {
@@ -1372,6 +1932,5 @@ if( function_exists('acf_add_local_field_group') ):
 // // the current theme directory.
 // $file = get_template_directory() . '/bin/json/acf-import.json';
 // file_put_contents($file, $json );
-// $groups = acf_
 
 ?>

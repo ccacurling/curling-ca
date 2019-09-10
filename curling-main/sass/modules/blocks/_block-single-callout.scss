@@ -1,0 +1,86 @@
+.block-single-callout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .callout-inner {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+
+    @include responsive-max($full-width-wrapper){
+      border-left: 2px solid #ffffff;
+      margin: 20px;
+    }
+
+  }
+}
+
+.callout-left {
+  max-width: 694px;
+  border-left: 2px solid #ffffff;
+  padding: 0px 0px 0px 40px;
+  margin: 20px auto;
+  h3 {
+    font-size: 3.5rem;
+    padding-top: 2px;
+  }
+  p {
+    padding: 20px 0px;
+    font-size: 1rem;
+    font-family: Helvetica;
+  }
+  @include responsive-max($full-width-wrapper){
+    border-left: none;
+    padding: 0px 0px 0px 30px;
+    margin: 0;
+    p {
+      padding: 24px 0px 0px;
+    }
+  }
+}
+.callout-right {
+  margin: auto;
+  @include responsive-max($full-width-wrapper){
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+}
+
+.callout-link {
+
+}
+
+.cta-button {
+  padding: 18px 130px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $black;
+  background-color: $white;
+  /*font-size: 36px;*/
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+  border-radius: 2px;
+  @include responsive-max($full-width-wrapper){
+    padding: 20px 85px;
+    font-size: 1.6rem;
+  }
+}
+
+.block-single-callout-red {
+  background-color: $red;
+  color: $white;
+  h3, p {
+    color: $white;
+  }
+}
+
+
+
+
