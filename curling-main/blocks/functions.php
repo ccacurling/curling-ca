@@ -53,19 +53,18 @@ function acf_blocks_init() {
 			'category'				=> 'common',
 			'icon'						=> 'admin-comments',
       'keywords'				=> [ 'ticket' ]
-    ]);
-
+		]);
+		// Module #3-4 - Event Details / Event Location Block
     acf_register_block([
 			'name'						=> 'event-location',
 			'title'						=> __('Event Location'),
 			'description'			=> __('An event location and map block.'),
 			'render_callback'	=> 'block_render_callback',
 			'category'				=> 'common',
-			'icon'						=> 'admin-comments',
+			'icon'						=> 'calendar-alt',
       'keywords'				=> [ 'event location', 'map' ]
     ]);
-	
-    //Module 10 - News/News Promo
+    // Module 10 - News/News Promo
     acf_register_block([
     'name'				=> 'news-promo',
     'title'				=> __('News Promo'),
@@ -74,7 +73,17 @@ function acf_blocks_init() {
     'category'			=> 'common',
     'icon'				=> 'admin-comments',
       'keywords'			=> [ 'news', 'promo', 'featured', 'post' ]
-    ]);
+		]);
+		// Module #2-2 - Sponsors block
+		acf_register_block([
+			'name'				=> 'sponsors',
+			'title'				=> __('Sponsors'),
+			'description'		=> __('Used to display selected sponsors'),
+			'render_callback'	=> 'block_render_callback',
+			'category'			=> 'common',
+			'icon'				=> 'groups',
+				'keywords'			=> [ 'sponsor', 'sponsors', 'partner', 'partners' ]
+		]);
 
     acf_register_block([
 			'name'						=> 'prefooter',
