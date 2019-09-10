@@ -2998,6 +2998,7 @@ li {
   /*font-size: 36px;*/
   font-size: 2.25rem;
   letter-spacing: 1px;
+  border-radius: 2px;
 }
 
 @media only screen and (max-width: 1171px) {
