@@ -1,0 +1,19 @@
+.block-single-callout {
+  width: 100%;
+
+  .callout-inner {
+    max-width: 1170px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*justify-content: flex-start; */
+    /*align-items: center; */
+    border-left: 2px solid $white;
+    padding: 20px 0;    
+  }
+}
+
+.block-single-callout-red {
+  background-color: $red;
+  color: $white;
+}

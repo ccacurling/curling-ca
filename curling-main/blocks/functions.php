@@ -74,7 +74,18 @@ function acf_blocks_init() {
     'category'			=> 'common',
     'icon'				=> 'admin-comments',
       'keywords'			=> [ 'news', 'promo', 'featured', 'post' ]
-    ]);
+	]);
+	
+	//Module - Single Callout
+    acf_register_block([
+		'name'				=> 'single-callout',
+		'title'				=> __('Single Callout'),
+		'description'		=> __('Used to a single callout'),
+		'render_callback'	=> 'block_render_callback',
+		'category'			=> 'common',
+		'icon'				=> 'admin-comments',
+		  'keywords'			=> [ 'single', 'callout', 'cta' ]
+		]);
 
     acf_register_block([
 			'name'						=> 'prefooter',
