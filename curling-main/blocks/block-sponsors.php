@@ -10,8 +10,7 @@
   $block_content_alignment = get_field( 'block_content_alignment', $block->ID );
   $sponsor_columns = get_field( 'sponsor_columns', $block->ID );
 
-  error_log( print_r( $block_content_alignment, true ) );
-
+  // Handle alignment selection
   switch ($block_content_alignment) {
     case 'Left-Aligned':
       $content_alignment_class = 'content-left-aligned';
@@ -26,6 +25,7 @@
       $content_alignment_class = 'content-centered';
   }
 
+  // Handle column selections
   switch ($sponsor_columns) {
     case '1':
       $block_template_class = 'one-column';
@@ -60,7 +60,7 @@
 
         <?php if ( $cta_location === 'Top' ) { ?>
 
-          <div class="cta-section">
+          <div class="cta-section top">
         
             <?php if ($cta_tag_line) { ?>
               <p><?php echo $cta_tag_line ?></p>
@@ -87,40 +87,47 @@
     <?php } ?>
   
     <!-- Sponsors section -->
-    <div class="sponsors-section <?php echo $content_alignment_class; ?> <?php echo $block_template_class ?>">
+    <div class="<?php echo $content_alignment_class; ?>">
+      <div class="sponsors-section <?php echo $block_template_class ?>">
+    
+        <?php if ( have_rows( 'sponsors' ) ) { 
+          while ( the_repeater_field( 'sponsors' ) ) {
+          $sponsor_type = get_sub_field( 'type' );
+          $sponsor_link = get_sub_field( 'sponsor_cta' );
+          $sponsor      = get_sub_field( 'sponsor' ); 
+          $logo_src     = get_field( 'featured_image', $sponsor->ID );
+          $sponsor_container_classes = 'sponsor-container';
+          if ($sponsor_link) {
+            $sponsor_container_classes .= $sponsor_type && $sponsor_link ? ' has-title-and-link' : '';
+          } else {
+            $sponsor_container_classes .= ' has-title';
+          } ?>
+    
+          <div class="<?php echo $sponsor_container_classes ?>">
   
-      <?php if ( have_rows( 'sponsors' ) ) { 
-        while ( the_repeater_field( 'sponsors' ) ) {
-        $sponsor_type = get_sub_field( 'type' );
-        $sponsor_link = get_sub_field( 'sponsor_cta' );
-        $sponsor      = get_sub_field( 'sponsor' ); 
-        $logo_src     = get_field( 'featured_image', $sponsor->ID ); 
-        $sponsor_container_classes = determine_sponsor_container_classes( $sponsor_type, $sponsor_link );?>
+            <?php if ($sponsor_type) { ?>
+              <h3><?php echo strtoupper( $sponsor_type ); ?></h3>
+            <?php } ?>
+            
+            <?php if ($sponsor_link) { ?>
+              <a href="<?php echo $sponsor_link['url']; ?>" target="<?php echo $sponsor_link['target']; ?>">
+                <?php echo strtoupper( $sponsor_link['title'] ); ?> <b>→</b>
+              </a>
+            <?php } ?>
+      
+            <div class="sponsor">
+              <img src="<?php echo $logo_src['url']; ?>" alt="<?php echo $sponsor->post_title; ?>" />
+            </div>
   
-        <div class="<?php echo $sponsor_container_classes ?> sponsor-container">
-
-          <?php if ($sponsor_type) { ?>
-            <h3><?php echo strtoupper( $sponsor_type ); ?></h3>
-          <?php } ?>
-          
-          <?php if ($sponsor_link) { ?>
-            <a href="<?php echo $sponsor_link['url']; ?>" target="<?php echo $sponsor_link['target']; ?>">
-              <?php echo strtoupper( $sponsor_link['title'] ); ?> <b>→</b>
-            </a>
+          </div>
+    
           <?php } ?>
     
-          <div class="sponsor">
-            <img src="<?php echo $logo_src['url']; ?>" alt="<?php echo $sponsor->post_title; ?>" />
-          </div>
-
-        </div>
-  
+        <?php } else { ?>
+          <h3>No sponsors selected</h3>
         <?php } ?>
-  
-      <?php } else { ?>
-        <h3>No sponsors selected</h3>
-      <?php } ?>
-  
+    
+      </div>
     </div>
   
     <!-- Block CTAs show if Bottom location is selected -->
