@@ -988,7 +988,7 @@ li {
   line-height: 15px;
   position: relative;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 2px;
   font-size: 20px;
   max-width: 100%;
   white-space: normal;
@@ -3012,6 +3012,178 @@ li {
   }
 }
 
+.block-sponsors {
+  padding: 3rem 8rem;
+  font-family: 'knockout';
+  margin-bottom: 0.25em;
+}
+
+.block-sponsors .content {
+  max-width: 1170px;
+}
+
+.block-sponsors .content h2 {
+  font-size: 2rem;
+}
+
+.block-sponsors .content .content-left-aligned,
+.block-sponsors .content .content-centered {
+  width: 102.5%;
+}
+
+.block-sponsors .content .sponsors-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 102.5%;
+  position: relative;
+}
+
+.block-sponsors .content .sponsors-section .sponsor-container {
+  flex: 1 1 185px;
+  max-height: 310px;
+  display: flex;
+  padding: 1.25rem 0;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.block-sponsors .content .sponsors-section .sponsor-container h3 {
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+  white-space: nowrap;
+}
+
+.block-sponsors .content .sponsors-section .sponsor-container a {
+  text-decoration: none;
+  color: #ed1940;
+}
+
+.block-sponsors .content .sponsors-section .sponsor-container .sponsor {
+  background-color: white;
+  width: 170px;
+  height: 170px;
+  -webkit-box-shadow: 0px 0px 1px 0px #ccc;
+  -moz-box-shadow: 0px 0px 1px 0px #ccc;
+  box-shadow: 0px 0px 1px 0px #ccc;
+  display: flex;
+  align-items: center;
+}
+
+.block-sponsors .content .sponsors-section .sponsor-container .sponsor img {
+  width: auto;
+  height: auto;
+  max-width: 125px;
+  max-height: 125px;
+  margin: 0 auto;
+}
+
+.block-sponsors .content .sponsors-section .has-title-and-link h3 {
+  padding-bottom: 0;
+}
+
+.block-sponsors .content .sponsors-section .has-title-and-link a {
+  padding-bottom: 1.25rem;
+}
+
+.block-sponsors .content .sponsors-section .has-title-and-link ~ .has-title h3 {
+  padding-bottom: 3rem;
+}
+
+.block-sponsors .content .content-left-aligned {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.block-sponsors .content .content-centered {
+  display: flex;
+  justify-content: center;
+}
+
+.block-sponsors .content .content-right-aligned {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.block-sponsors .content .content-right-aligned .sponsor-container h3 {
+  position: relative;
+  left: 4.75rem;
+}
+
+.block-sponsors .content .content-right-aligned .sponsor-container .sponsor {
+  align-self: flex-end;
+}
+
+.block-sponsors .content .cta-section.top {
+  padding: 0.5rem 0;
+}
+
+.block-sponsors .content .cta-section {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-sponsors .content .cta-section .cta-link {
+  color: #ed1940;
+  text-decoration: none;
+  font-style: normal;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-family: 'knockout';
+}
+
+.block-sponsors .content .cta-section .cta-link b {
+  margin-left: 0.25rem;
+}
+
+.block-sponsors .content .sponsors-section.one-column {
+  max-width: 28.5%;
+}
+
+.block-sponsors .content .sponsors-section.one-column .sponsor-container h3 {
+  white-space: unset;
+  left: 10.1rem;
+  width: 170px;
+}
+
+.block-sponsors .content .sponsors-section.one-column .sponsor-container a {
+  position: relative;
+  top: 0.5rem;
+}
+
+.block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  left: 10.1rem;
+}
+
+.block-sponsors .content .sponsors-section.two-columns {
+  max-width: 42.5%;
+}
+
+.block-sponsors .content .sponsors-section.three-columns {
+  max-width: 57.5%;
+}
+
+.block-sponsors .content .sponsors-section.four-columns {
+  max-width: 72.5%;
+}
+
+.block-sponsors .content .sponsors-section.five-columns {
+  max-width: 86.5%;
+}
+
+.has-grey-bg {
+  background-color: #f2f2f2;
+}
+
+.has-white-bg {
+  background-color: white;
+}
+
+.title-and-link-exist .sponsors-section {
+  margin-top: 6rem;
+}
+
 .block-news-promo {
   max-width: 770px;
 }
@@ -3353,6 +3525,143 @@ li {
   margin-right: 50px;
   width: 45px;
   text-align: center;
+}
+
+.block-single-callout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.block-single-callout .callout-inner {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+}
+
+@media only screen and (max-width: 1171px) {
+  .block-single-callout .callout-inner {
+    border-left: 2px solid #ffffff;
+    margin: 20px;
+  }
+}
+
+.callout-left {
+  max-width: 694px;
+  border-left: 2px solid #ffffff;
+  padding: 0px 0px 0px 40px;
+  margin: 20px auto;
+}
+
+.callout-left h3 {
+  font-size: 3.5rem;
+  padding-top: 2px;
+}
+
+.callout-left p {
+  padding: 20px 0px;
+  font-size: 1rem;
+  font-family: Helvetica;
+}
+
+@media only screen and (max-width: 1171px) {
+  .callout-left {
+    border-left: none;
+    padding: 0px 0px 0px 30px;
+    margin: 0;
+  }
+  .callout-left p {
+    padding: 24px 0px 0px;
+  }
+}
+
+.callout-right {
+  margin: auto;
+}
+
+@media only screen and (max-width: 1171px) {
+  .callout-right {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+}
+
+.cta-button {
+  padding: 18px 130px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000000;
+  background-color: #ffffff;
+  /*font-size: 36px;*/
+  font-size: 2.25rem;
+  letter-spacing: 1px;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 1171px) {
+  .cta-button {
+    padding: 20px 85px;
+    font-size: 1.6rem;
+  }
+}
+
+.block-single-callout-red {
+  background-color: #ed1940;
+  color: #ffffff;
+}
+
+.block-single-callout-red h3, .block-single-callout-red p {
+  color: #ffffff;
+}
+
+.styled-button.background-red {
+  background-color: #ed1940;
+}
+
+.styled-button.background-white {
+  background-color: #ffffff;
+}
+
+.styled-button.color-white {
+  color: #ffffff;
+}
+
+.styled-button.color-black {
+  color: #000000;
+}
+
+.styled-button.hover-black:hover {
+  color: #000000;
+}
+
+p.item-label {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #4c4c4e;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Knockout";
+  padding: 6px 8.5px;
+  border-radius: 2px;
+  margin: 8px;
+}
+
+.presented-by-box {
+  max-width: 158px;
+  margin: 0px 0px 30px 0;
+}
+
+.presented-by-box h4 {
+  color: #000000;
+  font-family: "Knockout";
+  margin: 10px 0;
 }
 
 /**

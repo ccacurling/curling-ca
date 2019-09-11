@@ -53,19 +53,18 @@ function acf_blocks_init() {
 			'category'				=> 'common',
 			'icon'						=> 'admin-comments',
       'keywords'				=> [ 'ticket' ]
-    ]);
-
+		]);
+		// Module #3-4 - Event Details / Event Location Block
     acf_register_block([
 			'name'						=> 'event-location',
 			'title'						=> __('Event Location'),
 			'description'			=> __('An event location and map block.'),
 			'render_callback'	=> 'block_render_callback',
 			'category'				=> 'common',
-			'icon'						=> 'admin-comments',
+			'icon'						=> 'calendar-alt',
       'keywords'				=> [ 'event location', 'map' ]
     ]);
-	
-    //Module 10 - News/News Promo
+    // Module 10 - News/News Promo
     acf_register_block([
     'name'				=> 'news-promo',
     'title'				=> __('News Promo'),
@@ -74,7 +73,27 @@ function acf_blocks_init() {
     'category'			=> 'common',
     'icon'				=> 'admin-comments',
       'keywords'			=> [ 'news', 'promo', 'featured', 'post' ]
-    ]);
+		]);
+		// Module #2-2 - Sponsors block
+		acf_register_block([
+			'name'				=> 'sponsors',
+			'title'				=> __('Sponsors'),
+			'description'		=> __('Used to display selected sponsors'),
+			'render_callback'	=> 'block_render_callback',
+			'category'			=> 'common',
+			'icon'				=> 'groups',
+				'keywords'			=> [ 'sponsor', 'sponsors', 'partner', 'partners' ]
+		]);
+		//Module - Single Callout
+    acf_register_block([
+		'name'				=> 'single-callout',
+		'title'				=> __('Single Callout'),
+		'description'		=> __('Used to a single callout'),
+		'render_callback'	=> 'block_render_callback',
+		'category'			=> 'common',
+		'icon'				=> 'admin-comments',
+		  'keywords'			=> [ 'single', 'callout', 'cta' ]
+		]);
 
     acf_register_block([
 			'name'						=> 'prefooter',
@@ -104,7 +123,40 @@ function acf_blocks_init() {
 			'category'				=> 'common',
 			'icon'						=> 'admin-comments',
       'keywords'				=> [ 'team' ]
-    ]);
+	]);
+	
+	//Styled Button
+	acf_register_block([
+		'name'						=> 'styled-button',
+		'title'						=> __('Styled Button'),
+		'description'			=> __('A Curling Styled Button'),
+		'render_callback'	=> 'block_render_callback',
+		'category'				=> 'common',
+		'icon'						=> 'admin-comments',
+  		'keywords'				=> [ 'button', 'link' ]
+	]);
+
+	//Item/Page Label
+	acf_register_block([
+		'name'						=> 'item-label',
+		'title'						=> __('Item Label'),
+		'description'			=> __('An Item or Page Label'),
+		'render_callback'	=> 'block_render_callback',
+		'category'				=> 'common',
+		'icon'						=> 'admin-comments',
+  		'keywords'				=> [ 'label', 'item', 'page' ]
+	]);
+
+	//Presented By
+	acf_register_block([
+		'name'						=> 'presented-by',
+		'title'						=> __('Presented by Sponsor'),
+		'description'			=> __('Sponsor with Presented By label'),
+		'render_callback'	=> 'block_render_callback',
+		'category'				=> 'common',
+		'icon'						=> 'admin-comments',
+  		'keywords'				=> [ 'presented', 'by', 'sponsor' ]
+	]);
 
     acf_register_block([
 			'name'						=> 'image-carousel',
