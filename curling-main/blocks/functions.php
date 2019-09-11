@@ -147,6 +147,17 @@ function acf_blocks_init() {
   		'keywords'				=> [ 'label', 'item', 'page' ]
 	]);
 
+	//Presented By
+	acf_register_block([
+		'name'						=> 'presented-by',
+		'title'						=> __('Presented by Sponsor'),
+		'description'			=> __('Sponsor with Presented By label'),
+		'render_callback'	=> 'block_render_callback',
+		'category'				=> 'common',
+		'icon'						=> 'admin-comments',
+  		'keywords'				=> [ 'presented', 'by', 'sponsor' ]
+	]);
+
     acf_add_options_page('Options');
   }
 }

@@ -2029,6 +2029,74 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
+
+//Presented By Sponsor
+acf_add_local_field_group(array(
+	'key' => 'group_5d795c6890474',
+	'title' => 'Presented By Sponsor',
+	'fields' => array(
+		array(
+			'key' => 'field_5d795c832d92f',
+			'label' => 'label',
+			'name' => 'label',
+			'type' => 'text',
+			'instructions' => 'Label for the sponsor. Defaults to "Presented By',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 'Presented By',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d795ca92d930',
+			'label' => 'Sponsor Image',
+			'name' => 'image',
+			'type' => 'image',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
+			'preview_size' => 'medium',
+			'library' => 'all',
+			'min_width' => '',
+			'min_height' => '',
+			'min_size' => '',
+			'max_width' => '',
+			'max_height' => '',
+			'max_size' => '',
+			'mime_types' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/presented-by',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
   
   endif;
 ?>

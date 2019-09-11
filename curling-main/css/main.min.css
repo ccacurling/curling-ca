@@ -3220,6 +3220,17 @@ p.item-label {
   margin: 8px;
 }
 
+.presented-by-box {
+  max-width: 158px;
+  margin: 0px 0px 30px 0;
+}
+
+.presented-by-box h4 {
+  color: #000000;
+  font-family: "Knockout";
+  margin: 10px 0;
+}
+
 /**
  * Test imports
  */
