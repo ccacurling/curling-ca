@@ -106,6 +106,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'team' ]
     ]);
 
+    acf_register_block([
+			'name'						=> 'image-carousel',
+			'title'						=> __('Image Carousel'),
+			'description'			=> __('A block to render an Image Carousel'),
+			'render_callback'	=> 'block_render_callback',
+			'category'				=> 'common',
+			'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'image', 'carousel' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

@@ -24,8 +24,13 @@ $featured_team_link = get_field( 'featured_team_link' );
   ?>
   <div class="featured-team-info">
     <div class="featured-team-info-container">
-      <h2 class="featured-team-title"><?php echo $featured_team->post_title; ?></h2>
-
+      <?php
+        if ($featured_team) {
+      ?>
+        <h2 class="featured-team-title"><?php echo $featured_team->post_title; ?></h2>
+      <?php
+        }
+      ?>
       <div class="featured-team-members-container">
       <?php
         if ($featured_team_members) {
@@ -41,11 +46,23 @@ $featured_team_link = get_field( 'featured_team_link' );
       ?>
       </div>
 
-      <a class="featured-team-link btn-link" href="<?php echo get_permalink($featured_team->ID); ?>">
-        <h4 class="btn-link-text red">Meet the team</h4>
-        <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
-      </a>
+      <?php
+        if ($featured_team) {
+      ?>
+        <a class="featured-team-link btn-link" href="<?php echo get_permalink($featured_team->ID); ?>">
+          <h4 class="btn-link-text red">Meet the team</h4>
+          <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+        </a>
+      <?php
+        }
+      ?>
     </div>
-    <a class="feature-team-btn btn btn-red btn-large" href="<?php echo $featured_team_link['url']; ?>" target="<?php echo $featured_team_link['target']; ?>"><?php echo $featured_team_link['title']; ?></a>
+    <?php
+      if ($featured_team_link) {
+    ?>
+      <a class="feature-team-btn btn btn-red btn-large" href="<?php echo $featured_team_link['url']; ?>" target="<?php echo $featured_team_link['target']; ?>"><?php echo $featured_team_link['title']; ?></a>
+    <?php
+      }
+    ?>
   </div>
 </section>

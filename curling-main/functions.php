@@ -14,6 +14,7 @@ add_action('init', 'block_container_init');
 function block_container_init() {
     $file = get_stylesheet_directory_uri().'/js/dist/block-container.min.js';
     $filem = get_stylesheet_directory().'/js/dist/block-container.min.js';
+
     wp_register_script(
         'cossette-block-container',
         $file,
@@ -27,22 +28,30 @@ function block_container_init() {
             return '<div class="block-container">'.$content.'</div>';
         },
         'attributes' => [
-		]
+          'type' => [
+            'default' => 'default',
+            'type' => 'string'
+          ],
+		    ]
     ));
 }
 
 function add_curling_styles() {
-    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css');
     wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css");
-
-    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery' ], '3.1.0');
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css');
+      
+    wp_enqueue_script('slick', get_stylesheet_directory_uri() . "/js/vendor/slick.min.js", [ 'jquery' ], '1.8.1');
     wp_enqueue_script('litty', get_stylesheet_directory_uri() . "/js/vendor/lity.min.js", [ 'jquery' ], '3.1.0');
+    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery', 'slick' ], '2.4.0');
 }
 
 function add_curling_admin_styles() {
+    wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css");
     wp_enqueue_style('admin', get_stylesheet_directory_uri() . '/css/admin.min.css');
-
-    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery' ], '2.4.0');
+    
+    wp_enqueue_script('slick', get_stylesheet_directory_uri() . "/js/vendor/slick.min.js", [ 'jquery' ], '1.8.1');
+    wp_enqueue_script('litty', get_stylesheet_directory_uri() . "/js/vendor/lity.min.js", [ 'jquery' ], '3.1.0');
+    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery', 'slick' ], '2.4.0');
 }
 
 function remove_admin_menus() {

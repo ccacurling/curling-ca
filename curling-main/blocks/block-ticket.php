@@ -37,15 +37,17 @@ $ticket_secondary_colour = $ticket_colour === 'white' ? 'red' : ($ticket_colour 
       <h4 class="ticket-option-title <?php echo $ticket_primary_colour; ?>">Options:</h4>
     </div>  
     <?php
-      foreach ($ticket_options as $key => $ticket_option) {
-        $option_price = $ticket_option['option_price'];
-        $option_description = $ticket_option['option_description'];
+      if ($ticket_options) {
+        foreach ($ticket_options as $key => $ticket_option) {
+          $option_price = $ticket_option['option_price'];
+          $option_description = $ticket_option['option_description'];
     ?>
         <div class="ticket-option-price-container">
           <h3 class="ticket-option-price <?php echo $ticket_secondary_colour; ?>">$<?php echo $option_price; ?></h3>
           <p class="<?php echo $ticket_primary_colour; ?>"><?php echo $option_description; ?></p>
         </div>
     <?php
+        }
       }
     ?>
   </div>

@@ -9,6 +9,12 @@
  @import "base/functions";
 
  /**
+  * Vendor Imports
+  */
+@import "vendor/slick.scss";
+@import "vendor/slick-theme.scss";
+
+ /**
  * Layout imports
  */
  @import "layout/blocks";
@@ -32,6 +38,7 @@
  @import "modules/blocks/block-news-promo";
  @import "modules/blocks/block-callout";
  @import "modules/blocks/block-featured-team";
+ @import "modules/blocks/block-image-carousel";
 
  /**
  * Test imports
