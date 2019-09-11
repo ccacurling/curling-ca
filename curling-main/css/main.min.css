@@ -3207,6 +3207,19 @@ li {
   color: #000000;
 }
 
+p.item-label {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #4c4c4e;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Knockout";
+  padding: 6px 8.5px;
+  border-radius: 2px;
+  margin: 8px;
+}
+
 /**
  * Test imports
  */

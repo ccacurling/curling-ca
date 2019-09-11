@@ -3217,6 +3217,19 @@
   color: #000000;
 }
 
+.edit-post-layout__content p.item-label {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #4c4c4e;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Knockout";
+  padding: 6px 8.5px;
+  border-radius: 2px;
+  margin: 8px;
+}
+
 .edit-post-layout__content .content-fixed {
   margin-left: auto;
   margin-right: auto;

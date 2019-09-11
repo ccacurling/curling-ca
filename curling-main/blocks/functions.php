@@ -136,6 +136,17 @@ function acf_blocks_init() {
   		'keywords'				=> [ 'button', 'link' ]
 	]);
 
+	//Item/Page Label
+	acf_register_block([
+		'name'						=> 'item-label',
+		'title'						=> __('Item Label'),
+		'description'			=> __('An Item or Page Label'),
+		'render_callback'	=> 'block_render_callback',
+		'category'				=> 'common',
+		'icon'						=> 'admin-comments',
+  		'keywords'				=> [ 'label', 'item', 'page' ]
+	]);
+
     acf_add_options_page('Options');
   }
 }

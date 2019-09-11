@@ -1985,6 +1985,50 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
+
+//Item Label
+acf_add_local_field_group(array(
+	'key' => 'group_5d7952936c413',
+	'title' => 'Item Label',
+	'fields' => array(
+		array(
+			'key' => 'field_5d7952a3a9efb',
+			'label' => 'label',
+			'name' => 'label',
+			'type' => 'text',
+			'instructions' => 'Text for the Label. Presumably the Page title or the Item title.',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/item-label',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
   
   endif;
 ?>
