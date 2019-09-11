@@ -712,7 +712,7 @@
   height: 90px;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .header-event {
     height: 50px;
   }
@@ -832,7 +832,7 @@
   margin-top: 11px;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-logo {
     width: 90px;
   }
@@ -845,13 +845,13 @@
   align-items: flex-start;
   padding-top: 29px;
   padding-bottom: 60px;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0;
+  padding-right: 0;
   background-color: #4c4c4e;
   color: #ffffff;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-wrapper {
     flex-direction: row;
     padding-left: 115px;
@@ -862,19 +862,23 @@
 .edit-post-layout__content .footer-content-left-wrapper {
   margin-left: 0;
   margin-right: 0;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-content-left-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
     flex-basis: 16%;
     margin-left: 20px;
     margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-content-centre-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
@@ -885,10 +889,12 @@
 .edit-post-layout__content .footer-content-right-wrapper {
   display: flex;
   flex-direction: column-reverse;
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-content-right-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
@@ -903,11 +909,13 @@
 .edit-post-layout__content .footer-form {
   display: flex;
   flex-direction: column;
+  max-width: 315px;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-form {
     flex-direction: row;
+    max-width: none;
   }
 }
 
@@ -934,7 +942,7 @@
   margin-top: 10px;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .newsletter-signup-submit {
     margin-top: 0;
     margin-left: 20px;
@@ -946,7 +954,7 @@
   flex-wrap: nowrap;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-nav-menu {
     flex-direction: row;
     flex-wrap: wrap;
@@ -958,7 +966,7 @@
   padding-right: 0;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-menu-item.menu-item {
     padding-left: 19px;
     padding-right: 19px;
@@ -979,14 +987,16 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
+  padding-bottom: 30px;
   border-top: 1px solid #d8d8d8;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .footer-legal-content {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 0;
   }
 }
 
@@ -995,7 +1005,17 @@
 }
 
 .edit-post-layout__content .footer-legal-content-left-wrapper {
+  padding-top: 24px;
+  padding-bottom: 10px;
   padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .footer-legal-content-left-wrapper {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .edit-post-layout__content .btn {
@@ -1265,7 +1285,7 @@
   cursor: pointer;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .header-mobile {
     display: none;
   }
@@ -1312,7 +1332,7 @@
   display: none;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .header-desktop {
     display: block;
   }
@@ -1341,7 +1361,7 @@
   width: 46px;
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 999px) {
   .edit-post-layout__content .menu-logo {
     position: absolute;
     top: 20px;
@@ -3395,6 +3415,18 @@
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .block-image-carousel {
     padding-bottom: 52px;
+  }
+}
+
+.edit-post-layout__content .image-carousel-title {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .image-carousel-title {
+    padding-bottom: 0;
   }
 }
 

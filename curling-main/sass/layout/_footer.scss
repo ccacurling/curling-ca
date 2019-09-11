@@ -21,7 +21,7 @@
 .footer-logo {
   width: 46px;
   margin-top: 11px;
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     width: 90px;
   }
 }
@@ -33,11 +33,11 @@
     align-items: flex-start;
     padding-top: 29px;
     padding-bottom: 60px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 0;
+    padding-right: 0;
     background-color: $gray;
     color: $white;
-    @include responsive-min($responsive-tablet) {
+    @include responsive-min($responsive-laptop) {
       flex-direction: row;
       padding-left: 115px;
       padding-right: 115px;
@@ -47,17 +47,22 @@
 .footer-content-left-wrapper {
   margin-left: 0;
   margin-right: 0;
-  @include responsive-min($responsive-tablet) {
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include responsive-min($responsive-laptop) {
     flex-grow: 1;
     flex-shrink: 0.3;
     flex-basis: 16%;
     margin-left: 20px;
     margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 .footer-content-centre-wrapper {
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     flex-grow: 1;
     flex-shrink: 0.3;
     flex-basis: 50%;
@@ -67,8 +72,10 @@
 .footer-content-right-wrapper {
   display: flex;
   flex-direction: column-reverse;
+  padding-left: 15px;
+  padding-right: 15px;
   width: 100%;
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     flex-grow: 1;
     flex-shrink: 0.3;
     flex-basis: 33%;
@@ -82,8 +89,11 @@
 .footer-form {
   display: flex;
   flex-direction: column;
-  @include responsive-min($responsive-tablet) {
+  max-width: 315px;
+
+  @include responsive-min($responsive-laptop) {
     flex-direction: row;
+    max-width: none;
   }
   .newsletter-signup-submit {
     max-width: 100px;
@@ -108,7 +118,7 @@
 
 .newsletter-signup-submit {
   margin-top: 10px;
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     margin-top: 0;
     margin-left: 20px;
   }
@@ -117,7 +127,7 @@
 .footer-nav-menu  {
   flex-direction: column;
   flex-wrap: nowrap;
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     flex-direction: row;
     flex-wrap: wrap;
     // padding-left: 110px;
@@ -128,7 +138,7 @@
 .footer-menu-item.menu-item {
   padding-left: 0;
   padding-right: 0;
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     padding-left: 19px;
     padding-right: 19px;
     width: 50%;
@@ -149,11 +159,13 @@
     align-items: flex-start;
     justify-content: flex-start;
     flex-direction: column;
+    padding-bottom: 30px;
     border-top: 1px solid $light-gray;
-    @include responsive-min($responsive-tablet) {
+    @include responsive-min($responsive-laptop) {
       flex-direction: row;
       align-items: center;
       justify-content: space-between;
+      padding-bottom: 0;
     }
 }
 
@@ -162,5 +174,13 @@
 }
 
 .footer-legal-content-left-wrapper {
+  padding-top: 24px;
+  padding-bottom: 10px;
   padding-left: 15px;
+  padding-right: 15px;
+
+  @include responsive-min($responsive-laptop) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }

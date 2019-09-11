@@ -7,16 +7,17 @@
   }
 }
 
+.image-carousel-title {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom : 30px;
+
+  @include responsive-min($responsive-laptop) {
+    padding-bottom: 0;
+  }
+}
+
 .image-carousel-gallery-circular {
-
-  .slick-list {
-    // overflow: visible;
-  }
-
-  .slick-slide {
-   
-  }
-
   .image-carousel-slide.level1 {
     z-index: 1;
   }
