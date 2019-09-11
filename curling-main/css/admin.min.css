@@ -59,6 +59,12 @@
  * Secondary Palette
  */
   /**
+ * Primary Palette
+ */
+  /**
+ * Secondary Palette
+ */
+  /**
     * Test imports
     */
 }
@@ -2742,6 +2748,170 @@
   .edit-post-layout__content .prefooter-slash-2 {
     transform: translate(-50%, -880px);
   }
+}
+
+.edit-post-layout__content .block-sponsors {
+  padding: 3rem 8rem;
+  font-family: 'knockout';
+  margin-bottom: 15rem;
+}
+
+.edit-post-layout__content .block-sponsors .content {
+  max-width: 1170px;
+}
+
+.edit-post-layout__content .block-sponsors .content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-left-aligned {
+  margin: 4rem auto 0 0;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-centered {
+  margin: 4rem auto 0 auto;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-right-aligned {
+  margin: 4rem 0 0 auto;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container {
+  flex: 1 1 185px;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container h3 {
+  font-size: 1.25rem;
+  padding-bottom: 1rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container a {
+  text-decoration: none;
+  color: #ed1940;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
+  background-color: white;
+  width: 170px;
+  height: 170px;
+  -webkit-box-shadow: 0px 0px 1px 0px #ccc;
+  -moz-box-shadow: 0px 0px 1px 0px #ccc;
+  box-shadow: 0px 0px 1px 0px #ccc;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container .sponsor img {
+  width: auto;
+  height: auto;
+  max-width: 125px;
+  max-height: 125px;
+  margin: 0 auto;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .has-title {
+  margin-top: -3rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .has-link {
+  margin-top: -3rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .has-link .sponsor {
+  position: relative;
+  top: 1.25rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .has-title-and-link {
+  margin-top: -5rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .has-title-and-link h3 {
+  padding-bottom: 0;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section .has-title-and-link .sponsor {
+  position: relative;
+  top: 1.25rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .cta-section {
+  width: 48%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -0.75em;
+}
+
+.edit-post-layout__content .block-sponsors .content .cta-section .cta-link {
+  color: #ed1940;
+  text-decoration: none;
+  font-style: normal;
+  line-height: 1.75rem;
+  font-size: 1rem;
+  font-family: 'knockout';
+}
+
+.edit-post-layout__content .block-sponsors .content .cta-section .cta-link b {
+  margin-left: 0.25rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section.one-column {
+  max-width: 28.5%;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section.two-columns {
+  max-width: 42.5%;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section.three-columns {
+  max-width: 57.5%;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section.four-columns {
+  max-width: 72.5%;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section.five-columns {
+  max-width: 86.5%;
+}
+
+.edit-post-layout__content .has-grey-bg {
+  background-color: #f2f2f2;
+}
+
+.edit-post-layout__content .has-white-bg {
+  background-color: white;
+}
+
+.edit-post-layout__content .title-and-link-exist .sponsors-section {
+  margin-top: 6rem;
+}
+
+.edit-post-layout__content .content.template-1-with-ad .sponsors-section {
+  max-width: calc(1170px * 0.60);
+  margin: 6rem auto 0 0;
+}
+
+.edit-post-layout__content .content.template-1-with-ad .sponsors-section .sponsor-container {
+  flex: 1 1 185px;
+}
+
+.edit-post-layout__content .content.template-1-with-ad .sponsors-section .has-title-and-link + .has-title {
+  padding-bottom: 3rem;
+}
+
+.edit-post-layout__content .content.template-1-with-ad .sponsors-section .has-title-and-link + .has-title h3 {
+  position: relative;
+  top: -2rem;
 }
 
 .edit-post-layout__content .block-news-promo {
