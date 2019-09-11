@@ -279,6 +279,7 @@ li {
 
 .slick-track {
   display: flex;
+  align-items: center;
   position: relative;
   left: 0;
   top: 0;
@@ -3383,6 +3384,38 @@ li {
   .block-image-carousel {
     padding-bottom: 52px;
   }
+}
+
+.image-carousel-gallery-circular .image-carousel-slide.level1 {
+  z-index: 1;
+}
+
+.image-carousel-gallery-circular .image-carousel-slide.level2 {
+  z-index: 2;
+}
+
+.image-carousel-gallery-circular .image-carousel-slide.level3 {
+  z-index: 3;
+}
+
+.image-carousel-gallery-circular .image-carousel-slide {
+  height: 488px;
+  z-index: 0;
+}
+
+.image-carousel-gallery-circular .image-carousel-image {
+  position: relative;
+  left: calc((100% - 767px) / 2);
+  width: 767px;
+  max-width: 767px;
+  height: 423px;
+  max-height: 423px;
+  transition: transform 0.5s ease-out;
+}
+
+.image-carousel-gallery-circular .slick-center .image-carousel-image {
+  z-index: 1;
+  transform: scale(1.1);
 }
 
 .image-carousel-track {
