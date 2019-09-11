@@ -1,0 +1,17 @@
+.styled-button {
+  &.background-red {
+    background-color: $red;
+  }
+  &.background-white {
+    background-color: $white;
+  }
+  &.color-white {
+    color: $white;
+  }
+  &.color-black {
+    color: $black;
+  }
+  &.hover-black:hover {
+    color: $black;
+  }
+}

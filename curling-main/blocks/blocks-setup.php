@@ -1896,6 +1896,139 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
+
+//Styled Button
+acf_add_local_field_group(array(
+	'key' => 'group_5d78368291842',
+	'title' => 'Styled Button',
+	'fields' => array(
+		array(
+			'key' => 'field_5d7836939ed8b',
+			'label' => 'Label',
+			'name' => 'label',
+			'type' => 'text',
+			'instructions' => 'The label for the button.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d7836ca9ed8c',
+			'label' => 'Link',
+			'name' => 'link',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5d7837229ed8d',
+			'label' => 'Button Design',
+			'name' => 'button_design',
+			'type' => 'select',
+			'instructions' => 'Select the button design.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'rww' => 'Red Background, White Text',
+				'wbb' => 'White Background, Black Text',
+				'rbb' => 'Red Background, Black Text',
+				'rwb' => 'Red Background, White Text (Black on hover)',
+			),
+			'default_value' => array(
+				0 => 'rww',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/styled-button',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+//Item Label
+acf_add_local_field_group(array(
+	'key' => 'group_5d7952936c413',
+	'title' => 'Item Label',
+	'fields' => array(
+		array(
+			'key' => 'field_5d7952a3a9efb',
+			'label' => 'label',
+			'name' => 'label',
+			'type' => 'text',
+			'instructions' => 'Text for the Label. Presumably the Page title or the Item title.',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/item-label',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
   
   endif;
 ?>

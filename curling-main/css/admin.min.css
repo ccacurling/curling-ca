@@ -734,7 +734,7 @@
   line-height: 15px;
   position: relative;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 2px;
   font-size: 20px;
   max-width: 100%;
   white-space: normal;
@@ -3197,6 +3197,39 @@
 
 .edit-post-layout__content .block-single-callout-red h3, .edit-post-layout__content .block-single-callout-red p {
   color: #ffffff;
+}
+
+.edit-post-layout__content .styled-button.background-red {
+  background-color: #ed1940;
+}
+
+.edit-post-layout__content .styled-button.background-white {
+  background-color: #ffffff;
+}
+
+.edit-post-layout__content .styled-button.color-white {
+  color: #ffffff;
+}
+
+.edit-post-layout__content .styled-button.color-black {
+  color: #000000;
+}
+
+.edit-post-layout__content .styled-button.hover-black:hover {
+  color: #000000;
+}
+
+.edit-post-layout__content p.item-label {
+  display: inline-block;
+  font-size: 12px;
+  background-color: #4c4c4e;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Knockout";
+  padding: 6px 8.5px;
+  border-radius: 2px;
+  margin: 8px;
 }
 
 .edit-post-layout__content .content-fixed {
