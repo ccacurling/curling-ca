@@ -95,9 +95,9 @@
         $sponsor_link = get_sub_field( 'sponsor_cta' );
         $sponsor      = get_sub_field( 'sponsor' ); 
         $logo_src     = get_field( 'featured_image', $sponsor->ID ); 
-        $sponsor_container_classes = determine_sponsor_container_classes( $sponsor_type, $sponsor_link );?>
+        $sponsor_container_classes = $sponsor_type && $sponsor_link ? 'has-title-and-link sponsor-container' : 'sponsor-container'; ?>
   
-        <div class="<?php echo $sponsor_container_classes ?> sponsor-container">
+        <div class="<?php echo $sponsor_container_classes ?>">
 
           <?php if ($sponsor_type) { ?>
             <h3><?php echo strtoupper( $sponsor_type ); ?></h3>

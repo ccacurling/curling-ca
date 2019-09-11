@@ -1,29 +1,13 @@
-@import "../../base/_variables";
-@import "../../base/_colors";
-
+// Desktop Styles
 .block-sponsors {
   padding: 3rem 8rem;
   font-family: 'knockout';
-  margin-bottom: 15rem;
 
   .content {
     max-width: 1170px;
 
     h2 {
       font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .content-left-aligned {
-      margin: 4rem auto 0 0;
-    }
-    
-    .content-centered {
-      margin: 4rem auto 0 auto;
-    }
-    
-    .content-right-aligned {
-      margin: 4rem 0 0 auto;
     }
   
     .sponsors-section {
@@ -31,13 +15,20 @@
       justify-content: space-between;
       flex-wrap: wrap;
       max-width: 100%;
-  
+      position: relative;
+      
       .sponsor-container {
         flex: 1 1 185px;
+        max-height: 310px;
+        display: flex;
+        padding: 1.25rem 0;
+        flex-direction: column;
+        justify-content: flex-end;
   
         h3 {
           font-size: 1.25rem;
           padding-bottom: 1rem;
+          white-space: nowrap;
         }
 
         a {
@@ -54,7 +45,6 @@
           box-shadow: 0px 0px 1px 0px #ccc;
           display: flex;
           align-items: center;
-          margin-bottom: 2.5rem;
     
           img {
             width: auto;
@@ -65,30 +55,32 @@
           }
         }
       }
-  
-      .has-title {
-        margin-top: -3rem;
+
+      .content-left-aligned {
+        margin: 0 auto 0 0;
       }
-
-      .has-link {
-        margin-top: -3rem;
-
-        .sponsor {
-          position: relative;
-          top: 1.25rem;
-        }
+      
+      .content-centered {
+        margin: 0 auto 0 auto;
+      }
+      
+      .content-right-aligned {
+        margin: 0 0 0 auto;
       }
 
       .has-title-and-link {
-        margin-top: -5rem;
-
         h3 {
           padding-bottom: 0;
         }
 
-        .sponsor {
-          position: relative;
-          top: 1.25rem;
+        a {
+          padding-bottom: 1.25rem;
+        }
+      }
+
+      .has-title-and-link ~ .has-title {
+        h3 {
+          padding-bottom: 3rem;
         }
       }
     }
@@ -97,7 +89,6 @@
       width: 48%;
       display: flex;
       justify-content: space-between;
-      margin-top: -0.75em;
   
       .cta-link {
         color: $red;
@@ -149,22 +140,14 @@
   }
 }
 
-.content.template-1-with-ad {
-  .sponsors-section {
-    max-width: calc(1170px * 0.60);
-    margin: 6rem auto 0 0;
-
-    .sponsor-container {
-      flex: 1 1 185px;
-    }
-
-    .has-title-and-link + .has-title {
-      padding-bottom: 3rem;
-
-      h3 {
-        position: relative;
-        top: -2rem;
-      }
-    }
-  }
+// Mobile styles
+@include responsive-min($responsive-tablet) {
+  
 }
+
+      // No current way to fix the previous sibling in css
+      // .has-title + .has-title {
+      //   h3 {
+      //     padding-bottom: 1rem;
+      //   }
+      // }

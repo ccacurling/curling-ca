@@ -140,15 +140,3 @@ function create_sponsors_post_type() {
         ]);
     }
 }
-
-function determine_sponsor_container_classes( $sponsor_type, $sponsor_link ) {
-    $classes = '';
-    if ( $sponsor_link && $sponsor_type ) {
-        $classes = 'has-title-and-link';
-    } elseif ( $sponsor_link ) {
-        $classes = 'has-link';
-    } elseif ( $sponsor_type ) {
-        $classes = 'has-title';
-    }
-    return $classes;
-}
