@@ -2737,6 +2737,7 @@ li {
 .block-sponsors {
   padding: 3rem 8rem;
   font-family: 'knockout';
+  margin-bottom: 0.25em;
 }
 
 .block-sponsors .content {
@@ -2747,11 +2748,16 @@ li {
   font-size: 2rem;
 }
 
+.block-sponsors .content .content-left-aligned,
+.block-sponsors .content .content-centered {
+  width: 102.5%;
+}
+
 .block-sponsors .content .sponsors-section {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 100%;
+  width: 102.5%;
   position: relative;
 }
 
@@ -2794,18 +2800,6 @@ li {
   margin: 0 auto;
 }
 
-.block-sponsors .content .sponsors-section .content-left-aligned {
-  margin: 0 auto 0 0;
-}
-
-.block-sponsors .content .sponsors-section .content-centered {
-  margin: 0 auto 0 auto;
-}
-
-.block-sponsors .content .sponsors-section .content-right-aligned {
-  margin: 0 0 0 auto;
-}
-
 .block-sponsors .content .sponsors-section .has-title-and-link h3 {
   padding-bottom: 0;
 }
@@ -2816,6 +2810,34 @@ li {
 
 .block-sponsors .content .sponsors-section .has-title-and-link ~ .has-title h3 {
   padding-bottom: 3rem;
+}
+
+.block-sponsors .content .content-left-aligned {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.block-sponsors .content .content-centered {
+  display: flex;
+  justify-content: center;
+}
+
+.block-sponsors .content .content-right-aligned {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.block-sponsors .content .content-right-aligned .sponsor-container h3 {
+  position: relative;
+  left: 4.75rem;
+}
+
+.block-sponsors .content .content-right-aligned .sponsor-container .sponsor {
+  align-self: flex-end;
+}
+
+.block-sponsors .content .cta-section.top {
+  padding: 0.5rem 0;
 }
 
 .block-sponsors .content .cta-section {
@@ -2839,6 +2861,21 @@ li {
 
 .block-sponsors .content .sponsors-section.one-column {
   max-width: 28.5%;
+}
+
+.block-sponsors .content .sponsors-section.one-column .sponsor-container h3 {
+  white-space: unset;
+  left: 10.1rem;
+  width: 170px;
+}
+
+.block-sponsors .content .sponsors-section.one-column .sponsor-container a {
+  position: relative;
+  top: 0.5rem;
+}
+
+.block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  left: 10.1rem;
 }
 
 .block-sponsors .content .sponsors-section.two-columns {

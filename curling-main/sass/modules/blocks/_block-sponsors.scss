@@ -2,6 +2,7 @@
 .block-sponsors {
   padding: 3rem 8rem;
   font-family: 'knockout';
+  margin-bottom: 0.25em;
 
   .content {
     max-width: 1170px;
@@ -9,12 +10,17 @@
     h2 {
       font-size: 2rem;
     }
+
+    .content-left-aligned,
+    .content-centered {
+      width: 102.5%;
+    }
   
     .sponsors-section {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      max-width: 100%;
+      width: 102.5%;
       position: relative;
       
       .sponsor-container {
@@ -56,18 +62,6 @@
         }
       }
 
-      .content-left-aligned {
-        margin: 0 auto 0 0;
-      }
-      
-      .content-centered {
-        margin: 0 auto 0 auto;
-      }
-      
-      .content-right-aligned {
-        margin: 0 0 0 auto;
-      }
-
       .has-title-and-link {
         h3 {
           padding-bottom: 0;
@@ -83,6 +77,36 @@
           padding-bottom: 3rem;
         }
       }
+    }
+
+    .content-left-aligned {
+      display: flex;
+      justify-content: flex-start;
+    }
+    
+    .content-centered {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .content-right-aligned {
+      display: flex;
+      justify-content: flex-end;
+
+      .sponsor-container {
+        h3 {
+          position: relative;
+          left: 4.75rem;
+        }
+        .sponsor {
+          align-self: flex-end;
+        }
+      }
+    }
+
+
+    .cta-section.top {
+      padding: 0.5rem 0;
     }
   
     .cta-section {
@@ -106,6 +130,29 @@
 
     .sponsors-section.one-column {
       max-width: 28.5%;
+
+      .sponsor-container {
+        h3 {
+          white-space: unset;
+          left: 10.1rem;
+          width: 170px;
+        }
+
+        a {
+          position: relative;
+          top: 0.5rem;
+        }
+      }
+    }
+
+    .content-right-aligned {
+      .sponsors-section.one-column {
+        .sponsor-container {
+          a {
+            left: 10.1rem;
+          }
+        }
+      }
     }
     
     .sponsors-section.two-columns {
@@ -145,9 +192,9 @@
   
 }
 
-      // No current way to fix the previous sibling in css
-      // .has-title + .has-title {
-      //   h3 {
-      //     padding-bottom: 1rem;
-      //   }
-      // }
+// No current way to fix the previous sibling in css
+// .has-title + .has-title {
+//   h3 {
+//     padding-bottom: 1rem;
+//   }
+// }

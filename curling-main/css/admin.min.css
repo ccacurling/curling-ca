@@ -2747,6 +2747,7 @@
 .edit-post-layout__content .block-sponsors {
   padding: 3rem 8rem;
   font-family: 'knockout';
+  margin-bottom: 0.25em;
 }
 
 .edit-post-layout__content .block-sponsors .content {
@@ -2757,11 +2758,16 @@
   font-size: 2rem;
 }
 
+.edit-post-layout__content .block-sponsors .content .content-left-aligned,
+.edit-post-layout__content .block-sponsors .content .content-centered {
+  width: 102.5%;
+}
+
 .edit-post-layout__content .block-sponsors .content .sponsors-section {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  max-width: 100%;
+  width: 102.5%;
   position: relative;
 }
 
@@ -2804,18 +2810,6 @@
   margin: 0 auto;
 }
 
-.edit-post-layout__content .block-sponsors .content .sponsors-section .content-left-aligned {
-  margin: 0 auto 0 0;
-}
-
-.edit-post-layout__content .block-sponsors .content .sponsors-section .content-centered {
-  margin: 0 auto 0 auto;
-}
-
-.edit-post-layout__content .block-sponsors .content .sponsors-section .content-right-aligned {
-  margin: 0 0 0 auto;
-}
-
 .edit-post-layout__content .block-sponsors .content .sponsors-section .has-title-and-link h3 {
   padding-bottom: 0;
 }
@@ -2826,6 +2820,34 @@
 
 .edit-post-layout__content .block-sponsors .content .sponsors-section .has-title-and-link ~ .has-title h3 {
   padding-bottom: 3rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-left-aligned {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-centered {
+  display: flex;
+  justify-content: center;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-right-aligned {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsor-container h3 {
+  position: relative;
+  left: 4.75rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsor-container .sponsor {
+  align-self: flex-end;
+}
+
+.edit-post-layout__content .block-sponsors .content .cta-section.top {
+  padding: 0.5rem 0;
 }
 
 .edit-post-layout__content .block-sponsors .content .cta-section {
@@ -2849,6 +2871,21 @@
 
 .edit-post-layout__content .block-sponsors .content .sponsors-section.one-column {
   max-width: 28.5%;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section.one-column .sponsor-container h3 {
+  white-space: unset;
+  left: 10.1rem;
+  width: 170px;
+}
+
+.edit-post-layout__content .block-sponsors .content .sponsors-section.one-column .sponsor-container a {
+  position: relative;
+  top: 0.5rem;
+}
+
+.edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  left: 10.1rem;
 }
 
 .edit-post-layout__content .block-sponsors .content .sponsors-section.two-columns {
