@@ -710,7 +710,7 @@ li {
   line-height: 15px;
   position: relative;
   overflow: hidden;
-  border-radius: 0;
+  border-radius: 2px;
   font-size: 20px;
   max-width: 100%;
   white-space: normal;
@@ -3015,6 +3015,26 @@ li {
 
 .block-single-callout-red h3, .block-single-callout-red p {
   color: #ffffff;
+}
+
+.styled-button.background-red {
+  background-color: #ed1940;
+}
+
+.styled-button.background-white {
+  background-color: #ffffff;
+}
+
+.styled-button.color-white {
+  color: #ffffff;
+}
+
+.styled-button.color-black {
+  color: #000000;
+}
+
+.styled-button.hover-black:hover {
+  color: #000000;
 }
 
 /**
