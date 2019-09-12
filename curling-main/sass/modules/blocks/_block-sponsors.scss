@@ -74,7 +74,7 @@
 
       .has-title-and-link ~ .has-title {
         h3 {
-          padding-bottom: 3rem;
+          padding-bottom: 2.5rem;
         }
       }
     }
@@ -110,7 +110,7 @@
     }
   
     .cta-section {
-      width: 48%;
+      width: 50%;
       display: flex;
       justify-content: space-between;
   
@@ -134,13 +134,17 @@
       .sponsor-container {
         h3 {
           white-space: unset;
-          left: 10.1rem;
           width: 170px;
+          position: relative;
+          left: 0;
+          margin: 0 0 0 auto;
         }
 
         a {
           position: relative;
           top: 0.5rem;
+          margin: 0 0 0 auto;
+          width: 170px;
         }
       }
     }
@@ -148,8 +152,19 @@
     .content-right-aligned {
       .sponsors-section.one-column {
         .sponsor-container {
+          h3 {
+            white-space: unset;
+            width: 170px;
+            position: relative;
+            left: 0;
+            margin: 0 0 0 auto;
+          }
+  
           a {
-            left: 10.1rem;
+            position: relative;
+            top: 0.5rem;
+            margin: 0 0 0 auto;
+            width: 170px;
           }
         }
       }
@@ -187,14 +202,218 @@
   }
 }
 
-// Mobile styles
-@include responsive-min($responsive-tablet) {
+// Tablet styles
+@include responsive-max($responsive-tablet) {
+  .block-sponsors {
+    padding: 2.25rem 0;
+
+    .content {
+      margin-left: 3rem;
+
+      p {
+        padding-bottom: 0.5rem;
+      }
   
+      .cta-section {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .sponsors-section .has-title-and-link ~ .has-title h3 {
+        padding-bottom: 2.5rem;
+      }
+
+      .content-right-aligned {
+        justify-content: unset;
+
+        .sponsors-section.one-column {
+          max-width: 100%;
+
+          .sponsor-container {
+            h3 {
+              margin: 0;
+              left: 0;
+            }
+    
+            a {
+              margin: 0;
+              top: 0.5rem;
+              left: 0;
+            }
+
+            .sponsor {
+              align-self: flex-start;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .block-sponsors.white-bg-on-mobile {
+    background-color: white;
+  }
+
+  .block-sponsors.grey-bg-on-mobile {
+    background-color: $cool-light-gray;
+  }
 }
 
-// No current way to fix the previous sibling in css
-// .has-title + .has-title {
-//   h3 {
-//     padding-bottom: 1rem;
-//   }
-// }
+// Mobile styles
+@include responsive-max($responsive-mobile) {
+  .block-sponsors {
+    padding: 0.5rem 0;
+
+    h2 {
+      position: relative;
+      left: 1.1rem;
+    }
+
+    .content {
+      margin-left: 0rem;
+
+      .content-centered {
+        width: 100%;
+
+        .sponsor-container {
+          a {
+            position: relative;
+            left: 1.1rem;
+            top: 0.5rem;
+          }
+        }
+      }
+
+      .sponsor-container {
+        p {
+          padding-bottom: 0.5rem;
+        }
+  
+        h3 {
+          position: relative;
+          left: 1.1rem;
+        }
+  
+        .sponsor {
+          width: 150px;
+          height: 150px;
+          align-self: center;
+        }
+      }
+
+      .cta-section {
+        position: relative;
+        left: 1rem;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .content-left-aligned {
+        .sponsor-container {
+          flex: 1 1 100%;
+
+          .sponsor {
+            align-self: flex-start;
+            margin-left: 1.1rem;
+          }
+          
+          a {
+            position: relative;
+            left: 1.1rem;
+            top: 0.5rem;
+          }
+        }
+      }
+
+      .sponsors-section.two-columns {
+        max-width: 50%;
+      }
+
+      .content-right-aligned {
+        justify-content: unset;
+
+        .sponsors-section.one-column {
+          max-width: 100%;
+
+          .sponsor-container {
+            h3 {
+              left: 1.1rem;
+            }
+    
+            a {
+              top: 0.5rem;
+              left: 1.1rem;
+            }
+
+            .sponsor {
+              align-self: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive-max(369px) {
+  .block-sponsors {
+    .content {
+      .sponsor-container {
+        flex: 1 1 100%;
+
+        .sponsor {
+          align-self: flex-start;
+          margin-left: 1.1rem;
+        }
+      }
+    }
+
+    .content-right-aligned {
+      .sponsors-section.one-column {
+        .sponsor-container {
+          .sponsor.sponsor {
+            align-self: flex-start;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include responsive-max(1337px) {
+  .block-sponsors {
+    .content {
+
+      .cta-section {
+        flex-direction: column;
+
+        p {
+          padding-bottom: 0.5rem;
+        }
+      }
+
+      .content-right-aligned {
+        justify-content: unset;
+
+        .sponsors-section.one-column {
+          max-width: 100%;
+
+          .sponsor-container {
+            h3 {
+              left: 0;
+            }
+    
+            a {
+              top: 0.5rem;
+              left: 0;
+            }
+
+            .sponsor {
+              align-self: flex-start;
+            }
+          }
+        }
+      }
+    }
+  }
+}
