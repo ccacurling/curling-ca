@@ -2844,8 +2844,9 @@ li {
   font-style: normal;
 }
 
-.event-location-container .info-section .event-links div p a b {
+.event-location-container .info-section .event-links div p a img {
   margin-left: 0.25rem;
+  width: 1.15rem;
 }
 
 .event-location-container .map-section {
@@ -3249,8 +3250,9 @@ li {
   font-family: 'knockout';
 }
 
-.block-sponsors .content .cta-section .cta-link b {
+.block-sponsors .content .cta-section .cta-link img {
   margin-left: 0.25rem;
+  width: 1.15rem;
 }
 
 .block-sponsors .content .sponsors-section.one-column {
@@ -4054,11 +4056,12 @@ p.item-label {
 }
 
 .pdf-with-image-block-container .pdf-section {
-  width: 100%;
+  width: 102.25%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   margin: 2rem 0;
+  margin-left: -1%;
 }
 
 .pdf-with-image-block-container .pdf-section .pdf-container {
@@ -4069,7 +4072,9 @@ p.item-label {
   -moz-box-shadow: 0px 0px 10px 0px #ccc;
   box-shadow: 0px 0px 10px 0px #ccc;
   height: 550px;
+  max-width: 370px;
   text-align: center;
+  flex: 1 1 calc(1170px / 3);
 }
 
 .pdf-with-image-block-container .pdf-section .pdf-container img {
@@ -4087,8 +4092,14 @@ p.item-label {
 }
 
 @media only screen and (max-width: 501px) {
+  .pdf-with-image-block-container {
+    width: 100%;
+    margin-left: 0;
+  }
   .pdf-with-image-block-container .pdf-section .pdf-container {
     height: 440px;
+    max-width: 280px;
+    flex: 1 1 100%;
   }
   .pdf-with-image-block-container .pdf-section .pdf-container img {
     width: 280px;

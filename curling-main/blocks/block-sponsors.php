@@ -79,7 +79,7 @@
                 $target    = get_sub_field( 'link_target' ); ?>
         
                 <a class="cta-link" href="<?php echo $link_url ? $link_url : $page_link ?>" target="<?php echo $target ?>">
-                  <?php echo strtoupper( $cta_text ); ?> <b>→</b>
+                  <?php echo strtoupper( $cta_text ); ?> <img src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
                 </a>
         
               <?php } ?>
@@ -116,7 +116,7 @@
             
             <?php if ($sponsor_link) { ?>
               <a href="<?php echo $sponsor_link['url']; ?>" target="<?php echo $sponsor_link['target']; ?>">
-                <?php echo strtoupper( $sponsor_link['title'] ); ?> <b>→</b>
+                <?php echo strtoupper( $sponsor_link['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
               </a>
             <?php } ?>
       
@@ -157,7 +157,7 @@
                 $target    = get_sub_field( 'link_target' ); ?>
         
                 <a class="cta-link" href="<?php echo $link_url ? $link_url : $page_link ?>" target="<?php echo $target ?>">
-                  <?php echo strtoupper( $cta_text ); ?> <b>→</b>
+                  <?php echo strtoupper( $cta_text ); ?> <img src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
                 </a>
         
               <?php } ?>
