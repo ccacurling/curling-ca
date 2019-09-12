@@ -13,4 +13,8 @@ jQuery(document).ready(function($) {
   $('.block-timer').blockHeroTimer();
 
   $('.js-image-carousel').imageCarousel();
+
+  $('.text-callouts-group').slick({
+    //Options go here - look into breakpoints 1170px
+  });
 });
