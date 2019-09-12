@@ -397,16 +397,17 @@
         justify-content: unset;
 
         .sponsors-section.one-column {
-          max-width: 100%;
 
           .sponsor-container {
             h3 {
               left: 0;
+              margin: 0;
             }
     
             a {
               top: 0.5rem;
               left: 0;
+              margin: 0;
             }
 
             .sponsor {
