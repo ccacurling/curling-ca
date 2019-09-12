@@ -14,7 +14,7 @@ $carousel_gallery_chucks = array_chunk($carousel_gallery, 4);
 ?>
 
 <section class="block-image-carousel js-image-carousel">
-  <h3><?php echo $carousel_title; ?></h3>
+  <h3 class="image-carousel-title"><?php echo $carousel_title; ?></h3>
 
   <div class="image-carousel-gallery-mobile <?php echo $carousel_layout === 'large_right' ? 'image-carousel-rtl' : ''; ?>">
       <div class="image-carousel-slides js-slider-mobile">

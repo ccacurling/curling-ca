@@ -72,7 +72,7 @@
   position: relative;
   height: 90px;
 
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     height: 50px;
   }
 

@@ -33,14 +33,27 @@ jQuery(document).ready(function($) {
      
       if (this.pagination) {
         this.slider.on('init reInit beforeChange', (event, slick, currentSlide, nextSlide) => {
-          var i = (currentSlide ? currentSlide : 0) + 1;
+          this.slider.find('.slick-slide').removeClass('level1 level2 level3');
+        
+          if (nextSlide) {
+            // this.addAll(slick, nextSlide - 2, 'level1');
+            // this.addAll(slick, nextSlide + 2, 'level1');
+            // this.addAll(slick, nextSlide - 1, 'level2');
+            // this.addAll(slick, nextSlide + 1, 'level2');
+            // this.addAll(slick, nextSlide, 'level3');
+          } else {
+            this.slider.find('.slick-slide[data-slick-index="0"]').addClass('level3');
+            this.slider.find('.slick-slide[data-slick-index="1"]').addClass('level2');
+          }
+
+          var i = (nextSlide ? nextSlide : 0) + 1;
           this.pagination.text(i + '/' + slick.slideCount);
         });
       }
 
       if (this.paginationMobile) {
         this.sliderMobile.on('init reInit beforeChange', (event, slick, currentSlide, nextSlide) => {
-          var i = (currentSlide ? currentSlide : 0) + 1;
+          var i = (nextSlide ? nextSlide : 0) + 1;
           this.paginationMobile.text(i + '/' + slick.slideCount);
         });
       }
@@ -56,8 +69,10 @@ jQuery(document).ready(function($) {
       this.carouselMobile = this.sliderMobile.slick();
       this.carousel = this.slider.slick({
         centerMode: this.isCircular,
-        slidesToShow: this.isCircular ? 1 : 1,
+        slidesToShow: this.isCircular ? 3 : 1,
         slidesToScroll: 1,
+        centerPadding: 0,
+        infinite: this.isCircular ? false : true
       });
 
       if (this.carouselMobile && this.arrowPrevMobile) {
@@ -83,6 +98,12 @@ jQuery(document).ready(function($) {
           this.slider.slick('slickNext');
         });
       }
+    }
+
+    addAll = (slick, index, addedClass) => {
+      this.slider.find('.slick-slide[data-slick-index="' + index + '"]').addClass(addedClass);
+      // this.slider.find('.slick-slide[data-slick-index="' + (index + slick.slideCount) + '"]').addClass(addedClass);
+      // this.slider.find('.slick-slide[data-slick-index="' + (index - slick.slideCount) + '"]').addClass(addedClass);
     }
   }
   
