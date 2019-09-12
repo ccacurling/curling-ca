@@ -62,12 +62,6 @@
   /* Show the indicator (dot/circle) when checked */
   /* Style the indicator (dot/circle) */
   /**
- * Primary Palette
- */
-  /**
- * Secondary Palette
- */
-  /**
     * Test imports
     */
 }
@@ -2815,6 +2809,8 @@
   -webkit-box-shadow: 0px 5px 12px 0px #ccc;
   -moz-box-shadow: 0px 5px 12px 0px #ccc;
   box-shadow: 0px 5px 12px 0px #ccc;
+  flex-wrap: wrap;
+  margin-top: 15rem;
 }
 
 .edit-post-layout__content .event-location-container .info-section {
@@ -2875,6 +2871,105 @@
 
 .edit-post-layout__content .event-location-container .map-section .wpgmza-infowindow {
   color: black;
+}
+
+@media only screen and (max-width: 1441px) {
+  .edit-post-layout__content .event-location-container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 1211px) {
+  .edit-post-layout__content .event-location-container {
+    max-width: 850px;
+  }
+  .edit-post-layout__content .event-location-container .info-section {
+    padding: 1.5rem 3.25rem;
+  }
+}
+
+@media only screen and (max-width: 1081px) {
+  .edit-post-layout__content .event-location-container {
+    max-width: 600px;
+    height: 800px;
+  }
+  .edit-post-layout__content .event-location-container .info-section {
+    width: 100%;
+    max-height: 400px;
+  }
+  .edit-post-layout__content .event-location-container .map-section {
+    width: 100%;
+    max-height: 406.5px;
+  }
+}
+
+@media only screen and (max-width: 861px) {
+  .edit-post-layout__content .event-location-container {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 601px) {
+  .edit-post-layout__content .event-location-container {
+    max-width: 400px;
+    height: 600px;
+  }
+  .edit-post-layout__content .event-location-container .info-section {
+    max-height: 300px;
+    padding: 1.75rem 2.75rem;
+  }
+  .edit-post-layout__content .event-location-container .info-section p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .edit-post-layout__content .event-location-container .info-section h2, .edit-post-layout__content .event-location-container .info-section h3 {
+    font-size: 0.85rem;
+    line-height: 1rem;
+  }
+  .edit-post-layout__content .event-location-container .info-section .event-date-label {
+    margin-top: 1rem;
+  }
+  .edit-post-layout__content .event-location-container .info-section hr {
+    margin: 1.25rem 0;
+  }
+  .edit-post-layout__content .event-location-container .info-section a {
+    font-size: 0.85rem;
+  }
+  .edit-post-layout__content .event-location-container .map-section {
+    max-height: 317.5px;
+  }
+}
+
+@media only screen and (max-width: 441px) {
+  .edit-post-layout__content .event-location-container {
+    max-width: 300px;
+    height: 450px;
+  }
+  .edit-post-layout__content .event-location-container .info-section {
+    max-height: 225px;
+    padding: 1.75rem 1.75rem 1.25rem 1.75rem;
+  }
+  .edit-post-layout__content .event-location-container .info-section p {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .edit-post-layout__content .event-location-container .info-section h2, .edit-post-layout__content .event-location-container .info-section h3 {
+    font-size: 0.65rem;
+    line-height: 0.8rem;
+  }
+  .edit-post-layout__content .event-location-container .info-section .event-date-label {
+    margin-top: 0.75rem;
+  }
+  .edit-post-layout__content .event-location-container .info-section hr {
+    margin: 0.75rem 0;
+  }
+  .edit-post-layout__content .event-location-container .info-section a {
+    font-size: 0.65rem;
+    line-height: 1.6rem;
+  }
+  .edit-post-layout__content .event-location-container .map-section {
+    max-height: 225px;
+  }
 }
 
 .edit-post-layout__content .block-prefooter {

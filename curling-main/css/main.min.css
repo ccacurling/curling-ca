@@ -2788,12 +2788,6 @@ li {
   font-size: 14px;
 }
 
-/**
- * Primary Palette
- */
-/**
- * Secondary Palette
- */
 .event-location-container {
   max-width: 1170px;
   height: 400px;
@@ -2803,6 +2797,8 @@ li {
   -webkit-box-shadow: 0px 5px 12px 0px #ccc;
   -moz-box-shadow: 0px 5px 12px 0px #ccc;
   box-shadow: 0px 5px 12px 0px #ccc;
+  flex-wrap: wrap;
+  margin-top: 15rem;
 }
 
 .event-location-container .info-section {
@@ -2863,6 +2859,105 @@ li {
 
 .event-location-container .map-section .wpgmza-infowindow {
   color: black;
+}
+
+@media only screen and (max-width: 1441px) {
+  .event-location-container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 1211px) {
+  .event-location-container {
+    max-width: 850px;
+  }
+  .event-location-container .info-section {
+    padding: 1.5rem 3.25rem;
+  }
+}
+
+@media only screen and (max-width: 1081px) {
+  .event-location-container {
+    max-width: 600px;
+    height: 800px;
+  }
+  .event-location-container .info-section {
+    width: 100%;
+    max-height: 400px;
+  }
+  .event-location-container .map-section {
+    width: 100%;
+    max-height: 406.5px;
+  }
+}
+
+@media only screen and (max-width: 861px) {
+  .event-location-container {
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 601px) {
+  .event-location-container {
+    max-width: 400px;
+    height: 600px;
+  }
+  .event-location-container .info-section {
+    max-height: 300px;
+    padding: 1.75rem 2.75rem;
+  }
+  .event-location-container .info-section p {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+  .event-location-container .info-section h2, .event-location-container .info-section h3 {
+    font-size: 0.85rem;
+    line-height: 1rem;
+  }
+  .event-location-container .info-section .event-date-label {
+    margin-top: 1rem;
+  }
+  .event-location-container .info-section hr {
+    margin: 1.25rem 0;
+  }
+  .event-location-container .info-section a {
+    font-size: 0.85rem;
+  }
+  .event-location-container .map-section {
+    max-height: 317.5px;
+  }
+}
+
+@media only screen and (max-width: 441px) {
+  .event-location-container {
+    max-width: 300px;
+    height: 450px;
+  }
+  .event-location-container .info-section {
+    max-height: 225px;
+    padding: 1.75rem 1.75rem 1.25rem 1.75rem;
+  }
+  .event-location-container .info-section p {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .event-location-container .info-section h2, .event-location-container .info-section h3 {
+    font-size: 0.65rem;
+    line-height: 0.8rem;
+  }
+  .event-location-container .info-section .event-date-label {
+    margin-top: 0.75rem;
+  }
+  .event-location-container .info-section hr {
+    margin: 0.75rem 0;
+  }
+  .event-location-container .info-section a {
+    font-size: 0.65rem;
+    line-height: 1.6rem;
+  }
+  .event-location-container .map-section {
+    max-height: 225px;
+  }
 }
 
 .block-prefooter {
