@@ -3,9 +3,9 @@
 
     $event_logo = get_field('event_logo', 'Options');
 
-    $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Top Left' );
-    $top_right_menu_items = wp_get_nav_menu_items( 'Menu - Top Right' );
-    $primary_menu_items = wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' );
+    $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Top Left' ) ? wp_get_nav_menu_items( 'Menu - Top Left' ) : [];
+    $top_right_menu_items = wp_get_nav_menu_items( 'Menu - Top Right' ) ? wp_get_nav_menu_items( 'Menu - Top Right' ) : [];
+    $primary_menu_items = wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) ? wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) : [];
 
 
     $header_config = isset($header_config) ? $header_config : null;
@@ -20,7 +20,7 @@
       }
     }
     
-    $menu_items = buildTree($primary_menu_items);
+    $menu_items = $primary_menu_items ? buildTree($primary_menu_items) : [];
 
     function buildTree( array &$elements, $parentId = 0 ) {
         $branch = array();

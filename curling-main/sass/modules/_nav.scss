@@ -5,7 +5,7 @@
 }
 
 .header-mobile {
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     display: none;
   }
 }
@@ -49,7 +49,7 @@
 
 .header-desktop {
   display: none;
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     display: block;
   }
 }
@@ -78,7 +78,7 @@
 }
 
 .menu-logo {
-  @include responsive-min($responsive-tablet) {
+  @include responsive-min($responsive-laptop) {
     position: absolute;
     top: 20px;
     margin-left: 19px;
