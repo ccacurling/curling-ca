@@ -166,7 +166,18 @@ function acf_blocks_init() {
 			'category'				=> 'common',
 			'icon'						=> 'admin-comments',
       'keywords'				=> [ 'image', 'carousel' ]
-    ]);
+	]);
+	
+	//
+	acf_register_block([
+		'name'						=> 'text-callouts',
+		'title'						=> __('Text Callouts'),
+		'description'			=> __('A block to render three text callouts with optional image'),
+		'render_callback'	=> 'block_render_callback',
+		'category'				=> 'common',
+		'icon'						=> 'admin-comments',
+  		'keywords'				=> [ 'text', 'image', '' ]
+	]);
 
     acf_add_options_page('Options');
   }
