@@ -2098,9 +2098,7 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-///Text Callouts with Images
-if( function_exists('acf_add_local_field_group') ):
-
+  ///Text Callouts with Images
   acf_add_local_field_group(array(
     'key' => 'group_5d798110d0b1c',
     'title' => 'Text Callouts with Images',
