@@ -6,11 +6,16 @@
  */
 
   $block_title = get_field( 'block_title', $block->ID );
-  $block_background_class = get_field( 'block_background_color', $block->ID );
+  $block_background = get_field( 'block_background_color', $block->ID );
+  $block_background_mobile = get_field( 'block_background_color_mobile', $block->ID );
   $block_content_alignment = get_field( 'block_content_alignment', $block->ID );
   $sponsor_columns = get_field( 'sponsor_columns', $block->ID );
 
-  // Handle alignment selection
+  // Handle background selection classes
+  $block_background_class = $block_background === 'White' ? 'has-white-bg' : 'has-grey-bg';
+  $block_background_class .= $block_background_mobile === 'White' ? ' white-bg-on-mobile' : ' grey-bg-on-mobile';
+
+  // Handle alignment selection classes
   switch ($block_content_alignment) {
     case 'Left-Aligned':
       $content_alignment_class = 'content-left-aligned';
@@ -25,7 +30,7 @@
       $content_alignment_class = 'content-centered';
   }
 
-  // Handle column selections
+  // Handle column selection classes
   switch ($sponsor_columns) {
     case '1':
       $block_template_class = 'one-column';
@@ -48,7 +53,7 @@
 
 ?>
 
-<section id="<?php echo $id ?>" class="block-sponsors <?php echo $block_background_class === 'White' ? 'has-white-bg' : 'has-grey-bg'; ?>">
+<section id="<?php echo $id ?>" class="block-sponsors <?php echo $block_background_class; ?>">
   <div class="content">
     <h2><?php echo strtoupper( $block_title ); ?></h2>
 

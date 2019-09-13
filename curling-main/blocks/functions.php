@@ -84,6 +84,16 @@ function acf_blocks_init() {
 			'icon'				=> 'groups',
 				'keywords'			=> [ 'sponsor', 'sponsors', 'partner', 'partners' ]
 		]);
+		// Module #4-PDF-2 - PDF with Image Block
+		acf_register_block([
+			'name'				=> 'pdf-image-block',
+			'title'				=> __('PDF w/ Image'),
+			'description'		=> __('Used to display a PDF download block with image and title'),
+			'render_callback'	=> 'block_render_callback',
+			'category'			=> 'common',
+			'icon'				=> 'id-alt',
+				'keywords'			=> [ 'PDF', 'PDF with Image', 'download' ]
+		]);
 		//Module - Single Callout
     acf_register_block([
 		'name'				=> 'single-callout',
@@ -166,7 +176,18 @@ function acf_blocks_init() {
       'category'				=> 'common',
       'icon'						=> 'admin-comments',
       'keywords'				=> [ 'image', 'carousel' ]
-    ]);
+	]);
+	
+	//
+	acf_register_block([
+		'name'						=> 'text-callouts',
+		'title'						=> __('Text Callouts'),
+		'description'			=> __('A block to render three text callouts with optional image'),
+		'render_callback'	=> 'block_render_callback',
+		'category'				=> 'common',
+		'icon'						=> 'admin-comments',
+  		'keywords'				=> [ 'text', 'image', '' ]
+	]);
 
     acf_register_block([
       'name'						=> 'news-feed',
@@ -186,8 +207,6 @@ function block_render_callback( $block ) {
 	$slug = str_replace('acf/', '', $block['name']);
     
 	$file = get_stylesheet_directory() . "/blocks/block-{$slug}.php";
-	
-	error_log($file);
 
 	if( file_exists( $file ) ) {
 		include( $file );
