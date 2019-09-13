@@ -818,6 +818,199 @@
         }
     },
     {
+        "key": "group_5d77e34bd6c46",
+        "title": "Image Carousel",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/image-carousel"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d794756e011a": {
+                "key": "field_5d794756e011a",
+                "name": "image_carousel_type",
+                "type": "select",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Type",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "normal": "Normal",
+                    "circular": "Circular"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d77e3d714422": {
+                "key": "field_5d77e3d714422",
+                "name": "image_carousel_title",
+                "type": "text",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d77e5bde58d9": {
+                "key": "field_5d77e5bde58d9",
+                "name": "image_carousel_layout",
+                "type": "select",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Layout",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "large_left": "Large Image Left",
+                    "large_right": "Large Image Right"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d77e6173f181": {
+                "key": "field_5d77e6173f181",
+                "name": "image_carousel_gallery",
+                "type": "gallery",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Image Carousel Gallery",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "insert": "append",
+                "library": "all",
+                "min": "",
+                "max": "",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d7aa548d395b",
+        "title": "News Feed",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/news-feed"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d7aa5579a611": {
+                "key": "field_5d7aa5579a611",
+                "name": "news_feed_title",
+                "type": "text",
+                "parent": "group_5d7aa548d395b",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d7aa55e9a612": {
+                "key": "field_5d7aa55e9a612",
+                "name": "news_feed_category",
+                "type": "taxonomy",
+                "parent": "group_5d7aa548d395b",
+                "label": "Category",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "taxonomy": "category",
+                "field_type": "select",
+                "allow_null": 0,
+                "add_term": 1,
+                "save_terms": 0,
+                "load_terms": 0,
+                "return_format": "id",
+                "multiple": 0
+            }
+        }
+    },
+    {
         "key": "group_5d704ec0c5d4d",
         "title": "News Promo",
         "location": [
