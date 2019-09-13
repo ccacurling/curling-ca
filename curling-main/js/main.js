@@ -4,7 +4,6 @@ import './templates/ImageCarousel.js';
 import './templates/VideoPlayer.js';
 import './templates/NewsFeed.js';
 import './blocks/block-timer.js';
-// import './helper/ajax.js';
 
 jQuery(document).ready(function($) {
   $('.js-curling-nav').curlingNav();
