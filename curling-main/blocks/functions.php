@@ -123,49 +123,59 @@ function acf_blocks_init() {
 			'category'				=> 'common',
 			'icon'						=> 'admin-comments',
       'keywords'				=> [ 'team' ]
-	]);
-	
-	//Styled Button
-	acf_register_block([
-		'name'						=> 'styled-button',
-		'title'						=> __('Styled Button'),
-		'description'			=> __('A Curling Styled Button'),
-		'render_callback'	=> 'block_render_callback',
-		'category'				=> 'common',
-		'icon'						=> 'admin-comments',
-  		'keywords'				=> [ 'button', 'link' ]
-	]);
+    ]);
+    
+    //Styled Button
+    acf_register_block([
+      'name'						=> 'styled-button',
+      'title'						=> __('Styled Button'),
+      'description'			=> __('A Curling Styled Button'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+        'keywords'				=> [ 'button', 'link' ]
+    ]);
 
-	//Item/Page Label
-	acf_register_block([
-		'name'						=> 'item-label',
-		'title'						=> __('Item Label'),
-		'description'			=> __('An Item or Page Label'),
-		'render_callback'	=> 'block_render_callback',
-		'category'				=> 'common',
-		'icon'						=> 'admin-comments',
-  		'keywords'				=> [ 'label', 'item', 'page' ]
-	]);
+    //Item/Page Label
+    acf_register_block([
+      'name'						=> 'item-label',
+      'title'						=> __('Item Label'),
+      'description'			=> __('An Item or Page Label'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+        'keywords'				=> [ 'label', 'item', 'page' ]
+    ]);
 
-	//Presented By
-	acf_register_block([
-		'name'						=> 'presented-by',
-		'title'						=> __('Presented by Sponsor'),
-		'description'			=> __('Sponsor with Presented By label'),
-		'render_callback'	=> 'block_render_callback',
-		'category'				=> 'common',
-		'icon'						=> 'admin-comments',
-  		'keywords'				=> [ 'presented', 'by', 'sponsor' ]
-	]);
+    //Presented By
+    acf_register_block([
+      'name'						=> 'presented-by',
+      'title'						=> __('Presented by Sponsor'),
+      'description'			=> __('Sponsor with Presented By label'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+        'keywords'				=> [ 'presented', 'by', 'sponsor' ]
+    ]);
 
     acf_register_block([
-			'name'						=> 'image-carousel',
-			'title'						=> __('Image Carousel'),
-			'description'			=> __('A block to render an Image Carousel'),
-			'render_callback'	=> 'block_render_callback',
-			'category'				=> 'common',
-			'icon'						=> 'admin-comments',
+      'name'						=> 'image-carousel',
+      'title'						=> __('Image Carousel'),
+      'description'			=> __('A block to render an Image Carousel'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
       'keywords'				=> [ 'image', 'carousel' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'news-feed',
+      'title'						=> __('News Feed'),
+      'description'			=> __('A block to render a News Feed'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'news', 'feed' ]
     ]);
 
     acf_add_options_page('Options');

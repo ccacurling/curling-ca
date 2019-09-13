@@ -1,3 +1,12 @@
 .wp-block {
   max-width: 100%;
 }
+
+.block-admin-error {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  padding-left: 8rem;
+  padding-right: 8rem;
+  width: 100%;
+  background-color: $cool-light-gray;
+}

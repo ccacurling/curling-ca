@@ -1,12 +1,12 @@
 /**
  * Base imports
  */
- @import "base/colors";
- @import "base/variables";
- @import "base/fonts";
- @import "base/mixins";
- @import "base/base";
- @import "base/functions";
+@import "base/colors";
+@import "base/variables";
+@import "base/fonts";
+@import "base/mixins";
+@import "base/base";
+@import "base/functions";
 
  /**
   * Vendor Imports
@@ -17,35 +17,32 @@
  /**
  * Layout imports
  */
- @import "layout/blocks";
- @import "layout/header";
- @import "layout/footer";
+@import "layout/content";
+@import "layout/blocks";
+@import "layout/header";
+@import "layout/footer";
 
  /**
  * Modules imports
  */
- @import "modules/buttons";
- @import "modules/checkbox";
- @import "modules/nav";
- @import "modules/blocks/block-hero";
- @import "modules/blocks/block-hero-carousel";
- @import "modules/blocks/block-timer";
- @import "modules/blocks/block-package";
- @import "modules/blocks/block-package-small";
- @import "modules/blocks/block-ticket";
- @import "modules/blocks/block-event-location";
- @import "modules/blocks/block-prefooter";
- @import "modules/blocks/block-sponsors";
- @import "modules/blocks/block-news-promo";
- @import "modules/blocks/block-callout";
- @import "modules/blocks/block-featured-team";
- @import "modules/blocks/block-image-carousel";
- @import "modules/blocks/block-single-callout";
- @import "modules/blocks/block-styled-button";
- @import "modules/blocks/block-item-label";
- @import "modules/blocks/block-presented-by";
-
- /**
- * Test imports
- */
-@import "layout/test";
+@import "modules/buttons";
+@import "modules/checkbox";
+@import "modules/nav";
+@import "modules/blocks/block-hero";
+@import "modules/blocks/block-hero-carousel";
+@import "modules/blocks/block-timer";
+@import "modules/blocks/block-package";
+@import "modules/blocks/block-package-small";
+@import "modules/blocks/block-ticket";
+@import "modules/blocks/block-event-location";
+@import "modules/blocks/block-prefooter";
+@import "modules/blocks/block-sponsors";
+@import "modules/blocks/block-news-promo";
+@import "modules/blocks/block-news-feed";
+@import "modules/blocks/block-callout";
+@import "modules/blocks/block-featured-team";
+@import "modules/blocks/block-image-carousel";
+@import "modules/blocks/block-single-callout";
+@import "modules/blocks/block-styled-button";
+@import "modules/blocks/block-item-label";
+@import "modules/blocks/block-presented-by";

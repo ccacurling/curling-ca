@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
       }
     }
 
-    addAll = (slick, index, addedClass) => {
+    addAll(slick, index, addedClass) {
       this.slider.find('.slick-slide[data-slick-index="' + index + '"]').addClass(addedClass);
       // this.slider.find('.slick-slide[data-slick-index="' + (index + slick.slideCount) + '"]').addClass(addedClass);
       // this.slider.find('.slick-slide[data-slick-index="' + (index - slick.slideCount) + '"]').addClass(addedClass);
