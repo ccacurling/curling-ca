@@ -34,13 +34,13 @@ gulp.task('rollup', () => {
     .pipe(sourcemaps.init()) // TODO: Change to dev env only
     .pipe(rollup({
       plugins: [
-        babel({
-          exclude: "dist/**",
-          presets: ["@babel/env", "@babel/preset-react"]
-        }),
         resolve({
           browser: true,
           mainFields: ["jsnext:main"]
+        }),
+        babel({
+          exclude: "dist/**",
+          presets: ["@babel/env", "@babel/preset-react"]
         }),
         commonjs(),
         uglify()

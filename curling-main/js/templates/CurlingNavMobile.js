@@ -61,7 +61,7 @@ jQuery(document).ready(function($) {
       });
     }
 
-    showPopupMobile = (id) => {
+    showPopupMobile(id) {
       const popups = this.element.find('.js-cta-popout-mobile[data-id="' + id + '"]');
       if (popups.length > 0) {
         popups.addClass('active');
@@ -71,7 +71,7 @@ jQuery(document).ready(function($) {
       }
     }
   
-    hidePopupsMobile = () => {
+    hidePopupsMobile() {
       $('.js-cta-popout-mobile').each((index, element) => {
           const $this = $(element);
           $this.removeClass('active');

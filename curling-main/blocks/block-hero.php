@@ -65,7 +65,7 @@ if ($image) {
         ?>
       </div>
     <?php
-      } else {
+      } else if ($image) {
     ?>
       <img class="hero-background-image" src="<?php echo $image['url']; ?>" alt="Background" />
     <?php
@@ -95,11 +95,11 @@ if ($image) {
 
   </div>
   <?php
-    if (!$image) {
+    if (!$image && is_admin()) {
   ?>
-    <h2>
-      Add Hero Image...
-    </h2>
+    <div class="block-admin-error block-hero-no-image-container">
+      <h3 class="block-hero-no-image-message">Add hero image</h3>
+    </div>
   <?php
     } else {
   ?>

@@ -2098,38 +2098,44 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-///Text Callouts with Images
-acf_add_local_field_group(array(
-  'key' => 'group_5d798110d0b1c',
-  'title' => 'Text Callouts with Images',
-  'fields' => array(
-    array(
-      'key' => 'field_5d798124180bb',
-      'label' => 'First Callout',
-      'name' => 'first_callout',
-      'type' => 'group',
-      'instructions' => '',
-      'required' => 0,
-      'conditional_logic' => 0,
-      'wrapper' => array(
-        'width' => '',
-        'class' => '',
-        'id' => '',
-      ),
-      'layout' => 'block',
-      'sub_fields' => array(
-        array(
-          'key' => 'field_5d798190180bc',
-          'label' => 'Title',
-          'name' => 'title',
-          'type' => 'text',
-          'instructions' => '',
-          'required' => 1,
-          'conditional_logic' => 0,
-          'wrapper' => array(
-            'width' => '',
-            'class' => '',
-            'id' => '',
+  ///Text Callouts with Images
+  acf_add_local_field_group(array(
+    'key' => 'group_5d798110d0b1c',
+    'title' => 'Text Callouts with Images',
+    'fields' => array(
+      array(
+        'key' => 'field_5d798124180bb',
+        'label' => 'First Callout',
+        'name' => 'first_callout',
+        'type' => 'group',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'layout' => 'block',
+        'sub_fields' => array(
+          array(
+            'key' => 'field_5d798190180bc',
+            'label' => 'Title',
+            'name' => 'title',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 1,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
           ),
           'default_value' => '',
           'placeholder' => '',
@@ -3278,7 +3284,199 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
   
-endif;
+
+  // News Feed
+  acf_add_local_field_group(array(
+    'key' => 'group_5d7aa548d395b',
+    'title' => 'News Feed',
+    'fields' => array(
+      array(
+        'key' => 'field_5d7aa5579a611',
+        'label' => 'Title',
+        'name' => 'news_feed_title',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+      array(
+        'key' => 'field_5d7aa55e9a612',
+        'label' => 'Category',
+        'name' => 'news_feed_category',
+        'type' => 'taxonomy',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'taxonomy' => 'category',
+        'field_type' => 'select',
+        'allow_null' => 0,
+        'add_term' => 1,
+        'save_terms' => 0,
+        'load_terms' => 0,
+        'return_format' => 'id',
+        'multiple' => 0,
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/news-feed',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+
+  // Image Carousel
+  acf_add_local_field_group(array(
+    'key' => 'group_5d77e34bd6c46',
+    'title' => 'Image Carousel',
+    'fields' => array(
+      array(
+        'key' => 'field_5d794756e011a',
+        'label' => 'Type',
+        'name' => 'image_carousel_type',
+        'type' => 'select',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'choices' => array(
+          'normal' => 'Normal',
+          'circular' => 'Circular',
+        ),
+        'default_value' => array(
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+        'ui' => 0,
+        'return_format' => 'value',
+        'ajax' => 0,
+        'placeholder' => '',
+      ),
+      array(
+        'key' => 'field_5d77e3d714422',
+        'label' => 'Title',
+        'name' => 'image_carousel_title',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => '',
+      ),
+      array(
+        'key' => 'field_5d77e5bde58d9',
+        'label' => 'Layout',
+        'name' => 'image_carousel_layout',
+        'type' => 'select',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'choices' => array(
+          'large_left' => 'Large Image Left',
+          'large_right' => 'Large Image Right',
+        ),
+        'default_value' => array(
+        ),
+        'allow_null' => 0,
+        'multiple' => 0,
+        'ui' => 0,
+        'return_format' => 'value',
+        'ajax' => 0,
+        'placeholder' => '',
+      ),
+      array(
+        'key' => 'field_5d77e6173f181',
+        'label' => 'Image Carousel Gallery',
+        'name' => 'image_carousel_gallery',
+        'type' => 'gallery',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array(
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'return_format' => 'array',
+        'preview_size' => 'medium',
+        'insert' => 'append',
+        'library' => 'all',
+        'min' => '',
+        'max' => '',
+        'min_width' => '',
+        'min_height' => '',
+        'min_size' => '',
+        'max_width' => '',
+        'max_height' => '',
+        'max_size' => '',
+        'mime_types' => '',
+      ),
+    ),
+    'location' => array(
+      array(
+        array(
+          'param' => 'block',
+          'operator' => '==',
+          'value' => 'acf/image-carousel',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => true,
+    'description' => '',
+  ));
+
+  endif;
+?>
+<?php
 
 // -----
 // UNCOMMENT THIS CODE TO EXPORT A JSON FILE OF THE ACF FIELDS

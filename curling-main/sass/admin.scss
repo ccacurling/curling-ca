@@ -4,12 +4,12 @@
  @import "base/fonts";
 
  .edit-post-layout__content {
-    @import "base/admin";
-    @import "base/colors";
-    @import "base/variables";
-    @import "base/mixins";
-    @import "base/base";
-    @import "base/functions";
+   @import "base/colors";
+   @import "base/variables";
+   @import "base/mixins";
+   @import "base/base";
+   @import "base/functions";
+   @import "base/admin";
 
     /**
     * Vendor Imports
@@ -20,6 +20,7 @@
     /**
     * Layout imports
     */
+    @import "layout/content";
     @import "layout/blocks";
     @import "layout/header";
     @import "layout/footer";
@@ -30,7 +31,7 @@
     @import "modules/buttons";
     @import "modules/checkbox";
     @import "modules/nav";
-    @import "modules/blocks/block-hero";
+    @import "modules/blocks/admin/block-hero-admin";
     @import "modules/blocks/block-hero-carousel";
     @import "modules/blocks/block-timer";
     @import "modules/blocks/block-package";
@@ -40,6 +41,7 @@
     @import "modules/blocks/block-prefooter";
     @import "modules/blocks/block-sponsors";
     @import "modules/blocks/block-news-promo";
+    @import "modules/blocks/block-news-feed";
     @import "modules/blocks/block-callout";
     @import "modules/blocks/block-featured-team";
     @import "modules/blocks/block-image-carousel";
@@ -49,9 +51,4 @@
     @import "modules/blocks/block-presented-by";
     @import "modules/blocks/block-text-callouts";
     @import "modules/blocks/block-pdf-with-image";
-
-    /**
-    * Test imports
-    */
-    @import "layout/test";
 }
