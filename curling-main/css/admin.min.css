@@ -1667,7 +1667,11 @@
   cursor: pointer;
 }
 
-.edit-post-layout__content .menu-item a {
+.edit-post-layout__content .menu-item.no-link:hover {
+  cursor: default;
+}
+
+.edit-post-layout__content .menu-item .menu-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3535,10 +3539,6 @@
   .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
     align-self: flex-start;
   }
-}
-
-.edit-post-layout__content .block-news-promo {
-  max-width: 770px;
 }
 
 .edit-post-layout__content .news-promo-container {

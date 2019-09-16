@@ -11,7 +11,7 @@
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
 
-    $current_page = 497698; // TODO: FIX!
+    $current_page = -1; // TODO: FIX!
 
     $languages = icl_get_languages();
     foreach ($languages as $key => $language) {
@@ -62,9 +62,21 @@
                           foreach( $top_left_menu_items as $menu_item ) {
                       ?>
                           <li class="menu-item menu-item-selectable">
-                            <a href="">
-                              <h4 class="menu-item-top-nav menu-item-content <?php echo $menu_item->ID === $current_page ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
-                            </a>
+                            <?php
+                              if ($menu_item->url) {
+                            ?>
+                              <a class="clear" href="<?php echo $menu_item->url; ?>">
+                            <?php
+                              }
+                            ?>
+                              <h4 class="menu-item-top-nav menu-item-content menu-item-link <?php echo $menu_item->ID === $current_page ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
+                            <?php
+                              if ($menu_item->url) {
+                            ?>
+                              </a>
+                            <?php
+                              }
+                            ?>
                           </li>
                       <?php
                           }
@@ -80,15 +92,27 @@
                               foreach( $top_right_menu_items as $menu_item ) {
                           ?>
                               <li class="menu-item menu-item-selectable">
-                                <a href="">
-                                  <h4 class="menu-item-content menu-item-small"><?php echo $menu_item->title; ?></h4>
-                                </a>
+                                <?php
+                                  if ($menu_item->url) {
+                                ?>
+                                  <a class="clear" href="<?php echo $menu_item->url; ?>">
+                                <?php
+                                  }
+                                ?>
+                                  <h4 class="menu-item-content menu-item-small menu-item-link"><?php echo $menu_item->title; ?></h4>
+                                <?php
+                                  if ($menu_item->url) {
+                                ?>
+                                  </a>
+                                <?php
+                                  }
+                                ?>
                               </li>
                           <?php
                               }
                           ?>
                           <li class="menu-item menu-item-donate">
-                            <a href="">
+                            <a class="clear" href="">
                               <h4 class="menu-item-small inverted">Donate</h4>
                             </a>
                           </li>
@@ -101,7 +125,7 @@
                           foreach ($languages as $key => $language) {
                         ?>
                           <li class="menu-item menu-item-language menu-item-selectable">
-                            <a href="<?php echo $language['url']; ?>">
+                            <a class="clear" href="<?php echo $language['url']; ?>">
                               <h4 class="menu-item-content menu-item-small"><?php echo $language['code']; ?></h4>
                             </a>
                           </li>
@@ -124,9 +148,15 @@
                   <?php
                       foreach ($menu_items as $id => $item) {
                   ?>
-                      <li class="menu-item" data-menu="<?php echo $id; ?>">
-                        <a class="menu-item-link" href="">
-                          <h4 class="menu-item-content menu-item-title"><?php echo $item->title; ?></h4>
+                      <li class="menu-item <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
+                        <?php
+                          if ($item->url) {
+                        ?>
+                          <a class="menu-item-link" href="<?php echo $item->url; ?>">
+                        <?php
+                          }
+                        ?>
+                          <h4 class="menu-item-content menu-item-title <?php echo !$item->url ? 'menu-item-link' : ''; ?>"><?php echo $item->title; ?></h4>
                           <?php 
                               if ($item->children != null && count($item->children) > 0) {
                           ?>
@@ -134,7 +164,13 @@
                           <?php
                               }
                           ?>
-                        </a>
+                        <?php
+                          if ($item->url) {
+                        ?>
+                          </a>
+                        <?php
+                          }
+                        ?>
                       </li>
                   <?php
                       }
@@ -468,7 +504,21 @@ function create_menu_bar_event_item($parent_id, $menu_items) {
       ?>
         <li class="menu-event-subitem">
           <div class="menu-item-selectable">
-            <span class="menu-item-content menu-item-title menu-item-subtitle"><?php echo $menu_subitem->title; ?></span>
+            <?php
+              if ($menu_subitem->url) {
+            ?>
+              <a class="clear" href="<?php echo $menu_subitem->url; ?>">
+            <?php
+              }
+            ?>
+              <span class="menu-item-content menu-item-title menu-item-subtitle"><?php echo $menu_subitem->title; ?></span>
+            <?php
+              if ($menu_subitem->url) {
+            ?>
+              </a>
+            <?php
+              }
+            ?>
             <div class="menu-item-underline"></div>
           </div>
         </li>

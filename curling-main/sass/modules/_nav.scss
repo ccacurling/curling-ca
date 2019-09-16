@@ -335,7 +335,11 @@
     cursor: pointer;
   }
 
-  a {
+  &.no-link:hover {
+    cursor: default;
+  }
+
+  .menu-item-link {
     display: flex;
     justify-content: center;
     align-items: center;

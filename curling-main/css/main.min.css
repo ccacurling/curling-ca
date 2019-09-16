@@ -1649,7 +1649,11 @@ li {
   cursor: pointer;
 }
 
-.menu-item a {
+.menu-item.no-link:hover {
+  cursor: default;
+}
+
+.menu-item .menu-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3517,10 +3521,6 @@ li {
   .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
     align-self: flex-start;
   }
-}
-
-.block-news-promo {
-  max-width: 770px;
 }
 
 .news-promo-container {

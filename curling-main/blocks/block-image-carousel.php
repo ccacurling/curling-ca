@@ -6,15 +6,27 @@
  */
 
 $carousel_type = get_field( 'image_carousel_type' );
+$carousel_background_colour = get_field( 'image_carousel_background_colour' );
 $carousel_title = get_field( 'image_carousel_title' );
+$carousel_top_body = get_field( 'image_carousel_top_body' );
 $carousel_layout = get_field( 'image_carousel_layout' );
 $carousel_gallery = get_field( 'image_carousel_gallery' );
+$carousel_bottom_body = get_field( 'image_carousel_bottom_body' );
+$carousel_links = get_field( 'image_carousel_links' );
 
 $carousel_gallery_chucks = array_chunk($carousel_gallery, 4);
 ?>
 
-<section class="block-image-carousel js-image-carousel">
+<section class="block-image-carousel <?php echo $carousel_background_colour === 'gray' ? 'image-carousel-gray' : ''; ?> js-image-carousel">
   <h3 class="image-carousel-title"><?php echo $carousel_title; ?></h3>
+
+  <?php
+    if ($carousel_top_body) {
+  ?>
+    <p class="image-carousel-top-body"><?php echo $carousel_top_body; ?></p>
+  <?php
+    }
+  ?>
 
   <div class="image-carousel-gallery-mobile <?php echo $carousel_layout === 'large_right' ? 'image-carousel-rtl' : ''; ?>">
       <div class="image-carousel-slides js-slider-mobile">
@@ -111,6 +123,14 @@ $carousel_gallery_chucks = array_chunk($carousel_gallery, 4);
     </div>
   </div>
 
+  <?php
+    }
+  ?>
+
+<?php
+    if ($carousel_bottom_body) {
+  ?>
+    <p class="image-carousel-bottom-body"><?php echo $carousel_bottom_body; ?></p>
   <?php
     }
   ?>
