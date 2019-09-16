@@ -200,7 +200,21 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
       <?php
           foreach( $top_menu_items as $menu_item ) {
       ?>
-        <h4 class="nav-menu-item-mobile inverted"><?php echo $menu_item->title; ?></h4>
+        <?php
+          if ($menu_item->url) {
+        ?>
+          <a class="clear" href="<?php echo $menu_item->url; ?>">
+        <?php
+          }
+        ?>
+          <h4 class="nav-menu-item-mobile inverted"><?php echo $menu_item->title; ?></h4>
+        <?php
+          if ($menu_item->url) {
+        ?>
+          </a>
+        <?php
+          }
+        ?>
       <?php
           }
       ?>
@@ -211,16 +225,30 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
     ?>
       <ul class="menu-list-mobile js-cta-menu-list-mobile">
         <li class="menu-item-mobile menu-item-main-mobile">
-          <div class="menu-item-container-mobile js-cta-menu-item-mobile">
-            <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
-            <?php
-              if (isset($menu_item->children) && count ($menu_item->children) > 0) {
-            ?>
-              <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
-            <?php
-              }
-            ?>
-          </div>
+          <?php
+            if ($menu_item->url) {
+          ?>
+            <a class="clear" href="<?php echo $menu_item->url; ?>">
+          <?php
+            }
+          ?>
+              <div class="menu-item-container-mobile js-cta-menu-item-mobile">
+                <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
+                <?php
+                  if (isset($menu_item->children) && count ($menu_item->children) > 0) {
+                ?>
+                  <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
+                <?php
+                  }
+                ?>
+              </div>
+          <?php
+            if ($menu_item->url) {
+          ?>
+            </a>
+          <?php
+            }
+          ?>
           <?php
             if (isset($menu_item->children) && count ($menu_item->children) > 0) {
           ?>
@@ -229,6 +257,13 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
             foreach( $menu_item->children as $menu_subitem ) {
             ?>
               <li class="menu-item-mobile">
+                <?php
+                  if ($menu_subitem->url) {
+                ?>
+                  <a class="clear" href="<?php echo $menu_subitem->url; ?>">
+                <?php
+                  }
+                ?>
                 <div class="menu-item-container-mobile menu-item-subcontainer-mobile js-cta-menu-subitem-mobile" data-id="<?php echo $menu_subitem->ID; ?>">
                   <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subitem->title; ?></h4>
                     <?php
@@ -239,6 +274,13 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
                       }
                     ?>
                 </div>
+                <?php
+                  if ($menu_subitem->url) {
+                ?>
+                  </a>
+                <?php
+                  }
+                ?>
               </li>
             <?php
             }

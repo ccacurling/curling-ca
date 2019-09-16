@@ -3,7 +3,6 @@
     $primary_menu_items = wp_get_nav_menu_items( 'Menu - Legal' );
 ?>
 
-<?php echo !WP_DEBUG ? '' : "<!-- Begin output from ".basename(__FILE__)."-->"; ?>
 <div class="footer footer-gray">
   <div class="footer-wrapper">
       <div class="footer-content-left-wrapper">
@@ -18,8 +17,8 @@
                         foreach( $top_left_menu_items as $menu_item ) {
                     ?>
                         <li class="footer-menu-item menu-item menu-item-selectable">
-                          <a href="">
-                            <h4 class="menu-item-content menu-item-title menu-item-subtitle inverted"><?php echo $menu_item->title; ?></h4>
+                          <a class="clear" href="<?php $menu_item->url; ?>">
+                            <h4 class="menu-item-content menu-item-title menu-item-subtitle inverted menu-item-link"><?php echo $menu_item->title; ?></h4>
                           </a>
                         </li>
                     <?php
@@ -63,8 +62,8 @@
                           foreach( $primary_menu_items as $menu_item ) {
                       ?>
                           <li class="menu-item-selectable menu-item">
-                            <a href="">
-                              <h4 class="menu-item-content legal"><?php echo $menu_item->title; ?></h4>
+                            <a class="clear" href="">
+                              <h4 class="menu-item-content legal menu-item-link"><?php echo $menu_item->title; ?></h4>
                             </a>
                           </li>
                       <?php
@@ -78,4 +77,3 @@
       </div>
   </div>
 </div>
-<?php echo !WP_DEBUG ? '' : "<!-- End output from ".basename(__FILE__)." -->" ?>

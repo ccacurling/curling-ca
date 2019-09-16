@@ -1,19 +1,27 @@
 .block-featured-team {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   margin-top: 60px;
   margin-bottom: 60px;
   margin-left: 16px;
   margin-right: 16px;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
   
+  @include responsive-min($responsive-laptop) {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 1210px;
+  }
+}
+
+.featured-team-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+
   @include responsive-min($responsive-laptop) {
     flex-direction: row;
     flex-wrap: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1170px;
   }
 }
 
