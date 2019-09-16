@@ -1,5 +1,5 @@
 
-.header-main{
+.header-main {
   .nav-menu-top-right-mobile {
     background-color: $red;
   }
@@ -171,6 +171,17 @@
   .menu-item-selectable:hover {
     .menu-item-underline {
       display: block;
+    }
+  }
+}
+
+.header-event {
+  .menu-top-nav,
+  .nav-menu-top-right-wrapper {
+    .menu-item-selectable:hover {
+      .menu-item-content {
+        color: $red;
+      }
     }
   }
 }

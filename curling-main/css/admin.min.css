@@ -856,6 +856,11 @@
   display: block;
 }
 
+.edit-post-layout__content .header-event .menu-top-nav .menu-item-selectable:hover .menu-item-content,
+.edit-post-layout__content .header-event .nav-menu-top-right-wrapper .menu-item-selectable:hover .menu-item-content {
+  color: #ed1940;
+}
+
 .edit-post-layout__content .footer-gray .footer-wrapper {
   background-color: #4c4c4e;
 }
@@ -3061,10 +3066,12 @@
 .edit-post-layout__content .block-prefooter-info {
   display: flex;
   flex-direction: column;
+  position: relative;
   padding-top: 122px;
   padding-bottom: 161px;
   padding-left: 11px;
   padding-right: 11px;
+  z-index: 2;
 }
 
 @media only screen and (min-width: 769px) {

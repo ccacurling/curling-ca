@@ -38,10 +38,12 @@
 .block-prefooter-info {
   display: flex;
   flex-direction: column;
+  position: relative;
   padding-top: 122px;
   padding-bottom: 161px;
   padding-left: 11px;
   padding-right: 11px;
+  z-index: 2;
   
   @include responsive-min($responsive-tablet) {
     margin-left: 46.8%;
