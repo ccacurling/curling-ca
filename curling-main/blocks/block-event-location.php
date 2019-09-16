@@ -37,14 +37,14 @@
         <?php if ($event_cta_one) { ?>
           <p>
             <a href="<?php echo $event_cta_one['url']; ?>" target="<?php echo $event_cta_one['target']; ?>">
-              <?php echo strtoupper( $event_cta_one['title'] ); ?> <b>→</b>
+              <?php echo strtoupper( $event_cta_one['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
             </a>
           </p>
         <?php } ?>
         <?php if ($event_cta_three) { ?>
           <p>
             <a href="<?php echo $event_cta_three['url']; ?>" target="<?php echo $event_cta_three['target']; ?>">
-              <?php echo strtoupper( $event_cta_three['title'] ); ?> <b>→</b>
+              <?php echo strtoupper( $event_cta_three['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
             </a>
           </p>
         <?php } ?>
@@ -53,14 +53,14 @@
         <?php if ($event_cta_two) { ?>
           <p>
             <a href="<?php echo $event_cta_two['url']; ?>" target="<?php echo $event_cta_two['target']; ?>">
-              <?php echo strtoupper( $event_cta_two['title'] ); ?> <b>→</b>
+              <?php echo strtoupper( $event_cta_two['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
             </a>
           </p>
         <?php } ?>
         <?php if ($event_cta_four) { ?>
           <p>
             <a href="<?php echo $event_cta_four['url']; ?>" target="<?php echo $event_cta_four['target']; ?>">
-              <?php echo strtoupper( $event_cta_four['title'] ); ?> <b>→</b>
+              <?php echo strtoupper( $event_cta_four['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
             </a>
           </p>
         <?php } ?>
