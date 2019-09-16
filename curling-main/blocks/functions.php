@@ -214,6 +214,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'draw', 'schedule' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'draw-schedule-links',
+      'title'						=> __('Draw Schedule Links'),
+      'description'			=> __('A block to render Draw Schedule Links'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'draw', 'schedule', 'links' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

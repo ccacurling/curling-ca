@@ -1,5 +1,3 @@
-<?php
-
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
@@ -198,6 +196,49 @@ acf_add_local_field_group(array(
 				'param' => 'block',
 				'operator' => '==',
 				'value' => 'acf/callout',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+acf_add_local_field_group(array(
+	'key' => 'group_5d7fee29366d1',
+	'title' => 'Draw Schedule Links',
+	'fields' => array(
+		array(
+			'key' => 'field_5d7fee33d3737',
+			'label' => 'Heading',
+			'name' => 'draw_schedule_links_heading',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/draw-schedule-links',
 			),
 		),
 	),

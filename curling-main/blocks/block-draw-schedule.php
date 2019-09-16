@@ -19,9 +19,9 @@
 
 ?>
 
-<section class="block-schedule">
+<section class="block-schedule js-schedule">
   <div class="schedule-date-container">
-    <h3><?php echo $date_string; ?></h3>
+    <h3 class="js-schedule-title"><?php echo $date_string; ?></h3>
   </div>
   <div class="schedule-info-container">
     <p><?php echo $draw_schedule_info; ?></p>

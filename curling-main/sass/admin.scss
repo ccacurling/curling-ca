@@ -4,12 +4,12 @@
  @import "base/fonts";
 
  .edit-post-layout__content {
-   @import "base/colors";
-   @import "base/variables";
-   @import "base/mixins";
-   @import "base/base";
-   @import "base/functions";
-   @import "base/admin";
+    @import "base/colors";
+    @import "base/variables";
+    @import "base/mixins";
+    @import "base/base";
+    @import "base/functions";
+    @import "base/admin";
 
     /**
     * Vendor Imports
@@ -52,4 +52,5 @@
     @import "modules/blocks/block-text-callouts";
     @import "modules/blocks/block-pdf-with-image";
     @import "modules/blocks/block-draw-schedule";
+    @import "modules/blocks/block-draw-schedule-links";
 }
