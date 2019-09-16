@@ -4251,4 +4251,60 @@ p.item-label {
   }
 }
 
+.block-schedule {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.schedule-date-container {
+  padding-bottom: 30px;
+}
+
+.schedule-info-container {
+  max-width: 730px;
+}
+
+.schedule-list-container {
+  padding-top: 40px;
+}
+
+.schedule-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.schedule-match-container {
+  margin-bottom: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 290px;
+  width: 100%;
+}
+
+.schedule-match-row {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.schedule-match-header {
+  border-bottom: 1px solid #4c4c4e;
+}
+
+.schedule-match-name {
+  flex-basis: 35%;
+}
+
+.schedule-match-info {
+  flex-basis: 65%;
+}
+
+.schedule-match-link-container {
+  padding-top: 40px;
+}
+
 /*# sourceMappingURL=main.min.css.map */

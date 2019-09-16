@@ -4269,4 +4269,60 @@
   }
 }
 
+.edit-post-layout__content .block-schedule {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.edit-post-layout__content .schedule-date-container {
+  padding-bottom: 30px;
+}
+
+.edit-post-layout__content .schedule-info-container {
+  max-width: 730px;
+}
+
+.edit-post-layout__content .schedule-list-container {
+  padding-top: 40px;
+}
+
+.edit-post-layout__content .schedule-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.edit-post-layout__content .schedule-match-container {
+  margin-bottom: 35px;
+  margin-left: 20px;
+  margin-right: 20px;
+  max-width: 290px;
+  width: 100%;
+}
+
+.edit-post-layout__content .schedule-match-row {
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.edit-post-layout__content .schedule-match-header {
+  border-bottom: 1px solid #4c4c4e;
+}
+
+.edit-post-layout__content .schedule-match-name {
+  flex-basis: 35%;
+}
+
+.edit-post-layout__content .schedule-match-info {
+  flex-basis: 65%;
+}
+
+.edit-post-layout__content .schedule-match-link-container {
+  padding-top: 40px;
+}
+
 /*# sourceMappingURL=admin.min.css.map */
