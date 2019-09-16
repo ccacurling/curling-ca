@@ -856,6 +856,14 @@ li {
   color: #ed1940;
 }
 
+.menu-item.menu-item-selected {
+  background-color: #ed1940;
+}
+
+.menu-item.menu-item-selected .menu-item-title {
+  color: #ffffff;
+}
+
 .footer-gray {
   background-color: #4c4c4e;
 }

@@ -1,4 +1,6 @@
 <?php
+    global $wp;
+    $current_page_title = get_the_title();
     $is_event = get_field('is_event', 'Options');
 
     $event_logo = get_field('event_logo', 'Options');
@@ -10,8 +12,6 @@
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
-
-    $current_page = -1; // TODO: FIX!
 
     $languages = icl_get_languages();
     foreach ($languages as $key => $language) {
@@ -69,7 +69,7 @@
                             <?php
                               }
                             ?>
-                              <h4 class="menu-item-top-nav menu-item-content menu-item-link <?php echo $menu_item->ID === $current_page ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
+                              <h4 class="menu-item-top-nav menu-item-content menu-item-link"><?php echo $menu_item->title; ?></h4>
                             <?php
                               if ($menu_item->url) {
                             ?>
@@ -148,7 +148,7 @@
                   <?php
                       foreach ($menu_items as $id => $item) {
                   ?>
-                      <li class="menu-item <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
+                      <li class="menu-item <?php echo $item->title === $current_page_title ? 'menu-item-selected' : ''; ?> <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
                         <?php
                           if ($item->url) {
                         ?>
