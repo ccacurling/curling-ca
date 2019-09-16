@@ -1452,21 +1452,6 @@ acf_add_local_field_group(array(
 			'first_day' => 1,
 		),
 		array(
-			'key' => 'field_5d7c1d087d810',
-			'label' => 'Link',
-			'name' => 'schedule_link',
-			'type' => 'link',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'array',
-		),
-		array(
 			'key' => 'field_5d7c11f9f8cd9',
 			'label' => 'Draws',
 			'name' => 'schedule_draws',

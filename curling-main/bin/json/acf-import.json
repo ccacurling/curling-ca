@@ -1,1 +1,2293 @@
-[]
+[
+    {
+        "key": "group_5d76cb304c380",
+        "title": "Featured Image Caption",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "post"
+                }
+            ]
+        ],
+        "menu_order": -100,
+        "position": "side",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d76cb3ef2094": {
+                "key": "field_5d76cb3ef2094",
+                "name": "featured_image_caption",
+                "type": "text",
+                "parent": "group_5d76cb304c380",
+                "label": "Caption",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d7c1484d0f21",
+        "title": "Block - Draw Schedule",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/draw-schedule"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d7c148c1f4ec": {
+                "key": "field_5d7c148c1f4ec",
+                "name": "draw_schedule",
+                "type": "post_object",
+                "parent": "group_5d7c1484d0f21",
+                "label": "Draw Schedule",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "drawschedule"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            "field_5d7c17ac3b8e9": {
+                "key": "field_5d7c17ac3b8e9",
+                "name": "draw_schedule_info",
+                "type": "textarea",
+                "parent": "group_5d7c1484d0f21",
+                "label": "Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "new_lines": "",
+                "maxlength": "",
+                "placeholder": "",
+                "rows": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d76be9f07926",
+        "title": "Callout",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/callout"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d76bf000b48e": {
+                "key": "field_5d76bf000b48e",
+                "name": "callout_image",
+                "type": "image",
+                "parent": "group_5d76be9f07926",
+                "label": "Image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            "field_5d76bf1efe292": {
+                "key": "field_5d76bf1efe292",
+                "name": "callout_title",
+                "type": "text",
+                "parent": "group_5d76be9f07926",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d76bf2aad2df": {
+                "key": "field_5d76bf2aad2df",
+                "name": "callout_body_text",
+                "type": "textarea",
+                "parent": "group_5d76be9f07926",
+                "label": "Body Text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            "field_5d76bf3b176d6": {
+                "key": "field_5d76bf3b176d6",
+                "name": "callout_link",
+                "type": "link",
+                "parent": "group_5d76be9f07926",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
+        "key": "group_5d7fee29366d1",
+        "title": "Draw Schedule Links",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/draw-schedule-links"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d7fee33d3737": {
+                "key": "field_5d7fee33d3737",
+                "name": "draw_schedule_links_heading",
+                "type": "text",
+                "parent": "group_5d7fee29366d1",
+                "label": "Heading",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d7039036b0c1",
+        "title": "Event Location Block",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/event-location"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d703915b40b0": {
+                "key": "field_5d703915b40b0",
+                "name": "event_cta_one",
+                "type": "link",
+                "parent": "group_5d7039036b0c1",
+                "label": "Event CTA One",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            "field_5d703920b40b1": {
+                "key": "field_5d703920b40b1",
+                "name": "event_cta_two",
+                "type": "link",
+                "parent": "group_5d7039036b0c1",
+                "label": "Event CTA Two",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            "field_5d70392bb40b2": {
+                "key": "field_5d70392bb40b2",
+                "name": "event_cta_three",
+                "type": "link",
+                "parent": "group_5d7039036b0c1",
+                "label": "Event CTA Three",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            "field_5d70393cb40b3": {
+                "key": "field_5d70393cb40b3",
+                "name": "event_cta_four",
+                "type": "link",
+                "parent": "group_5d7039036b0c1",
+                "label": "Event CTA Four",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
+        "key": "group_5d76d15367870",
+        "title": "Featured Team",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/featured-team"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d76d1608f13a": {
+                "key": "field_5d76d1608f13a",
+                "name": "featured_team",
+                "type": "post_object",
+                "parent": "group_5d76d15367870",
+                "label": "Featured Team",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "team"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            "field_5d76d4112cb44": {
+                "key": "field_5d76d4112cb44",
+                "name": "featured_team_link",
+                "type": "link",
+                "parent": "group_5d76d15367870",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
+        "key": "group_5d5591cdbb942",
+        "title": "Hero",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/hero"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d56da661e123": {
+                "key": "field_5d56da661e123",
+                "name": "hero_image",
+                "type": "image",
+                "parent": "group_5d5591cdbb942",
+                "label": "Image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            "field_5d714ecbe9d24": {
+                "key": "field_5d714ecbe9d24",
+                "name": "hero_use_embedded_video",
+                "type": "true_false",
+                "parent": "group_5d5591cdbb942",
+                "label": "Use Embedded Video",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d7045f5a7b94": {
+                "key": "field_5d7045f5a7b94",
+                "name": "hero_video",
+                "type": "file",
+                "parent": "group_5d5591cdbb942",
+                "label": "Video",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d714ecbe9d24",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "library": "all",
+                "min_size": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            "field_5d714b40b3488": {
+                "key": "field_5d714b40b3488",
+                "name": "hero_show_video_inline",
+                "type": "true_false",
+                "parent": "group_5d5591cdbb942",
+                "label": "Show Video Inline",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d714ecbe9d24",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d714e52109ac": {
+                "key": "field_5d714e52109ac",
+                "name": "hero_external_video_link",
+                "type": "url",
+                "parent": "group_5d5591cdbb942",
+                "label": "External Video Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d714ecbe9d24",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            "field_5d65a7325d1a2": {
+                "key": "field_5d65a7325d1a2",
+                "name": "hero_size",
+                "type": "select",
+                "parent": "group_5d5591cdbb942",
+                "label": "Hero Size",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "large": "Large",
+                    "medium": "Medium",
+                    "small": "Small"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d65ac034846d": {
+                "key": "field_5d65ac034846d",
+                "name": "hero_headline",
+                "type": "text",
+                "parent": "group_5d5591cdbb942",
+                "label": "Headline",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d700f4f17ff6": {
+                "key": "field_5d700f4f17ff6",
+                "name": "hero_caption",
+                "type": "text",
+                "parent": "group_5d5591cdbb942",
+                "label": "Caption",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d703f2776419": {
+                "key": "field_5d703f2776419",
+                "name": "hero_enable_advanced_options",
+                "type": "true_false",
+                "parent": "group_5d5591cdbb942",
+                "label": "Enable Advanced Options",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d700038f4594": {
+                "key": "field_5d700038f4594",
+                "name": "hero_text_position",
+                "type": "select",
+                "parent": "group_5d5591cdbb942",
+                "label": "Text Position",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d703f2776419",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "left": "Left",
+                    "centre": "Centre"
+                },
+                "default_value": [
+                    "left"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d700e3575b14": {
+                "key": "field_5d700e3575b14",
+                "name": "hero_body",
+                "type": "textarea",
+                "parent": "group_5d5591cdbb942",
+                "label": "Body",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d703f2776419",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            "field_5d70045f10a09": {
+                "key": "field_5d70045f10a09",
+                "name": "hero_show_post_type",
+                "type": "true_false",
+                "parent": "group_5d5591cdbb942",
+                "label": "Show Post Type",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d703f2776419",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d70047510a0a": {
+                "key": "field_5d70047510a0a",
+                "name": "hero_show_date",
+                "type": "true_false",
+                "parent": "group_5d5591cdbb942",
+                "label": "Show Date",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d703f2776419",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d70172283200": {
+                "key": "field_5d70172283200",
+                "name": "hero_link",
+                "type": "link",
+                "parent": "group_5d5591cdbb942",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d703f2776419",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            "field_5d65aeb611f84": {
+                "key": "field_5d65aeb611f84",
+                "name": "has_timer",
+                "type": "true_false",
+                "parent": "group_5d5591cdbb942",
+                "label": "Has Timer",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d718fe86629c",
+        "title": "Hero Carousel",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/hero-carousel"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d719046882e9": {
+                "key": "field_5d719046882e9",
+                "name": "hero_carousel_image",
+                "type": "image",
+                "parent": "group_5d718fe86629c",
+                "label": "Hero Carousel Image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            "field_5d71905d882ea": {
+                "key": "field_5d71905d882ea",
+                "name": "hero_carousel_headline",
+                "type": "text",
+                "parent": "group_5d718fe86629c",
+                "label": "Hero Carousel Headline",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d7194481d65b": {
+                "key": "field_5d7194481d65b",
+                "name": "hero_carousel_items",
+                "type": "repeater",
+                "parent": "group_5d718fe86629c",
+                "label": "Carousel Items",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5d71947c1d65c",
+                        "label": "Carousel Item",
+                        "name": "hero_carousel_item",
+                        "type": "post_object",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": "",
+                        "taxonomy": "",
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "return_format": "object",
+                        "ui": 1
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "key": "group_5d77e34bd6c46",
+        "title": "Image Carousel",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/image-carousel"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d794756e011a": {
+                "key": "field_5d794756e011a",
+                "name": "image_carousel_type",
+                "type": "select",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Type",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "normal": "Normal",
+                    "circular": "Circular"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d77e3d714422": {
+                "key": "field_5d77e3d714422",
+                "name": "image_carousel_title",
+                "type": "text",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d77e5bde58d9": {
+                "key": "field_5d77e5bde58d9",
+                "name": "image_carousel_layout",
+                "type": "select",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Layout",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "large_left": "Large Image Left",
+                    "large_right": "Large Image Right"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d77e6173f181": {
+                "key": "field_5d77e6173f181",
+                "name": "image_carousel_gallery",
+                "type": "gallery",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Image Carousel Gallery",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "insert": "append",
+                "library": "all",
+                "min": "",
+                "max": "",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d7aa548d395b",
+        "title": "News Feed",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/news-feed"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d7aa5579a611": {
+                "key": "field_5d7aa5579a611",
+                "name": "news_feed_title",
+                "type": "text",
+                "parent": "group_5d7aa548d395b",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d7aa55e9a612": {
+                "key": "field_5d7aa55e9a612",
+                "name": "news_feed_category",
+                "type": "taxonomy",
+                "parent": "group_5d7aa548d395b",
+                "label": "Category",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "taxonomy": "category",
+                "field_type": "select",
+                "allow_null": 0,
+                "add_term": 1,
+                "save_terms": 0,
+                "load_terms": 0,
+                "return_format": "id",
+                "multiple": 0
+            }
+        }
+    },
+    {
+        "key": "group_5d704ec0c5d4d",
+        "title": "News Promo",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/news-promo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d70511d50418": {
+                "key": "field_5d70511d50418",
+                "name": "promo_post",
+                "type": "post_object",
+                "parent": "group_5d704ec0c5d4d",
+                "label": "Selected Post",
+                "instructions": "Select a Post to be promoted",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "post"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            "field_5d704f55b5c81": {
+                "key": "field_5d704f55b5c81",
+                "name": "background_colour",
+                "type": "select",
+                "parent": "group_5d704ec0c5d4d",
+                "label": "Background Colour",
+                "instructions": "Select a background colour",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "grey": "Grey"
+                },
+                "default_value": [
+                    "white"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d680deb699b7",
+        "title": "Package",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/package"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d68556025b23": {
+                "key": "field_5d68556025b23",
+                "name": "package_colour",
+                "type": "select",
+                "parent": "group_5d680deb699b7",
+                "label": "Colour",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "gray": "Gray",
+                    "red": "Red"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d680dfcb0e3c": {
+                "key": "field_5d680dfcb0e3c",
+                "name": "package_name",
+                "type": "text",
+                "parent": "group_5d680deb699b7",
+                "label": "Name",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d680e0db0e3d": {
+                "key": "field_5d680e0db0e3d",
+                "name": "package_price",
+                "type": "price",
+                "parent": "group_5d680deb699b7",
+                "label": "Price",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "format": "|2\/.\/ |"
+            },
+            "field_5d680e36b0e3e": {
+                "key": "field_5d680e36b0e3e",
+                "name": "package_price_info",
+                "type": "text",
+                "parent": "group_5d680deb699b7",
+                "label": "Price Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d680e63b0e3f": {
+                "key": "field_5d680e63b0e3f",
+                "name": "package_info",
+                "type": "wysiwyg",
+                "parent": "group_5d680deb699b7",
+                "label": "Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            "field_5d68233ae7d68": {
+                "key": "field_5d68233ae7d68",
+                "name": "package_link",
+                "type": "link",
+                "parent": "group_5d680deb699b7",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
+        "key": "group_5d768070a5653",
+        "title": "Package - Small",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/package-small"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d7680727ce13": {
+                "key": "field_5d7680727ce13",
+                "name": "package_colour",
+                "type": "select",
+                "parent": "group_5d768070a5653",
+                "label": "Colour",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "gray": "Gray",
+                    "red": "Red"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d7680727ce1c": {
+                "key": "field_5d7680727ce1c",
+                "name": "package_name",
+                "type": "text",
+                "parent": "group_5d768070a5653",
+                "label": "Name",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d7680727ce27": {
+                "key": "field_5d7680727ce27",
+                "name": "package_price",
+                "type": "price",
+                "parent": "group_5d768070a5653",
+                "label": "Price",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "format": "|2\/.\/ |"
+            },
+            "field_5d7680727ce2e": {
+                "key": "field_5d7680727ce2e",
+                "name": "package_price_info",
+                "type": "text",
+                "parent": "group_5d768070a5653",
+                "label": "Price Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d7680727ce35": {
+                "key": "field_5d7680727ce35",
+                "name": "package_info",
+                "type": "wysiwyg",
+                "parent": "group_5d768070a5653",
+                "label": "Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            "field_5d7680727ce40": {
+                "key": "field_5d7680727ce40",
+                "name": "package_link",
+                "type": "link",
+                "parent": "group_5d768070a5653",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
+        "key": "group_5d7c0af1aed64",
+        "title": "Post - Draw Schedule",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "drawschedule"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d7c11db3b822": {
+                "key": "field_5d7c11db3b822",
+                "name": "schedule_date",
+                "type": "date_picker",
+                "parent": "group_5d7c0af1aed64",
+                "label": "Date",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "l, F j, Y",
+                "return_format": "Ymd",
+                "first_day": 1
+            },
+            "field_5d7c11f9f8cd9": {
+                "key": "field_5d7c11f9f8cd9",
+                "name": "schedule_draws",
+                "type": "repeater",
+                "parent": "group_5d7c0af1aed64",
+                "label": "Draws",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "Add Draw",
+                "sub_fields": [
+                    {
+                        "key": "field_5d7c1243d2769",
+                        "label": "Name",
+                        "name": "draw_name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d7c13e29dff3",
+                        "label": "Link",
+                        "name": "draw_link",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array"
+                    },
+                    {
+                        "key": "field_5d7c1221f8cda",
+                        "label": "Draw Time",
+                        "name": "draw_time",
+                        "type": "time_picker",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "g:i a",
+                        "return_format": "H:i:s"
+                    },
+                    {
+                        "key": "field_5d7c1250d276a",
+                        "label": "Draw Matches",
+                        "name": "draw_matches",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "collapsed": "",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "table",
+                        "button_label": "Add Match",
+                        "sub_fields": [
+                            {
+                                "key": "field_5d7c1264d276b",
+                                "label": "Match Name",
+                                "name": "match_name",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "25",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5d7c126fd276c",
+                                "label": "Match Info",
+                                "name": "match_info",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "key": "group_5d76cf28edf86",
+        "title": "Post - Team",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "team"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d76cf474fd19": {
+                "key": "field_5d76cf474fd19",
+                "name": "team_members",
+                "type": "repeater",
+                "parent": "group_5d76cf28edf86",
+                "label": "Team Members",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5d76cf694fd1a",
+                        "label": "Position",
+                        "name": "team_member_position",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d76cf7f4fd1b",
+                        "label": "Name",
+                        "name": "team_member_name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "key": "group_5d72cc221cbfa",
+        "title": "Pre Footer",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/prefooter"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d72cc35066b0": {
+                "key": "field_5d72cc35066b0",
+                "name": "prefooter_title",
+                "type": "text",
+                "parent": "group_5d72cc221cbfa",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d72cc452864e": {
+                "key": "field_5d72cc452864e",
+                "name": "prefooter_body",
+                "type": "text",
+                "parent": "group_5d72cc221cbfa",
+                "label": "Body",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d7690fb90cb5": {
+                "key": "field_5d7690fb90cb5",
+                "name": "prefooter_enable_background",
+                "type": "true_false",
+                "parent": "group_5d72cc221cbfa",
+                "label": "Enable Background",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d72cc647d966": {
+                "key": "field_5d72cc647d966",
+                "name": "prefooter_image",
+                "type": "image",
+                "parent": "group_5d72cc221cbfa",
+                "label": "Image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d7690fb90cb5",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d6ee5c2ab260",
+        "title": "Site Settings",
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "acf-options-options"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d7c074c1df47": {
+                "key": "field_5d7c074c1df47",
+                "name": "",
+                "type": "tab",
+                "parent": "group_5d6ee5c2ab260",
+                "label": "General",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            "field_5d71507b94d5f": {
+                "key": "field_5d71507b94d5f",
+                "name": "is_event",
+                "type": "true_false",
+                "parent": "group_5d6ee5c2ab260",
+                "label": "Is Event",
+                "instructions": "This field should be checked off is this microsite is for an event.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d72948ad229f": {
+                "key": "field_5d72948ad229f",
+                "name": "event_logo",
+                "type": "image",
+                "parent": "group_5d6ee5c2ab260",
+                "label": "Event Logo",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            "field_5d6ee8579a50d": {
+                "key": "field_5d6ee8579a50d",
+                "name": "event_location_title",
+                "type": "text",
+                "parent": "group_5d6ee5c2ab260",
+                "label": "Event Location Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d72e76ae2bcc": {
+                "key": "field_5d72e76ae2bcc",
+                "name": "event_timezone",
+                "type": "timezone_picker",
+                "parent": "group_5d6ee5c2ab260",
+                "label": "Timezone",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_time_zone": ""
+            },
+            "field_5d6ee86b9a50e": {
+                "key": "field_5d6ee86b9a50e",
+                "name": "event_date_start",
+                "type": "date_time_picker",
+                "parent": "group_5d6ee5c2ab260",
+                "label": "Event Date Start",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y g:i a",
+                "return_format": "Y-m-d H:i:s",
+                "first_day": 1
+            },
+            "field_5d6eea44f0ae6": {
+                "key": "field_5d6eea44f0ae6",
+                "name": "event_date_end",
+                "type": "date_time_picker",
+                "parent": "group_5d6ee5c2ab260",
+                "label": "Event Date End",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "F j, Y g:i a",
+                "return_format": "Y-m-d H:i:s",
+                "first_day": 1
+            },
+            "field_5d701bb3ac464": {
+                "key": "field_5d701bb3ac464",
+                "name": "event_map_id",
+                "type": "text",
+                "parent": "group_5d6ee5c2ab260",
+                "label": "Event Map Id",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        }
+    },
+    {
+        "key": "group_5d6ea1fac0e37",
+        "title": "Ticket",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/ticket"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d6ebefa548d5": {
+                "key": "field_5d6ebefa548d5",
+                "name": "ticket_colour",
+                "type": "select",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Colour",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "gray": "Gray"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            "field_5d6ea23a00b15": {
+                "key": "field_5d6ea23a00b15",
+                "name": "ticket_title",
+                "type": "text",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d6ea24c00b16": {
+                "key": "field_5d6ea24c00b16",
+                "name": "ticket_price",
+                "type": "price",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Price",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "format": "|2\/.\/,|"
+            },
+            "field_5d6ea462cf0b9": {
+                "key": "field_5d6ea462cf0b9",
+                "name": "ticket_price_info",
+                "type": "text",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Price Info",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d6ea28000b17": {
+                "key": "field_5d6ea28000b17",
+                "name": "ticket_options",
+                "type": "repeater",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Options",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Add Option",
+                "sub_fields": [
+                    {
+                        "key": "field_5d6ea29c00b18",
+                        "label": "Option Price",
+                        "name": "option_price",
+                        "type": "price",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "format": "|2\/.\/,|"
+                    },
+                    {
+                        "key": "field_5d6ea2af00b19",
+                        "label": "Option Description",
+                        "name": "option_description",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            },
+            "field_5d6ea2c200b1a": {
+                "key": "field_5d6ea2c200b1a",
+                "name": "ticket_link",
+                "type": "link",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            "field_5d6ea2ce00b1b": {
+                "key": "field_5d6ea2ce00b1b",
+                "name": "ticket_legal",
+                "type": "text",
+                "parent": "group_5d6ea1fac0e37",
+                "label": "Legal",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        }
+    }
+]
