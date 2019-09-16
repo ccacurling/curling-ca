@@ -3,11 +3,12 @@
   margin: auto;
 
   .pdf-section {
-    width: 100%;
+    width: 102.25%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: 2rem 0;
+    margin-left: -1%;
     
     .pdf-container {
       display: flex;
@@ -17,7 +18,9 @@
       -moz-box-shadow: 0px 0px 10px 0px #ccc;
       box-shadow: 0px 0px 10px 0px #ccc;
       height: 550px;
+      max-width: 370px;
       text-align: center;
+      flex: 1 1 calc(1170px / 3);
 
       img {
         width: 370px;
@@ -40,10 +43,14 @@
 
 @include responsive-max(500px) {
   .pdf-with-image-block-container {
+    width: 100%;
+    margin-left: 0;
 
     .pdf-section {
       .pdf-container {
         height: 440px;
+        max-width: 280px;
+        flex: 1 1 100%;
 
         img {
           width: 280px;
