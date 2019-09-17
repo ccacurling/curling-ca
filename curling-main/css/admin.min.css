@@ -603,6 +603,14 @@
   line-height: 14px;
 }
 
+.edit-post-layout__content .block-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1210px;
+}
+
 .edit-post-layout__content .wp-block-columns.col-50-50 {
   flex-wrap: wrap;
 }
