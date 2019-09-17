@@ -19,6 +19,18 @@
 
   &.active {
     display: block;
+
+    &.nav-menu-popout-submenu-mobile .menu-list-container-mobile {
+      display: block;
+    }
+  }
+
+  &.nav-menu-popout-submenu-mobile {
+    display: block;
+
+    .menu-list-container-mobile {
+      display: none;
+    }
   }
 }
 
@@ -39,6 +51,11 @@
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
+
+  &.menu-submenunav-mobile {
+    justify-content: flex-start;
+    cursor: pointer;
+  }
 }
 
 .menu-subnav-mobile {
@@ -110,7 +127,7 @@
   padding-bottom: 12px;
   padding-left: 19px;
   padding-right: 19px;
-  font-size: 16px;
+  // font-size: 16px;
   cursor: pointer;
 }
 
