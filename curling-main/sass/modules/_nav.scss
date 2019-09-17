@@ -19,6 +19,18 @@
 
   &.active {
     display: block;
+
+    &.nav-menu-popout-submenu-mobile .menu-list-container-mobile {
+      display: block;
+    }
+  }
+
+  &.nav-menu-popout-submenu-mobile {
+    display: block;
+
+    .menu-list-container-mobile {
+      display: none;
+    }
   }
 }
 
@@ -39,6 +51,13 @@
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
+
+  &.menu-submenunav-mobile {
+    align-items: baseline;
+    justify-content: space-between;
+    padding-right: 16px;
+    cursor: pointer;
+  }
 }
 
 .menu-subnav-mobile {
@@ -110,7 +129,7 @@
   padding-bottom: 12px;
   padding-left: 19px;
   padding-right: 19px;
-  font-size: 16px;
+  // font-size: 16px;
   cursor: pointer;
 }
 
@@ -340,6 +359,21 @@
     cursor: default;
   }
 
+  &.active,
+  &.menu-item-selected {
+    background-color: $red;
+    .menu-item-title {
+      color: $white;
+    }
+    .menu-item-arrow {
+      display: none;
+    }
+  }
+  .menu-item-link {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
   .menu-item-link {
     display: flex;
     justify-content: center;
@@ -368,9 +402,14 @@
   margin-right: 15px;
   padding-top: 0;
   padding-bottom: 0;
-  padding-left: 14px;
-  padding-right: 14px;
+  padding-left: 0;
+  padding-right: 0;
   border-radius: 4px;
+
+  .menu-item-donate-link {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
 }
 
 .nav-menu-popout-mobile .menu-item-donate {
