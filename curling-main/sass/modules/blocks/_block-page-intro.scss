@@ -1,0 +1,42 @@
+
+.block-page-intro-label {
+  max-width: $full-width-wrapper;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.block-page-intro {
+  max-width: $full-width-wrapper;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+  
+  .page-intro-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 700px;
+  }
+  .page-intro-adspace {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 300px;
+  }
+}
+
+
+h1.page-intro-main-headline {
+  font-family: "Knockout";
+  color: #000000;
+  font-size: 50.4px;
+  letter-spacing: 0.5px;
+  line-height: 50.4px;
+  font-weight: 300;
+  text-transform: uppercase;
+}

@@ -5,6 +5,10 @@
   justify-content: space-between;
   margin: auto;
   margin-bottom: 3.5rem;
+
+  .callout-container {
+    max-width: 33.333%;
+  }
   
   .single-text-callout {
     flex-direction: row;
@@ -115,19 +119,46 @@
 
 .text-callouts-group.slick-slider {
   display: block;
+  margin-bottom: 3rem;
 
-  .single-text-callout {
-    display: block;
-
-    .callout-details {
-      a {
-        display: flex;
-
-        img {
-          left: 0.3rem;
+  .callout-container {
+  
+    .single-text-callout {
+      display: block;
+      margin: auto;
+  
+      .callout-details {
+        a {
+          display: flex;
+  
+          img {
+            left: 0.3rem;
+          }
         }
       }
     }
   }
-}
 
+  .slick-dots {
+    li.slick-active button {
+      border: 2px $red solid;
+
+      &:before {
+        color: $red;
+        opacity: 1;
+      }
+    }
+  
+    li button {
+      border: 2px black solid;
+      border-radius: 10px;
+    
+      &:before {
+        font-size: 33px;
+        left: 0.5px;
+        top: -0.5px;
+        opacity: 0;
+      }
+    }
+  }
+}

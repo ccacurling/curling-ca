@@ -4306,6 +4306,10 @@ p.item-label {
   margin-bottom: 3.5rem;
 }
 
+.text-callouts-group .callout-container {
+  max-width: 33.333%;
+}
+
 .text-callouts-group .single-text-callout {
   flex-direction: row;
   flex-wrap: wrap;
@@ -4413,18 +4417,41 @@ p.item-label {
 
 .text-callouts-group.slick-slider {
   display: block;
+  margin-bottom: 3rem;
 }
 
-.text-callouts-group.slick-slider .single-text-callout {
+.text-callouts-group.slick-slider .callout-container .single-text-callout {
   display: block;
+  margin: auto;
 }
 
-.text-callouts-group.slick-slider .single-text-callout .callout-details a {
+.text-callouts-group.slick-slider .callout-container .single-text-callout .callout-details a {
   display: flex;
 }
 
-.text-callouts-group.slick-slider .single-text-callout .callout-details a img {
+.text-callouts-group.slick-slider .callout-container .single-text-callout .callout-details a img {
   left: 0.3rem;
+}
+
+.text-callouts-group.slick-slider .slick-dots li.slick-active button {
+  border: 2px #ed1940 solid;
+}
+
+.text-callouts-group.slick-slider .slick-dots li.slick-active button:before {
+  color: #ed1940;
+  opacity: 1;
+}
+
+.text-callouts-group.slick-slider .slick-dots li button {
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.text-callouts-group.slick-slider .slick-dots li button:before {
+  font-size: 33px;
+  left: 0.5px;
+  top: -0.5px;
+  opacity: 0;
 }
 
 .pdf-with-image-block-container {
@@ -4577,6 +4604,48 @@ p.item-label {
 
 .schedule-link-text {
   text-decoration: underline;
+}
+
+.block-page-intro-label {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.block-page-intro {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.block-page-intro .page-intro-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 700px;
+}
+
+.block-page-intro .page-intro-adspace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 300px;
+}
+
+h1.page-intro-main-headline {
+  font-family: "Knockout";
+  color: #000000;
+  font-size: 50.4px;
+  letter-spacing: 0.5px;
+  line-height: 50.4px;
+  font-weight: 300;
+  text-transform: uppercase;
 }
 
 /*# sourceMappingURL=main.min.css.map */

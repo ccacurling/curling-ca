@@ -5,6 +5,7 @@ import './templates/VideoPlayer.js';
 import './templates/NewsFeed.js';
 import './templates/ScheduleLinks.js';
 import './blocks/block-timer.js';
+import './blocks/block-text-callouts-group';
 
 jQuery(document).ready(function($) {
   $('.js-curling-nav').curlingNav();
@@ -14,7 +15,6 @@ jQuery(document).ready(function($) {
   $('.js-image-carousel').imageCarousel();
   $('.js-news-feed').newsFeed();
   $('.js-schedule-links').scheduleLinks();
-  $('.text-callouts-group').slick({
-    //Options go here - look into breakpoints 1170px
-  });
+
 });
+

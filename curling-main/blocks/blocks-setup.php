@@ -2322,11 +2322,57 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-//Page Intro fields
+//Page Intro
 acf_add_local_field_group(array(
 	'key' => 'group_5d801f7c30869',
 	'title' => 'Page Intro',
 	'fields' => array(
+		array(
+			'key' => 'field_5d815b63094db',
+			'label' => 'Add Page Label',
+			'name' => 'has_label',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_5d815b8b094dc',
+			'label' => 'Page Label',
+			'name' => 'page_label',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d815b63094db',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
 		array(
 			'key' => 'field_5d801f8c32fc7',
 			'label' => 'Add Presented By Sponsor',

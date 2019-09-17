@@ -7,18 +7,27 @@
 
 
 //$has_cta = get_field('has_cta');
+$has_featured_label = get_field('has_label');
 $has_sponsor = get_field('has_sponsor');
 
 $headline = get_field('headline');
 $content = get_field('content');
 
 $adsnippet = get_field('adsnippet');
-?>
 
+if ($has_featured_label) { 
+    $page_label = get_field('page_label');
+?>
+<div class="block-page-intro-label">
+    <p class="item-label"><?php echo $page_label; ?></p>
+</div>
+<?php } 
+
+?>
 <section class="block-page-intro">
     <div class="page-intro-main">
-
 <?php
+
 //All the Presented By Stuff
 if ($has_sponsor) {
 
