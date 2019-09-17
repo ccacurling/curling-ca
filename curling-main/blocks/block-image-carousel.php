@@ -150,7 +150,7 @@ $carousel_gallery_chucks = array_chunk($carousel_gallery, 4);
           ?>
           <a class="image-carousel-link clear" href="<?php echo $image_link['url']; ?>" target="<?php echo $image_link['target']; ?>">
             <h4 class="btn-link-text red"><?php echo $image_link['title']; ?></h4>
-            <img class="btn-link-arrow" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right-large-red.svg" alt="arrow-right">
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="arrow-right">
           </a>
           <?php
             }

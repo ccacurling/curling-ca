@@ -222,27 +222,37 @@ function acf_blocks_init() {
       'category'				=> 'common',
       'icon'						=> 'admin-comments',
       'keywords'				=> [ 'draw', 'schedule', 'links' ]
-	]);
-	
-	acf_register_block([
-		'name'						=> 'page-intro',
-		'title'						=> __('Page Intro'),
-		'description'			=> __('A block to render the intro paragraph content for a given page'),
-		'render_callback'	=> 'block_render_callback',
-		'category'				=> 'common',
-		'icon'						=> 'admin-comments',
-    'keywords'				=> [ 'text', 'page', 'intro', 'content' ]
-  ]);
+    ]);
     
-  acf_register_block([
-    'name'						=> 'divider',
-    'title'						=> __('Divider'),
-    'description'			=> __('A block to render a divider'),
-    'render_callback'	=> 'block_render_callback',
-    'category'				=> 'common',
-    'icon'						=> 'admin-comments',
-    'keywords'				=> [ 'divider' ]
-  ]);
+    acf_register_block([
+      'name'						=> 'page-intro',
+      'title'						=> __('Page Intro'),
+      'description'			=> __('A block to render the intro paragraph content for a given page'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'text', 'page', 'intro', 'content' ]
+    ]);
+      
+    acf_register_block([
+      'name'						=> 'divider',
+      'title'						=> __('Divider'),
+      'description'			=> __('A block to render a divider'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'divider' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'team-small',
+      'title'						=> __('Team Small'),
+      'description'			=> __('A block to render a small team module'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'team', 'small' ]
+    ]);
 
     acf_add_options_page('Options');
   }
