@@ -4586,4 +4586,46 @@
   text-decoration: underline;
 }
 
+.edit-post-layout__content .block-page-intro-label {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+}
+
+.edit-post-layout__content .block-page-intro {
+  max-width: 1170px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.edit-post-layout__content .block-page-intro .page-intro-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 700px;
+}
+
+.edit-post-layout__content .block-page-intro .page-intro-adspace {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 300px;
+}
+
+.edit-post-layout__content h1.page-intro-main-headline {
+  font-family: "Knockout";
+  color: #000000;
+  font-size: 50.4px;
+  letter-spacing: 0.5px;
+  line-height: 50.4px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=admin.min.css.map */
