@@ -4226,6 +4226,10 @@ p.item-label {
   margin-bottom: 3.5rem;
 }
 
+.text-callouts-group .callout-container {
+  max-width: 33.333%;
+}
+
 .text-callouts-group .single-text-callout {
   flex-direction: row;
   flex-wrap: wrap;
@@ -4333,18 +4337,41 @@ p.item-label {
 
 .text-callouts-group.slick-slider {
   display: block;
+  margin-bottom: 3rem;
 }
 
-.text-callouts-group.slick-slider .single-text-callout {
+.text-callouts-group.slick-slider .callout-container .single-text-callout {
   display: block;
+  margin: auto;
 }
 
-.text-callouts-group.slick-slider .single-text-callout .callout-details a {
+.text-callouts-group.slick-slider .callout-container .single-text-callout .callout-details a {
   display: flex;
 }
 
-.text-callouts-group.slick-slider .single-text-callout .callout-details a img {
+.text-callouts-group.slick-slider .callout-container .single-text-callout .callout-details a img {
   left: 0.3rem;
+}
+
+.text-callouts-group.slick-slider .slick-dots li.slick-active button {
+  border: 2px #ed1940 solid;
+}
+
+.text-callouts-group.slick-slider .slick-dots li.slick-active button:before {
+  color: #ed1940;
+  opacity: 1;
+}
+
+.text-callouts-group.slick-slider .slick-dots li button {
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.text-callouts-group.slick-slider .slick-dots li button:before {
+  font-size: 33px;
+  left: 0.5px;
+  top: -0.5px;
+  opacity: 0;
 }
 
 .pdf-with-image-block-container {

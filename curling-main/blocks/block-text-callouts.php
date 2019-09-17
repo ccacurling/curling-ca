@@ -24,30 +24,29 @@
   
     if ( isset( $callout['image'] ) && !empty( $callout['image'] ) ) { 
       $has_image = true;
-    }
-  ?>
-
-  <div class="single-text-callout <?php echo ($has_image ? 'has-image' : ''); ?>">
-
-    <?php if ($has_image) { ?>
-      <img src="<?php echo $callout['image']?>"/>
-    <?php } ?>
-
-      <div class='callout-details <?php echo ($has_image ? 'has-image' : ''); ?>'>
-
-        <h4><?php echo $callout['title']; ?></h4>
-
-        <?php if (isset($callout['description']) && !empty($callout['description']) ){ 
-          echo "<p>{$callout['description']}</p>";
-        } ?> 
-
-        <a href="<?php echo $callout['link']; ?>">
-          <?php echo $callout['link_label']; ?> 
-          <img src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-        </a>
+    } ?>
+    <div class="callout-container <?php echo ($has_image ? 'has-image' : ''); ?>">
+      <div class="single-text-callout <?php echo ($has_image ? 'has-image' : ''); ?>">
+  
+      <?php if ($has_image) { ?>
+        <img src="<?php echo $callout['image']?>"/>
+      <?php } ?>
+  
+        <div class='callout-details <?php echo ($has_image ? 'has-image' : ''); ?>'>
+  
+          <h4><?php echo $callout['title']; ?></h4>
+  
+          <?php if (isset($callout['description']) && !empty($callout['description']) ){ 
+            echo "<p>{$callout['description']}</p>";
+          } ?> 
+  
+          <a href="<?php echo $callout['link']; ?>">
+            <?php echo $callout['link_label']; ?> 
+            <img src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+          </a>
+        </div>
       </div>
     </div>
     <?php
-  }
-  ?>
+  } ?>
 </section>

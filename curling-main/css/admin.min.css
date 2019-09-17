@@ -4244,6 +4244,10 @@
   margin-bottom: 3.5rem;
 }
 
+.edit-post-layout__content .text-callouts-group .callout-container {
+  max-width: 33.333%;
+}
+
 .edit-post-layout__content .text-callouts-group .single-text-callout {
   flex-direction: row;
   flex-wrap: wrap;
@@ -4351,18 +4355,41 @@
 
 .edit-post-layout__content .text-callouts-group.slick-slider {
   display: block;
+  margin-bottom: 3rem;
 }
 
-.edit-post-layout__content .text-callouts-group.slick-slider .single-text-callout {
+.edit-post-layout__content .text-callouts-group.slick-slider .callout-container .single-text-callout {
   display: block;
+  margin: auto;
 }
 
-.edit-post-layout__content .text-callouts-group.slick-slider .single-text-callout .callout-details a {
+.edit-post-layout__content .text-callouts-group.slick-slider .callout-container .single-text-callout .callout-details a {
   display: flex;
 }
 
-.edit-post-layout__content .text-callouts-group.slick-slider .single-text-callout .callout-details a img {
+.edit-post-layout__content .text-callouts-group.slick-slider .callout-container .single-text-callout .callout-details a img {
   left: 0.3rem;
+}
+
+.edit-post-layout__content .text-callouts-group.slick-slider .slick-dots li.slick-active button {
+  border: 2px #ed1940 solid;
+}
+
+.edit-post-layout__content .text-callouts-group.slick-slider .slick-dots li.slick-active button:before {
+  color: #ed1940;
+  opacity: 1;
+}
+
+.edit-post-layout__content .text-callouts-group.slick-slider .slick-dots li button {
+  border: 2px black solid;
+  border-radius: 10px;
+}
+
+.edit-post-layout__content .text-callouts-group.slick-slider .slick-dots li button:before {
+  font-size: 33px;
+  left: 0.5px;
+  top: -0.5px;
+  opacity: 0;
 }
 
 .edit-post-layout__content .pdf-with-image-block-container {
