@@ -22,6 +22,7 @@
 .team-small-thumbnail {
   height: 100%;
   max-height: none;
+  object-fit: cover;
 }
 
 .team-small-info {
@@ -33,8 +34,9 @@
 
 .team-small-title {
   display: block;
-  line-height: 52px;
   margin-bottom: 20px;
+  max-width: 220px;
+  line-height: 52px;
 }
 
 .team-small-members-container {

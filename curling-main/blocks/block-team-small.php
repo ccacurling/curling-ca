@@ -17,9 +17,15 @@ $team_small_members = get_field( 'team_members', $team_small_post );
 
 <section class="block-team-small">
   <div class="team-small-container">
-    <div class="team-small-thumbnail-container">
-      <img class="team-small-thumbnail" src="<?php echo $team_small_thumbnail; ?>" alt="Team Thumbnail" />
-    </div>
+    <?php
+      if ($team_small_title) {
+    ?>
+      <div class="team-small-thumbnail-container">
+        <img class="team-small-thumbnail" src="<?php echo $team_small_thumbnail; ?>" alt="Team Thumbnail" />
+      </div>
+    <?php
+      }
+    ?>
     <div class="team-small-info">
       <?php
         if ($team_small_title) {

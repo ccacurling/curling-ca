@@ -1,14 +1,15 @@
 
 p.item-label{
   display: inline-block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 6px 8.5px;
   font-size: 12px;
   background-color: $gray;
   color: $white;
   text-transform: uppercase;
   text-align: center;
   font-family: $knockout; 
-  padding: 6px 8.5px;
   border-radius: 2px;
-  margin: 8px;
 }
 

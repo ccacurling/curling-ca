@@ -598,6 +598,8 @@ li {
 }
 
 .wp-block-columns.col-50-50 .wp-block-column {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
 }
 
@@ -655,6 +657,8 @@ li {
 }
 
 .wp-block-columns.col-30-70 .wp-block-column {
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
 }
 
@@ -4275,15 +4279,16 @@ li {
 
 p.item-label {
   display: inline-block;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding: 6px 8.5px;
   font-size: 12px;
   background-color: #4c4c4e;
   color: #ffffff;
   text-transform: uppercase;
   text-align: center;
   font-family: "Knockout";
-  padding: 6px 8.5px;
   border-radius: 2px;
-  margin: 8px;
 }
 
 .presented-by-box {
@@ -4698,6 +4703,7 @@ h1.page-intro-main-headline {
 .team-small-thumbnail {
   height: 100%;
   max-height: none;
+  object-fit: cover;
 }
 
 .team-small-info {
@@ -4709,8 +4715,9 @@ h1.page-intro-main-headline {
 
 .team-small-title {
   display: block;
-  line-height: 52px;
   margin-bottom: 20px;
+  max-width: 220px;
+  line-height: 52px;
 }
 
 .team-small-members-container {
