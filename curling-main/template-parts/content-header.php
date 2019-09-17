@@ -1,6 +1,6 @@
 <?php
     global $wp;
-    $current_page_title = get_the_title(); // TODO: ADD for submenus
+    $current_page_title = get_the_title();
     $is_event = get_field('is_event', 'Options');
 
     $event_logo = get_field('event_logo', 'Options');
@@ -20,7 +20,10 @@
       }
     }
     
-    $menu_items = $primary_menu_items ? buildTree($primary_menu_items, 0, $current_page_title)['branch'] : [];
+    $menu_item_tree = $primary_menu_items ? buildTree($primary_menu_items, 0, $current_page_title) : [];
+
+    $is_submenu = $primary_menu_items ? $menu_item_tree['is_current'] : false;
+    $menu_items = $primary_menu_items ? $menu_item_tree['branch'] : [];
 
     function buildTree( array &$elements, $parentId = 0, $current_page_title = '' ) {
         $branch = array();
@@ -55,7 +58,7 @@
 ?>
 
 <div class="header header-mobile <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav-mobile">
-  <div class="nav-menu-top-mobile js-cta-topmenu-mobile">
+  <div class="nav-menu-top-mobile <?php echo $is_submenu ? 'nav-menu-top-submenu-mobile' : ''; ?> js-cta-topmenu-mobile">
     <?php 
       if ($is_event) {
     ?>
@@ -69,7 +72,10 @@
     <img class="menu-hamburger-mobile js-cta-menu-mobile-hamburger" src="<?php echo get_stylesheet_directory_uri()."/images/img-hamburger.svg"; ?>" alt="Hamburger" />
   </div>
   <?php
-    create_main_menu_mobile($top_right_menu_items, $menu_items);
+    create_main_menu_mobile($top_right_menu_items, $menu_items, [
+      'is_submenu' => $is_submenu,
+      'current_page_title' => $current_page_title
+    ]);
     create_submenus_mobile($menu_items);
   ?>
 </div>
@@ -219,39 +225,21 @@
 </div>
 
 <?php
-function create_main_menu_mobile($top_menu_items, $nav_items) {
+function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
 ?>
-  <div class="nav-menu-popout-mobile js-cta-popout-mobile" data-id="0">
-    <div class="nav-menu-top-right-mobile">
-      <div class="menu-nav-mobile">
+  <div class="nav-menu-popout-mobile <?php echo $options['is_submenu'] ? 'nav-menu-popout-submenu-mobile' : ''; ?> js-cta-popout-mobile" data-id="0">
+    <div class="nav-menu-top-right-mobile <?php echo $options['is_submenu'] ? 'js-nav-title-mobile' : ''; ?>">
+      <div class="menu-nav-mobile <?php echo $options['is_submenu'] ? 'menu-submenunav-mobile' : ''; ?>">
       <?php
-          foreach( $top_menu_items as $menu_item ) {
+        if ($options['is_submenu']) {
+      ?>
+        <h3 class="nav-menu-item-mobile inverted"><?php echo $options['current_page_title']; ?></h3>
+      <?php
+        } else {
       ?>
         <?php
-          if ($menu_item->url) {
+            foreach( $top_menu_items as $menu_item ) {
         ?>
-          <a class="clear" href="<?php echo $menu_item->url; ?>">
-        <?php
-          }
-        ?>
-          <h4 class="nav-menu-item-mobile inverted"><?php echo $menu_item->title; ?></h4>
-        <?php
-          if ($menu_item->url) {
-        ?>
-          </a>
-        <?php
-          }
-        ?>
-      <?php
-          }
-      ?>
-      </div>
-    </div>
-    <?php
-        foreach( $nav_items as $menu_item ) {
-    ?>
-      <ul class="menu-list-mobile js-cta-menu-list-mobile">
-        <li class="menu-item-mobile menu-item-main-mobile">
           <?php
             if ($menu_item->url) {
           ?>
@@ -259,16 +247,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
           <?php
             }
           ?>
-              <div class="menu-item-container-mobile js-cta-menu-item-mobile">
-                <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
-                <?php
-                  if (isset($menu_item->children) && count ($menu_item->children) > 0) {
-                ?>
-                  <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
-                <?php
-                  }
-                ?>
-              </div>
+            <h4 class="nav-menu-item-mobile inverted"><?php echo $menu_item->title; ?></h4>
           <?php
             if ($menu_item->url) {
           ?>
@@ -276,61 +255,100 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
           <?php
             }
           ?>
-          <?php
-            if (isset($menu_item->children) && count ($menu_item->children) > 0) {
-          ?>
-          <ul class="menu-list-mobile js-cta-menu-list-mobile">
-            <?php
-            foreach( $menu_item->children as $menu_subitem ) {
-            ?>
-              <li class="menu-item-mobile">
-                <?php
-                  if ($menu_subitem->url) {
-                ?>
-                  <a class="clear" href="<?php echo $menu_subitem->url; ?>">
-                <?php
-                  }
-                ?>
-                <div class="menu-item-container-mobile menu-item-subcontainer-mobile js-cta-menu-subitem-mobile" data-id="<?php echo $menu_subitem->ID; ?>">
-                  <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subitem->title; ?></h4>
-                    <?php
-                      if (isset($menu_subitem->children) && count ($menu_subitem->children) > 0) {
-                    ?>
-                      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right.svg"; ?>" alt="triangle right" />
-                    <?php
-                      }
-                    ?>
-                </div>
-                <?php
-                  if ($menu_subitem->url) {
-                ?>
-                  </a>
-                <?php
-                  }
-                ?>
-              </li>
-            <?php
-            }
-            ?>
-          </ul>
-          <?php
-            }
-          ?>
-        </li>
-      </ul>
-    <?php
+        <?php
+          }
+        ?>
+      <?php
         }
-    ?>
-    <div class="nav-menu-popout-bottom-mobile">
-      <div class="menu-item menu-item-donate">
-        <h4 class="menu-item-small inverted">Donate</h4>
+      ?>
       </div>
-      <div class="nav-menu-social-mobile">
-        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook.svg"; ?>" alt="social" />
-        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter.svg"; ?>" alt="social" />
-        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-instagram.svg"; ?>" alt="social" />
-        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-youtube.svg"; ?>" alt="social" />
-        <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-linkedin.svg"; ?>" alt="social" />
+    </div>
+    <div class="menu-list-container-mobile">
+      <?php
+          foreach( $nav_items as $menu_item ) {
+      ?>
+        <ul class="menu-list-mobile js-cta-menu-list-mobile">
+          <li class="menu-item-mobile menu-item-main-mobile">
+            <?php
+              if ($menu_item->url) {
+            ?>
+              <a class="clear" href="<?php echo $menu_item->url; ?>">
+            <?php
+              }
+            ?>
+                <div class="menu-item-container-mobile js-cta-menu-item-mobile">
+                  <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
+                  <?php
+                    if (isset($menu_item->children) && count ($menu_item->children) > 0) {
+                  ?>
+                    <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
+                  <?php
+                    }
+                  ?>
+                </div>
+            <?php
+              if ($menu_item->url) {
+            ?>
+              </a>
+            <?php
+              }
+            ?>
+            <?php
+              if (isset($menu_item->children) && count ($menu_item->children) > 0) {
+            ?>
+            <ul class="menu-list-mobile js-cta-menu-list-mobile">
+              <?php
+              foreach( $menu_item->children as $menu_subitem ) {
+              ?>
+                <li class="menu-item-mobile">
+                  <?php
+                    if ($menu_subitem->url) {
+                  ?>
+                    <a class="clear" href="<?php echo $menu_subitem->url; ?>">
+                  <?php
+                    }
+                  ?>
+                  <div class="menu-item-container-mobile menu-item-subcontainer-mobile js-cta-menu-subitem-mobile" data-id="<?php echo $menu_subitem->ID; ?>">
+                    <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subitem->title; ?></h4>
+                      <?php
+                        if (isset($menu_subitem->children) && count ($menu_subitem->children) > 0) {
+                      ?>
+                        <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right.svg"; ?>" alt="triangle right" />
+                      <?php
+                        }
+                      ?>
+                  </div>
+                  <?php
+                    if ($menu_subitem->url) {
+                  ?>
+                    </a>
+                  <?php
+                    }
+                  ?>
+                </li>
+              <?php
+              }
+              ?>
+            </ul>
+            <?php
+              }
+            ?>
+          </li>
+        </ul>
+      <?php
+          }
+      ?>
+      <div class="nav-menu-popout-bottom-mobile">
+        <div class="menu-item menu-item-donate">
+          <h4 class="menu-item-small inverted">Donate</h4>
+        </div>
+        <div class="nav-menu-social-mobile">
+          <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook.svg"; ?>" alt="social" />
+          <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter.svg"; ?>" alt="social" />
+          <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-instagram.svg"; ?>" alt="social" />
+          <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-youtube.svg"; ?>" alt="social" />
+          <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-linkedin.svg"; ?>" alt="social" />
+        </div>
       </div>
     </div>
   </div>

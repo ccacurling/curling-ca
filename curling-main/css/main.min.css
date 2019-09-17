@@ -1391,6 +1391,18 @@ li {
   display: block;
 }
 
+.nav-menu-popout-mobile.active.nav-menu-popout-submenu-mobile .menu-list-container-mobile {
+  display: block;
+}
+
+.nav-menu-popout-mobile.nav-menu-popout-submenu-mobile {
+  display: block;
+}
+
+.nav-menu-popout-mobile.nav-menu-popout-submenu-mobile .menu-list-container-mobile {
+  display: none;
+}
+
 .menu-nav-popout-item {
   display: none;
   position: absolute;
@@ -1408,6 +1420,11 @@ li {
   justify-content: space-evenly;
   width: 100%;
   height: 100%;
+}
+
+.menu-nav-mobile.menu-submenunav-mobile {
+  justify-content: flex-start;
+  cursor: pointer;
 }
 
 .menu-subnav-mobile {
@@ -1482,7 +1499,6 @@ li {
   padding-bottom: 12px;
   padding-left: 19px;
   padding-right: 19px;
-  font-size: 16px;
   cursor: pointer;
 }
 

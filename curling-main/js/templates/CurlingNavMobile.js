@@ -20,6 +20,19 @@ jQuery(document).ready(function($) {
 
       this.menuLists = this.element.find('.js-cta-menu-list-mobile');
       this.popouts = this.element.find('.js-cta-popout-mobile')
+      this.navTitle = this.element.find('.js-nav-title-mobile');
+
+      if (this.navTitle) {
+        this.navTitle.click(() => {
+          this.topMenu.toggleClass('active');
+          if (this.topMenu.hasClass('active')) {
+            this.hidePopupsMobile();
+            this.showPopupMobile(0);
+          } else {
+            this.hidePopupsMobile();
+          }
+        });
+      }
 
       this.hamburger.click(() => {
         this.topMenu.toggleClass('active');
