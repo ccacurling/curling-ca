@@ -1,19 +1,36 @@
 .block-image-carousel {
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 20px;
 
   @include responsive-min($responsive-laptop) {
     padding-bottom: 52px;
   }
+
+  &.image-carousel-gray {
+    background-color: $cool-light-gray;
+  }
+}
+
+.image-carousel-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+}
+
+.image-carousel-sub-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 100px;
+  max-width: 890px;
 }
 
 .image-carousel-title {
-  padding-left: 15px;
-  padding-right: 15px;
   padding-bottom : 30px;
 
   @include responsive-min($responsive-laptop) {
-    padding-bottom: 0;
+    padding-bottom: 25px;
   }
 }
 
@@ -67,6 +84,7 @@
 }
 
 .image-carousel-gallery-mobile {
+  padding-top: 20px;
   @include responsive-min($responsive-laptop) {
     display: none;
   }
@@ -197,3 +215,17 @@
   text-align: center;
 }
 
+.image-carousel-links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+
+  @include responsive-min($responsive-laptop) {
+    flex-direction: row;
+  }
+}
+
+.image-carousel-link {
+  padding-right: 35px;
+  padding-bottom: 20px;
+}
