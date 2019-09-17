@@ -168,7 +168,8 @@
     }
   }
 
-  .menu-item-selectable:hover {
+  .menu-item-selectable:hover,
+  .menu-item-selectable.menu-item-selected {
     .menu-item-underline {
       display: block;
     }

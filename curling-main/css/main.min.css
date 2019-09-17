@@ -847,7 +847,8 @@ li {
   color: #ffffff;
 }
 
-.header-event .menu-item-selectable:hover .menu-item-underline {
+.header-event .menu-item-selectable:hover .menu-item-underline,
+.header-event .menu-item-selectable.menu-item-selected .menu-item-underline {
   display: block;
 }
 
@@ -1548,7 +1549,7 @@ li {
   z-index: 1;
 }
 
-.nav-menu-popup.active {
+.nav-menu-popup.active, .nav-menu-popup.nav-menu-popup-active {
   max-height: 100%;
   z-index: 2;
 }
