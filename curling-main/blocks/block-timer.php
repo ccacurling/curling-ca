@@ -11,6 +11,7 @@ $start_date_value = get_field( 'event_date_start', 'Options' );
 $end_date_value = get_field( 'event_date_end', 'Options' );
 $timezone = get_field( 'event_timezone', 'Options' );
 $location = get_field( 'event_location_title', 'Options' );
+$timer_link = get_field( 'event_location_page_link', 'Options' );
 
 $start_date_value = $start_date_value ? $start_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
 $end_date_value = $end_date_value ? $end_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
@@ -74,11 +75,19 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 			<div class="block-timer-info-top">
 				<h3 class="block-timer-info-date inverted"><?php echo $start_date_string; ?><?php echo $start_date_string !== $end_date_short_string ? ' - '.$end_date_string : ''; ?></h3>
 				<h3 class="block-timer-info-location inverted"><?php echo $location; ?></h3>
-			</div>
-			<div class="btn-link-container">
-				<h4 class="btn-link-text inverted">MORE DETAILS</h4>
-				<img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-white.svg"; ?>" alt="arrow-right" />
-			</div>
-		</div>
+      </div>
+      <?php
+        if ($timer_link) {
+      ?>
+        <div class="block-timer-link-container">
+          <a href="<?php echo $timer_link['url']; ?>" target="<?php echo $timer_link['target']; ?>">
+          <h4 class="btn-link-text inverted"><?php echo $timer_link['title']; ?></h4>
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-white.svg"; ?>" alt="arrow-right" />
+          </a>
+        </div>
+      <?php
+        }
+      ?>
+    </div>
 	</div>
 </div>

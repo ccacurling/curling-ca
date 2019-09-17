@@ -2000,7 +2000,7 @@
 }
 
 .edit-post-layout__content .block-hero-inner {
-  display: flex;
+  display: none;
   align-items: flex-start;
   flex-direction: column;
   margin-left: 16px;
@@ -2010,6 +2010,7 @@
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-hero-inner {
+    display: flex;
     position: absolute;
     left: 10%;
     margin-left: 0;
@@ -2422,6 +2423,10 @@
 
 .edit-post-layout__content .block-timer-info-date {
   margin-bottom: 10px;
+}
+
+.edit-post-layout__content .block-timer-link-container {
+  padding-top: 25px;
 }
 
 .edit-post-layout__content .block-timer-info-link-container {
