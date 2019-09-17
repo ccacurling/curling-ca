@@ -5,6 +5,9 @@
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
+  @include responsive-max($responsive-tablet) {
+    padding: 20px;
+  }
 }
 
 .block-page-intro {
@@ -12,21 +15,34 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 0;
+  margin: auto;
+
+  @include responsive-max($responsive-tablet) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
   
   .page-intro-main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: auto;
+    margin: auto 0;
     max-width: 700px;
+    @include responsive-max($responsive-tablet) {
+      margin: auto;
+      padding: 20px;
+    }
   }
   .page-intro-adspace {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: auto;
+    margin: auto 0;
     max-width: 300px;
+    @include responsive-max($responsive-tablet) {
+      margin: auto;
+      padding: 20px 0;
+    }
   }
 }
 
@@ -39,4 +55,5 @@ h1.page-intro-main-headline {
   line-height: 50.4px;
   font-weight: 300;
   text-transform: uppercase;
+  margin-bottom: 17px;
 }
