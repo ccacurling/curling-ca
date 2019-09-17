@@ -781,32 +781,16 @@ li {
   margin-left: 30px;
 }
 
-.header-event .menu-item.active {
+.header-event .menu-item.active, .header-event .menu-item.menu-item-selected {
   background-color: #ed1940;
 }
 
-.header-event .menu-item.active .menu-item-title {
+.header-event .menu-item.active .menu-item-title, .header-event .menu-item.menu-item-selected .menu-item-title {
   color: #ffffff;
 }
 
-.header-event .menu-item.active .menu-item-arrow {
-  display: none;
-}
-
-.header-event .menu-item .menu-item-link {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 .header-event .menu-item-donate {
-  padding-left: 0;
-  padding-right: 0;
   background-color: #ed1940;
-}
-
-.header-event .menu-item-donate a {
-  padding-left: 14px;
-  padding-right: 14px;
 }
 
 .header-event .nav-menu-primary .menu-item-content {
@@ -1423,7 +1407,9 @@ li {
 }
 
 .menu-nav-mobile.menu-submenunav-mobile {
-  justify-content: flex-start;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-right: 16px;
   cursor: pointer;
 }
 
@@ -1725,6 +1711,23 @@ li {
   cursor: default;
 }
 
+.menu-item.active, .menu-item.menu-item-selected {
+  background-color: #ed1940;
+}
+
+.menu-item.active .menu-item-title, .menu-item.menu-item-selected .menu-item-title {
+  color: #ffffff;
+}
+
+.menu-item.active .menu-item-arrow, .menu-item.menu-item-selected .menu-item-arrow {
+  display: none;
+}
+
+.menu-item .menu-item-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .menu-item .menu-item-link {
   display: flex;
   justify-content: center;
@@ -1753,9 +1756,14 @@ li {
   margin-right: 15px;
   padding-top: 0;
   padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 4px;
+}
+
+.menu-item-donate .menu-item-donate-link {
   padding-left: 14px;
   padding-right: 14px;
-  border-radius: 4px;
 }
 
 .nav-menu-popout-mobile .menu-item-donate {
@@ -4430,6 +4438,11 @@ p.item-label {
 .block-schedule {
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 990px;
 }
 
 .schedule-date-container {

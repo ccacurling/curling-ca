@@ -810,32 +810,16 @@
   margin-left: 30px;
 }
 
-.edit-post-layout__content .header-event .menu-item.active {
+.edit-post-layout__content .header-event .menu-item.active, .edit-post-layout__content .header-event .menu-item.menu-item-selected {
   background-color: #ed1940;
 }
 
-.edit-post-layout__content .header-event .menu-item.active .menu-item-title {
+.edit-post-layout__content .header-event .menu-item.active .menu-item-title, .edit-post-layout__content .header-event .menu-item.menu-item-selected .menu-item-title {
   color: #ffffff;
 }
 
-.edit-post-layout__content .header-event .menu-item.active .menu-item-arrow {
-  display: none;
-}
-
-.edit-post-layout__content .header-event .menu-item .menu-item-link {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
 .edit-post-layout__content .header-event .menu-item-donate {
-  padding-left: 0;
-  padding-right: 0;
   background-color: #ed1940;
-}
-
-.edit-post-layout__content .header-event .menu-item-donate a {
-  padding-left: 14px;
-  padding-right: 14px;
 }
 
 .edit-post-layout__content .header-event .nav-menu-primary .menu-item-content {
@@ -1441,7 +1425,9 @@
 }
 
 .edit-post-layout__content .menu-nav-mobile.menu-submenunav-mobile {
-  justify-content: flex-start;
+  align-items: baseline;
+  justify-content: space-between;
+  padding-right: 16px;
   cursor: pointer;
 }
 
@@ -1743,6 +1729,23 @@
   cursor: default;
 }
 
+.edit-post-layout__content .menu-item.active, .edit-post-layout__content .menu-item.menu-item-selected {
+  background-color: #ed1940;
+}
+
+.edit-post-layout__content .menu-item.active .menu-item-title, .edit-post-layout__content .menu-item.menu-item-selected .menu-item-title {
+  color: #ffffff;
+}
+
+.edit-post-layout__content .menu-item.active .menu-item-arrow, .edit-post-layout__content .menu-item.menu-item-selected .menu-item-arrow {
+  display: none;
+}
+
+.edit-post-layout__content .menu-item .menu-item-link {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .edit-post-layout__content .menu-item .menu-item-link {
   display: flex;
   justify-content: center;
@@ -1771,9 +1774,14 @@
   margin-right: 15px;
   padding-top: 0;
   padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 4px;
+}
+
+.edit-post-layout__content .menu-item-donate .menu-item-donate-link {
   padding-left: 14px;
   padding-right: 14px;
-  border-radius: 4px;
 }
 
 .edit-post-layout__content .nav-menu-popout-mobile .menu-item-donate {
@@ -4448,6 +4456,11 @@
 .edit-post-layout__content .block-schedule {
   padding-top: 60px;
   padding-bottom: 60px;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 990px;
 }
 
 .edit-post-layout__content .schedule-date-container {

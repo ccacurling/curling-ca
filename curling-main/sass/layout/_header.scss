@@ -102,30 +102,17 @@
   }
 
   .menu-item {
-    &.active {
+    &.active,
+    &.menu-item-selected {
       background-color: $red;
       .menu-item-title {
         color: $white;
       }
-      .menu-item-arrow {
-        display: none;
-      }
-    }
-    .menu-item-link {
-      padding-top: 0;
-      padding-bottom: 0;
     }
   }
 
   .menu-item-donate {
-    padding-left: 0;
-    padding-right: 0;
     background-color: $red;
-
-    a {
-      padding-left: 14px;
-      padding-right: 14px;
-    }
   }
 
   .nav-menu-primary {
@@ -174,9 +161,7 @@
       display: block;
     }
   }
-}
 
-.header-event {
   .menu-top-nav,
   .nav-menu-top-right-wrapper {
     .menu-item-selectable:hover {
@@ -193,4 +178,3 @@
     color: $white;
   }
 }
-  

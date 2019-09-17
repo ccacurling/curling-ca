@@ -143,7 +143,7 @@
                               }
                           ?>
                           <li class="menu-item menu-item-donate">
-                            <a class="clear" href="">
+                            <a class="menu-item-donate-link clear" href="">
                               <h4 class="menu-item-small inverted">Donate</h4>
                             </a>
                           </li>
@@ -233,7 +233,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
       <?php
         if ($options['is_submenu']) {
       ?>
-        <h3 class="nav-menu-item-mobile inverted"><?php echo $options['current_page_title']; ?></h3>
+        <h3 class="nav-menu-item-mobile inverted"><?php echo $options['current_page_title']; ?></h3><img src="<?php echo get_stylesheet_directory_uri()."/images/triangle-down.svg"; ?>" alt="Triangle" />
       <?php
         } else {
       ?>
@@ -340,7 +340,9 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
       ?>
       <div class="nav-menu-popout-bottom-mobile">
         <div class="menu-item menu-item-donate">
-          <h4 class="menu-item-small inverted">Donate</h4>
+          <a class="menu-item-donate-link clear" href="">
+            <h4 class="menu-item-small inverted">Donate</h4>
+          </a>
         </div>
         <div class="nav-menu-social-mobile">
           <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook.svg"; ?>" alt="social" />
@@ -453,7 +455,9 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
     </ul>
     <div class="nav-menu-popout-bottom-mobile">
       <div class="menu-item menu-item-donate">
-        <h4 class="menu-item-small inverted">Donate</h4>
+        <a class="menu-item-donate-link clear" href="">
+          <h4 class="menu-item-small inverted">Donate</h4>
+        </a>
       </div>
       <div class="nav-menu-social-mobile">
         <img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook.svg"; ?>" alt="social" />
