@@ -2248,6 +2248,12 @@ li {
   color: #4c4c4e;
 }
 
+.block-divider {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  border-bottom: 1px solid #d8d8d8;
+}
+
 .block-hero-carousel {
   display: flex;
   flex-direction: column;

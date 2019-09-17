@@ -231,8 +231,18 @@ function acf_blocks_init() {
 		'render_callback'	=> 'block_render_callback',
 		'category'				=> 'common',
 		'icon'						=> 'admin-comments',
-		  'keywords'				=> [ 'text', 'page', 'intro', 'content' ]
-	  ]);
+    'keywords'				=> [ 'text', 'page', 'intro', 'content' ]
+  ]);
+    
+  acf_register_block([
+    'name'						=> 'divider',
+    'title'						=> __('Divider'),
+    'description'			=> __('A block to render a divider'),
+    'render_callback'	=> 'block_render_callback',
+    'category'				=> 'common',
+    'icon'						=> 'admin-comments',
+    'keywords'				=> [ 'divider' ]
+  ]);
 
     acf_add_options_page('Options');
   }
