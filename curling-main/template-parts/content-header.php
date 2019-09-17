@@ -1,6 +1,6 @@
 <?php
     global $wp;
-    $current_page_title = get_the_title();
+    $current_page_title = get_the_title(); // TODO: ADD for submenus
     $is_event = get_field('is_event', 'Options');
 
     $event_logo = get_field('event_logo', 'Options');
@@ -20,13 +20,24 @@
       }
     }
     
-    $menu_items = $primary_menu_items ? buildTree($primary_menu_items) : [];
+    $menu_items = $primary_menu_items ? buildTree($primary_menu_items, 0, $current_page_title)['branch'] : [];
 
-    function buildTree( array &$elements, $parentId = 0 ) {
+    function buildTree( array &$elements, $parentId = 0, $current_page_title = '' ) {
         $branch = array();
+        $is_current = false;
+
         foreach ( $elements as &$element ) {
             if ( $element->menu_item_parent == $parentId ) {
-                $children = buildTree( $elements, $element->ID );
+                $tree = buildTree( $elements, $element->ID, $current_page_title );
+                $children = $tree['branch'];
+                if ($element->title === $current_page_title) {
+                  $element->is_current_page = true;
+                  $is_current = true;
+                }
+                if ($tree['is_current']) {
+                  $element->is_current_page = true;
+                  $is_current = true;
+                }
                 if ( $children ) {
                     $element->children = $children;
                 }
@@ -35,7 +46,10 @@
                 unset( $element );
             }
         }
-        return $branch;
+        return [
+          'branch' => $branch,
+          'is_current' => $is_current
+        ];
     }
 
 ?>
@@ -148,7 +162,7 @@
                   <?php
                       foreach ($menu_items as $id => $item) {
                   ?>
-                      <li class="menu-item <?php echo $item->title === $current_page_title ? 'menu-item-selected' : ''; ?> <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
+                      <li class="menu-item <?php echo $item->is_current_page ? 'menu-item-selected' : ''; ?> <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
                         <?php
                           if ($item->url) {
                         ?>
@@ -182,7 +196,7 @@
         foreach( $menu_items as $id => $menu_item ) {
             if ($menu_item->children) {
               if ($is_event) {
-                create_menu_bar_event_item($menu_item->ID, $menu_item->children);
+                create_menu_bar_event_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
               } else {
                 create_menu_bar_item($menu_item->ID, $menu_item->children);
               }
@@ -537,15 +551,15 @@ function create_menu_bar($name, $menu_items) {
 ?>
 
 <?php
-function create_menu_bar_event_item($parent_id, $menu_items) {
+function create_menu_bar_event_item($parent_id, $menu_items, $is_current_page = false) {
 ?>
-  <div class="nav-menu-popup" data-name="<?php echo $parent_id; ?>">
+  <div class="nav-menu-popup <?php echo $is_current_page ? 'nav-menu-popup-active' : ''; ?>" data-name="<?php echo $parent_id; ?>">
     <ul class="nav-menu-popup-list">
       <?php
         foreach ($menu_items as $key => $menu_subitem) {
       ?>
         <li class="menu-event-subitem">
-          <div class="menu-item-selectable">
+          <div class="menu-item-selectable <?php echo $menu_subitem->is_current_page ? 'menu-item-selected' : ''; ?>">
             <?php
               if ($menu_subitem->url) {
             ?>

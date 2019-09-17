@@ -876,7 +876,8 @@
   color: #ffffff;
 }
 
-.edit-post-layout__content .header-event .menu-item-selectable:hover .menu-item-underline {
+.edit-post-layout__content .header-event .menu-item-selectable:hover .menu-item-underline,
+.edit-post-layout__content .header-event .menu-item-selectable.menu-item-selected .menu-item-underline {
   display: block;
 }
 
@@ -1566,7 +1567,7 @@
   z-index: 1;
 }
 
-.edit-post-layout__content .nav-menu-popup.active {
+.edit-post-layout__content .nav-menu-popup.active, .edit-post-layout__content .nav-menu-popup.nav-menu-popup-active {
   max-height: 100%;
   z-index: 2;
 }
