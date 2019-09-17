@@ -1982,7 +1982,7 @@ li {
 }
 
 .block-hero-inner {
-  display: flex;
+  display: none;
   align-items: flex-start;
   flex-direction: column;
   margin-left: 16px;
@@ -1992,6 +1992,7 @@ li {
 
 @media only screen and (min-width: 769px) {
   .block-hero-inner {
+    display: flex;
     position: absolute;
     left: 10%;
     margin-left: 0;
@@ -2404,6 +2405,10 @@ li {
 
 .block-timer-info-date {
   margin-bottom: 10px;
+}
+
+.block-timer-link-container {
+  padding-top: 25px;
 }
 
 .block-timer-info-link-container {

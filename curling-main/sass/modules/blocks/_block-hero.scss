@@ -112,7 +112,7 @@
 }
 
 .block-hero-inner {
-  display: flex;
+  display: none; // TODO: For events mircosites. Fix for main site
   align-items: flex-start;
   flex-direction: column;
   margin-left: 16px;
@@ -120,6 +120,7 @@
   border-bottom: 1px solid $light-gray;
 
   @include responsive-min($responsive-tablet) {
+    display: flex;
     position: absolute;
     left: 10%;
     margin-left: 0;

@@ -56,7 +56,16 @@
 
 <div class="header header-mobile <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav-mobile">
   <div class="nav-menu-top-mobile js-cta-topmenu-mobile">
-    <img class="menu-logo-mobile" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
+    <?php 
+      if ($is_event) {
+    ?>
+      <div></div>
+    <?php
+      }
+    ?>
+    <a href="<?php echo get_home_url(); ?>">
+        <img class="menu-logo-mobile" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
+    </a>
     <img class="menu-hamburger-mobile js-cta-menu-mobile-hamburger" src="<?php echo get_stylesheet_directory_uri()."/images/img-hamburger.svg"; ?>" alt="Hamburger" />
   </div>
   <?php
@@ -70,7 +79,9 @@
       <div class="nav-menu-top">
           <div class="nav-menu-top-wrapper content-container">
               <div class="nav-menu-top-left-wrapper">
-                  <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
+                  <a href="<?php echo get_home_url(); ?>">
+                      <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
+                  </a>
                   <ul class="menu-top-nav menu-nav">
                       <?php
                           foreach( $top_left_menu_items as $menu_item ) {
@@ -157,7 +168,9 @@
         </div>
         <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
         <div class="nav-menu-primary-wrapper content-container">
-            <img class="menu-logo" src="<?php echo ($is_event && $event_logo) ? $event_logo['url'] : get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
+              <a href="<?php echo get_home_url(); ?>">
+                  <img class="menu-logo" src="<?php echo ($is_event && $event_logo) ? $event_logo['url'] : get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
+              </a>
               <ul class="menu-nav nav-left-offset">
                   <?php
                       foreach ($menu_items as $id => $item) {
