@@ -191,7 +191,7 @@ function acf_blocks_init() {
       'render_callback'	=> 'block_render_callback',
       'category'				=> 'common',
       'icon'						=> 'admin-comments',
-        'keywords'				=> [ 'text', 'image', '' ]
+        'keywords'				=> [ 'text', 'image' ]
     ]);
 
     acf_register_block([
@@ -222,7 +222,17 @@ function acf_blocks_init() {
       'category'				=> 'common',
       'icon'						=> 'admin-comments',
       'keywords'				=> [ 'draw', 'schedule', 'links' ]
-    ]);
+	]);
+	
+	acf_register_block([
+		'name'						=> 'page-intro',
+		'title'						=> __('Page Intro'),
+		'description'			=> __('A block to render the intro paragraph content for a given page'),
+		'render_callback'	=> 'block_render_callback',
+		'category'				=> 'common',
+		'icon'						=> 'admin-comments',
+		  'keywords'				=> [ 'text', 'page', 'intro', 'content' ]
+	  ]);
 
     acf_add_options_page('Options');
   }
