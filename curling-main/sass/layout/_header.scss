@@ -185,4 +185,11 @@
     }
   }
 }
+
+.menu-item.menu-item-selected {
+  background-color: $red;
+  .menu-item-title {
+    color: $white;
+  }
+}
   

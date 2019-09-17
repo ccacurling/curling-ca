@@ -1,4 +1,6 @@
 <?php
+    global $wp;
+    $current_page_title = get_the_title();
     $is_event = get_field('is_event', 'Options');
 
     $event_logo = get_field('event_logo', 'Options');
@@ -10,8 +12,6 @@
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
-
-    $current_page = -1; // TODO: FIX!
 
     $languages = icl_get_languages();
     foreach ($languages as $key => $language) {
@@ -69,7 +69,7 @@
                             <?php
                               }
                             ?>
-                              <h4 class="menu-item-top-nav menu-item-content menu-item-link <?php echo $menu_item->ID === $current_page ? 'menu-item-selected' : ''; ?>"><?php echo $menu_item->title; ?></h4>
+                              <h4 class="menu-item-top-nav menu-item-content menu-item-link"><?php echo $menu_item->title; ?></h4>
                             <?php
                               if ($menu_item->url) {
                             ?>
@@ -148,7 +148,7 @@
                   <?php
                       foreach ($menu_items as $id => $item) {
                   ?>
-                      <li class="menu-item <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
+                      <li class="menu-item <?php echo $item->title === $current_page_title ? 'menu-item-selected' : ''; ?> <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
                         <?php
                           if ($item->url) {
                         ?>
@@ -200,7 +200,21 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
       <?php
           foreach( $top_menu_items as $menu_item ) {
       ?>
-        <h4 class="nav-menu-item-mobile inverted"><?php echo $menu_item->title; ?></h4>
+        <?php
+          if ($menu_item->url) {
+        ?>
+          <a class="clear" href="<?php echo $menu_item->url; ?>">
+        <?php
+          }
+        ?>
+          <h4 class="nav-menu-item-mobile inverted"><?php echo $menu_item->title; ?></h4>
+        <?php
+          if ($menu_item->url) {
+        ?>
+          </a>
+        <?php
+          }
+        ?>
       <?php
           }
       ?>
@@ -211,16 +225,30 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
     ?>
       <ul class="menu-list-mobile js-cta-menu-list-mobile">
         <li class="menu-item-mobile menu-item-main-mobile">
-          <div class="menu-item-container-mobile js-cta-menu-item-mobile">
-            <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
-            <?php
-              if (isset($menu_item->children) && count ($menu_item->children) > 0) {
-            ?>
-              <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
-            <?php
-              }
-            ?>
-          </div>
+          <?php
+            if ($menu_item->url) {
+          ?>
+            <a class="clear" href="<?php echo $menu_item->url; ?>">
+          <?php
+            }
+          ?>
+              <div class="menu-item-container-mobile js-cta-menu-item-mobile">
+                <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
+                <?php
+                  if (isset($menu_item->children) && count ($menu_item->children) > 0) {
+                ?>
+                  <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
+                <?php
+                  }
+                ?>
+              </div>
+          <?php
+            if ($menu_item->url) {
+          ?>
+            </a>
+          <?php
+            }
+          ?>
           <?php
             if (isset($menu_item->children) && count ($menu_item->children) > 0) {
           ?>
@@ -229,6 +257,13 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
             foreach( $menu_item->children as $menu_subitem ) {
             ?>
               <li class="menu-item-mobile">
+                <?php
+                  if ($menu_subitem->url) {
+                ?>
+                  <a class="clear" href="<?php echo $menu_subitem->url; ?>">
+                <?php
+                  }
+                ?>
                 <div class="menu-item-container-mobile menu-item-subcontainer-mobile js-cta-menu-subitem-mobile" data-id="<?php echo $menu_subitem->ID; ?>">
                   <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subitem->title; ?></h4>
                     <?php
@@ -239,6 +274,13 @@ function create_main_menu_mobile($top_menu_items, $nav_items) {
                       }
                     ?>
                 </div>
+                <?php
+                  if ($menu_subitem->url) {
+                ?>
+                  </a>
+                <?php
+                  }
+                ?>
               </li>
             <?php
             }
