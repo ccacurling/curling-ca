@@ -243,6 +243,16 @@ function acf_blocks_init() {
     'icon'						=> 'admin-comments',
     'keywords'				=> [ 'divider' ]
   ]);
+  // Activities block
+  acf_register_block([
+    'name'						=> 'activity-schedule',
+    'title'						=> __('Activity Schedule'),
+    'description'			=> __('A block to render an activity schedule'),
+    'render_callback'	=> 'block_render_callback',
+    'category'				=> 'common',
+    'icon'						=> 'editor-table',
+    'keywords'				=> [ 'activity schedule', 'activities', 'activity' ]
+  ]);
 
     acf_add_options_page('Options');
   }

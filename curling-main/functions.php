@@ -3,6 +3,7 @@
 add_action('init', 'create_taxonomy');
 add_action('init', 'create_post_type');
 add_action('init', 'create_sponsors_post_type');
+add_action('init', 'create_activity_post_type');
 add_action('init', 'create_draw_schedule_post_type');
 
 include 'blocks/functions.php';
@@ -154,6 +155,27 @@ function create_sponsors_post_type() {
             'show_in_rest' => true,
             'rewrite' => [
                 'slug' => 'sponsor'
+            ]
+        ]);
+    }
+}
+
+function create_activity_post_type() {
+    if ( get_field( 'is_event', 'options' ) ) {
+        register_post_type('Activity', [
+            'labels' => [
+                'name'          => __('Activity'),
+                'singular_name' => __('Activity'),
+                'menu_name'     => __('Activities'),
+                'all_items'     => __('All Activities')
+            ],
+            'menu_icon' => 'dashicons-editor-table',
+            'public' => true,
+            'supports' => ['title', 'editor', 'thumbnail'],
+            'has_archive' => true,
+            'show_in_rest' => true,
+            'rewrite' => [
+                'slug' => 'activity'
             ]
         ]);
     }

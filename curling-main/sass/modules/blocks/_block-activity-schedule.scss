@@ -1,0 +1,63 @@
+.activity-schedule-block {
+  max-width: 1440px;
+  margin: 0 auto;
+
+  h3 {
+    font-family: 'knockout';
+  }
+  
+  .activity-description {
+    padding-bottom: 2rem;
+    width: 970px;
+  }
+
+  .schedule-table {
+    width: 970px;
+    position: relative;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    border: 1px $light-gray solid;
+    -webkit-box-shadow: 0px 5px 12px 0px #ccc;
+    -moz-box-shadow: 0px 5px 12px 0px #ccc;
+    box-shadow: 0px 5px 12px 0px #ccc;
+
+    .table-title-row {
+      display: inline-flex;
+
+      div {
+        flex-grow: 1;
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px $light-gray solid;
+
+        &:not(:last-child) {
+          border-right: 1px $light-gray solid;
+        }
+
+        h3 {
+          color: $cool-gray;
+        }
+      }
+    }
+
+    .activity-row {
+      display: inline-flex;
+
+      &:nth-child(2n) {
+        background-color: $cool-light-gray;
+      }
+
+      div {
+        flex-grow: 1;
+        text-align: center;
+        padding: 0.5rem;
+        border-bottom: 1px $light-gray solid;
+
+        &:not(:last-child) {
+          border-right: 1px $light-gray solid;
+        }
+      }
+    }
+  }
+}
