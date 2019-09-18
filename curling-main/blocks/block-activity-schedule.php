@@ -38,7 +38,7 @@
       <?php } ?>
     </div>
 
-    <!-- Mobile table, hidden until breakpoint 970px -->
+    <!-- Mobile table, hidden until breakpoint 998px -->
     <div class="schedule-table mobile-table">
       <div class="table-title-row">
         <div><h3>DATE & TIME</h3></div>
