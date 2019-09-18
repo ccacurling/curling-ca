@@ -1,0 +1,59 @@
+
+.block-page-intro-label {
+  max-width: $full-width-wrapper;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+  @include responsive-max($responsive-tablet) {
+    padding: 20px;
+  }
+}
+
+.block-page-intro {
+  max-width: $full-width-wrapper;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: auto;
+
+  @include responsive-max($responsive-tablet) {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .page-intro-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto 0;
+    max-width: 700px;
+    @include responsive-max($responsive-tablet) {
+      margin: auto;
+      padding: 20px;
+    }
+  }
+  .page-intro-adspace {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto 0;
+    max-width: 300px;
+    @include responsive-max($responsive-tablet) {
+      margin: auto;
+      padding: 20px 0;
+    }
+  }
+}
+
+
+h1.page-intro-main-headline {
+  font-family: "Knockout";
+  color: #000000;
+  font-size: 50.4px;
+  letter-spacing: 0.5px;
+  line-height: 50.4px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}

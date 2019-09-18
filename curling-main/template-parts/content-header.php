@@ -397,7 +397,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
             <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">HOME HARDWARE CANADA CUP</h4>
             <span class="menu-item-description-mobile">November 27–December 1, 2019</span>
           </div>
-          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
         </div>
       </li>
       <li class="menu-item-mobile">
@@ -406,7 +406,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
             <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">CONTINENTAL CUP</h4>
             <span class="menu-item-description-mobile">January 9-12, 2020</span>
           </div>
-          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
         </div>
       </li>
       <li class="menu-item-mobile">
@@ -415,7 +415,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
             <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">SCOTTIES TOURNAMENT OF HEARTS</h4>
             <span class="menu-item-description-mobile">February 15-23, 2020</span>
           </div>
-          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
         </div>
       </li>
       <li class="menu-item-mobile">
@@ -424,7 +424,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
             <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">TIM HORTONS BRIER</h4>
             <span class="menu-item-description-mobile">February 28–March 8, 2020</span>
           </div>
-          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
         </div>
       </li>
       <li class="menu-item-mobile">
@@ -433,7 +433,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
             <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</h4>
             <span class="menu-item-description-mobile">March 14-22, 2020</span>
           </div>
-          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
         </div>
       </li>
       <li class="menu-item-events-mobile">
@@ -445,7 +445,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
       <li class="menu-item-mobile">
         <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="<?php echo $menu_subsubitem->ID; ?>">
           <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray"><?php echo $menu_subsubitem->title; ?></h4>
-          <img class="arrow-right" src="http://local.curling.ca/wp-content/themes/curling-main/images/arrow-right.svg" alt="triangle right">
+          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
         </div>
       </li>
     <?php

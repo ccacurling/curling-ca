@@ -16,10 +16,6 @@ $date_string = $date->format('F j, Y');
 ?>
 
 <section class="block-news-promo block-news-promo-<?php echo $promo_colour; ?>">
-  <div class='featured-indicator'>
-    <span class="featured-indicator-text">Featured News</span>
-  </div>
-
   <div class="news-promo-container">
     <?php 
       if ($promo_thumbnail) {
