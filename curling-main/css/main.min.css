@@ -4760,6 +4760,15 @@ h1.page-intro-main-headline {
   flex-basis: 50%;
 }
 
+@media only screen and (max-width: 1171px) {
+  .activity-schedule-block {
+    max-width: 1170px;
+  }
+  .activity-schedule-block .content-container {
+    max-width: 970px;
+  }
+}
+
 @media only screen and (max-width: 999px) {
   .activity-schedule-block {
     max-width: 998px;

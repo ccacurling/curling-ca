@@ -80,6 +80,16 @@
   }
 }
 
+@include responsive-max($full-width-wrapper) {
+  .activity-schedule-block {
+    max-width: $full-width-wrapper;
+
+    .content-container {
+      max-width: 970px;
+    }
+  }
+}
+
 @include responsive-max($responsive-laptop) {
   .activity-schedule-block {
     max-width: $responsive-laptop;
