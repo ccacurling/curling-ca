@@ -142,7 +142,7 @@ h2 {
   h2 {
     font-size: 60px;
     letter-spacing: 0.6px;
-    line-height: 36px;
+    line-height: 52px;
   }
 }
 
@@ -3644,6 +3644,10 @@ li {
   }
 }
 
+.news-promo-container.news-promo-large {
+  height: 610px;
+}
+
 .news-promo-thumbnail-container {
   flex-basis: 61%;
   position: relative;
@@ -3652,14 +3656,16 @@ li {
 .news-promo-thumbnail {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   background-color: #000000;
 }
 
 .news-promo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   flex-basis: 39%;
-  padding-top: 92px;
-  padding-bottom: 98px;
   padding-left: 30px;
   padding-right: 20px;
   background-color: white;

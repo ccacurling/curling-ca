@@ -1249,6 +1249,26 @@
         "_valid": 1,
         "local": "php",
         "fields": {
+            "field_5d8278cedaab2": {
+                "key": "field_5d8278cedaab2",
+                "name": "news_promo_is_large",
+                "type": "true_false",
+                "parent": "group_5d704ec0c5d4d",
+                "label": "Is Large",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
             "field_5d70511d50418": {
                 "key": "field_5d70511d50418",
                 "name": "promo_post",
