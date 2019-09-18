@@ -4698,7 +4698,7 @@ h1.page-intro-main-headline {
 
 .activity-schedule-block .content-container .activity-description {
   padding: 2rem 0;
-  width: 970px;
+  max-width: 970px;
 }
 
 .activity-schedule-block .content-container .schedule-table {
@@ -4748,6 +4748,56 @@ h1.page-intro-main-headline {
 
 .activity-schedule-block .content-container .schedule-table .activity-row div {
   padding: 0.75rem;
+}
+
+.activity-schedule-block .content-container .mobile-table {
+  display: none;
+  margin: 0 auto;
+}
+
+.activity-schedule-block .content-container .mobile-table .table-title-row div,
+.activity-schedule-block .content-container .mobile-table .activity-row div {
+  flex-basis: 50%;
+}
+
+@media only screen and (max-width: 999px) {
+  .activity-schedule-block {
+    max-width: 998px;
+  }
+  .activity-schedule-block .content-container {
+    max-width: 700px;
+  }
+  .activity-schedule-block .content-container .schedule-table.desktop-table {
+    display: none;
+  }
+  .activity-schedule-block .content-container .schedule-table.mobile-table {
+    display: flex;
+    max-width: 700px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .activity-schedule-block {
+    max-width: 768px;
+  }
+  .activity-schedule-block .content-container {
+    max-width: 450px;
+  }
+  .activity-schedule-block .content-container .schedule-table.mobile-table {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .activity-schedule-block {
+    max-width: 480px;
+  }
+  .activity-schedule-block .content-container {
+    max-width: 330px;
+  }
+  .activity-schedule-block .content-container .schedule-table.mobile-table {
+    max-width: 330px;
+  }
 }
 
 .block-team-small {

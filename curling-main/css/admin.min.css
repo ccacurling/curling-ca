@@ -4716,7 +4716,7 @@
 
 .edit-post-layout__content .activity-schedule-block .content-container .activity-description {
   padding: 2rem 0;
-  width: 970px;
+  max-width: 970px;
 }
 
 .edit-post-layout__content .activity-schedule-block .content-container .schedule-table {
@@ -4766,6 +4766,56 @@
 
 .edit-post-layout__content .activity-schedule-block .content-container .schedule-table .activity-row div {
   padding: 0.75rem;
+}
+
+.edit-post-layout__content .activity-schedule-block .content-container .mobile-table {
+  display: none;
+  margin: 0 auto;
+}
+
+.edit-post-layout__content .activity-schedule-block .content-container .mobile-table .table-title-row div,
+.edit-post-layout__content .activity-schedule-block .content-container .mobile-table .activity-row div {
+  flex-basis: 50%;
+}
+
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .activity-schedule-block {
+    max-width: 998px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container {
+    max-width: 700px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container .schedule-table.desktop-table {
+    display: none;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container .schedule-table.mobile-table {
+    display: flex;
+    max-width: 700px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .edit-post-layout__content .activity-schedule-block {
+    max-width: 768px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container {
+    max-width: 450px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container .schedule-table.mobile-table {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .edit-post-layout__content .activity-schedule-block {
+    max-width: 480px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container {
+    max-width: 330px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container .schedule-table.mobile-table {
+    max-width: 330px;
+  }
 }
 
 .edit-post-layout__content .block-team-small {

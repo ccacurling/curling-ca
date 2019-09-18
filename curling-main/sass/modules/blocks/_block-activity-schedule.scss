@@ -1,10 +1,10 @@
 .activity-schedule-block {
-  max-width: 1440px;
+  max-width: $full-width-max;
   margin: 0 auto;
   margin-bottom: 3rem;
 
   .content-container {
-    max-width: 1170px;
+    max-width: $full-width-wrapper;
     margin: 0 auto;
 
     h3 {
@@ -13,7 +13,7 @@
     
     .activity-description {
       padding: 2rem 0;
-      width: 970px;
+      max-width: 970px;
     }
 
     .schedule-table {
@@ -63,6 +63,67 @@
         div {
           padding: 0.75rem;
         }
+      }
+    }
+
+    .mobile-table {
+      display: none;
+      margin: 0 auto;
+
+      .table-title-row,
+      .activity-row {
+        div {
+          flex-basis: 50%;
+        }
+      }
+    }
+  }
+}
+
+@include responsive-max($responsive-laptop) {
+  .activity-schedule-block {
+    max-width: $responsive-laptop;
+
+    .content-container {
+      max-width: 700px;
+
+      .schedule-table.desktop-table {
+        display: none;
+      }
+      
+      .schedule-table.mobile-table {
+        display: flex;
+        max-width: 700px;
+      }
+    }
+  
+  }
+}
+
+@include responsive-max($responsive-tablet) {
+  .activity-schedule-block {
+    max-width: $responsive-tablet;
+
+    .content-container {
+      max-width: 450px;
+
+      .schedule-table.mobile-table {
+        max-width: 450px;
+      }
+    }
+  
+  }
+}
+
+@include responsive-max($responsive-mobile) {
+  .activity-schedule-block {
+    max-width: $responsive-mobile;
+
+    .content-container {
+      max-width: 330px;
+
+      .schedule-table.mobile-table {
+        max-width: 330px;
       }
     }
   }
