@@ -34,13 +34,16 @@ function ajax_handle_request(){
         $date = date_create_from_format('Y-m-d H:i:s', $promo_date);
         $date_string = $date->format('F j, Y');
 
+        $link = get_permalink($post);
+
         return [
           'ID' => $post->ID,
           'title' => $post->post_title,
           'excerpt' => $post->post_excerpt,
           'date' => $date_string,
           'thumbnail' => $promo_thumbnail,
-          'caption' => $promo_image_caption
+          'caption' => $promo_image_caption,
+          'link' => $link
         ];
       }, $posts_slice);
     

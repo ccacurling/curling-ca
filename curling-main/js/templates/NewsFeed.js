@@ -26,7 +26,6 @@ jQuery(document).ready(function($) {
 
     getAjaxRequest(page, n) {
       const category = this.element.data('category');
-      console.log(page);
 
       if (category) {
         $.ajax({
@@ -40,6 +39,7 @@ jQuery(document).ready(function($) {
           },
           dataType: 'json',
           success: (data) => {
+            console.log(data);
             if (data && data.success && data.posts && data.page && data.total) {
               this.page = page;
               this.n = n;
@@ -122,7 +122,7 @@ jQuery(document).ready(function($) {
 
           const $newsLink = $('<a>', {
             class: 'news-feed-link news-promo-link btn-link',
-            href: ''
+            href: post['link']
           });
 
           const $newsLinkButton = $('<h4>', {
