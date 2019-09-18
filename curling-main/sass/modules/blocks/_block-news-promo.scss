@@ -12,6 +12,10 @@
     flex-direction: row;
     flex-wrap: nowrap;
   }
+
+  &.news-promo-large {
+    height: 610px;
+  }
 }
 
 .news-promo-thumbnail-container {
@@ -22,14 +26,16 @@
 .news-promo-thumbnail {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   background-color: $black;
 }
 
 .news-promo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   flex-basis: 39%;
-  padding-top: 92px;
-  padding-bottom: 98px;
   padding-left: 30px;
   padding-right: 20px;
   background-color: white;

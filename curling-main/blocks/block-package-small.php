@@ -19,9 +19,6 @@ $package_small_btn_text_colour = $package_small_colour === 'white' || $package_s
 ?>
 
 <section class="block-package-small block-package-small-<?php echo $package_small_colour; ?>">
-  <div class='featured-indicator'>
-    <span class="featured-indicator-text">Ticket Special</span>
-  </div>
   <div class="package-small-wrapper">
     <h2 class="package-small-name"><?php echo $package_small_name; ?></h2>
     <div class="package-small-price-container">

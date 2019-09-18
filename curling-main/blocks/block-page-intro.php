@@ -14,17 +14,22 @@ $headline = get_field('headline');
 $content = get_field('content');
 
 $adsnippet = get_field('adsnippet');
+?>
+
+<section class="block-page-intro">
+
+<?php
 
 if ($has_featured_label) { 
     $page_label = get_field('page_label');
 ?>
-<div class="block-page-intro-label">
-    <p class="item-label"><?php echo $page_label; ?></p>
-</div>
-<?php } 
-
+  <div class="block-page-intro-label">
+      <p class="item-label"><?php echo $page_label; ?></p>
+  </div>
+<?php 
+  } 
 ?>
-<section class="block-page-intro">
+<div class="page-intro">
     <div class="page-intro-main">
 <?php
 
@@ -47,11 +52,13 @@ if ($has_sponsor) {
 }
 
 //Headline and Paragraph Stuff
-echo "<h1 class='page-intro-main-headline'>$headline</h1>";
-//echo "<p class='page-intro-main-content'>$content</p>";
-echo $content;
+?>
+<div class="page-intro-main-container">
+  <h1 class='page-intro-main-headline'><?php echo $headline; ?></h1>
+  <?php echo $content; ?>
+</div>
 
-
+<?php
 /*
 //Optional CTA
 if ($has_cta) {
@@ -102,5 +109,5 @@ if (isset($adsnippet) && !empty($adsnippet) ){
 
 ?>
     </div>
+  </div>
 </section>
-

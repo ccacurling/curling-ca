@@ -1249,6 +1249,26 @@
         "_valid": 1,
         "local": "php",
         "fields": {
+            "field_5d8278cedaab2": {
+                "key": "field_5d8278cedaab2",
+                "name": "news_promo_is_large",
+                "type": "true_false",
+                "parent": "group_5d704ec0c5d4d",
+                "label": "Is Large",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
             "field_5d70511d50418": {
                 "key": "field_5d70511d50418",
                 "name": "promo_post",
@@ -2432,6 +2452,54 @@
         "_valid": 1,
         "local": "php",
         "fields": {
+            "field_5d815b63094db": {
+                "key": "field_5d815b63094db",
+                "name": "has_label",
+                "type": "true_false",
+                "parent": "group_5d801f7c30869",
+                "label": "Add Page Label",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            "field_5d815b8b094dc": {
+                "key": "field_5d815b8b094dc",
+                "name": "page_label",
+                "type": "text",
+                "parent": "group_5d801f7c30869",
+                "label": "Page Label",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d815b63094db",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
             "field_5d801f8c32fc7": {
                 "key": "field_5d801f8c32fc7",
                 "name": "has_sponsor",
@@ -3533,6 +3601,256 @@
                         "max_height": "",
                         "max_size": "",
                         "mime_types": ""
+                    }
+                ]
+            }
+        }
+    },
+    {
+        "key": "group_5d816456779c2",
+        "title": "Team - Small",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/team-small"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d81645e2ec23": {
+                "key": "field_5d81645e2ec23",
+                "name": "team_small_post",
+                "type": "post_object",
+                "parent": "group_5d816456779c2",
+                "label": "Team",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "team"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            "field_5d8164a3e3c52": {
+                "key": "field_5d8164a3e3c52",
+                "name": "team_small_cta",
+                "type": "link",
+                "parent": "group_5d816456779c2",
+                "label": "CTA",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            "field_5d816489e3c51": {
+                "key": "field_5d816489e3c51",
+                "name": "team_small_link",
+                "type": "link",
+                "parent": "group_5d816456779c2",
+                "label": "Link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        }
+    },
+    {
+        "key": "group_5d81648b84451",
+        "title": "Activity Block Fields",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/activity-schedule"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d8164965c450": {
+                "key": "field_5d8164965c450",
+                "name": "activity_post",
+                "type": "post_object",
+                "parent": "group_5d81648b84451",
+                "label": "Activity Post",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "activity"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            }
+        }
+    },
+    {
+        "key": "group_5d815c296b5ea",
+        "title": "Activity Fields",
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "activity"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d815c3768ef1": {
+                "key": "field_5d815c3768ef1",
+                "name": "description",
+                "type": "text",
+                "parent": "group_5d815c296b5ea",
+                "label": "Description",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Add a description..",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d815c5d68ef2": {
+                "key": "field_5d815c5d68ef2",
+                "name": "activity_details",
+                "type": "repeater",
+                "parent": "group_5d815c296b5ea",
+                "label": "Activity Details",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5d815c8468ef3",
+                        "label": "Date",
+                        "name": "date",
+                        "type": "date_picker",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "d\/m\/Y",
+                        "return_format": "F j, Y",
+                        "first_day": 0
+                    },
+                    {
+                        "key": "field_5d815cb168ef4",
+                        "label": "Time",
+                        "name": "time",
+                        "type": "time_picker",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "g:i a",
+                        "return_format": "g:i a"
+                    },
+                    {
+                        "key": "field_5d815cbf68ef5",
+                        "label": "Participants",
+                        "name": "participants",
+                        "type": "post_object",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [
+                            "team"
+                        ],
+                        "taxonomy": "",
+                        "allow_null": 0,
+                        "multiple": 1,
+                        "return_format": "object",
+                        "ui": 1
                     }
                 ]
             }
