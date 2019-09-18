@@ -4617,12 +4617,16 @@ p.item-label {
   text-decoration: underline;
 }
 
+.block-page-intro {
+  margin-top: 60px;
+}
+
 .block-page-intro-label {
   max-width: 1170px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 769px) {
@@ -4631,7 +4635,11 @@ p.item-label {
   }
 }
 
-.block-page-intro {
+.page-intro-main-container {
+  margin-bottom: 80px;
+}
+
+.page-intro {
   max-width: 1170px;
   display: flex;
   flex-direction: row;
@@ -4640,28 +4648,27 @@ p.item-label {
 }
 
 @media only screen and (max-width: 769px) {
-  .block-page-intro {
+  .page-intro {
     flex-direction: column;
     justify-content: space-between;
   }
 }
 
-.block-page-intro .page-intro-main {
+.page-intro .page-intro-main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: auto 0;
+  margin: 0;
   max-width: 700px;
 }
 
 @media only screen and (max-width: 769px) {
-  .block-page-intro .page-intro-main {
-    margin: auto;
+  .page-intro .page-intro-main {
+    margin: 0;
     padding: 20px;
   }
 }
 
-.block-page-intro .page-intro-adspace {
+.page-intro .page-intro-adspace {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -4670,7 +4677,7 @@ p.item-label {
 }
 
 @media only screen and (max-width: 769px) {
-  .block-page-intro .page-intro-adspace {
+  .page-intro .page-intro-adspace {
     margin: auto;
     padding: 20px 0;
   }

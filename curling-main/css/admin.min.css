@@ -4635,12 +4635,16 @@
   text-decoration: underline;
 }
 
+.edit-post-layout__content .block-page-intro {
+  margin-top: 60px;
+}
+
 .edit-post-layout__content .block-page-intro-label {
   max-width: 1170px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: auto;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 769px) {
@@ -4649,7 +4653,11 @@
   }
 }
 
-.edit-post-layout__content .block-page-intro {
+.edit-post-layout__content .page-intro-main-container {
+  margin-bottom: 80px;
+}
+
+.edit-post-layout__content .page-intro {
   max-width: 1170px;
   display: flex;
   flex-direction: row;
@@ -4658,28 +4666,27 @@
 }
 
 @media only screen and (max-width: 769px) {
-  .edit-post-layout__content .block-page-intro {
+  .edit-post-layout__content .page-intro {
     flex-direction: column;
     justify-content: space-between;
   }
 }
 
-.edit-post-layout__content .block-page-intro .page-intro-main {
+.edit-post-layout__content .page-intro .page-intro-main {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: auto 0;
+  margin: 0;
   max-width: 700px;
 }
 
 @media only screen and (max-width: 769px) {
-  .edit-post-layout__content .block-page-intro .page-intro-main {
-    margin: auto;
+  .edit-post-layout__content .page-intro .page-intro-main {
+    margin: 0;
     padding: 20px;
   }
 }
 
-.edit-post-layout__content .block-page-intro .page-intro-adspace {
+.edit-post-layout__content .page-intro .page-intro-adspace {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -4688,7 +4695,7 @@
 }
 
 @media only screen and (max-width: 769px) {
-  .edit-post-layout__content .block-page-intro .page-intro-adspace {
+  .edit-post-layout__content .page-intro .page-intro-adspace {
     margin: auto;
     padding: 20px 0;
   }
