@@ -4684,18 +4684,24 @@ h1.page-intro-main-headline {
 .activity-schedule-block {
   max-width: 1440px;
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
-.activity-schedule-block h3 {
+.activity-schedule-block .content-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.activity-schedule-block .content-container h3 {
   font-family: 'knockout';
 }
 
-.activity-schedule-block .activity-description {
-  padding-bottom: 2rem;
-  width: 970px;
+.activity-schedule-block .content-container .activity-description {
+  padding: 2rem 0;
+  max-width: 970px;
 }
 
-.activity-schedule-block .schedule-table {
+.activity-schedule-block .content-container .schedule-table {
   width: 970px;
   position: relative;
   left: 0;
@@ -4707,42 +4713,100 @@ h1.page-intro-main-headline {
   box-shadow: 0px 5px 12px 0px #ccc;
 }
 
-.activity-schedule-block .schedule-table .table-title-row {
-  display: inline-flex;
-}
-
-.activity-schedule-block .schedule-table .table-title-row div {
+.activity-schedule-block .content-container .schedule-table .table-title-row div,
+.activity-schedule-block .content-container .schedule-table .activity-row div {
   flex-grow: 1;
+  flex-basis: 33.333%;
   text-align: center;
-  padding: 1rem;
-  border-bottom: 1px #d8d8d8 solid;
 }
 
-.activity-schedule-block .schedule-table .table-title-row div:not(:last-child) {
+.activity-schedule-block .content-container .schedule-table .table-title-row div:not(:last-child),
+.activity-schedule-block .content-container .schedule-table .activity-row div:not(:last-child) {
   border-right: 1px #d8d8d8 solid;
 }
 
-.activity-schedule-block .schedule-table .table-title-row div h3 {
+.activity-schedule-block .content-container .schedule-table .table-title-row {
+  display: inline-flex;
+  border-bottom: 1px #d8d8d8 solid;
+}
+
+.activity-schedule-block .content-container .schedule-table .table-title-row div {
+  padding: 1rem;
+}
+
+.activity-schedule-block .content-container .schedule-table .table-title-row div h3 {
   color: #4c4c4e;
 }
 
-.activity-schedule-block .schedule-table .activity-row {
+.activity-schedule-block .content-container .schedule-table .activity-row {
   display: inline-flex;
 }
 
-.activity-schedule-block .schedule-table .activity-row:nth-child(2n) {
+.activity-schedule-block .content-container .schedule-table .activity-row:nth-child(2n) {
   background-color: #f2f2f2;
 }
 
-.activity-schedule-block .schedule-table .activity-row div {
-  flex-grow: 1;
-  text-align: center;
-  padding: 0.5rem;
-  border-bottom: 1px #d8d8d8 solid;
+.activity-schedule-block .content-container .schedule-table .activity-row div {
+  padding: 0.75rem;
 }
 
-.activity-schedule-block .schedule-table .activity-row div:not(:last-child) {
-  border-right: 1px #d8d8d8 solid;
+.activity-schedule-block .content-container .mobile-table {
+  display: none;
+  margin: 0 auto;
+}
+
+.activity-schedule-block .content-container .mobile-table .table-title-row div,
+.activity-schedule-block .content-container .mobile-table .activity-row div {
+  flex-basis: 50%;
+}
+
+@media only screen and (max-width: 1171px) {
+  .activity-schedule-block {
+    max-width: 1170px;
+  }
+  .activity-schedule-block .content-container {
+    max-width: 970px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .activity-schedule-block {
+    max-width: 998px;
+  }
+  .activity-schedule-block .content-container {
+    max-width: 700px;
+  }
+  .activity-schedule-block .content-container .schedule-table.desktop-table {
+    display: none;
+  }
+  .activity-schedule-block .content-container .schedule-table.mobile-table {
+    display: flex;
+    max-width: 700px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .activity-schedule-block {
+    max-width: 768px;
+  }
+  .activity-schedule-block .content-container {
+    max-width: 450px;
+  }
+  .activity-schedule-block .content-container .schedule-table.mobile-table {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .activity-schedule-block {
+    max-width: 480px;
+  }
+  .activity-schedule-block .content-container {
+    max-width: 330px;
+  }
+  .activity-schedule-block .content-container .schedule-table.mobile-table {
+    max-width: 330px;
+  }
 }
 
 .block-team-small {

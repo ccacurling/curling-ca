@@ -4702,18 +4702,24 @@
 .edit-post-layout__content .activity-schedule-block {
   max-width: 1440px;
   margin: 0 auto;
+  margin-bottom: 3rem;
 }
 
-.edit-post-layout__content .activity-schedule-block h3 {
+.edit-post-layout__content .activity-schedule-block .content-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.edit-post-layout__content .activity-schedule-block .content-container h3 {
   font-family: 'knockout';
 }
 
-.edit-post-layout__content .activity-schedule-block .activity-description {
-  padding-bottom: 2rem;
-  width: 970px;
+.edit-post-layout__content .activity-schedule-block .content-container .activity-description {
+  padding: 2rem 0;
+  max-width: 970px;
 }
 
-.edit-post-layout__content .activity-schedule-block .schedule-table {
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table {
   width: 970px;
   position: relative;
   left: 0;
@@ -4725,42 +4731,100 @@
   box-shadow: 0px 5px 12px 0px #ccc;
 }
 
-.edit-post-layout__content .activity-schedule-block .schedule-table .table-title-row {
-  display: inline-flex;
-}
-
-.edit-post-layout__content .activity-schedule-block .schedule-table .table-title-row div {
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .table-title-row div,
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .activity-row div {
   flex-grow: 1;
+  flex-basis: 33.333%;
   text-align: center;
-  padding: 1rem;
-  border-bottom: 1px #d8d8d8 solid;
 }
 
-.edit-post-layout__content .activity-schedule-block .schedule-table .table-title-row div:not(:last-child) {
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .table-title-row div:not(:last-child),
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .activity-row div:not(:last-child) {
   border-right: 1px #d8d8d8 solid;
 }
 
-.edit-post-layout__content .activity-schedule-block .schedule-table .table-title-row div h3 {
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .table-title-row {
+  display: inline-flex;
+  border-bottom: 1px #d8d8d8 solid;
+}
+
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .table-title-row div {
+  padding: 1rem;
+}
+
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .table-title-row div h3 {
   color: #4c4c4e;
 }
 
-.edit-post-layout__content .activity-schedule-block .schedule-table .activity-row {
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .activity-row {
   display: inline-flex;
 }
 
-.edit-post-layout__content .activity-schedule-block .schedule-table .activity-row:nth-child(2n) {
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .activity-row:nth-child(2n) {
   background-color: #f2f2f2;
 }
 
-.edit-post-layout__content .activity-schedule-block .schedule-table .activity-row div {
-  flex-grow: 1;
-  text-align: center;
-  padding: 0.5rem;
-  border-bottom: 1px #d8d8d8 solid;
+.edit-post-layout__content .activity-schedule-block .content-container .schedule-table .activity-row div {
+  padding: 0.75rem;
 }
 
-.edit-post-layout__content .activity-schedule-block .schedule-table .activity-row div:not(:last-child) {
-  border-right: 1px #d8d8d8 solid;
+.edit-post-layout__content .activity-schedule-block .content-container .mobile-table {
+  display: none;
+  margin: 0 auto;
+}
+
+.edit-post-layout__content .activity-schedule-block .content-container .mobile-table .table-title-row div,
+.edit-post-layout__content .activity-schedule-block .content-container .mobile-table .activity-row div {
+  flex-basis: 50%;
+}
+
+@media only screen and (max-width: 1171px) {
+  .edit-post-layout__content .activity-schedule-block {
+    max-width: 1170px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container {
+    max-width: 970px;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .activity-schedule-block {
+    max-width: 998px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container {
+    max-width: 700px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container .schedule-table.desktop-table {
+    display: none;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container .schedule-table.mobile-table {
+    display: flex;
+    max-width: 700px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .edit-post-layout__content .activity-schedule-block {
+    max-width: 768px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container {
+    max-width: 450px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container .schedule-table.mobile-table {
+    max-width: 450px;
+  }
+}
+
+@media only screen and (max-width: 481px) {
+  .edit-post-layout__content .activity-schedule-block {
+    max-width: 480px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container {
+    max-width: 330px;
+  }
+  .edit-post-layout__content .activity-schedule-block .content-container .schedule-table.mobile-table {
+    max-width: 330px;
+  }
 }
 
 .edit-post-layout__content .block-team-small {

@@ -1,62 +1,139 @@
 .activity-schedule-block {
-  max-width: 1440px;
+  max-width: $full-width-max;
   margin: 0 auto;
+  margin-bottom: 3rem;
 
-  h3 {
-    font-family: 'knockout';
-  }
-  
-  .activity-description {
-    padding-bottom: 2rem;
-    width: 970px;
-  }
+  .content-container {
+    max-width: $full-width-wrapper;
+    margin: 0 auto;
 
-  .schedule-table {
-    width: 970px;
-    position: relative;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    border: 1px $light-gray solid;
-    -webkit-box-shadow: 0px 5px 12px 0px #ccc;
-    -moz-box-shadow: 0px 5px 12px 0px #ccc;
-    box-shadow: 0px 5px 12px 0px #ccc;
+    h3 {
+      font-family: 'knockout';
+    }
+    
+    .activity-description {
+      padding: 2rem 0;
+      max-width: 970px;
+    }
 
-    .table-title-row {
-      display: inline-flex;
+    .schedule-table {
+      width: 970px;
+      position: relative;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      border: 1px $light-gray solid;
+      -webkit-box-shadow: 0px 5px 12px 0px #ccc;
+      -moz-box-shadow: 0px 5px 12px 0px #ccc;
+      box-shadow: 0px 5px 12px 0px #ccc;
 
-      div {
-        flex-grow: 1;
-        text-align: center;
-        padding: 1rem;
+      .table-title-row,
+      .activity-row {
+        div {
+          flex-grow: 1;
+          flex-basis: 33.333%;
+          text-align: center;
+
+          &:not(:last-child) {
+            border-right: 1px $light-gray solid;
+          }
+        }
+      }
+
+      .table-title-row {
+        display: inline-flex;
         border-bottom: 1px $light-gray solid;
 
-        &:not(:last-child) {
-          border-right: 1px $light-gray solid;
+        div {
+          padding: 1rem;
+
+          h3 {
+            color: $cool-gray;
+          }
+        }
+      }
+
+      .activity-row {
+        display: inline-flex;
+
+        &:nth-child(2n) {
+          background-color: $cool-light-gray;
         }
 
-        h3 {
-          color: $cool-gray;
+        div {
+          padding: 0.75rem;
         }
       }
     }
 
-    .activity-row {
-      display: inline-flex;
+    .mobile-table {
+      display: none;
+      margin: 0 auto;
 
-      &:nth-child(2n) {
-        background-color: $cool-light-gray;
-      }
-
-      div {
-        flex-grow: 1;
-        text-align: center;
-        padding: 0.5rem;
-        border-bottom: 1px $light-gray solid;
-
-        &:not(:last-child) {
-          border-right: 1px $light-gray solid;
+      .table-title-row,
+      .activity-row {
+        div {
+          flex-basis: 50%;
         }
+      }
+    }
+  }
+}
+
+@include responsive-max($full-width-wrapper) {
+  .activity-schedule-block {
+    max-width: $full-width-wrapper;
+
+    .content-container {
+      max-width: 970px;
+    }
+  }
+}
+
+@include responsive-max($responsive-laptop) {
+  .activity-schedule-block {
+    max-width: $responsive-laptop;
+
+    .content-container {
+      max-width: 700px;
+
+      .schedule-table.desktop-table {
+        display: none;
+      }
+      
+      .schedule-table.mobile-table {
+        display: flex;
+        max-width: 700px;
+      }
+    }
+  
+  }
+}
+
+@include responsive-max($responsive-tablet) {
+  .activity-schedule-block {
+    max-width: $responsive-tablet;
+
+    .content-container {
+      max-width: 450px;
+
+      .schedule-table.mobile-table {
+        max-width: 450px;
+      }
+    }
+  
+  }
+}
+
+@include responsive-max($responsive-mobile) {
+  .activity-schedule-block {
+    max-width: $responsive-mobile;
+
+    .content-container {
+      max-width: 330px;
+
+      .schedule-table.mobile-table {
+        max-width: 330px;
       }
     }
   }
