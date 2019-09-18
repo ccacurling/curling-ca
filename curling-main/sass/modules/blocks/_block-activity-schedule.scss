@@ -1,61 +1,67 @@
 .activity-schedule-block {
   max-width: 1440px;
   margin: 0 auto;
+  margin-bottom: 3rem;
 
-  h3 {
-    font-family: 'knockout';
-  }
-  
-  .activity-description {
-    padding-bottom: 2rem;
-    width: 970px;
-  }
+  .content-container {
+    max-width: 1170px;
+    margin: 0 auto;
 
-  .schedule-table {
-    width: 970px;
-    position: relative;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    border: 1px $light-gray solid;
-    -webkit-box-shadow: 0px 5px 12px 0px #ccc;
-    -moz-box-shadow: 0px 5px 12px 0px #ccc;
-    box-shadow: 0px 5px 12px 0px #ccc;
-
-    .table-title-row {
-      display: inline-flex;
-
-      div {
-        flex-grow: 1;
-        text-align: center;
-        padding: 1rem;
-        border-bottom: 1px $light-gray solid;
-
-        &:not(:last-child) {
-          border-right: 1px $light-gray solid;
-        }
-
-        h3 {
-          color: $cool-gray;
-        }
-      }
+    h3 {
+      font-family: 'knockout';
+    }
+    
+    .activity-description {
+      padding: 2rem 0;
+      width: 970px;
     }
 
-    .activity-row {
-      display: inline-flex;
+    .schedule-table {
+      width: 970px;
+      position: relative;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      border: 1px $light-gray solid;
+      -webkit-box-shadow: 0px 5px 12px 0px #ccc;
+      -moz-box-shadow: 0px 5px 12px 0px #ccc;
+      box-shadow: 0px 5px 12px 0px #ccc;
 
-      &:nth-child(2n) {
-        background-color: $cool-light-gray;
+      .table-title-row,
+      .activity-row {
+        div {
+          flex-grow: 1;
+          flex-basis: 33.333%;
+          text-align: center;
+
+          &:not(:last-child) {
+            border-right: 1px $light-gray solid;
+          }
+        }
       }
 
-      div {
-        flex-grow: 1;
-        text-align: center;
-        padding: 0.5rem;
+      .table-title-row {
+        display: inline-flex;
         border-bottom: 1px $light-gray solid;
 
-        &:not(:last-child) {
-          border-right: 1px $light-gray solid;
+        div {
+          padding: 1rem;
+
+          h3 {
+            color: $cool-gray;
+          }
+        }
+      }
+
+      .activity-row {
+        display: inline-flex;
+
+        &:nth-child(2n) {
+          background-color: $cool-light-gray;
+        }
+
+        div {
+          padding: 0.75rem;
         }
       }
     }
