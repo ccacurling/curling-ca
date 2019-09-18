@@ -917,7 +917,7 @@ li {
   .footer-content-left-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 16%;
+    flex-basis: 0%;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 0;
@@ -929,7 +929,7 @@ li {
   .footer-content-centre-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 50%;
+    flex-basis: 33%;
   }
 }
 
@@ -990,16 +990,22 @@ li {
   }
 }
 
-.newsletter-signup-input {
+.newsletter-signup-input, .footer-content-right-wrapper .wpcf7-text {
   height: 40px;
 }
 
-.newsletter-signup-submit {
+@media only screen and (min-width: 1441px) {
+  .newsletter-signup-input, .footer-content-right-wrapper .wpcf7-text {
+    width: 350px;
+  }
+}
+
+.newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
   margin-top: 10px;
 }
 
 @media only screen and (min-width: 999px) {
-  .newsletter-signup-submit {
+  .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
     margin-top: 0;
     margin-left: 20px;
   }
@@ -1090,7 +1096,7 @@ li {
 /**
  * Modules imports
  */
-.btn {
+.btn, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
   padding: 16px 52px 14px;
   background: none;
   cursor: pointer;
@@ -1114,18 +1120,18 @@ li {
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
-.btn img {
+.btn img, .newsletter-signup-submit img, .footer-content-right-wrapper .wpcf7-submit img {
   margin-left: 14px;
   vertical-align: middle;
 }
 
-.btn:hover {
+.btn:hover, .newsletter-signup-submit:hover, .footer-content-right-wrapper .wpcf7-submit:hover {
   background-color: #fff26e;
   color: #000000;
   cursor: pointer;
 }
 
-.btn-small {
+.btn-small, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -1148,7 +1154,7 @@ li {
   }
 }
 
-.btn-red {
+.btn-red, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
   background-color: #ed1940;
   color: #ffffff;
 }
@@ -4490,7 +4496,7 @@ p.item-label {
   margin: 1.25rem 0;
 }
 
-.pdf-with-image-block-container .pdf-section .pdf-container a .btn {
+.pdf-with-image-block-container .pdf-section .pdf-container a .btn, .pdf-with-image-block-container .pdf-section .pdf-container a .newsletter-signup-submit, .pdf-with-image-block-container .pdf-section .pdf-container a .footer-content-right-wrapper .wpcf7-submit, .footer-content-right-wrapper .pdf-with-image-block-container .pdf-section .pdf-container a .wpcf7-submit {
   padding: 1rem 4rem 1rem;
   font-size: 1.5rem;
 }
@@ -4512,7 +4518,7 @@ p.item-label {
   .pdf-with-image-block-container .pdf-section .pdf-container p {
     margin: 1rem 0;
   }
-  .pdf-with-image-block-container .pdf-section .pdf-container a .btn {
+  .pdf-with-image-block-container .pdf-section .pdf-container a .btn, .pdf-with-image-block-container .pdf-section .pdf-container a .newsletter-signup-submit, .pdf-with-image-block-container .pdf-section .pdf-container a .footer-content-right-wrapper .wpcf7-submit, .footer-content-right-wrapper .pdf-with-image-block-container .pdf-section .pdf-container a .wpcf7-submit {
     padding: 1rem 2.25rem 1rem;
     font-size: 1.25rem;
   }

@@ -52,7 +52,7 @@
   @include responsive-min($responsive-laptop) {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 16%;
+    flex-basis: 0%;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 0;
@@ -64,7 +64,7 @@
   @include responsive-min($responsive-laptop) {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 50%;
+    flex-basis: 33%;
   }
 }
 
@@ -118,11 +118,17 @@
     }
 }
 
-.newsletter-signup-input {
+.newsletter-signup-input, .footer-content-right-wrapper .wpcf7-text {
     height: 40px;
+  @include responsive-min($responsive-desktop-wide) {
+    width: 350px;
+  }
 }
 
-.newsletter-signup-submit {
+.newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
+  @extend .btn; 
+  @extend .btn-small; 
+  @extend .btn-red;
   margin-top: 10px;
   @include responsive-min($responsive-laptop) {
     margin-top: 0;

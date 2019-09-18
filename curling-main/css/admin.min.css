@@ -946,7 +946,7 @@
   .edit-post-layout__content .footer-content-left-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 16%;
+    flex-basis: 0%;
     margin-left: 20px;
     margin-right: 20px;
     padding-left: 0;
@@ -958,7 +958,7 @@
   .edit-post-layout__content .footer-content-centre-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 50%;
+    flex-basis: 33%;
   }
 }
 
@@ -1019,16 +1019,22 @@
   }
 }
 
-.edit-post-layout__content .newsletter-signup-input {
+.edit-post-layout__content .newsletter-signup-input, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-text {
   height: 40px;
 }
 
-.edit-post-layout__content .newsletter-signup-submit {
+@media only screen and (min-width: 1441px) {
+  .edit-post-layout__content .newsletter-signup-input, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-text {
+    width: 350px;
+  }
+}
+
+.edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
   margin-top: 10px;
 }
 
 @media only screen and (min-width: 999px) {
-  .edit-post-layout__content .newsletter-signup-submit {
+  .edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
     margin-top: 0;
     margin-left: 20px;
   }
@@ -1116,7 +1122,7 @@
   }
 }
 
-.edit-post-layout__content .btn {
+.edit-post-layout__content .btn, .edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
   padding: 16px 52px 14px;
   background: none;
   cursor: pointer;
@@ -1140,18 +1146,18 @@
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
-.edit-post-layout__content .btn img {
+.edit-post-layout__content .btn img, .edit-post-layout__content .newsletter-signup-submit img, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit img {
   margin-left: 14px;
   vertical-align: middle;
 }
 
-.edit-post-layout__content .btn:hover {
+.edit-post-layout__content .btn:hover, .edit-post-layout__content .newsletter-signup-submit:hover, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit:hover {
   background-color: #fff26e;
   color: #000000;
   cursor: pointer;
 }
 
-.edit-post-layout__content .btn-small {
+.edit-post-layout__content .btn-small, .edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -1174,7 +1180,7 @@
   }
 }
 
-.edit-post-layout__content .btn-red {
+.edit-post-layout__content .btn-red, .edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
   background-color: #ed1940;
   color: #ffffff;
 }
@@ -4508,7 +4514,7 @@
   margin: 1.25rem 0;
 }
 
-.edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container a .btn {
+.edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container a .btn, .edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container a .newsletter-signup-submit, .edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container a .footer-content-right-wrapper .wpcf7-submit, .edit-post-layout__content .footer-content-right-wrapper .pdf-with-image-block-container .pdf-section .pdf-container a .wpcf7-submit {
   padding: 1rem 4rem 1rem;
   font-size: 1.5rem;
 }
@@ -4530,7 +4536,7 @@
   .edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container p {
     margin: 1rem 0;
   }
-  .edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container a .btn {
+  .edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container a .btn, .edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container a .newsletter-signup-submit, .edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container a .footer-content-right-wrapper .wpcf7-submit, .edit-post-layout__content .footer-content-right-wrapper .pdf-with-image-block-container .pdf-section .pdf-container a .wpcf7-submit {
     padding: 1rem 2.25rem 1rem;
     font-size: 1.25rem;
   }

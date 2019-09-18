@@ -32,10 +32,13 @@
       <div class="footer-content-right-wrapper">
           <div>
             <h4 class="newsletter-signup-title inverted">Sign up for the Newsletter</h4>
-            <form id="newsletter-signup" class="footer-form">
+            <!-- <form id="newsletter-signup" class="footer-form">
                 <input class="newsletter-signup-input" type="text" />
                 <button class="newsletter-signup-submit btn btn-small btn-red" type="submit">Submit</button>
-            </form>
+            </form> -->
+            <?php 
+            echo do_shortcode('[contact-form-7 id="498543"]');
+            ?>
           </div>
           <div class="footer-nav-menu-social">
               <a href="/" target="_blank"><img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook-white.svg"; ?>" alt="social" /></a>
