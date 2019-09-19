@@ -1,3 +1,8 @@
+@keyframes expand {
+    from {margin-left: 8px;}
+    to {margin-left: 16px;}
+}
+
 .btn {
     padding: 16px 52px 14px;
     background: none;
@@ -149,7 +154,8 @@
   text-decoration: none;
   &:hover {
     .btn-link-arrow {
-        margin-left: 16px;
+        animation-name: expand;
+        animation-duration: 1s;
     }
   }
 }

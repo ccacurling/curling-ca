@@ -1069,6 +1069,15 @@ li {
 /**
  * Modules imports
  */
+@keyframes expand {
+  from {
+    margin-left: 8px;
+  }
+  to {
+    margin-left: 16px;
+  }
+}
+
 .btn, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
   padding: 16px 52px 14px;
   background: none;
@@ -1223,7 +1232,8 @@ li {
 }
 
 .btn-link:hover .btn-link-arrow {
-  margin-left: 16px;
+  animation-name: expand;
+  animation-duration: 1s;
 }
 
 .btn-link-text {
