@@ -4,6 +4,10 @@
   font-family: 'knockout';
   margin-bottom: 0.25em;
 
+  &.one-column {
+    padding: 0;
+  }
+
   .content {
     max-width: 1170px;
 
@@ -130,7 +134,7 @@
     }
 
     .sponsors-section.one-column {
-      max-width: 28.5%;
+      // max-width: 28.5%;
 
       .sponsor-container {
         h3 {
