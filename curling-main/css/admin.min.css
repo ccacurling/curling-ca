@@ -1003,7 +1003,7 @@
   .edit-post-layout__content .footer-content-centre-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 33%;
+    flex-basis: 32%;
   }
 }
 
@@ -1075,6 +1075,8 @@
 }
 
 .edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
+  font-family: "Knockout";
+  font-size: 20px;
   margin-top: 10px;
 }
 

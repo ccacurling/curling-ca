@@ -974,7 +974,7 @@ li {
   .footer-content-centre-wrapper {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 33%;
+    flex-basis: 32%;
   }
 }
 
@@ -1046,6 +1046,8 @@ li {
 }
 
 .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
+  font-family: "Knockout";
+  font-size: 20px;
   margin-top: 10px;
 }
 

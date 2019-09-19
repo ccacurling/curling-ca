@@ -129,6 +129,8 @@
   @extend .btn; 
   @extend .btn-small; 
   @extend .btn-red;
+  font-family: $knockout;
+  font-size: 20px;
   margin-top: 10px;
   @include responsive-min($responsive-laptop) {
     margin-top: 0;
