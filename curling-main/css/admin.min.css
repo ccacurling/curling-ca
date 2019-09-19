@@ -3279,6 +3279,10 @@
   margin-bottom: 0.25em;
 }
 
+.edit-post-layout__content .block-sponsors.one-column {
+  padding: 0;
+}
+
 .edit-post-layout__content .block-sponsors .content {
   max-width: 1170px;
 }
@@ -3397,10 +3401,6 @@
 .edit-post-layout__content .block-sponsors .content .cta-section .cta-link img {
   margin-left: 0.25rem;
   width: 1.15rem;
-}
-
-.edit-post-layout__content .block-sponsors .content .sponsors-section.one-column {
-  max-width: 28.5%;
 }
 
 .edit-post-layout__content .block-sponsors .content .sponsors-section.one-column .sponsor-container h3 {

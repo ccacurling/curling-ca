@@ -3261,6 +3261,10 @@ li {
   margin-bottom: 0.25em;
 }
 
+.block-sponsors.one-column {
+  padding: 0;
+}
+
 .block-sponsors .content {
   max-width: 1170px;
 }
@@ -3379,10 +3383,6 @@ li {
 .block-sponsors .content .cta-section .cta-link img {
   margin-left: 0.25rem;
   width: 1.15rem;
-}
-
-.block-sponsors .content .sponsors-section.one-column {
-  max-width: 28.5%;
 }
 
 .block-sponsors .content .sponsors-section.one-column .sponsor-container h3 {
