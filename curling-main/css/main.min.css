@@ -603,157 +603,39 @@ li {
   max-width: 1170px;
 }
 
-.block-column.column-50-50 .wp-block-columns .wp-block-column:first-child {
+.block-column.column-50-50 .wp-block-columns > .wp-block-cossette-block-column .wp-block-cossette-block-column .wp-block-column:first-child {
   flex-basis: 50%;
 }
 
-.block-column.column-50-50 .wp-block-columns .wp-block-column:last-child {
+.block-column.column-50-50 .wp-block-columns > .wp-block-cossette-block-column .wp-block-column:last-child {
   flex-basis: 50%;
 }
 
-.block-column.column-84-16 .wp-block-columns .wp-block-column:first-child {
+.block-column.column-84-16 > .wp-block-cossette-block-column .wp-block-columns > .wp-block-column:first-child {
   flex-basis: 84%;
 }
 
-.block-column.column-84-16 .wp-block-columns .wp-block-column:last-child {
+.block-column.column-84-16 > .wp-block-cossette-block-column .wp-block-columns > .wp-block-column:last-child {
   flex-basis: 16%;
 }
 
-.block-column .wp-block-columns {
+.block-column .wp-block-columns > {
   display: flex;
 }
 
-.block-column .wp-block-columns .wp-block-column {
+.block-column .wp-block-columns > .wp-block-column {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
 }
 
-.block-column .wp-block-columns .wp-block-column:first-child {
+.block-column .wp-block-columns > .wp-block-column:first-child {
   padding-right: 15px;
 }
 
-.block-column .wp-block-columns .wp-block-column:last-child {
+.block-column .wp-block-columns > .wp-block-column:last-child {
   padding-left: 15px;
-}
-
-.wp-block-columns.col-50-50 {
-  flex-wrap: wrap;
-}
-
-@media only screen and (min-width: 999px) {
-  .wp-block-columns.col-50-50 {
-    flex-wrap: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 1210px;
-  }
-}
-
-.wp-block-columns.col-50-50 .wp-block-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-@media only screen and (min-width: 999px) {
-  .wp-block-columns.col-50-50 .wp-block-column {
-    justify-content: auto;
-  }
-}
-
-.wp-block-columns.col-50-50 .wp-block-column:first-child {
-  display: flex;
-  flex-basis: 100%;
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-@media only screen and (min-width: 999px) {
-  .wp-block-columns.col-50-50 .wp-block-column:first-child {
-    justify-content: flex-start;
-    flex-basis: 50%;
-    margin-left: 0;
-    margin-right: 10px;
-  }
-}
-
-.wp-block-columns.col-50-50 .wp-block-column:last-child {
-  display: flex;
-  flex-basis: 100%;
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-@media only screen and (min-width: 999px) {
-  .wp-block-columns.col-50-50 .wp-block-column:last-child {
-    justify-content: flex-end;
-    flex-basis: 50%;
-    margin-left: 10px;
-    margin-right: 0;
-  }
-}
-
-.wp-block-columns.col-30-70 {
-  flex-wrap: wrap;
-}
-
-@media only screen and (min-width: 999px) {
-  .wp-block-columns.col-30-70 {
-    flex-wrap: nowrap;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    max-width: 1210px;
-  }
-}
-
-.wp-block-columns.col-30-70 .wp-block-column {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-@media only screen and (min-width: 999px) {
-  .wp-block-columns.col-30-70 .wp-block-column {
-    justify-content: auto;
-  }
-}
-
-.wp-block-columns.col-30-70 .wp-block-column:first-child {
-  display: flex;
-  flex-basis: 100%;
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-@media only screen and (min-width: 999px) {
-  .wp-block-columns.col-30-70 .wp-block-column:first-child {
-    justify-content: flex-start;
-    flex-basis: 30%;
-    margin-left: 0;
-    margin-right: 10px;
-  }
-}
-
-.wp-block-columns.col-30-70 .wp-block-column:last-child {
-  display: flex;
-  flex-basis: 100%;
-  margin-left: 16px;
-  margin-right: 16px;
-}
-
-@media only screen and (min-width: 999px) {
-  .wp-block-columns.col-30-70 .wp-block-column:last-child {
-    justify-content: flex-end;
-    flex-basis: 70%;
-    margin-left: 10px;
-    margin-right: 0;
-  }
 }
 
 .header-main .nav-menu-top-right-mobile {
