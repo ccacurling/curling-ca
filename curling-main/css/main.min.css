@@ -611,8 +611,26 @@ li {
 }
 
 @media only screen and (min-width: 999px) {
-  .block-column.column-sidebar .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+  .block-column.column-sidebar.column-50-50 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
     position: absolute;
+    right: 0;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .block-column.column-sidebar.column-84-16 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+    position: absolute;
+    right: 0;
+    width: 16%;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .block-column.column-sidebar.column-33-66 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+    position: absolute;
+    right: 0;
+    width: 66%;
   }
 }
 

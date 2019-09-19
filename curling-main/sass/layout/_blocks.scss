@@ -38,9 +38,27 @@
     max-width: 1210px;
   }
 
-  &.column-sidebar .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+  &.column-sidebar.column-50-50 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
     @include responsive-min($responsive-laptop) {
       position: absolute;
+      right: 0;
+      width: 50%;
+    }
+  }
+
+  &.column-sidebar.column-84-16 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+    @include responsive-min($responsive-laptop) {
+      position: absolute;
+      right: 0;
+      width: 16%;
+    }
+  }
+
+  &.column-sidebar.column-33-66 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+    @include responsive-min($responsive-laptop) {
+      position: absolute;
+      right: 0;
+      width: 66%;
     }
   }
 
