@@ -64,7 +64,7 @@
   @include responsive-min($responsive-laptop) {
     flex-grow: 1;
     flex-shrink: 0.3;
-    flex-basis: 33%;
+    flex-basis: 32%;
   }
 }
 
