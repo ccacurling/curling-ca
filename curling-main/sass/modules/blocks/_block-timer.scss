@@ -71,6 +71,10 @@
     @include responsive-min($responsive-laptop) {
         max-width: 500px;
     }
+    @include responsive-max($responsive-laptop) {
+        padding-top: 22px;
+        padding-bottom: 22px;
+    }
 }
 
 .block-timer-value {

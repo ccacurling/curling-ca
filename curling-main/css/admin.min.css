@@ -2458,6 +2458,13 @@
   }
 }
 
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .block-timer-info-container {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+}
+
 .edit-post-layout__content .block-timer-value {
   margin-bottom: 16px;
 }
