@@ -5,21 +5,39 @@ const { SelectControl, CheckboxControl } = wp.components;
 const { createElement } = wp.element;
 const { withDispatch } = wp.data;
 
-const TEMPLATE = [
+const TEMPLATE2 = [
 	['core/columns', {
-    templateLock: "all"
+    templateLock: "all",
+    columns: 2
   },[
 		['core/column', {
-      placeholder: 'Enter Stuff'
+      placeholder: 'Enter Content'
     }],
 		['core/column', {
-      placeholder: 'Enter Stuff'
+      placeholder: 'Enter Content'
     }]
 	]
 ]];
 
-registerBlockType("cossette/block-column-container", {
-  title: "Column Block Container",
+const TEMPLATE3 = [
+	['core/columns', {
+    templateLock: "all",
+    columns: 3
+  },[
+		['core/column', {
+      placeholder: 'Enter Content'
+    }],
+		['core/column', {
+      placeholder: 'Enter Content'
+    }],
+		['core/column', {
+      placeholder: 'Enter Content'
+    }]
+	]
+]];
+
+registerBlockType("cossette/block-column", {
+  title: "Column Block",
   icon: (
     <svg
       width="72px"
@@ -43,19 +61,22 @@ registerBlockType("cossette/block-column-container", {
     is_fullwidth: {
       default: true,
       type: "boolean"
+    },
+    columns: {
+      default: 2,
+      type: "number"
     }
   },
   // TODO: This is a hack which forces the template to appear valid.
   // See https://github.com/WordPress/gutenberg/issues/11681
-  edit: withDispatch(dispatch => {
-    dispatch('core/editor').setTemplateValidity(true);
-  })(({ className, setAttributes, attributes }) => {
-    return (
-      <div className={className}>
-        <InnerBlocks template={TEMPLATE} templateLock="all" />
+  edit: 
+  // withDispatch(dispatch => {
+  //   dispatch('core/editor').setTemplateValidity(true);
+  // })(
+    ({ className, setAttributes, attributes }) => {
+    return [
         <InspectorControls>
           <div>
-            <h2>Full Width</h2>
             <CheckboxControl
               value={attributes.is_fullwidth}
               label={__('Full Width')}
@@ -66,26 +87,52 @@ registerBlockType("cossette/block-column-container", {
                 });
               }}
             />
-            <h2>Column Type</h2>
+            <h3>Number of Columns</h3>
+            <SelectControl 
+              value={attributes.columns} 
+              options={[
+                { label: '2', value: 2 },
+                { label: '3', value: 3 }
+              ]}
+              onChange={(columns) => {
+                const columnNumber = parseInt(columns);
+                setAttributes({columns: columnNumber});
+                if (columns == 2) {
+                  setAttributes({ type: '50_50'})
+                } else {
+                  setAttributes({ type: '33_33_33'})
+                }
+              }}
+            />
+            <h3>Column Type</h3>
             <SelectControl 
               value={attributes.type} 
-              options={[
-                { label: '84/16', value: '84_16' },
-                { label: '50/50', value: '50_50' }
-              ]}
+              options={
+                (attributes.columns === 2) ? [
+                  { label: '50/50', value: '50_50' },
+                  { label: '84/16', value: '84_16' }
+                ] : [
+                  { label: '33/33/33', value: '33_33_33' },
+                ]}
               onChange={(type) => {
-                setAttributes({type})
+                setAttributes({type});
               }}
             />
           </div>
-        </InspectorControls>
-      </div>
-    );
-  }),
+        </InspectorControls>,
+        <div className={className}>
+          <InnerBlocks template={attributes.columns === 2 ? TEMPLATE2 : TEMPLATE3} templateLock="all" />
+        </div>
+    ];
+  },
+  // ),
 
-  save: () => {
+  save: ({attributes}) => {
     return (
-      <InnerBlocks.Content />
+      <div>
+        { attributes.content }
+        <InnerBlocks.Content />
+      </div>
     );
   }
 });

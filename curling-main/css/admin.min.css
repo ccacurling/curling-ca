@@ -611,44 +611,44 @@
   max-width: 1210px;
 }
 
-.edit-post-layout__content .block-column-container.column-container-smallwidth {
+.edit-post-layout__content .block-column.column-smallwidth {
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
 }
 
-.edit-post-layout__content .block-column-container.column-container-50-50 .wp-block-columns .wp-block-column:first-child {
+.edit-post-layout__content .block-column.column-50-50 .wp-block-columns .wp-block-column:first-child {
   flex-basis: 50%;
 }
 
-.edit-post-layout__content .block-column-container.column-container-50-50 .wp-block-columns .wp-block-column:last-child {
+.edit-post-layout__content .block-column.column-50-50 .wp-block-columns .wp-block-column:last-child {
   flex-basis: 50%;
 }
 
-.edit-post-layout__content .block-column-container.column-container-84-16 .wp-block-columns .wp-block-column:first-child {
+.edit-post-layout__content .block-column.column-84-16 .wp-block-columns .wp-block-column:first-child {
   flex-basis: 84%;
 }
 
-.edit-post-layout__content .block-column-container.column-container-84-16 .wp-block-columns .wp-block-column:last-child {
+.edit-post-layout__content .block-column.column-84-16 .wp-block-columns .wp-block-column:last-child {
   flex-basis: 16%;
 }
 
-.edit-post-layout__content .block-column-container .wp-block-columns {
+.edit-post-layout__content .block-column .wp-block-columns {
   display: flex;
 }
 
-.edit-post-layout__content .block-column-container .wp-block-columns .wp-block-column {
+.edit-post-layout__content .block-column .wp-block-columns .wp-block-column {
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
   margin-right: 0;
 }
 
-.edit-post-layout__content .block-column-container .wp-block-columns .wp-block-column:first-child {
+.edit-post-layout__content .block-column .wp-block-columns .wp-block-column:first-child {
   padding-right: 15px;
 }
 
-.edit-post-layout__content .block-column-container .wp-block-columns .wp-block-column:last-child {
+.edit-post-layout__content .block-column .wp-block-columns .wp-block-column:last-child {
   padding-left: 15px;
 }
 
