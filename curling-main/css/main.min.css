@@ -2934,7 +2934,7 @@ li {
   -moz-box-shadow: 0px 5px 12px 0px #ccc;
   box-shadow: 0px 5px 12px 0px #ccc;
   flex-wrap: wrap;
-  margin-top: 15rem;
+  margin-top: 40px;
 }
 
 .event-location-container .info-section {
@@ -4593,7 +4593,20 @@ p.item-label {
 }
 
 .block-page-intro {
-  margin-top: 60px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1210px;
+}
+
+@media only screen and (min-width: 769px) {
+  .block-page-intro {
+    margin-top: 60px;
+    padding-left: 120px;
+  }
 }
 
 .block-page-intro-label {
@@ -4606,14 +4619,14 @@ p.item-label {
   max-width: 1170px;
 }
 
-@media only screen and (max-width: 769px) {
-  .block-page-intro-label {
-    padding: 20px;
-  }
+.page-intro-main-container {
+  margin-bottom: 20px;
 }
 
-.page-intro-main-container {
-  margin-bottom: 80px;
+@media only screen and (min-width: 769px) {
+  .page-intro-main-container {
+    margin-bottom: 80px;
+  }
 }
 
 .page-intro {
@@ -4634,14 +4647,16 @@ p.item-label {
 .page-intro .page-intro-main {
   display: flex;
   flex-direction: column;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
   max-width: 700px;
 }
 
-@media only screen and (max-width: 769px) {
+@media only screen and (min-width: 769px) {
   .page-intro .page-intro-main {
-    margin: 0;
-    padding: 20px;
+    margin-right: 70px;
   }
 }
 

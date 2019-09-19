@@ -1,5 +1,16 @@
 .block-page-intro {
-  margin-top: 60px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1210px;
+
+  @include responsive-min($responsive-tablet) {
+    margin-top: 60px;
+    padding-left: 120px;
+  }
 }
 
 .block-page-intro-label {
@@ -10,14 +21,14 @@
   margin-right: auto;
   margin-bottom: 10px;
   max-width: $full-width-wrapper;
-
-  @include responsive-max($responsive-tablet) {
-    padding: 20px;
-  }
 }
 
 .page-intro-main-container {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
+
+  @include responsive-min($responsive-tablet) {
+    margin-bottom: 80px;
+  }
 }
 
 .page-intro {
@@ -35,19 +46,24 @@
   .page-intro-main {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
     max-width: 700px;
-    @include responsive-max($responsive-tablet) {
-      margin: 0;
-      padding: 20px;
+
+    @include responsive-min($responsive-tablet) {
+      margin-right: 70px;
     }
   }
+
   .page-intro-adspace {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin: auto 0;
     max-width: 300px;
+
     @include responsive-max($responsive-tablet) {
       margin: auto;
       padding: 20px 0;
