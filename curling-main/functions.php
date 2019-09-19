@@ -13,7 +13,7 @@ add_action('wp_enqueue_scripts', 'add_curling_styles');
 add_action('admin_enqueue_scripts', 'add_curling_admin_styles');
 // add_action('admin_menu', 'remove_admin_menus' );
 add_action('init', 'block_container_init');
-add_action('init', 'block_column_container_init');
+add_action('init', 'block_column_init');
 
 // Pull in Eventum-child custom post type registration for speakers (Teams)
 remove_action( 'init', 'themeum_eventum_post_type_speaker');
@@ -44,23 +44,23 @@ function block_container_init() {
     ));
 }
 
-function block_column_container_init() {
-  $file = get_stylesheet_directory_uri().'/js/dist/block-column-container.min.js';
-  $filem = get_stylesheet_directory().'/js/dist/block-column-container.min.js';
+function block_column_init() {
+  $file = get_stylesheet_directory_uri().'/js/dist/block-column.min.js';
+  $filem = get_stylesheet_directory().'/js/dist/block-column.min.js';
 
   wp_register_script(
-      'cossette-block-column-container',
+      'cossette-block-column',
       $file,
       array('wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n'),
       filemtime($filem)
   );
 
-  register_block_type('cossette/block-column-container', array(
-      'editor_script' => 'cossette-block-column-container',
+  register_block_type('cossette/block-column', array(
+      'editor_script' => 'cossette-block-column',
       'render_callback' => function( $attributes, $content = '' ) {
-          return '<div class="block-column-container '.
-            ($attributes['type'] === '50_50' ? 'column-container-50-50' : 'column-container-84-16' ).' '.
-            ($attributes['is_fullwidth'] ? '' : 'column-container-smallwidth' ).
+          return '<div class="block-column '.
+            ($attributes['type'] === '50_50' ? 'column-50-50' : ($attributes['type'] === '84_16' ? 'column-84-16' : 'column-33-33-33') ).' '.
+            ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
             '">'.$content.'</div>';
       },
       'attributes' => [
@@ -71,6 +71,10 @@ function block_column_container_init() {
         'is_fullwidth' => [
           'default' => true,
           'type' => 'boolean'
+        ],
+        'columns' => [
+          'default' => true,
+          'type' => 'number'
         ],
       ]
   ));

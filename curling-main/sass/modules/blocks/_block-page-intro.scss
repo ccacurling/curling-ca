@@ -3,11 +3,13 @@
 }
 
 .block-page-intro-label {
-  max-width: $full-width-wrapper;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 10px;
+  max-width: $full-width-wrapper;
 
   @include responsive-max($responsive-tablet) {
     padding: 20px;
