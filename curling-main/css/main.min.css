@@ -1069,7 +1069,7 @@ li {
   text-transform: uppercase;
   text-align: center;
   font-family: "Knockout";
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.1em;
   line-height: 15px;
   position: relative;
@@ -1097,13 +1097,13 @@ li {
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .btn-large {
   padding-top: 19px;
   padding-bottom: 26px;
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 33px;
   letter-spacing: 2px;
 }
