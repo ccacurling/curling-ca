@@ -4853,8 +4853,10 @@ h1.page-intro-main-headline {
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
-.team-small-container:hover .team-small-title {
-  display: none;
+@media only screen and (min-width: 999px) {
+  .team-small-container:hover .team-small-title {
+    display: none;
+  }
 }
 
 .team-small-container:hover .team-small-members-container {
@@ -4886,8 +4888,13 @@ h1.page-intro-main-headline {
 }
 
 .team-small-members-container {
-  display: none;
   margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 999px) {
+  .team-small-members-container {
+    display: none;
+  }
 }
 
 .team-small-member-item {

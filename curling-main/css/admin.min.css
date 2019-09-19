@@ -4871,8 +4871,10 @@
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
-.edit-post-layout__content .team-small-container:hover .team-small-title {
-  display: none;
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .team-small-container:hover .team-small-title {
+    display: none;
+  }
 }
 
 .edit-post-layout__content .team-small-container:hover .team-small-members-container {
@@ -4904,8 +4906,13 @@
 }
 
 .edit-post-layout__content .team-small-members-container {
-  display: none;
   margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .team-small-members-container {
+    display: none;
+  }
 }
 
 .edit-post-layout__content .team-small-member-item {

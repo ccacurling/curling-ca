@@ -7,7 +7,9 @@
 
 .team-small-container:hover {
   .team-small-title {
-    display: none;
+    @include responsive-min($responsive-laptop) {
+      display: none;
+    }
   }
 
   .team-small-members-container {
@@ -40,8 +42,11 @@
 }
 
 .team-small-members-container {
-  display: none;
   margin-bottom: 30px;
+  
+  @include responsive-min($responsive-laptop) {
+    display: none;
+  }
 }
 
 .team-small-member-item {
