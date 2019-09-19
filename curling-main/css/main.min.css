@@ -1217,6 +1217,10 @@ li {
   text-decoration: none;
 }
 
+.btn-link:hover .btn-link-arrow {
+  margin-left: 16px;
+}
+
 .btn-link-text {
   display: inline-block;
   font-size: 18px;

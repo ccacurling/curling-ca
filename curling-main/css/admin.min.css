@@ -1243,6 +1243,10 @@
   text-decoration: none;
 }
 
+.edit-post-layout__content .btn-link:hover .btn-link-arrow {
+  margin-left: 16px;
+}
+
 .edit-post-layout__content .btn-link-text {
   display: inline-block;
   font-size: 18px;

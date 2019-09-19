@@ -147,6 +147,11 @@
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+  &:hover {
+    .btn-link-arrow {
+        margin-left: 16px;
+    }
+  }
 }
 
 .btn-link-text {
