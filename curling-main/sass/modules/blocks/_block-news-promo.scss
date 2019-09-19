@@ -14,7 +14,9 @@
   }
 
   &.news-promo-large {
-    height: 610px;
+    @include responsive-min($responsive-laptop) {
+      max-height: 610px;
+    }
   }
 }
 
@@ -38,7 +40,12 @@
   flex-basis: 39%;
   padding-left: 30px;
   padding-right: 20px;
+  padding-bottom: 36px;
   background-color: white;
+
+  @include responsive-min($responsive-laptop) {
+    padding-bottom: 0;
+  }
 }
 
 .news-promo-title {
