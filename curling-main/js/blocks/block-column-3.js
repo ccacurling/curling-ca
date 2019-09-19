@@ -5,23 +5,8 @@ const { SelectControl, CheckboxControl } = wp.components;
 const { createElement } = wp.element;
 const { withDispatch } = wp.data;
 
-const TEMPLATE2 = [
-	['core/columns', {
-    templateLock: "all",
-    columns: 2
-  },[
-		['core/column', {
-      placeholder: 'Enter Content'
-    }],
-		['core/column', {
-      placeholder: 'Enter Content'
-    }]
-	]
-]];
-
 const TEMPLATE3 = [
 	['core/columns', {
-    templateLock: "all",
     columns: 3
   },[
 		['core/column', {
@@ -36,8 +21,8 @@ const TEMPLATE3 = [
 	]
 ]];
 
-registerBlockType("cossette/block-column", {
-  title: "Column Block",
+registerBlockType("cossette/block-column-3", {
+  title: "Three Column Block",
   icon: (
     <svg
       width="72px"
@@ -54,17 +39,9 @@ registerBlockType("cossette/block-column", {
   ),
   category: "common",
   attributes: {
-    type: {
-      default: '50_50',
-      type: "string"
-    },
     is_fullwidth: {
       default: true,
       type: "boolean"
-    },
-    columns: {
-      default: 2,
-      type: "number"
     }
   },
   // TODO: This is a hack which forces the template to appear valid.
@@ -87,41 +64,10 @@ registerBlockType("cossette/block-column", {
                 });
               }}
             />
-            <h3>Number of Columns</h3>
-            <SelectControl 
-              value={attributes.columns} 
-              options={[
-                { label: '2', value: 2 },
-                { label: '3', value: 3 }
-              ]}
-              onChange={(columns) => {
-                const columnNumber = parseInt(columns);
-                setAttributes({columns: columnNumber});
-                if (columns == 2) {
-                  setAttributes({ type: '50_50'})
-                } else {
-                  setAttributes({ type: '33_33_33'})
-                }
-              }}
-            />
-            <h3>Column Type</h3>
-            <SelectControl 
-              value={attributes.type} 
-              options={
-                (attributes.columns === 2) ? [
-                  { label: '50/50', value: '50_50' },
-                  { label: '84/16', value: '84_16' }
-                ] : [
-                  { label: '33/33/33', value: '33_33_33' },
-                ]}
-              onChange={(type) => {
-                setAttributes({type});
-              }}
-            />
           </div>
         </InspectorControls>,
         <div className={className}>
-          <InnerBlocks template={attributes.columns === 2 ? TEMPLATE2 : TEMPLATE3} templateLock="all" />
+          <InnerBlocks template={TEMPLATE3} templateLock="all" />
         </div>
     ];
   },
