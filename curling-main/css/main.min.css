@@ -3814,9 +3814,12 @@ li {
 .callout-wrapper {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 20px;
   height: 100%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
   background-color: white;
+  min-height: 506px;
 }
 
 .callout-thumbnail-container {
