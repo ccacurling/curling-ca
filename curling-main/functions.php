@@ -60,7 +60,7 @@ function block_2_column_init() {
       'editor_script' => 'cossette-block-column-2',
       'render_callback' => function( $attributes, $content = '' ) {
           return '<div class="block-column '.
-            ($attributes['type'] === '50_50' ? 'column-50-50' : 'column-84-16').' '.
+            ($attributes['type'] === '50_50' ? 'column-50-50' : ($attributes['type'] === '84_16' ? 'column-84-16' : 'column-33-66')).' '.
             ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
             '">'.$content.'</div>';
       },

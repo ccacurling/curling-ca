@@ -49,6 +49,7 @@
 
     > {
       .wp-block-column {
+        position: relative;
         margin-top: 0;
         margin-bottom: 0;
         margin-left: 0;
@@ -86,7 +87,20 @@
         flex-basis: 84%;
       }
       .wp-block-column:last-child {
+        position: absolute;
         flex-basis: 16%;
+      }
+    }
+  }
+
+  &.column-33-66 > .wp-block-cossette-block-column-2 > {
+    .wp-block-columns > {
+       .wp-block-column:first-child {
+        flex-basis: 33.33333%;
+      }
+      .wp-block-column:last-child {
+        position: absolute;
+        flex-basis: 66.66666%;
       }
     }
   }
