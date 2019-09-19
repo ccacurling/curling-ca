@@ -3356,6 +3356,10 @@
   padding: 0;
 }
 
+.edit-post-layout__content .block-sponsors.one-column .content .cta-section {
+  width: 100%;
+}
+
 .edit-post-layout__content .block-sponsors .content {
   max-width: 1170px;
 }
