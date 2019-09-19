@@ -120,6 +120,8 @@
 
 .newsletter-signup-input, .footer-content-right-wrapper .wpcf7-text {
     height: 40px;
+    border: none;
+    border-radius: 3px;
   @include responsive-min($responsive-desktop-wide) {
     width: 350px;
   }

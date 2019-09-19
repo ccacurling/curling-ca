@@ -1037,6 +1037,8 @@ li {
 
 .newsletter-signup-input, .footer-content-right-wrapper .wpcf7-text {
   height: 40px;
+  border: none;
+  border-radius: 3px;
 }
 
 @media only screen and (min-width: 1441px) {
