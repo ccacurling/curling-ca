@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
         if (!data && !$this.hasClass('js-curling-nav-init')) {
             data = new CurlingNav($this, typeof options == 'object' && options);
+            $this.addClass('js-curling-nav-init');
             $this.data('curling.nav', data);
         }
     });

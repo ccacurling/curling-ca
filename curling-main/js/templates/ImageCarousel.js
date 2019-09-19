@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
         if (!data && !$this.hasClass('js-image-carousel-init')) {
             data = new ImageCarousel($this, typeof options == 'object' && options);
+            $this.addClass('js-image-carousel-init');
             $this.data('image.carousel', data);
         }
     });

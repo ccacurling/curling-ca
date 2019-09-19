@@ -1,6 +1,9 @@
 .block-schedule-links {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  @include responsive-min($responsive-laptop) {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+  }
 }
 
 .schedule-links-container {

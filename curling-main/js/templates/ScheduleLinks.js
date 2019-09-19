@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
         if (!data && !$this.hasClass('js-schedule-links-init')) {
             data = new ScheduleLinks($this, typeof options == 'object' && options);
+            $this.addClass('js-schedule-links-init');
             $this.data('schedule.links', data);
         }
     });

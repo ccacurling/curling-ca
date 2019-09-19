@@ -1,3 +1,4 @@
+import './templates/Accordion.js';
 import './templates/CurlingNav.js';
 import './templates/CurlingNavMobile.js';
 import './templates/ImageCarousel.js';
@@ -15,6 +16,6 @@ jQuery(document).ready(function($) {
   $('.js-image-carousel').imageCarousel();
   $('.js-news-feed').newsFeed();
   $('.js-schedule-links').scheduleLinks();
-
+  $('.js-accordion').accordion();
 });
 

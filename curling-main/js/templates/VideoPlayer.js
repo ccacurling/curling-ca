@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
         if (!data && !$this.hasClass('js-hero-container-init')) {
             data = new VideoPlayer($this, typeof options == 'object' && options);
+            $this.addClass('js-hero-container-init');
             $this.data('media.player', data);
         }
     });
