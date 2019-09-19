@@ -38,6 +38,12 @@
     max-width: 1210px;
   }
 
+  &.column-sidebar .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+    @include responsive-min($responsive-laptop) {
+      position: absolute;
+    }
+  }
+
   .wp-block-cossette-block-column-2 > .wp-block-columns,
   .wp-block-cossette-block-column-3 > .wp-block-columns {
     display: flex;
@@ -87,7 +93,6 @@
         flex-basis: 84%;
       }
       .wp-block-column:last-child {
-        position: absolute;
         flex-basis: 16%;
       }
     }
@@ -99,7 +104,6 @@
         flex-basis: 33.33333%;
       }
       .wp-block-column:last-child {
-        position: absolute;
         flex-basis: 66.66666%;
       }
     }

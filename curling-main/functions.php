@@ -62,6 +62,7 @@ function block_2_column_init() {
           return '<div class="block-column '.
             ($attributes['type'] === '50_50' ? 'column-50-50' : ($attributes['type'] === '84_16' ? 'column-84-16' : 'column-33-66')).' '.
             ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
+            ($attributes['left_column_is_sidebar'] ? ' '.'column-sidebar' : '' ).
             '">'.$content.'</div>';
       },
       'attributes' => [
@@ -71,6 +72,10 @@ function block_2_column_init() {
         ],
         'is_fullwidth' => [
           'default' => true,
+          'type' => 'boolean'
+        ],
+        'left_column_is_sidebar' => [
+          'default' => false,
           'type' => 'boolean'
         ]
       ]

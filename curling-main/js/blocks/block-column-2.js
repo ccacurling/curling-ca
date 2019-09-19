@@ -43,6 +43,10 @@ registerBlockType("cossette/block-column-2", {
     is_fullwidth: {
       default: true,
       type: "boolean"
+    },
+    left_column_is_sidebar : {
+      default: false,
+      type: "boolean"
     }
   },
   // TODO: This is a hack which forces the template to appear valid.
@@ -62,6 +66,16 @@ registerBlockType("cossette/block-column-2", {
               onChange={(is_fullwidth) => {
                 setAttributes({
                   is_fullwidth
+                });
+              }}
+            />
+            <CheckboxControl
+              value={attributes.left_column_is_sidebar}
+              label={__('Left Column is Sidebar')}
+              checked={attributes.left_column_is_sidebar}
+              onChange={(left_column_is_sidebar) => {
+                setAttributes({
+                  left_column_is_sidebar
                 });
               }}
             />
