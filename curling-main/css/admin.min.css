@@ -1095,6 +1095,15 @@
   }
 }
 
+@keyframes expand {
+  from {
+    margin-left: 8px;
+  }
+  to {
+    margin-left: 16px;
+  }
+}
+
 .edit-post-layout__content .btn, .edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
   padding: 16px 52px 14px;
   background: none;
@@ -1246,6 +1255,13 @@
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+}
+
+.edit-post-layout__content .btn-link:hover .btn-link-arrow {
+  animation-name: expand;
+  animation-duration: .5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 .edit-post-layout__content .btn-link-text {

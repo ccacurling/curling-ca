@@ -1,3 +1,8 @@
+@keyframes expand {
+    from {margin-left: 8px;}
+    to {margin-left: 16px;}
+}
+
 .btn {
     padding: 16px 52px 14px;
     background: none;
@@ -147,6 +152,14 @@
   color: inherit;
   cursor: pointer;
   text-decoration: none;
+  &:hover {
+    .btn-link-arrow {
+        animation-name: expand;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+    }
+  }
 }
 
 .btn-link-text {
