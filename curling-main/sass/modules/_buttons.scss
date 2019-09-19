@@ -155,7 +155,9 @@
   &:hover {
     .btn-link-arrow {
         animation-name: expand;
-        animation-duration: 1s;
+        animation-duration: .5s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
     }
   }
 }
