@@ -639,6 +639,7 @@ li {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  position: relative;
 }
 
 @media only screen and (min-width: 999px) {

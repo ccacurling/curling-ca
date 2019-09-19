@@ -67,6 +67,8 @@
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    position: relative;
+    
     @include responsive-min($responsive-laptop) {
       flex-direction: row;
     }
