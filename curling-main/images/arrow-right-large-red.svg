@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="19px" height="10px" viewBox="0 0 19 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="21px" height="9px" viewBox="0 0 21 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <polygon id="path-1" points="14.7698482 7.36811627 17.246664 4.94184768 0.86625 4.94184768 0.86625 3.45333934 17.2162737 3.45333934 14.7698482 1.05684092 15.8335114 5.68434189e-14 20.13375 4.21247859 15.8335114 8.42495719"></polygon>
+    </defs>
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Item/Header/Widget" transform="translate(-680.000000, -147.000000)">
-            <g id="Right-Side-Information">
-                <g transform="translate(560.000000, 0.000000)">
-                    <g id="Link-Button" transform="translate(18.000000, 139.000000)">
-                        <g id="Icon/Arrow" transform="translate(102.956140, 8.350000)">
-                            <polygon id="Triangle-4" fill="#ed1940" fill-rule="evenodd" points="18.0438596 4.725 11.6754386 9.45 11.6754386 -5.4534155e-13"></polygon>
-                            <path d="M12.2061404,4.65 L0.530701754,4.65" id="Line-24" stroke="#ed1940" stroke-width="2" stroke-linecap="square"></path>
+        <g id="CTA-Button/Secondary" transform="translate(-126.000000, -9.000000)">
+            <g id="CTA/Button/Secondary">
+                <g>
+                    <g id="Icon/Arrow" transform="translate(126.000000, 9.000000)">
+                        <g>
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Shape" fill="#4C4C4E" fill-rule="nonzero" xlink:href="#path-1"></use>
+                            <g id="Color/red" mask="url(#mask-2)" fill="#ED1940">
+                                <g transform="translate(-55.125000, -60.428571)" id="Rectangle-Copy-3">
+                                    <rect x="0" y="0" width="131" height="129"></rect>
+                                </g>
+                            </g>
                         </g>
                     </g>
                 </g>
