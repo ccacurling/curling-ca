@@ -597,10 +597,15 @@ li {
   max-width: 1210px;
 }
 
+.block-column {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .block-column.column-smallwidth {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1170px;
+  max-width: 1210px;
 }
 
 .block-column .wp-block-cossette-block-column > .wp-block-columns {
