@@ -1,15 +1,83 @@
 .block-schedule {
-  padding-top: 60px;
-  padding-bottom: 60px;
   margin-left: 0;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 990px;
+  margin-right: 0;
+  
+  @include responsive-min($responsive-laptop) {
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 990px;
+  }
 }
 
 .schedule-date-container {
-  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $gray;
+  border-bottom: 1px solid $white;
+  cursor: pointer;
+  
+  @include responsive-min($responsive-laptop) {
+    padding-top: 0;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    border-bottom: none;
+    cursor: auto;
+  }
+}
+
+.schedule-date-arrow {
+  transition: transform 0.1s ease-out;
+  @include responsive-min($responsive-laptop) {
+    display: none;
+  }
+}
+
+.schedule-details {
+  display: none;
+  padding-top: 10px;
+
+  @include responsive-min($responsive-laptop) {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.block-schedule.active > {
+  .schedule-date-container > .schedule-date-arrow {
+    transform: rotate(180deg);
+  }
+
+  .schedule-details {
+    display: block;
+  }
+}
+
+.schedule-date {
+  color: $white;
+
+  @include responsive-min($responsive-laptop) {
+    color: $black;
+  }
+}
+
+.schedule-details {
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include responsive-min($responsive-laptop) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .schedule-info-container {
@@ -17,7 +85,11 @@
 }
 
 .schedule-list-container {
-  padding-top: 40px;
+  padding-top: 10px;
+
+  @include responsive-min($responsive-laptop) {
+    padding-top: 40px;
+  }
 }
 
 .schedule-list-container {

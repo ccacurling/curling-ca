@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
         if (!data && !$this.hasClass('js-curling-mobilenav-init')) {
             data = new CurlingNavMobile($this, typeof options == 'object' && options);
+            $this.addClass('js-curling-mobilenav-init');
             $this.data('curling.mobilenav', data);
         }
     });

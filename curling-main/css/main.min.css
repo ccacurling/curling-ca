@@ -1414,7 +1414,7 @@ li {
 }
 
 .menu-nav-mobile.menu-submenunav-mobile {
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   padding-right: 16px;
   cursor: pointer;
@@ -3646,8 +3646,10 @@ li {
   }
 }
 
-.news-promo-container.news-promo-large {
-  height: 610px;
+@media only screen and (min-width: 999px) {
+  .news-promo-container.news-promo-large {
+    max-height: 610px;
+  }
 }
 
 .news-promo-thumbnail-container {
@@ -3660,6 +3662,15 @@ li {
   height: 100%;
   object-fit: contain;
   background-color: #000000;
+  max-height: 500px;
+  min-height: 320px;
+}
+
+@media only screen and (min-width: 999px) {
+  .news-promo-thumbnail {
+    min-height: none;
+    max-height: none;
+  }
 }
 
 .news-promo-info {
@@ -3670,7 +3681,14 @@ li {
   flex-basis: 39%;
   padding-left: 30px;
   padding-right: 20px;
+  padding-bottom: 36px;
   background-color: white;
+}
+
+@media only screen and (min-width: 999px) {
+  .news-promo-info {
+    padding-bottom: 0;
+  }
 }
 
 .news-promo-title {
@@ -3825,9 +3843,12 @@ li {
 .callout-wrapper {
   display: flex;
   flex-direction: column;
+  margin-top: 11px;
+  margin-bottom: 11px;
   height: 100%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
   background-color: white;
+  min-height: 506px;
 }
 
 .callout-thumbnail-container {
@@ -4532,17 +4553,96 @@ p.item-label {
 }
 
 .block-schedule {
-  padding-top: 60px;
-  padding-bottom: 60px;
   margin-left: 0;
-  margin-right: auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  max-width: 990px;
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-schedule {
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 990px;
+  }
 }
 
 .schedule-date-container {
-  padding-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #4c4c4e;
+  border-bottom: 1px solid #ffffff;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 999px) {
+  .schedule-date-container {
+    padding-top: 0;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: transparent;
+    border-bottom: none;
+    cursor: auto;
+  }
+}
+
+.schedule-date-arrow {
+  transition: transform 0.1s ease-out;
+}
+
+@media only screen and (min-width: 999px) {
+  .schedule-date-arrow {
+    display: none;
+  }
+}
+
+.schedule-details {
+  display: none;
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 999px) {
+  .schedule-details {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.block-schedule.active > .schedule-date-container > .schedule-date-arrow {
+  transform: rotate(180deg);
+}
+
+.block-schedule.active > .schedule-details {
+  display: block;
+}
+
+.schedule-date {
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 999px) {
+  .schedule-date {
+    color: #000000;
+  }
+}
+
+.schedule-details {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 999px) {
+  .schedule-details {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .schedule-info-container {
@@ -4550,7 +4650,13 @@ p.item-label {
 }
 
 .schedule-list-container {
-  padding-top: 40px;
+  padding-top: 10px;
+}
+
+@media only screen and (min-width: 999px) {
+  .schedule-list-container {
+    padding-top: 40px;
+  }
 }
 
 .schedule-list-container {
@@ -4592,9 +4698,12 @@ p.item-label {
   padding-top: 40px;
 }
 
-.block-schedule-links {
-  margin-top: 50px;
-  margin-bottom: 50px;
+@media only screen and (min-width: 999px) {
+  .block-schedule-links {
+    margin-top: 10px;
+    margin-bottom: 50px;
+    margin-left: 100px;
+  }
 }
 
 .schedule-links-container {
@@ -4848,8 +4957,10 @@ h1.page-intro-main-headline {
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
-.team-small-container:hover .team-small-title {
-  display: none;
+@media only screen and (min-width: 999px) {
+  .team-small-container:hover .team-small-title {
+    display: none;
+  }
 }
 
 .team-small-container:hover .team-small-members-container {
@@ -4881,8 +4992,13 @@ h1.page-intro-main-headline {
 }
 
 .team-small-members-container {
-  display: none;
   margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 999px) {
+  .team-small-members-container {
+    display: none;
+  }
 }
 
 .team-small-member-item {

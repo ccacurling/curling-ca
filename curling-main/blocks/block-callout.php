@@ -26,7 +26,7 @@ $callout_link = get_field( 'callout_link' );
       <?php
         if ($callout_title) {
       ?>
-        <h3 class="callout-title"><?php echo $callout_title; ?></h3>
+        <h4 class="callout-title"><?php echo $callout_title; ?></h4>
       <?php
         }
       ?>

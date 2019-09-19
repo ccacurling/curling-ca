@@ -14,7 +14,9 @@
   }
 
   &.news-promo-large {
-    height: 610px;
+    @include responsive-min($responsive-laptop) {
+      max-height: 610px;
+    }
   }
 }
 
@@ -28,6 +30,13 @@
   height: 100%;
   object-fit: contain;
   background-color: $black;
+  max-height: 500px;
+  min-height: 320px;
+  
+  @include responsive-min($responsive-laptop) {
+    min-height: none;
+    max-height: none;
+  }
 }
 
 .news-promo-info {
@@ -38,7 +47,12 @@
   flex-basis: 39%;
   padding-left: 30px;
   padding-right: 20px;
+  padding-bottom: 36px;
   background-color: white;
+
+  @include responsive-min($responsive-laptop) {
+    padding-bottom: 0;
+  }
 }
 
 .news-promo-title {

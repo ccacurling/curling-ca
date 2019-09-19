@@ -6,6 +6,7 @@ jQuery(document).ready(function($) {
 
         if (!data && !$this.hasClass('js-news-feed-init')) {
             data = new NewsFeed($this, typeof options == 'object' && options);
+            $this.addClass('js-news-feed-init');
             $this.data('news.feed', data);
         }
     });
