@@ -134,6 +134,9 @@
   font-family: $knockout;
   font-size: 20px;
   margin-top: 10px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  border-radius: 3px;
   @include responsive-min($responsive-laptop) {
     margin-top: 0;
     margin-left: 20px;

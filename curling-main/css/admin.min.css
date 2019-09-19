@@ -1080,6 +1080,9 @@
   font-family: "Knockout";
   font-size: 20px;
   margin-top: 10px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  border-radius: 3px;
 }
 
 @media only screen and (min-width: 999px) {
