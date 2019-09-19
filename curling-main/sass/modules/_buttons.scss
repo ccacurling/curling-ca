@@ -154,10 +154,13 @@
   text-decoration: none;
   &:hover {
     .btn-link-arrow {
+        margin-left: 16px;
+        /*
         animation-name: expand;
-        animation-duration: .5s;
+        animation-duration: .2s;
         animation-timing-function: linear;
         animation-fill-mode: forwards;
+        */
     }
   }
 }
@@ -170,4 +173,5 @@
 
 .btn-link-arrow {
   margin-left: 8px;
+  transition: margin-left 0.2s ease-out;
 }

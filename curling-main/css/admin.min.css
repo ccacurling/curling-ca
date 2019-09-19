@@ -1258,10 +1258,13 @@
 }
 
 .edit-post-layout__content .btn-link:hover .btn-link-arrow {
-  animation-name: expand;
-  animation-duration: .5s;
-  animation-timing-function: linear;
-  animation-fill-mode: forwards;
+  margin-left: 16px;
+  /*
+        animation-name: expand;
+        animation-duration: .2s;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        */
 }
 
 .edit-post-layout__content .btn-link-text {
@@ -1272,6 +1275,7 @@
 
 .edit-post-layout__content .btn-link-arrow {
   margin-left: 8px;
+  transition: margin-left 0.2s ease-out;
 }
 
 .edit-post-layout__content .checkbox-container {
