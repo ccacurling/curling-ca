@@ -113,7 +113,8 @@ jQuery(document).ready(function($) {
 
     initFeatured() {
       this.sliderFeatured.each((i, element) => {
-        element.masterslider({
+        const $this = $(element);
+        $this.masterslider({
           width: 767,
           height: 488,
           layout: 'partialview',
