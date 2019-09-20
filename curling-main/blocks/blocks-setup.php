@@ -899,10 +899,10 @@ acf_add_local_field_group(array(
 	'title' => 'Image Carousel',
 	'fields' => array(
 		array(
-			'key' => 'field_5d794756e011a',
-			'label' => 'Type',
-			'name' => 'image_carousel_type',
-			'type' => 'select',
+			'key' => 'field_5d77e3d714422',
+			'label' => 'Title',
+			'name' => 'image_carousel_title',
+			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
@@ -911,18 +911,11 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'choices' => array(
-				'normal' => 'Normal',
-				'circular' => 'Circular',
-			),
-			'default_value' => array(
-			),
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
+			'default_value' => '',
 			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
 		),
 		array(
 			'key' => 'field_5d8151d5067f0',
@@ -951,9 +944,9 @@ acf_add_local_field_group(array(
 			'placeholder' => '',
 		),
 		array(
-			'key' => 'field_5d77e5bde58d9',
-			'label' => 'Layout',
-			'name' => 'image_carousel_layout',
+			'key' => 'field_5d794756e011a',
+			'label' => 'Type',
+			'name' => 'image_carousel_type',
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
@@ -964,8 +957,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'large_left' => 'Large Image Left',
-				'large_right' => 'Large Image Right',
+				'normal' => 'Normal',
+				'featured' => 'Featured',
 			),
 			'default_value' => array(
 			),
@@ -975,25 +968,6 @@ acf_add_local_field_group(array(
 			'return_format' => 'value',
 			'ajax' => 0,
 			'placeholder' => '',
-		),
-		array(
-			'key' => 'field_5d77e3d714422',
-			'label' => 'Title',
-			'name' => 'image_carousel_title',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
 		),
 		array(
 			'key' => 'field_5d81537ff59b2',
@@ -1015,13 +989,82 @@ acf_add_local_field_group(array(
 			'new_lines' => '',
 		),
 		array(
+			'key' => 'field_5d85110f420b5',
+			'label' => 'Master Slider Alias',
+			'name' => 'image_carousel_master_slider_alias',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d794756e011a',
+						'operator' => '==',
+						'value' => 'featured',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5d77e5bde58d9',
+			'label' => 'Layout',
+			'name' => 'image_carousel_layout',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d794756e011a',
+						'operator' => '==',
+						'value' => 'normal',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'large_left' => 'Large Image Left',
+				'large_right' => 'Large Image Right',
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
 			'key' => 'field_5d77e6173f181',
 			'label' => 'Image Carousel Gallery',
 			'name' => 'image_carousel_gallery',
 			'type' => 'gallery',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d794756e011a',
+						'operator' => '==',
+						'value' => 'normal',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',

@@ -953,12 +953,12 @@
         "_valid": 1,
         "local": "php",
         "fields": {
-            "field_5d794756e011a": {
-                "key": "field_5d794756e011a",
-                "name": "image_carousel_type",
-                "type": "select",
+            "field_5d77e3d714422": {
+                "key": "field_5d77e3d714422",
+                "name": "image_carousel_title",
+                "type": "text",
                 "parent": "group_5d77e34bd6c46",
-                "label": "Type",
+                "label": "Title",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -967,17 +967,11 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "normal": "Normal",
-                    "circular": "Circular"
-                },
-                "default_value": [],
-                "allow_null": 0,
-                "multiple": 0,
-                "ui": 0,
-                "return_format": "value",
-                "ajax": 0,
-                "placeholder": ""
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             },
             "field_5d8151d5067f0": {
                 "key": "field_5d8151d5067f0",
@@ -1005,12 +999,12 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d77e5bde58d9": {
-                "key": "field_5d77e5bde58d9",
-                "name": "image_carousel_layout",
+            "field_5d794756e011a": {
+                "key": "field_5d794756e011a",
+                "name": "image_carousel_type",
                 "type": "select",
                 "parent": "group_5d77e34bd6c46",
-                "label": "Layout",
+                "label": "Type",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1020,8 +1014,8 @@
                     "id": ""
                 },
                 "choices": {
-                    "large_left": "Large Image Left",
-                    "large_right": "Large Image Right"
+                    "normal": "Normal",
+                    "featured": "Featured"
                 },
                 "default_value": [],
                 "allow_null": 0,
@@ -1030,26 +1024,6 @@
                 "return_format": "value",
                 "ajax": 0,
                 "placeholder": ""
-            },
-            "field_5d77e3d714422": {
-                "key": "field_5d77e3d714422",
-                "name": "image_carousel_title",
-                "type": "text",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Title",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
             },
             "field_5d81537ff59b2": {
                 "key": "field_5d81537ff59b2",
@@ -1071,6 +1045,68 @@
                 "rows": "",
                 "new_lines": ""
             },
+            "field_5d85110f420b5": {
+                "key": "field_5d85110f420b5",
+                "name": "image_carousel_master_slider_alias",
+                "type": "text",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Master Slider Alias",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d794756e011a",
+                            "operator": "==",
+                            "value": "featured"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            "field_5d77e5bde58d9": {
+                "key": "field_5d77e5bde58d9",
+                "name": "image_carousel_layout",
+                "type": "select",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Layout",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d794756e011a",
+                            "operator": "==",
+                            "value": "normal"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "large_left": "Large Image Left",
+                    "large_right": "Large Image Right"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
             "field_5d77e6173f181": {
                 "key": "field_5d77e6173f181",
                 "name": "image_carousel_gallery",
@@ -1079,7 +1115,15 @@
                 "label": "Image Carousel Gallery",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d794756e011a",
+                            "operator": "==",
+                            "value": "normal"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",

@@ -9,12 +9,14 @@ $carousel_type = get_field( 'image_carousel_type' );
 $carousel_background_colour = get_field( 'image_carousel_background_colour' );
 $carousel_title = get_field( 'image_carousel_title' );
 $carousel_top_body = get_field( 'image_carousel_top_body' );
-$carousel_layout = get_field( 'image_carousel_layout' );
-$carousel_gallery = get_field( 'image_carousel_gallery' );
 $carousel_bottom_body = get_field( 'image_carousel_bottom_body' );
 $carousel_links = get_field( 'image_carousel_links' );
 
-$carousel_gallery_chucks = array_chunk($carousel_gallery, 4);
+$carousel_layout = get_field( 'image_carousel_layout' );
+$carousel_gallery = get_field( 'image_carousel_gallery' );
+$carousel_gallery_chucks = $carousel_gallery ? array_chunk($carousel_gallery, 4) : [];
+$carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' );
+
 ?>
 
 <section class="block-image-carousel <?php echo $carousel_background_colour === 'gray' ? 'image-carousel-gray' : ''; ?> js-image-carousel">
@@ -103,27 +105,12 @@ $carousel_gallery_chucks = array_chunk($carousel_gallery, 4);
     <?php
       } else {
     ?>
-    <div class="image-carousel-gallery image-carousel-gallery-circular <?php echo $carousel_layout === 'large_right' ? 'image-carousel-rtl' : ''; ?> ">
-      <div class="image-carousel-slides js-slider js-slider-circular">
-        <?php
-          foreach ($carousel_gallery as $key => $image) {
-        ?>
-          <div class="image-carousel-slide">
-            <div class="image-carousel-image-container">
-              <img class="image-carousel-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-            </div>
-          </div>
-        <?php
-          }
-        ?>
-      </div>
-      <div class="image-carousel-navigation js-carousel-nav">
-        <div class="image-carousel-navigation-arrows">
-          <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-prev js-carousel-nav-prev"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-left-nav-white.svg"; ?> alt=""/></button>
-          <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination"></h4>
-          <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-next js-carousel-nav-next"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-right-nav-white.svg"; ?> alt=""/></button>
-        </div>
-      </div>
+    <div class="image-carousel-gallery image-carousel-gallery-featured">
+      <?php
+        if ($carousel_masterslider_alias) {
+          masterslider($carousel_masterslider_alias);
+        }
+      ?>
     </div>
 
     <?php
