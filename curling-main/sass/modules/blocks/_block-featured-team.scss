@@ -11,6 +11,12 @@
     padding-right: 20px;
     max-width: 1210px;
   }
+
+  @include responsive-max($responsive-tablet) {
+    margin-left: 0px;
+    margin-right: 0px;
+    
+  }
 }
 
 .featured-team-container {
@@ -43,6 +49,11 @@
 
   @include responsive-min($responsive-laptop) {
     width: 48.7%;
+  }
+  @include responsive-max($responsive-tablet) {
+    padding-left: 20px;
+    padding-right: 20px;
+    
   }
 }
 
