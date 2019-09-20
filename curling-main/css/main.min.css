@@ -4035,6 +4035,10 @@ li {
   max-width: none;
 }
 
+.image-carousel-sub-container.image-carousel-nobody .image-carousel-title {
+  padding-bottom: 0;
+}
+
 .image-carousel-title {
   padding-bottom: 30px;
 }

@@ -4051,6 +4051,10 @@
   max-width: none;
 }
 
+.edit-post-layout__content .image-carousel-sub-container.image-carousel-nobody .image-carousel-title {
+  padding-bottom: 0;
+}
+
 .edit-post-layout__content .image-carousel-title {
   padding-bottom: 30px;
 }
