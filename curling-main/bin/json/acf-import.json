@@ -1099,6 +1099,26 @@
                 "max_size": "",
                 "mime_types": ""
             },
+            "field_5d8565f1ab438": {
+                "key": "field_5d8565f1ab438",
+                "name": "image_carousel_bottom_title",
+                "type": "text",
+                "parent": "group_5d77e34bd6c46",
+                "label": "Bottom Title",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
             "field_5d8153aff59b3": {
                 "key": "field_5d8153aff59b3",
                 "name": "image_carousel_bottom_body",

@@ -4097,6 +4097,10 @@
   transform: scale(1.1);
 }
 
+.edit-post-layout__content .image-carousel-bottom-title {
+  margin-bottom: 20px;
+}
+
 .edit-post-layout__content .image-carousel-track {
   height: 100%;
 }

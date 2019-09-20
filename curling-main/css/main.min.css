@@ -4081,6 +4081,10 @@ li {
   transform: scale(1.1);
 }
 
+.image-carousel-bottom-title {
+  margin-bottom: 20px;
+}
+
 .image-carousel-track {
   height: 100%;
 }

@@ -9,6 +9,7 @@ $carousel_type = get_field( 'image_carousel_type' );
 $carousel_background_colour = get_field( 'image_carousel_background_colour' );
 $carousel_title = get_field( 'image_carousel_title' );
 $carousel_top_body = get_field( 'image_carousel_top_body' );
+$carousel_bottom_title = get_field( 'image_carousel_bottom_title' );
 $carousel_bottom_body = get_field( 'image_carousel_bottom_body' );
 $carousel_links = get_field( 'image_carousel_links' );
 
@@ -130,6 +131,13 @@ $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' )
       }
     ?>
     <div class="image-carousel-sub-container">
+      <?php
+        if ($carousel_bottom_title) {
+      ?>
+        <h3 class="image-carousel-bottom-title"><?php echo $carousel_bottom_title; ?></h3>
+      <?php
+        }
+      ?>
       <?php
         if ($carousel_bottom_body) {
       ?>
