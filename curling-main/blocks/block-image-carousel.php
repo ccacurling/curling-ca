@@ -19,7 +19,7 @@ $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' )
 
 ?>
 
-<section class="block-image-carousel <?php echo $carousel_background_colour === 'gray' ? 'image-carousel-gray' : ''; ?> js-image-carousel">
+<section class="block-image-carousel <?php echo $carousel_background_colour === 'gray' ? 'image-carousel-gray' : ''; ?> image-carousel-<?php echo $carousel_type; ?> js-image-carousel">
   <div class="image-carousel-container">
     <div class="image-carousel-sub-container">
       <h3 class="image-carousel-title"><?php echo $carousel_title; ?></h3>
@@ -33,7 +33,10 @@ $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' )
       ?>
     </div>
 
-    <div class="image-carousel-gallery-mobile <?php echo $carousel_layout === 'large_right' ? 'image-carousel-rtl' : ''; ?>">
+    <?php
+      if ($carousel_type === 'normal') {
+    ?>
+      <div class="image-carousel-gallery-mobile <?php echo $carousel_layout === 'large_right' ? 'image-carousel-rtl' : ''; ?>">
         <div class="image-carousel-slides js-slider-mobile">
           <?php
             foreach ($carousel_gallery as $key => $image) {
@@ -55,62 +58,72 @@ $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' )
           </div>
         </div>
       </div>
+    <?php
+      }
+    ?>  
 
     <?php
       if ($carousel_type === 'normal') {
     ?>
-    <div class="image-carousel-gallery <?php echo $carousel_layout === 'large_right' ? 'image-carousel-rtl' : ''; ?>">
-      <div class="image-carousel-slides js-slider">
-        <?php
-          foreach ($carousel_gallery_chucks as $key => $image_chunks) {
-        ?>
-          <div class="image-carousel-slide">
-            <?php
-              if ($image_chunks[0]) {
-            ?>
-              <div class="image-carousel-image-container-left">
-                <div class="image-carousel-image-container image-carousel-image-0">
-                  <img class="image-carousel-image" src="<?php echo $image_chunks[0]['url']; ?>" alt="<?php echo $image_chunks[0]['alt']; ?>" />
-                </div>
-              </div>
-            <?php
-              }
-            ?>
-              <div class="image-carousel-image-container-right">
-                <?php
-                  for ($i = 1; $i < count($image_chunks); $i++) {
-                    $image = $image_chunks[$i];
-                ?>
-                  <div class="image-carousel-image-container image-carousel-image-<?php echo $i; ?>">
-                    <img class="image-carousel-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+      <div class="image-carousel-gallery <?php echo $carousel_layout === 'large_right' ? 'image-carousel-rtl' : ''; ?>">
+        <div class="image-carousel-slides js-slider">
+          <?php
+            foreach ($carousel_gallery_chucks as $key => $image_chunks) {
+          ?>
+            <div class="image-carousel-slide">
+              <?php
+                if ($image_chunks[0]) {
+              ?>
+                <div class="image-carousel-image-container-left">
+                  <div class="image-carousel-image-container image-carousel-image-0">
+                    <img class="image-carousel-image" src="<?php echo $image_chunks[0]['url']; ?>" alt="<?php echo $image_chunks[0]['alt']; ?>" />
                   </div>
-                <?php
-                  }
-                ?>
-              </div>
+                </div>
+              <?php
+                }
+              ?>
+                <div class="image-carousel-image-container-right">
+                  <?php
+                    for ($i = 1; $i < count($image_chunks); $i++) {
+                      $image = $image_chunks[$i];
+                  ?>
+                    <div class="image-carousel-image-container image-carousel-image-<?php echo $i; ?>">
+                      <img class="image-carousel-image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    </div>
+                  <?php
+                    }
+                  ?>
+                </div>
+            </div>
+          <?php
+            }
+          ?>
+        </div>
+        <div class="image-carousel-navigation js-carousel-nav">
+          <div class="image-carousel-navigation-arrows">
+            <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-prev js-carousel-nav-prev"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-left-nav-white.svg"; ?> alt=""/></button>
+            <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination"></h4>
+            <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-next js-carousel-nav-next"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-right-nav-white.svg"; ?> alt=""/></button>
+          </div>
+        </div>
+      </div>
+    <?php
+      } else {
+    ?>
+    <div class="image-carousel-gallery">
+      <div class="image-carousel-gallery-featured js-slider-featured">
+        <?php
+          foreach ($carousel_gallery as $key => $image) {
+        ?>
+          <div class="ms-slide">
+              <img src="<?php echo $image['url']; ?>" data-src="<?php echo $image['url']; ?>" alt="image-<?php echo $key; ?>"/>     
           </div>
         <?php
           }
         ?>
+        <div class="spacer"></div>
+        <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination">1/6</h4>
       </div>
-      <div class="image-carousel-navigation js-carousel-nav">
-        <div class="image-carousel-navigation-arrows">
-          <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-prev js-carousel-nav-prev"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-left-nav-white.svg"; ?> alt=""/></button>
-          <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination"></h4>
-          <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-next js-carousel-nav-next"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-right-nav-white.svg"; ?> alt=""/></button>
-        </div>
-      </div>
-    </div>
-
-    <?php
-      } else {
-    ?>
-    <div class="image-carousel-gallery image-carousel-gallery-featured">
-      <?php
-        if ($carousel_masterslider_alias) {
-          masterslider($carousel_masterslider_alias);
-        }
-      ?>
     </div>
 
     <?php

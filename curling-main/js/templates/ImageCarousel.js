@@ -16,7 +16,19 @@ jQuery(document).ready(function($) {
   class ImageCarousel {
     constructor(element, options) {
       this.element = element;
+      this.sliderFeatured = this.element.find('.js-slider-featured');
+      this.slider = this.element.find('.js-slider');
 
+      if (this.sliderFeatured) {
+        this.initFeatured();
+      }
+
+      if (this.slider) {
+        this.initNormal();
+      }
+    }
+
+    initNormal() {
       this.slider = this.element.find('.js-slider');
       this.sliderMobile = this.element.find('.js-slider-mobile');
 
@@ -99,6 +111,21 @@ jQuery(document).ready(function($) {
           this.slider.slick('slickNext');
         });
       }
+    }
+
+    initFeatured() {
+      this.sliderFeatured.masterslider({
+        width: 767,
+        height: 488,
+        layout: 'partialview',
+        space: 0,
+        loop: true,
+        view: 'wave',
+        controls: {
+          arrows: { autohide: false },
+          slideinfo: { insertTo:'#info' }
+        }
+    });
     }
 
     addAll(slick, index, addedClass) {

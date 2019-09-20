@@ -1045,34 +1045,6 @@
                 "rows": "",
                 "new_lines": ""
             },
-            "field_5d85110f420b5": {
-                "key": "field_5d85110f420b5",
-                "name": "image_carousel_master_slider_alias",
-                "type": "text",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Master Slider Alias",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d794756e011a",
-                            "operator": "==",
-                            "value": "featured"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
             "field_5d77e5bde58d9": {
                 "key": "field_5d77e5bde58d9",
                 "name": "image_carousel_layout",
@@ -1081,15 +1053,7 @@
                 "label": "Layout",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d794756e011a",
-                            "operator": "==",
-                            "value": "normal"
-                        }
-                    ]
-                ],
+                "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -1115,15 +1079,7 @@
                 "label": "Image Carousel Gallery",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d794756e011a",
-                            "operator": "==",
-                            "value": "normal"
-                        }
-                    ]
-                ],
+                "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
