@@ -21,7 +21,7 @@ $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' )
 
 <section class="block-image-carousel <?php echo $carousel_background_colour === 'gray' ? 'image-carousel-gray' : ''; ?> image-carousel-<?php echo $carousel_type; ?> js-image-carousel">
   <div class="image-carousel-container">
-    <div class="image-carousel-sub-container">
+    <div class="image-carousel-sub-container <?php echo !$carousel_top_body ? 'image-carousel-nobody' : ''; ?>">
       <h3 class="image-carousel-title"><?php echo $carousel_title; ?></h3>
 
       <?php
