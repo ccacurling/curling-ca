@@ -639,11 +639,36 @@
   max-width: 1210px;
 }
 
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-column.column-sidebar.column-50-50 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+    position: absolute;
+    right: 0;
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-column.column-sidebar.column-84-16 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+    position: absolute;
+    right: 0;
+    width: 16%;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-column.column-sidebar.column-33-66 .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+    position: absolute;
+    right: 0;
+    width: 66%;
+  }
+}
+
 .edit-post-layout__content .block-column .wp-block-cossette-block-column-2 > .wp-block-columns,
 .edit-post-layout__content .block-column .wp-block-cossette-block-column-3 > .wp-block-columns {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
+  position: relative;
 }
 
 @media only screen and (min-width: 999px) {
@@ -655,6 +680,7 @@
 
 .edit-post-layout__content .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column,
 .edit-post-layout__content .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column {
+  position: relative;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: 0;
@@ -689,6 +715,14 @@
 
 .edit-post-layout__content .block-column.column-84-16 > .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
   flex-basis: 16%;
+}
+
+.edit-post-layout__content .block-column.column-33-66 > .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:first-child {
+  flex-basis: 33.33333%;
+}
+
+.edit-post-layout__content .block-column.column-33-66 > .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+  flex-basis: 66.66666%;
 }
 
 .edit-post-layout__content .header-main .nav-menu-top-right-mobile {
@@ -3320,6 +3354,10 @@
 
 .edit-post-layout__content .block-sponsors.one-column {
   padding: 0;
+}
+
+.edit-post-layout__content .block-sponsors.one-column .content .cta-section {
+  width: 100%;
 }
 
 .edit-post-layout__content .block-sponsors .content {

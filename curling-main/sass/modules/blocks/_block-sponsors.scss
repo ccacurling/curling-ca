@@ -6,6 +6,10 @@
 
   &.one-column {
     padding: 0;
+
+    .content .cta-section {
+      width: 100%;
+    }
   }
 
   .content {

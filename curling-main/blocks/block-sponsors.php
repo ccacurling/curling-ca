@@ -55,7 +55,17 @@
 
 <section id="<?php echo $id ?>" class="block-sponsors <?php echo $block_background_class; ?> <?php echo $block_template_class; ?>">
   <div class="content">
-    <h2><?php echo strtoupper( $block_title ); ?></h2>
+    <?php
+      if ($sponsor_columns == 1) {
+    ?>
+      <h4><?php echo strtoupper( $block_title ); ?></h4>
+    <?php
+      } else {
+    ?>
+      <h2><?php echo strtoupper( $block_title ); ?></h2>
+    <?php
+      }
+    ?>
 
     <!-- Block CTAs show if Top location is selected -->
     <?php if ( have_rows( 'block_cta_settings' ) ) { 
