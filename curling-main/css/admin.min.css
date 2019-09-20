@@ -4914,6 +4914,12 @@
   }
 }
 
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .page-intro-main-container.has-cta {
+    margin-bottom: 40px;
+  }
+}
+
 .edit-post-layout__content .page-intro {
   max-width: 1170px;
   display: flex;
@@ -5158,6 +5164,17 @@
 
 .edit-post-layout__content .team-small-link-container {
   margin-bottom: 20px;
+}
+
+.edit-post-layout__content .block-video {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1170px;
+  text-align: center;
+  background-color: #000000;
 }
 
 /*# sourceMappingURL=admin.min.css.map */
