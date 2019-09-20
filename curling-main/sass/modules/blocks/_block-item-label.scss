@@ -11,5 +11,8 @@ p.item-label{
   text-align: center;
   font-family: $knockout; 
   border-radius: 2px;
+  @include responsive-max( $full-width-max - 2 ) {
+    margin-bottom: 20px;
+  }
 }
 
