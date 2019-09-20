@@ -4045,6 +4045,12 @@
   max-width: 890px;
 }
 
+.edit-post-layout__content .image-carousel-sub-container.image-carousel-nobody {
+  padding-top: 0;
+  padding-left: 0;
+  max-width: none;
+}
+
 .edit-post-layout__content .image-carousel-title {
   padding-bottom: 30px;
 }
@@ -4809,7 +4815,7 @@
   margin-bottom: 35px;
   margin-left: 20px;
   margin-right: 20px;
-  max-width: 290px;
+  max-width: 280px;
   width: 100%;
 }
 
