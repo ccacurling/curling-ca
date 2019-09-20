@@ -58,9 +58,6 @@
     * Vendor Imports
     */
   /* Slider */
-  /* Slider */
-  /* Icons */
-  /* Arrows */
   /* Dots */
   /**
     * Layout imports
@@ -390,16 +387,6 @@
   display: none;
 }
 
-@font-face {
-  .edit-post-layout__content {
-    font-family: "slick";
-    src: url("./fonts/slick.eot");
-    src: url("./fonts/slick.eot?#iefix") format("embedded-opentype"), url("./fonts/slick.woff") format("woff"), url("./fonts/slick.ttf") format("truetype"), url("./fonts/slick.svg#slick") format("svg");
-    font-weight: normal;
-    font-style: normal;
-  }
-}
-
 .edit-post-layout__content .slick-prev,
 .edit-post-layout__content .slick-next {
   position: absolute;
@@ -441,7 +428,7 @@
 
 .edit-post-layout__content .slick-prev:before,
 .edit-post-layout__content .slick-next:before {
-  font-family: "slick";
+  font-family: "Knockout";
   font-size: 20px;
   line-height: 1;
   color: white;
@@ -538,7 +525,7 @@
   content: "•";
   width: 20px;
   height: 20px;
-  font-family: "slick";
+  font-family: "Knockout";
   font-size: 6px;
   line-height: 20px;
   text-align: center;
@@ -4241,6 +4228,7 @@
   width: 48px;
   height: 48px;
   outline: none;
+  cursor: pointer;
 }
 
 .edit-post-layout__content .image-carousel-navigation-pagination {
