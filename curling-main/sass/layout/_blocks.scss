@@ -129,27 +129,3 @@
     }
   }
 }
-
-.block-container .wp-block-cossette-block-container {
-  h3 {
-    margin-bottom: 20px;
-
-    @include responsive-min($responsive-laptop) {
-      margin-left: auto;
-      margin-right: auto;
-      padding-right: 200px;
-      max-width: 970px;
-    }
-  }
-
-  p {
-    margin-bottom: 10px;
-
-    @include responsive-min($responsive-laptop) {
-      margin-left: auto;
-      margin-right: auto;
-      padding-right: 200px;
-      max-width: 970px;
-    }
-  }
-}

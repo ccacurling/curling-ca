@@ -685,32 +685,6 @@ li {
   flex-basis: 66.66666%;
 }
 
-.block-container .wp-block-cossette-block-container h3 {
-  margin-bottom: 20px;
-}
-
-@media only screen and (min-width: 999px) {
-  .block-container .wp-block-cossette-block-container h3 {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 200px;
-    max-width: 970px;
-  }
-}
-
-.block-container .wp-block-cossette-block-container p {
-  margin-bottom: 10px;
-}
-
-@media only screen and (min-width: 999px) {
-  .block-container .wp-block-cossette-block-container p {
-    margin-left: auto;
-    margin-right: auto;
-    padding-right: 200px;
-    max-width: 970px;
-  }
-}
-
 .header-main .nav-menu-top-right-mobile {
   background-color: #ed1940;
 }
