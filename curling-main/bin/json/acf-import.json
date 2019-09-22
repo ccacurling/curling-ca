@@ -3933,5 +3933,50 @@
                 "height": 568
             }
         }
+    },
+    {
+        "key": "group_5d87d2cd28141",
+        "title": "Ad - Banner",
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/ad-banner"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "_valid": 1,
+        "local": "php",
+        "fields": {
+            "field_5d87d2d5e5658": {
+                "key": "field_5d87d2d5e5658",
+                "name": "adsnippet",
+                "type": "textarea",
+                "parent": "group_5d87d2cd28141",
+                "label": "Ad Space\/Snippet",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            }
+        }
     }
 ]
