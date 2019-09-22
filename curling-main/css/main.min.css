@@ -843,6 +843,7 @@ li {
 
 .header-event .nav-menu-popup.active {
   max-height: 200px;
+  z-index: 3;
 }
 
 .header-event .nav-menu-popup .menu-item-title {
@@ -2301,8 +2302,7 @@ li {
 }
 
 .block-divider {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 3.75rem 0;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -3001,12 +3001,11 @@ li {
   height: 400px;
   display: flex;
   flex-direction: row;
-  margin: 5rem auto;
+  margin: 2.5rem auto 3.5rem auto;
   -webkit-box-shadow: 0px 5px 12px 0px #ccc;
   -moz-box-shadow: 0px 5px 12px 0px #ccc;
   box-shadow: 0px 5px 12px 0px #ccc;
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .event-location-container .info-section {
@@ -3088,11 +3087,14 @@ li {
 @media only screen and (max-width: 1081px) {
   .event-location-container {
     max-width: 600px;
-    height: 800px;
+    height: 860px;
   }
   .event-location-container .info-section {
     width: 100%;
-    max-height: 400px;
+    max-height: 500px;
+  }
+  .event-location-container .info-section .event-links {
+    flex-direction: column;
   }
   .event-location-container .map-section {
     width: 100%;
@@ -3109,10 +3111,10 @@ li {
 @media only screen and (max-width: 601px) {
   .event-location-container {
     max-width: 400px;
-    height: 600px;
+    height: 650px;
   }
   .event-location-container .info-section {
-    max-height: 300px;
+    max-height: 335px;
     padding: 1.75rem 2.75rem;
   }
   .event-location-container .info-section p {
@@ -3120,17 +3122,18 @@ li {
     line-height: 1.5rem;
   }
   .event-location-container .info-section h2, .event-location-container .info-section h3 {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     line-height: 1rem;
   }
   .event-location-container .info-section .event-date-label {
     margin-top: 1rem;
   }
   .event-location-container .info-section hr {
-    margin: 1.25rem 0;
+    margin: 1.25rem 0 1rem 0;
   }
-  .event-location-container .info-section a {
-    font-size: 0.85rem;
+  .event-location-container .info-section .event-links p a {
+    font-size: 0.95rem;
+    line-height: 1.75rem;
   }
   .event-location-container .map-section {
     max-height: 317.5px;
@@ -3140,10 +3143,10 @@ li {
 @media only screen and (max-width: 441px) {
   .event-location-container {
     max-width: 300px;
-    height: 450px;
+    height: 525px;
   }
   .event-location-container .info-section {
-    max-height: 225px;
+    max-height: 275px;
     padding: 1.75rem 1.75rem 1.25rem 1.75rem;
   }
   .event-location-container .info-section p {
@@ -3151,21 +3154,21 @@ li {
     line-height: 1rem;
   }
   .event-location-container .info-section h2, .event-location-container .info-section h3 {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     line-height: 0.8rem;
   }
   .event-location-container .info-section .event-date-label {
     margin-top: 0.75rem;
   }
   .event-location-container .info-section hr {
-    margin: 0.75rem 0;
+    margin: 1.25rem 0 0.75rem 0;
   }
-  .event-location-container .info-section a {
-    font-size: 0.65rem;
+  .event-location-container .info-section .event-links a {
+    font-size: 0.75rem;
     line-height: 1.6rem;
   }
   .event-location-container .map-section {
-    max-height: 225px;
+    max-height: 250px;
   }
 }
 
@@ -3340,7 +3343,7 @@ li {
 }
 
 .block-sponsors {
-  padding: 3rem 8rem;
+  padding: 2.5rem 8rem;
   font-family: 'knockout';
   margin-bottom: 0.25em;
 }
@@ -3451,6 +3454,14 @@ li {
 
 .block-sponsors .content .cta-section.top {
   padding: 0.5rem 0;
+}
+
+.block-sponsors .content .cta-section.bottom {
+  padding-top: 0.5rem;
+}
+
+.block-sponsors .content .cta-section.bottom .cta-link {
+  line-height: 1.25rem;
 }
 
 .block-sponsors .content .cta-section {
@@ -3646,11 +3657,13 @@ li {
 
 @media only screen and (max-width: 370px) {
   .block-sponsors .content .sponsor-container {
-    flex: 1 1 100%;
+    flex: 1 1 160px;
   }
   .block-sponsors .content .sponsor-container .sponsor {
     align-self: flex-start;
     margin-left: 1.1rem;
+    width: 150px;
+    height: 150px;
   }
   .block-sponsors .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor.sponsor {
     align-self: flex-start;
@@ -4041,6 +4054,7 @@ li {
 
 @media only screen and (min-width: 999px) {
   .block-image-carousel {
+    padding-top: 20px;
     padding-bottom: 52px;
   }
 }
@@ -4137,7 +4151,7 @@ li {
 .image-carousel-gallery {
   display: none;
   margin-top: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   min-width: 0;
 }
 
@@ -4290,8 +4304,6 @@ li {
 
 .image-carousel-gallery-featured {
   max-width: 1170px;
-  margin-left: 20px !important;
-  margin-right: 20px !important;
   height: 100%;
   overflow: hidden;
 }
@@ -4473,7 +4485,7 @@ li {
 
 p.item-label {
   display: inline-block;
-  margin-top: 8px;
+  margin-top: 0;
   margin-bottom: 8px;
   padding: 6px 8.5px;
   font-size: 12px;
@@ -4488,7 +4500,7 @@ p.item-label {
 @media only screen and (max-width: 1439px) {
   p.item-label {
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 
@@ -4509,7 +4521,7 @@ p.item-label {
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-bottom: 3.5rem;
+  margin-bottom: 6rem;
 }
 
 .text-callouts-group .callout-container {
@@ -4524,9 +4536,9 @@ p.item-label {
   flex-grow: 1;
   max-height: 315px;
   display: flex;
-  -webkit-box-shadow: 0px 5px 12px 0px #ccc;
-  -moz-box-shadow: 0px 5px 12px 0px #ccc;
-  box-shadow: 0px 5px 12px 0px #ccc;
+  -webkit-box-shadow: 0px 5px 26px -3px #ccc;
+  -moz-box-shadow: 0px 5px 26px -3px #ccc;
+  box-shadow: 0px 5px 26px -3px #ccc;
 }
 
 .text-callouts-group .single-text-callout.has-image {
@@ -4592,7 +4604,7 @@ p.item-label {
   text-decoration: none;
   color: red;
   text-transform: uppercase;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-right: 1rem;
   font-family: 'knockout';
 }
@@ -4623,7 +4635,7 @@ p.item-label {
 
 .text-callouts-group.slick-slider {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 80px;
 }
 
 .text-callouts-group.slick-slider .slick-track {
@@ -4658,9 +4670,9 @@ p.item-label {
 }
 
 .text-callouts-group.slick-slider .slick-dots li button:before {
-  font-size: 33px;
-  left: 0.5px;
-  top: -0.5px;
+  font-size: 32px;
+  left: 0;
+  top: 0;
   opacity: 0;
 }
 
@@ -4674,7 +4686,7 @@ p.item-label {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin: 1rem 0;
   margin-left: -1%;
 }
 
@@ -4689,6 +4701,11 @@ p.item-label {
   max-width: 370px;
   text-align: center;
   flex: 1 1 calc(1170px / 3);
+  transition: transform 0.1s ease-in;
+}
+
+.pdf-with-image-block-container .pdf-section .pdf-container:hover {
+  transform: scale(1.05);
 }
 
 .pdf-with-image-block-container .pdf-section .pdf-container img {
@@ -4736,11 +4753,23 @@ p.item-label {
 @media only screen and (min-width: 999px) {
   .block-schedule {
     margin-right: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 990px;
+  }
+}
+
+.wp-block-column > .block-schedule {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media only screen and (min-width: 999px) {
+  .wp-block-column > .block-schedule {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 
@@ -4760,7 +4789,7 @@ p.item-label {
 @media only screen and (min-width: 999px) {
   .schedule-date-container {
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     padding-left: 0;
     padding-right: 0;
     background-color: transparent;
@@ -4825,13 +4854,14 @@ p.item-label {
   max-width: 730px;
 }
 
-.schedule-list-container {
+.schedule-info-text {
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 @media only screen and (min-width: 999px) {
-  .schedule-list-container {
-    padding-top: 40px;
+  .schedule-info-text {
+    padding-bottom: 40px;
   }
 }
 
@@ -4843,11 +4873,25 @@ p.item-label {
 }
 
 .schedule-match-container {
-  margin-bottom: 35px;
-  margin-left: 20px;
-  margin-right: 20px;
-  max-width: 280px;
+  margin-bottom: 5px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 30px;
+  max-width: 360px;
   width: 100%;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+@media only screen and (min-width: 999px) {
+  .schedule-match-container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 35px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 }
 
 .schedule-match-row {
@@ -4872,6 +4916,13 @@ p.item-label {
 
 .schedule-match-link-container {
   padding-top: 40px;
+  text-align: center;
+}
+
+@media only screen and (min-width: 999px) {
+  .schedule-match-link-container {
+    text-align: left;
+  }
 }
 
 @media only screen and (min-width: 999px) {
@@ -4916,7 +4967,7 @@ p.item-label {
 
 @media only screen and (min-width: 769px) {
   .block-page-intro {
-    margin-top: 60px;
+    margin-top: 50px;
     padding-left: 120px;
   }
 }
@@ -4937,13 +4988,13 @@ p.item-label {
 
 @media only screen and (min-width: 769px) {
   .page-intro-main-container {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .page-intro-main-container.has-cta {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 }
 
@@ -4988,7 +5039,7 @@ p.item-label {
 
 @media only screen and (max-width: 769px) {
   .page-intro .page-intro-adspace {
-    margin: 60px auto 0px;
+    margin: 60px auto 0;
     padding: 20px 0;
   }
 }
@@ -4996,12 +5047,12 @@ p.item-label {
 h1.page-intro-main-headline {
   font-family: "Knockout";
   color: #000000;
-  font-size: 50.4px;
-  letter-spacing: 0.5px;
-  line-height: 50.4px;
+  font-size: 60px;
+  letter-spacing: 0.6px;
+  line-height: 52px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 17px;
+  margin-bottom: 40px;
 }
 
 .activity-schedule-block {

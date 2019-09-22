@@ -4,11 +4,21 @@
   
   @include responsive-min($responsive-laptop) {
     margin-right: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 990px;
+  }
+}
+
+.wp-block-column > .block-schedule {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @include responsive-min($responsive-laptop) {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 
@@ -26,7 +36,7 @@
   
   @include responsive-min($responsive-laptop) {
     padding-top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     padding-left: 0;
     padding-right: 0;
     background-color: transparent;
@@ -84,11 +94,12 @@
   max-width: 730px;
 }
 
-.schedule-list-container {
+.schedule-info-text {
   padding-top: 10px;
+  padding-bottom: 10px;
 
   @include responsive-min($responsive-laptop) {
-    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 
@@ -100,11 +111,23 @@
 }
 
 .schedule-match-container {
-  margin-bottom: 35px;
-  margin-left: 20px;
-  margin-right: 20px;
-  max-width: 280px;
+  margin-bottom: 5px;
+  padding-left: 35px;
+  padding-right: 35px;
+  padding-bottom: 30px;
+  max-width: 360px;
   width: 100%;
+  border-bottom: 1px solid $light-gray;
+
+  @include responsive-min($responsive-laptop) {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 35px;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
 }
 
 .schedule-match-row {
@@ -129,4 +152,9 @@
 
 .schedule-match-link-container {
   padding-top: 40px;
+  text-align: center;
+
+  @include responsive-min($responsive-laptop) {
+    text-align: left;
+  }
 }

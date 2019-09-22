@@ -1,6 +1,6 @@
 // Desktop Styles
 .block-sponsors {
-  padding: 3rem 8rem;
+  padding: 2.5rem 8rem;
   font-family: 'knockout';
   margin-bottom: 0.25em;
 
@@ -115,6 +115,14 @@
 
     .cta-section.top {
       padding: 0.5rem 0;
+    }
+
+    .cta-section.bottom {
+      padding-top: 0.5rem;
+
+      .cta-link {
+        line-height: 1.25rem;
+      }
     }
   
     .cta-section {
@@ -368,11 +376,13 @@
   .block-sponsors {
     .content {
       .sponsor-container {
-        flex: 1 1 100%;
+        flex: 1 1 160px;
 
         .sponsor {
           align-self: flex-start;
           margin-left: 1.1rem;
+          width: 150px;
+          height: 150px;
         }
       }
     }

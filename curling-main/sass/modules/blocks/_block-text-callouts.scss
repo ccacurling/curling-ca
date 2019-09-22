@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-bottom: 3.5rem;
+  margin-bottom: 6rem;
 
   .callout-container {
     max-width: 33.333%;
@@ -18,9 +18,9 @@
     flex-grow: 1;
     max-height: 315px;
     display: flex;
-    -webkit-box-shadow: 0px 5px 12px 0px #ccc;
-    -moz-box-shadow: 0px 5px 12px 0px #ccc;
-    box-shadow: 0px 5px 12px 0px #ccc;
+    -webkit-box-shadow: 0px 5px 26px -3px #ccc;
+    -moz-box-shadow: 0px 5px 26px -3px #ccc;
+    box-shadow: 0px 5px 26px -3px #ccc;
 
     &.has-image {
       background-color: $cool-light-gray;
@@ -85,7 +85,7 @@
         text-decoration: none;
         color: red;
         text-transform: uppercase;
-        align-self: flex-end;
+        align-self: flex-start;
         margin-right: 1rem;
         font-family: 'knockout';
 
@@ -109,7 +109,7 @@
           margin: 0 0 15px 20px;
         }
       
-        a {
+        a { 
           margin: 0 0 28px 20px;
         }
       }
@@ -119,7 +119,7 @@
 
 .text-callouts-group.slick-slider {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 80px;
 
   .slick-track {
     height: 340px;
@@ -158,9 +158,9 @@
       border-radius: 10px;
     
       &:before {
-        font-size: 33px;
-        left: 0.5px;
-        top: -0.5px;
+        font-size: 32px;
+        left: 0;
+        top: 0;
         opacity: 0;
       }
     }

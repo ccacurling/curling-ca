@@ -26,7 +26,13 @@
   </div>
   <div class="schedule-details js-accordion-content">
     <div class="schedule-info-container">
-      <p><?php echo $draw_schedule_info; ?></p>
+      <?php
+        if ($draw_schedule_info) {
+      ?>
+        <p class="schedule-info-text"><?php echo $draw_schedule_info; ?></p>
+      <?php
+        }
+      ?>
     </div>
     <div class="schedule-list-container">
       <?php
