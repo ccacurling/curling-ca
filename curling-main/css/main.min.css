@@ -4969,7 +4969,7 @@ p.item-label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: auto 0;
+  margin: 0;
   max-width: 300px;
 }
 
