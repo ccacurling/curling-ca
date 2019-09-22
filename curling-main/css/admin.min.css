@@ -5035,7 +5035,7 @@
 
 @media only screen and (max-width: 769px) {
   .edit-post-layout__content .page-intro .page-intro-adspace {
-    margin: 60px auto 0px;
+    margin: 60px auto 0;
     padding: 20px 0;
   }
 }
@@ -5043,12 +5043,12 @@
 .edit-post-layout__content h1.page-intro-main-headline {
   font-family: "Knockout";
   color: #000000;
-  font-size: 50.4px;
-  letter-spacing: 0.5px;
-  line-height: 50.4px;
+  font-size: 60px;
+  letter-spacing: 0.6px;
+  line-height: 52px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 17px;
+  margin-bottom: 30px;
 }
 
 .edit-post-layout__content .activity-schedule-block {
