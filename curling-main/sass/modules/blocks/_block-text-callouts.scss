@@ -4,7 +4,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 6rem;
 
   .callout-container {
     max-width: 33.333%;
@@ -18,9 +18,9 @@
     flex-grow: 1;
     max-height: 315px;
     display: flex;
-    -webkit-box-shadow: 0px 5px 12px 0px #ccc;
-    -moz-box-shadow: 0px 5px 12px 0px #ccc;
-    box-shadow: 0px 5px 12px 0px #ccc;
+    -webkit-box-shadow: 0px 5px 26px -3px #ccc;
+    -moz-box-shadow: 0px 5px 26px -3px #ccc;
+    box-shadow: 0px 5px 26px -3px #ccc;
 
     &.has-image {
       background-color: $cool-light-gray;
@@ -109,7 +109,7 @@
           margin: 0 0 15px 20px;
         }
       
-        a {
+        a { 
           margin: 0 0 28px 20px;
         }
       }

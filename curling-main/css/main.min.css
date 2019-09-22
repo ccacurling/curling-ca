@@ -2302,8 +2302,7 @@ li {
 }
 
 .block-divider {
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin: 3.75rem 0;
   border-bottom: 1px solid #d8d8d8;
 }
 
@@ -3344,7 +3343,7 @@ li {
 }
 
 .block-sponsors {
-  padding: 3rem 8rem;
+  padding: 2.5rem 8rem;
   font-family: 'knockout';
   margin-bottom: 0.25em;
 }
@@ -4511,7 +4510,7 @@ p.item-label {
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-bottom: 100px;
+  margin-bottom: 6rem;
 }
 
 .text-callouts-group .callout-container {
@@ -4526,9 +4525,9 @@ p.item-label {
   flex-grow: 1;
   max-height: 315px;
   display: flex;
-  -webkit-box-shadow: 0px 5px 12px 0px #ccc;
-  -moz-box-shadow: 0px 5px 12px 0px #ccc;
-  box-shadow: 0px 5px 12px 0px #ccc;
+  -webkit-box-shadow: 0px 5px 26px -3px #ccc;
+  -moz-box-shadow: 0px 5px 26px -3px #ccc;
+  box-shadow: 0px 5px 26px -3px #ccc;
 }
 
 .text-callouts-group .single-text-callout.has-image {
