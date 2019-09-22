@@ -1949,6 +1949,12 @@
   max-width: 290px;
 }
 
+.edit-post-layout__content .block-ad-banner {
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: center;
+}
+
 .edit-post-layout__content .block-hero {
   display: flex;
   flex-direction: column;
