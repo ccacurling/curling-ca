@@ -870,6 +870,7 @@
 
 .edit-post-layout__content .header-event .nav-menu-popup.active {
   max-height: 200px;
+  z-index: 3;
 }
 
 .edit-post-layout__content .header-event .nav-menu-popup .menu-item-title {
@@ -4525,7 +4526,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-bottom: 3.5rem;
+  margin-bottom: 100px;
 }
 
 .edit-post-layout__content .text-callouts-group .callout-container {
@@ -4639,7 +4640,7 @@
 
 .edit-post-layout__content .text-callouts-group.slick-slider {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 80px;
 }
 
 .edit-post-layout__content .text-callouts-group.slick-slider .slick-track {
@@ -4690,7 +4691,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin: 1rem 0;
   margin-left: -1%;
 }
 
@@ -4705,6 +4706,11 @@
   max-width: 370px;
   text-align: center;
   flex: 1 1 calc(1170px / 3);
+  transition: transform 0.1s ease-in;
+}
+
+.edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container:hover {
+  transform: scale(1.05);
 }
 
 .edit-post-layout__content .pdf-with-image-block-container .pdf-section .pdf-container img {
@@ -4752,11 +4758,23 @@
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .block-schedule {
     margin-right: auto;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
     padding-left: 20px;
     padding-right: 20px;
     max-width: 990px;
+  }
+}
+
+.edit-post-layout__content .wp-block-column > .block-schedule {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .wp-block-column > .block-schedule {
+    margin-left: 0;
+    margin-right: auto;
   }
 }
 
@@ -4975,13 +4993,13 @@
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .page-intro-main-container {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .page-intro-main-container.has-cta {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 }
 
@@ -5026,7 +5044,7 @@
 
 @media only screen and (max-width: 769px) {
   .edit-post-layout__content .page-intro .page-intro-adspace {
-    margin: 60px auto 0px;
+    margin: 60px auto 0;
     padding: 20px 0;
   }
 }
@@ -5034,12 +5052,12 @@
 .edit-post-layout__content h1.page-intro-main-headline {
   font-family: "Knockout";
   color: #000000;
-  font-size: 50.4px;
-  letter-spacing: 0.5px;
-  line-height: 50.4px;
+  font-size: 60px;
+  letter-spacing: 0.6px;
+  line-height: 52px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 17px;
+  margin-bottom: 40px;
 }
 
 .edit-post-layout__content .activity-schedule-block {

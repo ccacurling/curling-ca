@@ -148,6 +148,7 @@
     
     &.active {
       max-height: 200px;
+      z-index: 3;
     }
 
     .menu-item-title {
