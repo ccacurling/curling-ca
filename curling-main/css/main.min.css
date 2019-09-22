@@ -4590,7 +4590,7 @@ p.item-label {
   text-decoration: none;
   color: red;
   text-transform: uppercase;
-  align-self: flex-end;
+  align-self: flex-start;
   margin-right: 1rem;
   font-family: 'knockout';
 }
@@ -4656,9 +4656,9 @@ p.item-label {
 }
 
 .text-callouts-group.slick-slider .slick-dots li button:before {
-  font-size: 33px;
-  left: 0.5px;
-  top: -0.5px;
+  font-size: 32px;
+  left: 0;
+  top: 0;
   opacity: 0;
 }
 
