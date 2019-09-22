@@ -4757,13 +4757,13 @@
   }
 }
 
-.edit-post-layout__content .block-column > .block-schedule {
+.edit-post-layout__content .wp-block-column > .block-schedule {
   margin-left: -20px;
   margin-right: -20px;
 }
 
 @media only screen and (min-width: 999px) {
-  .edit-post-layout__content .block-column > .block-schedule {
+  .edit-post-layout__content .wp-block-column > .block-schedule {
     margin-left: 0;
     margin-right: auto;
   }
