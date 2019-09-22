@@ -4058,6 +4058,7 @@
 
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .block-image-carousel {
+    padding-top: 20px;
     padding-bottom: 52px;
   }
 }
@@ -4490,7 +4491,7 @@
 
 .edit-post-layout__content p.item-label {
   display: inline-block;
-  margin-top: 8px;
+  margin-top: 0;
   margin-bottom: 8px;
   padding: 6px 8.5px;
   font-size: 12px;
@@ -4505,7 +4506,7 @@
 @media only screen and (max-width: 1439px) {
   .edit-post-layout__content p.item-label {
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 0;
   }
 }
 
@@ -4972,7 +4973,7 @@
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-page-intro {
-    margin-top: 60px;
+    margin-top: 50px;
     padding-left: 120px;
   }
 }
