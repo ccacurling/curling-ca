@@ -153,7 +153,7 @@
 
         <?php if ( $cta_location === 'Bottom' ) { ?>
 
-          <div class="cta-section">
+          <div class="cta-section bottom">
         
             <?php if ($cta_tag_line) { ?>
               <p><?php echo $cta_tag_line ?></p>
