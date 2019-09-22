@@ -4063,6 +4063,13 @@ li {
   max-width: none;
 }
 
+@media only screen and (min-width: 769px) {
+  .image-carousel-sub-container.image-carousel-nobody {
+    max-width: 92.5vw;
+    margin: 0 auto;
+  }
+}
+
 .image-carousel-sub-container.image-carousel-nobody .image-carousel-title {
   padding-bottom: 0;
 }
@@ -4137,6 +4144,13 @@ li {
 @media only screen and (min-width: 999px) {
   .image-carousel-gallery {
     display: block;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .image-carousel-gallery {
+    max-width: 92.5vw;
+    margin: 2.5rem auto 0.75rem auto;
   }
 }
 

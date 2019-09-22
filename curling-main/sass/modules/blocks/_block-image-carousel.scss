@@ -26,6 +26,11 @@
   padding-left: 0;
   max-width: none;
 
+  @include responsive-min($responsive-tablet) {
+    max-width: 92.5vw;
+    margin: 0 auto;
+  }
+
   .image-carousel-title {
     padding-bottom: 0;
   }
@@ -107,6 +112,11 @@
 
   @include responsive-min($responsive-laptop) {
     display: block;
+  }
+
+  @include responsive-min($responsive-tablet) {
+    max-width: 92.5vw;
+    margin: 2.5rem auto 0.75rem auto;
   }
 }
 
