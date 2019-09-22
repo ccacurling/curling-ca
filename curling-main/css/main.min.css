@@ -4507,7 +4507,7 @@ p.item-label {
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-bottom: 3.5rem;
+  margin-bottom: 100px;
 }
 
 .text-callouts-group .callout-container {
@@ -4621,7 +4621,7 @@ p.item-label {
 
 .text-callouts-group.slick-slider {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 80px;
 }
 
 .text-callouts-group.slick-slider .slick-track {
@@ -4672,7 +4672,7 @@ p.item-label {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin: 1rem 0;
   margin-left: -1%;
 }
 

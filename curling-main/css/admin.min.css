@@ -4523,7 +4523,7 @@
   flex-direction: row;
   justify-content: space-between;
   margin: auto;
-  margin-bottom: 3.5rem;
+  margin-bottom: 100px;
 }
 
 .edit-post-layout__content .text-callouts-group .callout-container {
@@ -4637,7 +4637,7 @@
 
 .edit-post-layout__content .text-callouts-group.slick-slider {
   display: block;
-  margin-bottom: 3rem;
+  margin-bottom: 80px;
 }
 
 .edit-post-layout__content .text-callouts-group.slick-slider .slick-track {
@@ -4688,7 +4688,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  margin: 1rem 0;
   margin-left: -1%;
 }
 
