@@ -37,9 +37,9 @@ function block_container_init() {
             return '<div class="block-container">'.$content.'</div>';
         },
         'attributes' => [
-          'type' => [
+          'is_narrow_width' => [
             'default' => 'default',
-            'type' => 'string'
+            'type' => 'boolean'
           ],
 		    ]
     ));
