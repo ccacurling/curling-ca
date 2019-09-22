@@ -3,13 +3,11 @@
   height: 400px;
   display: flex;
   flex-direction: row;
-  margin: 5rem auto;
+  margin: 2.5rem auto 3.5rem auto;
   -webkit-box-shadow: 0px 5px 12px 0px #ccc;
   -moz-box-shadow:    0px 5px 12px 0px #ccc;
   box-shadow:         0px 5px 12px 0px #ccc;
   flex-wrap: wrap;
-
-  margin-top: 40px;
 
   .info-section {
     width: 50%;
@@ -93,12 +91,15 @@
 @include responsive-max(1080px) {
   .event-location-container {
     max-width: 600px;
-
-    height: 800px;
+    height: 860px;
 
     .info-section {
       width: 100%;
-      max-height: 400px;
+      max-height: 500px;
+
+      .event-links {
+        flex-direction: column;
+      }
     }
 
     .map-section {
@@ -115,13 +116,15 @@
   }
 }
 
+
+
 @include responsive-max(600px) {
   .event-location-container {
     max-width: 400px;
-    height: 600px;
+    height: 650px;
 
     .info-section {
-      max-height: 300px;
+      max-height: 335px;
       padding: 1.75rem 2.75rem;
 
       p {
@@ -130,7 +133,7 @@
       }
 
       h2, h3 {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
         line-height: 1rem;
       }
 
@@ -139,11 +142,16 @@
       }
 
       hr {
-        margin: 1.25rem 0;
+        margin: 1.25rem 0 1rem 0;
       }
 
-      a {
-        font-size: 0.85rem;
+      .event-links {
+        p {
+          a {
+            font-size: 0.95rem;
+            line-height: 1.75rem;
+          }
+        }
       }
     }
 
@@ -157,10 +165,10 @@
 @include responsive-max(440px) {
   .event-location-container {
     max-width: 300px;
-    height: 450px;
+    height: 525px;
 
     .info-section {
-      max-height: 225px;
+      max-height: 275px;
       padding: 1.75rem 1.75rem 1.25rem 1.75rem;
 
       p {
@@ -169,7 +177,7 @@
       }
 
       h2, h3 {
-        font-size: 0.65rem;
+        font-size: 0.75rem;
         line-height: 0.8rem;
       }
 
@@ -178,17 +186,19 @@
       }
 
       hr {
-        margin: 0.75rem 0;
+        margin: 1.25rem 0 0.75rem 0;
       }
-
-      a {
-        font-size: 0.65rem;
-        line-height: 1.6rem;
+      
+      .event-links {
+        a {
+          font-size: 0.75rem;
+          line-height: 1.6rem;
+        }
       }
     }
 
     .map-section {
-      max-height: 225px;
+      max-height: 250px;
 
     }
   }
