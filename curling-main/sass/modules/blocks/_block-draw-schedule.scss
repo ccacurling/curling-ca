@@ -12,6 +12,16 @@
   }
 }
 
+.block-column > .block-schedule {
+  margin-left: -20px;
+  margin-right: -20px;
+
+  @include responsive-min($responsive-laptop) {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
 .schedule-date-container {
   display: flex;
   align-items: center;

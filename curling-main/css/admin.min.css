@@ -4747,6 +4747,18 @@
   }
 }
 
+.edit-post-layout__content .block-column > .block-schedule {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-column > .block-schedule {
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
+
 .edit-post-layout__content .schedule-date-container {
   display: flex;
   align-items: center;
