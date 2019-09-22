@@ -3803,6 +3803,13 @@
   padding-bottom: 60px;
 }
 
+@media only screen and (max-width: 769px) {
+  .edit-post-layout__content .block-news-feed {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .edit-post-layout__content .news-feed-item {
   margin-left: auto;
   margin-right: auto;
@@ -3847,6 +3854,12 @@
   padding-bottom: 63px;
   padding-left: 68px;
   padding-right: 68px;
+}
+
+@media only screen and (max-width: 769px) {
+  .edit-post-layout__content .news-feed-info {
+    padding: 20px 20px 40px;
+  }
 }
 
 .edit-post-layout__content .news-feed-excerpt {
