@@ -22,26 +22,44 @@ registerBlockType("cossette/block-container", {
   ),
   category: "common",
   attributes: {
-    title: {
+    is_narrow_width: {
       default: null,
-      type: "string"
+      type: "boolean"
     }
   },
   // TODO: This is a hack which forces the template to appear valid.
   // See https://github.com/WordPress/gutenberg/issues/11681
   edit: withDispatch(dispatch => {
     dispatch('core/editor').setTemplateValidity(true);
-  })(({ className }) => {
+  })(({ className, setAttributes, attributes }) => {
+    console.log(className);
+    const extraClasses = attributes.is_narrow_width ? 'narrow-width' : '';
     return (
-      <div className={className}>
+      <div className={extraClasses}>
+        <InspectorControls>
+          <div>
+            <CheckboxControl
+              value={attributes.is_narrow_width}
+              label={__('Is Narrow Width')}
+              checked={attributes.is_narrow_width}
+              onChange={(is_narrow_width) => {
+                setAttributes({
+                  is_narrow_width
+                });
+              }}
+            />
+          </div>
+        </InspectorControls>
         <InnerBlocks templateLock={false} />
       </div>
     );
   }),
 
-  save: () => {
+  save: ({className, attributes}) => {
+    const extraClasses = attributes.is_narrow_width ? 'narrow-width' : '';
     return (
-      <div>
+      <div className={extraClasses}>
+        { attributes.content }
         <InnerBlocks.Content />
       </div>
     );

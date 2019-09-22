@@ -586,6 +586,27 @@ li {
   max-width: 1210px;
 }
 
+.block-container .wp-block-cossette-block-container > h1, .block-container .wp-block-cossette-block-container > h2, .block-container .wp-block-cossette-block-container > h3, .block-container .wp-block-cossette-block-container > h4 {
+  margin-bottom: 20px;
+}
+
+.block-container .wp-block-cossette-block-container > p {
+  margin-bottom: 10px;
+}
+
+.block-container .narrow-width {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  max-width: 970px;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-container .narrow-width {
+    padding-right: 200px;
+  }
+}
+
 .block-column {
   margin-left: -20px;
   margin-right: -20px;
