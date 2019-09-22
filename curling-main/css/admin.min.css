@@ -4629,9 +4629,13 @@
   margin-bottom: 3rem;
 }
 
+.edit-post-layout__content .text-callouts-group.slick-slider .slick-track {
+  height: 340px;
+}
+
 .edit-post-layout__content .text-callouts-group.slick-slider .callout-container .single-text-callout {
   display: block;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .edit-post-layout__content .text-callouts-group.slick-slider .callout-container .single-text-callout .callout-details a {
@@ -5003,13 +5007,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: auto 0;
+  margin: 0;
   max-width: 300px;
 }
 
 @media only screen and (max-width: 769px) {
   .edit-post-layout__content .page-intro .page-intro-adspace {
-    margin: auto;
+    margin: 60px auto 0px;
     padding: 20px 0;
   }
 }
