@@ -24,6 +24,27 @@
   padding-left: 20px;
   padding-right: 20px;
   max-width: 1210px;
+
+  .wp-block-cossette-block-container > {
+    h1, h2, h3, h4 {
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .narrow-width {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    max-width: 970px;
+
+    @include responsive-min($responsive-laptop) {
+      padding-right: 200px;
+    }
+  }
 }
 
 .block-column  {

@@ -273,6 +273,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'team', 'small' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'video',
+      'title'						=> __('Video'),
+      'description'			=> __('A block to render a video module'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'video' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

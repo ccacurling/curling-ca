@@ -26,6 +26,16 @@
   max-width: 890px;
 }
 
+.image-carousel-sub-container.image-carousel-nobody {
+  padding-top: 0;
+  padding-left: 0;
+  max-width: none;
+
+  .image-carousel-title {
+    padding-bottom: 0;
+  }
+}
+
 .image-carousel-title {
   padding-bottom : 30px;
 
@@ -75,6 +85,10 @@
   }
 }
 
+.image-carousel-bottom-title {
+  margin-bottom: 20px;
+}
+
 .image-carousel-image {
   // transition: width 0.5s ease-in, height 0.5s ease-in, transform 0.5s ease-in, max-width 0.5s ease-in, max-height 0.5s ease-in;
 }
@@ -99,6 +113,10 @@
   @include responsive-min($responsive-laptop) {
     display: block;
   }
+}
+
+.image-carousel-featured .image-carousel-gallery {
+  display: block;
 }
 
 .image-carousel-track {
@@ -206,6 +224,7 @@
   width: 48px;
   height: 48px;
   outline: none;
+  cursor: pointer;
 }
 
 .image-carousel-navigation-pagination {
@@ -228,4 +247,72 @@
 .image-carousel-link {
   padding-right: 35px;
   padding-bottom: 20px;
+}
+
+.image-carousel-gallery-featured {
+  max-width: 1170px;
+  margin-left: 20px!important;
+  margin-right: 20px!important;
+  height: 100%;
+  overflow: hidden;
+
+  @include responsive-min($responsive-laptop) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .ms-container,
+  .ms-inner-controls-cont {
+    height: 100%;
+  }
+
+  &.ms-layout-partialview .ms-container {
+    overflow: visible;
+  }
+
+  .ms-slide .ms-slide-bgcont img {
+    object-fit: cover;
+  }
+
+  .image-carousel-navigation-pagination {
+    position: absolute;
+    bottom: 21px;
+    left: 50%;
+    margin-left: 0;
+    margin-right: 0;
+    transform: translate(-50%, 0);
+  }
+
+  .ms-slide-info {
+    height: 70px;
+  }
+
+  .ms-nav-next,
+  .ms-nav-prev {
+    position: absolute;
+    top: auto;
+    bottom: -68px;
+    width: 48px;
+    height: 48px;
+    transform: translate(-50%, 0);
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $gray;
+    cursor: pointer;
+  }
+  
+  .ms-nav-next {
+    left: calc(50% + 89px);
+    background-image: url('../images/arrow-right-nav-white.svg');
+  }
+
+  .ms-nav-prev {
+    left: calc(50% - 89px);
+    background-image: url('../images/arrow-left-nav-white.svg');
+  }
+
+  .spacer {
+    height: 70px;;
+  }
 }

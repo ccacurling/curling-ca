@@ -122,6 +122,8 @@
     height: 40px;
     border: none;
     border-radius: 3px;
+    padding-left: 0.5rem;
+
   @include responsive-min($responsive-desktop-wide) {
     width: 350px;
   }

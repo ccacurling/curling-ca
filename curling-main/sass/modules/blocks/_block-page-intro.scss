@@ -29,6 +29,12 @@
   @include responsive-min($responsive-tablet) {
     margin-bottom: 80px;
   }
+
+  &.has-cta {
+    @include responsive-min($responsive-tablet) {
+      margin-bottom: 40px;
+    }
+  }
 }
 
 .page-intro {

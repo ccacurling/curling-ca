@@ -16,8 +16,18 @@ jQuery(document).ready(function($) {
   class ImageCarousel {
     constructor(element, options) {
       this.element = element;
-
+      this.sliderFeatured = this.element.find('.js-slider-featured');
       this.slider = this.element.find('.js-slider');
+      if (this.sliderFeatured) {
+        this.initFeatured();
+      }
+
+      if (this.slider) {
+        this.initNormal();
+      }
+    }
+
+    initNormal() {
       this.sliderMobile = this.element.find('.js-slider-mobile');
 
       this.isCircular = this.slider.hasClass('js-slider-circular');
@@ -101,10 +111,32 @@ jQuery(document).ready(function($) {
       }
     }
 
+    initFeatured() {
+      this.sliderFeatured.each((i, element) => {
+        const $this = $(element);
+        $this.masterslider({
+          width: 767,
+          height: 488,
+          layout: 'partialview',
+          space: 0,
+          loop: true,
+          view: 'wave',
+          controls: {
+            arrows: { autohide: false }
+          }
+        });
+        this.masterSlider = this.sliderFeatured.masterslider('slider');
+        this.masterSlider.api.addEventListener(MSSliderEvent.CHANGE_START , () => {
+          const i = this.masterSlider.api.view.currentSlide.index + 1;
+          const total = this.masterSlider.api.view.slideList.length;
+          this.pagination.text(i + '/' + total);
+        });
+      });
+
+    }
+
     addAll(slick, index, addedClass) {
       this.slider.find('.slick-slide[data-slick-index="' + index + '"]').addClass(addedClass);
-      // this.slider.find('.slick-slide[data-slick-index="' + (index + slick.slideCount) + '"]').addClass(addedClass);
-      // this.slider.find('.slick-slide[data-slick-index="' + (index - slick.slideCount) + '"]').addClass(addedClass);
     }
   }
   

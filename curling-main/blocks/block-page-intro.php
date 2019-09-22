@@ -14,6 +14,7 @@ $headline = get_field('headline');
 $content = get_field('content');
 
 $adsnippet = get_field('adsnippet');
+$cta = get_field('cta');
 ?>
 
 <section class="block-page-intro">
@@ -53,50 +54,21 @@ if ($has_sponsor) {
 
 //Headline and Paragraph Stuff
 ?>
-<div class="page-intro-main-container">
+<div class="page-intro-main-container <?php echo $cta ? 'has-cta' : ''; ?>">
   <h1 class='page-intro-main-headline'><?php echo $headline; ?></h1>
   <?php echo $content; ?>
 </div>
 
 <?php
-/*
-//Optional CTA
-if ($has_cta) {
-
-    //CTA Specific Fields
-    $design = get_field('button_design'); //Callout Title
-
-    $bg_color = "red";
-    $color = "white";
-    $hover = "white";
-
-    if ($design == "wbb"){
-        $bg_color = "white";
-        $color = "black";
-        $hover = "black";
-    } else if ($design == "rbb"){
-        $color = "black";
-        $hover = "black";
-    } else if ($design == "rwb"){
-        $color = "white";
-        $hover = "black";
-    }
-
-    $button_class = "btn styled-button" . " " 
-    . "background-{$bg_color}" . " " 
-    . "color-{$color}" . " " 
-    . "hover-{$hover}";
-
-    $link = get_field('link'); //CTA Link
-    $link_label = get_field('link_label'); //Link Label
-
-    //Default to the Link as the label if empty
-    if ( !isset($link_label) || empty($link_label) ){
-        $link_label = $link;
-    }
-    echo "<a href='$link' class='$button_class'>$link_label</a>";
-}*/
+  if ($cta) {
 ?>
+  <div>
+    <a href="<?php echo $cta['url']; ?>" target="<?php echo $cta['target']; ?>" class="btn styled-button background-red color-white hover-white"><?php echo $cta['title']; ?></a>
+  </div>
+<?php
+  }
+?>
+
     </div>
     <div class="page-intro-adspace">
 

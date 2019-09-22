@@ -989,48 +989,13 @@ acf_add_local_field_group(array(
 			'new_lines' => '',
 		),
 		array(
-			'key' => 'field_5d85110f420b5',
-			'label' => 'Master Slider Alias',
-			'name' => 'image_carousel_master_slider_alias',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5d794756e011a',
-						'operator' => '==',
-						'value' => 'featured',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
 			'key' => 'field_5d77e5bde58d9',
 			'label' => 'Layout',
 			'name' => 'image_carousel_layout',
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5d794756e011a',
-						'operator' => '==',
-						'value' => 'normal',
-					),
-				),
-			),
+			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -1056,15 +1021,7 @@ acf_add_local_field_group(array(
 			'type' => 'gallery',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5d794756e011a',
-						'operator' => '==',
-						'value' => 'normal',
-					),
-				),
-			),
+			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -1083,6 +1040,25 @@ acf_add_local_field_group(array(
 			'max_height' => '',
 			'max_size' => '',
 			'mime_types' => '',
+		),
+		array(
+			'key' => 'field_5d8565f1ab438',
+			'label' => 'Bottom Title',
+			'name' => 'image_carousel_bottom_title',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
 		),
 		array(
 			'key' => 'field_5d8153aff59b3',
@@ -2570,6 +2546,21 @@ acf_add_local_field_group(array(
 			'rows' => '',
 			'new_lines' => '',
 		),
+		array(
+			'key' => 'field_5d855b23987ec',
+			'label' => 'CTA',
+			'name' => 'cta',
+			'type' => 'link',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'array',
+		),
 	),
 	'location' => array(
 		array(
@@ -3779,5 +3770,46 @@ acf_add_local_field_group(array(
 	'active' => true,
 	'description' => '',
 ));
+
+acf_add_local_field_group(array(
+	'key' => 'group_5d855e6273ee5',
+	'title' => 'Video',
+	'fields' => array(
+		array(
+			'key' => 'field_5d85611c349eb',
+			'label' => 'Youtube URL',
+			'name' => 'video_embed',
+			'type' => 'oembed',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'width' => 1170,
+			'height' => 568,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/video',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 
 endif;
