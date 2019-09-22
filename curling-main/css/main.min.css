@@ -843,6 +843,7 @@ li {
 
 .header-event .nav-menu-popup.active {
   max-height: 200px;
+  z-index: 3;
 }
 
 .header-event .nav-menu-popup .menu-item-title {
@@ -4968,13 +4969,13 @@ p.item-label {
 
 @media only screen and (min-width: 769px) {
   .page-intro-main-container {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .page-intro-main-container.has-cta {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
   }
 }
 
@@ -5032,7 +5033,7 @@ h1.page-intro-main-headline {
   line-height: 52px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .activity-schedule-block {

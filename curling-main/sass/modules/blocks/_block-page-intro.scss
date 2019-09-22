@@ -27,12 +27,12 @@
   margin-bottom: 20px;
 
   @include responsive-min($responsive-tablet) {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
   }
 
   &.has-cta {
     @include responsive-min($responsive-tablet) {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
   }
 }
@@ -86,5 +86,5 @@ h1.page-intro-main-headline {
   line-height: 52px;
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
