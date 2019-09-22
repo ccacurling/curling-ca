@@ -21,6 +21,11 @@
       max-width: 370px;
       text-align: center;
       flex: 1 1 calc(1170px / 3);
+      transition: transform 0.1s ease-in;
+
+      &:hover {
+        transform: scale(1.05);
+      }
 
       img {
         width: 370px;
