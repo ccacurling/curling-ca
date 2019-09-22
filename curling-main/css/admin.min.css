@@ -3017,12 +3017,11 @@
   height: 400px;
   display: flex;
   flex-direction: row;
-  margin: 5rem auto;
+  margin: 2.5rem auto 3.5rem auto;
   -webkit-box-shadow: 0px 5px 12px 0px #ccc;
   -moz-box-shadow: 0px 5px 12px 0px #ccc;
   box-shadow: 0px 5px 12px 0px #ccc;
   flex-wrap: wrap;
-  margin-top: 40px;
 }
 
 .edit-post-layout__content .event-location-container .info-section {
@@ -3104,11 +3103,14 @@
 @media only screen and (max-width: 1081px) {
   .edit-post-layout__content .event-location-container {
     max-width: 600px;
-    height: 800px;
+    height: 860px;
   }
   .edit-post-layout__content .event-location-container .info-section {
     width: 100%;
-    max-height: 400px;
+    max-height: 500px;
+  }
+  .edit-post-layout__content .event-location-container .info-section .event-links {
+    flex-direction: column;
   }
   .edit-post-layout__content .event-location-container .map-section {
     width: 100%;
@@ -3125,10 +3127,10 @@
 @media only screen and (max-width: 601px) {
   .edit-post-layout__content .event-location-container {
     max-width: 400px;
-    height: 600px;
+    height: 650px;
   }
   .edit-post-layout__content .event-location-container .info-section {
-    max-height: 300px;
+    max-height: 335px;
     padding: 1.75rem 2.75rem;
   }
   .edit-post-layout__content .event-location-container .info-section p {
@@ -3136,17 +3138,18 @@
     line-height: 1.5rem;
   }
   .edit-post-layout__content .event-location-container .info-section h2, .edit-post-layout__content .event-location-container .info-section h3 {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     line-height: 1rem;
   }
   .edit-post-layout__content .event-location-container .info-section .event-date-label {
     margin-top: 1rem;
   }
   .edit-post-layout__content .event-location-container .info-section hr {
-    margin: 1.25rem 0;
+    margin: 1.25rem 0 1rem 0;
   }
-  .edit-post-layout__content .event-location-container .info-section a {
-    font-size: 0.85rem;
+  .edit-post-layout__content .event-location-container .info-section .event-links p a {
+    font-size: 0.95rem;
+    line-height: 1.75rem;
   }
   .edit-post-layout__content .event-location-container .map-section {
     max-height: 317.5px;
@@ -3156,10 +3159,10 @@
 @media only screen and (max-width: 441px) {
   .edit-post-layout__content .event-location-container {
     max-width: 300px;
-    height: 450px;
+    height: 525px;
   }
   .edit-post-layout__content .event-location-container .info-section {
-    max-height: 225px;
+    max-height: 275px;
     padding: 1.75rem 1.75rem 1.25rem 1.75rem;
   }
   .edit-post-layout__content .event-location-container .info-section p {
@@ -3167,21 +3170,21 @@
     line-height: 1rem;
   }
   .edit-post-layout__content .event-location-container .info-section h2, .edit-post-layout__content .event-location-container .info-section h3 {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     line-height: 0.8rem;
   }
   .edit-post-layout__content .event-location-container .info-section .event-date-label {
     margin-top: 0.75rem;
   }
   .edit-post-layout__content .event-location-container .info-section hr {
-    margin: 0.75rem 0;
+    margin: 1.25rem 0 0.75rem 0;
   }
-  .edit-post-layout__content .event-location-container .info-section a {
-    font-size: 0.65rem;
+  .edit-post-layout__content .event-location-container .info-section .event-links a {
+    font-size: 0.75rem;
     line-height: 1.6rem;
   }
   .edit-post-layout__content .event-location-container .map-section {
-    max-height: 225px;
+    max-height: 250px;
   }
 }
 
