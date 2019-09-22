@@ -2,6 +2,10 @@
 .block-news-feed {
   padding-top: 60px;
   padding-bottom: 60px;
+  @include responsive-max($responsive-tablet) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 .news-feed-item {
@@ -48,6 +52,9 @@
   padding-bottom: 63px;
   padding-left: 68px;
   padding-right: 68px;
+  @include responsive-max($responsive-tablet) {
+    padding: 20px 20px 40px;
+  }
 }
 
 .news-feed-excerpt {
