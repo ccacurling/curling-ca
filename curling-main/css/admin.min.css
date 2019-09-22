@@ -4991,7 +4991,7 @@
 
 @media only screen and (max-width: 769px) {
   .edit-post-layout__content .page-intro .page-intro-adspace {
-    margin: auto;
+    margin: 60px auto 0px;
     padding: 20px 0;
   }
 }

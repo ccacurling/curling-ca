@@ -71,7 +71,7 @@
     max-width: 300px;
 
     @include responsive-max($responsive-tablet) {
-      margin: auto;
+      margin: 60px auto 0px;
       padding: 20px 0;
     }
   }
