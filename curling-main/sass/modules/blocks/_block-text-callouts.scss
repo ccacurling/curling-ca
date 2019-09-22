@@ -121,11 +121,15 @@
   display: block;
   margin-bottom: 3rem;
 
+  .slick-track {
+    height: 340px;
+  }
+
   .callout-container {
   
     .single-text-callout {
       display: block;
-      margin: auto;
+      margin: 0 auto;
   
       .callout-details {
         a {
