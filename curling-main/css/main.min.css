@@ -3432,6 +3432,14 @@ li {
   padding: 0.5rem 0;
 }
 
+.block-sponsors .content .cta-section.bottom {
+  padding-top: 0.5rem;
+}
+
+.block-sponsors .content .cta-section.bottom .cta-link {
+  line-height: 1.25rem;
+}
+
 .block-sponsors .content .cta-section {
   width: 50%;
   display: flex;
@@ -3625,11 +3633,13 @@ li {
 
 @media only screen and (max-width: 370px) {
   .block-sponsors .content .sponsor-container {
-    flex: 1 1 100%;
+    flex: 1 1 160px;
   }
   .block-sponsors .content .sponsor-container .sponsor {
     align-self: flex-start;
     margin-left: 1.1rem;
+    width: 150px;
+    height: 150px;
   }
   .block-sponsors .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor.sponsor {
     align-self: flex-start;
