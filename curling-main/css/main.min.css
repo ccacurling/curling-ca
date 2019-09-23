@@ -3614,19 +3614,19 @@ li {
   .block-sponsors .content .content-centered {
     width: 100%;
   }
-  .block-sponsors .content .content-centered .sponsor-container a {
+  .block-sponsors .content .content-centered .sponsors-section .sponsor-container a {
     position: relative;
     left: 1.1rem;
     top: 0.5rem;
   }
-  .block-sponsors .content .sponsor-container p {
+  .block-sponsors .content .sponsors-section .sponsor-container p {
     padding-bottom: 0.5rem;
   }
-  .block-sponsors .content .sponsor-container h3 {
+  .block-sponsors .content .sponsors-section .sponsor-container h3 {
     position: relative;
     left: 1.1rem;
   }
-  .block-sponsors .content .sponsor-container .sponsor {
+  .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
     width: 150px;
     height: 150px;
     align-self: center;
