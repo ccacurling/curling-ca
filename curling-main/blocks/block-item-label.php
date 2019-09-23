@@ -6,7 +6,7 @@
  */
 $label = get_field('label'); //Link Label
 ?>
-<div>
+<div class="block-item-label">
   <p class="item-label"><?php echo $label; ?></p>
 </div>
 

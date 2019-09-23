@@ -13,27 +13,31 @@
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
 
-    $languages = icl_get_languages();
+    $languages = function_exists('icl_get_languages') ? icl_get_languages() : [];
     foreach ($languages as $key => $language) {
       if ($language['active']) {
         unset($languages[$key]);
       }
     }
+
+    $url = get_permalink();
     
-    $menu_item_tree = $primary_menu_items ? buildTree($primary_menu_items, 0, $current_page_title) : [];
+    $menu_item_tree = $primary_menu_items ? buildTree($primary_menu_items, 0, $url === get_home_url() ? '' : $url) : [];
 
     $is_submenu = $primary_menu_items ? $menu_item_tree['is_current'] : false;
     $menu_items = $primary_menu_items ? $menu_item_tree['branch'] : [];
 
-    function buildTree( array &$elements, $parentId = 0, $current_page_title = '' ) {
+    function buildTree( array &$elements, $parentId = 0, $url = '' ) {
         $branch = array();
         $is_current = false;
 
         foreach ( $elements as &$element ) {
             if ( $element->menu_item_parent == $parentId ) {
-                $tree = buildTree( $elements, $element->ID, $current_page_title );
+                $tree = buildTree( $elements, $element->ID, $url );
                 $children = $tree['branch'];
-                if ($element->title === $current_page_title) {
+                $element_url = $element->url;
+
+                if ($element_url === $url) {
                   $element->is_current_page = true;
                   $is_current = true;
                 }
@@ -214,8 +218,8 @@
     <?php
         foreach( $menu_items as $id => $menu_item ) {
             if ($menu_item->children) {
-              if ($is_event) {
-                create_menu_bar_event_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
+              if ($is_event || $is_submenu) {
+                create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
               } else {
                 create_menu_bar_item($menu_item->ID, $menu_item->children);
               }
@@ -385,61 +389,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
     <?php
       foreach( $menu_subitem->children as $menu_subsubitem ) {
         if ($menu_subsubitem->post_title === '[EVENTS]') { // TODO: TEMP
-    ?>
-      <li class="menu-item-mobile">
-        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile">
-          <h3 class="menu-item-toptitle-mobile gray">EXPLORE ALL UPCOMING EVENTS</h3>
-        </div>
-      </li>
-      <li class="menu-item-mobile">
-        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-          <div class="menu-item-wrapper-mobile">
-            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">HOME HARDWARE CANADA CUP</h4>
-            <span class="menu-item-description-mobile">November 27–December 1, 2019</span>
-          </div>
-          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-        </div>
-      </li>
-      <li class="menu-item-mobile">
-        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-          <div class="menu-item-wrapper-mobile">
-            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">CONTINENTAL CUP</h4>
-            <span class="menu-item-description-mobile">January 9-12, 2020</span>
-          </div>
-          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-        </div>
-      </li>
-      <li class="menu-item-mobile">
-        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-          <div class="menu-item-wrapper-mobile">
-            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">SCOTTIES TOURNAMENT OF HEARTS</h4>
-            <span class="menu-item-description-mobile">February 15-23, 2020</span>
-          </div>
-          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-        </div>
-      </li>
-      <li class="menu-item-mobile">
-        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-          <div class="menu-item-wrapper-mobile">
-            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">TIM HORTONS BRIER</h4>
-            <span class="menu-item-description-mobile">February 28–March 8, 2020</span>
-          </div>
-          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-        </div>
-      </li>
-      <li class="menu-item-mobile">
-        <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-          <div class="menu-item-wrapper-mobile">
-            <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</h4>
-            <span class="menu-item-description-mobile">March 14-22, 2020</span>
-          </div>
-          <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-        </div>
-      </li>
-      <li class="menu-item-events-mobile">
-        <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample1.png"; ?>" alt="Event1" />
-      </li>
-    <?php
+          TEMP_events_menu();
         } else {
     ?>
       <li class="menu-item-mobile">
@@ -475,68 +425,16 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
 
 <?php
 function create_menu_bar_item($parent_id, $menu_items) {
-  if (count($menu_items) > 0) {
-      create_menu_bar($parent_id, $menu_items);
-
-      foreach( $menu_items as $id => $menu_item ) {
-          if ($menu_item->children) {
-              create_menu_bar_item($menu_item->ID, $menu_item->children);
-          }
-      }
-  }
-}
-?>
-<?php
-function create_menu_bar($name, $menu_items) {
   if ($menu_items && count($menu_items) > 0) {
-    $first_item = array_shift($menu_items);
+    $first_item = array_values($menu_items)[0];
     $is_events_menu = $first_item->title === '[EVENTS]';
 ?>
-  <div class="nav-menu-popup <?php echo $is_events_menu ? 'nav-menu-popup-event' : 'nav-left-offset'; ?>" data-name="<?php echo $name; ?>">
+  <div class="nav-menu-popup <?php echo $is_events_menu ? 'nav-menu-popup-event' : 'nav-left-offset'; ?>" data-name="<?php echo $parent_id; ?>">
     <div class="nav-menu-popup-wrapper content-fixed-padding">
       <div class="<?php echo $is_events_menu ? 'nav-menu-popup-event-left' : 'nav-menu-popup-left'; ?>">
         <?php
           if ($is_events_menu) {
-        ?>
-          <h2 class="menu-event-h2 gray">EXPLORE ALL UPCOMING EVENTS</h2>
-          <ul class="menu-nav menu-nav-events">
-            <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper menu-item-selectable">
-                <span class="menu-item-content menu-item-title menu-item-subtitle gray">HOME HARDWARE CANADA CUP</span>
-                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">November 27–Dececember 1, 2019</span>
-              </div>
-              <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-            </li>
-            <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper menu-item-selectable">
-                <span class="menu-item-content menu-item-title menu-item-subtitle gray">CONTINENTAL CUP</span>
-                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">January 9–12, 2020</span>
-              </div>
-              <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-            </li>
-            <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper menu-item-selectable">
-                <span class="menu-item-content menu-item-title menu-item-subtitle gray">SCOTTIES TOURNAMENT OF HEARTS</span>
-                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">February 15-23, 2020</span>
-              </div>
-              <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-            </li>
-            <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper menu-item-selectable">
-                <span class="menu-item-content menu-item-title menu-item-subtitle gray">TIM HORTONS BRIER</span>
-                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">February 28–March 8, 2020</span>
-              </div>
-              <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-            </li>
-            <li class="menu-subitem menu-subitem-event">
-              <div class="menu-subitem-wrapper menu-item-selectable">
-                <span class="menu-item-content menu-item-title menu-item-subtitle gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</span>
-                <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">March 14-22, 2020</span>
-              </div>
-              <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-            </li>
-          </ul>
-        <?php
+            TEMP_event_submenu();
           } else {
         ?>
           <h2 class="menu-h2 gray"><?php echo $first_item->title; ?></h2>
@@ -586,7 +484,7 @@ function create_menu_bar($name, $menu_items) {
 ?>
 
 <?php
-function create_menu_bar_event_item($parent_id, $menu_items, $is_current_page = false) {
+function create_menu_bar_simple_item($parent_id, $menu_items, $is_current_page = false) {
 ?>
   <div class="nav-menu-popup <?php echo $is_current_page ? 'nav-menu-popup-active' : ''; ?>" data-name="<?php echo $parent_id; ?>">
     <ul class="nav-menu-popup-list">
@@ -620,4 +518,109 @@ function create_menu_bar_event_item($parent_id, $menu_items, $is_current_page = 
   </div>
 <?php
 }
+?>
+
+<?php
+  function TEMP_events_menu() {
+?>
+  <li class="menu-item-mobile">
+    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile">
+      <h3 class="menu-item-toptitle-mobile gray">EXPLORE ALL UPCOMING EVENTS</h3>
+    </div>
+  </li>
+  <li class="menu-item-mobile">
+    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+      <div class="menu-item-wrapper-mobile">
+        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">HOME HARDWARE CANADA CUP</h4>
+        <span class="menu-item-description-mobile">November 27–December 1, 2019</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
+    </div>
+  </li>
+  <li class="menu-item-mobile">
+    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+      <div class="menu-item-wrapper-mobile">
+        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">CONTINENTAL CUP</h4>
+        <span class="menu-item-description-mobile">January 9-12, 2020</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
+    </div>
+  </li>
+  <li class="menu-item-mobile">
+    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+      <div class="menu-item-wrapper-mobile">
+        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">SCOTTIES TOURNAMENT OF HEARTS</h4>
+        <span class="menu-item-description-mobile">February 15-23, 2020</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
+    </div>
+  </li>
+  <li class="menu-item-mobile">
+    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+      <div class="menu-item-wrapper-mobile">
+        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">TIM HORTONS BRIER</h4>
+        <span class="menu-item-description-mobile">February 28–March 8, 2020</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
+    </div>
+  </li>
+  <li class="menu-item-mobile">
+    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
+      <div class="menu-item-wrapper-mobile">
+        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</h4>
+        <span class="menu-item-description-mobile">March 14-22, 2020</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
+    </div>
+  </li>
+  <li class="menu-item-events-mobile">
+    <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample1.png"; ?>" alt="Event1" />
+  </li>
+<?php
+  }
+?>
+
+<?php
+  function TEMP_event_submenu() {
+?>
+  <h2 class="menu-event-h2 gray">EXPLORE ALL UPCOMING EVENTS</h2>
+  <ul class="menu-nav menu-nav-events">
+    <li class="menu-subitem menu-subitem-event">
+      <div class="menu-subitem-wrapper menu-item-selectable">
+        <span class="menu-item-content menu-item-title menu-item-subtitle gray">HOME HARDWARE CANADA CUP</span>
+        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">November 27–Dececember 1, 2019</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+    </li>
+    <li class="menu-subitem menu-subitem-event">
+      <div class="menu-subitem-wrapper menu-item-selectable">
+        <span class="menu-item-content menu-item-title menu-item-subtitle gray">CONTINENTAL CUP</span>
+        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">January 9–12, 2020</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+    </li>
+    <li class="menu-subitem menu-subitem-event">
+      <div class="menu-subitem-wrapper menu-item-selectable">
+        <span class="menu-item-content menu-item-title menu-item-subtitle gray">SCOTTIES TOURNAMENT OF HEARTS</span>
+        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">February 15-23, 2020</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+    </li>
+    <li class="menu-subitem menu-subitem-event">
+      <div class="menu-subitem-wrapper menu-item-selectable">
+        <span class="menu-item-content menu-item-title menu-item-subtitle gray">TIM HORTONS BRIER</span>
+        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">February 28–March 8, 2020</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+    </li>
+    <li class="menu-subitem menu-subitem-event">
+      <div class="menu-subitem-wrapper menu-item-selectable">
+        <span class="menu-item-content menu-item-title menu-item-subtitle gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</span>
+        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">March 14-22, 2020</span>
+      </div>
+      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+    </li>
+  </ul>
+<?php
+  }
 ?>

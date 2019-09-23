@@ -144,6 +144,17 @@
     }
   }
 
+  &.column-66-33 > .wp-block-cossette-block-column-2 > {
+    .wp-block-columns > {
+       .wp-block-column:first-child {
+        flex-basis: 66.66666%;
+      }
+      .wp-block-column:last-child {
+        flex-basis: 33.33333%;
+      }
+    }
+  }
+
   &.column-33-66 > .wp-block-cossette-block-column-2 > {
     .wp-block-columns > {
        .wp-block-column:first-child {

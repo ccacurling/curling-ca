@@ -439,6 +439,26 @@
         "_valid": 1,
         "local": "php",
         "fields": {
+            "field_5d8940f4adb87": {
+                "key": "field_5d8940f4adb87",
+                "name": "hero_use_featured_post",
+                "type": "true_false",
+                "parent": "group_5d5591cdbb942",
+                "label": "Use Featured Post",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
             "field_5d56da661e123": {
                 "key": "field_5d56da661e123",
                 "name": "hero_image",
@@ -447,7 +467,15 @@
                 "label": "Image",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -464,82 +492,6 @@
                 "max_size": "",
                 "mime_types": ""
             },
-            "field_5d714ecbe9d24": {
-                "key": "field_5d714ecbe9d24",
-                "name": "hero_use_embedded_video",
-                "type": "true_false",
-                "parent": "group_5d5591cdbb942",
-                "label": "Use Embedded Video",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "message": "",
-                "default_value": 0,
-                "ui": 0,
-                "ui_on_text": "",
-                "ui_off_text": ""
-            },
-            "field_5d7045f5a7b94": {
-                "key": "field_5d7045f5a7b94",
-                "name": "hero_video",
-                "type": "file",
-                "parent": "group_5d5591cdbb942",
-                "label": "Video",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d714ecbe9d24",
-                            "operator": "!=",
-                            "value": "1"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array",
-                "library": "all",
-                "min_size": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            "field_5d714b40b3488": {
-                "key": "field_5d714b40b3488",
-                "name": "hero_show_video_inline",
-                "type": "true_false",
-                "parent": "group_5d5591cdbb942",
-                "label": "Show Video Inline",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d714ecbe9d24",
-                            "operator": "!=",
-                            "value": "1"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "message": "",
-                "default_value": 0,
-                "ui": 0,
-                "ui_on_text": "",
-                "ui_off_text": ""
-            },
             "field_5d714e52109ac": {
                 "key": "field_5d714e52109ac",
                 "name": "hero_external_video_link",
@@ -551,8 +503,8 @@
                 "conditional_logic": [
                     [
                         {
-                            "field": "field_5d714ecbe9d24",
-                            "operator": "==",
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
                             "value": "1"
                         }
                     ]
@@ -573,7 +525,15 @@
                 "label": "Hero Size",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -600,7 +560,15 @@
                 "label": "Headline",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -620,7 +588,15 @@
                 "label": "Caption",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -640,7 +616,15 @@
                 "label": "Enable Advanced Options",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
@@ -665,6 +649,11 @@
                         {
                             "field": "field_5d703f2776419",
                             "operator": "==",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
                             "value": "1"
                         }
                     ]
@@ -702,6 +691,11 @@
                             "field": "field_5d703f2776419",
                             "operator": "==",
                             "value": "1"
+                        },
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
+                            "value": "1"
                         }
                     ]
                 ],
@@ -729,6 +723,11 @@
                         {
                             "field": "field_5d703f2776419",
                             "operator": "==",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
                             "value": "1"
                         }
                     ]
@@ -758,6 +757,11 @@
                             "field": "field_5d703f2776419",
                             "operator": "==",
                             "value": "1"
+                        },
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
+                            "value": "1"
                         }
                     ]
                 ],
@@ -786,6 +790,11 @@
                             "field": "field_5d703f2776419",
                             "operator": "==",
                             "value": "1"
+                        },
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "!=",
+                            "value": "1"
                         }
                     ]
                 ],
@@ -795,6 +804,37 @@
                     "id": ""
                 },
                 "return_format": "array"
+            },
+            "field_5d88f8c3fe77c": {
+                "key": "field_5d88f8c3fe77c",
+                "name": "hero_featured_post",
+                "type": "post_object",
+                "parent": "group_5d5591cdbb942",
+                "label": "Featured Post",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d8940f4adb87",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "post"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
             },
             "field_5d65aeb611f84": {
                 "key": "field_5d65aeb611f84",
@@ -2240,7 +2280,15 @@
                 "label": "Event Location Page Link",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
