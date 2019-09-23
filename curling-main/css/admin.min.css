@@ -265,6 +265,18 @@
   color: #ed1940;
 }
 
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .mobile {
+    display: none;
+  }
+}
+
 .edit-post-layout__content .wp-block {
   max-width: 100%;
 }

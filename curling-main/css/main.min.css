@@ -243,6 +243,18 @@ li {
   color: #ed1940;
 }
 
+@media only screen and (max-width: 999px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .mobile {
+    display: none;
+  }
+}
+
 /**
   * Vendor Imports
   */
