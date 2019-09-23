@@ -15,10 +15,14 @@
 .image-carousel-sub-container {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding-top: 60px;
   padding-left: 20px;
   padding-right: 100px;
   max-width: 890px;
+}
+
+.image-carousel-featured .image-carousel-sub-container {
+  padding-top: 20px;
 }
 
 .image-carousel-sub-container.image-carousel-nobody {

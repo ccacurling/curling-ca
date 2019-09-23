@@ -174,7 +174,7 @@
     .hero-title-container {
       padding-top: 20px;
       padding-bottom: 26px;
-      width: 50%;
+      // width: 50%;
       min-width: 200px;
 
       @include responsive-min($responsive-tablet) {

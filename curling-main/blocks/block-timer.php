@@ -20,12 +20,12 @@ $start_date = date_create_from_format('Y-m-d H:i:s e', $start_date_value);
 $end_date = date_create_from_format('Y-m-d H:i:s e', $end_date_value);
 $current_date = new DateTime();
 
-$start_date_unix = date_format($start_date, 'U');
+$start_date_unix = $start_date ? date_format($start_date, 'U') : 0;
 $current_date_unix = date_format($current_date, 'U');
 
-$start_date_string = $start_date->format('F j');
-$end_date_short_string = $end_date->format('F j');
-$end_date_string = $end_date->format('F j Y');
+$start_date_string = $start_date ? $start_date->format('F j') : '';
+$end_date_short_string = $end_date ? $end_date->format('F j') : '';
+$end_date_string = $end_date ? $end_date->format('F j Y') : '';
 
 $totalseconds = ((int)$start_date_unix - (int)$current_date_unix);
 $totalseconds = $totalseconds < 0 ? 0 : $totalseconds;

@@ -404,13 +404,40 @@ acf_add_local_field_group(array(
 	'title' => 'Hero',
 	'fields' => array(
 		array(
+			'key' => 'field_5d8940f4adb87',
+			'label' => 'Use Featured Post',
+			'name' => 'hero_use_featured_post',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
 			'key' => 'field_5d56da661e123',
 			'label' => 'Image',
 			'name' => 'hero_image',
 			'type' => 'image',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -428,79 +455,6 @@ acf_add_local_field_group(array(
 			'mime_types' => '',
 		),
 		array(
-			'key' => 'field_5d714ecbe9d24',
-			'label' => 'Use Embedded Video',
-			'name' => 'hero_use_embedded_video',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'default_value' => 0,
-			'ui' => 0,
-			'ui_on_text' => '',
-			'ui_off_text' => '',
-		),
-		array(
-			'key' => 'field_5d7045f5a7b94',
-			'label' => 'Video',
-			'name' => 'hero_video',
-			'type' => 'file',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5d714ecbe9d24',
-						'operator' => '!=',
-						'value' => '1',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'return_format' => 'array',
-			'library' => 'all',
-			'min_size' => '',
-			'max_size' => '',
-			'mime_types' => '',
-		),
-		array(
-			'key' => 'field_5d714b40b3488',
-			'label' => 'Show Video Inline',
-			'name' => 'hero_show_video_inline',
-			'type' => 'true_false',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5d714ecbe9d24',
-						'operator' => '!=',
-						'value' => '1',
-					),
-				),
-			),
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'message' => '',
-			'default_value' => 0,
-			'ui' => 0,
-			'ui_on_text' => '',
-			'ui_off_text' => '',
-		),
-		array(
 			'key' => 'field_5d714e52109ac',
 			'label' => 'External Video Link',
 			'name' => 'hero_external_video_link',
@@ -510,8 +464,8 @@ acf_add_local_field_group(array(
 			'conditional_logic' => array(
 				array(
 					array(
-						'field' => 'field_5d714ecbe9d24',
-						'operator' => '==',
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
 						'value' => '1',
 					),
 				),
@@ -531,7 +485,15 @@ acf_add_local_field_group(array(
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -558,7 +520,15 @@ acf_add_local_field_group(array(
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -577,7 +547,15 @@ acf_add_local_field_group(array(
 			'type' => 'text',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -596,7 +574,15 @@ acf_add_local_field_group(array(
 			'type' => 'true_false',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -620,6 +606,11 @@ acf_add_local_field_group(array(
 					array(
 						'field' => 'field_5d703f2776419',
 						'operator' => '==',
+						'value' => '1',
+					),
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
 						'value' => '1',
 					),
 				),
@@ -657,6 +648,11 @@ acf_add_local_field_group(array(
 						'operator' => '==',
 						'value' => '1',
 					),
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
+						'value' => '1',
+					),
 				),
 			),
 			'wrapper' => array(
@@ -682,6 +678,11 @@ acf_add_local_field_group(array(
 					array(
 						'field' => 'field_5d703f2776419',
 						'operator' => '==',
+						'value' => '1',
+					),
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
 						'value' => '1',
 					),
 				),
@@ -711,6 +712,11 @@ acf_add_local_field_group(array(
 						'operator' => '==',
 						'value' => '1',
 					),
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
+						'value' => '1',
+					),
 				),
 			),
 			'wrapper' => array(
@@ -738,6 +744,11 @@ acf_add_local_field_group(array(
 						'operator' => '==',
 						'value' => '1',
 					),
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '!=',
+						'value' => '1',
+					),
 				),
 			),
 			'wrapper' => array(
@@ -746,6 +757,36 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'return_format' => 'array',
+		),
+		array(
+			'key' => 'field_5d88f8c3fe77c',
+			'label' => 'Featured Post',
+			'name' => 'hero_featured_post',
+			'type' => 'post_object',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d8940f4adb87',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'post',
+			),
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'multiple' => 0,
+			'return_format' => 'object',
+			'ui' => 1,
 		),
 		array(
 			'key' => 'field_5d65aeb611f84',
@@ -2140,7 +2181,15 @@ acf_add_local_field_group(array(
 			'type' => 'link',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d71507b94d5f',
+						'operator' => '==',
+						'value' => '1',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',

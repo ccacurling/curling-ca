@@ -60,7 +60,7 @@ function block_2_column_init() {
       'editor_script' => 'cossette-block-column-2',
       'render_callback' => function( $attributes, $content = '' ) {
           return '<div class="block-column '.
-            ($attributes['type'] === '50_50' ? 'column-50-50' : ($attributes['type'] === '84_16' ? 'column-84-16' : 'column-33-66')).' '.
+            ($attributes['type'] === '50_50' ? 'column-50-50' : ($attributes['type'] === '84_16' ? 'column-84-16' : ($attributes['type'] === '33_66' ? 'column-33-66' : 'column-66-33'))).' '.
             ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
             ($attributes['left_column_is_sidebar'] ? ' '.'column-sidebar' : '' ).
             '">'.$content.'</div>';
@@ -174,82 +174,76 @@ function parse_config($config, $property, $default) {
 }
 
 function my_themeum_eventum_post_type_speaker() {
-    if ( get_field( 'is_event', 'options' ) ) {
-        $labels = array( 
-            'name'                	=> esc_html__( 'Teams', 'Teams', 'themeum-eventum' ),
-            'singular_name'       	=> esc_html__( 'Team', 'Team', 'themeum-eventum' ),
-            'menu_name'           	=> esc_html__( 'Teams', 'themeum-eventum' ),
-            'parent_item_colon'   	=> esc_html__( 'Parent Team:', 'themeum-eventum' ),
-            'all_items'           	=> esc_html__( 'All Teams', 'themeum-eventum' ),
-            'view_item'           	=> esc_html__( 'View Team', 'themeum-eventum' ),
-            'add_new_item'        	=> esc_html__( 'Add New Team', 'themeum-eventum' ),
-            'add_new'             	=> esc_html__( 'New Team', 'themeum-eventum' ),
-            'edit_item'           	=> esc_html__( 'Edit Team', 'themeum-eventum' ),
-            'update_item'         	=> esc_html__( 'Update Team', 'themeum-eventum' ),
-            'search_items'        	=> esc_html__( 'Search Team', 'themeum-eventum' ),
-            'not_found'           	=> esc_html__( 'No article found', 'themeum-eventum' ),
-            'not_found_in_trash'  	=> esc_html__( 'No article found in Trash', 'themeum-eventum' )
-            );
-    
-        $args = array(  
-            'labels'             	=> $labels,
-            'public'             	=> true,
-            'publicly_queryable' 	=> true,
-            'show_in_menu'       	=> true,
-            'show_in_admin_bar'   	=> true,
-            'can_export'          	=> true,
-            'has_archive'        	=> false,
-            'rewrite' 				=> array('slug' => 'teams'),
-            'hierarchical'       	=> false,
-            'menu_position'      	=> null,
-            'menu_icon'				=> 'dashicons-groups',
-            'supports'           	=> array( 'title','editor','thumbnail','comments')
-            );
-    
-        register_post_type( 'speaker', $args );
-    }
+    $labels = array( 
+        'name'                	=> esc_html__( 'Teams', 'Teams', 'themeum-eventum' ),
+        'singular_name'       	=> esc_html__( 'Team', 'Team', 'themeum-eventum' ),
+        'menu_name'           	=> esc_html__( 'Teams', 'themeum-eventum' ),
+        'parent_item_colon'   	=> esc_html__( 'Parent Team:', 'themeum-eventum' ),
+        'all_items'           	=> esc_html__( 'All Teams', 'themeum-eventum' ),
+        'view_item'           	=> esc_html__( 'View Team', 'themeum-eventum' ),
+        'add_new_item'        	=> esc_html__( 'Add New Team', 'themeum-eventum' ),
+        'add_new'             	=> esc_html__( 'New Team', 'themeum-eventum' ),
+        'edit_item'           	=> esc_html__( 'Edit Team', 'themeum-eventum' ),
+        'update_item'         	=> esc_html__( 'Update Team', 'themeum-eventum' ),
+        'search_items'        	=> esc_html__( 'Search Team', 'themeum-eventum' ),
+        'not_found'           	=> esc_html__( 'No article found', 'themeum-eventum' ),
+        'not_found_in_trash'  	=> esc_html__( 'No article found in Trash', 'themeum-eventum' )
+        );
+
+    $args = array(  
+        'labels'             	=> $labels,
+        'public'             	=> true,
+        'publicly_queryable' 	=> true,
+        'show_in_menu'       	=> true,
+        'show_in_admin_bar'   	=> true,
+        'can_export'          	=> true,
+        'has_archive'        	=> false,
+        'rewrite' 				=> array('slug' => 'teams'),
+        'hierarchical'       	=> false,
+        'menu_position'      	=> null,
+        'menu_icon'				=> 'dashicons-groups',
+        'supports'           	=> array( 'title','editor','thumbnail','comments')
+        );
+
+    register_post_type( 'speaker', $args );
 }
 
 function create_sponsors_post_type() {
-    if ( get_field( 'is_event', 'options' ) ) {
-        register_post_type('Sponsors', [
-            'labels' => [
-                'name'          => __('Sponsors'),
-                'singular_name' => __('Sponsor'),
-                'menu_name'     => __('Sponsors'),
-                'all_items'     => __('All Sponsors')
-            ],
-            'menu_icon' => 'dashicons-groups',
-            'public' => true,
-            'supports' => ['title', 'editor', 'thumbnail'],
-            'has_archive' => true,
-            'show_in_rest' => true,
-            'rewrite' => [
-                'slug' => 'sponsor'
-            ]
-        ]);
-    }
+    register_post_type('Sponsors', [
+        'labels' => [
+            'name'          => __('Sponsors'),
+            'singular_name' => __('Sponsor'),
+            'menu_name'     => __('Sponsors'),
+            'all_items'     => __('All Sponsors')
+        ],
+        'menu_icon' => 'dashicons-groups',
+        'public' => true,
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'rewrite' => [
+            'slug' => 'sponsor'
+        ]
+    ]);
 }
 
 function create_activity_post_type() {
-    if ( get_field( 'is_event', 'options' ) ) {
-        register_post_type('Activity', [
-            'labels' => [
-                'name'          => __('Activity'),
-                'singular_name' => __('Activity'),
-                'menu_name'     => __('Activities'),
-                'all_items'     => __('All Activities')
-            ],
-            'menu_icon' => 'dashicons-editor-table',
-            'public' => true,
-            'supports' => ['title', 'editor', 'thumbnail'],
-            'has_archive' => true,
-            'show_in_rest' => true,
-            'rewrite' => [
-                'slug' => 'activity'
-            ]
-        ]);
-    }
+    register_post_type('Activity', [
+        'labels' => [
+            'name'          => __('Activity'),
+            'singular_name' => __('Activity'),
+            'menu_name'     => __('Activities'),
+            'all_items'     => __('All Activities')
+        ],
+        'menu_icon' => 'dashicons-editor-table',
+        'public' => true,
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'has_archive' => true,
+        'show_in_rest' => true,
+        'rewrite' => [
+            'slug' => 'activity'
+        ]
+    ]);
 }
 
 function create_draw_schedule_post_type() {
