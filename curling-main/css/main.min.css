@@ -682,6 +682,13 @@ li {
   }
 }
 
+@media only screen and (max-width: 999px) {
+  .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:not(:first-child),
+  .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+
 .block-column.column-50-50 > .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:first-child {
   flex-basis: 50%;
 }
@@ -1934,8 +1941,8 @@ li {
 }
 
 .block-ad-banner {
-  margin-top: 50px;
-  margin-bottom: 80px;
+  margin-top: 80px;
+  margin-bottom: 100px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
