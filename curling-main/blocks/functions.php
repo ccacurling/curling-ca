@@ -283,6 +283,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'video' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'ad-banner',
+      'title'						=> __('Ad - Banner'),
+      'description'			=> __('A block to render a banner AD'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'banner', 'ad' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }
