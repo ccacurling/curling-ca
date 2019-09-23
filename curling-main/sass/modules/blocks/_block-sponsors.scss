@@ -292,29 +292,33 @@
       .content-centered {
         width: 100%;
 
-        .sponsor-container {
-          a {
-            position: relative;
-            left: 1.1rem;
-            top: 0.5rem;
+        .sponsors-section {
+          .sponsor-container {
+            a {
+              position: relative;
+              left: 1.1rem;
+              top: 0.5rem;
+            }
           }
         }
       }
 
-      .sponsor-container {
-        p {
-          padding-bottom: 0.5rem;
-        }
-  
-        h3 {
-          position: relative;
-          left: 1.1rem;
-        }
-  
-        .sponsor {
-          width: 150px;
-          height: 150px;
-          align-self: center;
+      .sponsors-section {
+        .sponsor-container {
+          p {
+            padding-bottom: 0.5rem;
+          }
+    
+          h3 {
+            position: relative;
+            left: 1.1rem;
+          }
+    
+          .sponsor {
+            width: 150px;
+            height: 150px;
+            align-self: center;
+          }
         }
       }
 

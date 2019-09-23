@@ -709,6 +709,13 @@
   }
 }
 
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:not(:first-child),
+  .edit-post-layout__content .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column:not(:first-child) {
+    margin-top: 40px;
+  }
+}
+
 .edit-post-layout__content .block-column.column-50-50 > .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:first-child {
   flex-basis: 50%;
 }
@@ -3639,19 +3646,19 @@
   .edit-post-layout__content .block-sponsors .content .content-centered {
     width: 100%;
   }
-  .edit-post-layout__content .block-sponsors .content .content-centered .sponsor-container a {
+  .edit-post-layout__content .block-sponsors .content .content-centered .sponsors-section .sponsor-container a {
     position: relative;
     left: 1.1rem;
     top: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsor-container p {
+  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container p {
     padding-bottom: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsor-container h3 {
+  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container h3 {
     position: relative;
     left: 1.1rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsor-container .sponsor {
+  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
     width: 150px;
     height: 150px;
     align-self: center;
@@ -4328,6 +4335,12 @@
   text-align: center;
 }
 
+.edit-post-layout__content .image-carousel-navigation-pagination.js-carousel-mobile-nav-pagination {
+  margin: 0;
+  padding: 0 40px;
+  width: auto;
+}
+
 .edit-post-layout__content .image-carousel-links {
   display: flex;
   flex-direction: column;
@@ -4924,7 +4937,7 @@
   padding-left: 35px;
   padding-right: 35px;
   padding-bottom: 30px;
-  max-width: 360px;
+  max-width: 280px;
   width: 100%;
   border-bottom: 1px solid #d8d8d8;
 }

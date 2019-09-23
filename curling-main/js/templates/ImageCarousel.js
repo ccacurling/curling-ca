@@ -65,7 +65,8 @@ jQuery(document).ready(function($) {
       if (this.paginationMobile) {
         this.sliderMobile.on('init reInit beforeChange', (event, slick, currentSlide, nextSlide) => {
           var i = (nextSlide ? nextSlide : 0) + 1;
-          this.paginationMobile.text(i + '/' + slick.slideCount);
+          //this.paginationMobile.text(i + '/' + slick.slideCount);
+          this.paginationMobile.text('IMAGE ' + i + ' OF ' + slick.slideCount);
         });
       }
       
