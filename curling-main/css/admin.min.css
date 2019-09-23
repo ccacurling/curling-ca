@@ -3630,19 +3630,19 @@
   .edit-post-layout__content .block-sponsors .content .content-centered {
     width: 100%;
   }
-  .edit-post-layout__content .block-sponsors .content .content-centered .sponsor-container a {
+  .edit-post-layout__content .block-sponsors .content .content-centered .sponsors-section .sponsor-container a {
     position: relative;
     left: 1.1rem;
     top: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsor-container p {
+  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container p {
     padding-bottom: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsor-container h3 {
+  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container h3 {
     position: relative;
     left: 1.1rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsor-container .sponsor {
+  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
     width: 150px;
     height: 150px;
     align-self: center;
