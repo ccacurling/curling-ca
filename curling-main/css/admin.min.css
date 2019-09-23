@@ -4315,6 +4315,12 @@
   text-align: center;
 }
 
+.edit-post-layout__content .image-carousel-navigation-pagination.js-carousel-mobile-nav-pagination {
+  margin: 0;
+  padding: 0 40px;
+  width: auto;
+}
+
 .edit-post-layout__content .image-carousel-links {
   display: flex;
   flex-direction: column;
