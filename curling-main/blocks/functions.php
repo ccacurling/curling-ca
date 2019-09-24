@@ -293,6 +293,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'banner', 'ad' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'timer',
+      'title'						=> __('Countdown Timer'),
+      'description'			=> __('A block to render a countdown timer'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'countdown', 'timer' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }
