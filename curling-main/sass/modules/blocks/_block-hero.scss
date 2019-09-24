@@ -71,44 +71,51 @@
 
 .block-hero-large {
   @include responsive-min($responsive-tablet) {
-    height: 700px;
+    min-height: 700px;
   }
 
   .hero-media-container {
-    height: 350px;
+    min-height: 350px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
+      min-height: auto;
     }
   }
 }
 
 .block-hero-medium {
   @include responsive-min($responsive-tablet) {
-    height: 600px;
+    min-height: 600px;
   }
 
   .hero-media-container {
-    height: 300px;
+    min-height: 300px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
+      min-height: auto;
     }
   }
 }
 
 .block-hero-small {
   @include responsive-min($responsive-tablet) {
-    height: 430px;
+    min-height: 430px;
   }
 
   .hero-media-container {
-    height: 250px;
+    min-height: 250px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
+      min-height: auto;
     }
   }
+}
+
+.block-hero-main .block-hero-inner {
+  display: flex;
 }
 
 .block-hero-inner {
@@ -164,11 +171,15 @@
     height: 100%;
 
     @include responsive-min($responsive-tablet) {
+      position: relative;
       left: 51.65%;
       padding-top: 65px;
+      padding-bottom: 110px;
       padding-left: 4.7%;
       padding-right: 4.7%;
       width: 39.2%;
+      min-height: 700px;
+      z-index: 1;
     }
 
     .hero-title-container {

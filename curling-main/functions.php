@@ -149,13 +149,14 @@ function create_taxonomy() {
 }
 
 function create_post_type() {
+    $is_event = function_exists('get_field') ? get_field('is_event', 'Options') : false;
     register_post_type('Team', [
         'labels' => [
             'name' => __('Team'),
             'singular_name' => __('Team'),
         ],
         'menu_icon' => 'dashicons-megaphone',
-        'public' => true,
+        'public' => $is_event,
         // 'taxonomies' => [ 'team_tag' ],
         'supports' => ['title', 'thumbnail'],
         'has_archive' => true,
@@ -174,6 +175,7 @@ function parse_config($config, $property, $default) {
 }
 
 function my_themeum_eventum_post_type_speaker() {
+    $is_event = function_exists('get_field') ? get_field('is_event', 'Options') : false;
     $labels = array( 
         'name'                	=> esc_html__( 'Teams', 'Teams', 'themeum-eventum' ),
         'singular_name'       	=> esc_html__( 'Team', 'Team', 'themeum-eventum' ),
@@ -192,7 +194,7 @@ function my_themeum_eventum_post_type_speaker() {
 
     $args = array(  
         'labels'             	=> $labels,
-        'public'             	=> true,
+        'public'             	=> $is_event,
         'publicly_queryable' 	=> true,
         'show_in_menu'       	=> true,
         'show_in_admin_bar'   	=> true,
@@ -209,6 +211,7 @@ function my_themeum_eventum_post_type_speaker() {
 }
 
 function create_sponsors_post_type() {
+    $is_event = function_exists('get_field') ? get_field('is_event', 'Options') : false;
     register_post_type('Sponsors', [
         'labels' => [
             'name'          => __('Sponsors'),
@@ -217,7 +220,7 @@ function create_sponsors_post_type() {
             'all_items'     => __('All Sponsors')
         ],
         'menu_icon' => 'dashicons-groups',
-        'public' => true,
+        'public' => $is_event,
         'supports' => ['title', 'editor', 'thumbnail'],
         'has_archive' => true,
         'show_in_rest' => true,
@@ -228,6 +231,7 @@ function create_sponsors_post_type() {
 }
 
 function create_activity_post_type() {
+    $is_event = function_exists('get_field') ? get_field('is_event', 'Options') : false;
     register_post_type('Activity', [
         'labels' => [
             'name'          => __('Activity'),
@@ -236,7 +240,7 @@ function create_activity_post_type() {
             'all_items'     => __('All Activities')
         ],
         'menu_icon' => 'dashicons-editor-table',
-        'public' => true,
+        'public' => $is_event,
         'supports' => ['title', 'editor', 'thumbnail'],
         'has_archive' => true,
         'show_in_rest' => true,
@@ -247,6 +251,7 @@ function create_activity_post_type() {
 }
 
 function create_draw_schedule_post_type() {
+    $is_event = function_exists('get_field') ? get_field('is_event', 'Options') : false;
     register_post_type('Draw Schedule', [
         'labels' => [
             'name'          => __('Draw Schedules'),
@@ -255,12 +260,13 @@ function create_draw_schedule_post_type() {
             'all_items'     => __('All Draw Schedules')
         ],
         'menu_icon' => 'dashicons-groups',
-        'public' => true,
+        'public' => $is_event,
         'supports' => [ 'title' ],
         'has_archive' => true,
         'show_in_rest' => true,
         'rewrite' => [
             'slug' => 'draw-schedule'
-        ]
+        ],
+        'public' => false
     ]);
 }

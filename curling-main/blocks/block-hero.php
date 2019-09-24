@@ -7,6 +7,7 @@
 
 $hero_featured_post = get_field('hero_featured_post');
 
+$is_event = get_field('is_event', 'Options');
 $image = get_image($hero_featured_post);
 
 $is_embeded_video = $hero_featured_post ? false : get_field( 'hero_use_embedded_video' );
@@ -64,7 +65,7 @@ if ($image) {
 }
 ?>
 
-<section class="block-hero <?php echo $hero_class; ?> js-hero-container">
+<section class="block-hero <?php echo $hero_class; ?> <?php echo $is_event ? '' : 'block-hero-main'; ?> js-hero-container">
   <div class="hero-media-container">
   <?php
       if ($external_video) {
