@@ -4001,6 +4001,7 @@
   padding-bottom: 35px;
   padding-left: 21px;
   padding-right: 21px;
+  min-height: 234px;
 }
 
 .edit-post-layout__content .callout-title {
