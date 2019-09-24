@@ -2012,6 +2012,39 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             },
+            "field_5d8a4c1e62050": {
+                "key": "field_5d8a4c1e62050",
+                "name": "prefooter_image_location",
+                "type": "select",
+                "parent": "group_5d72cc221cbfa",
+                "label": "Image Location",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d72cc647d966",
+                            "operator": "!=empty"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "left": "Left",
+                    "right": "Right"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
             "field_5d72cc647d966": {
                 "key": "field_5d72cc647d966",
                 "name": "prefooter_image",

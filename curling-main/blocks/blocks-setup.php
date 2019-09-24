@@ -1925,6 +1925,39 @@ acf_add_local_field_group(array(
 			'ui_off_text' => '',
 		),
 		array(
+			'key' => 'field_5d8a4c1e62050',
+			'label' => 'Image Location',
+			'name' => 'prefooter_image_location',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d72cc647d966',
+						'operator' => '!=empty',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'left' => 'Left',
+				'right' => 'Right',
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
 			'key' => 'field_5d72cc647d966',
 			'label' => 'Image',
 			'name' => 'prefooter_image',

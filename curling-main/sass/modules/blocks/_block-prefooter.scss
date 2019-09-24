@@ -48,7 +48,7 @@
   @include responsive-min($responsive-tablet) {
     margin-left: 46.8%;
     padding-top: 200px;
-    padding-bottom: 330px;
+    padding-bottom: 100px;
     padding-left: 0;
     padding-right: 0;
     width: 50%;
@@ -108,8 +108,24 @@
 
 .block-prefooter-img-container {
   position: absolute;
-  bottom: 0;
+  left: 0;
   width: 100%;
+  z-index: -2;
+}
+
+.block-prefooter-img-left {
+  bottom: -230px;
+  .block-prefooter-img {
+    margin-right: auto;
+  }
+}
+
+.block-prefooter-img-right {
+  bottom: 350px;
+
+  .block-prefooter-img {
+    margin-left: auto;
+  }
 }
 
 .block-prefooter-img {
@@ -121,31 +137,31 @@
     display: block;
     width: 43%;
   }
-
-  @include responsive-min($responsive-desktop) {
-    width: 43%;
-  }
 }
 
 .prefooter-slash {
   position: absolute;
-  bottom: 0;
+  bottom: -275px;
   left: 50%;
   transform: translate(-50%, 12%);
   width: 1440px;
   max-width: none;
   max-height: none;
-  z-index: -1;
-
-  @include responsive-min($responsive-desktop) {
-    transform: translate(-50%, 0);
+  z-index: -3;
+  
+  @include responsive-min($responsive-tablet) {
+    bottom: -515px;
   }
 }
 
-.prefooter-slash-2 {
-  transform: translate(-50%, calc(12% - 880px));
+.prefooter-slash-mask {
+  z-index: -1;
+}
 
-  @include responsive-min($responsive-desktop) {
-    transform: translate(-50%, -880px);
+.prefooter-slash-2 {
+  transform: translate(-50%, -1165px);
+  // bottom: -230px;
+
+  @include responsive-min($responsive-tablet) {
   }
 }
