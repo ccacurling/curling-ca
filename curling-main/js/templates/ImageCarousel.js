@@ -131,6 +131,7 @@ jQuery(document).ready(function($) {
           const i = this.masterSlider.api.view.currentSlide.index + 1;
           const total = this.masterSlider.api.view.slideList.length;
           this.pagination.text(i + '/' + total);
+          this.paginationMobile.text('IMAGE ' + i + ' OF ' + total);
         });
       });
 
