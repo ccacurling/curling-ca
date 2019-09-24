@@ -178,3 +178,15 @@ li {
 .red {
   color: $red;
 }
+
+.desktop {
+  @include responsive-max($responsive-laptop){
+    display: none;
+  }
+}
+
+.mobile {
+  @include responsive-min($responsive-laptop){
+    display: none;
+  }
+}

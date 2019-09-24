@@ -133,7 +133,8 @@ $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' )
           }
         ?>
         <div class="spacer"></div>
-        <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination">1/6</h4>
+        <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination desktop"></h4>
+        <h4 class="image-carousel-navigation-pagination js-carousel-mobile-nav-pagination mobile"></h4>
       </div>
     </div>
 

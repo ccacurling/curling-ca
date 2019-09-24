@@ -243,6 +243,18 @@ li {
   color: #ed1940;
 }
 
+@media only screen and (max-width: 999px) {
+  .desktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .mobile {
+    display: none;
+  }
+}
+
 /**
   * Vendor Imports
   */
@@ -3984,6 +3996,10 @@ li {
   padding-bottom: 35px;
   padding-left: 21px;
   padding-right: 21px;
+  min-height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .callout-title {
