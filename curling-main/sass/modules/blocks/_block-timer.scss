@@ -17,7 +17,7 @@
     overflow: hidden;
     @include responsive-min($responsive-laptop) {
         flex-wrap: nowrap;
-        max-width: max-content;
+        max-width: 1030px;
     }
 }
 
@@ -60,12 +60,12 @@
     flex-basis: 100%;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     padding-top: 15px;
     padding-bottom: 12px;
     padding-left: 18px;
     padding-right: 17px;
-    height: 100%;
+    height: auto;
     background-color: $red;
 
     @include responsive-min($responsive-laptop) {
