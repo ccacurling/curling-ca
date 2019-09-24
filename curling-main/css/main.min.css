@@ -3986,6 +3986,9 @@ li {
   padding-left: 21px;
   padding-right: 21px;
   min-height: 234px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .callout-title {
