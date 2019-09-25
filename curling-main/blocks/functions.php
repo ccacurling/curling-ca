@@ -316,6 +316,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'featured', 'event', 'info' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'event-info',
+      'title'						=> __('Event Info'),
+      'description'			=> __('A block to render event info'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'event', 'info' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }
