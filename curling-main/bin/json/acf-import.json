@@ -2,6 +2,27 @@
     {
         "key": "group_5d76cb304c380",
         "title": "Featured Image Caption",
+        "fields": [
+            {
+                "key": "field_5d76cb3ef2094",
+                "label": "Caption",
+                "name": "featured_image_caption",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
         "location": [
             [
                 {
@@ -18,41 +39,41 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d76cb3ef2094": {
-                "key": "field_5d76cb3ef2094",
-                "name": "featured_image_caption",
-                "type": "text",
-                "parent": "group_5d76cb304c380",
-                "label": "Caption",
+        "description": ""
+    },
+    {
+        "key": "group_5d81648b84451",
+        "title": "Activity Block Fields",
+        "fields": [
+            {
+                "key": "field_5d8164965c450",
+                "label": "Activity Post",
+                "name": "activity_post",
+                "type": "post_object",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "post_type": [
+                    "activity"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
             }
-        }
-    },
-    {
-        "key": "group_5d7c1484d0f21",
-        "title": "Block - Draw Schedule",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/draw-schedule"
+                    "value": "acf\/activity-schedule"
                 }
             ]
         ],
@@ -63,16 +84,177 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d7c148c1f4ec": {
+        "description": ""
+    },
+    {
+        "key": "group_5d815c296b5ea",
+        "title": "Activity Fields",
+        "fields": [
+            {
+                "key": "field_5d815c3768ef1",
+                "label": "Description",
+                "name": "description",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "Add a description..",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d815c5d68ef2",
+                "label": "Activity Details",
+                "name": "activity_details",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5d815c8468ef3",
+                        "label": "Date",
+                        "name": "date",
+                        "type": "date_picker",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "d\/m\/Y",
+                        "return_format": "F j, Y",
+                        "first_day": 0
+                    },
+                    {
+                        "key": "field_5d815cb168ef4",
+                        "label": "Time",
+                        "name": "time",
+                        "type": "time_picker",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "display_format": "g:i a",
+                        "return_format": "g:i a"
+                    },
+                    {
+                        "key": "field_5d815cbf68ef5",
+                        "label": "Participants",
+                        "name": "participants",
+                        "type": "post_object",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [
+                            "team"
+                        ],
+                        "taxonomy": "",
+                        "allow_null": 0,
+                        "multiple": 1,
+                        "return_format": "object",
+                        "ui": 1
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "activity"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d87d2cd28141",
+        "title": "Ad - Banner",
+        "fields": [
+            {
+                "key": "field_5d87d2d5e5658",
+                "label": "Ad Space\/Snippet",
+                "name": "adsnippet",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/ad-banner"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d7c1484d0f21",
+        "title": "Block - Draw Schedule",
+        "fields": [
+            {
                 "key": "field_5d7c148c1f4ec",
+                "label": "Draw Schedule",
                 "name": "draw_schedule",
                 "type": "post_object",
-                "parent": "group_5d7c1484d0f21",
-                "label": "Draw Schedule",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -90,12 +272,11 @@
                 "return_format": "object",
                 "ui": 1
             },
-            "field_5d7c17ac3b8e9": {
+            {
                 "key": "field_5d7c17ac3b8e9",
+                "label": "Info",
                 "name": "draw_schedule_info",
                 "type": "textarea",
-                "parent": "group_5d7c1484d0f21",
-                "label": "Info",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -110,17 +291,13 @@
                 "placeholder": "",
                 "rows": ""
             }
-        }
-    },
-    {
-        "key": "group_5d76be9f07926",
-        "title": "Callout",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/callout"
+                    "value": "acf\/draw-schedule"
                 }
             ]
         ],
@@ -131,16 +308,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d76bf000b48e": {
+        "description": ""
+    },
+    {
+        "key": "group_5d76be9f07926",
+        "title": "Callout",
+        "fields": [
+            {
                 "key": "field_5d76bf000b48e",
+                "label": "Image",
                 "name": "callout_image",
                 "type": "image",
-                "parent": "group_5d76be9f07926",
-                "label": "Image",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -160,12 +338,11 @@
                 "max_size": "",
                 "mime_types": ""
             },
-            "field_5d76bf1efe292": {
+            {
                 "key": "field_5d76bf1efe292",
+                "label": "Title",
                 "name": "callout_title",
                 "type": "text",
-                "parent": "group_5d76be9f07926",
-                "label": "Title",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -180,12 +357,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d76bf2aad2df": {
+            {
                 "key": "field_5d76bf2aad2df",
+                "label": "Body Text",
                 "name": "callout_body_text",
                 "type": "textarea",
-                "parent": "group_5d76be9f07926",
-                "label": "Body Text",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -200,12 +376,11 @@
                 "rows": "",
                 "new_lines": ""
             },
-            "field_5d76bf3b176d6": {
+            {
                 "key": "field_5d76bf3b176d6",
+                "label": "Link",
                 "name": "callout_link",
                 "type": "link",
-                "parent": "group_5d76be9f07926",
-                "label": "Link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -216,11 +391,49 @@
                 },
                 "return_format": "array"
             }
-        }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/callout"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
     },
     {
         "key": "group_5d7fee29366d1",
         "title": "Draw Schedule Links",
+        "fields": [
+            {
+                "key": "field_5d7fee33d3737",
+                "label": "Heading",
+                "name": "draw_schedule_links_heading",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
         "location": [
             [
                 {
@@ -237,16 +450,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d7fee33d3737": {
-                "key": "field_5d7fee33d3737",
-                "name": "draw_schedule_links_heading",
-                "type": "text",
-                "parent": "group_5d7fee29366d1",
-                "label": "Heading",
+        "description": ""
+    },
+    {
+        "key": "group_5d7039036b0c1",
+        "title": "Event Location Block",
+        "fields": [
+            {
+                "key": "field_5d703915b40b0",
+                "label": "Event CTA One",
+                "name": "event_cta_one",
+                "type": "link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -255,17 +469,54 @@
                     "class": "",
                     "id": ""
                 },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "return_format": "array"
+            },
+            {
+                "key": "field_5d703920b40b1",
+                "label": "Event CTA Two",
+                "name": "event_cta_two",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_5d70392bb40b2",
+                "label": "Event CTA Three",
+                "name": "event_cta_three",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_5d70393cb40b3",
+                "label": "Event CTA Four",
+                "name": "event_cta_four",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
             }
-        }
-    },
-    {
-        "key": "group_5d7039036b0c1",
-        "title": "Event Location Block",
+        ],
         "location": [
             [
                 {
@@ -282,85 +533,35 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d703915b40b0": {
-                "key": "field_5d703915b40b0",
-                "name": "event_cta_one",
-                "type": "link",
-                "parent": "group_5d7039036b0c1",
-                "label": "Event CTA One",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            },
-            "field_5d703920b40b1": {
-                "key": "field_5d703920b40b1",
-                "name": "event_cta_two",
-                "type": "link",
-                "parent": "group_5d7039036b0c1",
-                "label": "Event CTA Two",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            },
-            "field_5d70392bb40b2": {
-                "key": "field_5d70392bb40b2",
-                "name": "event_cta_three",
-                "type": "link",
-                "parent": "group_5d7039036b0c1",
-                "label": "Event CTA Three",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            },
-            "field_5d70393cb40b3": {
-                "key": "field_5d70393cb40b3",
-                "name": "event_cta_four",
-                "type": "link",
-                "parent": "group_5d7039036b0c1",
-                "label": "Event CTA Four",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            }
-        }
+        "description": ""
     },
     {
-        "key": "group_5d76d15367870",
-        "title": "Featured Team",
+        "key": "group_5d8a7b427faec",
+        "title": "Featured Event Info",
+        "fields": [
+            {
+                "key": "field_5d8a7b5043190",
+                "label": "Event Microsite URL",
+                "name": "event_microsite_url",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            }
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/featured-team"
+                    "value": "acf\/featured-event-info"
                 }
             ]
         ],
@@ -371,16 +572,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d76d1608f13a": {
+        "description": ""
+    },
+    {
+        "key": "group_5d76d15367870",
+        "title": "Featured Team",
+        "fields": [
+            {
                 "key": "field_5d76d1608f13a",
+                "label": "Featured Team",
                 "name": "featured_team",
                 "type": "post_object",
-                "parent": "group_5d76d15367870",
-                "label": "Featured Team",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -398,12 +600,11 @@
                 "return_format": "object",
                 "ui": 1
             },
-            "field_5d76d4112cb44": {
+            {
                 "key": "field_5d76d4112cb44",
+                "label": "Link",
                 "name": "featured_team_link",
                 "type": "link",
-                "parent": "group_5d76d15367870",
-                "label": "Link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -414,37 +615,34 @@
                 },
                 "return_format": "array"
             }
-        }
-    },
-    {
-        "key": "group_5d5591cdbb942",
-        "title": "Hero",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/hero"
+                    "value": "acf\/featured-team"
                 }
             ]
         ],
         "menu_order": 0,
         "position": "normal",
-        "style": "seamless",
+        "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d8940f4adb87": {
+        "description": ""
+    },
+    {
+        "key": "group_5d5591cdbb942",
+        "title": "Hero",
+        "fields": [
+            {
                 "key": "field_5d8940f4adb87",
+                "label": "Use Featured Post",
                 "name": "hero_use_featured_post",
                 "type": "true_false",
-                "parent": "group_5d5591cdbb942",
-                "label": "Use Featured Post",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -459,12 +657,11 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             },
-            "field_5d56da661e123": {
+            {
                 "key": "field_5d56da661e123",
+                "label": "Image",
                 "name": "hero_image",
                 "type": "image",
-                "parent": "group_5d5591cdbb942",
-                "label": "Image",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -492,12 +689,11 @@
                 "max_size": "",
                 "mime_types": ""
             },
-            "field_5d714e52109ac": {
+            {
                 "key": "field_5d714e52109ac",
+                "label": "External Video Link",
                 "name": "hero_external_video_link",
                 "type": "url",
-                "parent": "group_5d5591cdbb942",
-                "label": "External Video Link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -517,12 +713,11 @@
                 "default_value": "",
                 "placeholder": ""
             },
-            "field_5d65a7325d1a2": {
+            {
                 "key": "field_5d65a7325d1a2",
+                "label": "Hero Size",
                 "name": "hero_size",
                 "type": "select",
-                "parent": "group_5d5591cdbb942",
-                "label": "Hero Size",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -552,12 +747,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d65ac034846d": {
+            {
                 "key": "field_5d65ac034846d",
+                "label": "Headline",
                 "name": "hero_headline",
                 "type": "text",
-                "parent": "group_5d5591cdbb942",
-                "label": "Headline",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -580,12 +774,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d700f4f17ff6": {
+            {
                 "key": "field_5d700f4f17ff6",
+                "label": "Caption",
                 "name": "hero_caption",
                 "type": "text",
-                "parent": "group_5d5591cdbb942",
-                "label": "Caption",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -608,12 +801,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d703f2776419": {
+            {
                 "key": "field_5d703f2776419",
+                "label": "Enable Advanced Options",
                 "name": "hero_enable_advanced_options",
                 "type": "true_false",
-                "parent": "group_5d5591cdbb942",
-                "label": "Enable Advanced Options",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -636,12 +828,11 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             },
-            "field_5d700038f4594": {
+            {
                 "key": "field_5d700038f4594",
+                "label": "Text Position",
                 "name": "hero_text_position",
                 "type": "select",
-                "parent": "group_5d5591cdbb942",
-                "label": "Text Position",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -677,12 +868,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d700e3575b14": {
+            {
                 "key": "field_5d700e3575b14",
+                "label": "Body",
                 "name": "hero_body",
                 "type": "textarea",
-                "parent": "group_5d5591cdbb942",
-                "label": "Body",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -710,12 +900,11 @@
                 "rows": "",
                 "new_lines": ""
             },
-            "field_5d70045f10a09": {
+            {
                 "key": "field_5d70045f10a09",
+                "label": "Show Post Type",
                 "name": "hero_show_post_type",
                 "type": "true_false",
-                "parent": "group_5d5591cdbb942",
-                "label": "Show Post Type",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -743,12 +932,11 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             },
-            "field_5d70047510a0a": {
+            {
                 "key": "field_5d70047510a0a",
+                "label": "Show Date",
                 "name": "hero_show_date",
                 "type": "true_false",
-                "parent": "group_5d5591cdbb942",
-                "label": "Show Date",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -776,12 +964,11 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             },
-            "field_5d70172283200": {
+            {
                 "key": "field_5d70172283200",
+                "label": "Link",
                 "name": "hero_link",
                 "type": "link",
-                "parent": "group_5d5591cdbb942",
-                "label": "Link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -805,12 +992,11 @@
                 },
                 "return_format": "array"
             },
-            "field_5d88f8c3fe77c": {
+            {
                 "key": "field_5d88f8c3fe77c",
+                "label": "Featured Post",
                 "name": "hero_featured_post",
                 "type": "post_object",
-                "parent": "group_5d5591cdbb942",
-                "label": "Featured Post",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -836,12 +1022,11 @@
                 "return_format": "object",
                 "ui": 1
             },
-            "field_5d65aeb611f84": {
+            {
                 "key": "field_5d65aeb611f84",
+                "label": "Has Timer",
                 "name": "has_timer",
                 "type": "true_false",
-                "parent": "group_5d5591cdbb942",
-                "label": "Has Timer",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -856,37 +1041,34 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             }
-        }
-    },
-    {
-        "key": "group_5d718fe86629c",
-        "title": "Hero Carousel",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/hero-carousel"
+                    "value": "acf\/hero"
                 }
             ]
         ],
         "menu_order": 0,
         "position": "normal",
-        "style": "default",
+        "style": "seamless",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d719046882e9": {
+        "description": ""
+    },
+    {
+        "key": "group_5d718fe86629c",
+        "title": "Hero Carousel",
+        "fields": [
+            {
                 "key": "field_5d719046882e9",
+                "label": "Hero Carousel Image",
                 "name": "hero_carousel_image",
                 "type": "image",
-                "parent": "group_5d718fe86629c",
-                "label": "Hero Carousel Image",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -906,12 +1088,11 @@
                 "max_size": "",
                 "mime_types": ""
             },
-            "field_5d71905d882ea": {
+            {
                 "key": "field_5d71905d882ea",
+                "label": "Hero Carousel Headline",
                 "name": "hero_carousel_headline",
                 "type": "text",
-                "parent": "group_5d718fe86629c",
-                "label": "Hero Carousel Headline",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -926,12 +1107,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d7194481d65b": {
+            {
                 "key": "field_5d7194481d65b",
+                "label": "Carousel Items",
                 "name": "hero_carousel_items",
                 "type": "repeater",
-                "parent": "group_5d718fe86629c",
-                "label": "Carousel Items",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -968,17 +1148,13 @@
                     }
                 ]
             }
-        }
-    },
-    {
-        "key": "group_5d77e34bd6c46",
-        "title": "Image Carousel",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/image-carousel"
+                    "value": "acf\/hero-carousel"
                 }
             ]
         ],
@@ -989,16 +1165,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d77e3d714422": {
+        "description": ""
+    },
+    {
+        "key": "group_5d77e34bd6c46",
+        "title": "Image Carousel",
+        "fields": [
+            {
                 "key": "field_5d77e3d714422",
+                "label": "Title",
                 "name": "image_carousel_title",
                 "type": "text",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Title",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1013,12 +1190,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d8151d5067f0": {
+            {
                 "key": "field_5d8151d5067f0",
+                "label": "Background Colour",
                 "name": "image_carousel_background_colour",
                 "type": "select",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Background Colour",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1039,12 +1215,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d794756e011a": {
+            {
                 "key": "field_5d794756e011a",
+                "label": "Type",
                 "name": "image_carousel_type",
                 "type": "select",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Type",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1065,12 +1240,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d81537ff59b2": {
+            {
                 "key": "field_5d81537ff59b2",
+                "label": "Top Body",
                 "name": "image_carousel_top_body",
                 "type": "textarea",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Top Body",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1085,12 +1259,11 @@
                 "rows": "",
                 "new_lines": ""
             },
-            "field_5d77e5bde58d9": {
+            {
                 "key": "field_5d77e5bde58d9",
+                "label": "Layout",
                 "name": "image_carousel_layout",
                 "type": "select",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Layout",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1111,12 +1284,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d77e6173f181": {
+            {
                 "key": "field_5d77e6173f181",
+                "label": "Image Carousel Gallery",
                 "name": "image_carousel_gallery",
                 "type": "gallery",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Image Carousel Gallery",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1139,12 +1311,11 @@
                 "max_size": "",
                 "mime_types": ""
             },
-            "field_5d8565f1ab438": {
+            {
                 "key": "field_5d8565f1ab438",
+                "label": "Bottom Title",
                 "name": "image_carousel_bottom_title",
                 "type": "text",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Bottom Title",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1159,12 +1330,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d8153aff59b3": {
+            {
                 "key": "field_5d8153aff59b3",
+                "label": "Bottom Body",
                 "name": "image_carousel_bottom_body",
                 "type": "textarea",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Bottom Body",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1179,12 +1349,11 @@
                 "rows": "",
                 "new_lines": ""
             },
-            "field_5d8153c2f59b4": {
+            {
                 "key": "field_5d8153c2f59b4",
+                "label": "Links",
                 "name": "image_carousel_links",
                 "type": "repeater",
-                "parent": "group_5d77e34bd6c46",
-                "label": "Links",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1216,17 +1385,13 @@
                     }
                 ]
             }
-        }
-    },
-    {
-        "key": "group_5d7aa548d395b",
-        "title": "News Feed",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/news-feed"
+                    "value": "acf\/image-carousel"
                 }
             ]
         ],
@@ -1237,16 +1402,101 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d7aa5579a611": {
+        "description": ""
+    },
+    {
+        "key": "group_5d7952936c413",
+        "title": "Item Label",
+        "fields": [
+            {
+                "key": "field_5d7952a3a9efb",
+                "label": "label",
+                "name": "label",
+                "type": "text",
+                "instructions": "Text for the Label. Presumably the Page title or the Item title.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/item-label"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d88fc39a163a",
+        "title": "Main Site",
+        "fields": [
+            {
+                "key": "field_5d88fc44df95d",
+                "label": "Is Main Site (TEMP)",
+                "name": "is_main_site",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d7aa548d395b",
+        "title": "News Feed",
+        "fields": [
+            {
                 "key": "field_5d7aa5579a611",
+                "label": "Title",
                 "name": "news_feed_title",
                 "type": "text",
-                "parent": "group_5d7aa548d395b",
-                "label": "Title",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1261,12 +1511,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d7aa55e9a612": {
+            {
                 "key": "field_5d7aa55e9a612",
+                "label": "Category",
                 "name": "news_feed_category",
                 "type": "taxonomy",
-                "parent": "group_5d7aa548d395b",
-                "label": "Category",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1284,17 +1533,13 @@
                 "return_format": "id",
                 "multiple": 0
             }
-        }
-    },
-    {
-        "key": "group_5d704ec0c5d4d",
-        "title": "News Promo",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/news-promo"
+                    "value": "acf\/news-feed"
                 }
             ]
         ],
@@ -1305,16 +1550,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d8278cedaab2": {
+        "description": ""
+    },
+    {
+        "key": "group_5d704ec0c5d4d",
+        "title": "News Promo",
+        "fields": [
+            {
                 "key": "field_5d8278cedaab2",
+                "label": "Is Large",
                 "name": "news_promo_is_large",
                 "type": "true_false",
-                "parent": "group_5d704ec0c5d4d",
-                "label": "Is Large",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1329,12 +1575,11 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             },
-            "field_5d70511d50418": {
+            {
                 "key": "field_5d70511d50418",
+                "label": "Selected Post",
                 "name": "promo_post",
                 "type": "post_object",
-                "parent": "group_5d704ec0c5d4d",
-                "label": "Selected Post",
                 "instructions": "Select a Post to be promoted",
                 "required": 1,
                 "conditional_logic": 0,
@@ -1352,12 +1597,11 @@
                 "return_format": "object",
                 "ui": 1
             },
-            "field_5d704f55b5c81": {
+            {
                 "key": "field_5d704f55b5c81",
+                "label": "Background Colour",
                 "name": "background_colour",
                 "type": "select",
-                "parent": "group_5d704ec0c5d4d",
-                "label": "Background Colour",
                 "instructions": "Select a background colour",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1380,11 +1624,143 @@
                 "ajax": 0,
                 "placeholder": ""
             }
-        }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/news-promo"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
     },
     {
         "key": "group_5d680deb699b7",
         "title": "Package",
+        "fields": [
+            {
+                "key": "field_5d68556025b23",
+                "label": "Colour",
+                "name": "package_colour",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "gray": "Gray",
+                    "red": "Red"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5d680dfcb0e3c",
+                "label": "Name",
+                "name": "package_name",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d680e0db0e3d",
+                "label": "Price",
+                "name": "package_price",
+                "type": "price",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "format": "|2\/.\/ |"
+            },
+            {
+                "key": "field_5d680e36b0e3e",
+                "label": "Price Info",
+                "name": "package_price_info",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d680e63b0e3f",
+                "label": "Info",
+                "name": "package_info",
+                "type": "wysiwyg",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
+            },
+            {
+                "key": "field_5d68233ae7d68",
+                "label": "Link",
+                "name": "package_link",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        ],
         "location": [
             [
                 {
@@ -1401,16 +1777,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d68556025b23": {
-                "key": "field_5d68556025b23",
+        "description": ""
+    },
+    {
+        "key": "group_5d768070a5653",
+        "title": "Package - Small",
+        "fields": [
+            {
+                "key": "field_5d7680727ce13",
+                "label": "Colour",
                 "name": "package_colour",
                 "type": "select",
-                "parent": "group_5d680deb699b7",
-                "label": "Colour",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1432,12 +1809,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d680dfcb0e3c": {
-                "key": "field_5d680dfcb0e3c",
+            {
+                "key": "field_5d7680727ce1c",
+                "label": "Name",
                 "name": "package_name",
                 "type": "text",
-                "parent": "group_5d680deb699b7",
-                "label": "Name",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1452,12 +1828,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d680e0db0e3d": {
-                "key": "field_5d680e0db0e3d",
+            {
+                "key": "field_5d7680727ce27",
+                "label": "Price",
                 "name": "package_price",
                 "type": "price",
-                "parent": "group_5d680deb699b7",
-                "label": "Price",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1468,12 +1843,11 @@
                 },
                 "format": "|2\/.\/ |"
             },
-            "field_5d680e36b0e3e": {
-                "key": "field_5d680e36b0e3e",
+            {
+                "key": "field_5d7680727ce2e",
+                "label": "Price Info",
                 "name": "package_price_info",
                 "type": "text",
-                "parent": "group_5d680deb699b7",
-                "label": "Price Info",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1488,12 +1862,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d680e63b0e3f": {
-                "key": "field_5d680e63b0e3f",
+            {
+                "key": "field_5d7680727ce35",
+                "label": "Info",
                 "name": "package_info",
                 "type": "wysiwyg",
-                "parent": "group_5d680deb699b7",
-                "label": "Info",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1508,12 +1881,11 @@
                 "media_upload": 1,
                 "delay": 0
             },
-            "field_5d68233ae7d68": {
-                "key": "field_5d68233ae7d68",
+            {
+                "key": "field_5d7680727ce40",
+                "label": "Link",
                 "name": "package_link",
                 "type": "link",
-                "parent": "group_5d680deb699b7",
-                "label": "Link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1524,11 +1896,7 @@
                 },
                 "return_format": "array"
             }
-        }
-    },
-    {
-        "key": "group_5d768070a5653",
-        "title": "Package - Small",
+        ],
         "location": [
             [
                 {
@@ -1545,16 +1913,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d7680727ce13": {
-                "key": "field_5d7680727ce13",
-                "name": "package_colour",
-                "type": "select",
-                "parent": "group_5d768070a5653",
-                "label": "Colour",
+        "description": ""
+    },
+    {
+        "key": "group_5d801f7c30869",
+        "title": "Page Intro",
+        "fields": [
+            {
+                "key": "field_5d815b63094db",
+                "label": "Add Page Label",
+                "name": "has_label",
+                "type": "true_false",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1563,27 +1932,124 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "white": "White",
-                    "gray": "Gray",
-                    "red": "Red"
-                },
-                "default_value": [],
-                "allow_null": 0,
-                "multiple": 0,
+                "message": "",
+                "default_value": 0,
                 "ui": 0,
-                "return_format": "value",
-                "ajax": 0,
-                "placeholder": ""
+                "ui_on_text": "",
+                "ui_off_text": ""
             },
-            "field_5d7680727ce1c": {
-                "key": "field_5d7680727ce1c",
-                "name": "package_name",
+            {
+                "key": "field_5d815b8b094dc",
+                "label": "Page Label",
+                "name": "page_label",
                 "type": "text",
-                "parent": "group_5d768070a5653",
-                "label": "Name",
                 "instructions": "",
                 "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d815b63094db",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d801f8c32fc7",
+                "label": "Add Presented By Sponsor",
+                "name": "has_sponsor",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5d80200932fc8",
+                "label": "Presented By Label",
+                "name": "sponsor_label",
+                "type": "text",
+                "instructions": "Label for the sponsor. Defaults to \"Presented By",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d801f8c32fc7",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Presented By",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d80204532fc9",
+                "label": "Presented By Sponsor Image",
+                "name": "sponsor_image",
+                "type": "image",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d801f8c32fc7",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            },
+            {
+                "key": "field_5d8020e5e52e5",
+                "label": "Headline",
+                "name": "headline",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -1596,49 +2062,12 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d7680727ce27": {
-                "key": "field_5d7680727ce27",
-                "name": "package_price",
-                "type": "price",
-                "parent": "group_5d768070a5653",
-                "label": "Price",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "format": "|2\/.\/ |"
-            },
-            "field_5d7680727ce2e": {
-                "key": "field_5d7680727ce2e",
-                "name": "package_price_info",
-                "type": "text",
-                "parent": "group_5d768070a5653",
-                "label": "Price Info",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            "field_5d7680727ce35": {
-                "key": "field_5d7680727ce35",
-                "name": "package_info",
+            {
+                "key": "field_5d8020f5e52e6",
+                "label": "Content",
+                "name": "content",
                 "type": "wysiwyg",
-                "parent": "group_5d768070a5653",
-                "label": "Info",
-                "instructions": "",
+                "instructions": "This is the content that will appear underneath the headline",
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
@@ -1652,12 +2081,30 @@
                 "media_upload": 1,
                 "delay": 0
             },
-            "field_5d7680727ce40": {
-                "key": "field_5d7680727ce40",
-                "name": "package_link",
+            {
+                "key": "field_5d802185e52e7",
+                "label": "Ad Space\/Snippet",
+                "name": "adsnippet",
+                "type": "textarea",
+                "instructions": "This is where you enter in the Ad Snippet or the HTML can be entered in.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5d855b23987ec",
+                "label": "CTA",
+                "name": "cta",
                 "type": "link",
-                "parent": "group_5d768070a5653",
-                "label": "Link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1668,17 +2115,13 @@
                 },
                 "return_format": "array"
             }
-        }
-    },
-    {
-        "key": "group_5d7c0af1aed64",
-        "title": "Post - Draw Schedule",
+        ],
         "location": [
             [
                 {
-                    "param": "post_type",
+                    "param": "block",
                     "operator": "==",
-                    "value": "drawschedule"
+                    "value": "acf\/page-intro"
                 }
             ]
         ],
@@ -1689,16 +2132,123 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d7c11db3b822": {
+        "description": ""
+    },
+    {
+        "key": "group_5d7aa4fd09a34",
+        "title": "PDF w\/ Image Block",
+        "fields": [
+            {
+                "key": "field_5d7aa50e57fe7",
+                "label": "PDFs",
+                "name": "pdfs",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5d7aa55c57fe8",
+                        "label": "Image",
+                        "name": "image",
+                        "type": "image",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "preview_size": "medium",
+                        "library": "all",
+                        "min_width": "",
+                        "min_height": "",
+                        "min_size": "",
+                        "max_width": "",
+                        "max_height": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5d7aa58257fe9",
+                        "label": "Title",
+                        "name": "title",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "Add title..",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d7aa59a57fea",
+                        "label": "PDF",
+                        "name": "pdf",
+                        "type": "file",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": "",
+                        "mime_types": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/pdf-image-block"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d7c0af1aed64",
+        "title": "Post - Draw Schedule",
+        "fields": [
+            {
                 "key": "field_5d7c11db3b822",
+                "label": "Date",
                 "name": "schedule_date",
                 "type": "date_picker",
-                "parent": "group_5d7c0af1aed64",
-                "label": "Date",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1711,12 +2261,11 @@
                 "return_format": "Ymd",
                 "first_day": 1
             },
-            "field_5d7c11f9f8cd9": {
+            {
                 "key": "field_5d7c11f9f8cd9",
+                "label": "Draws",
                 "name": "schedule_draws",
                 "type": "repeater",
-                "parent": "group_5d7c0af1aed64",
-                "label": "Draws",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1842,17 +2391,13 @@
                     }
                 ]
             }
-        }
-    },
-    {
-        "key": "group_5d76cf28edf86",
-        "title": "Post - Team",
+        ],
         "location": [
             [
                 {
                     "param": "post_type",
                     "operator": "==",
-                    "value": "team"
+                    "value": "drawschedule"
                 }
             ]
         ],
@@ -1863,16 +2408,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d76cf474fd19": {
+        "description": ""
+    },
+    {
+        "key": "group_5d76cf28edf86",
+        "title": "Post - Team",
+        "fields": [
+            {
                 "key": "field_5d76cf474fd19",
+                "label": "Team Members",
                 "name": "team_members",
                 "type": "repeater",
-                "parent": "group_5d76cf28edf86",
-                "label": "Team Members",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1927,17 +2473,13 @@
                     }
                 ]
             }
-        }
-    },
-    {
-        "key": "group_5d72cc221cbfa",
-        "title": "Pre Footer",
+        ],
         "location": [
             [
                 {
-                    "param": "block",
+                    "param": "post_type",
                     "operator": "==",
-                    "value": "acf\/prefooter"
+                    "value": "team"
                 }
             ]
         ],
@@ -1948,16 +2490,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d72cc35066b0": {
+        "description": ""
+    },
+    {
+        "key": "group_5d72cc221cbfa",
+        "title": "Pre Footer",
+        "fields": [
+            {
                 "key": "field_5d72cc35066b0",
+                "label": "Title",
                 "name": "prefooter_title",
                 "type": "text",
-                "parent": "group_5d72cc221cbfa",
-                "label": "Title",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1972,12 +2515,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d72cc452864e": {
+            {
                 "key": "field_5d72cc452864e",
+                "label": "Body",
                 "name": "prefooter_body",
                 "type": "text",
-                "parent": "group_5d72cc221cbfa",
-                "label": "Body",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -1992,12 +2534,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d7690fb90cb5": {
+            {
                 "key": "field_5d7690fb90cb5",
+                "label": "Enable Background",
                 "name": "prefooter_enable_background",
                 "type": "true_false",
-                "parent": "group_5d72cc221cbfa",
-                "label": "Enable Background",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -2012,12 +2553,11 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             },
-            "field_5d8a4c1e62050": {
+            {
                 "key": "field_5d8a4c1e62050",
+                "label": "Image Location",
                 "name": "prefooter_image_location",
                 "type": "select",
-                "parent": "group_5d72cc221cbfa",
-                "label": "Image Location",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2045,12 +2585,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d72cc647d966": {
+            {
                 "key": "field_5d72cc647d966",
+                "label": "Image",
                 "name": "prefooter_image",
                 "type": "image",
-                "parent": "group_5d72cc221cbfa",
-                "label": "Image",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2078,17 +2617,13 @@
                 "max_size": "",
                 "mime_types": ""
             }
-        }
-    },
-    {
-        "key": "group_5d6ee5c2ab260",
-        "title": "Site Settings",
+        ],
         "location": [
             [
                 {
-                    "param": "options_page",
+                    "param": "block",
                     "operator": "==",
-                    "value": "acf-options-options"
+                    "value": "acf\/prefooter"
                 }
             ]
         ],
@@ -2099,16 +2634,137 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d7c074c1df47": {
-                "key": "field_5d7c074c1df47",
-                "name": "",
-                "type": "tab",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "General",
+        "description": ""
+    },
+    {
+        "key": "group_5d795c6890474",
+        "title": "Presented By Sponsor",
+        "fields": [
+            {
+                "key": "field_5d795c832d92f",
+                "label": "label",
+                "name": "label",
+                "type": "text",
+                "instructions": "Label for the sponsor. Defaults to \"Presented By",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Presented By",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d795ca92d930",
+                "label": "Sponsor Image",
+                "name": "image",
+                "type": "image",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "url",
+                "preview_size": "medium",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/presented-by"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d76d79563a90",
+        "title": "Single Callout",
+        "fields": [
+            {
+                "key": "field_5d76d7a50622d",
+                "label": "Title",
+                "name": "title",
+                "type": "text",
+                "instructions": "Callout Title",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d76d7cb0622e",
+                "label": "Description",
+                "name": "description",
+                "type": "textarea",
+                "instructions": "This is the text that will be displayed along with the title",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": "",
+                "new_lines": ""
+            },
+            {
+                "key": "field_5d76d7f70622f",
+                "label": "Callout Link",
+                "name": "link",
+                "type": "url",
+                "instructions": "CTA Link",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5d76dacae58f4",
+                "label": "Callout Link Label",
+                "name": "link_label",
+                "type": "text",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -2117,15 +2773,40 @@
                     "class": "",
                     "id": ""
                 },
-                "placement": "top",
-                "endpoint": 0
-            },
-            "field_5d71507b94d5f": {
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/single-callout"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d6ee5c2ab260",
+        "title": "Site Settings",
+        "fields": [
+            {
                 "key": "field_5d71507b94d5f",
+                "label": "Is Event",
                 "name": "is_event",
                 "type": "true_false",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "Is Event",
                 "instructions": "This field should be checked off is this microsite is for an event.",
                 "required": 0,
                 "conditional_logic": 0,
@@ -2140,12 +2821,38 @@
                 "ui_on_text": "",
                 "ui_off_text": ""
             },
-            "field_5d72948ad229f": {
+            {
+                "key": "field_5d8a81198b749",
+                "label": "Event Name",
+                "name": "event_name",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5d72948ad229f",
+                "label": "Event Logo",
                 "name": "event_logo",
                 "type": "image",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "Event Logo",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2173,12 +2880,11 @@
                 "max_size": "",
                 "mime_types": ""
             },
-            "field_5d6ee8579a50d": {
+            {
                 "key": "field_5d6ee8579a50d",
+                "label": "Event Location Title",
                 "name": "event_location_title",
                 "type": "text",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "Event Location Title",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2201,12 +2907,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d72e76ae2bcc": {
+            {
                 "key": "field_5d72e76ae2bcc",
+                "label": "Timezone",
                 "name": "event_timezone",
                 "type": "timezone_picker",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "Timezone",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2225,12 +2930,11 @@
                 },
                 "default_time_zone": ""
             },
-            "field_5d6ee86b9a50e": {
+            {
                 "key": "field_5d6ee86b9a50e",
+                "label": "Event Date Start",
                 "name": "event_date_start",
                 "type": "date_time_picker",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "Event Date Start",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2251,12 +2955,11 @@
                 "return_format": "Y-m-d H:i:s",
                 "first_day": 1
             },
-            "field_5d6eea44f0ae6": {
+            {
                 "key": "field_5d6eea44f0ae6",
+                "label": "Event Date End",
                 "name": "event_date_end",
                 "type": "date_time_picker",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "Event Date End",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2277,12 +2980,11 @@
                 "return_format": "Y-m-d H:i:s",
                 "first_day": 1
             },
-            "field_5d701bb3ac464": {
+            {
                 "key": "field_5d701bb3ac464",
+                "label": "Event Map Id",
                 "name": "event_map_id",
                 "type": "text",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "Event Map Id",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2305,12 +3007,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d811dee40967": {
+            {
                 "key": "field_5d811dee40967",
+                "label": "Event Location Page Link",
                 "name": "event_location_page_link",
                 "type": "link",
-                "parent": "group_5d6ee5c2ab260",
-                "label": "Event Location Page Link",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
@@ -2328,120 +3029,135 @@
                     "id": ""
                 },
                 "return_format": "array"
-            }
-        }
-    },
-    {
-        "key": "group_5d6ea1fac0e37",
-        "title": "Ticket",
-        "location": [
-            [
-                {
-                    "param": "block",
-                    "operator": "==",
-                    "value": "acf\/ticket"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d6ebefa548d5": {
-                "key": "field_5d6ebefa548d5",
-                "name": "ticket_colour",
-                "type": "select",
-                "parent": "group_5d6ea1fac0e37",
-                "label": "Colour",
+            },
+            {
+                "key": "field_5d8a814703e33",
+                "label": "Operated By",
+                "name": "event_operated_by",
+                "type": "text",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "white": "White",
-                    "gray": "Gray"
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d8a816903e34",
+                "label": "Buy Tickets Link",
+                "name": "event_buy_tickets_link",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
                 },
-                "default_value": [],
-                "allow_null": 0,
-                "multiple": 0,
-                "ui": 0,
-                "return_format": "value",
-                "ajax": 0,
+                "default_value": "",
                 "placeholder": ""
             },
-            "field_5d6ea23a00b15": {
-                "key": "field_5d6ea23a00b15",
-                "name": "ticket_title",
-                "type": "text",
-                "parent": "group_5d6ea1fac0e37",
-                "label": "Title",
+            {
+                "key": "field_5d8a81a503e35",
+                "label": "Draw Schedule Link",
+                "name": "event_draw_schedule_link",
+                "type": "url",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "placeholder": ""
             },
-            "field_5d6ea24c00b16": {
-                "key": "field_5d6ea24c00b16",
-                "name": "ticket_price",
-                "type": "price",
-                "parent": "group_5d6ea1fac0e37",
-                "label": "Price",
+            {
+                "key": "field_5d8a81bf03e36",
+                "label": "Where to Watch Link",
+                "name": "event_where_to_watch_link",
+                "type": "url",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "format": "|2\/.\/,|"
-            },
-            "field_5d6ea462cf0b9": {
-                "key": "field_5d6ea462cf0b9",
-                "name": "ticket_price_info",
-                "type": "text",
-                "parent": "group_5d6ea1fac0e37",
-                "label": "Price Info",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
+                "placeholder": ""
             },
-            "field_5d6ea28000b17": {
-                "key": "field_5d6ea28000b17",
-                "name": "ticket_options",
+            {
+                "key": "field_5d8a81ce03e37",
+                "label": "Meet the Teams Link",
+                "name": "event_meet_the_teams_link",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5d8a8c33e076d",
+                "label": "Sponsors",
+                "name": "event_sponsors_list",
                 "type": "repeater",
-                "parent": "group_5d6ea1fac0e37",
-                "label": "Options",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -2452,29 +3168,14 @@
                 },
                 "collapsed": "",
                 "min": 0,
-                "max": 0,
-                "layout": "block",
-                "button_label": "Add Option",
+                "max": 5,
+                "layout": "table",
+                "button_label": "Add Sponsor",
                 "sub_fields": [
                     {
-                        "key": "field_5d6ea29c00b18",
-                        "label": "Option Price",
-                        "name": "option_price",
-                        "type": "price",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "format": "|2\/.\/,|"
-                    },
-                    {
-                        "key": "field_5d6ea2af00b19",
-                        "label": "Option Description",
-                        "name": "option_description",
+                        "key": "field_5d8aac77c64ec",
+                        "label": "Type",
+                        "name": "event_sponsor_type",
                         "type": "text",
                         "instructions": "",
                         "required": 0,
@@ -2489,56 +3190,59 @@
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d8aac29c64ea",
+                        "label": "Sponsors",
+                        "name": "event_sponsors",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "collapsed": "",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "table",
+                        "button_label": "",
+                        "sub_fields": [
+                            {
+                                "key": "field_5d8aac59c64eb",
+                                "label": "Sponsor",
+                                "name": "event_sponsor",
+                                "type": "post_object",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "post_type": [
+                                    "sponsors"
+                                ],
+                                "taxonomy": "",
+                                "allow_null": 0,
+                                "multiple": 0,
+                                "return_format": "object",
+                                "ui": 1
+                            }
+                        ]
                     }
                 ]
-            },
-            "field_5d6ea2c200b1a": {
-                "key": "field_5d6ea2c200b1a",
-                "name": "ticket_link",
-                "type": "link",
-                "parent": "group_5d6ea1fac0e37",
-                "label": "Link",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            },
-            "field_5d6ea2ce00b1b": {
-                "key": "field_5d6ea2ce00b1b",
-                "name": "ticket_legal",
-                "type": "text",
-                "parent": "group_5d6ea1fac0e37",
-                "label": "Legal",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
             }
-        }
-    },
-    {
-        "key": "group_5d801f7c30869",
-        "title": "Page Intro",
+        ],
         "location": [
             [
                 {
-                    "param": "block",
+                    "param": "options_page",
                     "operator": "==",
-                    "value": "acf\/page-intro"
+                    "value": "acf-options-options"
                 }
             ]
         ],
@@ -2549,355 +3253,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d815b63094db": {
-                "key": "field_5d815b63094db",
-                "name": "has_label",
-                "type": "true_false",
-                "parent": "group_5d801f7c30869",
-                "label": "Add Page Label",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "message": "",
-                "default_value": 0,
-                "ui": 0,
-                "ui_on_text": "",
-                "ui_off_text": ""
-            },
-            "field_5d815b8b094dc": {
-                "key": "field_5d815b8b094dc",
-                "name": "page_label",
-                "type": "text",
-                "parent": "group_5d801f7c30869",
-                "label": "Page Label",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d815b63094db",
-                            "operator": "==",
-                            "value": "1"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            "field_5d801f8c32fc7": {
-                "key": "field_5d801f8c32fc7",
-                "name": "has_sponsor",
-                "type": "true_false",
-                "parent": "group_5d801f7c30869",
-                "label": "Add Presented By Sponsor",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "message": "",
-                "default_value": 0,
-                "ui": 0,
-                "ui_on_text": "",
-                "ui_off_text": ""
-            },
-            "field_5d80200932fc8": {
-                "key": "field_5d80200932fc8",
-                "name": "sponsor_label",
-                "type": "text",
-                "parent": "group_5d801f7c30869",
-                "label": "Presented By Label",
-                "instructions": "Label for the sponsor. Defaults to \"Presented By",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d801f8c32fc7",
-                            "operator": "==",
-                            "value": "1"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "Presented By",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            "field_5d80204532fc9": {
-                "key": "field_5d80204532fc9",
-                "name": "sponsor_image",
-                "type": "image",
-                "parent": "group_5d801f7c30869",
-                "label": "Presented By Sponsor Image",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d801f8c32fc7",
-                            "operator": "==",
-                            "value": "1"
-                        }
-                    ]
-                ],
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "url",
-                "preview_size": "medium",
-                "library": "all",
-                "min_width": "",
-                "min_height": "",
-                "min_size": "",
-                "max_width": "",
-                "max_height": "",
-                "max_size": "",
-                "mime_types": ""
-            },
-            "field_5d8020e5e52e5": {
-                "key": "field_5d8020e5e52e5",
-                "name": "headline",
-                "type": "text",
-                "parent": "group_5d801f7c30869",
-                "label": "Headline",
-                "instructions": "",
-                "required": 1,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            "field_5d8020f5e52e6": {
-                "key": "field_5d8020f5e52e6",
-                "name": "content",
-                "type": "wysiwyg",
-                "parent": "group_5d801f7c30869",
-                "label": "Content",
-                "instructions": "This is the content that will appear underneath the headline",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "tabs": "all",
-                "toolbar": "full",
-                "media_upload": 1,
-                "delay": 0
-            },
-            "field_5d802185e52e7": {
-                "key": "field_5d802185e52e7",
-                "name": "adsnippet",
-                "type": "textarea",
-                "parent": "group_5d801f7c30869",
-                "label": "Ad Space\/Snippet",
-                "instructions": "This is where you enter in the Ad Snippet or the HTML can be entered in.",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": ""
-            },
-            "field_5d855b23987ec": {
-                "key": "field_5d855b23987ec",
-                "name": "cta",
-                "type": "link",
-                "parent": "group_5d801f7c30869",
-                "label": "CTA",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            }
-        }
-    },
-    {
-        "key": "group_5d7aa4fd09a34",
-        "title": "PDF w\/ Image Block",
-        "location": [
-            [
-                {
-                    "param": "block",
-                    "operator": "==",
-                    "value": "acf\/pdf-image-block"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d7aa50e57fe7": {
-                "key": "field_5d7aa50e57fe7",
-                "name": "pdfs",
-                "type": "repeater",
-                "parent": "group_5d7aa4fd09a34",
-                "label": "PDFs",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "collapsed": "",
-                "min": 0,
-                "max": 0,
-                "layout": "table",
-                "button_label": "",
-                "sub_fields": [
-                    {
-                        "key": "field_5d7aa55c57fe8",
-                        "label": "Image",
-                        "name": "image",
-                        "type": "image",
-                        "instructions": "",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "return_format": "array",
-                        "preview_size": "medium",
-                        "library": "all",
-                        "min_width": "",
-                        "min_height": "",
-                        "min_size": "",
-                        "max_width": "",
-                        "max_height": "",
-                        "max_size": "",
-                        "mime_types": ""
-                    },
-                    {
-                        "key": "field_5d7aa58257fe9",
-                        "label": "Title",
-                        "name": "title",
-                        "type": "text",
-                        "instructions": "",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "Add title..",
-                        "prepend": "",
-                        "append": "",
-                        "maxlength": ""
-                    },
-                    {
-                        "key": "field_5d7aa59a57fea",
-                        "label": "PDF",
-                        "name": "pdf",
-                        "type": "file",
-                        "instructions": "",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "return_format": "url",
-                        "library": "all",
-                        "min_size": "",
-                        "max_size": "",
-                        "mime_types": ""
-                    }
-                ]
-            }
-        }
+        "description": ""
     },
     {
         "key": "group_5d716238640a0",
         "title": "Sponsors",
-        "location": [
-            [
-                {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "sponsors"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d71624ea1e90": {
+        "fields": [
+            {
                 "key": "field_5d71624ea1e90",
+                "label": "Featured Image",
                 "name": "featured_image",
                 "type": "image",
-                "parent": "group_5d716238640a0",
-                "label": "Featured Image",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -2917,17 +3283,13 @@
                 "max_size": 5,
                 "mime_types": ""
             }
-        }
-    },
-    {
-        "key": "group_5d714686895ef",
-        "title": "Sponsors Block Fields",
+        ],
         "location": [
             [
                 {
-                    "param": "block",
+                    "param": "post_type",
                     "operator": "==",
-                    "value": "acf\/sponsors"
+                    "value": "sponsors"
                 }
             ]
         ],
@@ -2938,16 +3300,17 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d716737d6967": {
+        "description": ""
+    },
+    {
+        "key": "group_5d714686895ef",
+        "title": "Sponsors Block Fields",
+        "fields": [
+            {
                 "key": "field_5d716737d6967",
+                "label": "Block Title",
                 "name": "block_title",
                 "type": "text",
-                "parent": "group_5d714686895ef",
-                "label": "Block Title",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -2962,12 +3325,11 @@
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d76c10180717": {
+            {
                 "key": "field_5d76c10180717",
+                "label": "Block Background Color",
                 "name": "block_background_color",
                 "type": "select",
-                "parent": "group_5d714686895ef",
-                "label": "Block Background Color",
                 "instructions": "Default is light grey.",
                 "required": 0,
                 "conditional_logic": 0,
@@ -2990,12 +3352,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d796759061ae": {
+            {
                 "key": "field_5d796759061ae",
+                "label": "Block Background Color (Mobile)",
                 "name": "block_background_color_mobile",
                 "type": "select",
-                "parent": "group_5d714686895ef",
-                "label": "Block Background Color (Mobile)",
                 "instructions": "Default is grey.\tOnly affects mobile.",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3018,12 +3379,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d78214b7a62c": {
+            {
                 "key": "field_5d78214b7a62c",
+                "label": "Block Content Alignment",
                 "name": "block_content_alignment",
                 "type": "select",
-                "parent": "group_5d714686895ef",
-                "label": "Block Content Alignment",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3047,12 +3407,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d780fe9e21da": {
+            {
                 "key": "field_5d780fe9e21da",
+                "label": "Sponsor Columns",
                 "name": "sponsor_columns",
                 "type": "select",
-                "parent": "group_5d714686895ef",
-                "label": "Sponsor Columns",
                 "instructions": "This is more important for desktop view, mobile with responsively handle itself.",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3079,12 +3438,11 @@
                 "ajax": 0,
                 "placeholder": ""
             },
-            "field_5d768a3a19060": {
+            {
                 "key": "field_5d768a3a19060",
+                "label": "Sponsors",
                 "name": "sponsors",
                 "type": "repeater",
-                "parent": "group_5d714686895ef",
-                "label": "Sponsors",
                 "instructions": "Add sponsors here.\tMax 6 before wrap on Desktop.\tMax 2 on mobile.",
                 "required": 1,
                 "conditional_logic": 0,
@@ -3157,12 +3515,11 @@
                     }
                 ]
             },
-            "field_5d781564e21db": {
+            {
                 "key": "field_5d781564e21db",
+                "label": "CTA Settings",
                 "name": "block_cta_settings",
                 "type": "repeater",
-                "parent": "group_5d714686895ef",
-                "label": "CTA Settings",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3351,17 +3708,13 @@
                     }
                 ]
             }
-        }
-    },
-    {
-        "key": "group_5d798110d0b1c",
-        "title": "Text Callouts with Images",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/text-callouts"
+                    "value": "acf\/sponsors"
                 }
             ]
         ],
@@ -3372,16 +3725,179 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d798124180bb": {
+        "description": ""
+    },
+    {
+        "key": "group_5d78368291842",
+        "title": "Styled Button",
+        "fields": [
+            {
+                "key": "field_5d7836939ed8b",
+                "label": "Label",
+                "name": "label",
+                "type": "text",
+                "instructions": "The label for the button.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d7836ca9ed8c",
+                "label": "Link",
+                "name": "link",
+                "type": "url",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5d7837229ed8d",
+                "label": "Button Design",
+                "name": "button_design",
+                "type": "select",
+                "instructions": "Select the button design.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "rww": "Red Background, White Text",
+                    "wbb": "White Background, Black Text",
+                    "rbb": "Red Background, Black Text",
+                    "rwb": "Red Background, White Text (Black on hover)"
+                },
+                "default_value": [
+                    "rww"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/styled-button"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d816456779c2",
+        "title": "Team - Small",
+        "fields": [
+            {
+                "key": "field_5d81645e2ec23",
+                "label": "Team",
+                "name": "team_small_post",
+                "type": "post_object",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "team"
+                ],
+                "taxonomy": "",
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "object",
+                "ui": 1
+            },
+            {
+                "key": "field_5d8164a3e3c52",
+                "label": "CTA",
+                "name": "team_small_cta",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_5d816489e3c51",
+                "label": "Link",
+                "name": "team_small_link",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/team-small"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d798110d0b1c",
+        "title": "Text Callouts with Images",
+        "fields": [
+            {
                 "key": "field_5d798124180bb",
+                "label": "First Callout",
                 "name": "first_callout",
                 "type": "group",
-                "parent": "group_5d798110d0b1c",
-                "label": "First Callout",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3491,12 +4007,11 @@
                     }
                 ]
             },
-            "field_5d798453180c2": {
+            {
                 "key": "field_5d798453180c2",
+                "label": "Second Callout",
                 "name": "second_callout",
                 "type": "group",
-                "parent": "group_5d798110d0b1c",
-                "label": "Second Callout",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3606,12 +4121,11 @@
                     }
                 ]
             },
-            "field_5d798469180c8": {
+            {
                 "key": "field_5d798469180c8",
+                "label": "Third Callout",
                 "name": "third_callout",
                 "type": "group",
-                "parent": "group_5d798110d0b1c",
-                "label": "Third Callout",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3721,17 +4235,13 @@
                     }
                 ]
             }
-        }
-    },
-    {
-        "key": "group_5d816456779c2",
-        "title": "Team - Small",
+        ],
         "location": [
             [
                 {
                     "param": "block",
                     "operator": "==",
-                    "value": "acf\/team-small"
+                    "value": "acf\/text-callouts"
                 }
             ]
         ],
@@ -3742,146 +4252,44 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d81645e2ec23": {
-                "key": "field_5d81645e2ec23",
-                "name": "team_small_post",
-                "type": "post_object",
-                "parent": "group_5d816456779c2",
-                "label": "Team",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "post_type": [
-                    "team"
-                ],
-                "taxonomy": "",
-                "allow_null": 0,
-                "multiple": 0,
-                "return_format": "object",
-                "ui": 1
-            },
-            "field_5d8164a3e3c52": {
-                "key": "field_5d8164a3e3c52",
-                "name": "team_small_cta",
-                "type": "link",
-                "parent": "group_5d816456779c2",
-                "label": "CTA",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            },
-            "field_5d816489e3c51": {
-                "key": "field_5d816489e3c51",
-                "name": "team_small_link",
-                "type": "link",
-                "parent": "group_5d816456779c2",
-                "label": "Link",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "return_format": "array"
-            }
-        }
+        "description": ""
     },
     {
-        "key": "group_5d81648b84451",
-        "title": "Activity Block Fields",
-        "location": [
-            [
-                {
-                    "param": "block",
-                    "operator": "==",
-                    "value": "acf\/activity-schedule"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d8164965c450": {
-                "key": "field_5d8164965c450",
-                "name": "activity_post",
-                "type": "post_object",
-                "parent": "group_5d81648b84451",
-                "label": "Activity Post",
+        "key": "group_5d6ea1fac0e37",
+        "title": "Ticket",
+        "fields": [
+            {
+                "key": "field_5d6ebefa548d5",
+                "label": "Colour",
+                "name": "ticket_colour",
+                "type": "select",
                 "instructions": "",
-                "required": 1,
+                "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",
                     "id": ""
                 },
-                "post_type": [
-                    "activity"
-                ],
-                "taxonomy": "",
+                "choices": {
+                    "white": "White",
+                    "gray": "Gray"
+                },
+                "default_value": [],
                 "allow_null": 0,
                 "multiple": 0,
-                "return_format": "object",
-                "ui": 1
-            }
-        }
-    },
-    {
-        "key": "group_5d815c296b5ea",
-        "title": "Activity Fields",
-        "location": [
-            [
-                {
-                    "param": "post_type",
-                    "operator": "==",
-                    "value": "activity"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d815c3768ef1": {
-                "key": "field_5d815c3768ef1",
-                "name": "description",
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5d6ea23a00b15",
+                "label": "Title",
+                "name": "ticket_title",
                 "type": "text",
-                "parent": "group_5d815c296b5ea",
-                "label": "Description",
                 "instructions": "",
-                "required": 1,
+                "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -3889,17 +4297,50 @@
                     "id": ""
                 },
                 "default_value": "",
-                "placeholder": "Add a description..",
+                "placeholder": "",
                 "prepend": "",
                 "append": "",
                 "maxlength": ""
             },
-            "field_5d815c5d68ef2": {
-                "key": "field_5d815c5d68ef2",
-                "name": "activity_details",
+            {
+                "key": "field_5d6ea24c00b16",
+                "label": "Price",
+                "name": "ticket_price",
+                "type": "price",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "format": "|2\/.\/,|"
+            },
+            {
+                "key": "field_5d6ea462cf0b9",
+                "label": "Price Info",
+                "name": "ticket_price_info",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d6ea28000b17",
+                "label": "Options",
+                "name": "ticket_options",
                 "type": "repeater",
-                "parent": "group_5d815c296b5ea",
-                "label": "Activity Details",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -3911,71 +4352,141 @@
                 "collapsed": "",
                 "min": 0,
                 "max": 0,
-                "layout": "table",
-                "button_label": "",
+                "layout": "block",
+                "button_label": "Add Option",
                 "sub_fields": [
                     {
-                        "key": "field_5d815c8468ef3",
-                        "label": "Date",
-                        "name": "date",
-                        "type": "date_picker",
+                        "key": "field_5d6ea29c00b18",
+                        "label": "Option Price",
+                        "name": "option_price",
+                        "type": "price",
                         "instructions": "",
-                        "required": 1,
+                        "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
-                        "display_format": "d\/m\/Y",
-                        "return_format": "F j, Y",
-                        "first_day": 0
+                        "format": "|2\/.\/,|"
                     },
                     {
-                        "key": "field_5d815cb168ef4",
-                        "label": "Time",
-                        "name": "time",
-                        "type": "time_picker",
+                        "key": "field_5d6ea2af00b19",
+                        "label": "Option Description",
+                        "name": "option_description",
+                        "type": "text",
                         "instructions": "",
-                        "required": 1,
+                        "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
                             "width": "",
                             "class": "",
                             "id": ""
                         },
-                        "display_format": "g:i a",
-                        "return_format": "g:i a"
-                    },
-                    {
-                        "key": "field_5d815cbf68ef5",
-                        "label": "Participants",
-                        "name": "participants",
-                        "type": "post_object",
-                        "instructions": "",
-                        "required": 1,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "post_type": [
-                            "team"
-                        ],
-                        "taxonomy": "",
-                        "allow_null": 0,
-                        "multiple": 1,
-                        "return_format": "object",
-                        "ui": 1
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
                     }
                 ]
+            },
+            {
+                "key": "field_5d6ea2c200b1a",
+                "label": "Link",
+                "name": "ticket_link",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_5d6ea2ce00b1b",
+                "label": "Legal",
+                "name": "ticket_legal",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
             }
-        }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/ticket"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
+        "key": "group_5d8a78ff1e1ad",
+        "title": "Timer",
+        "fields": [],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/timer"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
     },
     {
         "key": "group_5d855e6273ee5",
         "title": "Video",
+        "fields": [
+            {
+                "key": "field_5d85611c349eb",
+                "label": "Youtube URL",
+                "name": "video_embed",
+                "type": "oembed",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "width": 1170,
+                "height": 568
+            }
+        ],
         "location": [
             [
                 {
@@ -3992,72 +4503,6 @@
         "instruction_placement": "label",
         "hide_on_screen": "",
         "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d85611c349eb": {
-                "key": "field_5d85611c349eb",
-                "name": "video_embed",
-                "type": "oembed",
-                "parent": "group_5d855e6273ee5",
-                "label": "Youtube URL",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "width": 1170,
-                "height": 568
-            }
-        }
-    },
-    {
-        "key": "group_5d87d2cd28141",
-        "title": "Ad - Banner",
-        "location": [
-            [
-                {
-                    "param": "block",
-                    "operator": "==",
-                    "value": "acf\/ad-banner"
-                }
-            ]
-        ],
-        "menu_order": 0,
-        "position": "normal",
-        "style": "default",
-        "label_placement": "top",
-        "instruction_placement": "label",
-        "hide_on_screen": "",
-        "active": true,
-        "description": "",
-        "_valid": 1,
-        "local": "php",
-        "fields": {
-            "field_5d87d2d5e5658": {
-                "key": "field_5d87d2d5e5658",
-                "name": "adsnippet",
-                "type": "textarea",
-                "parent": "group_5d87d2cd28141",
-                "label": "Ad Space\/Snippet",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "maxlength": "",
-                "rows": "",
-                "new_lines": ""
-            }
-        }
+        "description": ""
     }
 ]

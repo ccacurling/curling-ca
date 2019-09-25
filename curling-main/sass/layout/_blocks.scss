@@ -18,6 +18,26 @@
   line-height: 14px;
 }
 
+.arrow-right-large-cool-gray:after {
+  display: inline-block;
+  content: ' ';
+  margin-left: 15px;
+  margin-bottom: 2px;
+  width: 19px;
+  height: 10px;
+  background-image: url(../images/arrow-right-large-cool-gray.svg);
+}
+
+.arrow-right-extralarge-white:after {
+  display: inline-block;
+  content: ' ';
+  margin-left: 18px;
+  margin-bottom: initial;
+  width: 28px;
+  height: 15px;
+  background-image: url(../images/arrow-right-extralarge-white.svg);
+}
+
 .block-container {
   margin-left: auto;
   margin-right: auto;

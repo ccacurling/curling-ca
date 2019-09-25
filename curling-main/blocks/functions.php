@@ -7,6 +7,9 @@ include 'blocks-setup.php';
 
 add_action('acf/init', 'acf_blocks_init');
 
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
 // ------
 // Uncomment to export acf-import.json file
 // export_acf_json();
@@ -301,6 +304,16 @@ function acf_blocks_init() {
       'category'				=> 'common',
       'icon'						=> 'admin-comments',
       'keywords'				=> [ 'countdown', 'timer' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'featured-event-info',
+      'title'						=> __('Featured Event Info'),
+      'description'			=> __('A block to render featured event info'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'featured', 'event', 'info' ]
     ]);
 
     acf_add_options_page('Options');
