@@ -245,6 +245,16 @@
   color: #f16682;
 }
 
+.edit-post-layout__content .subdomain {
+  font-family: "Knockout";
+  font-size: 18px;
+  color: #000000;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
 .edit-post-layout__content li {
   font-family: "Meta Serif Pro";
   font-size: 20px;
@@ -639,6 +649,16 @@
   width: 28px;
   height: 15px;
   background-image: url(../images/arrow-right-extralarge-white.svg);
+}
+
+.edit-post-layout__content .arrow-right-large-red:after {
+  display: inline-block;
+  content: ' ';
+  margin-left: 10px;
+  margin-bottom: 2px;
+  width: 19px;
+  height: 10px;
+  background-image: url(../images/arrow-right-large-red.svg);
 }
 
 .edit-post-layout__content .block-container {
@@ -5569,13 +5589,45 @@
   margin-left: 14px;
 }
 
+.edit-post-layout__content .block-featured-event-sponsor-headline {
+  margin-top: 22px;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-featured-event-sponsor-headline {
+    display: none;
+  }
+}
+
+.edit-post-layout__content .block-featured-event-sponsor-type {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-featured-event-sponsor-type {
+    display: none;
+  }
+}
+
+.edit-post-layout__content .block-featured-event-sponsors-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
 .edit-post-layout__content .block-featured-event-sponsor {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-basis: 50%;
-  width: 170px;
-  height: 170px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 150px;
+  height: 150px;
   background-color: #ffffff;
   border: 1px solid #d8d8d8;
 }
@@ -5583,23 +5635,52 @@
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .block-featured-event-sponsor {
     flex-basis: auto;
+    width: 170px;
+    height: 170px;
   }
 }
 
 .edit-post-layout__content .block-featured-event-sponsor-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   padding-top: 22px;
-  padding-bottom: 22px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 16px;
+  padding-right: 16px;
   background-color: #f2f2f2;
 }
 
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .block-featured-event-sponsor-wrapper {
+    flex-direction: row;
+    padding-bottom: 22px;
+    padding-left: 30px;
+    padding-right: 30px;
     background-color: #ffffff;
   }
+}
+
+.edit-post-layout__content .block-featured-event-sponsor-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-featured-event-sponsor-container {
+    display: none;
+  }
+}
+
+.edit-post-layout__content .block-featured-event-sponsor-links-headline {
+  margin-top: 10px;
+  margin-bottom: 7px;
+}
+
+.edit-post-layout__content .block-featured-event-sponsor-link {
+  margin-top: 7px;
+  margin-bottom: 14px;
+  text-decoration: inherit;
 }
 
 .edit-post-layout__content .block-featured-event-cta {

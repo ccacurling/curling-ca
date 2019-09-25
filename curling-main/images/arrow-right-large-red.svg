@@ -1,27 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="21px" height="9px" viewBox="0 0 21 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <defs>
-        <polygon id="path-1" points="14.7698482 7.36811627 17.246664 4.94184768 0.86625 4.94184768 0.86625 3.45333934 17.2162737 3.45333934 14.7698482 1.05684092 15.8335114 5.68434189e-14 20.13375 4.21247859 15.8335114 8.42495719"></polygon>
-    </defs>
+
+<svg width="19px" height="10px" viewBox="0 0 19 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="CTA-Button/Secondary" transform="translate(-126.000000, -9.000000)">
-            <g id="CTA/Button/Secondary">
-                <g>
-                    <g id="Icon/Arrow" transform="translate(126.000000, 9.000000)">
-                        <g>
-                            <mask id="mask-2" fill="white">
-                                <use xlink:href="#path-1"></use>
-                            </mask>
-                            <use id="Shape" fill="#4C4C4E" fill-rule="nonzero" xlink:href="#path-1"></use>
-                            <g id="Color/red" mask="url(#mask-2)" fill="#ED1940">
-                                <g transform="translate(-55.125000, -60.428571)" id="Rectangle-Copy-3">
-                                    <rect x="0" y="0" width="131" height="129"></rect>
-                                </g>
-                            </g>
-                        </g>
-                    </g>
-                </g>
-            </g>
+        <g fill="#ed1940">
+            <polygon id="Path" points="12.1447368 1 18.5131579 5.725 12.1447368 10.45 12.144 6.649 2.74447132e-13 6.65 2.74447132e-13 4.65 12.144 4.649"></polygon>
         </g>
     </g>
 </svg>

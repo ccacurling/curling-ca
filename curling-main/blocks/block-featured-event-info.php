@@ -34,16 +34,30 @@ $buy_tickets_link = get_field( 'event_buy_tickets_link', 'Options' );
 $draw_schedule_link = get_field( 'event_draw_schedule_link', 'Options' );
 $where_to_watch_link = get_field( 'event_where_to_watch_link', 'Options' );
 $meet_the_teams_link = get_field( 'event_meet_the_teams_link', 'Options' );
-$sponsors_posts = get_field( 'event_sponsors', 'Options' );
+
+$sponsors_headline = get_field( 'event_sponsor_headline', 'Options' );
+$sponsors_posts = get_field( 'event_sponsors_list', 'Options' );
+$sponsors_link_headline = get_field( 'sponsor_link_headline', 'Options' );
+$sponsor_links = get_field( 'event_sponsor_links', 'Options' );
 
 $event_page_link = get_home_url();
 
-$sponsors = array_map(function($sponsor) {
-  $sponsor_post = $sponsor['event_sponsor'];
-  return [
-    'image' => get_field( 'featured_image', $sponsor_post->ID )
-  ];
-}, $sponsors_posts);
+$sponsors = [];
+
+foreach ($sponsors_posts as $key => $sponsor) {
+  $sponsor_type = $sponsor['event_sponsor_type'];
+  $sponsor_items = $sponsor['event_sponsors'];
+
+  $sponsor_item = array_map(function($sponsor_post) {
+    $event_sponsor = $sponsor_post['event_sponsor'];
+    return get_field( 'featured_image', $event_sponsor->ID );
+  }, $sponsor_items);
+
+  array_push($sponsors, [
+    'type' => $sponsor_type,
+    'sponsors' => $sponsor_item
+  ]);
+}
 
 restore_current_blog();
 
@@ -160,47 +174,91 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
   </div>
   
   <div class="block-featured-event-wrapper block-featured-event-sponsor-wrapper">
+  <?php
+    if ($sponsors) {
+  ?>
+
     <?php
-      if ($sponsors) {
-        foreach ($sponsors as $key => $sponsor) {
-          if ($sponsor['image']) {
+      if ($sponsors_headline) {
     ?>
-      <div class="block-featured-event-sponsor">
-        <img src="<?php echo $sponsor['image']['url']; ?>" alt="sponsor" />
-      </div>
-<?php
+      <h3 class="block-featured-event-sponsor-headline"><?php echo $sponsors_headline; ?></h3>
+    <?php
       }
+    ?>
+
+    <?php
+      foreach ($sponsors as $key => $sponsor) {
+    ?>
+      <h4 class="block-featured-event-sponsor-type"><?php echo $sponsor['type']; ?></h4>
+      <div class="block-featured-event-sponsors-container">
+        <?php
+          foreach ($sponsor['sponsors'] as $key => $sponsor_image) {
+        ?>
+          <div class="block-featured-event-sponsor">
+            <img src="<?php echo $sponsor_image['url']; ?>" alt="sponsor" />
+          </div>
+        <?php
+          }
+        ?>
+      </div>
+    <?php
+      }
+    ?>
+    <?php
+      if ($sponsor_links) {
+    ?>
+      <div class="block-featured-event-sponsor-container">
+        <?php
+          if ($sponsors_link_headline) {
+        ?>
+          <p class="block-featured-event-sponsor-links-headline"><?php echo $sponsors_link_headline; ?></p>
+        <?php
+          }
+        ?>
+        <?php
+          foreach ($sponsor_links as $key => $link) {
+            $event_link = $link['event_sponsor_link'];
+        ?>
+          <a class="block-featured-event-sponsor-link subdomain red arrow-right-large-red" href="<?php echo $event_link['url']; ?>" target="<?php echo $event_link['target']; ?>"><?php echo $event_link['title']; ?></a>
+        <?php
+          }
+        ?>
+      <?php
+        }
+      ?>
+    </div>
+  <?php
     }
-  }
-?>
-</div>
-<div class="block-featured-event-wrapper block-featured-event-links-wrapper">
-  <?php
-    if ($draw_schedule_link) {
   ?>
-    <a class="block-featured-event-cta" href="<?php echo $draw_schedule_link; ?>" target="_blank">
-      <h3 class="block-featured-event-cta-text">Draw Schedule</h3>
-    </a>
-  <?php
-    }
-  ?>
-  <?php
-    if ($draw_schedule_link) {
-  ?>
-    <a class="block-featured-event-cta" href="<?php echo $where_to_watch_link; ?>" target="_blank">
-      <h3 class="block-featured-event-cta-text">Where to Watch</h3>
-    </a>
-  <?php
-    }
-  ?>
-  <?php
-    if ($draw_schedule_link) {
-  ?>
-    <a class="block-featured-event-cta" href="<?php echo $meet_the_teams_link; ?>" target="_blank">
-      <h3 class="block-featured-event-cta-text">Meet the Team</h3>
-    </a>
-  <?php
-    }
-  ?>
+  </div>
+
+  <div class="block-featured-event-wrapper block-featured-event-links-wrapper">
+    <?php
+      if ($draw_schedule_link) {
+    ?>
+      <a class="block-featured-event-cta" href="<?php echo $draw_schedule_link; ?>" target="_blank">
+        <h3 class="block-featured-event-cta-text">Draw Schedule</h3>
+      </a>
+    <?php
+      }
+    ?>
+    <?php
+      if ($draw_schedule_link) {
+    ?>
+      <a class="block-featured-event-cta" href="<?php echo $where_to_watch_link; ?>" target="_blank">
+        <h3 class="block-featured-event-cta-text">Where to Watch</h3>
+      </a>
+    <?php
+      }
+    ?>
+    <?php
+      if ($draw_schedule_link) {
+    ?>
+      <a class="block-featured-event-cta" href="<?php echo $meet_the_teams_link; ?>" target="_blank">
+        <h3 class="block-featured-event-cta-text">Meet the Team</h3>
+      </a>
+    <?php
+      }
+    ?>
   </div>
 </div>
