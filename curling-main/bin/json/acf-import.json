@@ -131,6 +131,26 @@
                     {
                         "key": "field_5d815c8468ef3",
                         "label": "Date",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d815c8468ef3",
+                        "label": "Date",
                         "name": "date",
                         "type": "date_picker",
                         "instructions": "",
@@ -148,6 +168,26 @@
                     {
                         "key": "field_5d815cb168ef4",
                         "label": "Time",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d815cb168ef4",
+                        "label": "Time",
                         "name": "time",
                         "type": "time_picker",
                         "instructions": "",
@@ -160,6 +200,26 @@
                         },
                         "display_format": "g:i a",
                         "return_format": "g:i a"
+                    },
+                    {
+                        "key": "field_5d815cbf68ef5",
+                        "label": "Participants",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d815cbf68ef5",
@@ -1129,6 +1189,26 @@
                     {
                         "key": "field_5d71947c1d65c",
                         "label": "Carousel Item",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d71947c1d65c",
+                        "label": "Carousel Item",
                         "name": "hero_carousel_item",
                         "type": "post_object",
                         "instructions": "",
@@ -1368,6 +1448,26 @@
                 "layout": "table",
                 "button_label": "Add Link",
                 "sub_fields": [
+                    {
+                        "key": "field_5d8153e9f59b5",
+                        "label": "Link",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
                     {
                         "key": "field_5d8153e9f59b5",
                         "label": "Link",
@@ -2160,6 +2260,26 @@
                     {
                         "key": "field_5d7aa55c57fe8",
                         "label": "Image",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d7aa55c57fe8",
+                        "label": "Image",
                         "name": "image",
                         "type": "image",
                         "instructions": "",
@@ -2184,6 +2304,26 @@
                     {
                         "key": "field_5d7aa58257fe9",
                         "label": "Title",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d7aa58257fe9",
+                        "label": "Title",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -2199,6 +2339,26 @@
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d7aa59a57fea",
+                        "label": "PDF",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d7aa59a57fea",
@@ -2283,6 +2443,26 @@
                     {
                         "key": "field_5d7c1243d2769",
                         "label": "Name",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d7c1243d2769",
+                        "label": "Name",
                         "name": "draw_name",
                         "type": "text",
                         "instructions": "",
@@ -2302,6 +2482,26 @@
                     {
                         "key": "field_5d7c13e29dff3",
                         "label": "Link",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d7c13e29dff3",
+                        "label": "Link",
                         "name": "draw_link",
                         "type": "link",
                         "instructions": "",
@@ -2313,6 +2513,26 @@
                             "id": ""
                         },
                         "return_format": "array"
+                    },
+                    {
+                        "key": "field_5d7c1221f8cda",
+                        "label": "Draw Time",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d7c1221f8cda",
@@ -2329,6 +2549,26 @@
                         },
                         "display_format": "g:i a",
                         "return_format": "H:i:s"
+                    },
+                    {
+                        "key": "field_5d7c1250d276a",
+                        "label": "Draw Matches",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d7c1250d276a",
@@ -2436,6 +2676,26 @@
                     {
                         "key": "field_5d76cf694fd1a",
                         "label": "Position",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d76cf694fd1a",
+                        "label": "Position",
                         "name": "team_member_position",
                         "type": "text",
                         "instructions": "",
@@ -2451,6 +2711,26 @@
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d76cf7f4fd1b",
+                        "label": "Name",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d76cf7f4fd1b",
@@ -2803,6 +3083,22 @@
         "title": "Site Settings",
         "fields": [
             {
+                "key": "field_5d8b97e62638a",
+                "label": "General",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
                 "key": "field_5d71507b94d5f",
                 "label": "Is Event",
                 "name": "is_event",
@@ -3154,6 +3450,41 @@
                 "placeholder": ""
             },
             {
+                "key": "field_5d8b97fd2638b",
+                "label": "Featured Sponsors",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5d8b989646753",
+                "label": "Sponsor Headline",
+                "name": "event_sponsor_headline",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Making this event possible",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5d8a8c33e076d",
                 "label": "Sponsors",
                 "name": "event_sponsors_list",
@@ -3181,7 +3512,7 @@
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "",
+                            "width": "10",
                             "class": "",
                             "id": ""
                         },
@@ -3233,6 +3564,61 @@
                                 "ui": 1
                             }
                         ]
+                    }
+                ]
+            },
+            {
+                "key": "field_5d8b998946755",
+                "label": "Sponsor Link Headline",
+                "name": "sponsor_link_headline",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Interested in supporting our events?",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5d8b996846754",
+                "label": "Sponsor Links",
+                "name": "event_sponsor_links",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Add Link",
+                "sub_fields": [
+                    {
+                        "key": "field_5d8b99b646756",
+                        "label": "Link",
+                        "name": "event_sponsor_link",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array"
                     }
                 ]
             }
@@ -3460,6 +3846,26 @@
                     {
                         "key": "field_5d768a9019061",
                         "label": "Sponsor Type\/Title",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d768a9019061",
+                        "label": "Sponsor Type\/Title",
                         "name": "type",
                         "type": "text",
                         "instructions": "Title of sponsor or add to only the first of it's type.",
@@ -3475,6 +3881,26 @@
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d768afe19062",
+                        "label": "Sponsor",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d768afe19062",
@@ -3497,6 +3923,26 @@
                         "multiple": 0,
                         "return_format": "object",
                         "ui": 1
+                    },
+                    {
+                        "key": "field_5d769a6391a94",
+                        "label": "Sponsor Link",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d769a6391a94",
@@ -3537,6 +3983,26 @@
                     {
                         "key": "field_5d781579e21dc",
                         "label": "CTA Tag Line",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d781579e21dc",
+                        "label": "CTA Tag Line",
                         "name": "cta_tag_line",
                         "type": "text",
                         "instructions": "",
@@ -3552,6 +4018,26 @@
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d7815b9e21dd",
+                        "label": "CTAs",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d7815b9e21dd",
@@ -3678,6 +4164,26 @@
                                 "save_custom": 0
                             }
                         ]
+                    },
+                    {
+                        "key": "field_5d781757e21e4",
+                        "label": "CTA Location",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d781757e21e4",
@@ -3911,6 +4417,26 @@
                     {
                         "key": "field_5d798190180bc",
                         "label": "Title",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d798190180bc",
+                        "label": "Title",
                         "name": "title",
                         "type": "text",
                         "instructions": "",
@@ -3926,6 +4452,26 @@
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d7981ff180bd",
+                        "label": "Description",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d7981ff180bd",
@@ -3965,6 +4511,26 @@
                     {
                         "key": "field_5d79822f180bf",
                         "label": "Link Label",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d79822f180bf",
+                        "label": "Link Label",
                         "name": "link_label",
                         "type": "text",
                         "instructions": "",
@@ -3980,6 +4546,26 @@
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d798251180c0",
+                        "label": "Image",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d798251180c0",
@@ -4358,6 +4944,26 @@
                     {
                         "key": "field_5d6ea29c00b18",
                         "label": "Option Price",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
+                    },
+                    {
+                        "key": "field_5d6ea29c00b18",
+                        "label": "Option Price",
                         "name": "option_price",
                         "type": "price",
                         "instructions": "",
@@ -4369,6 +4975,26 @@
                             "id": ""
                         },
                         "format": "|2\/.\/,|"
+                    },
+                    {
+                        "key": "field_5d6ea2af00b19",
+                        "label": "Option Description",
+                        "name": "\n\t\t\t\t\t\t",
+                        "type": "text",
+                        "instructions": "",
+                        "required": false,
+                        "conditional_logic": false,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "0": "\n\t\t\t\t\t\t",
+                        "default_value": "",
+                        "maxlength": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": ""
                     },
                     {
                         "key": "field_5d6ea2af00b19",
