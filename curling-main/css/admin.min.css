@@ -75,6 +75,12 @@
   /* Style the indicator (dot/circle) */
 }
 
+.edit-post-layout__content .edit-post-visual-editor {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .edit-post-layout__content html {
   box-sizing: border-box;
   font-size: 100%;
@@ -4330,6 +4336,141 @@
   font-size: 20px;
 }
 
+.edit-post-layout__content .block-events-feed {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.edit-post-layout__content .events-feed-item {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1170px;
+}
+
+.edit-post-layout__content .events-feed-title-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  max-width: 1170px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .events-feed-reversed-container {
+    flex-direction: row-reverse;
+  }
+}
+
+.edit-post-layout__content .events-feed-container {
+  min-height: 400px;
+}
+
+.edit-post-layout__content .events-feed-thumbnail-container {
+  flex-basis: 52%;
+  max-height: 400px;
+  background-color: #f2f2f2;
+}
+
+.edit-post-layout__content .events-feed-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #000000;
+}
+
+.edit-post-layout__content .events-feed-info {
+  flex-basis: 48%;
+  padding-top: 41px;
+  padding-bottom: 63px;
+  padding-left: 68px;
+  padding-right: 68px;
+}
+
+@media only screen and (max-width: 769px) {
+  .edit-post-layout__content .events-feed-info {
+    padding: 20px 20px 40px;
+  }
+}
+
+.edit-post-layout__content .events-feed-excerpt {
+  padding-bottom: 27px;
+}
+
+.edit-post-layout__content .events-feed-link {
+  margin-top: 33px;
+}
+
+.edit-post-layout__content .events-feed-caption-container {
+  bottom: 7px;
+}
+
+.edit-post-layout__content .events-feed-caption-wrapper {
+  margin-left: 21px;
+  margin-right: 21px;
+}
+
+.edit-post-layout__content .events-feed-pagination {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+}
+
+.edit-post-layout__content .events-feed-pagination-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #d8d8d8;
+  cursor: pointer;
+}
+
+.edit-post-layout__content .events-feed-pagination-block-selected {
+  background-color: #ed1940;
+  border: 1px solid #ed1940;
+}
+
+.edit-post-layout__content .events-feed-pagination-block-selected .events-feed-pagination-text {
+  color: #ffffff;
+}
+
+.edit-post-layout__content .events-feed-pagination-block-large {
+  width: 55px;
+}
+
+.edit-post-layout__content .events-feed-pagination-text {
+  color: #000000;
+  font-size: 20px;
+}
+
+.edit-post-layout__content .events-feed-items .block-event-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.edit-post-layout__content .events-feed-items .block-event-feed-item-wrapper {
+  flex-basis: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .events-feed-items .block-event-feed-item-wrapper {
+    flex-basis: 50%;
+  }
+}
+
+.edit-post-layout__content .events-feed-items .events-feed-pagination {
+  margin-top: 18px;
+  max-width: 1030px;
+}
+
 .edit-post-layout__content .block-callout {
   max-width: 570px;
 }
@@ -6038,6 +6179,53 @@
   max-width: 1170px;
   text-align: center;
   background-color: #000000;
+}
+
+.edit-post-layout__content .block-slash {
+  position: relative;
+}
+
+.edit-post-layout__content .block-slash-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.edit-post-layout__content .block-slash-img-container {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -2;
+}
+
+.edit-post-layout__content .block-slash-img-container.block-slash-img-right {
+  top: 0;
+  transform: translate(0, -85%);
+}
+
+.edit-post-layout__content .block-slash-img-container.block-slash-img-right .block-slash-img {
+  margin-left: auto;
+}
+
+.edit-post-layout__content .block-slash-img {
+  display: block;
+  width: 43%;
+}
+
+.edit-post-layout__content .slash {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1440px;
+  max-width: none;
+  max-height: none;
+  z-index: -3;
+}
+
+.edit-post-layout__content .slash-mask {
+  z-index: -1;
+  transform: translate(-50%, -15.4%);
 }
 
 /*# sourceMappingURL=admin.min.css.map */

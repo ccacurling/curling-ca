@@ -4,6 +4,12 @@
  @import "base/fonts";
 
  .edit-post-layout__content {
+  .edit-post-visual-editor {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
     @import "base/colors";
     @import "base/variables";
     @import "base/mixins";
@@ -45,6 +51,7 @@
     @import "modules/blocks/block-sponsors";
     @import "modules/blocks/block-news-promo";
     @import "modules/blocks/block-news-feed";
+    @import "modules/blocks/block-events-feed";
     @import "modules/blocks/block-callout";
     @import "modules/blocks/block-featured-team";
     @import "modules/blocks/block-image-carousel";
@@ -61,4 +68,5 @@
     @import "modules/blocks/block-team-small";
     @import "modules/blocks/block-featured-event";
     @import "modules/blocks/block-video";
+    @import "modules/blocks/block-slash";
 }

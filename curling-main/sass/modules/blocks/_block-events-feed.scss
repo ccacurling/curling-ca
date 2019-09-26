@@ -1,0 +1,132 @@
+
+.block-events-feed {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.events-feed-item {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  max-width: 1170px;
+}
+
+.events-feed-title-container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+  max-width: 1170px;
+}
+
+.events-feed-reversed-container {
+  @include responsive-min($responsive-laptop) {
+    flex-direction: row-reverse;
+  }
+}
+
+.events-feed-container {
+  min-height: 400px;
+}
+
+.events-feed-thumbnail-container {
+  flex-basis: 52%;
+  max-height: 400px;
+  background-color: $cool-light-gray;
+}
+
+.events-feed-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: $black;
+}
+
+.events-feed-info {
+  flex-basis: 48%;
+  padding-top: 41px;
+  padding-bottom: 63px;
+  padding-left: 68px;
+  padding-right: 68px;
+  @include responsive-max($responsive-tablet) {
+    padding: 20px 20px 40px;
+  }
+}
+
+.events-feed-excerpt {
+  padding-bottom: 27px;
+}
+
+.events-feed-link {
+  margin-top: 33px;
+}
+
+.events-feed-caption-container {
+  bottom: 7px;
+}
+
+.events-feed-caption-wrapper {
+  margin-left: 21px;
+  margin-right: 21px;
+}
+
+.events-feed-pagination {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1170px;
+}
+
+.events-feed-pagination-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $light-gray;
+  cursor: pointer;
+}
+
+.events-feed-pagination-block-selected {
+  background-color: $red;
+  border: 1px solid $red;
+  .events-feed-pagination-text {
+    color: $white;
+  }
+}
+
+.events-feed-pagination-block-large {
+  width: 55px;
+}
+
+.events-feed-pagination-text {
+  color: $black;
+  font-size: 20px;
+}
+
+.events-feed-items {
+  .block-event-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    // max-width: 1200px;
+  }
+
+  .block-event-feed-item-wrapper {
+    flex-basis: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include responsive-min($responsive-laptop) {
+      flex-basis: 50%;
+    }
+  }
+
+  .events-feed-pagination {
+    margin-top: 18px;
+    max-width: 1030px;
+  }
+}

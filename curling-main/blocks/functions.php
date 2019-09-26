@@ -326,6 +326,26 @@ function acf_blocks_init() {
       'keywords'				=> [ 'event', 'info' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'slash-graphic',
+      'title'						=> __('Slash Graphic'),
+      'description'			=> __('A block to render a slash graphic'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'slash', 'graphic' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'events-feed',
+      'title'						=> __('Events Feed'),
+      'description'			=> __('A block to render an events feed'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'events', 'feed' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }
