@@ -346,6 +346,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'events', 'feed' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'championship-archive',
+      'title'						=> __('Championship Archive'),
+      'description'			=> __('A block to render a Championship Archive table'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'championship', 'archive' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

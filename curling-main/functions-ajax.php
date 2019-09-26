@@ -17,16 +17,29 @@ function ajax_news_request() {
     $offset = ($page && $n) ? ($page - 1) * $n : 0;
 
     $args = [
-        'category_name' => $category
+        'category_name' => $category,
+        'posts_per_page' => $n,
+        'offset' => $offset,
+        'orderby' => 'date',
+        'order'   => 'DESC',
+        'post_status' => 'publish'
+    ];
+
+    $args_count = [
+      'category_name' => $category,
+      'posts_per_page' => -1,
+      'fields' => 'ids',
+      'no_found_rows' => true,
+      'post_status' => 'publish'
     ];
 
     $query = new WP_Query($args);
+    $query_count = new WP_Query($args_count);
+    $total = $query_count->post_count;
 
     $response = [];
 
     if ($query) {
-      $posts_slice = array_slice($query->posts, $offset, $n);
-      $total = count($query->posts);
       $total_pages = ceil($total / $n);
 
       $posts = array_map(function($post) {
@@ -48,7 +61,7 @@ function ajax_news_request() {
           'caption' => $promo_image_caption,
           'link' => $link
         ];
-      }, $posts_slice);
+      }, $query->posts);
     
       $response = [ 
           'success' => true, 

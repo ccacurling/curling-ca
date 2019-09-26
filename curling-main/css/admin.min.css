@@ -6228,4 +6228,76 @@
   transform: translate(-50%, -15.4%);
 }
 
+.edit-post-layout__content .championship-archive-top-container {
+  margin-bottom: 40px;
+  max-width: 770px;
+}
+
+.edit-post-layout__content .championship-archive-title {
+  margin-bottom: 40px;
+}
+
+.edit-post-layout__content .championship-name {
+  margin-bottom: 40px;
+}
+
+.edit-post-layout__content .championship-event-container {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.edit-post-layout__content .championship-event-container:last-child {
+  border-bottom: none;
+}
+
+.edit-post-layout__content .championship-event-wrapper {
+  border: 1px solid #d8d8d8;
+}
+
+.edit-post-layout__content .championship-event-title-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+  padding-right: 22px;
+  cursor: pointer;
+}
+
+.edit-post-layout__content .championship-event-container.active .championship-event-title-container {
+  background-color: #f2f2f2;
+  border-bottom: none;
+}
+
+.edit-post-layout__content .championship-event-container.active .championship-event-name {
+  color: #000000;
+}
+
+.edit-post-layout__content .championship-event-container.active .championship-events-container {
+  display: flex;
+}
+
+.edit-post-layout__content .championship-events-list-container {
+  background-color: #f2f2f2;
+}
+
+.edit-post-layout__content .championship-events-container {
+  display: none;
+  justify-content: space-between;
+  margin-left: 22px;
+  margin-right: 22px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 28px;
+  padding-right: 0;
+  border-top: 1px solid #d8d8d8;
+}
+
+.edit-post-layout__content .championship-match-links-container {
+  display: flex;
+}
+
+.edit-post-layout__content .championship-match-link {
+  color: #4c4c4e;
+}
+
 /*# sourceMappingURL=admin.min.css.map */
