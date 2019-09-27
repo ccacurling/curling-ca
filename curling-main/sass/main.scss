@@ -19,6 +19,8 @@
  */
 @import "layout/content";
 @import "layout/blocks";
+@import "layout/sidebar";
+@import "layout/post";
 @import "layout/header";
 @import "layout/footer";
 
@@ -55,6 +57,7 @@
 @import "modules/blocks/block-draw-schedule";
 @import "modules/blocks/block-draw-schedule-links";
 @import "modules/blocks/block-page-intro";
+@import "modules/blocks/block-related-posts";
 @import "modules/blocks/block-activity-schedule";
 @import "modules/blocks/block-team-small";
 @import "modules/blocks/block-featured-event";

@@ -1,43 +1,51 @@
 .content {
-  max-width: 1440px;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-padding {
+  padding-left: $fixed-padding-left-lg;
+  padding-right: $fixed-padding-right-lg;
 }
 
 .content-fixed {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $full-width-max;
+  max-width: $full-width-max;
+}
+
+.content-full-wrapper {
+  max-width: $full-width-wrapper;
 }
 
 .content-container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1200px;
+  max-width: $fixed-width-xlg;
 }
 
 .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-left: 135px;
-    padding-right: 135px;
-    padding-top: 120px;
-    padding-bottom: 120px;
-    background-color: $white;
-    color: $black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.content-sidebar-container {
+  padding-right: 15px;
+  min-width: 285px;
+}
+
+.content-main-container {
+  padding-left: 15px;
+  width: 100%;
 }
 
 .content-fixed-padding {
-    padding-left: 116px;
-    padding-right: 116px;
+  padding-left: 116px;
+  padding-right: 116px;
 }
 
 .xdebug-error {
-    font-size: 24px;
-    line-height: normal;
-    color: $black;
-    th {
-        background-color: $gray!important;
-    }
+  font-size: 24px;
+  line-height: normal;
+  color: $black;
+  th {
+    background-color: $gray !important;
+  }
 }

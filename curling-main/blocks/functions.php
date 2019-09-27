@@ -356,6 +356,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'championship', 'archive' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'related-posts',
+      'title'						=> __('Related Posts'),
+      'description'			=> __('A block to render related posts'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'related', 'posts' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

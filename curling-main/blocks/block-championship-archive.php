@@ -7,18 +7,10 @@
 ?>
 
 <?php
-  $championship_archive_headline = get_field( 'championship_archive_headline' );
-  $championship_archive_body = get_field( 'championship_archive_body' );
-
   $championship_archives = get_field( 'championship_events', 'Options');
 ?>
 
-<section class="block-championship-archive">
-  <div class="championship-archive-top-container">
-    <h3 class="championship-archive-title"><?php echo $championship_archive_headline; ?></h3>
-    <p class="championship-archive-body"><?php echo $championship_archive_body; ?></p>
-  </div>
-  
+<section class="block-championship-archive"> 
   <?php
     if ($championship_archives) {
       foreach ($championship_archives as $key => $championship_archive) {

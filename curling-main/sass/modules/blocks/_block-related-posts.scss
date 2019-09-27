@@ -1,0 +1,31 @@
+.block-related-posts {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.block-related-callout {
+  flex-basis: 50%;
+  max-width: none;
+
+  &:first-child {
+    padding-right: 15px;
+  }
+
+  &:last-child {
+    padding-left: 15px;
+  }
+
+  .callout-wrapper {
+    height: auto;
+    min-height: none;
+  }
+
+  .callout-thumbnail-container {
+    background-color: $light-gray;
+  }
+
+  .callout-info {
+    min-height: 218px;
+    background-color: $cool-light-gray;
+  }
+}

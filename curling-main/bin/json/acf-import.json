@@ -411,6 +411,28 @@
         "description": ""
     },
     {
+        "key": "group_5d8d293f63d95",
+        "title": "Championship Archive",
+        "fields": [],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/championship-archive"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_5d7fee29366d1",
         "title": "Draw Schedule Links",
         "fields": [
@@ -1581,7 +1603,7 @@
                 "name": "news_feed_category",
                 "type": "taxonomy",
                 "instructions": "",
-                "required": 0,
+                "required": 1,
                 "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
@@ -2791,6 +2813,149 @@
         "description": ""
     },
     {
+        "key": "group_5d8e7428405cb",
+        "title": "Related Posts",
+        "fields": [
+            {
+                "key": "field_5d8e7434546f3",
+                "label": "Show Posts Automatically",
+                "name": "related_posts_is_automatic",
+                "type": "true_false",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 1,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5d8e746b546f4",
+                "label": "Post Categories",
+                "name": "related_posts_categories",
+                "type": "taxonomy",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d8e7434546f3",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "taxonomy": "category",
+                "field_type": "checkbox",
+                "add_term": 0,
+                "save_terms": 0,
+                "load_terms": 0,
+                "return_format": "object",
+                "multiple": 0,
+                "allow_null": 0
+            },
+            {
+                "key": "field_5d8e7597554bf",
+                "label": "Posts",
+                "name": "related_posts_posts",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d8e7434546f3",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 2,
+                "max": 2,
+                "layout": "block",
+                "button_label": "Add Post",
+                "sub_fields": [
+                    {
+                        "key": "field_5d8e7621f75c6",
+                        "label": "Post",
+                        "name": "related_posts_post",
+                        "type": "post_object",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [
+                            "page",
+                            "post"
+                        ],
+                        "taxonomy": "",
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "return_format": "object",
+                        "ui": 1
+                    },
+                    {
+                        "key": "field_5d8e8fb46cb07",
+                        "label": "CTA Label",
+                        "name": "related_posts_cta_label",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "block",
+                    "operator": "==",
+                    "value": "acf\/related-posts"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": ""
+    },
+    {
         "key": "group_5d76d79563a90",
         "title": "Single Callout",
         "fields": [
@@ -3351,6 +3516,202 @@
                                 "multiple": 0,
                                 "return_format": "object",
                                 "ui": 1
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "key": "field_5d8d1f15927b5",
+                "label": "Championship Archive",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5d8d1fb5927b8",
+                "label": "Championship Events",
+                "name": "championship_events",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d71507b94d5f",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "field_5d8d1fcc927b9",
+                "min": 0,
+                "max": 0,
+                "layout": "row",
+                "button_label": "Add Championship",
+                "sub_fields": [
+                    {
+                        "key": "field_5d8d1fcc927b9",
+                        "label": "Championship Name",
+                        "name": "championship_name",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": [
+                            [
+                                {
+                                    "field": "field_5d71507b94d5f",
+                                    "operator": "!=",
+                                    "value": "1"
+                                }
+                            ]
+                        ],
+                        "wrapper": {
+                            "width": "10",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_5d8d25ceecebf",
+                        "label": "Championship Events",
+                        "name": "championship_events",
+                        "type": "repeater",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "collapsed": "field_5d8d25faecec0",
+                        "min": 0,
+                        "max": 0,
+                        "layout": "row",
+                        "button_label": "Add Event",
+                        "sub_fields": [
+                            {
+                                "key": "field_5d8d25faecec0",
+                                "label": "Event Name",
+                                "name": "championship_event_name",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "10",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5d8d260cecec1",
+                                "label": "Events",
+                                "name": "championship_events",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "collapsed": "field_5d8d261becec2",
+                                "min": 0,
+                                "max": 0,
+                                "layout": "row",
+                                "button_label": "Add Match",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5d8d261becec2",
+                                        "label": "Match Name",
+                                        "name": "match_name",
+                                        "type": "text",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "10",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "placeholder": "",
+                                        "prepend": "",
+                                        "append": "",
+                                        "maxlength": ""
+                                    },
+                                    {
+                                        "key": "field_5d8d262fecec3",
+                                        "label": "Match Links",
+                                        "name": "match_links",
+                                        "type": "repeater",
+                                        "instructions": "",
+                                        "required": 0,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "collapsed": "",
+                                        "min": 0,
+                                        "max": 0,
+                                        "layout": "table",
+                                        "button_label": "Add Link",
+                                        "sub_fields": [
+                                            {
+                                                "key": "field_5d8d263decec4",
+                                                "label": "Match Link",
+                                                "name": "match_link",
+                                                "type": "link",
+                                                "instructions": "",
+                                                "required": 0,
+                                                "conditional_logic": 0,
+                                                "wrapper": {
+                                                    "width": "",
+                                                    "class": "",
+                                                    "id": ""
+                                                },
+                                                "return_format": "array"
+                                            }
+                                        ]
+                                    }
+                                ]
                             }
                         ]
                     }
