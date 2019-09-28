@@ -74,18 +74,18 @@ function block_2_column_init() {
       'editor_script' => 'cossette-block-column-2',
       'render_callback' => function( $attributes, $content = '' ) {
           return '<div class="block-column '.
-            ($attributes['type'] === '50_50' ? 'column-50-50' : ($attributes['type'] === '84_16' ? 'column-84-16' : ($attributes['type'] === '33_66' ? 'column-33-66' : 'column-66-33'))).' '.
+            'column-'.$attributes['type'].' '.
             ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
             ($attributes['left_column_is_sidebar'] ? ' '.'column-sidebar' : '' ).
             '">'.$content.'</div>';
       },
       'attributes' => [
         'type' => [
-          'default' => '50_50',
+          'default' => '25_75',
           'type' => 'string'
         ],
         'is_fullwidth' => [
-          'default' => true,
+          'default' => false,
           'type' => 'boolean'
         ],
         'left_column_is_sidebar' => [

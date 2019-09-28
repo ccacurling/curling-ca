@@ -366,6 +366,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'related', 'posts' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'sidebar-nav',
+      'title'						=> __('Sidebar Navigation'),
+      'description'			=> __('A block to render a sidebar with navigation'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'navigation', 'sidebar' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

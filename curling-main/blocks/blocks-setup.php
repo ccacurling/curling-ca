@@ -4849,4 +4849,100 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+acf_add_local_field_group(array(
+	'key' => 'group_5d8faaa0df613',
+	'title' => 'Sidebar',
+	'fields' => array(
+		array(
+			'key' => 'field_5d8faaac968e8',
+			'label' => 'Links',
+			'name' => 'sidebar_links',
+			'type' => 'repeater',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'collapsed' => '',
+			'min' => 0,
+			'max' => 0,
+			'layout' => 'block',
+			'button_label' => 'Add Link',
+			'sub_fields' => array(
+				array(
+					'key' => 'field_5d8faaf3968ea',
+					'label' => 'Sidebar Link',
+					'name' => 'sidebar_link',
+					'type' => 'link',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+				),
+				array(
+					'key' => 'field_5d8faad1968e9',
+					'label' => 'Sublinks',
+					'name' => 'sidebar_sublinks',
+					'type' => 'repeater',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'collapsed' => '',
+					'min' => 0,
+					'max' => 0,
+					'layout' => 'block',
+					'button_label' => 'Add Sublink',
+					'sub_fields' => array(
+						array(
+							'key' => 'field_5d8fab13968eb',
+							'label' => 'Sidebar Sublink',
+							'name' => 'sidebar_sublink',
+							'type' => 'link',
+							'instructions' => '',
+							'required' => 0,
+							'conditional_logic' => 0,
+							'wrapper' => array(
+								'width' => '',
+								'class' => '',
+								'id' => '',
+							),
+							'return_format' => 'array',
+						),
+					),
+				),
+			),
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/sidebar-nav',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 endif;

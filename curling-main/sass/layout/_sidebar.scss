@@ -1,5 +1,10 @@
 .curling-sidebar {
+  display: none;
   position: relative;
+  
+  @include responsive-min($responsive-laptop) {
+    display: block;
+  }
 }
 
 .sidebar-container {
@@ -34,6 +39,16 @@
   letter-spacing: 0;
   line-height: 15px;
   color: gray;
+
+  &.sidebar-item-current {
+    color: $red;
+    text-decoration: underline;
+    cursor: default;
+
+    &:before {
+      background-color: $red;
+    }
+  }
 
   &:hover {
     color: $red;
@@ -79,6 +94,13 @@
   &:hover {
     background-color: $red;
     color: $white;
+  }
+
+  &.disabled {
+    &:hover {
+      background-color: $cool-light-gray;
+      color: $gray;
+    }
   }
 }
 
