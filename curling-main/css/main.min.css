@@ -5340,4 +5340,95 @@ h1.page-intro-main-headline {
   background-color: #000000;
 }
 
+/**
+* Misc
+*/
+/** Club Locator - search fields **/
+.wpgmza-store-locator {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: left;
+  /*
+    .wpgmza_sl_radius_div {
+        visibility: hidden;
+    }
+    */
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div {
+  display: flex;
+  flex-direction: column;
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div .wpgmza-form-field__input.addressInput {
+  max-width: 400px;
+  height: 42px;
+}
+
+.wpgmza-store-locator .wpgmza_sl_search_button_div {
+  display: none;
+}
+
+.wpgmza-store-locator .wpgmza_sl_reset_button_div {
+  display: none;
+}
+
+/** Club Locator - Map **/
+.wpgmza_map {
+  display: none !important;
+}
+
+.wpgmza_map.map-reveal {
+  display: block !important;
+}
+
+/** Club Locator - Table **/
+.wpgmza_marker_holder {
+  color: #000;
+}
+
+.wpgmza_marker_holder.list-hide {
+  display: none;
+}
+
+.wpgmza_marker_holder .dataTables_length {
+  display: none;
+}
+
+.wpgmza_marker_holder .dataTables_filter {
+  display: none;
+}
+
+.wpgmza_marker_holder .wpgmza_table_marker {
+  display: none;
+}
+
+.wpgmza_marker_holder .wpgmza_table_category {
+  display: none;
+}
+
+.wpgmza_marker_holder .wpgmza_table_description {
+  display: none;
+}
+
+.wpgmza_marker_holder .wpgmza_table_link a {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url("../images/globe.svg");
+  background-size: 32px 32px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.wpgmza_marker_holder .dataTables_info {
+  display: none;
+}
+
+.wpgmza_marker_holder .dataTables_wrapper .dataTables_paginate {
+  float: left;
+}
+
 /*# sourceMappingURL=main.min.css.map */
