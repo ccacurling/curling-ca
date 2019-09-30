@@ -3,46 +3,65 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_5d76cb304c380',
-	'title' => 'Featured Image Caption',
-	'fields' => array(
-		array(
-			'key' => 'field_5d76cb3ef2094',
-			'label' => 'Caption',
-			'name' => 'featured_image_caption',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-	),
-	'location' => array(
-		array(
-			array(
-				'param' => 'post_type',
-				'operator' => '==',
-				'value' => 'post',
-			),
-		),
-	),
-	'menu_order' => -100,
-	'position' => 'side',
-	'style' => 'default',
-	'label_placement' => 'top',
-	'instruction_placement' => 'label',
-	'hide_on_screen' => '',
-	'active' => true,
-	'description' => '',
+  'key' => 'group_5d76cb304c380',
+  'title' => 'Settings',
+  'fields' => array(
+    array(
+      'key' => 'field_5d76cb3ef2094',
+      'label' => 'Image Caption',
+      'name' => 'featured_image_caption',
+      'type' => 'text',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'default_value' => '',
+      'placeholder' => '',
+      'prepend' => '',
+      'append' => '',
+      'maxlength' => '',
+    ),
+    array(
+      'key' => 'field_5d922eb435265',
+      'label' => 'Show Social Share Buttons',
+      'name' => 'show_social_share_buttons',
+      'type' => 'true_false',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array(
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'message' => '',
+      'default_value' => 1,
+      'ui' => 0,
+      'ui_on_text' => '',
+      'ui_off_text' => '',
+    ),
+  ),
+  'location' => array(
+    array(
+      array(
+        'param' => 'post_type',
+        'operator' => '==',
+        'value' => 'post',
+      ),
+    ),
+  ),
+  'menu_order' => -100,
+  'position' => 'side',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => true,
+  'description' => '',
 ));
 
 acf_add_local_field_group(array(

@@ -5,10 +5,18 @@
 
     $event_logo = get_field('event_logo', 'Options');
 
+    $category = null;
+    $category_slug = '';
+    $is_category = is_category();
+
+    if ($is_category) {
+      $category = get_queried_object();
+      $category_slug = $category->slug;
+    }
+
     $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Top Left' ) ? wp_get_nav_menu_items( 'Menu - Top Left' ) : [];
     $top_right_menu_items = wp_get_nav_menu_items( 'Menu - Top Right' ) ? wp_get_nav_menu_items( 'Menu - Top Right' ) : [];
     $primary_menu_items = wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) ? wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) : [];
-
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
@@ -20,7 +28,7 @@
       }
     }
 
-    $url = get_permalink();
+    $url = $is_category && $category ? get_category_link($category) : get_permalink();
     
     $menu_item_tree = $primary_menu_items ? buildTree($primary_menu_items, 0, $url === get_home_url() ? '' : $url) : [];
 
@@ -89,9 +97,15 @@
       <div class="nav-menu-top">
           <div class="nav-menu-top-wrapper content content-container">
               <div class="nav-menu-top-left-wrapper">
-                  <a href="<?php echo get_home_url(); ?>">
-                      <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
-                  </a>
+                  <?php
+                    if ($is_event) {
+                  ?>
+                    <a href="<?php echo get_home_url(); ?>">
+                        <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
+                    </a>
+                  <?php
+                    }
+                  ?>
                   <ul class="menu-top-nav menu-nav">
                       <?php
                           foreach( $top_left_menu_items as $menu_item ) {

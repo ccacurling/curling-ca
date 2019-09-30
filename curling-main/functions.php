@@ -20,20 +20,6 @@ add_action('init', 'block_3_column_init');
 remove_action( 'init', 'themeum_eventum_post_type_speaker');
 add_action('init','my_themeum_eventum_post_type_speaker');
 
-add_action( 'widgets_init', 'curling_register_sidebars' );
-
-function curling_register_sidebars() {
-  register_sidebar([
-    'id'            => 'posts',
-    'name'          => __( 'Posts Sidebar' ),
-    'description'   => __( 'Main navigation sidebar for post pages' ),
-    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-    'after_widget'  => '</div>',
-    'before_title'  => '<h3 class="widget-title">',
-    'after_title'   => '</h3>',
-  ]);
-}
-
 function block_container_init() {
     $file = get_stylesheet_directory_uri().'/js/dist/block-container.min.js';
     $filem = get_stylesheet_directory().'/js/dist/block-container.min.js';

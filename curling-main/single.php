@@ -13,33 +13,44 @@
 ?>
 
 <?php
-  $post = get_post();
-  $post_thumbnail = get_the_post_thumbnail_url( $post );
-  $post_title = $post->post_title;
-  $post_content = $post->post_content;
+  $show_social_share_buttons = get_field('show_social_share_buttons');
 ?>
 
 <?php
   get_header();
 ?>
-<div class="content content-full-wrapper">
-  <div class="curling-post content-wrapper content-padding">
-    <div class="curling-sidebar content-sidebar-container">
-      <?php get_sidebar( 'posts' ); ?>
-    </div>
-    <div class="curling-content content-main-container">
-      <?php 
-        if (have_posts()) : 
-          while (have_posts()) : 
-            the_post();
-      ?>
-        <h2 class="curling-post-title"><?php the_title(); ?></h2>
-      <?php
-            the_content();
-          endwhile;
-        endif; 
-      ?>
-    </div>
+<div class="content-post content content-full-wrapper content-anchor">
+  <div class="content content-small-wrapper content-padding">
+    <?php
+      if ($show_social_share_buttons) {
+    ?>
+      <div class="content-social-share">
+        <h4 class="social-share-heading gray">Share</h4>
+        <div class="social-share-container">
+          <a href="" target="">
+            <img class="social-share social-share-facebook" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook-gray.svg"; ?>" alt="Facebook" />
+        </a>
+        </div>
+        <div class="social-share-container">
+          <a href="" target="">
+            <img class="social-share social-share-twitter" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter-gray.svg"; ?>" alt="Twitter" />
+          </a>
+        </div>
+      </div>
+    <?php
+      }
+    ?>
+    <?php 
+      if (have_posts()) : 
+        while (have_posts()) : 
+          the_post();
+    ?>
+      <h1 class="curling-post-title"><?php the_title(); ?></h1>
+    <?php
+          the_content();
+        endwhile;
+      endif; 
+    ?>
   </div>
 </div>
 <?php

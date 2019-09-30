@@ -557,6 +557,10 @@ li {
   max-width: 1170px;
 }
 
+.content-small-wrapper {
+  max-width: 840px;
+}
+
 .content-container {
   max-width: 1200px;
 }
@@ -565,6 +569,28 @@ li {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+
+.content-anchor {
+  position: relative;
+}
+
+.content-post {
+  margin-top: 80px;
+}
+
+.content-social-share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+}
+
+.content-social-share {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .content-sidebar-container {
@@ -897,6 +923,30 @@ li {
 .sidebar-controls.btn.disabled:hover, .sidebar-controls.disabled.newsletter-signup-submit:hover, .footer-content-right-wrapper .sidebar-controls.disabled.wpcf7-submit:hover {
   background-color: #f2f2f2;
   color: #4c4c4e;
+}
+
+.social-share-heading {
+  margin-bottom: 5px;
+}
+
+.social-share-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 100%;
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.social-share-container:last-child {
+  border-bottom: none;
+}
+
+.social-share {
+  padding-top: 15px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .curling-post {
@@ -1693,6 +1743,7 @@ li {
 @media only screen and (min-width: 999px) {
   .header-desktop {
     display: block;
+    position: relative;
   }
 }
 
@@ -1815,12 +1866,22 @@ li {
   overflow: hidden;
   transition: max-height 0.5s ease-out;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
-  z-index: 1;
+  z-index: 2;
 }
 
-.nav-menu-popup.active, .nav-menu-popup.nav-menu-popup-active {
+.nav-menu-popup:not(.nav-menu-popup-active) {
+  top: 165px;
+}
+
+.nav-menu-popup.active {
   max-height: 100%;
   z-index: 2;
+}
+
+.nav-menu-popup.nav-menu-popup-active {
+  position: relative;
+  max-height: 100%;
+  z-index: 1;
 }
 
 .nav-menu-popup-list {
@@ -2281,6 +2342,10 @@ li {
     height: 100%;
     min-height: auto;
   }
+}
+
+.block-hero-main {
+  background-color: #f2f2f2;
 }
 
 .block-hero-main .block-hero-inner {
