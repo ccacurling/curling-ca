@@ -1,14 +1,10 @@
 
-.block-news-feed {
+.block-events-feed {
   padding-top: 60px;
   padding-bottom: 60px;
-  @include responsive-max($responsive-tablet) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 }
 
-.news-feed-item {
+.events-feed-item {
   margin-left: auto;
   margin-right: auto;
   padding-top: 20px;
@@ -16,37 +12,37 @@
   max-width: $full-width-wrapper;
 }
 
-.news-feed-title-container {
+.events-feed-title-container {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 20px;
   max-width: $full-width-wrapper;
 }
 
-.news-feed-reversed-container {
+.events-feed-reversed-container {
   @include responsive-min($responsive-laptop) {
     flex-direction: row-reverse;
   }
 }
 
-.news-feed-container {
+.events-feed-container {
   min-height: 400px;
 }
 
-.news-feed-thumbnail-container {
+.events-feed-thumbnail-container {
   flex-basis: 52%;
   max-height: 400px;
   background-color: $cool-light-gray;
 }
 
-.news-feed-thumbnail {
+.events-feed-thumbnail {
   width: 100%;
   height: 100%;
   object-fit: contain;
   background-color: $black;
 }
 
-.news-feed-info {
+.events-feed-info {
   flex-basis: 48%;
   padding-top: 41px;
   padding-bottom: 63px;
@@ -57,31 +53,31 @@
   }
 }
 
-.news-feed-excerpt {
+.events-feed-excerpt {
   padding-bottom: 27px;
 }
 
-.news-feed-link {
+.events-feed-link {
   margin-top: 33px;
 }
 
-.news-feed-caption-container {
+.events-feed-caption-container {
   bottom: 7px;
 }
 
-.news-feed-caption-wrapper {
+.events-feed-caption-wrapper {
   margin-left: 21px;
   margin-right: 21px;
 }
 
-.news-feed-pagination {
+.events-feed-pagination {
   display: flex;
   margin-left: auto;
   margin-right: auto;
   max-width: $full-width-wrapper;
 }
 
-.news-feed-pagination-block {
+.events-feed-pagination-block {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,19 +87,46 @@
   cursor: pointer;
 }
 
-.news-feed-pagination-block-selected {
+.events-feed-pagination-block-selected {
   background-color: $red;
   border: 1px solid $red;
-  .news-feed-pagination-text {
+  .events-feed-pagination-text {
     color: $white;
   }
 }
 
-.news-feed-pagination-block-large {
+.events-feed-pagination-block-large {
   width: 55px;
 }
 
-.news-feed-pagination-text {
+.events-feed-pagination-text {
   color: $black;
   font-size: 20px;
+}
+
+.events-feed-items {
+  .block-event-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    // max-width: 1200px;
+  }
+
+  .block-event-feed-item-wrapper {
+    flex-basis: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include responsive-min($responsive-laptop) {
+      flex-basis: 50%;
+    }
+  }
+
+  .events-feed-pagination {
+    margin-top: 18px;
+    max-width: 1030px;
+  }
 }

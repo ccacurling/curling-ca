@@ -41,7 +41,7 @@ registerBlockType("cossette/block-column-2", {
       type: "string"
     },
     is_fullwidth: {
-      default: true,
+      default: false,
       type: "boolean"
     },
     left_column_is_sidebar : {
@@ -71,7 +71,7 @@ registerBlockType("cossette/block-column-2", {
             />
             <CheckboxControl
               value={attributes.left_column_is_sidebar}
-              label={__('Left Column is Sidebar')}
+              label={__('Right Column is Sidebar')}
               checked={attributes.left_column_is_sidebar}
               onChange={(left_column_is_sidebar) => {
                 setAttributes({
@@ -83,10 +83,11 @@ registerBlockType("cossette/block-column-2", {
             <SelectControl 
               value={attributes.type} 
               options={[
-                { label: '33/66', value: '33_66' },
-                { label: '50/50', value: '50_50' },
-                { label: '66/33', value: '66_33' },
-                { label: '84/16', value: '84_16' }
+                { label: '25/75', value: '25-75' },
+                { label: '33/66', value: '33-66' },
+                { label: '50/50', value: '50-50' },
+                { label: '66/33', value: '66-33' },
+                { label: '84/16', value: '84-16' }
               ]}
               onChange={(type) => {
                 setAttributes({type});
@@ -102,7 +103,6 @@ registerBlockType("cossette/block-column-2", {
   // ),
 
   save: ({attributes}) => {
-    console.log('test');
     return (
       <div>
         { attributes.content }

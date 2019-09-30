@@ -22,22 +22,25 @@
 <?php
   get_header();
 ?>
-<section class="block-hero block-hero-large js-hero-container">
-  <div class="hero-media-container">
-    <img class="hero-background-image" src="<?php echo $post_thumbnail; ?>" alt="Background">
+<div class="content content-full-wrapper">
+  <div class="curling-post content-wrapper content-padding">
+    <div class="curling-sidebar content-sidebar-container">
+      <?php get_sidebar( 'posts' ); ?>
+    </div>
+    <div class="curling-content content-main-container">
+      <?php 
+        if (have_posts()) : 
+          while (have_posts()) : 
+            the_post();
+      ?>
+        <h2 class="curling-post-title"><?php the_title(); ?></h2>
+      <?php
+            the_content();
+          endwhile;
+        endif; 
+      ?>
+    </div>
   </div>
-      <div class="block-hero-inner left js-hero-content">
-            <div class="hero-title-container hero-no-post-type">
-                  <h2 class="hero-title"><?php echo $post_title; ?></h2>
-              </div>
-            <div class="hero-body-container">
-        <p class="hero-body"></p>
-      </div>
-          </div>
-    </section>
-
-<div class="content content-fixed">
-  <?php echo $post_content; ?>
 </div>
 <?php
   get_footer();

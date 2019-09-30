@@ -1,0 +1,73 @@
+.championship-archive-top-container {
+  margin-bottom: 40px;
+  max-width: 770px;
+}
+
+.championship-archive-title {
+  margin-bottom: 40px;
+}
+
+.championship-name {
+  margin-bottom: 40px;
+}
+
+.championship-event-container {
+  border-bottom: 1px solid $light-gray;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.championship-event-wrapper {
+  border: 1px solid $light-gray;
+}
+
+.championship-event-title-container {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  padding-left: 22px;
+  padding-right: 22px;
+  cursor: pointer;
+}
+
+.championship-event-container.active {
+  .championship-event-title-container {
+    background-color: $cool-light-gray;
+    border-bottom: none;
+  }
+
+  .championship-event-name {
+    color: $black;
+  }
+
+  .championship-events-container {
+    display: flex;
+  }
+}
+
+.championship-events-list-container {
+  background-color: $cool-light-gray;
+}
+
+.championship-events-container {
+  display: none;
+  justify-content: space-between;
+  margin-left: 22px;
+  margin-right: 22px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 28px;
+  padding-right: 0;
+  border-top: 1px solid $light-gray;
+}
+
+.championship-match-links-container {
+  display: flex;
+}
+
+.championship-match-link {
+  color: $gray;
+}

@@ -7,7 +7,7 @@ html,
 body {
     max-width: 100%;
     overflow-x: hidden;
-    color: $white;
+    color: $black;
     font-family: $knockout;
 }
 
@@ -159,6 +159,16 @@ p {
     }
 }
 
+.subdomain {
+  font-family: $knockout;
+  font-size: 18px;
+  color: $black;
+  letter-spacing: 0.3px;
+  font-weight: 300;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+
 li {
     font-family: $meta-serif-pro;
     font-size: 20px;
@@ -169,6 +179,10 @@ li {
 
 .inverted {
     color: $white;
+}
+
+.cool-gray {
+  color: $cool-light-gray;
 }
 
 .gray {

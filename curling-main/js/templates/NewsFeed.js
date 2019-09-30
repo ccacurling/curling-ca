@@ -33,7 +33,7 @@ jQuery(document).ready(function($) {
           type: 'POST',
           url: curling_ajax.ajax_url,
           data: {
-            'action': 'ajax_request',
+            'action': 'ajax_news_request',
             'page': page,
             'n': n,
             'category': category

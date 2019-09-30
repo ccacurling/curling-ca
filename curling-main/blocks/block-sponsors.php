@@ -54,7 +54,7 @@
 ?>
 
 <section id="<?php echo $id ?>" class="block-sponsors <?php echo $block_background_class; ?> <?php echo $block_template_class; ?>">
-  <div class="content">
+  <div class="content content-fixed">
     <?php
       if ($sponsor_columns == 1) {
     ?>

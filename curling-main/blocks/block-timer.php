@@ -4,7 +4,6 @@
  * Block Name: Hero
  *
  * This is the template that displays the hero block.
- * TODO: Need to edit date selection to account for timezones
  */
 
 $start_date_value = get_field( 'event_date_start', 'Options' );

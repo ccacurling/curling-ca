@@ -20,6 +20,20 @@ add_action('init', 'block_3_column_init');
 remove_action( 'init', 'themeum_eventum_post_type_speaker');
 add_action('init','my_themeum_eventum_post_type_speaker');
 
+add_action( 'widgets_init', 'curling_register_sidebars' );
+
+function curling_register_sidebars() {
+  register_sidebar([
+    'id'            => 'posts',
+    'name'          => __( 'Posts Sidebar' ),
+    'description'   => __( 'Main navigation sidebar for post pages' ),
+    'before_widget' => '<div id="%1$s" class="widget %2$s">',
+    'after_widget'  => '</div>',
+    'before_title'  => '<h3 class="widget-title">',
+    'after_title'   => '</h3>',
+  ]);
+}
+
 function block_container_init() {
     $file = get_stylesheet_directory_uri().'/js/dist/block-container.min.js';
     $filem = get_stylesheet_directory().'/js/dist/block-container.min.js';
@@ -60,18 +74,18 @@ function block_2_column_init() {
       'editor_script' => 'cossette-block-column-2',
       'render_callback' => function( $attributes, $content = '' ) {
           return '<div class="block-column '.
-            ($attributes['type'] === '50_50' ? 'column-50-50' : ($attributes['type'] === '84_16' ? 'column-84-16' : ($attributes['type'] === '33_66' ? 'column-33-66' : 'column-66-33'))).' '.
+            'column-'.$attributes['type'].' '.
             ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
             ($attributes['left_column_is_sidebar'] ? ' '.'column-sidebar' : '' ).
             '">'.$content.'</div>';
       },
       'attributes' => [
         'type' => [
-          'default' => '50_50',
+          'default' => '25_75',
           'type' => 'string'
         ],
         'is_fullwidth' => [
-          'default' => true,
+          'default' => false,
           'type' => 'boolean'
         ],
         'left_column_is_sidebar' => [

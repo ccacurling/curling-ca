@@ -87,7 +87,7 @@
 <div class="header header-desktop <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav">
     <div class="nav-menu-top-container">
       <div class="nav-menu-top">
-          <div class="nav-menu-top-wrapper content-container">
+          <div class="nav-menu-top-wrapper content content-container">
               <div class="nav-menu-top-left-wrapper">
                   <a href="<?php echo get_home_url(); ?>">
                       <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
@@ -177,7 +177,7 @@
           </div>
         </div>
         <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
-        <div class="nav-menu-primary-wrapper content-container">
+        <div class="nav-menu-primary-wrapper content content-container">
               <a href="<?php echo get_home_url(); ?>">
                   <img class="menu-logo" src="<?php echo ($is_event && $event_logo) ? $event_logo['url'] : get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
               </a>
@@ -218,7 +218,7 @@
     <?php
         foreach( $menu_items as $id => $menu_item ) {
             if ($menu_item->children) {
-              if ($is_event || $is_submenu) {
+              if ($is_event || $is_submenu || !is_home()) {
                 create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
               } else {
                 create_menu_bar_item($menu_item->ID, $menu_item->children);

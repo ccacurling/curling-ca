@@ -7,6 +7,9 @@ include 'blocks-setup.php';
 
 add_action('acf/init', 'acf_blocks_init');
 
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
+
 // ------
 // Uncomment to export acf-import.json file
 // export_acf_json();
@@ -291,6 +294,86 @@ function acf_blocks_init() {
       'category'				=> 'common',
       'icon'						=> 'admin-comments',
       'keywords'				=> [ 'banner', 'ad' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'timer',
+      'title'						=> __('Countdown Timer'),
+      'description'			=> __('A block to render a countdown timer'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'countdown', 'timer' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'featured-event-info',
+      'title'						=> __('Featured Event Info'),
+      'description'			=> __('A block to render featured event info'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'featured', 'event', 'info' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'event-info',
+      'title'						=> __('Event Info'),
+      'description'			=> __('A block to render event info'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'event', 'info' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'slash-graphic',
+      'title'						=> __('Slash Graphic'),
+      'description'			=> __('A block to render a slash graphic'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'slash', 'graphic' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'events-feed',
+      'title'						=> __('Events Feed'),
+      'description'			=> __('A block to render an events feed'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'events', 'feed' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'championship-archive',
+      'title'						=> __('Championship Archive'),
+      'description'			=> __('A block to render a Championship Archive table'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'championship', 'archive' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'related-posts',
+      'title'						=> __('Related Posts'),
+      'description'			=> __('A block to render related posts'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'related', 'posts' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'sidebar-nav',
+      'title'						=> __('Sidebar Navigation'),
+      'description'			=> __('A block to render a sidebar with navigation'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'navigation', 'sidebar' ]
     ]);
 
     acf_add_options_page('Options');

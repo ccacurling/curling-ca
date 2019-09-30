@@ -12,7 +12,7 @@
 ?>
 
 <section class="activity-schedule-block">
-  <div class="content-container">
+  <div class="content content-container">
     <h3><?php echo $activity_title; ?></h3>
     <p class="activity-description"><?php echo $activity_description; ?></p>
     <div class="schedule-table desktop-table">

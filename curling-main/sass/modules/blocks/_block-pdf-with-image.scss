@@ -1,5 +1,5 @@
 .pdf-with-image-block-container {
-  max-width: 1170px;
+  max-width: $full-width-wrapper;
   margin: auto;
 
   .pdf-section {
@@ -20,7 +20,7 @@
       height: 550px;
       max-width: 370px;
       text-align: center;
-      flex: 1 1 calc(1170px / 3);
+      flex: 1 1 calc($full-width-wrapper / 3);
       transition: transform 0.1s ease-in;
 
       &:hover {
