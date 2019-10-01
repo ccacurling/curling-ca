@@ -171,6 +171,17 @@
       left: 50%;
       transform: translate(-50%, -100%);  
     }
+
+    &.nav-menu-popup-active {
+      position: absolute;
+      transform: translate(0, 0%);
+      z-index: 2;
+
+      &.active {
+        transform: translate(0, 0%);
+        z-index: 3;
+      }
+    }
     
     &.active {
       transform: translate(-50%, 0%);

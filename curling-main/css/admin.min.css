@@ -1155,6 +1155,17 @@
   transform: translate(-50%, -100%);
 }
 
+.edit-post-layout__content .header-event .nav-menu-popup.nav-menu-popup-active {
+  position: absolute;
+  transform: translate(0, 0%);
+  z-index: 2;
+}
+
+.edit-post-layout__content .header-event .nav-menu-popup.nav-menu-popup-active.active {
+  transform: translate(0, 0%);
+  z-index: 3;
+}
+
 .edit-post-layout__content .header-event .nav-menu-popup.active {
   transform: translate(-50%, 0%);
   z-index: 3;
