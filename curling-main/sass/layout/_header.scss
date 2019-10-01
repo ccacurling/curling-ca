@@ -156,7 +156,7 @@
     left: 0;
     right: 0;
     background-color: $white;
-    z-index: 2;
+    z-index: 4;
   }
 
   .nav-menu-popup {
@@ -165,9 +165,15 @@
     margin-right: auto;
     max-width: $full-width-wrapper;
     background-color: $red;
+
+    &:not(.nav-menu-popup-active) {
+      top: 170px;
+      left: 50%;
+      transform: translate(-50%, -100%);  
+    }
     
     &.active {
-      max-height: 200px;
+      transform: translate(-50%, 0%);
       z-index: 3;
     }
 
