@@ -1039,6 +1039,24 @@ li {
   color: #4c4c4e;
 }
 
+.header-main .menu-item-selectable:hover .menu-item-underline,
+.header-main .menu-item-selectable.menu-item-selected .menu-item-underline {
+  display: block;
+}
+
+.header-main .menu-item-selectable:hover .menu-item-content,
+.header-main .menu-item-selectable.menu-item-selected .menu-item-content {
+  color: #000000;
+}
+
+.header-main .menu-item-selectable-text {
+  color: #4c4c4e;
+}
+
+.header-main .menu-item-underline {
+  background-color: #000000;
+}
+
 .header-event {
   position: relative;
   height: 90px;
@@ -2179,6 +2197,10 @@ li {
 
 .menu-item-selectable:hover {
   cursor: pointer;
+}
+
+.menu-item-selectable-text {
+  text-align: center;
 }
 
 .menu-item-subtitle,
