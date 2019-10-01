@@ -2245,6 +2245,55 @@ li {
   text-align: center;
 }
 
+.block-broadcast-callout .callout-wrapper {
+  position: relative;
+}
+
+.block-broadcast-callout .callout-label {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #000000;
+}
+
+.block-broadcast-callout .callout-thumbnail {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #ffffff;
+  object-fit: contain;
+}
+
+.block-broadcast-callout .callout-info {
+  background-color: #4c4c4e;
+}
+
+.block-broadcast-callout .broadcast-callout-btn {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.block-broadcast-callout .broadcast-callout-btn .broadcast-callout-btn-text {
+  color: #ffffff;
+}
+
+.block-broadcast-callout .broadcast-callout-btn .broadcast-callout-btn-text:hover {
+  color: #000000;
+}
+
+.block-broadcast-callout .callout-excerpt {
+  padding-bottom: 20px;
+}
+
+.broadcast-callout-link {
+  margin-top: 10px;
+}
+
 .block-hero {
   display: flex;
   flex-direction: column;

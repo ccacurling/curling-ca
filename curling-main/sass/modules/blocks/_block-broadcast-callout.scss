@@ -1,0 +1,49 @@
+.block-broadcast-callout {
+  .callout-wrapper {
+    position: relative;
+  }
+
+  .callout-label {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $black;
+  }
+
+  .callout-thumbnail {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: $white;
+    object-fit: contain;
+  }
+
+  .callout-info {
+    background-color: $gray;
+  }
+
+  .broadcast-callout-btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    .broadcast-callout-btn-text {
+      color: $white;
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  .callout-excerpt {
+    padding-bottom: 20px;
+  }
+}
+
+.broadcast-callout-link {
+  margin-top: 10px;
+}
