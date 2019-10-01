@@ -6533,6 +6533,7 @@ h1.page-intro-main-headline {
   flex-direction: column;
   justify-content: space-between;
   align-items: left;
+  padding-left: 20px;
   /*
     .wpgmza_sl_radius_div {
         visibility: hidden;
@@ -6548,6 +6549,7 @@ h1.page-intro-main-headline {
 .wpgmza-store-locator .wpgmza_sl_query_div .wpgmza-form-field__input.addressInput {
   max-width: 400px;
   height: 42px;
+  padding-left: 20px;
 }
 
 .wpgmza-store-locator .wpgmza_sl_search_button_div {
@@ -6556,6 +6558,10 @@ h1.page-intro-main-headline {
 
 .wpgmza-store-locator .wpgmza_sl_reset_button_div {
   display: none;
+}
+
+.wpgmza-store-locator .wpgmza-form-field__label {
+  margin-bottom: 8px;
 }
 
 /** Club Locator - Map **/
@@ -6569,6 +6575,7 @@ h1.page-intro-main-headline {
 
 /** Club Locator - Table **/
 .wpgmza_marker_holder {
+  border: none !important;
   color: #000;
 }
 
@@ -6611,8 +6618,86 @@ h1.page-intro-main-headline {
   display: none;
 }
 
+.wpgmza_marker_holder .dataTables_wrapper {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
 .wpgmza_marker_holder .dataTables_wrapper .dataTables_paginate {
   float: left;
+}
+
+.wpgmza_marker_holder .wpgmza_table .wpgmaps_mlist_row {
+  border: none !important;
+}
+
+.wpgmza_marker_holder .wpgmaps_mlist_row.even {
+  background-color: #F2F2F2;
+}
+
+.wpgmza_marker_holder table.dataTable.no-footer {
+  border-bottom: none;
+  margin-bottom: 20px;
+}
+
+.wpgmza_marker_holder tbody {
+  box-shadow: -8px 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wpgmza_marker_holder th {
+  text-transform: uppercase;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  color: #4C4C4E;
+}
+
+.wpgmza_marker_holder th.wpgmza_table_title {
+  width: 30% !important;
+}
+
+.wpgmza_marker_holder th.wpgmza_table_address {
+  width: 50% !important;
+}
+
+.wpgmza_marker_holder th.wpgmza_table_link {
+  width: 20% !important;
+}
+
+.wpgmza_marker_holder td {
+  padding: 20px 18px !important;
+}
+
+.wpgmza_marker_holder td.wpgmza_table_address {
+  font-family: "Meta Serif Pro";
+}
+
+.wpgmza_marker_holder td.wpgmza_table_title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.dataTables_wrapper .dataTables_paginate .ellipsis {
+  display: none;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+  width: 32px;
+  max-width: 32px;
+  min-width: unset;
+  background: unset !important;
+  background-color: #FFF;
+  border: 1px solid #D8D8D8 !important;
+  margin: 0;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background-color: #ED1940 !important;
+  color: #fff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.previous, .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+  max-width: unset;
+  width: unset;
 }
 
 /*# sourceMappingURL=main.min.css.map */
