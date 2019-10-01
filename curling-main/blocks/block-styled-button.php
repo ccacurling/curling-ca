@@ -9,6 +9,7 @@ $design = get_field('button_design'); //Callout Title
 $bg_color = "red";
 $color = "white";
 $hover = "white";
+$align = $block['align'];
 
 if ($design == "wbb"){
   $bg_color = "white";
@@ -36,4 +37,6 @@ if ( !isset($link_label) || empty($link_label) ){
   $link_label = $link;
 }
 ?>
-<a href="<?php echo $link; ?>" class="<?php echo $button_class; ?>"><?php echo $link_label; ?></a>
+<div class="<?php echo $align; ?>">
+  <a href="<?php echo $link; ?>" class="<?php echo $button_class; ?>"><?php echo $link_label; ?></a>
+</div>

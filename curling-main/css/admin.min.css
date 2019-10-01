@@ -297,6 +297,18 @@
   }
 }
 
+.edit-post-layout__content .left {
+  text-align: left;
+}
+
+.edit-post-layout__content .center {
+  text-align: center;
+}
+
+.edit-post-layout__content .right {
+  text-align: right;
+}
+
 .edit-post-layout__content .wp-block {
   max-width: 100%;
 }
