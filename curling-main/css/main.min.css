@@ -965,6 +965,8 @@ li {
 }
 
 .header-main .nav-menu-top-container {
+  position: relative;
+  z-index: 5;
   background-color: #ffffff;
 }
 
@@ -1007,8 +1009,10 @@ li {
 }
 
 .header-main .nav-menu-primary {
+  position: relative;
   background-color: #ed1940;
   color: #ffffff;
+  z-index: 5;
 }
 
 .header-main .nav-menu-primary .menu-item .menu-item-title {
@@ -1041,6 +1045,8 @@ li {
 }
 
 .header-event .nav-menu-top-container {
+  position: relative;
+  z-index: 5;
   background-color: #4c4c4e;
   height: 50px;
 }
@@ -1073,6 +1079,11 @@ li {
 
 .header-event .menu-item-donate {
   background-color: #ed1940;
+}
+
+.header-event .nav-menu-primary {
+  position: relative;
+  z-index: 5;
 }
 
 .header-event .nav-menu-primary .menu-item-content {
@@ -1857,16 +1868,16 @@ li {
 .nav-menu-popup {
   display: block;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 0;
   width: 100%;
   max-width: 1440px;
-  max-height: 0%;
   background-color: #ffffff;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  transform: translateY(-100%);
+  transform-origin: top center;
+  transition: transform 0.25s ease-out;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
-  z-index: 2;
+  z-index: 3;
 }
 
 .nav-menu-popup:not(.nav-menu-popup-active) {
@@ -1874,14 +1885,14 @@ li {
 }
 
 .nav-menu-popup.active {
-  max-height: 100%;
-  z-index: 2;
+  transform: translateY(0);
+  z-index: 3;
 }
 
 .nav-menu-popup.nav-menu-popup-active {
   position: relative;
   max-height: 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
 .nav-menu-popup-list {
@@ -1932,7 +1943,6 @@ li {
 
 .nav-menu-popup-event {
   align-items: flex-start;
-  height: auto;
 }
 
 .nav-menu-popup-event-left {
@@ -6055,10 +6065,13 @@ h1.page-intro-main-headline {
 }
 
 .block-featured-event-links-wrapper {
+  position: relative;
+  top: -40px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
   padding-right: 15px;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 999px) {

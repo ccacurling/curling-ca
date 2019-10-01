@@ -185,30 +185,31 @@
 .nav-menu-popup {
   display: block;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
+  left: 0;
+  // transform: translate(-50%, 0);
   width: 100%;
   max-width: 1440px;
-  max-height: 0%;
   background-color: $white;
   overflow: hidden;
-  transition: max-height 0.5s ease-out;
+  transform: translateY(-100%);
+  transform-origin: top center;
+  transition: transform 0.25s ease-out;
   box-shadow: 0 8px 12px 0 rgba(0,0,0,0.15);
-  z-index: 2;
+  z-index: 3;
   
   &:not(.nav-menu-popup-active) {
     top: 165px;
   }
 
   &.active {
-    max-height: 100%;
-    z-index: 2;
+    transform: translateY(0);
+    z-index: 3;
   }
 
   &.nav-menu-popup-active {
     position: relative;
     max-height: 100%;
-    z-index: 1;
+    z-index: 2;
   }
 }
 
@@ -260,7 +261,6 @@
 
 .nav-menu-popup-event {
   align-items: flex-start;
-  height: auto;
 }
 .nav-menu-popup-event-left {
   padding-top: 63px;

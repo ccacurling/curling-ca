@@ -8,6 +8,8 @@
   }
 
   .nav-menu-top-container {
+    position: relative;
+    z-index: 5;
     background-color: $white;
   }
 
@@ -56,8 +58,10 @@
   }
 
   .nav-menu-primary {
+    position: relative;
     background-color: $red;
     color: $white;
+    z-index: 5;
 
     .menu-item {
       .menu-item-title {
@@ -89,6 +93,8 @@
   }
 
   .nav-menu-top-container {
+    position: relative;
+    z-index: 5;
     background-color: $gray;
     height: 50px;
   }
@@ -128,6 +134,8 @@
   }
 
   .nav-menu-primary {
+    position: relative;
+    z-index: 5;
     .menu-item-content {
       color: $gray;
     }
