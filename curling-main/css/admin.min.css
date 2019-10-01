@@ -1138,7 +1138,7 @@
   left: 0;
   right: 0;
   background-color: #ffffff;
-  z-index: 2;
+  z-index: 4;
 }
 
 .edit-post-layout__content .header-event .nav-menu-popup {
@@ -1149,8 +1149,14 @@
   background-color: #ed1940;
 }
 
+.edit-post-layout__content .header-event .nav-menu-popup:not(.nav-menu-popup-active) {
+  top: 170px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
 .edit-post-layout__content .header-event .nav-menu-popup.active {
-  max-height: 200px;
+  transform: translate(-50%, 0%);
   z-index: 3;
 }
 
