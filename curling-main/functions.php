@@ -26,7 +26,7 @@ function wpa_alter_cat_links( $termlink, $term, $taxonomy ){
 
   $url = '/category-'.$term->slug;
   if (get_page_by_path($url)) {
-    return network_site_url().'/'.$url;
+    return get_site_url().$url;
   } else {
     return $termlink;
   }
