@@ -6681,7 +6681,7 @@ h1.page-intro-main-headline {
   background: unset !important;
   background-color: #FFF;
   border: 1px solid #D8D8D8 !important;
-  margin: 0;
+  margin: 0px !important;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button.current {
