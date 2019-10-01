@@ -703,12 +703,6 @@ li {
   max-width: 970px;
 }
 
-@media only screen and (min-width: 999px) {
-  .block-container .narrow-width {
-    padding-right: 200px;
-  }
-}
-
 .block-column {
   margin-left: -20px;
   margin-right: -20px;
