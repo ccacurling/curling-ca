@@ -18,11 +18,23 @@ jQuery(document).ready(function($) {
         this.element = element;
 
         this.newsFeedItems = this.element.find('.js-news-feed-items');
+        this.additionalOptions = this.newsFeedItems.data('options');
         this.page = 1;
         this.n = 4;
         this.total = 1;
         
-        this.getAjaxRequest(this.page, this.n);
+        console.log(this.additionalOptions);
+        if (this.additionalOptions != 'noinitial') {
+          this.getAjaxRequest(this.page, this.n);
+        } else {
+          this.leftArrow = this.newsFeedItems.data('arrow-left');
+          this.rightArrow = this.newsFeedItems.data('arrow-right');
+          this.total = this.newsFeedItems.data('total');
+          this.addPagination(1, this.total, {
+            'arrowImageLeft': this.leftArrow,
+            'arrowImageRight': this.rightArrow
+          });
+        }
     }
 
     getAjaxRequest(page, n) {

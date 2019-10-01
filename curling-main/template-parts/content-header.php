@@ -5,10 +5,18 @@
 
     $event_logo = get_field('event_logo', 'Options');
 
+    $category = null;
+    $category_slug = '';
+    $is_category = is_category();
+
+    if ($is_category) {
+      $category = get_queried_object();
+      $category_slug = $category->slug;
+    }
+
     $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Top Left' ) ? wp_get_nav_menu_items( 'Menu - Top Left' ) : [];
     $top_right_menu_items = wp_get_nav_menu_items( 'Menu - Top Right' ) ? wp_get_nav_menu_items( 'Menu - Top Right' ) : [];
     $primary_menu_items = wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) ? wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) : [];
-
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
@@ -20,7 +28,7 @@
       }
     }
 
-    $url = get_permalink();
+    $url = $is_category && $category ? get_category_link($category) : get_permalink();
     
     $menu_item_tree = $primary_menu_items ? buildTree($primary_menu_items, 0, $url === get_home_url() ? '' : $url) : [];
 
@@ -30,12 +38,14 @@
     function buildTree( array &$elements, $parentId = 0, $url = '' ) {
         $branch = array();
         $is_current = false;
+        $is_event_menu = false;
 
         foreach ( $elements as &$element ) {
             if ( $element->menu_item_parent == $parentId ) {
                 $tree = buildTree( $elements, $element->ID, $url );
                 $children = $tree['branch'];
                 $element_url = $element->url;
+                $is_event_menu = $element->post_title == '[EVENTS]';
 
                 if ($element_url === $url) {
                   $element->is_current_page = true;
@@ -44,6 +54,12 @@
                 if ($tree['is_current']) {
                   $element->is_current_page = true;
                   $is_current = true;
+                }
+                if ($is_event_menu) {
+                  $element->is_event_menu = true;
+                }
+                if ($tree['is_event_menu']) {
+                  $element->is_event_menu = true;
                 }
                 if ( $children ) {
                     $element->children = $children;
@@ -55,7 +71,8 @@
         }
         return [
           'branch' => $branch,
-          'is_current' => $is_current
+          'is_current' => $is_current,
+          'is_event_menu' => $is_event_menu
         ];
     }
 
@@ -89,9 +106,15 @@
       <div class="nav-menu-top">
           <div class="nav-menu-top-wrapper content content-container">
               <div class="nav-menu-top-left-wrapper">
-                  <a href="<?php echo get_home_url(); ?>">
-                      <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
-                  </a>
+                  <?php
+                    if ($is_event) {
+                  ?>
+                    <a href="<?php echo get_home_url(); ?>">
+                        <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
+                    </a>
+                  <?php
+                    }
+                  ?>
                   <ul class="menu-top-nav menu-nav">
                       <?php
                           foreach( $top_left_menu_items as $menu_item ) {
@@ -217,12 +240,10 @@
     </div>
     <?php
         foreach( $menu_items as $id => $menu_item ) {
-            if ($menu_item->children) {
-              if ($is_event || $is_submenu || !is_home()) {
-                create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
-              } else {
-                create_menu_bar_item($menu_item->ID, $menu_item->children);
-              }
+            if ($menu_item->is_event_menu) {
+              create_menu_bar_event_item($menu_item->ID);
+            } else if ($menu_item->children) {
+              create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
             }
         }
     ?>
@@ -388,9 +409,6 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
     <ul class="menu-list-mobile js-cta-menu-list-mobile">
     <?php
       foreach( $menu_subitem->children as $menu_subsubitem ) {
-        if ($menu_subsubitem->post_title === '[EVENTS]') { // TODO: TEMP
-          TEMP_events_menu();
-        } else {
     ?>
       <li class="menu-item-mobile">
         <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="<?php echo $menu_subsubitem->ID; ?>">
@@ -399,7 +417,6 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
         </div>
       </li>
     <?php
-        }
       }
     ?>
     </ul>
@@ -424,62 +441,25 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
 ?>
 
 <?php
-function create_menu_bar_item($parent_id, $menu_items) {
-  if ($menu_items && count($menu_items) > 0) {
-    $first_item = array_values($menu_items)[0];
-    $is_events_menu = $first_item->title === '[EVENTS]';
+function create_menu_bar_event_item($parent_id) {
 ?>
-  <div class="nav-menu-popup <?php echo $is_events_menu ? 'nav-menu-popup-event' : 'nav-left-offset'; ?>" data-name="<?php echo $parent_id; ?>">
+  <div class="nav-menu-popup nav-menu-popup-event" data-name="<?php echo $parent_id; ?>">
     <div class="nav-menu-popup-wrapper content-fixed-padding">
-      <div class="<?php echo $is_events_menu ? 'nav-menu-popup-event-left' : 'nav-menu-popup-left'; ?>">
+      <div class="nav-menu-popup-event-left">
         <?php
-          if ($is_events_menu) {
             TEMP_event_submenu();
-          } else {
-        ?>
-          <h2 class="menu-h2 gray"><?php echo $first_item->title; ?></h2>
-          <div class="menu-item-selectable">
-            <span class="menu-item-content menu-item-title menu-item-subtitle gray">SEE ALL</span>
-            <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-          </div>
-        <?php
-          }
         ?>
       </div>
-      <div class="<?php echo $is_events_menu ? 'nav-menu-popup-event-centre' : 'nav-menu-popup-centre'; ?>">
-        <?php
-          if ($is_events_menu) {
-        ?>
-          <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample1.png"; ?>" alt="Event1" />
-          <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample2.png"; ?>" alt="Event2" />
-        <?php
-          } else {
-        ?>
-        <ul class="nav-menu-popup-centre-menu-nav">
-          <?php
-            foreach( $menu_items as $menu_item ) {
-          ?>
-            <li class="nav-menu-popup-centre-menu-subitem menu-subitem">
-              <div class="menu-item-selectable">
-                <span class="menu-item-content menu-item-title menu-item-subtitle gray"><?php echo $menu_item->title; ?></span>
-                <img class="menu-item-content arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-              </div>
-            </li>
-          <?php
-            }
-          ?>
-        </ul>
-        <?php
-          }
-        ?>
+      <div class="nav-menu-popup-event-centre">
+        <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample1.png"; ?>" alt="Event1" />
+        <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample2.png"; ?>" alt="Event2" />
       </div>
-      <div class="<?php echo $is_events_menu ? 'nav-menu-popup-event-right' : 'nav-menu-popup-right'; ?>">
+      <div class="nav-menu-popup-event-right">
         <img class="ad" src="<?php echo get_stylesheet_directory_uri()."/images/img-ad-sample.png"; ?>" alt="Ad" />
       </div>
     </div>
   </div>
 <?php 
-    }
   }
 ?>
 

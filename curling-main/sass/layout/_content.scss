@@ -16,6 +16,10 @@
   max-width: $full-width-wrapper;
 }
 
+.content-small-wrapper {
+  max-width: $small-width-wrapper;
+}
+
 .content-container {
   max-width: $fixed-width-xlg;
 }
@@ -24,6 +28,28 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+}
+
+.content-anchor {
+  position: relative;
+}
+
+.content-post {
+  margin-top: 80px;
+}
+
+.content-social-share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+}
+
+.content-social-share {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .content-sidebar-container {
