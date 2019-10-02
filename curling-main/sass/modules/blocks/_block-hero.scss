@@ -85,10 +85,9 @@
 
   .hero-background-image {
     min-height: 350px;
-
+    object-fit: cover;
     @include responsive-min($responsive-tablet) {
       min-height: auto;
-      object-fit: contain;
     }
   }
 }
@@ -109,10 +108,9 @@
 
   .hero-background-image {
     min-height: 350px;
-
+    object-fit: cover;
     @include responsive-min($responsive-tablet) {
       min-height: auto;
-      object-fit: contain;
     }
   }
 }
@@ -133,10 +131,9 @@
 
   .hero-background-image {
     min-height: 250px;
-
+    object-fit: cover;
     @include responsive-min($responsive-tablet) {
       min-height: auto;
-      object-fit: contain;
     }
   }
 }

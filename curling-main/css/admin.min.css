@@ -2396,12 +2396,12 @@
 
 .edit-post-layout__content .block-hero-main.block-hero-large .hero-background-image {
   min-height: 350px;
+  object-fit: cover;
 }
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-hero-main.block-hero-large .hero-background-image {
     min-height: auto;
-    object-fit: contain;
   }
 }
 
@@ -2424,12 +2424,12 @@
 
 .edit-post-layout__content .block-hero-main.block-hero-medium .hero-background-image {
   min-height: 350px;
+  object-fit: cover;
 }
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-hero-main.block-hero-medium .hero-background-image {
     min-height: auto;
-    object-fit: contain;
   }
 }
 
@@ -2452,12 +2452,12 @@
 
 .edit-post-layout__content .block-hero-main.block-hero-small .hero-background-image {
   min-height: 250px;
+  object-fit: cover;
 }
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-hero-main.block-hero-small .hero-background-image {
     min-height: auto;
-    object-fit: contain;
   }
 }
 
