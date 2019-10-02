@@ -6563,6 +6563,31 @@ h1.page-intro-main-headline {
   background-color: #000000;
 }
 
+.block-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 31px;
+  padding-bottom: 32px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: #f2f2f2;
+}
+
+.link-item-container {
+  display: flex;
+  flex-basis: 41.75%;
+  margin-bottom: 11px;
+}
+
+.link-item {
+  color: #4c4c4e;
+  text-decoration: underline;
+}
+
+.link-item:hover {
+  color: #ed1940;
+}
+
 .block-slash {
   position: relative;
 }
