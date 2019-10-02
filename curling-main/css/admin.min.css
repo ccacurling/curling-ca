@@ -5359,8 +5359,31 @@
   color: #000000;
 }
 
+.edit-post-layout__content .styled-button.color-red {
+  color: #ed1940;
+}
+
 .edit-post-layout__content .styled-button.hover-black:hover {
   color: #000000;
+}
+
+.edit-post-layout__content .styled-button.outline-red {
+  border: 2px solid #ed1940;
+}
+
+.edit-post-layout__content .styled-button.text-small {
+  font-size: 20px;
+  line-height: 15px;
+}
+
+.edit-post-layout__content .styled-button.text-medium {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.edit-post-layout__content .styled-button.text-large {
+  font-size: 50.4px;
+  line-height: 50.4px;
 }
 
 .edit-post-layout__content p.item-label {

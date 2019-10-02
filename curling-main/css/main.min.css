@@ -5337,8 +5337,31 @@ li {
   color: #000000;
 }
 
+.styled-button.color-red {
+  color: #ed1940;
+}
+
 .styled-button.hover-black:hover {
   color: #000000;
+}
+
+.styled-button.outline-red {
+  border: 2px solid #ed1940;
+}
+
+.styled-button.text-small {
+  font-size: 20px;
+  line-height: 15px;
+}
+
+.styled-button.text-medium {
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.styled-button.text-large {
+  font-size: 50.4px;
+  line-height: 50.4px;
 }
 
 p.item-label {

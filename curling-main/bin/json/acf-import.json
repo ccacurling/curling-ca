@@ -4652,11 +4652,38 @@
                     "rww": "Red Background, White Text",
                     "wbb": "White Background, Black Text",
                     "rbb": "Red Background, Black Text",
-                    "rwb": "Red Background, White Text (Black on hover)"
+                    "rwb": "Red Background, White Text (Black on hover)",
+                    "rorb": "White Background, Red Outline, Red Text"
                 },
                 "default_value": [
                     "rww"
                 ],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
+                "key": "field_5d93e9b40d7c5",
+                "label": "Text Size",
+                "name": "text_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "small": "Small",
+                    "medium": "Medium",
+                    "large": "Large"
+                },
+                "default_value": [],
                 "allow_null": 0,
                 "multiple": 0,
                 "ui": 0,
