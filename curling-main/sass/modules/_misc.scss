@@ -5,6 +5,8 @@
     justify-content: space-between;
     align-items: left;
     padding-left: 20px;
+    max-width: 675px;
+    margin-top: 20px;
     /*
     .wpgmza_sl_radius_div {
         visibility: hidden;
@@ -13,11 +15,33 @@
 
     .wpgmza_sl_query_div {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
         .wpgmza-form-field__input.addressInput {
             max-width: 400px;
             height: 42px;
             padding-left: 20px;
+            flex-basis: 100%;
+        }
+        .map-switcher {
+            display: flex;
+            flex-direction: row;
+            
+            .listview-button, .mapview-button{
+                cursor: pointer;
+                padding: 8px 30px 8px;
+                color: #000;
+                background-color: #FFF;
+                border: 1px solid #979797;
+                font-family: "Knockout";
+                text-transform: uppercase;
+                &.selected{
+                    background-color: #ED1940;
+                    color: #FFF;
+                    cursor: unset;
+                }
+            }
         }
     }
 
@@ -31,6 +55,7 @@
     
     .wpgmza-form-field__label {
         margin-bottom: 8px;
+        flex-basis: 100%;
     }
 }
 
@@ -38,6 +63,7 @@
 /** Club Locator - Map **/
 .wpgmza_map {
     display: none !important;
+    margin-bottom: 20px;
 
     &.map-reveal {
         display: block !important;
@@ -47,6 +73,7 @@
 
 /** Club Locator - Table **/
 .wpgmza_marker_holder {
+    margin-bottom: 20px;
 
     border: none !important;
 
