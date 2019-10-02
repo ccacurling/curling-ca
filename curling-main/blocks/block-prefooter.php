@@ -12,12 +12,13 @@ $prefooter_title = get_field( 'prefooter_title' );
 $prefooter_body = get_field( 'prefooter_body' );
 $prefooter_image = get_field( 'prefooter_image' );
 $prefooter_enable_background = get_field( 'prefooter_enable_background' );
+$prefooter_background_colour = get_field( 'prefooter_background_colour' );
 
 $prefooter_image_location = get_field( 'prefooter_image_location' );
 
 ?>
 
-<div class="block-prefooter <?php echo $prefooter_enable_background ? '' : 'block-prefooter-simple'; ?>">
+<div class="block-prefooter <?php echo $prefooter_enable_background ? '' : 'block-prefooter-simple'; ?> <?php echo !$prefooter_enable_background ? 'block-prefooter-'.$prefooter_background_colour : 'block-prefooter-white'?>">
   <div class="block-prefooter-info">
     <h1 class="block-prefooter-info-title"><?php echo $prefooter_title; ?></h1>
     <p class="block-prefooter-info-body"><?php echo $prefooter_body; ?></p>

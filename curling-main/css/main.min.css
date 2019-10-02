@@ -3901,6 +3901,11 @@ li {
   justify-content: center;
 }
 
+.block-prefooter-gray {
+  border-top: none;
+  background-color: #f2f2f2;
+}
+
 .block-prefooter-info {
   display: flex;
   flex-direction: column;
