@@ -1909,25 +1909,6 @@
         "title": "News Feed",
         "fields": [
             {
-                "key": "field_5d7aa5579a611",
-                "label": "Title",
-                "name": "news_feed_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
                 "key": "field_5d7aa55e9a612",
                 "label": "Category",
                 "name": "news_feed_category",
