@@ -1,5 +1,5 @@
 .block-callout {
-  max-width: 570px;
+  // max-width: 570px;
   // max-height: 500px;
 }
 
@@ -22,7 +22,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: $black;
+  background-color: $white;
 }
 
 .callout-info {
@@ -36,9 +36,36 @@
   justify-content: space-between;
 }
 
+.callout-info-small {
+  padding-top: 20px;
+}
+
+.callout-info-medium {
+  padding-top: 30px;
+}
+
+.callout-info-large {
+  padding-top: 0;
+
+  .callout-link {
+    margin-top: 5px;
+  }
+}
+
 .callout-title {
   margin-bottom: 17px;
+}
+
+.callout-title-small {
   max-width: 50%;
+}
+
+.callout-title-medium {
+  max-width: 70%;
+}
+
+.callout-title-large {
+  max-width: 100%;
 }
 
 .callout-excerpt {

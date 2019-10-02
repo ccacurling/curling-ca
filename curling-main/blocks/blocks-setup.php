@@ -158,6 +158,33 @@ acf_add_local_field_group(array(
 			'mime_types' => '',
 		),
 		array(
+			'key' => 'field_5d9518da8da81',
+			'label' => 'Title Size',
+			'name' => 'callout_title_size',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'small' => 'Small',
+				'medium' => 'Medium',
+				'large' => 'Large',
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
 			'key' => 'field_5d76bf1efe292',
 			'label' => 'Title',
 			'name' => 'callout_title',

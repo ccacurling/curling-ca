@@ -4780,10 +4780,6 @@ li {
   max-width: 1030px;
 }
 
-.block-callout {
-  max-width: 570px;
-}
-
 .callout-wrapper {
   display: flex;
   flex-direction: column;
@@ -4803,7 +4799,7 @@ li {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 .callout-info {
@@ -4817,9 +4813,36 @@ li {
   justify-content: space-between;
 }
 
+.callout-info-small {
+  padding-top: 20px;
+}
+
+.callout-info-medium {
+  padding-top: 30px;
+}
+
+.callout-info-large {
+  padding-top: 0;
+}
+
+.callout-info-large .callout-link {
+  margin-top: 5px;
+}
+
 .callout-title {
   margin-bottom: 17px;
+}
+
+.callout-title-small {
   max-width: 50%;
+}
+
+.callout-title-medium {
+  max-width: 70%;
+}
+
+.callout-title-large {
+  max-width: 100%;
 }
 
 .callout-excerpt {
