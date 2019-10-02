@@ -6212,7 +6212,6 @@
 
 .edit-post-layout__content .block-featured-event-links-wrapper {
   position: relative;
-  top: -40px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -6266,6 +6265,22 @@
   .edit-post-layout__content .block-featured-event-operated-by {
     margin-top: 0;
     margin-bottom: 0;
+  }
+}
+
+.edit-post-layout__content .block-featured-event-scores {
+  display: flex;
+  padding-top: 31px;
+  padding-bottom: 29px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  background-color: #000000;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-featured-event-scores {
+    padding-left: 30px;
   }
 }
 

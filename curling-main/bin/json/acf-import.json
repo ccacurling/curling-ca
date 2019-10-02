@@ -843,6 +843,67 @@
                 },
                 "default_value": "",
                 "placeholder": ""
+            },
+            {
+                "key": "field_5d94d7f7fad4a",
+                "label": "Show Timer",
+                "name": "event_show_timer",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5d94d93ffad4c",
+                "label": "Extra Link",
+                "name": "event_extra_link",
+                "type": "link",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d94d7f7fad4a",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array"
+            },
+            {
+                "key": "field_5d94d81ffad4b",
+                "label": "Show Sponsors",
+                "name": "event_show_sponsors",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
             }
         ],
         "location": [

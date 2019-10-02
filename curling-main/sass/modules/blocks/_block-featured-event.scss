@@ -25,7 +25,6 @@
 
 .block-featured-event-links-wrapper {
   position: relative;
-  top: -40px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -73,6 +72,20 @@
   @include responsive-min($responsive-laptop) {
     margin-top: 0;
     margin-bottom: 0;
+  }
+}
+
+.block-featured-event-scores {
+  display: flex;
+  padding-top: 31px;
+  padding-bottom: 29px;
+  padding-left: 16px;
+  padding-right: 16px;
+  width: 100%;
+  background-color: $black;
+
+  @include responsive-min($responsive-laptop) {
+    padding-left: 30px;
   }
 }
 
