@@ -6646,7 +6646,7 @@ h1.page-intro-main-headline {
 .slash {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -53%);
   width: 1440px;
   max-width: none;
   max-height: none;
