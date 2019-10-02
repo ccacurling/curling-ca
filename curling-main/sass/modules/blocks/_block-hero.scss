@@ -69,6 +69,78 @@
   pointer-events: none;
 }
 
+.block-hero-main.block-hero-large {
+  @include responsive-min($responsive-tablet) {
+    min-height: 700px;
+  }
+
+  .hero-media-container {
+    min-height: 350px;
+
+    @include responsive-min($responsive-tablet) {
+      height: 100%;
+      min-height: auto;
+    }
+  }
+
+  .hero-background-image {
+    min-height: 350px;
+    object-fit: cover;
+    @include responsive-min($responsive-tablet) {
+      min-height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.block-hero-main.block-hero-medium {
+  @include responsive-min($responsive-tablet) {
+    min-height: 577px;
+  }
+
+  .hero-media-container {
+    min-height: 350px;
+
+    @include responsive-min($responsive-tablet) {
+      height: 100%;
+      min-height: auto;
+    }
+  }
+
+  .hero-background-image {
+    min-height: 350px;
+    object-fit: cover;
+    @include responsive-min($responsive-tablet) {
+      min-height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+.block-hero-main.block-hero-small {
+  @include responsive-min($responsive-tablet) {
+    min-height: 430px;
+  }
+
+  .hero-media-container {
+    min-height: 250px;
+
+    @include responsive-min($responsive-tablet) {
+      height: 100%;
+      min-height: auto;
+    }
+  }
+
+  .hero-background-image {
+    min-height: 250px;
+    object-fit: cover;
+    @include responsive-min($responsive-tablet) {
+      min-height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
 .block-hero-large {
   @include responsive-min($responsive-tablet) {
     min-height: 700px;
@@ -119,7 +191,11 @@
 }
 
 .block-hero-main .block-hero-inner {
-  display: flex;
+  display: none;
+
+  @include responsive-min($responsive-tablet) {
+    display: flex;
+  }
 }
 
 .block-hero-inner {
