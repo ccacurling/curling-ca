@@ -1952,6 +1952,40 @@ acf_add_local_field_group(array(
 			'ui_off_text' => '',
 		),
 		array(
+			'key' => 'field_5d952d159f9e0',
+			'label' => 'Background Colour',
+			'name' => 'prefooter_background_colour',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d7690fb90cb5',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'white' => 'White',
+				'gray' => 'Gray',
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
 			'key' => 'field_5d8a4c1e62050',
 			'label' => 'Type',
 			'name' => 'prefooter_type',
