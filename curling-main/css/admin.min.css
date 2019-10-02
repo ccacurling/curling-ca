@@ -3941,13 +3941,27 @@
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-prefooter-info {
-    margin-left: 46.8%;
     padding-top: 200px;
-    padding-bottom: 100px;
     padding-left: 0;
     padding-right: 0;
     width: 50%;
     max-width: 570px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-prefooter-info-left {
+    margin-left: auto;
+    margin-right: 41.5%;
+    padding-bottom: 150px;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-prefooter-info-right {
+    margin-left: 46.8%;
+    margin-right: auto;
+    padding-bottom: 100px;
   }
 }
 
@@ -4015,21 +4029,13 @@
 
 .edit-post-layout__content .block-prefooter-img-container {
   position: absolute;
-  left: 0;
+  bottom: 0;
   width: 100%;
   z-index: -2;
 }
 
-.edit-post-layout__content .block-prefooter-img-left {
-  bottom: -230px;
-}
-
 .edit-post-layout__content .block-prefooter-img-left .block-prefooter-img {
   margin-right: auto;
-}
-
-.edit-post-layout__content .block-prefooter-img-right {
-  bottom: 350px;
 }
 
 .edit-post-layout__content .block-prefooter-img-right .block-prefooter-img {
@@ -4048,29 +4054,48 @@
   }
 }
 
+.edit-post-layout__content .prefooter-slash-container {
+  position: absolute;
+  bottom: 0;
+}
+
 .edit-post-layout__content .prefooter-slash {
   position: absolute;
-  bottom: -275px;
   left: 50%;
-  transform: translate(-50%, 12%);
+  transform: translate(0, -100%);
   width: 1440px;
   max-width: none;
   max-height: none;
   z-index: -3;
 }
 
+.edit-post-layout__content .prefooter-slash-tlbr {
+  bottom: -175px;
+}
+
 @media only screen and (min-width: 769px) {
-  .edit-post-layout__content .prefooter-slash {
-    bottom: -515px;
+  .edit-post-layout__content .prefooter-slash-tlbr {
+    bottom: -375px;
+  }
+}
+
+.edit-post-layout__content .prefooter-slash-iltr {
+  bottom: -205px;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .prefooter-slash-iltr {
+    bottom: -585px;
   }
 }
 
 .edit-post-layout__content .prefooter-slash-mask {
+  transform: translate(0, calc(-100% + -10px));
   z-index: -1;
 }
 
 .edit-post-layout__content .prefooter-slash-2 {
-  transform: translate(-50%, -1165px);
+  display: none;
 }
 
 .edit-post-layout__content .block-sponsors {

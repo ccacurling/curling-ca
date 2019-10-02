@@ -1970,16 +1970,17 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d8a4c1e62050',
-			'label' => 'Image Location',
-			'name' => 'prefooter_image_location',
+			'label' => 'Type',
+			'name' => 'prefooter_type',
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
 					array(
-						'field' => 'field_5d72cc647d966',
-						'operator' => '!=empty',
+						'field' => 'field_5d7690fb90cb5',
+						'operator' => '==',
+						'value' => '1',
 					),
 				),
 			),
@@ -1989,8 +1990,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'left' => 'Left',
-				'right' => 'Right',
+				'tlbr' => 'Text Left / Image Right',
+				'iltr' => 'Image Left / Text Right',
 			),
 			'default_value' => array(
 			),
@@ -2034,18 +2035,22 @@ acf_add_local_field_group(array(
 			'mime_types' => '',
 		),
 		array(
-			'key' => 'field_5d93e73dcf913',
-			'label' => 'Background Colour',
-			'name' => 'prefooter_background_colour',
-			'type' => 'select',
+			'key' => 'field_5d94e772061ca',
+			'label' => 'Image X Offset',
+			'name' => 'prefooter_image_x_offset',
+			'type' => 'range',
 			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => array(
 				array(
 					array(
 						'field' => 'field_5d7690fb90cb5',
-						'operator' => '!=',
+						'operator' => '==',
 						'value' => '1',
+					),
+					array(
+						'field' => 'field_5d72cc647d966',
+						'operator' => '!=empty',
 					),
 				),
 			),
@@ -2054,19 +2059,44 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'choices' => array(
-				'white' => 'White',
-				'gray' => 'Gray',
+			'default_value' => 0,
+			'min' => -500,
+			'max' => 500,
+			'step' => '',
+			'prepend' => '',
+			'append' => '',
+		),
+		array(
+			'key' => 'field_5d94e276bd698',
+			'label' => 'Image Y Offset',
+			'name' => 'prefooter_image_y_offset',
+			'type' => 'range',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d7690fb90cb5',
+						'operator' => '==',
+						'value' => '1',
+					),
+					array(
+						'field' => 'field_5d72cc647d966',
+						'operator' => '!=empty',
+					),
+				),
 			),
-			'default_value' => array(
-				0 => 'white',
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
 			),
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
+			'default_value' => 0,
+			'min' => -500,
+			'max' => 500,
+			'step' => '',
+			'prepend' => '',
+			'append' => '',
 		),
 	),
 	'location' => array(
