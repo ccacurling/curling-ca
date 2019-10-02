@@ -6740,6 +6740,8 @@ h1.page-intro-main-headline {
   justify-content: space-between;
   align-items: left;
   padding-left: 20px;
+  max-width: 675px;
+  margin-top: 20px;
   /*
     .wpgmza_sl_radius_div {
         visibility: hidden;
@@ -6749,13 +6751,37 @@ h1.page-intro-main-headline {
 
 .wpgmza-store-locator .wpgmza_sl_query_div {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .wpgmza-store-locator .wpgmza_sl_query_div .wpgmza-form-field__input.addressInput {
   max-width: 400px;
   height: 42px;
   padding-left: 20px;
+  flex-basis: 100%;
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div .map-switcher {
+  display: flex;
+  flex-direction: row;
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .listview-button, .wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .mapview-button {
+  cursor: pointer;
+  padding: 8px 30px 8px;
+  color: #000;
+  background-color: #FFF;
+  border: 1px solid #979797;
+  font-family: "Knockout";
+  text-transform: uppercase;
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .listview-button.selected, .wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .mapview-button.selected {
+  background-color: #ED1940;
+  color: #FFF;
+  cursor: unset;
 }
 
 .wpgmza-store-locator .wpgmza_sl_search_button_div {
@@ -6768,11 +6794,13 @@ h1.page-intro-main-headline {
 
 .wpgmza-store-locator .wpgmza-form-field__label {
   margin-bottom: 8px;
+  flex-basis: 100%;
 }
 
 /** Club Locator - Map **/
 .wpgmza_map {
   display: none !important;
+  margin-bottom: 20px;
 }
 
 .wpgmza_map.map-reveal {
@@ -6781,6 +6809,7 @@ h1.page-intro-main-headline {
 
 /** Club Locator - Table **/
 .wpgmza_marker_holder {
+  margin-bottom: 20px;
   border: none !important;
   color: #000;
 }
