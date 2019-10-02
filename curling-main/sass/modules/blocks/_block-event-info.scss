@@ -3,8 +3,7 @@
   margin-bottom: 40px;
   background: $white;
   border: 1px solid $cool-light-gray;
-  // box-shadow: -7px 16px 43px 0 rgba(76,76,78,0.10);
-  box-shadow: 0 0 4px 0 rgba(76,76,78,0.10);
+  box-shadow: -7px 16px 43px 0 rgba(76,76,78,0.10), 0 0 4px 0 rgba(76,76,78,0.10);
 }
 
 .block-event-info-column {
