@@ -703,6 +703,10 @@ li {
   max-width: 970px;
 }
 
+.block-admin {
+  background-color: #f2f2f2;
+}
+
 .block-column {
   margin-left: -20px;
   margin-right: -20px;

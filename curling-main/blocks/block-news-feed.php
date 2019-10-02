@@ -25,6 +25,6 @@
   }
 ?>
 
-<section class="block-news-feed js-news-feed" data-category="<?php echo $category; ?>">
+<section class="block-news-feed js-news-feed <?php echo is_admin() ? 'block-admin' : ''; ?>" data-category="<?php echo $category; ?>">
  <div class="js-news-feed-items"></div>
 </section>
