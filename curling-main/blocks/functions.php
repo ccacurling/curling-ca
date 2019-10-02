@@ -376,6 +376,26 @@ function acf_blocks_init() {
       'keywords'				=> [ 'navigation', 'sidebar' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'broadcast-callout',
+      'title'						=> __('Broadcast Callout'),
+      'description'			=> __('A block to render a broadcast callout'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'broadcast', 'callout' ]
+    ]);
+
+    acf_register_block([
+      'name'						=> 'links',
+      'title'						=> __('Links'),
+      'description'			=> __('A block to render a container with links'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'links' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

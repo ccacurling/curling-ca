@@ -11,7 +11,25 @@
   &.color-black {
     color: $black;
   }
+  &.color-red {
+    color: $red;
+  }
   &.hover-black:hover {
     color: $black;
+  }
+  &.outline-red {
+    border: 2px solid $red;
+  }
+  &.text-small {
+    font-size: 20px;
+    line-height: 15px;
+  }
+  &.text-medium {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  &.text-large {
+    font-size: 50.4px;
+    line-height: 50.4px;
   }
 }

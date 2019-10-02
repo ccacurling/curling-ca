@@ -12,13 +12,15 @@ $prefooter_title = get_field( 'prefooter_title' );
 $prefooter_body = get_field( 'prefooter_body' );
 $prefooter_image = get_field( 'prefooter_image' );
 $prefooter_enable_background = get_field( 'prefooter_enable_background' );
-
-$prefooter_image_location = get_field( 'prefooter_image_location' );
+$prefooter_background_colour = get_field( 'prefooter_background_colour' );
+$prefooter_type = get_field( 'prefooter_type' );
+$prefooter_image_x_offset = get_field( 'prefooter_image_x_offset' );
+$prefooter_image_y_offset = get_field( 'prefooter_image_y_offset' );
 
 ?>
 
-<div class="block-prefooter <?php echo $prefooter_enable_background ? '' : 'block-prefooter-simple'; ?>">
-  <div class="block-prefooter-info">
+<div class="block-prefooter <?php echo $prefooter_enable_background ? '' : 'block-prefooter-simple'; ?> <?php echo !$prefooter_enable_background ? 'block-prefooter-'.$prefooter_background_colour : 'block-prefooter-white'?>">
+  <div class="block-prefooter-info <?php echo $prefooter_type ? ($prefooter_type === 'tlbr' ? 'block-prefooter-info-left' : 'block-prefooter-info-right') : ''; ?>">
     <h1 class="block-prefooter-info-title"><?php echo $prefooter_title; ?></h1>
     <p class="block-prefooter-info-body"><?php echo $prefooter_body; ?></p>
     <div class="block-prefooter-info-btns">
@@ -31,13 +33,14 @@ $prefooter_image_location = get_field( 'prefooter_image_location' );
     <?php
       if ($prefooter_image) {
     ?>
-      <div class="block-prefooter-img-container block-prefooter-img-<?php echo $prefooter_image_location; ?>">
+      <div class="block-prefooter-img-container block-prefooter-img-<?php echo ($prefooter_type === 'tlbr' ? 'right' : 'left'); ?>"
+        style="bottom:<?php echo $prefooter_image_y_offset;?>px;<?php echo ($prefooter_type === 'tlbr' ? 'right' : 'left'); ?>:<?php echo $prefooter_image_x_offset; ?>px">
         <img class="block-prefooter-img" src="<?php echo $prefooter_image['url']; ?>" alt="" />
       </div>
     <?php
       }
     ?>
-    <div>
+    <div class="prefooter-slash-container prefooter-slash-<?php echo $prefooter_type; ?>">
       <img class="prefooter-slash prefooter-slash-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide.svg" alt="" />
       <img class="prefooter-slash prefooter-slash-mask prefooter-slash-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide-mask.svg" alt="" />
       <img class="prefooter-slash prefooter-slash-2" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide.svg" alt="" />

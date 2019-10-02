@@ -8,6 +8,10 @@
  */
 
 $site_url = get_field( 'event_microsite_url' );
+$show_time = get_field ( 'event_show_timer' );
+$event_extra_link = get_field ( 'event_extra_link' );
+$event_show_sponsors = get_field ( 'event_show_sponsors' );
+
 $sites = get_sites();
 
 $site = NULL;
@@ -44,19 +48,21 @@ $event_page_link = get_home_url();
 
 $sponsors = [];
 
-foreach ($sponsors_posts as $key => $sponsor) {
-  $sponsor_type = $sponsor['event_sponsor_type'];
-  $sponsor_items = $sponsor['event_sponsors'];
+if ($event_show_sponsors) {
+  foreach ($sponsors_posts as $key => $sponsor) {
+    $sponsor_type = $sponsor['event_sponsor_type'];
+    $sponsor_items = $sponsor['event_sponsors'];
 
-  $sponsor_item = array_map(function($sponsor_post) {
-    $event_sponsor = $sponsor_post['event_sponsor'];
-    return get_field( 'featured_image', $event_sponsor->ID );
-  }, $sponsor_items);
+    $sponsor_item = array_map(function($sponsor_post) {
+      $event_sponsor = $sponsor_post['event_sponsor'];
+      return get_field( 'featured_image', $event_sponsor->ID );
+    }, $sponsor_items);
 
-  array_push($sponsors, [
-    'type' => $sponsor_type,
-    'sponsors' => $sponsor_item
-  ]);
+    array_push($sponsors, [
+      'type' => $sponsor_type,
+      'sponsors' => $sponsor_item
+    ]);
+  }
 }
 
 restore_current_blog();
@@ -115,45 +121,51 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
     </div>
   </div>
 	<div class="block-featured-event-wrapper">
-    <div class="block-featured-event-scores-mobile">
+    <div class="block-featured-event-scores<?php echo $show_time ? '-mobile' : ''; ?>">
       <a class="clear block-featured-event-scores-link" href="" target="">
         <h3 class="inverted arrow-right-extralarge-white">See the latest scores</h3>
       </a>
     </div>
-		<div class="block-featured-event-counter">
-			<div class="block-featured-event-counter-container block-featured-event-days-container block-featured-event-border-right">
-				<div class="block-featured-event-value">
-					<h2 class="inverted js-days"><?php echo $days; ?></h2>
-				</div>
-				<div class="block-featured-event-label">
-					<h4 class="inverted">DAYS</h4>
-				</div>
-			</div>
-			<div class="block-featured-event-counter-container block-featured-event-hours-container block-featured-event-border-right">
-				<div class="block-featured-event-value">
-					<h2 class="inverted js-hours"><?php echo $hours; ?></h2>
-				</div>
-				<div class="block-featured-event-label">
-					<h4 class="inverted">HOURS</h4>
-				</div>
-			</div>
-			<div class="block-featured-event-counter-container block-featured-event-minutes-container block-featured-event-border-right">
-				<div class="block-featured-event-value">
-					<h2 class="inverted js-minutes"><?php echo $minutes; ?></h2>
-				</div>
-				<div class="block-featured-event-label">
-					<h4 class="inverted">MINUTES</h4>
-				</div>
-			</div>
-			<div class="block-featured-event-counter-container block-featured-event-seconds-container">
-				<div class="block-featured-event-value">
-					<h2 class="inverted js-seconds"><?php echo $seconds; ?></h2>
-				</div>
-				<div class="block-featured-event-label">
-					<h4 class="inverted">SECONDS</h4>
-				</div>
-			</div>
-		</div>
+    <?php
+      if ($show_time) {
+    ?>
+      <div class="block-featured-event-counter">
+        <div class="block-featured-event-counter-container block-featured-event-days-container block-featured-event-border-right">
+          <div class="block-featured-event-value">
+            <h2 class="inverted js-days"><?php echo $days; ?></h2>
+          </div>
+          <div class="block-featured-event-label">
+            <h4 class="inverted">DAYS</h4>
+          </div>
+        </div>
+        <div class="block-featured-event-counter-container block-featured-event-hours-container block-featured-event-border-right">
+          <div class="block-featured-event-value">
+            <h2 class="inverted js-hours"><?php echo $hours; ?></h2>
+          </div>
+          <div class="block-featured-event-label">
+            <h4 class="inverted">HOURS</h4>
+          </div>
+        </div>
+        <div class="block-featured-event-counter-container block-featured-event-minutes-container block-featured-event-border-right">
+          <div class="block-featured-event-value">
+            <h2 class="inverted js-minutes"><?php echo $minutes; ?></h2>
+          </div>
+          <div class="block-featured-event-label">
+            <h4 class="inverted">MINUTES</h4>
+          </div>
+        </div>
+        <div class="block-featured-event-counter-container block-featured-event-seconds-container">
+          <div class="block-featured-event-value">
+            <h2 class="inverted js-seconds"><?php echo $seconds; ?></h2>
+          </div>
+          <div class="block-featured-event-label">
+            <h4 class="inverted">SECONDS</h4>
+          </div>
+        </div>
+      </div>
+    <?php
+      }
+    ?>
 		<div class="block-featured-event-info-container">
 			<div class="block-featured-event-info-top">
 				<h3 class="block-featured-event-info-date inverted"><?php echo $start_date_string; ?><?php echo $start_date_string !== $end_date_short_string ? ' - '.$end_date_string : ''; ?></h3>
@@ -173,64 +185,63 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
     </div>
   </div>
   
-  <div class="block-featured-event-wrapper block-featured-event-sponsor-wrapper">
   <?php
     if ($sponsors) {
   ?>
+    <div class="block-featured-event-wrapper block-featured-event-sponsor-wrapper">
+      <?php
+        if ($sponsors_headline) {
+      ?>
+        <h3 class="block-featured-event-sponsor-headline"><?php echo $sponsors_headline; ?></h3>
+      <?php
+        }
+      ?>
 
-    <?php
-      if ($sponsors_headline) {
-    ?>
-      <h3 class="block-featured-event-sponsor-headline"><?php echo $sponsors_headline; ?></h3>
-    <?php
-      }
-    ?>
-
-    <?php
-      foreach ($sponsors as $key => $sponsor) {
-    ?>
-      <h4 class="block-featured-event-sponsor-type"><?php echo $sponsor['type']; ?></h4>
-      <div class="block-featured-event-sponsors-container">
-        <?php
-          foreach ($sponsor['sponsors'] as $key => $sponsor_image) {
-        ?>
-          <div class="block-featured-event-sponsor">
-            <img src="<?php echo $sponsor_image['url']; ?>" alt="sponsor" />
-          </div>
+      <?php
+        foreach ($sponsors as $key => $sponsor) {
+      ?>
+        <h4 class="block-featured-event-sponsor-type"><?php echo $sponsor['type']; ?></h4>
+        <div class="block-featured-event-sponsors-container">
+          <?php
+            foreach ($sponsor['sponsors'] as $key => $sponsor_image) {
+          ?>
+            <div class="block-featured-event-sponsor">
+              <img src="<?php echo $sponsor_image['url']; ?>" alt="sponsor" />
+            </div>
+          <?php
+            }
+          ?>
+        </div>
+      <?php
+        }
+      ?>
+      <?php
+        if ($sponsor_links) {
+      ?>
+        <div class="block-featured-event-sponsor-container">
+          <?php
+            if ($sponsors_link_headline) {
+          ?>
+            <p class="block-featured-event-sponsor-links-headline"><?php echo $sponsors_link_headline; ?></p>
+          <?php
+            }
+          ?>
+          <?php
+            foreach ($sponsor_links as $key => $link) {
+              $event_link = $link['event_sponsor_link'];
+          ?>
+            <a class="block-featured-event-sponsor-link subdomain red arrow-right-large-red" href="<?php echo $event_link['url']; ?>" target="<?php echo $event_link['target']; ?>"><?php echo $event_link['title']; ?></a>
+          <?php
+            }
+          ?>
         <?php
           }
         ?>
       </div>
-    <?php
-      }
-    ?>
-    <?php
-      if ($sponsor_links) {
-    ?>
-      <div class="block-featured-event-sponsor-container">
-        <?php
-          if ($sponsors_link_headline) {
-        ?>
-          <p class="block-featured-event-sponsor-links-headline"><?php echo $sponsors_link_headline; ?></p>
-        <?php
-          }
-        ?>
-        <?php
-          foreach ($sponsor_links as $key => $link) {
-            $event_link = $link['event_sponsor_link'];
-        ?>
-          <a class="block-featured-event-sponsor-link subdomain red arrow-right-large-red" href="<?php echo $event_link['url']; ?>" target="<?php echo $event_link['target']; ?>"><?php echo $event_link['title']; ?></a>
-        <?php
-          }
-        ?>
-      <?php
-        }
-      ?>
     </div>
   <?php
     }
   ?>
-  </div>
 
   <div class="block-featured-event-wrapper block-featured-event-links-wrapper">
     <?php

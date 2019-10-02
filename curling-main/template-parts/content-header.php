@@ -476,7 +476,7 @@ function create_menu_bar_simple_item($parent_id, $menu_items, $is_current_page =
             <?php
               if ($menu_subitem->url) {
             ?>
-              <a class="clear" href="<?php echo $menu_subitem->url; ?>">
+              <a class="menu-item-selectable-text clear" href="<?php echo $menu_subitem->url; ?>">
             <?php
               }
             ?>

@@ -81,6 +81,25 @@
       color: $gray;
     }
   }
+
+  .menu-item-selectable:hover,
+  .menu-item-selectable.menu-item-selected {
+    .menu-item-underline {
+      display: block;
+    }
+    .menu-item-content {
+      color: $black;
+    }
+  }
+
+  .menu-item-selectable-text {
+    color: $gray;
+    
+  }
+
+  .menu-item-underline {
+    background-color: $black;
+  }
 }
 
 
@@ -170,6 +189,18 @@
       top: 170px;
       left: 50%;
       transform: translate(-50%, -100%);  
+    }
+
+    &.nav-menu-popup-active {
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      z-index: 2;
+
+      &.active {
+        transform: translate(-50%, 0%);
+        z-index: 3;
+      }
     }
     
     &.active {

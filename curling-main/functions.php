@@ -19,6 +19,18 @@ add_action('init', 'block_3_column_init');
 // Pull in Eventum-child custom post type registration for speakers (Teams)
 remove_action( 'init', 'themeum_eventum_post_type_speaker');
 add_action('init','my_themeum_eventum_post_type_speaker');
+add_filter( 'term_link', 'wpa_alter_cat_links', 10, 3 );
+
+function wpa_alter_cat_links( $termlink, $term, $taxonomy ){
+  if( 'category' != $taxonomy ) return $termlink;
+
+  $url = '/category-'.$term->slug;
+  if (get_page_by_path($url)) {
+    return get_site_url().$url;
+  } else {
+    return $termlink;
+  }
+}
 
 function block_container_init() {
     $file = get_stylesheet_directory_uri().'/js/dist/block-container.min.js';
@@ -60,7 +72,7 @@ function block_2_column_init() {
       'editor_script' => 'cossette-block-column-2',
       'render_callback' => function( $attributes, $content = '' ) {
           return '<div class="block-column '.
-            'column-'.$attributes['type'].' '.
+            'column-'.str_replace('_', '-', $attributes['type']).' '.
             ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
             ($attributes['left_column_is_sidebar'] ? ' '.'column-sidebar' : '' ).
             '">'.$content.'</div>';
@@ -211,7 +223,6 @@ function my_themeum_eventum_post_type_speaker() {
 }
 
 function create_sponsors_post_type() {
-    $is_event = function_exists('get_field') ? get_field('is_event', 'Options') : false;
     register_post_type('Sponsors', [
         'labels' => [
             'name'          => __('Sponsors'),
@@ -220,7 +231,7 @@ function create_sponsors_post_type() {
             'all_items'     => __('All Sponsors')
         ],
         'menu_icon' => 'dashicons-groups',
-        'public' => $is_event,
+        'public' => true,
         'supports' => ['title', 'editor', 'thumbnail'],
         'has_archive' => true,
         'show_in_rest' => true,

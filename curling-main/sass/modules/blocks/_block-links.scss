@@ -1,0 +1,24 @@
+.block-links-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 31px;
+  padding-bottom: 32px;
+  padding-left: 70px;
+  padding-right: 70px;
+  background-color: $cool-light-gray;
+}
+
+.link-item-container {
+  display: flex;
+  flex-basis: 41.75%;
+  margin-bottom: 11px;
+}
+
+.link-item {
+  color: $gray;
+  text-decoration: underline;
+
+  &:hover {
+    color: $red;
+  }
+}
