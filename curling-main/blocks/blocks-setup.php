@@ -1240,7 +1240,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'taxonomy' => 'category',
-			'field_type' => 'select',
+			'field_type' => 'multi_select',
 			'allow_null' => 0,
 			'add_term' => 1,
 			'save_terms' => 0,
