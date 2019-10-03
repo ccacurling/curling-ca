@@ -5,10 +5,11 @@
  * This is the template that displays the callout block.
  */
 
-$callout_image = get_field( 'callout_image' );
-$callout_title = get_field( 'callout_title' );
-$callout_body_text = get_field( 'callout_body_text' );
-$callout_link = get_field( 'callout_link' );
+  $callout_image = get_field( 'callout_image' );
+  $callout_title = get_field( 'callout_title' );
+  $callout_body_text = get_field( 'callout_body_text' );
+  $callout_link = get_field( 'callout_link' );
+  $callout_title_size = get_field( 'callout_title_size' );
 ?>
 
 <section class="block-callout">
@@ -22,11 +23,29 @@ $callout_link = get_field( 'callout_link' );
     <?php
       }
     ?>
-    <div class="callout-info">
+    <div class="callout-info callout-info-<?php echo $callout_title_size; ?>">
       <?php
         if ($callout_title) {
       ?>
-        <h4 class="callout-title"><?php echo $callout_title; ?></h4>
+        <?php
+          switch ($callout_title_size) {
+            case 'large':
+        ?>
+            <h2 class="callout-title callout-title-<?php echo $callout_title_size; ?>"><?php echo $callout_title; ?></h2>
+        <?php
+            break;
+            case 'medium':
+        ?>
+            <h3 class="callout-title callout-title-<?php echo $callout_title_size; ?>"><?php echo $callout_title; ?></h3>
+        <?php
+            break;
+            default:
+        ?>
+            <h4 class="callout-title callout-title-<?php echo $callout_title_size; ?>"><?php echo $callout_title; ?></h4>
+        <?php
+            break;
+          }
+        ?>
       <?php
         }
       ?>

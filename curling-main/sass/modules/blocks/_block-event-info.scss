@@ -1,9 +1,9 @@
 .block-event-info {
   display: flex;
+  margin-bottom: 40px;
   background: $white;
   border: 1px solid $cool-light-gray;
-  box-shadow: -7px 16px 43px 0 rgba(76,76,78,0.10);
-  // box-shadow: 0 0 4px 0 rgba(76,76,78,0.10);
+  box-shadow: -7px 16px 43px 0 rgba(76,76,78,0.10), 0 0 4px 0 rgba(76,76,78,0.10);
 }
 
 .block-event-info-column {
@@ -141,6 +141,7 @@
 .block-event-info-details {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding-top: 34px;
   padding-bottom: 30px;
   padding-left: 20px;

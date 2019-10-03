@@ -82,12 +82,11 @@ jQuery(document).ready(function($) {
           });
 
           let postHtml = '';
+          const $newsFeedThumbnailContainer = $('<div>', {
+            class: 'news-feed-thumbnail-container news-promo-thumbnail-container'
+          });
+
           if (post['thumbnail']) {
-
-            const $newsFeedThumbnailContainer = $('<div>', {
-              class: 'news-feed-thumbnail-container news-promo-thumbnail-container'
-            });
-
             const $newsFeedThumbnail = $('<img>', {
               class: 'news-feed-thumbnail',
               src: post['thumbnail'],
@@ -113,9 +112,9 @@ jQuery(document).ready(function($) {
               $newsFeedCaptionContainer.append($newsFeedCaptionWrapper);
               $newsFeedThumbnailContainer.append($newsFeedCaptionContainer);
             }
-
-            $newsPromoContainer.append($newsFeedThumbnailContainer);
           }
+          
+          $newsPromoContainer.append($newsFeedThumbnailContainer);
   
           const $newsFeedInfo = $('<div>', {
             class: 'news-feed-info news-promo-info'

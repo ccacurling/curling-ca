@@ -234,10 +234,10 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
           <?php
             }
           ?>
-        <?php
-          }
-        ?>
-      </div>
+        </div>
+      <?php
+        }
+      ?>
     </div>
   <?php
     }

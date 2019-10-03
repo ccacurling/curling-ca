@@ -30,7 +30,15 @@
   padding-bottom: 22px;
   padding-left: 22px;
   padding-right: 22px;
+}
+
+.championship-event-trigger {
   cursor: pointer;
+  text-decoration: underline;
+  
+  &:hover {
+    color: $red;
+  }
 }
 
 .championship-event-container.active {
@@ -54,6 +62,7 @@
 
 .championship-events-container {
   display: none;
+  flex-direction: column;
   justify-content: space-between;
   margin-left: 22px;
   margin-right: 22px;
@@ -62,6 +71,19 @@
   padding-left: 28px;
   padding-right: 0;
   border-top: 1px solid $light-gray;
+
+
+    @include responsive-min($responsive-laptop) {
+      flex-direction: row;
+    }
+}
+
+.championship-match-name {
+  margin-bottom: 12px;
+
+  @include responsive-min($responsive-laptop) {
+    margin-bottom: 0;
+  }
 }
 
 .championship-match-links-container {

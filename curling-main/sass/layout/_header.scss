@@ -106,6 +106,7 @@
 .header-event {
   position: relative;
   height: 90px;
+  background-color: $white;
 
   @include responsive-min($responsive-laptop) {
     height: 50px;

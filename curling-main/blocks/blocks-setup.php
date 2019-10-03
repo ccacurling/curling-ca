@@ -158,6 +158,33 @@ acf_add_local_field_group(array(
 			'mime_types' => '',
 		),
 		array(
+			'key' => 'field_5d9518da8da81',
+			'label' => 'Title Size',
+			'name' => 'callout_title_size',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'small' => 'Small',
+				'medium' => 'Medium',
+				'large' => 'Large',
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
 			'key' => 'field_5d76bf1efe292',
 			'label' => 'Title',
 			'name' => 'callout_title',
@@ -1200,25 +1227,6 @@ acf_add_local_field_group(array(
 	'title' => 'News Feed',
 	'fields' => array(
 		array(
-			'key' => 'field_5d7aa5579a611',
-			'label' => 'Title',
-			'name' => 'news_feed_title',
-			'type' => 'text',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'default_value' => '',
-			'placeholder' => '',
-			'prepend' => '',
-			'append' => '',
-			'maxlength' => '',
-		),
-		array(
 			'key' => 'field_5d7aa55e9a612',
 			'label' => 'Category',
 			'name' => 'news_feed_category',
@@ -1239,31 +1247,6 @@ acf_add_local_field_group(array(
 			'load_terms' => 0,
 			'return_format' => 'id',
 			'multiple' => 0,
-		),
-		array(
-			'key' => 'field_5d8d1036075a0',
-			'label' => 'Order By',
-			'name' => 'order_by',
-			'type' => 'select',
-			'instructions' => '',
-			'required' => 0,
-			'conditional_logic' => 0,
-			'wrapper' => array(
-				'width' => '',
-				'class' => '',
-				'id' => '',
-			),
-			'choices' => array(
-				'date' => 'Date',
-			),
-			'default_value' => array(
-			),
-			'allow_null' => 0,
-			'multiple' => 0,
-			'ui' => 0,
-			'return_format' => 'value',
-			'ajax' => 0,
-			'placeholder' => '',
 		),
 	),
 	'location' => array(
@@ -1967,6 +1950,40 @@ acf_add_local_field_group(array(
 			'ui' => 0,
 			'ui_on_text' => '',
 			'ui_off_text' => '',
+		),
+		array(
+			'key' => 'field_5d952d159f9e0',
+			'label' => 'Background Colour',
+			'name' => 'prefooter_background_colour',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5d7690fb90cb5',
+						'operator' => '!=',
+						'value' => '1',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'white' => 'White',
+				'gray' => 'Gray',
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
 		),
 		array(
 			'key' => 'field_5d8a4c1e62050',

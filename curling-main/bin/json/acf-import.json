@@ -537,6 +537,32 @@
                 "mime_types": ""
             },
             {
+                "key": "field_5d9518da8da81",
+                "label": "Title Size",
+                "name": "callout_title_size",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "small": "Small",
+                    "medium": "Medium",
+                    "large": "Large"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
                 "key": "field_5d76bf1efe292",
                 "label": "Title",
                 "name": "callout_title",
@@ -1883,25 +1909,6 @@
         "title": "News Feed",
         "fields": [
             {
-                "key": "field_5d7aa5579a611",
-                "label": "Title",
-                "name": "news_feed_title",
-                "type": "text",
-                "instructions": "",
-                "required": 0,
-                "conditional_logic": 0,
-                "wrapper": {
-                    "width": "",
-                    "class": "",
-                    "id": ""
-                },
-                "default_value": "",
-                "placeholder": "",
-                "prepend": "",
-                "append": "",
-                "maxlength": ""
-            },
-            {
                 "key": "field_5d7aa55e9a612",
                 "label": "Category",
                 "name": "news_feed_category",
@@ -3125,16 +3132,17 @@
             },
             {
                 "key": "field_5d8a4c1e62050",
-                "label": "Image Location",
-                "name": "prefooter_image_location",
+                "label": "Type",
+                "name": "prefooter_type",
                 "type": "select",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
                     [
                         {
-                            "field": "field_5d72cc647d966",
-                            "operator": "!=empty"
+                            "field": "field_5d7690fb90cb5",
+                            "operator": "==",
+                            "value": "1"
                         }
                     ]
                 ],
@@ -3144,8 +3152,8 @@
                     "id": ""
                 },
                 "choices": {
-                    "left": "Left",
-                    "right": "Right"
+                    "tlbr": "Text Left \/ Image Right",
+                    "iltr": "Image Left \/ Text Right"
                 },
                 "default_value": [],
                 "allow_null": 0,
@@ -3188,18 +3196,22 @@
                 "mime_types": ""
             },
             {
-                "key": "field_5d93e73dcf913",
-                "label": "Background Colour",
-                "name": "prefooter_background_colour",
-                "type": "select",
+                "key": "field_5d94e772061ca",
+                "label": "Image X Offset",
+                "name": "prefooter_image_x_offset",
+                "type": "range",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": [
                     [
                         {
                             "field": "field_5d7690fb90cb5",
-                            "operator": "!=",
+                            "operator": "==",
                             "value": "1"
+                        },
+                        {
+                            "field": "field_5d72cc647d966",
+                            "operator": "!=empty"
                         }
                     ]
                 ],
@@ -3208,19 +3220,44 @@
                     "class": "",
                     "id": ""
                 },
-                "choices": {
-                    "white": "White",
-                    "gray": "Gray"
-                },
-                "default_value": [
-                    "white"
+                "default_value": 0,
+                "min": -500,
+                "max": 500,
+                "step": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_5d94e276bd698",
+                "label": "Image Y Offset",
+                "name": "prefooter_image_y_offset",
+                "type": "range",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d7690fb90cb5",
+                            "operator": "==",
+                            "value": "1"
+                        },
+                        {
+                            "field": "field_5d72cc647d966",
+                            "operator": "!=empty"
+                        }
+                    ]
                 ],
-                "allow_null": 0,
-                "multiple": 0,
-                "ui": 0,
-                "return_format": "value",
-                "ajax": 0,
-                "placeholder": ""
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": 0,
+                "min": -500,
+                "max": 500,
+                "step": "",
+                "prepend": "",
+                "append": ""
             }
         ],
         "location": [

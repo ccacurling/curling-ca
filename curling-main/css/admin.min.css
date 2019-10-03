@@ -736,6 +736,10 @@
   max-width: 970px;
 }
 
+.edit-post-layout__content .block-admin {
+  background-color: #f2f2f2;
+}
+
 .edit-post-layout__content .block-column {
   margin-left: -20px;
   margin-right: -20px;
@@ -1093,6 +1097,7 @@
 .edit-post-layout__content .header-event {
   position: relative;
   height: 90px;
+  background-color: #ffffff;
 }
 
 @media only screen and (min-width: 999px) {
@@ -2373,6 +2378,90 @@
 }
 
 @media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-large {
+    min-height: 700px;
+  }
+}
+
+.edit-post-layout__content .block-hero-main.block-hero-large .hero-media-container {
+  min-height: 350px;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-large .hero-media-container {
+    height: 100%;
+    min-height: auto;
+  }
+}
+
+.edit-post-layout__content .block-hero-main.block-hero-large .hero-background-image {
+  min-height: 350px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-large .hero-background-image {
+    min-height: auto;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-medium {
+    min-height: 577px;
+  }
+}
+
+.edit-post-layout__content .block-hero-main.block-hero-medium .hero-media-container {
+  min-height: 350px;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-medium .hero-media-container {
+    height: 100%;
+    min-height: auto;
+  }
+}
+
+.edit-post-layout__content .block-hero-main.block-hero-medium .hero-background-image {
+  min-height: 350px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-medium .hero-background-image {
+    min-height: auto;
+  }
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-small {
+    min-height: 430px;
+  }
+}
+
+.edit-post-layout__content .block-hero-main.block-hero-small .hero-media-container {
+  min-height: 250px;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-small .hero-media-container {
+    height: 100%;
+    min-height: auto;
+  }
+}
+
+.edit-post-layout__content .block-hero-main.block-hero-small .hero-background-image {
+  min-height: 250px;
+  object-fit: cover;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main.block-hero-small .hero-background-image {
+    min-height: auto;
+  }
+}
+
+@media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-hero-large {
     min-height: 700px;
   }
@@ -2428,7 +2517,13 @@
 }
 
 .edit-post-layout__content .block-hero-main .block-hero-inner {
-  display: flex;
+  display: none;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-hero-main .block-hero-inner {
+    display: flex;
+  }
 }
 
 .edit-post-layout__content .block-hero-inner {
@@ -2707,6 +2802,7 @@
 }
 
 .edit-post-layout__content .block-broadcast-callout .callout-info {
+  min-height: 298px;
   background-color: #4c4c4e;
 }
 
@@ -3600,9 +3696,10 @@
 
 .edit-post-layout__content .block-event-info {
   display: flex;
+  margin-bottom: 40px;
   background: #ffffff;
   border: 1px solid #f2f2f2;
-  box-shadow: -7px 16px 43px 0 rgba(76, 76, 78, 0.1);
+  box-shadow: -7px 16px 43px 0 rgba(76, 76, 78, 0.1), 0 0 4px 0 rgba(76, 76, 78, 0.1);
 }
 
 .edit-post-layout__content .block-event-info-column {
@@ -3745,6 +3842,7 @@
 .edit-post-layout__content .block-event-info-details {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding-top: 34px;
   padding-bottom: 30px;
   padding-left: 20px;
@@ -4552,8 +4650,8 @@
 }
 
 .edit-post-layout__content .block-news-feed {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 @media only screen and (max-width: 769px) {
@@ -4802,10 +4900,6 @@
   max-width: 1030px;
 }
 
-.edit-post-layout__content .block-callout {
-  max-width: 570px;
-}
-
 .edit-post-layout__content .callout-wrapper {
   display: flex;
   flex-direction: column;
@@ -4825,7 +4919,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 .edit-post-layout__content .callout-info {
@@ -4839,9 +4933,36 @@
   justify-content: space-between;
 }
 
+.edit-post-layout__content .callout-info-small {
+  padding-top: 20px;
+}
+
+.edit-post-layout__content .callout-info-medium {
+  padding-top: 30px;
+}
+
+.edit-post-layout__content .callout-info-large {
+  padding-top: 0;
+}
+
+.edit-post-layout__content .callout-info-large .callout-link {
+  margin-top: 5px;
+}
+
 .edit-post-layout__content .callout-title {
   margin-bottom: 17px;
+}
+
+.edit-post-layout__content .callout-title-small {
   max-width: 50%;
+}
+
+.edit-post-layout__content .callout-title-medium {
+  max-width: 70%;
+}
+
+.edit-post-layout__content .callout-title-large {
+  max-width: 100%;
 }
 
 .edit-post-layout__content .callout-excerpt {
@@ -6620,7 +6741,7 @@
 .edit-post-layout__content .slash {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -53%);
   width: 1440px;
   max-width: none;
   max-height: none;
@@ -6664,7 +6785,15 @@
   padding-bottom: 22px;
   padding-left: 22px;
   padding-right: 22px;
+}
+
+.edit-post-layout__content .championship-event-trigger {
   cursor: pointer;
+  text-decoration: underline;
+}
+
+.edit-post-layout__content .championship-event-trigger:hover {
+  color: #ed1940;
 }
 
 .edit-post-layout__content .championship-event-container.active .championship-event-title-container {
@@ -6686,6 +6815,7 @@
 
 .edit-post-layout__content .championship-events-container {
   display: none;
+  flex-direction: column;
   justify-content: space-between;
   margin-left: 22px;
   margin-right: 22px;
@@ -6694,6 +6824,22 @@
   padding-left: 28px;
   padding-right: 0;
   border-top: 1px solid #d8d8d8;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .championship-events-container {
+    flex-direction: row;
+  }
+}
+
+.edit-post-layout__content .championship-match-name {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .championship-match-name {
+    margin-bottom: 0;
+  }
 }
 
 .edit-post-layout__content .championship-match-links-container {
@@ -6706,12 +6852,21 @@
 
 .edit-post-layout__content .block-links-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-top: 31px;
   padding-bottom: 32px;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #f2f2f2;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-links-container {
+    flex-direction: row;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 .edit-post-layout__content .link-item-container {
