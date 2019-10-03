@@ -25,7 +25,7 @@ gulp.task('sass', () => {
     .pipe(rename((function (path) {
         path.extname = ".min.css";
     })))
-    .pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest('css/'));
 });
 

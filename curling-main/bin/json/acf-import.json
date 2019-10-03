@@ -3131,6 +3131,39 @@
                 "ui_off_text": ""
             },
             {
+                "key": "field_5d952d159f9e0",
+                "label": "Background Colour",
+                "name": "prefooter_background_colour",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5d7690fb90cb5",
+                            "operator": "!=",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "white": "White",
+                    "gray": "Gray"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "return_format": "value",
+                "ajax": 0,
+                "placeholder": ""
+            },
+            {
                 "key": "field_5d8a4c1e62050",
                 "label": "Type",
                 "name": "prefooter_type",
