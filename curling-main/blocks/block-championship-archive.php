@@ -27,6 +27,7 @@
           <div class="championship-event-title-container js-accordion-trigger">
             <h4 class="championship-event-name gray"><?php echo $championship_event['championship_event_name']; ?></h4>
             <p class="championship-event-trigger">Show All</p>
+            <img class="championship-event-trigger-mobile" src="<?php echo get_stylesheet_directory_uri(); ?>/images/triangle-down-gray.svg" alt="Triangle" />
           </div>
           <div class="championship-events-list-container js-accordion-content">
             <?php

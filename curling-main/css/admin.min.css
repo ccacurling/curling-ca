@@ -6780,20 +6780,47 @@
 
 .edit-post-layout__content .championship-event-title-container {
   display: flex;
+  position: relative;
   justify-content: space-between;
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 22px;
   padding-right: 22px;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .championship-event-title-container {
+    cursor: initial;
+  }
 }
 
 .edit-post-layout__content .championship-event-trigger {
+  display: none;
   cursor: pointer;
   text-decoration: underline;
 }
 
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .championship-event-trigger {
+    display: block;
+  }
+}
+
 .edit-post-layout__content .championship-event-trigger:hover {
   color: #ed1940;
+}
+
+.edit-post-layout__content .championship-event-trigger-mobile {
+  position: absolute;
+  right: 20px;
+  transform: translateY(50%);
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .championship-event-trigger-mobile {
+    display: none;
+  }
 }
 
 .edit-post-layout__content .championship-event-container.active .championship-event-title-container {
@@ -6807,6 +6834,10 @@
 
 .edit-post-layout__content .championship-event-container.active .championship-events-container {
   display: flex;
+}
+
+.edit-post-layout__content .championship-event-container.active .championship-event-trigger-mobile {
+  transform: translateY(50%) rotate(180deg);
 }
 
 .edit-post-layout__content .championship-events-list-container {
@@ -6826,7 +6857,7 @@
   border-top: 1px solid #d8d8d8;
 }
 
-@media only screen and (min-width: 999px) {
+@media only screen and (min-width: 769px) {
   .edit-post-layout__content .championship-events-container {
     flex-direction: row;
   }
@@ -6836,7 +6867,7 @@
   margin-bottom: 12px;
 }
 
-@media only screen and (min-width: 999px) {
+@media only screen and (min-width: 769px) {
   .edit-post-layout__content .championship-match-name {
     margin-bottom: 0;
   }
@@ -6848,6 +6879,10 @@
 
 .edit-post-layout__content .championship-match-link {
   color: #4c4c4e;
+}
+
+.edit-post-layout__content .championship-match-link:hover {
+  color: #ed1940;
 }
 
 .edit-post-layout__content .block-links-container {
