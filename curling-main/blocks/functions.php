@@ -396,6 +396,17 @@ function acf_blocks_init() {
       'keywords'				=> [ 'links' ]
     ]);
 
+    //CTRS Standings block-ctrs-standings
+    acf_register_block([
+      'name'						=> 'ctrs-standings',
+      'title'						=> __('CTRS Standings'),
+      'description'			=> __('A block to render a container CTRS Standings'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'ctrs', 'standings' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

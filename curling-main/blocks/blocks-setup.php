@@ -5441,4 +5441,82 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+//CTRS
+acf_add_local_field_group(array(
+	'key' => 'group_5d953e929f018',
+	'title' => 'CTRS Standings',
+	'fields' => array(
+		array(
+			'key' => 'field_5d953ea2f6366',
+			'label' => 'Number of Rows',
+			'name' => 'number_to_show',
+			'type' => 'number',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 5,
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'min' => 1,
+			'max' => 100,
+			'step' => '',
+		),
+		array(
+			'key' => 'field_5d953ed9f6367',
+			'label' => 'Men\'s Full Standings Link',
+			'name' => 'mens_full_link',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5d953efcf6368',
+			'label' => 'Women\'s Full Standings Link',
+			'name' => 'womens_full_link',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/ctrs-standings',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 endif;
