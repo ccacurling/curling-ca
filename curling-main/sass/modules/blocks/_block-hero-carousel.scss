@@ -3,14 +3,14 @@
     height: 540px!important;
 
     @include responsive-min($responsive-tablet) {
-      height: auto;
+      height: 700px!important;
     }
   }
   .ms-wk .ms-slide {
     height: 540px!important;
 
     @include responsive-min($responsive-tablet) {
-      height: auto;
+      height: 700px!important;
     }
   }
   .ms-tabs {
