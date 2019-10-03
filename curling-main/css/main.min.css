@@ -2303,6 +2303,7 @@ li {
 }
 
 .block-broadcast-callout .callout-info {
+  min-height: 586px;
   background-color: #4c4c4e;
 }
 
@@ -3819,6 +3820,7 @@ li {
 .block-event-info-details {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding-top: 34px;
   padding-bottom: 30px;
   padding-left: 20px;
