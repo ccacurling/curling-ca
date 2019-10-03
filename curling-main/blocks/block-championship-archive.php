@@ -26,7 +26,7 @@
         <div class="championship-event-container js-accordion">
           <div class="championship-event-title-container js-accordion-trigger">
             <h4 class="championship-event-name gray"><?php echo $championship_event['championship_event_name']; ?></h4>
-            <p>Show All</p>
+            <p class="championship-event-trigger">Show All</p>
           </div>
           <div class="championship-events-list-container js-accordion-content">
             <?php

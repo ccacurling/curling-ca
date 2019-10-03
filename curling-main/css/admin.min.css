@@ -6785,7 +6785,15 @@
   padding-bottom: 22px;
   padding-left: 22px;
   padding-right: 22px;
+}
+
+.edit-post-layout__content .championship-event-trigger {
   cursor: pointer;
+  text-decoration: underline;
+}
+
+.edit-post-layout__content .championship-event-trigger:hover {
+  color: #ed1940;
 }
 
 .edit-post-layout__content .championship-event-container.active .championship-event-title-container {
@@ -6807,6 +6815,7 @@
 
 .edit-post-layout__content .championship-events-container {
   display: none;
+  flex-direction: column;
   justify-content: space-between;
   margin-left: 22px;
   margin-right: 22px;
@@ -6815,6 +6824,22 @@
   padding-left: 28px;
   padding-right: 0;
   border-top: 1px solid #d8d8d8;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .championship-events-container {
+    flex-direction: row;
+  }
+}
+
+.edit-post-layout__content .championship-match-name {
+  margin-bottom: 12px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .championship-match-name {
+    margin-bottom: 0;
+  }
 }
 
 .edit-post-layout__content .championship-match-links-container {
@@ -6827,12 +6852,21 @@
 
 .edit-post-layout__content .block-links-container {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   padding-top: 31px;
   padding-bottom: 32px;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #f2f2f2;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .block-links-container {
+    flex-direction: row;
+    padding-left: 70px;
+    padding-right: 70px;
+  }
 }
 
 .edit-post-layout__content .link-item-container {
