@@ -5,75 +5,66 @@
  * This is the template that displays the hero block.
  */
 
-$image = get_field( 'hero_carousel_image' );
-$headline = get_field( 'hero_carousel_headline' );
+  $featured_posts = get_field( 'hero_carousel_featured_posts' );
 
-$carousel_items = get_field( 'hero_carousel_items' );
-
-?>
-
-<section class="block-hero-carousel">
-  <div class="hero-carousel-media-container">
-    <img class="hero-carousel-background-image" src="<?php echo $image['url']; ?>" alt="Background" />
-  </div>
-  <?php
-    if (!$image) {
-  ?>
-    <h2>
-      Add Hero Image...
-    </h2>
-  <?php
-    } else {
-  ?>
-    <div class="block-hero-carousel-inner">
-      <div class="hero-carousel-title-container">
-        <h1 class="hero-carousel-title">
-          <?php echo $headline; ?>
-        </h1>
-      </div>
-    </div>
-  <?php
+  function get_image($hero_featured_post, $size = 'large') {
+    if ($hero_featured_post) {
+      $image = get_field( 'hero_image', $hero_featured_post->ID);
+      if ($image) {
+        return $image['url'];
+      } else if (has_post_thumbnail( $hero_featured_post, $size )) {
+        return get_the_post_thumbnail_url( $hero_featured_post, $size );
+      } else {
+        $image = get_field( 'hero_image' );
+        if ($image) {
+          return $image['url'];
+        }
+      }
     }
-  ?>
+    $image = get_field( 'hero_image' );
+    if ($image) {
+      return $image['url'];
+    } else {
+      return null;
+    }
+  }
+?>
+<section class="block-hero-carousel js-hero-carousel">
+  <div class="master-slider ms-skin-default js-slider">
+    <?php 
+      foreach ($featured_posts as $key => $post) {
+        $featured_post = $post['hero_carousel_featured_post'];
+        $featured_post_thumbnail = get_image( $featured_post, 'small' );
+        $featured_post_hero = get_image( $featured_post, 'large' );
+        $featured_post_title = get_the_title( $featured_post );
 
-  <div class="hero-carousel-items-container">
-    <div class="hero-carousel-item">
-      <div class="hero-carousel-item-wrapper">
-        <div class="hero-carousel-item-image-container">
-          <img class="hero-carousel-item-image" src="<?php echo $image['url']; ?>" alt="Background" />
-        </div>
-        <div class="hero-carousel-item-title">
-          <h3>Name of carousel content</h3>
-        </div>
-      </div>
-      <div class="hero-carousel-item-progressbar">
-      </div>
-    </div>
+        if (!$featured_post_thumbnail) {
+          $featured_post_thumbnail = get_stylesheet_directory_uri()."/images/img-blank.svg";
+        }
 
-    <div class="hero-carousel-item">
-      <div class="hero-carousel-item-wrapper">
-        <div class="hero-carousel-item-image-container">
-          <img class="hero-carousel-item-image" src="<?php echo $image['url']; ?>" alt="Background" />
+        if (!$featured_post_hero) {
+          $featured_post_hero = get_stylesheet_directory_uri()."/images/img-blank.svg";
+        }
+    ?>
+      <div class="ms-slide">
+        <div class="hero-carousel-caption-container">
+          <img class="hero-carousel-image" src="<?php echo $featured_post_thumbnail; ?>" data-src="<?php echo $featured_post_thumbnail; ?>" alt=""/>     
+          <h1 class="hero-carousel-caption"><?php echo $featured_post_title; ?></h1>
         </div>
-        <div class="hero-carousel-item-title">
-          <h3>Name of carousel content</h3>
+        <div class="hero-carousel-thumbnail ms-thumb">
+          <div class="hero-carousel-thumbnail-top">
+            <img class="hero-carousel-thumbnail-image" src="<?php echo $featured_post_thumbnail; ?>" alt=""/>
+            <div class="hero-carousel-thumbnail-content">
+              <h3 class="hero-carousel-thumbnail-text"><?php echo $featured_post_title; ?></h3>
+            </div>
+          </div>
+          <div class="hero-carousel-thumbnail-timer">
+            <div class="hero-carousel-thumbnail-timer-progress"></div>
+          </div>
         </div>
       </div>
-      <div class="hero-carousel-item-progressbar">
-      </div>
-    </div>
-
-    <div class="hero-carousel-item">
-      <div class="hero-carousel-item-wrapper">
-        <div class="hero-carousel-item-image-container">
-          <img class="hero-carousel-item-image" src="<?php echo $image['url']; ?>" alt="Background" />
-        </div>
-        <div class="hero-carousel-item-title">
-          <h3>Name of carousel content</h3>
-        </div>
-      </div>
-      <div class="hero-carousel-item-progressbar">
-      </div>
-    </div>
+    <?php
+      }
+    ?>
   </div>
 </section>
