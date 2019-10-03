@@ -2868,6 +2868,7 @@ li {
   flex-basis: 37%;
   background-color: #d8d8d8;
   object-fit: cover;
+  max-width: 140px;
 }
 
 .hero-carousel-thumbnail-top {
