@@ -103,17 +103,18 @@
 .hero-carousel-caption {
   display: -webkit-box;
   position: absolute;
+  margin-top: 113px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 100%;
+  max-height: 420px;
   overflow: hidden;
-  text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 4;
   word-wrap: break-word;
-  z-index: 1;
-  margin-top: 113px;
-  max-width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
+  text-overflow: ellipsis;
   color: $white;
+  z-index: 1;
 
   @include responsive-min($responsive-tablet) {
     left: 130px;
