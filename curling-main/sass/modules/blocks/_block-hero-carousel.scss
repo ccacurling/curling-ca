@@ -6,6 +6,9 @@
       height: 700px!important;
     }
   }
+  .ms-thumb-frame img {
+    max-width: 140px;
+  }
   .ms-wk .ms-slide {
     height: 540px!important;
 
@@ -59,7 +62,6 @@
   flex-basis: 37%;
   background-color: $light-gray;
   object-fit: cover;
-  max-width: 140px;
 }
 
 .hero-carousel-thumbnail-top {

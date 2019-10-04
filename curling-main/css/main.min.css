@@ -2815,6 +2815,10 @@ li {
   }
 }
 
+.block-hero-carousel .ms-thumb-frame img {
+  max-width: 140px;
+}
+
 .block-hero-carousel .ms-wk .ms-slide {
   height: 540px !important;
 }
@@ -2868,7 +2872,6 @@ li {
   flex-basis: 37%;
   background-color: #d8d8d8;
   object-fit: cover;
-  max-width: 140px;
 }
 
 .hero-carousel-thumbnail-top {
