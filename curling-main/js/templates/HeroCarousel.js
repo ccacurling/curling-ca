@@ -34,6 +34,8 @@ jQuery(document).ready(function($) {
           view: 'fade',
           fillMode: 'cover',
           autoplay: true,
+          slideshowDelay: 5,
+          pauseOnHover: false,
           controls: {
             thumblist: {
               margin: 0,
@@ -50,12 +52,47 @@ jQuery(document).ready(function($) {
         });
         this.masterSlider = this.slider.masterslider('slider');
 
-        this.masterSlider.api.addEventListener(MSSliderEvent.WAITING , () => {
-          const $caption = this.masterSlider.api.view.currentSlide.$element.find('.js-hero-carousel-caption-text');
-          $caption.css('text-overflow', 'ellipsis');
+        this.isStarted = false;
+
+        this.masterSlider.api.addEventListener(MSSliderEvent.CHANGE_START , () => {
           const $thumb = this.slider.find('.ms-thumbs-cont .ms-thumb-frame').eq(this.masterSlider.api.view.currentSlide.index);
-          const $progressbar = $thumb.find('.hero-carousel-thumbnail-timer-progress');
-          $progressbar.css('width', this.masterSlider.api.currentTime() + '%' );
+          const $progressbar = $thumb.find('.js-hero-carousel-thumbnail-timer-progress');
+          $progressbar.addClass('initializing');
+          $progressbar.removeClass('deinitializing');
+          this.isStarted = true;
+          console.log('START');
+        });
+          
+        this.masterSlider.api.addEventListener(MSSliderEvent.CHANGE_END , () => {
+          // dispatches when the slider's current slide change ends.
+          const $thumb = this.slider.find('.ms-thumbs-cont .ms-thumb-frame').eq(this.masterSlider.api.view.currentSlide.index);
+          const $progressbar = $thumb.find('.js-hero-carousel-thumbnail-timer-progress');
+          $progressbar.removeClass('initializing');
+
+        });
+
+        this.masterSlider.api.addEventListener(MSSliderEvent.WAITING , () => {
+          const $thumb = this.slider.find('.ms-thumbs-cont .ms-thumb-frame').eq(this.masterSlider.api.view.currentSlide.index);
+          const $progressbar = $thumb.find('.js-hero-carousel-thumbnail-timer-progress');
+          const current = this.masterSlider.api.view.currentSlide.index;
+          const progress = this.masterSlider.api.currentTime();
+
+          if (this.isStarted) {
+            $progressbar.css('width', progress + '%' );
+            $progressbar.addClass('in-progress');
+          } else {
+            if (progress === 0 && !this.isStarted) {
+              $progressbar.css('width', '100%' );
+              $progressbar.removeClass('in-progress');
+              $progressbar.addClass('deinitializing');
+            } else {
+              $progressbar.css('width', progress + '%' );
+            }
+          }
+          console.log(current + ' = ' + progress + '-' + this.isStarted)
+          if (this.isStarted) {
+            this.isStarted = false;
+          }
         });
       });
     }

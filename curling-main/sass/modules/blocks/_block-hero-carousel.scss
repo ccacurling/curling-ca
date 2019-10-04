@@ -88,7 +88,16 @@
   width: 0;
   height: 6px;
   background-color: $red;
-  transition: width 0.1s ease-out;
+  transition: width 0.1s ease-out, opacity 0.5s ease-in;
+  opacity: 1;
+}
+
+.hero-carousel-thumbnail-timer-progress.initializing {
+  transition: width 0s linear;
+}
+
+.hero-carousel-thumbnail-timer-progress.deinitializing {
+  opacity: 0;
 }
 
 .hero-carousel-caption-container {

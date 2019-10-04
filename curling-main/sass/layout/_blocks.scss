@@ -18,6 +18,16 @@
   line-height: 14px;
 }
 
+.arrow-right-small-red-open:after {
+  display: inline-block;
+  content: ' ';
+  margin-left: 10px;
+  margin-bottom: 0;
+  width: 13px;
+  height: 6px;
+  background-image: url(../images/arrow-right-small-red-open.svg);
+}
+
 .arrow-right-large-cool-gray:after {
   display: inline-block;
   content: ' ';
