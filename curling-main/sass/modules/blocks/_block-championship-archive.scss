@@ -25,19 +25,40 @@
 
 .championship-event-title-container {
   display: flex;
+  position: relative;
   justify-content: space-between;
   padding-top: 22px;
   padding-bottom: 22px;
   padding-left: 22px;
   padding-right: 22px;
+  cursor: pointer;
+
+  @include responsive-min($responsive-tablet) {
+    cursor: initial;
+  }
 }
 
 .championship-event-trigger {
+  display: none;
   cursor: pointer;
   text-decoration: underline;
   
+  @include responsive-min($responsive-tablet) {
+    display: block;
+  }
+
   &:hover {
     color: $red;
+  }
+}
+
+.championship-event-trigger-mobile {
+  position: absolute;
+  right: 20px;
+  transform: translateY(50%);
+
+  @include responsive-min($responsive-tablet) {
+    display: none;
   }
 }
 
@@ -53,6 +74,10 @@
 
   .championship-events-container {
     display: flex;
+  }
+
+  .championship-event-trigger-mobile {
+    transform: translateY(50%) rotate(180deg);
   }
 }
 
@@ -73,7 +98,7 @@
   border-top: 1px solid $light-gray;
 
 
-    @include responsive-min($responsive-laptop) {
+    @include responsive-min($responsive-tablet) {
       flex-direction: row;
     }
 }
@@ -81,7 +106,7 @@
 .championship-match-name {
   margin-bottom: 12px;
 
-  @include responsive-min($responsive-laptop) {
+  @include responsive-min($responsive-tablet) {
     margin-bottom: 0;
   }
 }
@@ -92,4 +117,8 @@
 
 .championship-match-link {
   color: $gray;
+
+  &:hover {
+    color: $red;
+  }
 }

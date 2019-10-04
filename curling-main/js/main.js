@@ -2,6 +2,7 @@ import './templates/Accordion.js';
 import './templates/CurlingNav.js';
 import './templates/CurlingNavMobile.js';
 import './templates/ImageCarousel.js';
+import './templates/HeroCarousel.js';
 import './templates/VideoPlayer.js';
 import './templates/NewsFeed.js';
 import './templates/EventsFeed.js';
@@ -16,6 +17,7 @@ jQuery(document).ready(function($) {
   $('.js-hero-container').mediaPlayer();
   $('.js-timer').blockHeroTimer();
   $('.js-image-carousel').imageCarousel();
+  $('.js-hero-carousel').heroCarousel();
   $('.js-news-feed').newsFeed();
   $('.js-events-feed').eventsFeed();
   $('.js-schedule-links').scheduleLinks();
