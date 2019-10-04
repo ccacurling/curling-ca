@@ -6776,6 +6776,100 @@ h1.page-intro-main-headline {
   color: #ed1940;
 }
 
+.ctrs-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: #F2F2F2;
+  width: 100%;
+}
+
+.ctrs-container .ctrs-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ctrs-container .ctrs-title-wrapper h3 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.ctrs-container .ctrs-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 100%;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 570px;
+  width: 100%;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list h3 {
+  padding: 15px 0 15px 20px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #979797;
+  color: #4C4C4E;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list .stadings-container {
+  border: 1px solid #979797;
+  border-top: none;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list.ctrs-womens-list {
+  margin-right: 15px;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list.ctrs-mens-list {
+  margin-left: 15px;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list p {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list p.ctrs-even-row {
+  background-color: #fff;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list p span.name {
+  padding-left: 68px;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list p span.score {
+  padding-right: 60px;
+}
+
+.ctrs-container .standings-link {
+  color: #ed1940;
+  text-transform: uppercase;
+  font-family: "Knockout";
+  text-decoration: none;
+  padding-top: 24px;
+  padding-bottom: 36px;
+}
+
+@media only screen and (max-width: 999px) {
+  .ctrs-container {
+    display: none;
+  }
+}
+
 .block-slash {
   position: relative;
 }
