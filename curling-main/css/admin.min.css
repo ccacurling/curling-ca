@@ -2881,6 +2881,7 @@
   background-color: gray;
   object-fit: contain;
   width: 100%;
+  height: 100%;
 }
 
 .edit-post-layout__content .hero-carousel-thumbnail {
