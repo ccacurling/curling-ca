@@ -41,12 +41,14 @@
 ?>
 
 <section class="ctrs-container">
-  <h3><?php echo __("Canada Team Ranking System (CTRS)"); ?></h3>
-  <div class="ctrs-wrapper">
+  
+  <div class="ctrs-title-wrapper">
+    <h3><?php echo __("Canada Team Ranking System (CTRS)"); ?></h3>
+    <div class="ctrs-wrapper">
 
-
-    <div class="ctrs-standings-list womens-list">
-      <h3><?php __("CTRS Standinds Womens"); ?></h3>
+      <div class="ctrs-standings-list womens-list">
+        <h3><?php echo __("CTRS Standings Womens"); ?></h3>
+        <div class="stadings-container">
 
       <?php
         $counter = 0;
@@ -58,23 +60,23 @@
             $row_class = "ctrs-even-row";
           }
 
-          echo "<p class='{$row_class}'><span>{$team->skipfirstname} {$team->skiplastname}</span><span>{$team->points}</span></p>";
+          echo "<p class='{$row_class}'><span class='name'>{$team->skipfirstname} {$team->skiplastname}</span><span class='score'>{$team->points}</span></p>";
           if ($counter == $number_to_show){
             break;
           }
 
         }
       ?>
-      
+        </div>
       <?php if ( isset($womens_full_link) && !empty($womens_full_link) ) { ?>
-        <a href="<?php echo $womens_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?></a>
+        <a href="<?php echo $womens_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" /></a>
       <?php } ?>
-    </div>
+      </div>
 
     
-    <div class="ctrs-standings-list mens-list">
-      <h3><?php __("CTRS Standinds Mens"); ?></h3>
-
+      <div class="ctrs-standings-list mens-list">
+        <h3><?php echo __("CTRS Standings Mens"); ?></h3>
+        <div class="stadings-container">
       <?php
         $counter = 0;
         foreach ($mens_standing as $team) {
@@ -85,21 +87,20 @@
             $row_class = "ctrs-even-row";
           }
 
-          echo "<p class='{$row_class}'><span>{$team->skipfirstname} {$team->skiplastname}</span><span>{$team->points}</span></p>";
+          echo "<p class='{$row_class}'><span class='name'>{$team->skipfirstname} {$team->skiplastname}</span><span class='score'>{$team->points}</span></p>";
           if ($counter == $number_to_show){
             break;
           }
         }
       ?>
-
+        </div>
       <?php if ( isset($mens_full_link) && !empty($mens_full_link) ) { ?>
-        <a href="<?php echo $mens_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?></a>
+        <a href="<?php echo $mens_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" /></a>
       <?php } ?>
-    </div>
+      </div>
 
     
 
+    </div>
   </div>
-
-  
 </section>
