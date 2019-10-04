@@ -1,0 +1,68 @@
+.block-simple-callout {
+  margin-bottom: 20px;
+  background: $white;
+  border: 1px solid $cool-light-gray;
+  box-shadow: -7px 16px 43px 0 rgba(76,76,78,0.10);
+  border-radius: 2px;
+}
+
+.simple-callout-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include responsive-min($responsive-laptop) {
+    display: none;
+  }
+}
+
+.simple-callout-link-mobile {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: $light-gray;
+  width: 100%;
+  text-decoration: none;
+}
+
+.simple-callout-title-mobile {
+  text-align: center;
+}
+
+.simple-callout-desktop {
+  display: none;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 270px;
+  
+  @include responsive-min($responsive-laptop) {
+    display: flex;
+  }
+}
+
+.simple-callout-title {
+  margin-bottom: 12px;
+}
+
+.simple-callout-description {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.simple-callout-container {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.simple-callout-link {
+  padding-top: 12px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+}

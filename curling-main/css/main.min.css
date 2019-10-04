@@ -680,6 +680,16 @@ li {
   background-image: url(../images/arrow-right-extralarge-white.svg);
 }
 
+.arrow-right-large-gray:after {
+  display: inline-block;
+  content: ' ';
+  margin-left: 15px;
+  margin-bottom: 2px;
+  width: 18px;
+  height: 10px;
+  background-image: url(../images/arrow-right-large-gray.svg);
+}
+
 .arrow-right-large-red:after {
   display: inline-block;
   content: ' ';
@@ -837,6 +847,14 @@ li {
 
 .block-column.column-25-75 > .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
   flex-basis: 75%;
+}
+
+.block-column.column-75-25 > .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:first-child {
+  flex-basis: 75%;
+}
+
+.block-column.column-75-25 > .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child {
+  flex-basis: 25%;
 }
 
 .curling-sidebar {
@@ -2415,6 +2433,79 @@ li {
   margin-top: 10px;
 }
 
+.block-simple-callout {
+  margin-bottom: 20px;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
+  box-shadow: -7px 16px 43px 0 rgba(76, 76, 78, 0.1);
+  border-radius: 2px;
+}
+
+.simple-callout-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 999px) {
+  .simple-callout-mobile {
+    display: none;
+  }
+}
+
+.simple-callout-link-mobile {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #d8d8d8;
+  width: 100%;
+  text-decoration: none;
+}
+
+.simple-callout-title-mobile {
+  text-align: center;
+}
+
+.simple-callout-desktop {
+  display: none;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 28px;
+  padding-left: 20px;
+  padding-right: 20px;
+  min-height: 270px;
+}
+
+@media only screen and (min-width: 999px) {
+  .simple-callout-desktop {
+    display: flex;
+  }
+}
+
+.simple-callout-title {
+  margin-bottom: 12px;
+}
+
+.simple-callout-description {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.simple-callout-container {
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.simple-callout-link {
+  padding-top: 12px;
+  padding-bottom: 18px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .block-hero {
   display: flex;
   flex-direction: column;
@@ -3004,6 +3095,7 @@ li {
   margin-right: auto;
   height: 100%;
   background-color: #4c4c4e;
+  overflow: hidden;
 }
 
 .hero-carousel-caption {

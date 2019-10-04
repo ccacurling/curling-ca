@@ -407,6 +407,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'ctrs', 'standings' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'simple-callout',
+      'title'						=> __('Simple Callout'),
+      'description'			=> __('A block to render a simple callout block'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'simple', 'callout' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }
