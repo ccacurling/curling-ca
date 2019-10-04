@@ -2879,7 +2879,7 @@
 .edit-post-layout__content .hero-carousel-image {
   position: absolute;
   background-color: gray;
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 }
