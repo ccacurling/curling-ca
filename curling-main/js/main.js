@@ -22,5 +22,12 @@ jQuery(document).ready(function($) {
   $('.js-events-feed').eventsFeed();
   $('.js-schedule-links').scheduleLinks();
   $('.js-accordion').accordion();
+  $('.js-slick').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    speed: 500,
+    cssEase: 'linear',
+    dots: true,
+  });
 });
 
