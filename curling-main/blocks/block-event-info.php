@@ -36,7 +36,7 @@
   $buy_tickets_link = get_field( 'event_buy_tickets_link', 'Options' );
   $draw_schedule_link = get_field( 'event_draw_schedule_link', 'Options' );
   $where_to_watch_link = get_field( 'event_where_to_watch_link', 'Options' );
-  $meet_the_teams_link = get_field( 'event_meet_the_teams_link', 'Options' );
+  // $meet_the_teams_link = get_field( 'event_meet_the_teams_link', 'Options' );
   $event_logo = get_field( 'event_logo', 'Options' );
   $event_page_link = get_home_url();
 
@@ -172,21 +172,21 @@
         <?php
           if ($event_page_link) {  
         ?>
-          <a class="block-event-sponsor-link subdomain red arrow-right arrow-right-large-red" target="blank" href="<?php echo $event_page_link; ?>">More Information</a>
+          <a class="block-event-sponsor-link subdomain red arrow-right-item arrow-right-large-red" target="blank" href="<?php echo $event_page_link; ?>">More Information</a>
           <?php
           }
         ?>
         <?php
           if ($draw_schedule_link) {
         ?>
-          <a class="block-event-sponsor-link subdomain red arrow-right arrow-right-large-red" target="blank" href="<?php echo $draw_schedule_link; ?>">Event Schedule</a>
+          <a class="block-event-sponsor-link subdomain red arrow-right-item arrow-right-large-red" target="blank" href="<?php echo $draw_schedule_link; ?>">Event Schedule</a>
         <?php
           }
         ?>
         <?php
           if ($meet_the_teams_link) {
         ?>
-          <a class="block-event-sponsor-link subdomain red arrow-right arrow-right-large-red" target="blank" href="<?php echo $meet_the_teams_link; ?>">Meet the teams</a>
+          <a class="block-event-sponsor-link subdomain red arrow-right-item arrow-right-large-red" target="blank" href="<?php echo $meet_the_teams_link; ?>">Meet the teams</a>
         <?php
           }
         ?>
