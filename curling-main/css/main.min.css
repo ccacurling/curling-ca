@@ -881,6 +881,7 @@ li {
 @media only screen and (min-width: 999px) {
   .curling-sidebar {
     display: block;
+    margin-top: 100px;
   }
 }
 
