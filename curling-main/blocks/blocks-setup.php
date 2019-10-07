@@ -6003,4 +6003,51 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+//Options Page - Newsletter Setup
+acf_add_local_field_group(array(
+	'key' => 'group_5d9bc06e9650c',
+	'title' => 'Footer Newsletter Setup',
+	'fields' => array(
+		array(
+			'key' => 'field_5d9bc07c5f56b',
+			'label' => 'Selected Contact Form',
+			'name' => 'contact_form_id',
+			'type' => 'post_object',
+			'instructions' => 'Select the Contact Form to be used as the Newsletter Signup',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'post_type' => array(
+				0 => 'wpcf7_contact_form',
+			),
+			'taxonomy' => '',
+			'allow_null' => 0,
+			'multiple' => 0,
+			'return_format' => 'id',
+			'ui' => 1,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 endif;
