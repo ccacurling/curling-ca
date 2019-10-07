@@ -72,6 +72,29 @@
   }
 }
 
+.event-info-live-container {
+  position: absolute;
+  top: -34px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: $black;
+}
+
+.event-info-live-text {
+  display: flex;
+  &:after {
+    content: ' ';
+    display: inline-block;
+    margin-left: 12px;
+    height: 20px;
+    width: 20px;
+    background-color: $green;
+    border-radius: 50%;
+  }
+}
+
 .block-event-counter-container {
   display: none;
   justify-content: center;

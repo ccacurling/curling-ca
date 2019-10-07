@@ -50,6 +50,7 @@
   $current_date = new DateTime();
 
   $start_date_unix = $start_date ? date_format($start_date, 'U') : 0;
+  $end_date_unix = $end_date ? date_format($end_date, 'U') : 0;
   $current_date_unix = date_format($current_date, 'U');
 
   $start_date_string = $start_date ? $start_date->format('F j') : '';
@@ -62,9 +63,21 @@
   $hours = floor(($totalseconds - ($days * (3600 * 24))) / 3600);
   $minutes = floor(($totalseconds - ($days * (3600 * 24)) - ($hours * 3600)) / 60);
   $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($minutes * 60));
+
+  $is_live = $current_date_unix >= $start_date_unix && $current_date_unix <= $end_date_unix;
+  // $is_live = true; // TODO: TEST
 ?>
 
 <div class="block-event-info <?php echo $direction == 'left_to_right' ? 'block-event-info-row' : 'block-event-info-column'; ?> js-timer" data-date="<?php echo $start_date_unix; ?>">
+  <?php
+    if ($is_live) {
+  ?>
+    <div class="event-info-live-container">
+      <h4 class="event-info-live-text inverted">Live now</h4>
+    </div>
+  <?php
+    }
+  ?>
   <div class="event-info-top-container">
     <?php
       if ($event_logo) {
@@ -159,21 +172,21 @@
         <?php
           if ($event_page_link) {  
         ?>
-          <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $event_page_link; ?>">More Information</a>
+          <a class="block-event-sponsor-link subdomain red arrow-right arrow-right-large-red" target="blank" href="<?php echo $event_page_link; ?>">More Information</a>
           <?php
           }
         ?>
         <?php
           if ($draw_schedule_link) {
         ?>
-          <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $draw_schedule_link; ?>">Event Schedule</a>
+          <a class="block-event-sponsor-link subdomain red arrow-right arrow-right-large-red" target="blank" href="<?php echo $draw_schedule_link; ?>">Event Schedule</a>
         <?php
           }
         ?>
         <?php
           if ($meet_the_teams_link) {
         ?>
-          <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $meet_the_teams_link; ?>">Meet the teams</a>
+          <a class="block-event-sponsor-link subdomain red arrow-right arrow-right-large-red" target="blank" href="<?php echo $meet_the_teams_link; ?>">Meet the teams</a>
         <?php
           }
         ?>

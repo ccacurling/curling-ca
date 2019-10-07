@@ -30,7 +30,7 @@
   }
 ?>
 <section class="block-hero-carousel js-hero-carousel">
-  <div class="master-slider ms-skin-default js-slider">
+  <div class="master-slider ms-skin-default js-slider" data-delay="5">
     <?php 
       foreach ($featured_posts as $key => $post) {
         $featured_post = $post['hero_carousel_featured_post'];
@@ -59,7 +59,7 @@
             </div>
           </div>
           <div class="hero-carousel-thumbnail-timer">
-            <div class="hero-carousel-thumbnail-timer-progress"></div>
+            <div class="hero-carousel-thumbnail-timer-progress js-hero-carousel-thumbnail-timer-progress"></div>
           </div>
         </div>
       </div>

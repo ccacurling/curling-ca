@@ -9,6 +9,39 @@
     $category_slug = '';
     $is_category = is_category();
 
+    $site_list = [];
+
+    if (!$is_event) {
+      $sites = get_sites();
+
+      $site_list = array_filter($sites, function($site) {
+        switch_to_blog($site->blog_id);
+        $is_event = get_field( 'is_event', 'Options' );
+        $has_not_passed = false;
+        if ($is_event) {
+          $event_date_end = get_field( 'event_date_end', 'option' );
+          $end = strtotime($event_date_end);
+          $current = time();
+          $has_not_passed = $current >= $end;
+        }
+        restore_current_blog();
+        return $is_event && $has_not_passed;
+      });
+
+      usort($site_list, function($a, $b) {
+        switch_to_blog($a->blog_id);
+        $astart = get_field( 'event_date_start', 'option' );
+        restore_current_blog();
+        switch_to_blog($b->blog_id);
+        $bstart = get_field( 'event_date_start', 'option' );
+        restore_current_blog();
+        return ($astart < $bstart) ? -1 : 1; 
+      });
+
+      // TODO: TEMP!! This is only here to test the pagination functionality of the events feed
+      $site_list = array_merge($site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list);
+    }
+
     if ($is_category) {
       $category = get_queried_object();
       $category_slug = $category->slug;
@@ -249,7 +282,7 @@
     <?php
         foreach( $menu_items as $id => $menu_item ) {
             if ($menu_item->is_event_menu) {
-              create_menu_bar_event_item($menu_item->ID);
+              create_menu_bar_event_item($menu_item->ID, $site_list);
             } else if ($menu_item->children) {
               create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
             }
@@ -449,18 +482,17 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
 ?>
 
 <?php
-function create_menu_bar_event_item($parent_id) {
+function create_menu_bar_event_item($parent_id, $site_list) {
 ?>
   <div class="nav-menu-popup nav-menu-popup-event" data-name="<?php echo $parent_id; ?>">
     <div class="nav-menu-popup-wrapper content-fixed-padding">
       <div class="nav-menu-popup-event-left">
         <?php
-            TEMP_event_submenu();
+            event_submenu($site_list);
         ?>
       </div>
       <div class="nav-menu-popup-event-centre">
-        <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample1.png"; ?>" alt="Event1" />
-        <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample2.png"; ?>" alt="Event2" />
+        <?php event_posters($site_list); ?>
       </div>
       <div class="nav-menu-popup-event-right">
         <img class="ad" src="<?php echo get_stylesheet_directory_uri()."/images/img-ad-sample.png"; ?>" alt="Ad" />
@@ -509,105 +541,115 @@ function create_menu_bar_simple_item($parent_id, $menu_items, $is_current_page =
 ?>
 
 <?php
-  function TEMP_events_menu() {
+  function event_submenu($site_list) {
+    
 ?>
-  <li class="menu-item-mobile">
-    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile">
-      <h3 class="menu-item-toptitle-mobile gray">EXPLORE ALL UPCOMING EVENTS</h3>
-    </div>
-  </li>
-  <li class="menu-item-mobile">
-    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-      <div class="menu-item-wrapper-mobile">
-        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">HOME HARDWARE CANADA CUP</h4>
-        <span class="menu-item-description-mobile">November 27–December 1, 2019</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-    </div>
-  </li>
-  <li class="menu-item-mobile">
-    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-      <div class="menu-item-wrapper-mobile">
-        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">CONTINENTAL CUP</h4>
-        <span class="menu-item-description-mobile">January 9-12, 2020</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-    </div>
-  </li>
-  <li class="menu-item-mobile">
-    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-      <div class="menu-item-wrapper-mobile">
-        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">SCOTTIES TOURNAMENT OF HEARTS</h4>
-        <span class="menu-item-description-mobile">February 15-23, 2020</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-    </div>
-  </li>
-  <li class="menu-item-mobile">
-    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-      <div class="menu-item-wrapper-mobile">
-        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">TIM HORTONS BRIER</h4>
-        <span class="menu-item-description-mobile">February 28–March 8, 2020</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-    </div>
-  </li>
-  <li class="menu-item-mobile">
-    <div class="menu-item-container-mobile menu-item-subcontainer-mobile menu-item-subsubcontainer-mobile js-cta-menu-subitem-mobile" data-id="-1">
-      <div class="menu-item-wrapper-mobile">
-        <h4 class="menu-item-title-mobile menu-item-subtitle-mobile gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</h4>
-        <span class="menu-item-description-mobile">March 14-22, 2020</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right.svg"; ?>" alt="triangle right">
-    </div>
-  </li>
-  <li class="menu-item-events-mobile">
-    <img class="event-item" src="<?php echo get_stylesheet_directory_uri()."/images/img-event-sample1.png"; ?>" alt="Event1" />
-  </li>
+  <h2 class="menu-event-h2 gray">EXPLORE ALL UPCOMING EVENTS</h2>
+  <ul class="menu-nav menu-nav-events">
+    <?php
+      $i = 0;
+      foreach ($site_list as $key => $site) {
+        if ($i >= 5) {
+          break;
+        }
+        switch_to_blog($site->blog_id);
+        $name = get_field( 'event_name', 'option' );
+        $start_date_value = get_field( 'event_date_start', 'Options' );
+        $end_date_value = get_field( 'event_date_end', 'Options' );
+        $timezone = get_field( 'event_timezone', 'Options' );
+
+        $start_date_value = $start_date_value ? $start_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
+        $end_date_value = $end_date_value ? $end_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
+
+        $start_date = date_create_from_format('Y-m-d H:i:s e', $start_date_value);
+        $end_date = date_create_from_format('Y-m-d H:i:s e', $end_date_value);
+        $current_date = new DateTime();
+
+        $start_date_unix = $start_date ? date_format($start_date, 'U') : 0;
+        $current_date_unix = date_format($current_date, 'U');
+
+        $start_date_string = $start_date ? $start_date->format('F j') : '';
+        $end_date_short_string = $end_date ? $end_date->format('F j') : '';
+        $end_date_string = $end_date ? $end_date->format('F j Y') : '';
+        
+        $date = $start_date == $end_date ? ($end_date_string ? $end_date_string : $start_date_string) : ($end_date_string ? $start_date_string.'&nbsp;-&nbsp;'.$end_date_string : $start_date_string);
+        restore_current_blog();
+    ?>
+      <li class="menu-subitem menu-subitem-event">
+        <div class="menu-subitem-wrapper menu-item-selectable">
+          <span class="menu-item-content menu-item-title menu-item-subtitle gray"><?php echo $name; ?></span>
+          <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray"><?php echo $date; ?></span>
+        </div>
+        <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
+      </li>
+    <?php
+        $i++;
+      }
+    ?>
+  </ul>
 <?php
   }
 ?>
 
 <?php
-  function TEMP_event_submenu() {
+  function event_posters($site_list) {
 ?>
-  <h2 class="menu-event-h2 gray">EXPLORE ALL UPCOMING EVENTS</h2>
-  <ul class="menu-nav menu-nav-events">
-    <li class="menu-subitem menu-subitem-event">
-      <div class="menu-subitem-wrapper menu-item-selectable">
-        <span class="menu-item-content menu-item-title menu-item-subtitle gray">HOME HARDWARE CANADA CUP</span>
-        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">November 27–Dececember 1, 2019</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-    </li>
-    <li class="menu-subitem menu-subitem-event">
-      <div class="menu-subitem-wrapper menu-item-selectable">
-        <span class="menu-item-content menu-item-title menu-item-subtitle gray">CONTINENTAL CUP</span>
-        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">January 9–12, 2020</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-    </li>
-    <li class="menu-subitem menu-subitem-event">
-      <div class="menu-subitem-wrapper menu-item-selectable">
-        <span class="menu-item-content menu-item-title menu-item-subtitle gray">SCOTTIES TOURNAMENT OF HEARTS</span>
-        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">February 15-23, 2020</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-    </li>
-    <li class="menu-subitem menu-subitem-event">
-      <div class="menu-subitem-wrapper menu-item-selectable">
-        <span class="menu-item-content menu-item-title menu-item-subtitle gray">TIM HORTONS BRIER</span>
-        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">February 28–March 8, 2020</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-    </li>
-    <li class="menu-subitem menu-subitem-event">
-      <div class="menu-subitem-wrapper menu-item-selectable">
-        <span class="menu-item-content menu-item-title menu-item-subtitle gray">WORLD WOMEN’S CURLING CHAMPIONSHIP</span>
-        <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray">March 14-22, 2020</span>
-      </div>
-      <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
-    </li>
+  <ul class="menu-nav-events-centre-list menu-nav menu-nav-events">
+    <?php
+      $i = 0;
+      foreach ($site_list as $key => $site) {
+        if ($i >= 2) {
+          break;
+        }
+        switch_to_blog($site->blog_id);
+        $name = get_field( 'event_name', 'option' );
+        $start_date_value = get_field( 'event_date_start', 'Options' );
+        $end_date_value = get_field( 'event_date_end', 'Options' );
+        $timezone = get_field( 'event_timezone', 'Options' );
+
+        $start_date_value = $start_date_value ? $start_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
+        $end_date_value = $end_date_value ? $end_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
+
+        $start_date = date_create_from_format('Y-m-d H:i:s e', $start_date_value);
+        $end_date = date_create_from_format('Y-m-d H:i:s e', $end_date_value);
+        $current_date = new DateTime();
+
+        $start_date_unix = $start_date ? date_format($start_date, 'U') : 0;
+        $current_date_unix = date_format($current_date, 'U');
+
+        $start_date_string = $start_date ? $start_date->format('F j') : '';
+        $end_date_short_string = $end_date ? $end_date->format('F j') : '';
+        $end_date_string = $end_date ? $end_date->format('F j Y') : '';
+        
+        $date = $start_date == $end_date ? ($end_date_string ? $end_date_string : $start_date_string) : ($end_date_string ? $start_date_string.'&nbsp;-&nbsp;'.$end_date_string : $start_date_string);
+
+        $logo = get_field('event_logo', 'options');
+        $location = get_field ('event_location_title', 'options' );
+        $url = get_home_url();
+        $tickets_link = get_field ('event_buy_tickets_link', 'options' );
+
+        restore_current_blog();
+    ?>
+      <li class="menu-event-poster">
+        <div class="menu-event-poster-img-container">
+          <img class="menu-event-poster-img" src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"/>
+        </div>
+        <div class="menu-event-poster-bottom-container">
+          <h4 class="menu-event-poster-name gray"><?php echo $name; ?></h4>
+          <span class="menu-event-poster-date"><?php echo $date; ?></span>
+          <span class="menu-event-poster-location"><?php echo $location; ?></span>
+          <div class="menu-event-poster-link-container">
+            <div class="menu-event-poster-link-wrapper">
+              <a class="menu-event-poster-link btn-link-text red arrow-right-small-red-open" href="<?php echo $url; ?>">More Info</a>
+              <a class="menu-event-poster-link btn-link-text red arrow-right-small-red-open" href="<?php echo $tickets_link; ?>">Tickets</a>
+            </div>
+          </div>
+        </div>
+      </li>
+    <?php
+        $i++;
+      }
+    ?>
   </ul>
 <?php
   }

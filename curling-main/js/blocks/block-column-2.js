@@ -83,10 +83,11 @@ registerBlockType("cossette/block-column-2", {
             <SelectControl 
               value={attributes.type} 
               options={[
+                { label: '50/50', value: '50-50' },
                 { label: '25/75', value: '25-75' },
                 { label: '33/66', value: '33-66' },
-                { label: '50/50', value: '50-50' },
                 { label: '66/33', value: '66-33' },
+                { label: '75/25', value: '75-25' },
                 { label: '84/16', value: '84-16' }
               ]}
               onChange={(type) => {
