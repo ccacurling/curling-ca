@@ -437,6 +437,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'jobs' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'download-item-callout',
+      'title'						=> __('Download Content Callout'),
+      'description'			=> __('A block to render a download item callout block'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'download', 'item' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

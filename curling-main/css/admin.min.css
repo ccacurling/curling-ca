@@ -1511,6 +1511,66 @@
   }
 }
 
+.edit-post-layout__content .block-accordion-container {
+  padding-top: 22px;
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+}
+
+.edit-post-layout__content .block-accordion-container.active .accordion-container-content {
+  display: block;
+}
+
+.edit-post-layout__content .block-accordion-container.active .accordion-container-border {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.edit-post-layout__content .accordion-container-border {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: none;
+}
+
+.edit-post-layout__content .accordion-container-top {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 22px;
+}
+
+.edit-post-layout__content .accordion-container-content {
+  display: none;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.edit-post-layout__content .accordion-container-content > body, .edit-post-layout__content .accordion-container-content > h1, .edit-post-layout__content .accordion-container-content > h2, .edit-post-layout__content .accordion-container-content > h3, .edit-post-layout__content .accordion-container-content > h4, .edit-post-layout__content .accordion-container-content > h5, .edit-post-layout__content .accordion-container-content > h6, .edit-post-layout__content .accordion-container-content > p, .edit-post-layout__content .accordion-container-content > ol, .edit-post-layout__content .accordion-container-content > ul {
+  margin-bottom: 1.33em;
+}
+
+.edit-post-layout__content .download-item-left {
+  display: flex;
+  align-items: center;
+}
+
+.edit-post-layout__content .accordion-container-links {
+  display: flex;
+}
+
+.edit-post-layout__content .accordion-container-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.edit-post-layout__content .accordion-container-close {
+  position: absolute;
+  top: 10px;
+  right: 28px;
+}
+
 @keyframes expand {
   from {
     margin-left: 8px;
@@ -5304,7 +5364,7 @@
 }
 
 .edit-post-layout__content .callout-info-large {
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 .edit-post-layout__content .callout-info-large .callout-link {
@@ -7125,7 +7185,12 @@
 }
 
 .edit-post-layout__content .championship-name {
+  margin-top: 60px;
   margin-bottom: 40px;
+}
+
+.edit-post-layout__content .championship-name:first-child {
+  margin-top: 0;
 }
 
 .edit-post-layout__content .championship-event-container {
@@ -7530,6 +7595,24 @@
 
 .edit-post-layout__content .job-item-link {
   justify-content: flex-end;
+}
+
+.edit-post-layout__content .block-download-item-callout {
+  background-color: #d8d8d8;
+}
+
+.edit-post-layout__content .download-item-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 100px;
+}
+
+.edit-post-layout__content .download-item-title {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=admin.min.css.map */

@@ -1478,6 +1478,66 @@ li {
   }
 }
 
+.block-accordion-container {
+  padding-top: 22px;
+  border-top: 1px solid #d8d8d8;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+}
+
+.block-accordion-container.active .accordion-container-content {
+  display: block;
+}
+
+.block-accordion-container.active .accordion-container-border {
+  border-bottom: 1px solid #d8d8d8;
+}
+
+.accordion-container-border {
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: none;
+}
+
+.accordion-container-top {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 22px;
+}
+
+.accordion-container-content {
+  display: none;
+  position: relative;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.accordion-container-content > body, .accordion-container-content > h1, .accordion-container-content > h2, .accordion-container-content > h3, .accordion-container-content > h4, .accordion-container-content > h5, .accordion-container-content > h6, .accordion-container-content > p, .accordion-container-content > ol, .accordion-container-content > ul {
+  margin-bottom: 1.33em;
+}
+
+.download-item-left {
+  display: flex;
+  align-items: center;
+}
+
+.accordion-container-links {
+  display: flex;
+}
+
+.accordion-container-link {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.accordion-container-close {
+  position: absolute;
+  top: 10px;
+  right: 28px;
+}
+
 /**
  * Modules imports
  */
@@ -5282,7 +5342,7 @@ li {
 }
 
 .callout-info-large {
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 .callout-info-large .callout-link {
@@ -7331,6 +7391,24 @@ h1.page-intro-main-headline {
   justify-content: flex-end;
 }
 
+.block-download-item-callout {
+  background-color: #d8d8d8;
+}
+
+.download-item-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 100px;
+}
+
+.download-item-title {
+  margin-bottom: 0;
+}
+
 .block-slash {
   position: relative;
 }
@@ -7388,7 +7466,12 @@ h1.page-intro-main-headline {
 }
 
 .championship-name {
+  margin-top: 60px;
   margin-bottom: 40px;
+}
+
+.championship-name:first-child {
+  margin-top: 0;
 }
 
 .championship-event-container {

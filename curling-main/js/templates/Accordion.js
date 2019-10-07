@@ -22,6 +22,18 @@ jQuery(document).ready(function($) {
       if (this.trigger) {
         this.trigger.click(() => {
           this.accordion.toggleClass('active');
+
+          const $text = this.trigger.find('.js-accordion-trigger-text');
+          
+          if ($text) {
+            const show = $text.data('trigger-show');
+            const hide = $text.data('trigger-hide');
+            if (this.accordion.hasClass('active') && hide) {
+              $text.text(hide);
+            } else if (!this.accordion.hasClass('active') && show) {
+              $text.text(show);
+            }
+          }
         })
       }
     }

@@ -13,9 +13,11 @@ include 'functions-ajax.php';
 add_action('wp_enqueue_scripts', 'add_curling_styles');
 add_action('admin_enqueue_scripts', 'add_curling_admin_styles');
 // add_action('admin_menu', 'remove_admin_menus' );
+
 add_action('init', 'block_container_init');
 add_action('init', 'block_2_column_init');
 add_action('init', 'block_3_column_init');
+add_action('init', 'block_accordion_container_init');
 
 // Pull in Eventum-child custom post type registration for speakers (Teams)
 remove_action( 'init', 'themeum_eventum_post_type_speaker');
@@ -31,6 +33,64 @@ function wpa_alter_cat_links( $termlink, $term, $taxonomy ){
   } else {
     return $termlink;
   }
+}
+
+function block_accordion_container_init() {
+  $file = get_stylesheet_directory_uri().'/js/dist/block-accordion-container.min.js';
+  $filem = get_stylesheet_directory().'/js/dist/block-accordion-container.min.js';
+
+  wp_register_script(
+      'cossette-block-accordion-container',
+      $file,
+      array('wp-blocks', 'wp-element', 'wp-editor', 'wp-i18n'),
+      filemtime($filem)
+  );
+
+  register_block_type('cossette/block-accordion-container', array(
+      'editor_script' => 'cossette-block-accordion-container',
+      'render_callback' => function( $attributes, $content = '' ) {
+          return '<div class="block-accordion-container js-accordion">'.
+            '<div class="accordion-container-top">'.
+            '<h4 class="gray">'.$attributes['title'].'</h4>'.
+            '<div class="accordion-container-links">'.
+            '<a class="accordion-container-link gray js-accordion-trigger" href="#" onClick="return false;"><p class="js-accordion-trigger-text" data-trigger-show="'.$attributes['show_label'].'" data-trigger-hide="'.$attributes['hide_label'].'">'.$attributes['show_label'].'</p></a>'.
+            '<a class="accordion-container-link gray js-accordion-trigger" href="#" onClick="return false;"><p>'.$attributes['additional_link_title'].'</p></a>'.
+            '</div>'.
+            '</div>'.
+            '<div class="accordion-container-border"></div>'.
+            '<div class="accordion-container-content js-accordion-content">'.
+            '<a class="accordion-container-link gray js-accordion-trigger" href="#" onClick="return false;"><img class="accordion-container-close" src="'.get_stylesheet_directory_uri().'/images/symbol-close.svg" alt="Site Logo" /></a>'.
+            $content.
+            '</div>'.
+            '</div>';
+      },
+      'attributes' => [
+        'title' => [
+          'default' => '',
+          'type' => 'string'
+        ],
+        'show_label' => [
+          'default' => 'Show',
+          'type' => 'string'
+        ],
+        'hide_label' => [
+          'default' => 'Hide',
+          'type' => 'string'
+        ],
+        'additional_link_title' => [
+          'default' => '',
+          'type' => 'string'
+        ],
+        'additional_link_url' => [
+          'default' => '',
+          'type' => 'string'
+        ],
+        'additional_link_target' => [
+          'default' => '',
+          'type' => 'string'
+        ]
+      ]
+  ));
 }
 
 function block_container_init() {
