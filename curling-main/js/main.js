@@ -9,6 +9,7 @@ import './templates/EventsFeed.js';
 import './templates/ScheduleLinks.js';
 import './templates/FindClub.js';
 import './templates/CTRS.js';
+import './templates/SearchHandler.js';
 import './blocks/block-timer.js';
 import './blocks/block-text-callouts-group';
 

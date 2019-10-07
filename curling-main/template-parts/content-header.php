@@ -169,9 +169,17 @@
                           <?php
                               }
                           ?>
+                          <li class="menu-item menu-item-selectable search-menu">
+                            <a class="clear search-menu-link" href="#">
+                              <h4 class="menu-item-content menu-item-small menu-item-link"><?php echo __("Search"); ?></h4>
+                            </a>
+                          </li>
+                          <li class="search-bar hide">
+                            <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
+                          </li>
                           <li class="menu-item menu-item-donate">
                             <a class="menu-item-donate-link clear" href="">
-                              <h4 class="menu-item-small inverted">Donate</h4>
+                              <h4 class="menu-item-small inverted"><?php echo __("Donate"); ?></h4>
                             </a>
                           </li>
                       </ul>

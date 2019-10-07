@@ -189,3 +189,23 @@
         }
     }
 }
+
+.search-menu.hide {
+    display: none;
+}
+
+.search-bar {
+
+    &.hide {
+        display: none;
+    }
+
+    .wpdreams_asl_container {
+        margin-top: 6px !important;
+    }
+
+    .orig {
+        text-transform: uppercase;
+        letter-spacing: 0.4px;
+    }
+}

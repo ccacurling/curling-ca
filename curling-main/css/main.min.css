@@ -7302,4 +7302,21 @@ h1.page-intro-main-headline {
   width: unset;
 }
 
+.search-menu.hide {
+  display: none;
+}
+
+.search-bar.hide {
+  display: none;
+}
+
+.search-bar .wpdreams_asl_container {
+  margin-top: 6px !important;
+}
+
+.search-bar .orig {
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
 /*# sourceMappingURL=main.min.css.map */
