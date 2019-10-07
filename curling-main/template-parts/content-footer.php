@@ -1,6 +1,8 @@
 <?php
     $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Footer' );
     $primary_menu_items = wp_get_nav_menu_items( 'Menu - Legal' );
+
+    $contact_form_id = get_field('contact_form_id', 'option');
 ?>
 
 <div class="footer footer-gray">
@@ -37,7 +39,9 @@
                 <button class="newsletter-signup-submit btn btn-small btn-red" type="submit">Submit</button>
             </form> -->
             <?php 
-            echo do_shortcode('[contact-form-7 id="498543"]');
+            if ( isset($contact_form_id) && !empty($contact_form_id) ) {
+                echo do_shortcode('[contact-form-7 id="' . $contact_form_id . '"]');
+            }
             ?>
           </div>
           <div class="footer-nav-menu-social">
