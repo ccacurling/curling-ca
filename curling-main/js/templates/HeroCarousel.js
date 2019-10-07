@@ -60,7 +60,6 @@ jQuery(document).ready(function($) {
           $progressbar.addClass('initializing');
           $progressbar.removeClass('deinitializing');
           this.isStarted = true;
-          console.log('START');
         });
           
         this.masterSlider.api.addEventListener(MSSliderEvent.CHANGE_END , () => {
@@ -89,7 +88,7 @@ jQuery(document).ready(function($) {
               $progressbar.css('width', progress + '%' );
             }
           }
-          console.log(current + ' = ' + progress + '-' + this.isStarted)
+
           if (this.isStarted) {
             this.isStarted = false;
           }

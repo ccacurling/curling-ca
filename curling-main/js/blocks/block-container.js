@@ -32,7 +32,6 @@ registerBlockType("cossette/block-container", {
   edit: withDispatch(dispatch => {
     dispatch('core/editor').setTemplateValidity(true);
   })(({ className, setAttributes, attributes }) => {
-    console.log(className);
     const extraClasses = attributes.is_narrow_width ? 'narrow-width' : '';
     return (
       <div className={extraClasses}>

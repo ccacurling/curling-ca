@@ -1,0 +1,21 @@
+.block-download-item-callout {
+  background-color: $light-gray;
+}
+
+.download-item-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 30px;
+  padding-right: 100px;
+}
+
+.download-item-title {
+  margin-bottom: 0;
+}
+
+.download-item-btn {
+  // background-color: $red;
+}
