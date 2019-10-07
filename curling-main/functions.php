@@ -5,6 +5,7 @@ add_action('init', 'create_post_type');
 add_action('init', 'create_sponsors_post_type');
 add_action('init', 'create_activity_post_type');
 add_action('init', 'create_draw_schedule_post_type');
+add_action('init', 'create_job_post_type');
 
 include 'blocks/functions.php';
 include 'functions-ajax.php';
@@ -280,4 +281,23 @@ function create_draw_schedule_post_type() {
         ],
         'public' => false
     ]);
+}
+
+function create_job_post_type() {
+  register_post_type('Job', [
+      'labels' => [
+          'name'          => __('Jobs'),
+          'singular_name' => __('Job'),
+          'menu_name'     => __('Jobs'),
+          'all_items'     => __('All Jobs')
+      ],
+      'menu_icon' => 'dashicons-groups',
+      'public' => true,
+      'supports' => [ 'title' ],
+      'has_archive' => true,
+      'show_in_rest' => true,
+      'rewrite' => [
+          'slug' => 'draw-schedule'
+      ]
+  ]);
 }
