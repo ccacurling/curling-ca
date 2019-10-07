@@ -6854,6 +6854,27 @@ h1.page-intro-main-headline {
   padding-right: 60px;
 }
 
+.ctrs-container .ctrs-doubles .ctrs-standings-list p span.name {
+  padding-left: 0;
+}
+
+.ctrs-container .ctrs-doubles .ctrs-standings-list p span.rank {
+  padding-left: 68px;
+}
+
+.ctrs-container .ctrs-cup .ctrs-standings-list p span.name {
+  padding-left: 0;
+  padding-right: 60px;
+}
+
+.ctrs-container .ctrs-cup .ctrs-standings-list p span.rank {
+  padding-left: 68px;
+}
+
+.ctrs-container .ctrs-cup .ctrs-standings-list p span.score {
+  padding-right: 0;
+}
+
 .ctrs-container .standings-link {
   color: #ed1940;
   text-transform: uppercase;
@@ -6861,6 +6882,34 @@ h1.page-intro-main-headline {
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 36px;
+}
+
+.ctrs-container .ctrs-menu-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.ctrs-container .ctrs-menu-container .ctrs-menu {
+  font-family: "Knockout";
+  color: #4C4C4E;
+  padding: 20px 60px 20px 20px;
+  text-transform: uppercase;
+  background-color: #D8D8D8;
+  cursor: pointer;
+}
+
+.ctrs-container .ctrs-menu-container .ctrs-menu:hover {
+  color: #FFF;
+}
+
+.ctrs-container .ctrs-menu-container .ctrs-menu.selected {
+  background-color: #ed1940;
+  color: #FFF;
+  cursor: unset;
+}
+
+.ctrs-container .hide {
+  display: none;
 }
 
 @media only screen and (max-width: 999px) {

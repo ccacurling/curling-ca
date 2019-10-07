@@ -8,6 +8,7 @@ import './templates/NewsFeed.js';
 import './templates/EventsFeed.js';
 import './templates/ScheduleLinks.js';
 import './templates/FindClub.js';
+import './templates/CTRS.js';
 import './blocks/block-timer.js';
 import './blocks/block-text-callouts-group';
 
