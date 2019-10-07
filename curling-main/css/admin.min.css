@@ -7420,6 +7420,27 @@
   padding-right: 60px;
 }
 
+.edit-post-layout__content .ctrs-container .ctrs-doubles .ctrs-standings-list p span.name {
+  padding-left: 0;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-doubles .ctrs-standings-list p span.rank {
+  padding-left: 68px;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-cup .ctrs-standings-list p span.name {
+  padding-left: 0;
+  padding-right: 60px;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-cup .ctrs-standings-list p span.rank {
+  padding-left: 68px;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-cup .ctrs-standings-list p span.score {
+  padding-right: 0;
+}
+
 .edit-post-layout__content .ctrs-container .standings-link {
   color: #ed1940;
   text-transform: uppercase;
@@ -7427,6 +7448,34 @@
   text-decoration: none;
   padding-top: 24px;
   padding-bottom: 36px;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-menu-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-menu-container .ctrs-menu {
+  font-family: "Knockout";
+  color: #4C4C4E;
+  padding: 20px 60px 20px 20px;
+  text-transform: uppercase;
+  background-color: #D8D8D8;
+  cursor: pointer;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-menu-container .ctrs-menu:hover {
+  color: #FFF;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-menu-container .ctrs-menu.selected {
+  background-color: #ed1940;
+  color: #FFF;
+  cursor: unset;
+}
+
+.edit-post-layout__content .ctrs-container .hide {
+  display: none;
 }
 
 @media only screen and (max-width: 999px) {
