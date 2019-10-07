@@ -7185,7 +7185,12 @@
 }
 
 .edit-post-layout__content .championship-name {
+  margin-top: 60px;
   margin-bottom: 40px;
+}
+
+.edit-post-layout__content .championship-name:first-child {
+  margin-top: 0;
 }
 
 .edit-post-layout__content .championship-event-container {

@@ -7466,7 +7466,12 @@ h1.page-intro-main-headline {
 }
 
 .championship-name {
+  margin-top: 60px;
   margin-bottom: 40px;
+}
+
+.championship-name:first-child {
+  margin-top: 0;
 }
 
 .championship-event-container {
