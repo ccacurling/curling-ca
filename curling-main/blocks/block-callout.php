@@ -15,7 +15,7 @@
 ?>
 
 <section class="block-callout callout-colour-<?php echo $callout_background_colour; ?>">
-  <div class="callout-wrapper">
+  <div class="callout-wrapper callout-wrapper-<?php echo $callout_direction; ?>">
     <?php 
       if ($callout_image) {
     ?>

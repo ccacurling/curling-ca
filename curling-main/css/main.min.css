@@ -5356,6 +5356,14 @@ li {
   min-height: 506px;
 }
 
+.callout-wrapper-row {
+  flex-direction: row;
+}
+
+.callout-wrapper-row .callout-thumbnail-container {
+  height: auto;
+}
+
 .callout-thumbnail-container {
   height: 288px;
 }

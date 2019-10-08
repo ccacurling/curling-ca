@@ -534,10 +534,12 @@
                     "id": ""
                 },
                 "choices": {
-                    "row": "Row",
-                    "column": "Column"
+                    "column": "Column",
+                    "row": "Row"
                 },
-                "default_value": [],
+                "default_value": [
+                    "column"
+                ],
                 "allow_null": 0,
                 "multiple": 0,
                 "ui": 0,

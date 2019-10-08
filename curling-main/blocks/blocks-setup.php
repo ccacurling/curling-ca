@@ -197,10 +197,11 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'row' => 'Row',
 				'column' => 'Column',
+				'row' => 'Row',
 			),
 			'default_value' => array(
+				0 => 'column',
 			),
 			'allow_null' => 0,
 			'multiple' => 0,

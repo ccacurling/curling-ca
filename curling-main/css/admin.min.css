@@ -5378,6 +5378,14 @@
   min-height: 506px;
 }
 
+.edit-post-layout__content .callout-wrapper-row {
+  flex-direction: row;
+}
+
+.edit-post-layout__content .callout-wrapper-row .callout-thumbnail-container {
+  height: auto;
+}
+
 .edit-post-layout__content .callout-thumbnail-container {
   height: 288px;
 }
