@@ -2996,6 +2996,11 @@
   border-bottom: 1px solid #d8d8d8;
 }
 
+.edit-post-layout__content .block-divider.divider-small {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .edit-post-layout__content .block-broadcast-callout .callout-wrapper {
   position: relative;
 }
@@ -5386,11 +5391,8 @@
   flex-direction: row;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
   min-height: 250px;
   box-shadow: none;
-  border-bottom: 1px solid #d8d8d8;
 }
 
 .edit-post-layout__content .callout-wrapper-row .callout-thumbnail-container {

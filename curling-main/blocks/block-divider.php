@@ -6,5 +6,9 @@
  */
 ?>
 
-<section class="block-divider">
+<?php
+  $divider_size = get_field( 'divider_size' );
+?>
+
+<section class="block-divider divider-<?php echo $divider_size; ?>">
 </section>
