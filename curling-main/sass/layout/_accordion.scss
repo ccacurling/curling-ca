@@ -1,11 +1,11 @@
 .block-accordion-container {
   padding-top: 22px;
   border-top: 1px solid $light-gray;
-  border-bottom: 1px solid $light-gray;
   border-left: 1px solid $light-gray;
-
+  border-right: 1px solid $light-gray;
+  
   &:last-of-type {
-    border-right: 1px solid $light-gray;
+    border-bottom: 1px solid $light-gray;
   }
 
   &.active {
