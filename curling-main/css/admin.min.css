@@ -5323,6 +5323,14 @@
   max-width: 1030px;
 }
 
+.edit-post-layout__content .callout-colour-white {
+  background-color: #ffffff;
+}
+
+.edit-post-layout__content .callout-colour-gray {
+  background-color: #f2f2f2;
+}
+
 .edit-post-layout__content .callout-wrapper {
   display: flex;
   flex-direction: column;
@@ -5330,7 +5338,6 @@
   margin-bottom: 11px;
   height: 100%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
-  background-color: white;
   min-height: 506px;
 }
 

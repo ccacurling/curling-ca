@@ -3,6 +3,14 @@
   // max-height: 500px;
 }
 
+.callout-colour-white {
+  background-color: $white;
+}
+
+.callout-colour-gray {
+  background-color: $cool-light-gray;
+}
+
 .callout-wrapper {
   display: flex;
   flex-direction: column;
@@ -10,7 +18,6 @@
   margin-bottom: 11px;
   height: 100%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
-  background-color: white;
   min-height: 506px;
 }
 
