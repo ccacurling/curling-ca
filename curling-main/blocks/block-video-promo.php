@@ -9,7 +9,7 @@
   $video_promo_title = get_field( 'video_promo_title' );
   $video_promo_link_label = get_field( 'video_promo_link_label' );
 
-  $thumbnail = 'https://img.youtube.com/vi/'.$video_promo_youtube_video_id.'/maxresdefault.jpg';
+  $thumbnail = 'https://img.youtube.com/vi/'.$video_promo_youtube_video_id.'/hqdefault.jpg';
   $link = 'https://www.youtube.com/watch?v='.$video_promo_youtube_video_id;
 ?>
 
