@@ -5338,6 +5338,10 @@ li {
   max-width: 1030px;
 }
 
+.block-callout:last-of-type .callout-wrapper-row {
+  border-bottom: none;
+}
+
 .callout-colour-white {
   background-color: #ffffff;
 }
@@ -5358,10 +5362,23 @@ li {
 
 .callout-wrapper-row {
   flex-direction: row;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 250px;
+  box-shadow: none;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .callout-wrapper-row .callout-thumbnail-container {
   height: auto;
+  flex-basis: 41%;
+}
+
+.callout-wrapper-row .callout-info {
+  flex-basis: 59%;
+  justify-content: flex-start;
 }
 
 .callout-thumbnail-container {

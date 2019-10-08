@@ -1,6 +1,9 @@
 .block-callout {
-  // max-width: 570px;
-  // max-height: 500px;
+  &:last-of-type {
+    .callout-wrapper-row {
+      border-bottom: none;
+    }
+  }
 }
 
 .callout-colour-white {
@@ -23,9 +26,22 @@
 
 .callout-wrapper-row {
   flex-direction: row;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  min-height: 250px;
+  box-shadow: none;
+  border-bottom: 1px solid $light-gray;
 
   .callout-thumbnail-container {
     height: auto;
+    flex-basis: 41%;
+  }
+
+  .callout-info {
+    flex-basis: 59%;
+    justify-content: flex-start;
   }
 }
 
