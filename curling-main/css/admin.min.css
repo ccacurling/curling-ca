@@ -7627,6 +7627,10 @@
   margin-bottom: 0;
 }
 
+.edit-post-layout__content .block-video-promo {
+  margin-bottom: 30px;
+}
+
 .edit-post-layout__content .video-promo-thumbnail {
   position: relative;
 }

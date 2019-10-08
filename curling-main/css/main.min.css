@@ -7421,6 +7421,10 @@ h1.page-intro-main-headline {
   margin-bottom: 0;
 }
 
+.block-video-promo {
+  margin-bottom: 30px;
+}
+
 .video-promo-thumbnail {
   position: relative;
 }
