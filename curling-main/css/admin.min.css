@@ -6483,7 +6483,6 @@
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-page-intro {
     margin-top: 50px;
-    padding-left: 120px;
   }
 }
 
@@ -6860,6 +6859,11 @@
   }
 }
 
+.edit-post-layout__content .block-featured-event-scores-link {
+  display: flex;
+  align-items: center;
+}
+
 .edit-post-layout__content .block-featured-event-scores-mobile {
   display: flex;
   padding-top: 31px;
@@ -6959,7 +6963,7 @@
 
 .edit-post-layout__content .block-featured-event-link-container {
   padding-top: 25px;
-  padding-right: 30px;
+  padding-left: 10px;
 }
 
 .edit-post-layout__content .block-featured-event-info-link-container {
@@ -7621,6 +7625,18 @@
 
 .edit-post-layout__content .download-item-title {
   margin-bottom: 0;
+}
+
+.edit-post-layout__content .video-promo-thumbnail {
+  position: relative;
+}
+
+.edit-post-layout__content .video-promo-img-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=admin.min.css.map */

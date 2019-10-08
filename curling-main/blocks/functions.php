@@ -447,6 +447,16 @@ function acf_blocks_init() {
       'keywords'				=> [ 'download', 'item' ]
     ]);
 
+    acf_register_block([
+      'name'						=> 'video-promo',
+      'title'						=> __('Video Promo'),
+      'description'			=> __('A block to render a video promo block'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'video', 'promo' ]
+    ]);
+
     acf_add_options_page('Options');
   }
 }

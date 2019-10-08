@@ -89,6 +89,11 @@
   }
 }
 
+.block-featured-event-scores-link {
+  display: flex;
+  align-items: center;
+}
+
 .block-featured-event-scores-mobile {
   display: flex;
   padding-top: 31px;
@@ -179,7 +184,8 @@
 
 .block-featured-event-link-container {
   padding-top: 25px;
-  padding-right: 30px;
+  padding-left: 10px;
+  // padding-right: 30px;
 }
 
 .block-featured-event-info-link-container {

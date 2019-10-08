@@ -6429,7 +6429,6 @@ p.item-label {
 @media only screen and (min-width: 769px) {
   .block-page-intro {
     margin-top: 50px;
-    padding-left: 120px;
   }
 }
 
@@ -6838,6 +6837,11 @@ h1.page-intro-main-headline {
   }
 }
 
+.block-featured-event-scores-link {
+  display: flex;
+  align-items: center;
+}
+
 .block-featured-event-scores-mobile {
   display: flex;
   padding-top: 31px;
@@ -6937,7 +6941,7 @@ h1.page-intro-main-headline {
 
 .block-featured-event-link-container {
   padding-top: 25px;
-  padding-right: 30px;
+  padding-left: 10px;
 }
 
 .block-featured-event-info-link-container {
@@ -7415,6 +7419,18 @@ h1.page-intro-main-headline {
 
 .download-item-title {
   margin-bottom: 0;
+}
+
+.video-promo-thumbnail {
+  position: relative;
+}
+
+.video-promo-img-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 .block-slash {
