@@ -199,9 +199,9 @@
   box-shadow: 0 8px 12px 0 rgba(0,0,0,0.15);
   z-index: 3;
   
-  &:not(.nav-menu-popup-active) {
-    top: 165px;
-  }
+  // &:not(.nav-menu-popup-active) {
+  //    top: 165px;
+  // }
 
   &.active {
     transform: translateY(0);

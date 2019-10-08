@@ -39,7 +39,7 @@
       });
 
       // TODO: TEMP!! This is only here to test the pagination functionality of the events feed
-      $site_list = array_merge($site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list);
+      // $site_list = array_merge($site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list);
     }
 
     if ($is_category) {

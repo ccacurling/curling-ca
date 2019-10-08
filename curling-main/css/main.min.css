@@ -2076,10 +2076,6 @@ li {
   z-index: 3;
 }
 
-.nav-menu-popup:not(.nav-menu-popup-active) {
-  top: 165px;
-}
-
 .nav-menu-popup.active {
   transform: translateY(0);
   z-index: 3;

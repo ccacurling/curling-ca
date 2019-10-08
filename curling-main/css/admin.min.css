@@ -2098,10 +2098,6 @@
   z-index: 3;
 }
 
-.edit-post-layout__content .nav-menu-popup:not(.nav-menu-popup-active) {
-  top: 165px;
-}
-
 .edit-post-layout__content .nav-menu-popup.active {
   transform: translateY(0);
   z-index: 3;
