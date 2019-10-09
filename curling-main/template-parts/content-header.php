@@ -277,16 +277,41 @@
                       }
                   ?>
               </ul>
+              <?php
+                if ($is_event) {
+              ?>
+                <div class="nav-menu-popup-container">
+                  <?php
+                      foreach( $menu_items as $id => $menu_item ) {
+                          if ($menu_item->is_event_menu) {
+                            create_menu_bar_event_item($menu_item->ID, $site_list);
+                          } else if ($menu_item->children) {
+                            create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
+                          }
+                      }
+                  ?>
+                </div>
+              <?php
+                }
+              ?>
         </div>
     </div>
     <?php
-        foreach( $menu_items as $id => $menu_item ) {
-            if ($menu_item->is_event_menu) {
-              create_menu_bar_event_item($menu_item->ID, $site_list);
-            } else if ($menu_item->children) {
-              create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
+      if (!$is_event) {
+    ?>
+      <div class="nav-menu-popup-container">
+        <?php
+            foreach( $menu_items as $id => $menu_item ) {
+                if ($menu_item->is_event_menu) {
+                  create_menu_bar_event_item($menu_item->ID, $site_list);
+                } else if ($menu_item->children) {
+                  create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
+                }
             }
-        }
+        ?>
+      </div>
+    <?php
+      }
     ?>
 </div>
 
