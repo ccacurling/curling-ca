@@ -209,3 +209,28 @@
         letter-spacing: 0.4px;
     }
 }
+
+//Mailing List - Form Styling
+.mailing-list {
+    padding: 30px;
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #F2F2F2;
+    /*box-shadow: -10px 9px 21px 0px rgba(76,76,76,10);*/
+    box-shadow: -8px 8px 8px 0px rgba(0, 0, 0, 0.1);
+    h4 {
+        max-width: 340px;
+    }
+    label {
+        text-transform: uppercase;
+        font-family: $knockout;
+    }
+    input {
+        width: 100%;
+        max-width: 400px;
+        height: 42px;
+        border: 1px solid #D8D8D8;
+    }
+
+}
