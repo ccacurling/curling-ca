@@ -1,6 +1,17 @@
 .block-callout {
-  // max-width: 570px;
-  // max-height: 500px;
+  &:last-of-type {
+    .callout-wrapper-row {
+      border-bottom: none;
+    }
+  }
+}
+
+.callout-colour-white {
+  background-color: $white;
+}
+
+.callout-colour-gray {
+  background-color: $cool-light-gray;
 }
 
 .callout-wrapper {
@@ -10,8 +21,25 @@
   margin-bottom: 11px;
   height: 100%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
-  background-color: white;
   min-height: 506px;
+}
+
+.callout-wrapper-row {
+  flex-direction: row;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 250px;
+  box-shadow: none;
+
+  .callout-thumbnail-container {
+    height: auto;
+    flex-basis: 41%;
+  }
+
+  .callout-info {
+    flex-basis: 59%;
+    justify-content: flex-start;
+  }
 }
 
 .callout-thumbnail-container {

@@ -127,7 +127,6 @@ registerBlockType("cossette/block-accordion-container", {
   }),
 
   save: ({className, attributes}) => {
-    console.log(attributes.content);
     return (
       <div>
         { attributes.content }

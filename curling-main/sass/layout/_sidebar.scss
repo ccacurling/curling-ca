@@ -4,6 +4,7 @@
   
   @include responsive-min($responsive-laptop) {
     display: block;
+    margin-top: 100px;
   }
 }
 
@@ -16,12 +17,45 @@
 }
 
 .sidebar-heading {
+  position: relative;
+  margin-top: 25px;
   margin-bottom: 25px;
   padding-left: 30px;
   padding-right: 15px;
   font-size: 16px;
   letter-spacing: 0;
   line-height: 20px;
+
+  &.sidebar-item-current {
+    color: $red;
+    text-decoration: underline;
+    cursor: default;
+
+    &:before {
+      background-color: $red;
+    }
+  }
+
+  &:hover {
+    color: $red;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:before {
+      background-color: $red;
+    }
+  }
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 44px;
+    background-color: transparent;
+    content: ' ';
+  }
 }
 
 .sidebar-list {
@@ -70,6 +104,10 @@
     background-color: transparent;
     content: ' ';
   }
+}
+
+.sidebar-link {
+  font-style: normal;
 }
 
 .sidebar-controls-container {

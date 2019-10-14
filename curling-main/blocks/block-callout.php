@@ -6,14 +6,16 @@
  */
 
   $callout_image = get_field( 'callout_image' );
+  $callout_direction = get_field( 'callout_direction' );
+  $callout_background_colour = get_field( 'callout_background_colour' );
   $callout_title = get_field( 'callout_title' );
   $callout_body_text = get_field( 'callout_body_text' );
   $callout_link = get_field( 'callout_link' );
   $callout_title_size = get_field( 'callout_title_size' );
 ?>
 
-<section class="block-callout">
-  <div class="callout-wrapper">
+<section class="block-callout callout-colour-<?php echo $callout_background_colour; ?>">
+  <div class="callout-wrapper callout-wrapper-<?php echo $callout_direction; ?>">
     <?php 
       if ($callout_image) {
     ?>

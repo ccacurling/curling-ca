@@ -31,24 +31,34 @@
             $previous_item = $link_link;
           }
       ?>
-        <p class="sidebar-heading"><?php echo $link_link['title']; ?></p>
+        <p class="sidebar-heading <?php echo $link_link && $link_link['url'] == $current ? 'sidebar-item-current' : ''; ?>">
+          <?php
+            if ($link_link) {
+          ?>
+            <a class="sidebar-link clear" href="<?php echo $link_link['url']; ?>" target="<?php echo $link_link['target']; ?>"><?php echo $link_link['title']; ?></a>
+          <?php
+            }
+          ?>
+        </p>
         <ul class="sidebar-list">
       <?php
           $link_sublinks = $link['sidebar_sublinks'];
-          foreach ($link_sublinks as $key => $sublink) {
-            $sidebar_sublink = $sublink['sidebar_sublink'];
-            if ($has_current && !$next_item) {
-              $next_item = $sidebar_sublink;
+          if ($link_sublinks) {
+            foreach ($link_sublinks as $key => $sublink) {
+              $sidebar_sublink = $sublink['sidebar_sublink'];
+              if ($has_current && !$next_item) {
+                $next_item = $sidebar_sublink;
+              }
+              if ($sidebar_sublink && $sidebar_sublink['url'] == $current) {
+                $has_current = true;
+              }
+              if (!$has_current) {
+                $previous_item = $sidebar_sublink;
+              }
+        ?>
+          <li class="sidebar-item <?php echo $sidebar_sublink && $sidebar_sublink['url'] == $current ? 'sidebar-item-current' : ''; ?>"><?php echo $sidebar_sublink ? $sidebar_sublink['title'] : ''; ?></li>
+        <?php
             }
-            if ($sidebar_sublink && $sidebar_sublink['url'] == $current) {
-              $has_current = true;
-            }
-            if (!$has_current) {
-              $previous_item = $sidebar_sublink;
-            }
-      ?>
-        <li class="sidebar-item <?php echo $sidebar_sublink && $sidebar_sublink['url'] == $current ? 'sidebar-item-current' : ''; ?>"><?php echo $sidebar_sublink ? $sidebar_sublink['title'] : ''; ?></li>
-      <?php
           }
         }
       ?>

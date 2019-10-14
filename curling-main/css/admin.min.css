@@ -914,6 +914,7 @@
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .curling-sidebar {
     display: block;
+    margin-top: 100px;
   }
 }
 
@@ -926,12 +927,45 @@
 }
 
 .edit-post-layout__content .sidebar-heading {
+  position: relative;
+  margin-top: 25px;
   margin-bottom: 25px;
   padding-left: 30px;
   padding-right: 15px;
   font-size: 16px;
   letter-spacing: 0;
   line-height: 20px;
+}
+
+.edit-post-layout__content .sidebar-heading.sidebar-item-current {
+  color: #ed1940;
+  text-decoration: underline;
+  cursor: default;
+}
+
+.edit-post-layout__content .sidebar-heading.sidebar-item-current:before {
+  background-color: #ed1940;
+}
+
+.edit-post-layout__content .sidebar-heading:hover {
+  color: #ed1940;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.edit-post-layout__content .sidebar-heading:hover:before {
+  background-color: #ed1940;
+}
+
+.edit-post-layout__content .sidebar-heading:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 44px;
+  background-color: transparent;
+  content: ' ';
 }
 
 .edit-post-layout__content .sidebar-list {
@@ -980,6 +1014,10 @@
   height: 44px;
   background-color: transparent;
   content: ' ';
+}
+
+.edit-post-layout__content .sidebar-link {
+  font-style: normal;
 }
 
 .edit-post-layout__content .sidebar-controls-container {
@@ -1214,34 +1252,36 @@
   z-index: 4;
 }
 
+.edit-post-layout__content .header-event .nav-menu-primary-wrapper {
+  background-color: #ffffff;
+}
+
+.edit-post-layout__content .header-event .nav-menu-popup-container {
+  z-index: -1;
+}
+
 .edit-post-layout__content .header-event .nav-menu-popup {
-  top: 170px;
+  bottom: 0;
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
   background-color: #ed1940;
 }
 
-.edit-post-layout__content .header-event .nav-menu-popup:not(.nav-menu-popup-active) {
-  top: 170px;
-  left: 50%;
-  transform: translate(-50%, -100%);
-}
-
 .edit-post-layout__content .header-event .nav-menu-popup.nav-menu-popup-active {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0%);
+  left: 0;
+  transform: translate(0%, 100%);
   z-index: 2;
 }
 
 .edit-post-layout__content .header-event .nav-menu-popup.nav-menu-popup-active.active {
-  transform: translate(-50%, 0%);
+  transform: translate(0%, 100%);
   z-index: 3;
 }
 
 .edit-post-layout__content .header-event .nav-menu-popup.active {
-  transform: translate(-50%, 0%);
+  transform: translate(0%, 100%);
   z-index: 3;
 }
 
@@ -1516,6 +1556,10 @@
   border-top: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8;
   border-right: 1px solid #d8d8d8;
+}
+
+.edit-post-layout__content .block-accordion-container:last-of-type {
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .edit-post-layout__content .block-accordion-container.active .accordion-container-content {
@@ -2041,33 +2085,36 @@
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
+.edit-post-layout__content .nav-menu-popup-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
 .edit-post-layout__content .nav-menu-popup {
   display: block;
   position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   max-width: 1440px;
   background-color: #ffffff;
   overflow: hidden;
-  transform: translateY(-100%);
+  transform: translateY(0%);
   transform-origin: top center;
   transition: transform 0.25s ease-out;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
   z-index: 3;
 }
 
-.edit-post-layout__content .nav-menu-popup:not(.nav-menu-popup-active) {
-  top: 165px;
-}
-
 .edit-post-layout__content .nav-menu-popup.active {
-  transform: translateY(0);
+  transform: translateY(100%);
   z-index: 3;
 }
 
 .edit-post-layout__content .nav-menu-popup.nav-menu-popup-active {
   position: relative;
-  transform: translateY(0);
+  transform: translateY(100%);
   z-index: 2;
 }
 
@@ -2956,6 +3003,11 @@
 .edit-post-layout__content .block-divider {
   margin: 3.75rem 0;
   border-bottom: 1px solid #d8d8d8;
+}
+
+.edit-post-layout__content .block-divider.divider-small {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .edit-post-layout__content .block-broadcast-callout .callout-wrapper {
@@ -5322,6 +5374,18 @@
   max-width: 1030px;
 }
 
+.edit-post-layout__content .block-callout:last-of-type .callout-wrapper-row {
+  border-bottom: none;
+}
+
+.edit-post-layout__content .callout-colour-white {
+  background-color: #ffffff;
+}
+
+.edit-post-layout__content .callout-colour-gray {
+  background-color: #f2f2f2;
+}
+
 .edit-post-layout__content .callout-wrapper {
   display: flex;
   flex-direction: column;
@@ -5329,8 +5393,25 @@
   margin-bottom: 11px;
   height: 100%;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
-  background-color: white;
   min-height: 506px;
+}
+
+.edit-post-layout__content .callout-wrapper-row {
+  flex-direction: row;
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: 250px;
+  box-shadow: none;
+}
+
+.edit-post-layout__content .callout-wrapper-row .callout-thumbnail-container {
+  height: auto;
+  flex-basis: 41%;
+}
+
+.edit-post-layout__content .callout-wrapper-row .callout-info {
+  flex-basis: 59%;
+  justify-content: flex-start;
 }
 
 .edit-post-layout__content .callout-thumbnail-container {
@@ -6475,7 +6556,6 @@
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-page-intro {
     margin-top: 50px;
-    padding-left: 120px;
   }
 }
 
@@ -6852,6 +6932,11 @@
   }
 }
 
+.edit-post-layout__content .block-featured-event-scores-link {
+  display: flex;
+  align-items: center;
+}
+
 .edit-post-layout__content .block-featured-event-scores-mobile {
   display: flex;
   padding-top: 31px;
@@ -6951,7 +7036,7 @@
 
 .edit-post-layout__content .block-featured-event-link-container {
   padding-top: 25px;
-  padding-right: 30px;
+  padding-left: 10px;
 }
 
 .edit-post-layout__content .block-featured-event-info-link-container {
@@ -7613,6 +7698,22 @@
 
 .edit-post-layout__content .download-item-title {
   margin-bottom: 0;
+}
+
+.edit-post-layout__content .block-video-promo {
+  margin-bottom: 40px;
+}
+
+.edit-post-layout__content .video-promo-thumbnail {
+  position: relative;
+}
+
+.edit-post-layout__content .video-promo-img-play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=admin.min.css.map */
