@@ -1589,6 +1589,8 @@
   position: relative;
   padding-top: 60px;
   padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .edit-post-layout__content .accordion-container-content > body, .edit-post-layout__content .accordion-container-content > h1, .edit-post-layout__content .accordion-container-content > h2, .edit-post-layout__content .accordion-container-content > h3, .edit-post-layout__content .accordion-container-content > h4, .edit-post-layout__content .accordion-container-content > h5, .edit-post-layout__content .accordion-container-content > h6, .edit-post-layout__content .accordion-container-content > p, .edit-post-layout__content .accordion-container-content > ol, .edit-post-layout__content .accordion-container-content > ul {

@@ -994,7 +994,7 @@ li {
   border-top: 1px solid #d8d8d8;
 }
 
-.sidebar-controls.btn, .sidebar-controls.newsletter-signup-submit, .footer-content-right-wrapper .sidebar-controls.wpcf7-submit {
+.sidebar-controls.btn, .sidebar-controls.newsletter-signup-submit, .footer-content-right-wrapper .sidebar-controls.wpcf7-submit, .mailing-list .field-row input.sidebar-controls[type=submit] {
   flex-basis: 50%;
   padding-left: 0;
   padding-right: 0;
@@ -1003,16 +1003,16 @@ li {
   border-radius: 0;
 }
 
-.sidebar-controls.btn.sidebar-controls-previous, .sidebar-controls.sidebar-controls-previous.newsletter-signup-submit, .footer-content-right-wrapper .sidebar-controls.sidebar-controls-previous.wpcf7-submit {
+.sidebar-controls.btn.sidebar-controls-previous, .sidebar-controls.sidebar-controls-previous.newsletter-signup-submit, .footer-content-right-wrapper .sidebar-controls.sidebar-controls-previous.wpcf7-submit, .mailing-list .field-row input.sidebar-controls.sidebar-controls-previous[type=submit] {
   border-right: 1px solid #d8d8d8;
 }
 
-.sidebar-controls.btn:hover, .sidebar-controls.newsletter-signup-submit:hover, .footer-content-right-wrapper .sidebar-controls.wpcf7-submit:hover {
+.sidebar-controls.btn:hover, .sidebar-controls.newsletter-signup-submit:hover, .footer-content-right-wrapper .sidebar-controls.wpcf7-submit:hover, .mailing-list .field-row input.sidebar-controls:hover[type=submit] {
   background-color: #ed1940;
   color: #ffffff;
 }
 
-.sidebar-controls.btn.disabled:hover, .sidebar-controls.disabled.newsletter-signup-submit:hover, .footer-content-right-wrapper .sidebar-controls.disabled.wpcf7-submit:hover {
+.sidebar-controls.btn.disabled:hover, .sidebar-controls.disabled.newsletter-signup-submit:hover, .footer-content-right-wrapper .sidebar-controls.disabled.wpcf7-submit:hover, .mailing-list .field-row input.sidebar-controls.disabled:hover[type=submit] {
   background-color: #f2f2f2;
   color: #4c4c4e;
 }
@@ -1556,6 +1556,8 @@ li {
   position: relative;
   padding-top: 60px;
   padding-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .accordion-container-content > body, .accordion-container-content > h1, .accordion-container-content > h2, .accordion-container-content > h3, .accordion-container-content > h4, .accordion-container-content > h5, .accordion-container-content > h6, .accordion-container-content > p, .accordion-container-content > ol, .accordion-container-content > ul {
@@ -1594,7 +1596,7 @@ li {
   }
 }
 
-.btn, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
+.btn, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit, .mailing-list .field-row input[type=submit] {
   padding: 16px 52px 14px;
   background: none;
   cursor: pointer;
@@ -1618,18 +1620,18 @@ li {
   transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
-.btn img, .newsletter-signup-submit img, .footer-content-right-wrapper .wpcf7-submit img {
+.btn img, .newsletter-signup-submit img, .footer-content-right-wrapper .wpcf7-submit img, .mailing-list .field-row input[type=submit] img {
   margin-left: 14px;
   vertical-align: middle;
 }
 
-.btn:hover, .newsletter-signup-submit:hover, .footer-content-right-wrapper .wpcf7-submit:hover {
+.btn:hover, .newsletter-signup-submit:hover, .footer-content-right-wrapper .wpcf7-submit:hover, .mailing-list .field-row input:hover[type=submit] {
   background-color: #fff26e;
   color: #000000;
   cursor: pointer;
 }
 
-.btn-small, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
+.btn-small, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit, .mailing-list .field-row input[type=submit] {
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
@@ -1652,7 +1654,7 @@ li {
   }
 }
 
-.btn-red, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
+.btn-red, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit, .mailing-list .field-row input[type=submit] {
   background-color: #ed1940;
   color: #ffffff;
 }
@@ -6251,7 +6253,7 @@ p.item-label {
   margin: 1.25rem 0;
 }
 
-.pdf-with-image-block-container .pdf-section .pdf-container a .btn, .pdf-with-image-block-container .pdf-section .pdf-container a .newsletter-signup-submit, .pdf-with-image-block-container .pdf-section .pdf-container a .footer-content-right-wrapper .wpcf7-submit, .footer-content-right-wrapper .pdf-with-image-block-container .pdf-section .pdf-container a .wpcf7-submit {
+.pdf-with-image-block-container .pdf-section .pdf-container a .btn, .pdf-with-image-block-container .pdf-section .pdf-container a .newsletter-signup-submit, .pdf-with-image-block-container .pdf-section .pdf-container a .footer-content-right-wrapper .wpcf7-submit, .footer-content-right-wrapper .pdf-with-image-block-container .pdf-section .pdf-container a .wpcf7-submit, .pdf-with-image-block-container .pdf-section .pdf-container a .mailing-list .field-row input[type=submit], .mailing-list .field-row .pdf-with-image-block-container .pdf-section .pdf-container a input[type=submit] {
   padding: 1rem 4rem 1rem;
   font-size: 1.5rem;
 }
@@ -6273,7 +6275,7 @@ p.item-label {
   .pdf-with-image-block-container .pdf-section .pdf-container p {
     margin: 1rem 0;
   }
-  .pdf-with-image-block-container .pdf-section .pdf-container a .btn, .pdf-with-image-block-container .pdf-section .pdf-container a .newsletter-signup-submit, .pdf-with-image-block-container .pdf-section .pdf-container a .footer-content-right-wrapper .wpcf7-submit, .footer-content-right-wrapper .pdf-with-image-block-container .pdf-section .pdf-container a .wpcf7-submit {
+  .pdf-with-image-block-container .pdf-section .pdf-container a .btn, .pdf-with-image-block-container .pdf-section .pdf-container a .newsletter-signup-submit, .pdf-with-image-block-container .pdf-section .pdf-container a .footer-content-right-wrapper .wpcf7-submit, .footer-content-right-wrapper .pdf-with-image-block-container .pdf-section .pdf-container a .wpcf7-submit, .pdf-with-image-block-container .pdf-section .pdf-container a .mailing-list .field-row input[type=submit], .mailing-list .field-row .pdf-with-image-block-container .pdf-section .pdf-container a input[type=submit] {
     padding: 1rem 2.25rem 1rem;
     font-size: 1.25rem;
   }
@@ -7914,6 +7916,57 @@ h1.page-intro-main-headline {
 .search-bar .orig {
   text-transform: uppercase;
   letter-spacing: 0.4px;
+}
+
+.mailing-list {
+  padding: 30px;
+  margin-left: 8px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #F2F2F2;
+  /*box-shadow: -10px 9px 21px 0px rgba(76,76,76,10);*/
+  box-shadow: -8px 8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+.mailing-list h4 {
+  max-width: 340px;
+}
+
+.mailing-list label {
+  text-transform: uppercase;
+  font-family: "Knockout";
+}
+
+.mailing-list input {
+  width: 100%;
+  max-width: 400px;
+  height: 42px;
+  border: 1px solid #D8D8D8;
+}
+
+.mailing-list .field-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mailing-list .field-row label {
+  width: 50%;
+}
+
+.mailing-list .field-row input[type=submit] {
+  font-family: "Knockout";
+  font-size: 20px;
+  margin-top: 10px;
+  padding-top: 12.5px;
+  padding-bottom: 12.5px;
+  border-radius: 3px;
+}
+
+@media only screen and (min-width: 999px) {
+  .mailing-list .field-row input[type=submit] {
+    margin-top: 0;
+    margin-left: 20px;
+  }
 }
 
 /*# sourceMappingURL=main.min.css.map */

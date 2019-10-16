@@ -219,18 +219,49 @@
     border: 1px solid #F2F2F2;
     /*box-shadow: -10px 9px 21px 0px rgba(76,76,76,10);*/
     box-shadow: -8px 8px 8px 0px rgba(0, 0, 0, 0.1);
-    h4 {
+    h4, h3 {
         max-width: 340px;
+        margin-bottom: 20px;
     }
     label {
         text-transform: uppercase;
         font-family: $knockout;
     }
-    input {
+    input, select {
         width: 100%;
         max-width: 400px;
         height: 42px;
         border: 1px solid #D8D8D8;
+    }
+
+    .field-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 0;
+        label {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+        }
+        input[type=submit] {
+            @extend .btn; 
+            @extend .btn-small; 
+            @extend .btn-red;
+            font-family: $knockout;
+            font-size: 20px;
+            margin-top: 10px;
+            padding-top: 12.5px;
+            padding-bottom: 12.5px;
+            border-radius: 3px;
+            @include responsive-min($responsive-laptop) {
+                margin-top: 0;
+                margin-left: 20px;
+                margin-top: 18px;
+                max-width: 400px;
+                margin-right: 30px;
+            }
+        }
     }
 
 }
