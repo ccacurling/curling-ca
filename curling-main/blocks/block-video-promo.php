@@ -7,6 +7,7 @@
 
   $video_promo_youtube_video_id = get_field( 'video_promo_youtube_video_id' );
   $video_promo_title = get_field( 'video_promo_title' );
+  $video_promo_text = get_field('video_promo_text');
   $video_promo_link_label = get_field( 'video_promo_link_label' );
 
   $thumbnail = 'https://img.youtube.com/vi/'.$video_promo_youtube_video_id.'/hqdefault.jpg';
@@ -29,6 +30,10 @@
     ?>
     <div class="callout-info callout-info-medium">
         <h3 class="callout-title callout-title-medium"><?php echo $video_promo_title; ?></h3>
+      <?php if ( isset($video_promo_text) && !empty($video_promo_text) ) { ?>
+        <p class="callout-text"><?php echo __($video_promo_text); ?></p>
+      <?php } ?>
+
       <?php
         if ($video_promo_link_label) {
       ?>
