@@ -8,7 +8,7 @@
 $hero_featured_post = get_field('hero_featured_post');
 
 $is_event = get_field('is_event', 'Options');
-$image = get_image($hero_featured_post);
+$image = get_hero_image($hero_featured_post);
 
 $is_embeded_video = $hero_featured_post ? false : get_field( 'hero_use_embedded_video' );
 $external_video = $hero_featured_post ? null : get_field( 'hero_external_video_link' );
@@ -27,7 +27,7 @@ $post_type = $hero_featured_post ? get_post_type( $hero_featured_post->ID ) : ge
 
 $hero_class = '';
 
-function get_image($hero_featured_post) {
+function get_hero_image($hero_featured_post) {
   if ($hero_featured_post) {
     $image = get_field( 'hero_image', $hero_featured_post->ID);
     if ($image) {
