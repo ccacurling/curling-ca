@@ -17,6 +17,20 @@ $prefooter_type = get_field( 'prefooter_type' );
 $prefooter_image_x_offset = get_field( 'prefooter_image_x_offset' );
 $prefooter_image_y_offset = get_field( 'prefooter_image_y_offset' );
 
+$prefooter_button_one = get_field( 'prefooter_button_one' );
+$prefooter_button_one_label = get_field( 'prefooter_button_one_label' );
+
+$prefooter_button_two = get_field( 'prefooter_button_two' );
+$prefooter_button_two_label = get_field( 'prefooter_button_two_label' );
+
+if ( !isset($prefooter_button_one_label) || empty($prefooter_button_one_label) ){
+  $prefooter_button_one_label = $prefooter_button_one;
+}
+
+if ( !isset($prefooter_button_two_label) || empty($prefooter_button_two_label) ){
+  $prefooter_button_two_label = $prefooter_button_two;
+}
+
 ?>
 
 <div class="block-prefooter <?php echo $prefooter_enable_background ? '' : 'block-prefooter-simple'; ?> <?php echo !$prefooter_enable_background ? 'block-prefooter-'.$prefooter_background_colour : 'block-prefooter-white'?>">
@@ -24,7 +38,12 @@ $prefooter_image_y_offset = get_field( 'prefooter_image_y_offset' );
     <h1 class="block-prefooter-info-title"><?php echo $prefooter_title; ?></h1>
     <p class="block-prefooter-info-body"><?php echo $prefooter_body; ?></p>
     <div class="block-prefooter-info-btns">
-      <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="/" target="none">Shop</a><a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="/" target="none">Donate</a>
+      <?php if ( isset($prefooter_button_one) && !empty($prefooter_button_one) ) { ?>
+        <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_button_one; ?>" target="none"><?php echo $prefooter_button_one_label; ?></a>
+      <?php }?>
+      <?php if ( isset($prefooter_button_one) && !empty($prefooter_button_one) ) { ?>
+        <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_button_two; ?>" target="none"><?php echo $prefooter_button_two_label; ?></a>
+      <?php }?>
     </div>
   </div>
   <?php

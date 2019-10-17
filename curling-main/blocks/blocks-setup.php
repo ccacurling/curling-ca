@@ -2127,6 +2127,76 @@ acf_add_local_field_group(array(
 			'prepend' => '',
 			'append' => '',
 		),
+		array(
+			'key' => 'field_5da898500c017',
+			'label' => 'Button One Link',
+			'name' => 'prefooter_button_one',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5da898910c018',
+			'label' => 'Button One Label',
+			'name' => 'prefooter_button_one_label',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => 'Shop',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5da898b50c019',
+			'label' => 'Button Two Link',
+			'name' => 'prefooter_button_two',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5da898c60c01a',
+			'label' => 'Button Two Label',
+			'name' => 'prefooter_button_two_label',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => 'Donate',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
 	),
 	'location' => array(
 		array(
@@ -3553,7 +3623,7 @@ acf_add_local_field_group(array(
 			'collapsed' => '',
 			'min' => 0,
 			'max' => 0,
-			'layout' => 'table',
+			'layout' => 'block',
 			'button_label' => '',
 			'sub_fields' => array(
 				array(
@@ -3630,7 +3700,7 @@ acf_add_local_field_group(array(
 			'collapsed' => '',
 			'min' => 0,
 			'max' => 0,
-			'layout' => 'table',
+			'layout' => 'block',
 			'button_label' => '',
 			'sub_fields' => array(
 				array(
@@ -3668,7 +3738,7 @@ acf_add_local_field_group(array(
 					'collapsed' => '',
 					'min' => 0,
 					'max' => 0,
-					'layout' => 'table',
+					'layout' => 'block',
 					'button_label' => '',
 					'sub_fields' => array(
 						array(
@@ -6339,6 +6409,50 @@ acf_add_local_field_group(array(
 				'param' => 'block',
 				'operator' => '==',
 				'value' => 'acf/divider',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+//Item Label
+acf_add_local_field_group(array(
+	'key' => 'group_5d7952936c413',
+	'title' => 'Item Label',
+	'fields' => array(
+		array(
+			'key' => 'field_5d7952a3a9efb',
+			'label' => 'label',
+			'name' => 'label',
+			'type' => 'text',
+			'instructions' => 'Text for the Label. Presumably the Page title or the Item title.',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/item-label',
 			),
 		),
 	),
