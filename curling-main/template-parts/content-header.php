@@ -12,7 +12,9 @@
     $site_list = [];
 
     if (!$is_event) {
-      $sites = get_sites();
+      if (function_exists( "get_sites" )) {
+        $sites = get_sites();
+      }
 
       $site_list = array_filter($sites, function($site) {
         switch_to_blog($site->blog_id);
