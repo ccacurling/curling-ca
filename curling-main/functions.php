@@ -6,6 +6,7 @@ add_action('init', 'create_sponsors_post_type');
 add_action('init', 'create_activity_post_type');
 add_action('init', 'create_draw_schedule_post_type');
 add_action('init', 'create_job_post_type');
+add_action('after_setup_theme', 'create_nav_structure');
 
 include 'blocks/functions.php';
 include 'functions-ajax.php';
@@ -360,4 +361,549 @@ function create_job_post_type() {
           'slug' => 'draw-schedule'
       ]
   ]);
+}
+
+
+//Builds the Required Nav Structure
+function create_nav_structure(){
+
+  //This will give us Nav Menus Support
+  //register_nav_menus( array(
+  //  'primary' => 'Primary Navigation'
+  //));
+  add_theme_support('nav-menus');
+  
+  register_nav_menus( array(
+    'primary' => 'Primary Navigation'
+  ));
+
+  $is_event = get_field('is_event', 'Options');
+  
+  //Menu - Top Left
+  if ( !wp_get_nav_menu_object( 'Menu - Top Left' ) ){
+
+    $menu_id = wp_create_nav_menu('Menu - Top Left');
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Curling Canada'),
+      'menu-item-classes' => 'curling-canada',
+      'menu-item-url' => home_url( '/' ), 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+    
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('About Curling'),
+      'menu-item-classes' => 'about-curling',
+      'menu-item-url' => home_url( '/' ), 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+    
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Our Organization'),
+      'menu-item-classes' => 'our-organization',
+      'menu-item-url' => home_url( '/' ), 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+  }
+
+
+  //Menu - Top Right
+  if ( !wp_get_nav_menu_object( 'Menu - Top Right' ) ){
+
+    $menu_id = wp_create_nav_menu('Menu - Top Right');
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Curling Canada'),
+      'menu-item-classes' => 'curling-canada',
+      'menu-item-url' => home_url( '/' ), 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+    
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('About Curling'),
+      'menu-item-classes' => 'about-curling',
+      'menu-item-url' => home_url( '/' ), 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+    
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Our Organization'),
+      'menu-item-classes' => 'our-organization',
+      'menu-item-url' => home_url( '/' ), 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+  }
+
+  //Menu - Footer
+  if ( !wp_get_nav_menu_object( 'Menu - Footer' ) ){
+
+    $menu_id = wp_create_nav_menu('Menu - Footer');
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Curling Canada'),
+      'menu-item-classes' => 'curling-canada',
+      'menu-item-url' => 'https://curling.ca', 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Philanthropy'),
+      'menu-item-classes' => 'philanthropy',
+      'menu-item-url' => '/', 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+    
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Media'),
+      'menu-item-object' => 'page',
+      'menu-item-object-id' => get_page_by_path('Media')->ID,
+      'menu-item-type' => 'post_type',
+      'menu-item-status' => 'publish'));
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Curling I/O'),
+      'menu-item-classes' => 'curling-io',
+      'menu-item-url' => 'https://curling.io', 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+    
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Contact Us'),
+      'menu-item-object' => 'page',
+      'menu-item-object-id' => get_page_by_path('Contact Us')->ID,
+      'menu-item-type' => 'post_type', 
+      'menu-item-status' => 'publish'));
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Safe Sport'),
+      'menu-item-classes' => 'safe-sport',
+      'menu-item-url' => '/', 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+    
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Sponsorship &amp; Corporate Partners'),
+      'menu-item-classes' => 'sponsorship-corporate-partners',
+      'menu-item-url' => '/', 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('The Curling Brand'),
+      'menu-item-classes' => '-curling-brand',
+      'menu-item-url' => '/', 
+      'menu-item-type' => 'custom',
+      'menu-item-status' => 'publish'));
+  }
+
+  //Menu - Legal
+  if ( !wp_get_nav_menu_object( 'Menu - Legal' ) ){
+
+    $menu_id = wp_create_nav_menu('Menu - Legal');
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Privacy Policy'),
+      'menu-item-object' => 'page',
+      'menu-item-object-id' => get_page_by_path('Privacy Policy')->ID,
+      'menu-item-type' => 'post_type', 
+      'menu-item-status' => 'publish'));
+
+    wp_update_nav_menu_item($menu_id, 0, array(
+      'menu-item-title' =>  __('Cookies'),
+      'menu-item-object' => 'page',
+      'menu-item-object-id' => get_page_by_path('Cookies')->ID,
+      'menu-item-type' => 'post_type', 
+      'menu-item-status' => 'publish'));
+  }
+
+  //Check if this is an Event Microsite
+  if ($is_event) {
+    //Event Micro Site Main Memu
+    if ( !wp_get_nav_menu_object( 'Menu - Events' ) ){
+
+      $menu_id = wp_create_nav_menu('Menu - Events');
+
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-title' =>  __('Tickets'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Tickets')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+  
+      //Sub Nav - Event Details
+      $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-title' =>  __('Event Details'),
+        'menu-item-classes' => 'event-details',
+        'menu-item-url' => home_url( '/' ), 
+        'menu-item-type' => 'custom',
+        'menu-item-status' => 'publish'));
+      
+      wp_update_nav_menu_item($menu_id , 0, array(
+          'menu-item-parent-id' => $sub_nav,
+          'menu-item-title' =>  __('About [Insert Event Name]'),
+          'menu-item-object' => 'page',
+          'menu-item-object-id' => get_page_by_path('About [Insert Event Name]')->ID,
+          'menu-item-type' => 'post_type', 
+          'menu-item-status' => 'publish'));
+      
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-parent-id' => $sub_nav,
+          'menu-item-title' =>  __('Teams'),
+          'menu-item-object' => 'page',
+          'menu-item-object-id' => get_page_by_path('Teams')->ID,
+          'menu-item-type' => 'post_type', 
+          'menu-item-status' => 'publish'));
+
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-parent-id' => $sub_nav,
+          'menu-item-title' =>  __('Draw Schedule'),
+          'menu-item-object' => 'page',
+          'menu-item-object-id' => get_page_by_path('Draw Schedule')->ID,
+          'menu-item-type' => 'post_type', 
+          'menu-item-status' => 'publish'));
+
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Eye Opener'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Eye Opener')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Fan Zone'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Fan Zone')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Gallery'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Gallery')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+          
+      //Sub Nav - Event Details
+      $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-title' =>  __('Participate'),
+        'menu-item-classes' => 'participate',
+        'menu-item-url' => home_url( '/' ), 
+        'menu-item-type' => 'custom',
+        'menu-item-status' => 'publish'));
+
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Volunteering'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Volunteering')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Apply to be a Future Star'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Apply to be a Future Star')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-title' =>  __('Our Sponsors'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Our Sponsors')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-title' =>  __('News'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('News')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+      
+      wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-title' =>  __('Contact Us'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Contact Us')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+    }
+
+  } else {
+    //Curling.ca Main Menu
+    if ( !wp_get_nav_menu_object( 'Menu - Main' ) ){
+
+      $menu_id = wp_create_nav_menu('Menu - Main');
+      
+      $sub_nav = wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-title' =>  __('Tickets & Events'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Tickets & Events')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('[EVENTS]'),
+        'menu-item-classes' => 'events',
+        'menu-item-url' => home_url( '/' ), 
+        'menu-item-type' => 'custom',
+        'menu-item-status' => 'publish'));
+
+      $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-title' =>  __('Championship'),
+        'menu-item-classes' => 'championship',
+        'menu-item-url' => home_url( '/' ), 
+        'menu-item-type' => 'custom',
+        'menu-item-status' => 'publish'));
+          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Upcoming Events'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Upcoming Events')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Broadcast Schedule'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Broadcast Schdedule')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Download Publications'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Download Publications')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Bidding Documents'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Bidding Documents')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Volunteer Newsletter Sign Up'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Volunteer Newsletter Sign Up')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Championship Archives'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Championship Archives')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Resources'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Resources')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('For Media'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('For Media')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Sponsorship & Corporate Partners'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Sponsorship & Corporate Partners')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+
+      $sub_nav = wp_update_nav_menu_item($menu_id , 0, array(
+        'menu-item-title' =>  __('News & Video'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('News & Video')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('All Post'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('All Posts')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Our News'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Our News')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Our Champions'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Our Champions')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Our Stories'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Our Stories')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Our Video'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Our Video')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-title' =>  __('Scores'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Scores')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                  
+      $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-title' =>  __('Members'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Members')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Find a Curling Centre'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Find a Curling Centre')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Curling I/O'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Curling I/O')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Become a Member'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Become a Member')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Benefits of Membership'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Benefits of Membership')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Member Resources'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Member Resources')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                          
+      $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-title' =>  __('Team Canada'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Team Canada')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Our 2009 Teams'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Our 2019 Teams')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Becoming Team Canada'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Becoming Team Canada')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Canadian Team Ranking System (CTRS)'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Canadian Team Ranking System (CTRS)')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                                                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Mixed Doubles Rankings'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Mixed Doubles Rankings')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                                                                  
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Safe Sport'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Safe Sport')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+                                                                                          
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-parent-id' => $sub_nav,
+        'menu-item-title' =>  __('Athletes'),
+        'menu-item-object' => 'page',
+        'menu-item-object-id' => get_page_by_path('Athletes')->ID,
+        'menu-item-type' => 'post_type', 
+        'menu-item-status' => 'publish'));
+      
+      wp_update_nav_menu_item($menu_id, 0, array(
+        'menu-item-title' =>  __('Shop'),
+        'menu-item-classes' => 'championship',
+        'menu-item-url' => home_url( '/' ), 
+        'menu-item-type' => 'custom',
+        'menu-item-status' => 'publish'));
+
+        
+      
+    }
+
+  }
+
+
 }
