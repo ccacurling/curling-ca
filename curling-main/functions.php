@@ -526,7 +526,7 @@ function create_nav_structure(){
       wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-title' =>  __('Tickets'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Tickets')->ID,
+        'menu-item-object-id' => get_page_by_path('tickets-2')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
   
@@ -534,7 +534,7 @@ function create_nav_structure(){
       $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-title' =>  __('Event Details'),
         'menu-item-classes' => 'event-details',
-        'menu-item-url' => home_url( '/' ), 
+        'menu-item-url' => '',
         'menu-item-type' => 'custom',
         'menu-item-status' => 'publish'));
       
@@ -542,7 +542,7 @@ function create_nav_structure(){
           'menu-item-parent-id' => $sub_nav,
           'menu-item-title' =>  __('About [Insert Event Name]'),
           'menu-item-object' => 'page',
-          'menu-item-object-id' => get_page_by_path('About [Insert Event Name]')->ID,
+          'menu-item-object-id' => get_page_by_path('about')->ID,
           'menu-item-type' => 'post_type', 
           'menu-item-status' => 'publish'));
       
@@ -550,7 +550,7 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
           'menu-item-title' =>  __('Teams'),
           'menu-item-object' => 'page',
-          'menu-item-object-id' => get_page_by_path('Teams')->ID,
+          'menu-item-object-id' => get_page_by_path('team')->ID,
           'menu-item-type' => 'post_type', 
           'menu-item-status' => 'publish'));
 
@@ -590,7 +590,7 @@ function create_nav_structure(){
       $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-title' =>  __('Participate'),
         'menu-item-classes' => 'participate',
-        'menu-item-url' => home_url( '/' ), 
+        'menu-item-url' => '', 
         'menu-item-type' => 'custom',
         'menu-item-status' => 'publish'));
 
@@ -598,7 +598,7 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Volunteering'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Volunteering')->ID,
+        'menu-item-object-id' => get_page_by_path('volunteers')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
 
@@ -606,7 +606,7 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Apply to be a Future Star'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Apply to be a Future Star')->ID,
+        'menu-item-object-id' => get_page_by_path('future-stars')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
 
