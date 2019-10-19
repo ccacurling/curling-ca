@@ -377,7 +377,11 @@ function create_nav_structure(){
     'primary' => 'Primary Navigation'
   ));
 
-  $is_event = get_field('is_event', 'Options');
+  if (function_exists("get_field")){
+    $is_event = get_field('is_event', 'Options');
+  } else {
+    $is_event = false;
+  }
   
   //Menu - Top Left
   if ( !wp_get_nav_menu_object( 'Menu - Top Left' ) ){
@@ -415,24 +419,16 @@ function create_nav_structure(){
     $menu_id = wp_create_nav_menu('Menu - Top Right');
 
     wp_update_nav_menu_item($menu_id, 0, array(
-      'menu-item-title' =>  __('Curling Canada'),
-      'menu-item-classes' => 'curling-canada',
+      'menu-item-title' =>  __('Tickets'),
+      'menu-item-classes' => 'tickets',
       'menu-item-url' => home_url( '/' ), 
       'menu-item-type' => 'custom',
       'menu-item-status' => 'publish'));
     
 
     wp_update_nav_menu_item($menu_id, 0, array(
-      'menu-item-title' =>  __('About Curling'),
-      'menu-item-classes' => 'about-curling',
-      'menu-item-url' => home_url( '/' ), 
-      'menu-item-type' => 'custom',
-      'menu-item-status' => 'publish'));
-    
-
-    wp_update_nav_menu_item($menu_id, 0, array(
-      'menu-item-title' =>  __('Our Organization'),
-      'menu-item-classes' => 'our-organization',
+      'menu-item-title' =>  __('Shop'),
+      'menu-item-classes' => 'shop',
       'menu-item-url' => home_url( '/' ), 
       'menu-item-type' => 'custom',
       'menu-item-status' => 'publish'));
@@ -645,7 +641,7 @@ function create_nav_structure(){
       $sub_nav = wp_update_nav_menu_item($menu_id , 0, array(
         'menu-item-title' =>  __('Tickets & Events'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Tickets & Events')->ID,
+        'menu-item-object-id' => get_page_by_path('tickets-events')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
   
@@ -653,14 +649,14 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('[EVENTS]'),
         'menu-item-classes' => 'events',
-        'menu-item-url' => home_url( '/' ), 
+        'menu-item-url' => home_url( '/events' ), 
         'menu-item-type' => 'custom',
         'menu-item-status' => 'publish'));
 
       $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-title' =>  __('Championship'),
         'menu-item-classes' => 'championship',
-        'menu-item-url' => home_url( '/' ), 
+        'menu-item-url' => home_url( '/championship' ), 
         'menu-item-type' => 'custom',
         'menu-item-status' => 'publish'));
           
@@ -676,7 +672,7 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Broadcast Schedule'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Broadcast Schdedule')->ID,
+        'menu-item-object-id' => get_page_by_path('Broadcast Schedule')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
                   
@@ -732,22 +728,22 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Sponsorship & Corporate Partners'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Sponsorship & Corporate Partners')->ID,
+        'menu-item-object-id' => get_page_by_path('sponsorship-corporate-partners')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
 
       $sub_nav = wp_update_nav_menu_item($menu_id , 0, array(
         'menu-item-title' =>  __('News & Video'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('News & Video')->ID,
+        'menu-item-object-id' => get_page_by_path('category-posts')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
                                   
       wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-parent-id' => $sub_nav,
-        'menu-item-title' =>  __('All Post'),
+        'menu-item-title' =>  __('All Posts'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('All Posts')->ID,
+        'menu-item-object-id' => get_page_by_path('category-posts')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
                                           
@@ -755,7 +751,7 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Our News'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Our News')->ID,
+        'menu-item-object-id' => get_page_by_path('category-posts')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
                                                   
@@ -763,7 +759,7 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Our Champions'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Our Champions')->ID,
+        'menu-item-object-id' => get_page_by_path('category-national-championships')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
                                                   
@@ -771,7 +767,7 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Our Stories'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Our Stories')->ID,
+        'menu-item-object-id' => get_page_by_path('category-posts')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
                                                   
@@ -792,9 +788,9 @@ function create_nav_structure(){
                                                   
       $sub_nav = wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-title' =>  __('Members'),
-        'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Members')->ID,
-        'menu-item-type' => 'post_type', 
+        'menu-item-classes' => 'members',
+        'menu-item-url' => '', 
+        'menu-item-type' => 'custom',
         'menu-item-status' => 'publish'));
                                                   
       wp_update_nav_menu_item($menu_id, 0, array(
@@ -808,9 +804,9 @@ function create_nav_structure(){
       wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Curling I/O'),
-        'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Curling I/O')->ID,
-        'menu-item-type' => 'post_type', 
+        'menu-item-classes' => 'curling-io',
+        'menu-item-url' => 'https://curling.io', 
+        'menu-item-type' => 'custom',
         'menu-item-status' => 'publish'));
                                                   
       wp_update_nav_menu_item($menu_id, 0, array(
@@ -846,9 +842,9 @@ function create_nav_structure(){
                                                                   
       wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-parent-id' => $sub_nav,
-        'menu-item-title' =>  __('Our 2009 Teams'),
+        'menu-item-title' =>  __('Our 2019 Teams'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Our 2019 Teams')->ID,
+        'menu-item-object-id' => get_page_by_path('Our National Teams')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
                                                                           
@@ -864,7 +860,7 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Canadian Team Ranking System (CTRS)'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Canadian Team Ranking System (CTRS)')->ID,
+        'menu-item-object-id' => get_page_by_path('canadian-team-ranking-system-ctrs')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
                                                                                           
@@ -888,14 +884,14 @@ function create_nav_structure(){
         'menu-item-parent-id' => $sub_nav,
         'menu-item-title' =>  __('Athletes'),
         'menu-item-object' => 'page',
-        'menu-item-object-id' => get_page_by_path('Athletes')->ID,
+        'menu-item-object-id' => get_page_by_path('HP Athletes')->ID,
         'menu-item-type' => 'post_type', 
         'menu-item-status' => 'publish'));
       
       wp_update_nav_menu_item($menu_id, 0, array(
         'menu-item-title' =>  __('Shop'),
         'menu-item-classes' => 'championship',
-        'menu-item-url' => home_url( '/' ), 
+        'menu-item-url' => 'https://shop.curling.ca', 
         'menu-item-type' => 'custom',
         'menu-item-status' => 'publish'));
 
