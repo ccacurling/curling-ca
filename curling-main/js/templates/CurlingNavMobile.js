@@ -48,8 +48,15 @@ jQuery(document).ready(function($) {
       this.menuLists.each((index, element) => {
           const $this = $(element);
           $this.find('.js-cta-menu-item-mobile').click(() => {
+            const link = $this.data('link');
+            if ($this.hasClass('active')) {
+              if (link) {
+                window.location = link;
+              }
+            } else {
               this.hideMenusMobile();
               $this.toggleClass('active');
+            }
           })
       });
 
@@ -94,7 +101,6 @@ jQuery(document).ready(function($) {
     }
 
     hideMenusMobile() {
-      console.log('hide');
       $('.js-cta-menu-list-mobile').each((index, element) => {
         const $this = $(element);
         $this.removeClass('active');
