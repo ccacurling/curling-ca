@@ -115,17 +115,11 @@
 
 <div class="header header-mobile <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav-mobile">
   <div class="nav-menu-top-mobile <?php echo $is_submenu ? 'nav-menu-top-submenu-mobile' : ''; ?> js-cta-topmenu-mobile">
-    <?php 
-      if ($is_event) {
-    ?>
-      <div></div>
-    <?php
-      }
-    ?>
+    <div></div>
     <a href="<?php echo get_home_url(); ?>">
         <img class="menu-logo-mobile" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
     </a>
-    <img class="menu-hamburger-mobile js-cta-menu-mobile-hamburger" src="<?php echo get_stylesheet_directory_uri()."/images/img-hamburger.svg"; ?>" alt="Hamburger" />
+    <img class="menu-hamburger-mobile js-cta-menu-mobile-hamburger" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-hamburger<?php echo $is_event ? '' : '-white'; ?>.svg" alt="Hamburger" />
   </div>
   <?php
     create_main_menu_mobile($top_right_menu_items, $menu_items, [
@@ -332,7 +326,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
       <?php
         if ($options['is_submenu']) {
       ?>
-        <h3 class="nav-menu-item-mobile inverted"><?php echo $options['current_page_title']; ?></h3><img src="<?php echo get_stylesheet_directory_uri()."/images/triangle-down.svg"; ?>" alt="Triangle" />
+        <h3 class="nav-menu-item-mobile"><?php echo $options['current_page_title']; ?></h3><img src="<?php echo get_stylesheet_directory_uri()."/images/triangle-down.svg"; ?>" alt="Triangle" />
       <?php
         } else {
       ?>
@@ -346,7 +340,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
           <?php
             }
           ?>
-            <h4 class="nav-menu-item-mobile inverted"><?php echo $menu_item->title; ?></h4>
+            <h4 class="nav-menu-item-mobile"><?php echo $menu_item->title; ?></h4>
           <?php
             if ($menu_item->url) {
           ?>

@@ -4,6 +4,10 @@
   }
 }
 
+.menu-nav-mobile a {
+  flex-grow: 1;
+}
+
 .header-mobile {
   @include responsive-min($responsive-laptop) {
     display: none;
@@ -127,6 +131,7 @@
   display: flex;
   position: relative;
   align-items: center;
+  justify-content: center;
   padding-top: 12px;
   padding-bottom: 12px;
   padding-left: 19px;
