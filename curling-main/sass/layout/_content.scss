@@ -47,9 +47,7 @@
 }
 
 .content-social-share {
-  position: absolute;
-  top: 0;
-  left: 0;
+  margin-top: 10px;
 }
 
 .content-sidebar-container {
@@ -65,6 +63,17 @@
 .content-fixed-padding {
   padding-left: 116px;
   padding-right: 116px;
+}
+
+.post-content {
+  margin-bottom: 48px;
+}
+
+.block-column.no-padding {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .xdebug-error {
