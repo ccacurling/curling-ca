@@ -244,9 +244,15 @@
         </div>
         <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
         <div class="nav-menu-primary-wrapper content content-container">
-              <a href="<?php echo get_home_url(); ?>">
-                  <img class="menu-logo" src="<?php echo ($is_event && $event_logo) ? $event_logo['url'] : get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
-              </a>
+              <?php
+                if ($is_event && $event_logo) {
+              ?>
+                <a href="<?php echo get_home_url(); ?>">
+                    <img class="menu-logo" src="<?php echo $event_logo['url']; ?>" alt="Site Logo" />
+                </a>
+              <?php
+                }
+              ?>
               <ul class="menu-nav nav-left-offset">
                   <?php
                       foreach ($menu_items as $id => $item) {
