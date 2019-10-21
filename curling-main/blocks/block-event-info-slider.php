@@ -55,12 +55,14 @@
 
     $start_date_unix = $start_date ? date_format($start_date, 'U') : 0;
     $current_date_unix = date_format($current_date, 'U');
+    $end_date_unix = date_format($end_date, 'U');
 
     $start_date_string = $start_date ? $start_date->format('F j') : '';
     $end_date_short_string = $end_date ? $end_date->format('F j') : '';
     $end_date_string = $end_date ? $end_date->format('F j Y') : '';
 
     $date = $start_date == $end_date ? ($end_date_string ? $end_date_string : $start_date_string) : ($end_date_string ? $start_date_string.'&nbsp;-&nbsp;'.$end_date_string : $start_date_string);
+    $is_live = $current_date_unix >= $start_date_unix && $current_date_unix <= $end_date_unix;
 
     return [
       'event_logo' => $event_logo,
@@ -72,13 +74,23 @@
       'event_page_link' => $event_page_link,
       'draw_schedule_link' => $draw_schedule_link,
       'meet_the_teams_link' => $meet_the_teams_link,
-      'buy_tickets_link' => $buy_tickets_link
+      'buy_tickets_link' => $buy_tickets_link,
+      'is_live' => $is_live
     ];
   }, $events);
 
   function create_item($site) {
 ?>
   <div class="block-event-slider-slide block-event-info block-event-info-row">
+    <?php
+      if ($site['is_live']) {
+    ?>
+      <div class="event-info-live-container">
+        <h4 class="event-info-live-text inverted">Live now</h4>
+      </div>
+    <?php
+      }
+    ?>
     <div class="event-info-top-container">
       <?php
         if ($site['event_logo']) {
