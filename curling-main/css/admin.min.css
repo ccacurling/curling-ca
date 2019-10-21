@@ -4485,6 +4485,7 @@
 
 .edit-post-layout__content .block-event-slider-slide {
   flex-grow: 1;
+  position: relative;
   margin-left: 10px;
   margin-right: 10px;
 }
