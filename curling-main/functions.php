@@ -135,8 +135,9 @@ function block_2_column_init() {
       'render_callback' => function( $attributes, $content = '' ) {
           return '<div class="block-column '.
             'column-'.str_replace('_', '-', $attributes['type']).' '.
-            ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
-            ($attributes['left_column_is_sidebar'] ? ' '.'column-sidebar' : '' ).
+            ($attributes['is_fullwidth'] ? ' ' : 'column-smallwidth ' ).
+            ($attributes['left_column_is_sidebar'] ? ' '.'column-sidebar ' : ' ' ).
+            ($attributes['nopadding'] ? 'no-padding ' : ' ').
             '">'.$content.'</div>';
       },
       'attributes' => [
@@ -149,6 +150,10 @@ function block_2_column_init() {
           'type' => 'boolean'
         ],
         'left_column_is_sidebar' => [
+          'default' => false,
+          'type' => 'boolean'
+        ],
+        'nopadding' => [
           'default' => false,
           'type' => 'boolean'
         ]
@@ -172,12 +177,17 @@ function block_3_column_init() {
       'render_callback' => function( $attributes, $content = '' ) {
           return '<div class="block-column '.
            'column-33-33-33 '.
-            ($attributes['is_fullwidth'] ? '' : 'column-smallwidth' ).
+            ($attributes['is_fullwidth'] ? ' ' : 'column-smallwidth ' ).
+            ($attributes['nopadding'] ? ' ' : 'no-padding ' ).
             '">'.$content.'</div>';
       },
       'attributes' => [
         'is_fullwidth' => [
           'default' => true,
+          'type' => 'boolean'
+        ],
+        'nopadding' => [
+          'default' => false,
           'type' => 'boolean'
         ]
       ]

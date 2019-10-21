@@ -244,9 +244,15 @@
         </div>
         <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
         <div class="nav-menu-primary-wrapper content content-container">
-              <a href="<?php echo get_home_url(); ?>">
-                  <img class="menu-logo" src="<?php echo ($is_event && $event_logo) ? $event_logo['url'] : get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
-              </a>
+              <?php
+                if ($is_event && $event_logo) {
+              ?>
+                <a href="<?php echo get_home_url(); ?>">
+                    <img class="menu-logo" src="<?php echo $event_logo['url']; ?>" alt="Site Logo" />
+                </a>
+              <?php
+                }
+              ?>
               <ul class="menu-nav nav-left-offset">
                   <?php
                       foreach ($menu_items as $id => $item) {
@@ -360,32 +366,18 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
       <?php
           foreach( $nav_items as $menu_item ) {
       ?>
-        <ul class="menu-list-mobile js-cta-menu-list-mobile">
+        <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $menu_item->url ? 'data-link="'.$menu_item->url.'"' : ''; ?>>
           <li class="menu-item-mobile menu-item-main-mobile">
-            <?php
-              if ($menu_item->url) {
-            ?>
-              <a class="clear" href="<?php echo $menu_item->url; ?>">
-            <?php
-              }
-            ?>
-                <div class="menu-item-container-mobile js-cta-menu-item-mobile">
-                  <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
-                  <?php
-                    if (isset($menu_item->children) && count ($menu_item->children) > 0) {
-                  ?>
-                    <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
-                  <?php
-                    }
-                  ?>
-                </div>
-            <?php
-              if ($menu_item->url) {
-            ?>
-              </a>
-            <?php
-              }
-            ?>
+            <div class="menu-item-container-mobile js-cta-menu-item-mobile">
+              <h4 class="menu-item-title-mobile inverted"><?php echo $menu_item->title; ?></h4>
+              <?php
+                if (isset($menu_item->children) && count ($menu_item->children) > 0) {
+              ?>
+                <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
+              <?php
+                }
+              ?>
+            </div>
             <?php
               if (isset($menu_item->children) && count ($menu_item->children) > 0) {
             ?>
