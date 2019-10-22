@@ -181,7 +181,7 @@
   </div>
   <div class="event-slider-desktop">
     <div class="event-slider-header">
-      <h3><?php echo $title; ?></h3>
+      <h2><?php echo $title; ?></h2>
       <a class="event-slider-link clear" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><h4 class="arrow-right-large-gray gray"><?php echo $link['title']; ?></h4></a>
     </div>
     <div class="event-slider-container">
