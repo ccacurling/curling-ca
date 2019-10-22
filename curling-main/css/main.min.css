@@ -4151,6 +4151,7 @@ li {
   .block-event-info-row {
     flex-direction: row;
     align-items: center;
+    height: 100%;
   }
 }
 
@@ -4160,6 +4161,7 @@ li {
 
 .block-event-info-row .block-event-info-details {
   flex-basis: 47%;
+  height: 100%;
 }
 
 @media only screen and (min-width: 999px) {
