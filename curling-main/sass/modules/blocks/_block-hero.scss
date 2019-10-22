@@ -75,30 +75,30 @@
   }
 
   .hero-media-container {
-    height: 350px;
+    min-height: 350px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
-      height: auto;
+      min-height: auto;
     }
   }
 
   .hero-background-image {
-    height: 350px;
+    min-height: 350px;
     object-fit: cover;
     @include responsive-min($responsive-tablet) {
-      height: auto;
+      min-height: auto;
     }
   }
 }
 
 .block-hero-main.block-hero-medium {
   @include responsive-min($responsive-tablet) {
-    height: 577px;
+    min-height: 577px;
   }
 
   .hero-media-container {
-    height: 350px;
+    min-height: 350px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
@@ -144,11 +144,11 @@
   }
 
   .hero-media-container {
-    min-height: 350px;
+    height: 350px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
-      min-height: auto;
+      height: auto;
     }
   }
 }
@@ -159,11 +159,11 @@
   }
 
   .hero-media-container {
-    min-height: 300px;
+    height: 300px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
-      min-height: auto;
+      height: auto;
     }
   }
 }
@@ -174,11 +174,11 @@
   }
 
   .hero-media-container {
-    min-height: 250px;
+    height: 250px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
-      min-height: auto;
+      height: auto;
     }
   }
 }

@@ -2792,35 +2792,35 @@ li {
 }
 
 .block-hero-main.block-hero-large .hero-media-container {
-  height: 350px;
+  min-height: 350px;
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-main.block-hero-large .hero-media-container {
     height: 100%;
-    height: auto;
+    min-height: auto;
   }
 }
 
 .block-hero-main.block-hero-large .hero-background-image {
-  height: 350px;
+  min-height: 350px;
   object-fit: cover;
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-main.block-hero-large .hero-background-image {
-    height: auto;
+    min-height: auto;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-main.block-hero-medium {
-    height: 577px;
+    min-height: 577px;
   }
 }
 
 .block-hero-main.block-hero-medium .hero-media-container {
-  height: 350px;
+  min-height: 350px;
 }
 
 @media only screen and (min-width: 769px) {
@@ -2876,13 +2876,13 @@ li {
 }
 
 .block-hero-large .hero-media-container {
-  min-height: 350px;
+  height: 350px;
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-large .hero-media-container {
     height: 100%;
-    min-height: auto;
+    height: auto;
   }
 }
 
@@ -2893,13 +2893,13 @@ li {
 }
 
 .block-hero-medium .hero-media-container {
-  min-height: 300px;
+  height: 300px;
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-medium .hero-media-container {
     height: 100%;
-    min-height: auto;
+    height: auto;
   }
 }
 
@@ -2910,13 +2910,13 @@ li {
 }
 
 .block-hero-small .hero-media-container {
-  min-height: 250px;
+  height: 250px;
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-small .hero-media-container {
     height: 100%;
-    min-height: auto;
+    height: auto;
   }
 }
 
