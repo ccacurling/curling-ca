@@ -4423,7 +4423,8 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'choices' => array(
-				'square' => 'Square Style (300 x 250)',
+				'square' => 'Square Style (300 x 250) - Local',
+				'square_national' => 'Square Style (300 x 250) - National',
 				'wide' => 'Wide Banner Style',
 				'custom' => 'Enter Custom Snippet',
 			),
@@ -6192,10 +6193,29 @@ acf_add_local_field_group(array(
 	'fields' => array(
 		array(
 			'key' => 'field_5dae44eafe4a2',
-			'label' => 'Ad Snippet Square',
+			'label' => 'Ad Snippet Square - Local',
 			'name' => 'ad_snippet_square',
 			'type' => 'textarea',
 			'instructions' => 'Typically near square (300 x 250)',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_5daf68d8715fe',
+			'label' => 'Ad Snippet Square - National',
+			'name' => 'ad_snippet_square_national',
+			'type' => 'textarea',
+			'instructions' => '',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
