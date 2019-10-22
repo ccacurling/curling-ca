@@ -4528,17 +4528,53 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
-	'key' => 'group_5d87d2cd28141',
-	'title' => 'Ad - Banner',
+	'key' => 'group_5dae45d5aa008',
+	'title' => 'Ad Banner',
 	'fields' => array(
 		array(
-			'key' => 'field_5d87d2d5e5658',
-			'label' => 'Ad Space/Snippet',
+			'key' => 'field_5dae45d977d6b',
+			'label' => 'Banner Type',
+			'name' => 'banner_type',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'square' => 'Square Style (300 x 250)',
+				'wide' => 'Wide Banner Style',
+				'custom' => 'Enter Custom Snippet',
+			),
+			'default_value' => array(
+				0 => 'square',
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5dae462e77d6c',
+			'label' => 'Custom Ad Snippet',
 			'name' => 'adsnippet',
 			'type' => 'textarea',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5dae45d977d6b',
+						'operator' => '==',
+						'value' => 'custom',
+					),
+				),
+			),
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',
@@ -6231,6 +6267,69 @@ acf_add_local_field_group(array(
 			'multiple' => 0,
 			'return_format' => 'id',
 			'ui' => 1,
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'options_page',
+				'operator' => '==',
+				'value' => 'acf-options-options',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
+//Options Page Ad - Snippets
+acf_add_local_field_group(array(
+	'key' => 'group_5dae44d1699e4',
+	'title' => 'Ad Snippets',
+	'fields' => array(
+		array(
+			'key' => 'field_5dae44eafe4a2',
+			'label' => 'Ad Snippet Square',
+			'name' => 'ad_snippet_square',
+			'type' => 'textarea',
+			'instructions' => 'Typically near square (300 x 250)',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
+		),
+		array(
+			'key' => 'field_5dae451ffe4a3',
+			'label' => 'Ad Snippet Wide',
+			'name' => 'ad_snippet_wide',
+			'type' => 'textarea',
+			'instructions' => 'Wide banner style snippet',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
 		),
 	),
 	'location' => array(

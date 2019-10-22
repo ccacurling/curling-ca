@@ -249,6 +249,145 @@ function create_post_type() {
             'slug' => 'team'
         ]
     ]);
+
+    //Register Additional Fields
+    if( function_exists('acf_add_local_field_group') ):
+      acf_add_local_field_group(array(
+        'key' => 'group_5dae3e6b41436',
+        'title' => 'Team Additional Fields',
+        'fields' => array(
+          array(
+            'key' => 'field_5dae4125309b8',
+            'label' => 'Team Location Name',
+            'name' => 'team_location_name',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+          ),
+          array(
+            'key' => 'field_5dae4138309b9',
+            'label' => 'Team City',
+            'name' => 'team_city',
+            'type' => 'text',
+            'instructions' => '',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'default_value' => '',
+            'placeholder' => '',
+            'prepend' => '',
+            'append' => '',
+            'maxlength' => '',
+          ),
+          array(
+            'key' => 'field_5dae414b309ba',
+            'label' => 'Social Media Links',
+            'name' => 'social_media_links',
+            'type' => 'group',
+            'instructions' => 'Proper format is just the path without \'www.facebook.com\' or \'instagram.com\'.',
+            'required' => 0,
+            'conditional_logic' => 0,
+            'wrapper' => array(
+              'width' => '',
+              'class' => '',
+              'id' => '',
+            ),
+            'layout' => 'block',
+            'sub_fields' => array(
+              array(
+                'key' => 'field_5dae416d309bb',
+                'label' => 'Facebook',
+                'name' => 'facebook',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => 'teamexample/',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+              ),
+              array(
+                'key' => 'field_5dae4210309bc',
+                'label' => 'Instagram',
+                'name' => 'instagram',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => 'teamexample/',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+              ),
+              array(
+                'key' => 'field_5dae4254309bd',
+                'label' => 'Twitter',
+                'name' => 'twitter',
+                'type' => 'text',
+                'instructions' => '',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                  'width' => '',
+                  'class' => '',
+                  'id' => '',
+                ),
+                'default_value' => '',
+                'placeholder' => 'teamexample/',
+                'prepend' => '',
+                'append' => '',
+                'maxlength' => '',
+              ),
+            ),
+          ),
+        ),
+        'location' => array(
+          array(
+            array(
+              'param' => 'post_type',
+              'operator' => '==',
+              'value' => 'team',
+            ),
+          ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+      ));
+    endif;
 }
 
 function parse_config($config, $property, $default) {
@@ -913,3 +1052,30 @@ function create_nav_structure(){
 
 
 }
+
+/*
+//Setup Block Templates
+function myplugin_register_template() {
+  $post_type_object = get_post_type_object( 'post' );
+
+  $template_image = array();
+  $template_image[] = 'core/image';
+
+  $template_para = array();
+  $template_para[] = 'core/paragraph';
+  $template_para[] = array('placeholder' => 'Image Details');
+
+  $template_label = array();
+  $template_label[] = 'acf/item-label';
+  $template_label[] = array('acf-field-5d7952a3a9efb' => 'Works');
+
+
+  $post_type_object->template = array(
+      //array( 'core/image' ),
+      $template_image, 
+      $template_para, 
+      $template_label
+  );
+}
+add_action( 'init', 'myplugin_register_template' );
+*/
