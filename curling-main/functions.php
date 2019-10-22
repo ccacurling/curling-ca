@@ -334,7 +334,6 @@ function create_activity_post_type() {
 }
 
 function create_draw_schedule_post_type() {
-    $is_event = function_exists('get_field') ? get_field('is_event', 'Options') : false;
     register_post_type('Draw Schedule', [
         'labels' => [
             'name'          => __('Draw Schedules'),
@@ -343,14 +342,13 @@ function create_draw_schedule_post_type() {
             'all_items'     => __('All Draw Schedules')
         ],
         'menu_icon' => 'dashicons-groups',
-        'public' => $is_event,
+        'public' => true,
         'supports' => [ 'title' ],
         'has_archive' => true,
         'show_in_rest' => true,
         'rewrite' => [
             'slug' => 'draw-schedule'
-        ],
-        'public' => false
+        ]
     ]);
 }
 
