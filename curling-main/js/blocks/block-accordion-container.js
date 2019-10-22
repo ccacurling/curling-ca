@@ -35,6 +35,10 @@ registerBlockType("cossette/block-accordion-container", {
       default: "Hide",
       type: "string"
     },
+    is_single_item: {
+      default: false,
+      type: "boolean"
+    },
     additional_link_title: {
       default: "",
       type: 'string'
@@ -85,6 +89,16 @@ registerBlockType("cossette/block-accordion-container", {
               onChange={(hide_label) => {
                 setAttributes({
                   hide_label
+                });
+              }}
+            />
+            <CheckboxControl
+              value={attributes.is_single_item}
+              label={__('Simple Style')}
+              checked={attributes.is_single_item}
+              onChange={(is_single_item) => {
+                setAttributes({
+                  is_single_item
                 });
               }}
             />

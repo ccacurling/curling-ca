@@ -1649,6 +1649,7 @@
 
 .edit-post-layout__content .accordion-container-links {
   display: flex;
+  align-items: center;
 }
 
 .edit-post-layout__content .accordion-container-link {
@@ -1660,6 +1661,32 @@
   position: absolute;
   top: 10px;
   right: 28px;
+}
+
+.edit-post-layout__content .block-accordion-container.accordion-container-single {
+  border: 1px solid #f2f2f2;
+  box-shadow: -10px 9px 21px 0 rgba(76, 76, 78, 0.1);
+  border-radius: 2px;
+}
+
+.edit-post-layout__content .block-accordion-container.accordion-container-single .accordion-container-border {
+  border-bottom: none;
+}
+
+.edit-post-layout__content .block-accordion-container.accordion-container-single .accordion-container-link-open {
+  display: block;
+}
+
+.edit-post-layout__content .block-accordion-container.accordion-container-single .accordion-container-link-close {
+  display: none;
+}
+
+.edit-post-layout__content .block-accordion-container.accordion-container-single.active .accordion-container-link-open {
+  display: none;
+}
+
+.edit-post-layout__content .block-accordion-container.accordion-container-single.active .accordion-container-link-close {
+  display: block;
 }
 
 @keyframes expand {

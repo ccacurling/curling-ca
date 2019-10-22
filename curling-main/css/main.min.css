@@ -1616,6 +1616,7 @@ li {
 
 .accordion-container-links {
   display: flex;
+  align-items: center;
 }
 
 .accordion-container-link {
@@ -1627,6 +1628,32 @@ li {
   position: absolute;
   top: 10px;
   right: 28px;
+}
+
+.block-accordion-container.accordion-container-single {
+  border: 1px solid #f2f2f2;
+  box-shadow: -10px 9px 21px 0 rgba(76, 76, 78, 0.1);
+  border-radius: 2px;
+}
+
+.block-accordion-container.accordion-container-single .accordion-container-border {
+  border-bottom: none;
+}
+
+.block-accordion-container.accordion-container-single .accordion-container-link-open {
+  display: block;
+}
+
+.block-accordion-container.accordion-container-single .accordion-container-link-close {
+  display: none;
+}
+
+.block-accordion-container.accordion-container-single.active .accordion-container-link-open {
+  display: none;
+}
+
+.block-accordion-container.accordion-container-single.active .accordion-container-link-close {
+  display: block;
 }
 
 /**

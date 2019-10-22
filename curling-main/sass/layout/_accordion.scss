@@ -54,6 +54,7 @@
 
 .accordion-container-links {
   display: flex;
+  align-items: center;
 }
 
 .accordion-container-link {
@@ -65,4 +66,32 @@
   position: absolute;
   top: 10px;
   right: 28px;
+}
+
+.block-accordion-container.accordion-container-single {
+  border: 1px solid $cool-light-gray;
+  box-shadow: -10px 9px 21px 0 rgba(76,76,78,0.10);
+  border-radius: 2px;
+
+  .accordion-container-border {
+    border-bottom: none;
+  }
+
+  .accordion-container-link-open {
+    display: block;
+  }
+  
+  .accordion-container-link-close {
+    display: none;
+  }
+
+  &.active {
+    .accordion-container-link-open {
+      display: none;
+    }
+
+    .accordion-container-link-close {
+      display: block;
+    }
+  }
 }
