@@ -897,7 +897,7 @@ li {
 @media only screen and (min-width: 999px) {
   .curling-sidebar {
     display: block;
-    margin-top: 100px;
+    margin-top: 93px;
   }
 }
 
@@ -5981,7 +5981,7 @@ li {
   max-width: 1170px;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
@@ -5989,15 +5989,30 @@ li {
 
 @media only screen and (max-width: 1171px) {
   .block-single-callout .callout-inner {
-    border-left: 2px solid #ffffff;
     margin: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media only screen and (max-width: 1171px) {
+  .block-single-callout .callout-inner.left-line {
+    border-left: 2px solid #ffffff;
+  }
+}
+
+.block-single-callout .callout-inner.left-line .callout-left {
+  padding: 0px 0px 0px 40px;
+}
+
+@media only screen and (min-width: 1171px) {
+  .block-single-callout .callout-inner.left-line .callout-left {
+    border-left: 2px solid #ffffff;
   }
 }
 
 .callout-left {
-  max-width: 694px;
-  border-left: 2px solid #ffffff;
-  padding: 0px 0px 0px 40px;
+  flex-basis: 57.5%;
+  padding: 0px 40px 0px 20px;
   margin: 20px auto;
 }
 
@@ -6014,6 +6029,7 @@ li {
 
 @media only screen and (max-width: 1171px) {
   .callout-left {
+    flex-basis: 100%;
     border-left: none;
     padding: 0px 0px 0px 30px;
     margin: 0;
@@ -6024,15 +6040,22 @@ li {
 }
 
 .callout-right {
-  margin: auto;
+  display: flex;
+  flex-basis: 42.5%;
 }
 
 @media only screen and (max-width: 1171px) {
   .callout-right {
+    flex-basis: 100%;
     margin-left: 30px;
     margin-bottom: 20px;
     margin-top: 40px;
   }
+}
+
+.callout-right .cta-button {
+  padding-left: 85px;
+  padding-right: 85px;
 }
 
 .cta-button {

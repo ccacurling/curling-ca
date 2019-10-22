@@ -6063,6 +6063,25 @@ acf_add_local_field_group(array(
 			'append' => '',
 			'maxlength' => '',
 		),
+		array(
+			'key' => 'field_5dae44809803c',
+			'label' => 'Add Left Line',
+			'name' => 'add_left_line',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
 	),
 	'location' => array(
 		array(
