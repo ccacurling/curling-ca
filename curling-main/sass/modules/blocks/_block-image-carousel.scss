@@ -1,5 +1,5 @@
 .block-image-carousel {
-  padding: 0 2.5rem;
+  padding: 0;
 
   &.image-carousel-gray {
     background-color: $cool-light-gray;
@@ -20,6 +20,69 @@
   padding-left: 20px;
   padding-right: 100px;
   max-width: 1000px;
+}
+
+.image-carousel-accordion {
+  .image-carousel-trigger {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 0;
+    padding-left: 0;
+    padding-right: 15px;
+    max-width: none;
+    background-color: $gray;
+    cursor: pointer;
+
+    .arrow-right {
+      display: block;
+      transform: rotate(90deg);
+    }
+
+    .image-carousel-title {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: $white;
+    }
+
+    @include responsive-min($responsive-laptop) {
+      padding-top: 70px;
+      padding-left: 20px;
+      padding-right: 100px;
+      max-width: 1000px;
+      background-color: transparent;
+
+      .image-carousel-title {
+        padding-top: 0;
+        padding-bottom: 30px;
+        padding-left: 0;
+        padding-right: 0;
+        color: $black;
+      }
+    }
+  }
+
+  &.active .arrow-right {
+    transform: rotate(270deg);
+  }
+
+  &.active .image-carousel-content {
+    @include responsive-max($responsive-laptop) {
+      max-height: none;
+    }
+  }
+
+  .image-carousel-content {
+    @include responsive-max($responsive-laptop) {
+      max-height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
+.image-carousel-sub-container-top-body {
+  padding-top: 30px;
 }
 
 .image-carousel-featured .image-carousel-sub-container {

@@ -1095,6 +1095,25 @@ acf_add_local_field_group(array(
 			'placeholder' => '',
 		),
 		array(
+			'key' => 'field_5daf42deb3f45',
+			'label' => 'Use Accordion on Mobile',
+			'name' => 'image_carousel_accordion_on_mobile',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
+		),
+		array(
 			'key' => 'field_5d77e6173f181',
 			'label' => 'Image Carousel Gallery',
 			'name' => 'image_carousel_gallery',
@@ -1178,6 +1197,28 @@ acf_add_local_field_group(array(
 			'layout' => 'table',
 			'button_label' => 'Add Link',
 			'sub_fields' => array(
+				array(
+					'key' => 'field_5d8153e9f59b5',
+					'label' => 'Link',
+					'name' => '
+						',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => false,
+					'conditional_logic' => false,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					0 => '
+						',
+					'default_value' => '',
+					'maxlength' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+				),
 				array(
 					'key' => 'field_5d8153e9f59b5',
 					'label' => 'Link',
