@@ -4529,6 +4529,11 @@
   margin-bottom: 40px;
 }
 
+.edit-post-layout__content .event-slider-link {
+  display: flex;
+  align-items: center;
+}
+
 .edit-post-layout__content .event-slider-container {
   display: flex;
   flex-direction: row;
