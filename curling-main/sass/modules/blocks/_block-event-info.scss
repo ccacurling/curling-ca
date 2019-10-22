@@ -16,7 +16,6 @@
   @include responsive-min($responsive-laptop) {
     flex-direction: row;
     align-items: center;
-    height: 100%;
   }
 
   .event-info-top-container {
