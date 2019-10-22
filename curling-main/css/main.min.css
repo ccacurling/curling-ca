@@ -5638,7 +5638,7 @@ li {
 }
 
 .block-image-carousel {
-  padding: 0 2.5rem;
+  padding: 0;
 }
 
 .block-image-carousel.image-carousel-gray {
@@ -5659,6 +5659,72 @@ li {
   padding-left: 20px;
   padding-right: 100px;
   max-width: 1000px;
+}
+
+.image-carousel-accordion {
+  padding-bottom: 1px;
+}
+
+.image-carousel-accordion .image-carousel-trigger {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0;
+  padding-left: 0;
+  padding-right: 15px;
+  max-width: none;
+  background-color: #4c4c4e;
+  cursor: pointer;
+}
+
+.image-carousel-accordion .image-carousel-trigger .arrow-right {
+  display: block;
+  transform: rotate(90deg);
+}
+
+.image-carousel-accordion .image-carousel-trigger .image-carousel-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 999px) {
+  .image-carousel-accordion .image-carousel-trigger {
+    padding-top: 70px;
+    padding-left: 20px;
+    padding-right: 100px;
+    max-width: 1000px;
+    background-color: transparent;
+  }
+  .image-carousel-accordion .image-carousel-trigger .image-carousel-title {
+    padding-top: 0;
+    padding-bottom: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    color: #000000;
+  }
+}
+
+.image-carousel-accordion.active .arrow-right {
+  transform: rotate(270deg);
+}
+
+@media only screen and (max-width: 999px) {
+  .image-carousel-accordion.active .image-carousel-content {
+    max-height: none;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .image-carousel-accordion .image-carousel-content {
+    max-height: 0;
+    overflow: hidden;
+  }
+}
+
+.image-carousel-sub-container-top-body {
+  padding-top: 30px;
 }
 
 .image-carousel-featured .image-carousel-sub-container {
