@@ -2792,35 +2792,35 @@ li {
 }
 
 .block-hero-main.block-hero-large .hero-media-container {
-  min-height: 350px;
+  height: 350px;
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-main.block-hero-large .hero-media-container {
     height: 100%;
-    min-height: auto;
+    height: auto;
   }
 }
 
 .block-hero-main.block-hero-large .hero-background-image {
-  min-height: 350px;
+  height: 350px;
   object-fit: cover;
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-main.block-hero-large .hero-background-image {
-    min-height: auto;
+    height: auto;
   }
 }
 
 @media only screen and (min-width: 769px) {
   .block-hero-main.block-hero-medium {
-    min-height: 577px;
+    height: 577px;
   }
 }
 
 .block-hero-main.block-hero-medium .hero-media-container {
-  min-height: 350px;
+  height: 350px;
 }
 
 @media only screen and (min-width: 769px) {

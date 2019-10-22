@@ -75,30 +75,30 @@
   }
 
   .hero-media-container {
-    min-height: 350px;
+    height: 350px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
-      min-height: auto;
+      height: auto;
     }
   }
 
   .hero-background-image {
-    min-height: 350px;
+    height: 350px;
     object-fit: cover;
     @include responsive-min($responsive-tablet) {
-      min-height: auto;
+      height: auto;
     }
   }
 }
 
 .block-hero-main.block-hero-medium {
   @include responsive-min($responsive-tablet) {
-    min-height: 577px;
+    height: 577px;
   }
 
   .hero-media-container {
-    min-height: 350px;
+    height: 350px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
