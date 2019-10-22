@@ -37,13 +37,10 @@
   padding: 0px 40px 0px 20px;
   margin: 20px auto;
   h3 {
-    font-size: 3.5rem;
     padding-top: 2px;
   }
   p {
     padding: 20px 0px;
-    font-size: 1rem;
-    font-family: Helvetica;
   }
 
   @include responsive-max($full-width-wrapper){
