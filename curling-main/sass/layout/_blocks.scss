@@ -188,7 +188,7 @@
       }
       .wp-block-column:not(:first-child) {
         @include responsive-max($responsive-laptop) {
-          margin-top: 40px;
+          // margin-top: 40px;
         }
       }
     }

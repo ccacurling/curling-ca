@@ -9,6 +9,7 @@ $description = get_field('description'); //Callout Description text
 
 $link = get_field('link'); //CTA Link
 $link_label = get_field('link_label'); //Link Label
+$add_left_line = get_field('add_left_line'); //Add Left Line
 
 //Default to the Link as the label if empty
 if ( !isset($link_label) || empty($link_label) ){
@@ -17,7 +18,7 @@ if ( !isset($link_label) || empty($link_label) ){
 ?>
 
 <section class="block-single-callout block-single-callout-red<?php //echo $background_colour; ?>">
-  <div class='callout-inner'>
+  <div class='callout-inner <?php echo $add_left_line ? 'left-line' : ''; ?>'>
     <div class="callout-left">
       <h3><?php echo $title; ?></h3>
       <p><?php echo $description; ?></p>

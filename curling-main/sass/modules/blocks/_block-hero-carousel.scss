@@ -7,7 +7,9 @@
     }
   }
   .ms-thumb-frame img {
-    max-width: 140px;
+    @include responsive-min($responsive-tablet) {
+      max-width: 140px;
+    }
   }
   .ms-wk .ms-slide {
     height: 540px!important;
@@ -19,7 +21,12 @@
   .ms-tabs {
     &.ms-dir-h .ms-thumb-frame {
       margin-top: 0;
+      width: 140px!important;
       background-color: $white;
+
+      @include responsive-min($responsive-tablet) {
+        width: 370px!important;
+      }
     }
 
     .ms-thumb {
@@ -56,14 +63,25 @@
 .hero-carousel-thumbnail {
   display: flex;
   flex-direction: column;
+  width: 140px;
+  height: 140px;
   box-shadow: -7px 14px 23px 0 rgba(76,76,78,0.10);
   border-radius: 2px 0 0 2px;
+
+  @include responsive-min($responsive-tablet) {
+    width: auto;
+    height: auto;
+  }
 }
 
 .hero-carousel-thumbnail-image {
-  flex-basis: 37%;
-  background-color: $light-gray;
+  flex-basis: 100%;
   object-fit: cover;
+  background-color: $light-gray;
+  
+  @include responsive-min($responsive-tablet) {
+    flex-basis: 37%;
+  }
 }
 
 .hero-carousel-thumbnail-top {
@@ -72,11 +90,16 @@
 }
 
 .hero-carousel-thumbnail-content {
+  display: none;
   flex-basis: 63%;
   padding-top: 18px;
   padding-bottom: 18px;
   padding-left: 8px;
   padding-right: 12px;
+
+  @include responsive-min($responsive-tablet) {
+    display: block;
+  }
 }
 
 .hero-carousel-thumbnail-timer {
