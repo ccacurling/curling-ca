@@ -4045,8 +4045,11 @@
   display: flex;
 }
 
-.edit-post-layout__content .event-location-container .info-section .event-links div {
-  width: 50%;
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .event-location-container .info-section .event-links div {
+    margin-right: 20px;
+    width: 50%;
+  }
 }
 
 .edit-post-layout__content .event-location-container .info-section .event-links div p {

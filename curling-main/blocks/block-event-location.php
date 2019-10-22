@@ -36,7 +36,7 @@
       <div>
         <?php if ($event_cta_one) { ?>
           <p>
-            <a href="<?php echo $event_cta_one['url']; ?>" target="<?php echo $event_cta_one['target']; ?>">
+            <a class="arrow-right-item" href="<?php echo $event_cta_one['url']; ?>" target="<?php echo $event_cta_one['target']; ?>">
               <?php echo strtoupper( $event_cta_one['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
             </a>
           </p>
