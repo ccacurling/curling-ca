@@ -5683,6 +5683,10 @@
   max-width: 1000px;
 }
 
+.edit-post-layout__content .image-carousel-accordion {
+  padding-bottom: 40px;
+}
+
 .edit-post-layout__content .image-carousel-accordion .image-carousel-trigger {
   display: flex;
   justify-content: space-between;
