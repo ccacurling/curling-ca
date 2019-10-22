@@ -7233,7 +7233,12 @@ h1.page-intro-main-headline {
 
 .block-featured-event-link-container {
   padding-top: 25px;
-  padding-left: 10px;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-featured-event-link-container {
+    padding-left: 10px;
+  }
 }
 
 .block-featured-event-info-link-container {

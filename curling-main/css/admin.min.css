@@ -7255,7 +7255,12 @@
 
 .edit-post-layout__content .block-featured-event-link-container {
   padding-top: 25px;
-  padding-left: 10px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-featured-event-link-container {
+    padding-left: 10px;
+  }
 }
 
 .edit-post-layout__content .block-featured-event-info-link-container {
