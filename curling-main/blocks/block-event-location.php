@@ -35,38 +35,30 @@
     <div class="event-links">
       <div>
         <?php if ($event_cta_one) { ?>
-          <p>
-            <a class="btn-link" href="<?php echo $event_cta_one['url']; ?>" target="<?php echo $event_cta_one['target']; ?>">
-              <h4 class="btn-link-text red"><?php echo strtoupper( $event_cta_one['title'] ); ?></h4>
-              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-            </a>
-          </p>
+          <a class="btn-link" href="<?php echo $event_cta_one['url']; ?>" target="<?php echo $event_cta_one['target']; ?>">
+            <h4 class="btn-link-text red"><?php echo $event_cta_one['title']; ?></h4>
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+          </a>
         <?php } ?>
         <?php if ($event_cta_three) { ?>
-          <p>
-            <a class="btn-link" href="<?php echo $event_cta_three['url']; ?>" target="<?php echo $event_cta_three['target']; ?>">
-              <h4 class="btn-link-text red"><?php echo strtoupper( $event_cta_three['title'] ); ?></h4>
-              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-            </a>
-          </p>
+          <a class="btn-link" href="<?php echo $event_cta_three['url']; ?>" target="<?php echo $event_cta_three['target']; ?>">
+            <h4 class="btn-link-text red"><?php echo $event_cta_three['title']; ?></h4>
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+          </a>
         <?php } ?>
       </div>
       <div>
         <?php if ($event_cta_two) { ?>
-          <p>
-            <a class="btn-link" href="<?php echo $event_cta_two['url']; ?>" target="<?php echo $event_cta_two['target']; ?>">
-              <h4 class="btn-link-text red"><?php echo strtoupper( $event_cta_two['title'] ); ?></h4>
-              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-            </a>
-          </p>
+          <a class="btn-link" href="<?php echo $event_cta_two['url']; ?>" target="<?php echo $event_cta_two['target']; ?>">
+            <h4 class="btn-link-text red"><?php echo $event_cta_two['title']; ?></h4>
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+          </a>
         <?php } ?>
         <?php if ($event_cta_four) { ?>
-          <p>
-            <a class="btn-link" href="<?php echo $event_cta_four['url']; ?>" target="<?php echo $event_cta_four['target']; ?>">
-              <h4 class="btn-link-text red"><?php echo strtoupper( $event_cta_four['title'] ); ?></h4>
-              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-            </a>
-          </p>
+          <a class="btn-link" href="<?php echo $event_cta_four['url']; ?>" target="<?php echo $event_cta_four['target']; ?>">
+            <h4 class="btn-link-text red"><?php echo $event_cta_four['title']; ?></h4>
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+          </a>
         <?php } ?>
       </div>
     </div>
