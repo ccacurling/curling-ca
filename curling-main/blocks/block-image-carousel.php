@@ -185,7 +185,7 @@ $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' )
               foreach ($carousel_links as $key => $carousel_link) {
                 $image_link = $carousel_link['image_carousel_link'];
             ?>
-            <a class="image-carousel-link clear" href="<?php echo $image_link['url']; ?>" target="<?php echo $image_link['target']; ?>">
+            <a class="image-carousel-link  btn-link clear" href="<?php echo $image_link['url']; ?>" target="<?php echo $image_link['target']; ?>">
               <h4 class="btn-link-text red"><?php echo $image_link['title']; ?></h4>
               <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="arrow-right">
             </a>
