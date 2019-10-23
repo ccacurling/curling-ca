@@ -4014,20 +4014,12 @@
             },
             {
                 "key": "field_5d72948ad229f",
-                "label": "Event Logo",
+                "label": "Logo",
                 "name": "event_logo",
                 "type": "image",
                 "instructions": "",
                 "required": 0,
-                "conditional_logic": [
-                    [
-                        {
-                            "field": "field_5d71507b94d5f",
-                            "operator": "==",
-                            "value": "1"
-                        }
-                    ]
-                ],
+                "conditional_logic": 0,
                 "wrapper": {
                     "width": "",
                     "class": "",

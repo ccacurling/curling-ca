@@ -1107,7 +1107,8 @@ li {
   background-color: #ffffff;
 }
 
-.header-main .menu-item-selectable:hover .menu-item-content {
+.header-main .menu-item-selectable:hover .menu-item-content,
+.header-main .menu-item-selectable.menu-item-top-nav-selected .menu-item-content {
   color: #ed1940;
 }
 
@@ -2061,7 +2062,8 @@ li {
     position: absolute;
     top: 20px;
     margin-left: 19px;
-    max-height: 143%;
+    max-width: 110px;
+    max-height: 172px;
     z-index: 100;
   }
 }
@@ -3189,6 +3191,10 @@ li {
 .block-divider.divider-small {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.block-hero-carousel .ms-container {
+  background-color: #ffffff;
 }
 
 .block-hero-carousel .ms-view {

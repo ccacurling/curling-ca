@@ -3,11 +3,13 @@
     $current_page_title = get_the_title();
     $is_event = get_field('is_event', 'Options');
 
-    $event_logo = get_field('event_logo', 'Options');
+    $logo = get_field('event_logo', 'Options');
 
     $category = null;
     $category_slug = '';
     $is_category = is_category();
+
+    $home_url = get_home_url().'/';
 
     $site_list = [];
 
@@ -148,7 +150,7 @@
                       <?php
                           foreach( $top_left_menu_items as $menu_item ) {
                       ?>
-                          <li class="menu-item menu-item-selectable">
+                          <li class="menu-item menu-item-selectable <?php echo $menu_item->url && $home_url === $menu_item->url ? 'menu-item-top-nav-selected' : ''; ?>">
                             <?php
                               if ($menu_item->url) {
                             ?>
@@ -239,10 +241,10 @@
         <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
         <div class="nav-menu-primary-wrapper content content-container">
               <?php
-                if ($is_event && $event_logo) {
+                if ($logo) {
               ?>
                 <a href="<?php echo get_home_url(); ?>">
-                    <img class="menu-logo" src="<?php echo $event_logo['url']; ?>" alt="Site Logo" />
+                    <img class="menu-logo" src="<?php echo $logo['url']; ?>" alt="Site Logo" />
                 </a>
               <?php
                 }

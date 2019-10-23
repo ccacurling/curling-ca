@@ -2264,7 +2264,7 @@ acf_add_local_field_group(array(
 			'label' => 'Is Event',
 			'name' => 'is_event',
 			'type' => 'true_false',
-			'instructions' => 'This field should be checked off is this microsite is for an event.',
+			'instructions' => 'This field should be checked off if this is a microsite for an event.',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -2307,20 +2307,12 @@ acf_add_local_field_group(array(
 		),
 		array(
 			'key' => 'field_5d72948ad229f',
-			'label' => 'Event Logo',
+			'label' => 'Logo',
 			'name' => 'event_logo',
 			'type' => 'image',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5d71507b94d5f',
-						'operator' => '==',
-						'value' => '1',
-					),
-				),
-			),
+			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',

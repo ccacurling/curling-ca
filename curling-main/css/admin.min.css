@@ -1140,7 +1140,8 @@
   background-color: #ffffff;
 }
 
-.edit-post-layout__content .header-main .menu-item-selectable:hover .menu-item-content {
+.edit-post-layout__content .header-main .menu-item-selectable:hover .menu-item-content,
+.edit-post-layout__content .header-main .menu-item-selectable.menu-item-top-nav-selected .menu-item-content {
   color: #ed1940;
 }
 
@@ -2083,7 +2084,8 @@
     position: absolute;
     top: 20px;
     margin-left: 19px;
-    max-height: 143%;
+    max-width: 110px;
+    max-height: 172px;
     z-index: 100;
   }
 }
@@ -3211,6 +3213,10 @@
   padding-bottom: 18px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.edit-post-layout__content .block-hero-carousel .ms-container {
+  background-color: #ffffff;
 }
 
 .edit-post-layout__content .block-hero-carousel .ms-view {

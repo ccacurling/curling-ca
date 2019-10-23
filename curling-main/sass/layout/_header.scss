@@ -36,7 +36,8 @@
     background-color: $white;
   }
 
-  .menu-item-selectable:hover {
+  .menu-item-selectable:hover,
+  .menu-item-selectable.menu-item-top-nav-selected {
     .menu-item-content {
       color: $red;
     }
