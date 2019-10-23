@@ -123,7 +123,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 	<div class="block-featured-event-wrapper">
     <div class="block-featured-event-scores<?php echo $show_time ? '-mobile' : ''; ?>">
       <a class="clear block-featured-event-scores-link" href="" target="">
-        <h3 class="inverted arrow-right-extralarge-white">See the latest scores</h3>
+        <h3 class="inverted arrow-right-item arrow-right-extralarge-white">See the latest scores</h3>
       </a>
     </div>
     <?php

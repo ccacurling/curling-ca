@@ -163,7 +163,10 @@ if ($image) {
         if ($link) {
       ?>
         <div class="hero-link-container">
-          <a class="btn-secondary hero-link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><?php echo $link['title'] ?></a>
+          <a class="btn-link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
+            <h4 class="btn-link-text red"><?php echo $link['title']; ?></h4>
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+          </a>
         </div>
       <?php
         }

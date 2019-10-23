@@ -239,12 +239,17 @@
 .image-carousel-image-container {
   display: block;
   width: 100%;
+  height: 100%;
 }
 
 .image-carousel-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+
+  @include responsive-min($responsive-laptop) {
+    object-fit: cover;
+  }
 }
 
 .image-carousel-image-0 {

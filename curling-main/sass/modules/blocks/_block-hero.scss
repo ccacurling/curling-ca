@@ -144,11 +144,11 @@
   }
 
   .hero-media-container {
-    min-height: 350px;
+    height: 350px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
-      min-height: auto;
+      height: auto;
     }
   }
 }
@@ -159,11 +159,11 @@
   }
 
   .hero-media-container {
-    min-height: 300px;
+    height: 300px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
-      min-height: auto;
+      height: auto;
     }
   }
 }
@@ -174,11 +174,11 @@
   }
 
   .hero-media-container {
-    min-height: 250px;
+    height: 250px;
 
     @include responsive-min($responsive-tablet) {
       height: 100%;
-      min-height: auto;
+      height: auto;
     }
   }
 }

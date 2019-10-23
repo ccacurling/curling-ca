@@ -1,6 +1,5 @@
 .event-location-container {
   max-width: $full-width-wrapper;
-  height: 400px;
   display: flex;
   flex-direction: row;
   margin: 2.5rem auto 3.5rem auto;
@@ -11,7 +10,7 @@
 
   .info-section {
     width: 50%;
-    padding: 1.5rem 5.75rem;
+    padding: 0 20px;
 
     h2, h3 {
       font-size: 1.25rem;
@@ -37,7 +36,10 @@
       display: flex;
 
       div {
-        width: 50%;
+        @include responsive-min($responsive-laptop) {
+          margin-right: 20px;
+          width: 50%;
+        }
 
         p {
           font-size: 1rem;
@@ -56,6 +58,18 @@
       }
 
     }
+  }
+
+  .info-section-container {
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 440px;
+  }
+
+  .event-location-link {
+    margin-bottom: 20px;
   }
 
   .map-section {
