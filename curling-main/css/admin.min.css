@@ -2601,7 +2601,7 @@
   margin-bottom: 0;
 }
 
-.edit-post-layout__content .block-ad-banner {
+.edit-post-layout__content .ad-banner-wide {
   margin-top: 80px;
   margin-bottom: 100px;
   margin-left: 20px;
@@ -4605,8 +4605,6 @@
 
 .edit-post-layout__content .block-prefooter {
   position: relative;
-  font-size: 0;
-  line-height: 0;
 }
 
 .edit-post-layout__content .block-prefooter-simple {

@@ -2579,7 +2579,7 @@ li {
   margin-bottom: 0;
 }
 
-.block-ad-banner {
+.ad-banner-wide {
   margin-top: 80px;
   margin-bottom: 100px;
   margin-left: 20px;
@@ -4583,8 +4583,6 @@ li {
 
 .block-prefooter {
   position: relative;
-  font-size: 0;
-  line-height: 0;
 }
 
 .block-prefooter-simple {
