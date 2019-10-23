@@ -147,7 +147,7 @@ function block_2_column_init() {
       },
       'attributes' => [
         'type' => [
-          'default' => '25_75',
+          'default' => '50-50',
           'type' => 'string'
         ],
         'is_fullwidth' => [
