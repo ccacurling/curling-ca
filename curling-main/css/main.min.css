@@ -2062,7 +2062,8 @@ li {
     position: absolute;
     top: 20px;
     margin-left: 19px;
-    max-height: 143%;
+    max-width: 110px;
+    max-height: 172px;
     z-index: 100;
   }
 }

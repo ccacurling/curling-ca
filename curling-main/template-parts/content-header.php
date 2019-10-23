@@ -3,7 +3,7 @@
     $current_page_title = get_the_title();
     $is_event = get_field('is_event', 'Options');
 
-    $event_logo = get_field('event_logo', 'Options');
+    $logo = get_field('event_logo', 'Options');
 
     $category = null;
     $category_slug = '';
@@ -241,10 +241,10 @@
         <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
         <div class="nav-menu-primary-wrapper content content-container">
               <?php
-                if ($is_event && $event_logo) {
+                if ($logo) {
               ?>
                 <a href="<?php echo get_home_url(); ?>">
-                    <img class="menu-logo" src="<?php echo $event_logo['url']; ?>" alt="Site Logo" />
+                    <img class="menu-logo" src="<?php echo $logo['url']; ?>" alt="Site Logo" />
                 </a>
               <?php
                 }
