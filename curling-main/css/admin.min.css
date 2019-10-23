@@ -5737,8 +5737,14 @@
   margin-right: auto;
   padding-top: 70px;
   padding-left: 20px;
-  padding-right: 100px;
+  padding-right: 20px;
   max-width: 1000px;
+}
+
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .image-carousel-sub-container {
+    padding-right: 100px;
+  }
 }
 
 .edit-post-layout__content .image-carousel-accordion {
@@ -7453,14 +7459,21 @@
 }
 
 .edit-post-layout__content .block-video {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 60px;
+  padding-top: 56.25%;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 1170px;
   text-align: center;
   background-color: #000000;
+}
+
+.edit-post-layout__content .block-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .edit-post-layout__content .block-slash {

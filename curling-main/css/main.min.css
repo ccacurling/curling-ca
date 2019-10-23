@@ -5715,8 +5715,14 @@ li {
   margin-right: auto;
   padding-top: 70px;
   padding-left: 20px;
-  padding-right: 100px;
+  padding-right: 20px;
   max-width: 1000px;
+}
+
+@media only screen and (max-width: 999px) {
+  .image-carousel-sub-container {
+    padding-right: 100px;
+  }
 }
 
 .image-carousel-accordion {
@@ -7431,14 +7437,21 @@ h1.page-intro-main-headline {
 }
 
 .block-video {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 60px;
+  padding-top: 56.25%;
   padding-left: 20px;
   padding-right: 20px;
-  max-width: 1170px;
   text-align: center;
   background-color: #000000;
+}
+
+.block-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .block-links-container {
