@@ -3984,7 +3984,6 @@ li {
 
 .event-location-container {
   max-width: 1170px;
-  height: 400px;
   display: flex;
   flex-direction: row;
   margin: 2.5rem auto 3.5rem auto;
