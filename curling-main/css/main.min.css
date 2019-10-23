@@ -1107,7 +1107,8 @@ li {
   background-color: #ffffff;
 }
 
-.header-main .menu-item-selectable:hover .menu-item-content {
+.header-main .menu-item-selectable:hover .menu-item-content,
+.header-main .menu-item-selectable.menu-item-top-nav-selected .menu-item-content {
   color: #ed1940;
 }
 

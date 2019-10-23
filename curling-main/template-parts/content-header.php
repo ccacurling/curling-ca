@@ -9,7 +9,7 @@
     $category_slug = '';
     $is_category = is_category();
 
-    $home_url = get_home_url();
+    $home_url = get_home_url().'/';
 
     $site_list = [];
 

@@ -1140,7 +1140,8 @@
   background-color: #ffffff;
 }
 
-.edit-post-layout__content .header-main .menu-item-selectable:hover .menu-item-content {
+.edit-post-layout__content .header-main .menu-item-selectable:hover .menu-item-content,
+.edit-post-layout__content .header-main .menu-item-selectable.menu-item-top-nav-selected .menu-item-content {
   color: #ed1940;
 }
 
