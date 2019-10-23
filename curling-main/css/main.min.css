@@ -3995,7 +3995,7 @@ li {
 
 .event-location-container .info-section {
   width: 50%;
-  padding: 1.5rem 5.75rem;
+  padding: 0 20px;
 }
 
 .event-location-container .info-section h2, .event-location-container .info-section h3 {
@@ -4042,6 +4042,10 @@ li {
 .event-location-container .info-section .event-links div p a img {
   margin-left: 0.25rem;
   width: 1.15rem;
+}
+
+.event-location-container .info-section-container {
+  max-width: 440px;
 }
 
 .event-location-container .map-section {

@@ -4017,7 +4017,7 @@
 
 .edit-post-layout__content .event-location-container .info-section {
   width: 50%;
-  padding: 1.5rem 5.75rem;
+  padding: 0 20px;
 }
 
 .edit-post-layout__content .event-location-container .info-section h2, .edit-post-layout__content .event-location-container .info-section h3 {
@@ -4064,6 +4064,10 @@
 .edit-post-layout__content .event-location-container .info-section .event-links div p a img {
   margin-left: 0.25rem;
   width: 1.15rem;
+}
+
+.edit-post-layout__content .event-location-container .info-section-container {
+  max-width: 440px;
 }
 
 .edit-post-layout__content .event-location-container .map-section {

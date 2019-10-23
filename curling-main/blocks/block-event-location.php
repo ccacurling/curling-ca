@@ -27,39 +27,41 @@
 
 <section id="<?php echo $id ?>" class="event-location-container">
   <div class="info-section">
-    <h2 class="event-location-label">LOCATION</h2>
-    <p class="event-location"><?php echo $event_location_title ?></p>
-    <h3 class="event-date-label">DATE</h3>
-    <p class="event-date"><?php echo $start_date_string ?> - <?php echo $end_date_string ?></p>
-    <hr />
-    <div class="event-links">
-      <div>
-        <?php if ($event_cta_one) { ?>
-          <a class="btn-link" href="<?php echo $event_cta_one['url']; ?>" target="<?php echo $event_cta_one['target']; ?>">
-            <h4 class="btn-link-text red"><?php echo $event_cta_one['title']; ?></h4>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-          </a>
-        <?php } ?>
-        <?php if ($event_cta_three) { ?>
-          <a class="btn-link" href="<?php echo $event_cta_three['url']; ?>" target="<?php echo $event_cta_three['target']; ?>">
-            <h4 class="btn-link-text red"><?php echo $event_cta_three['title']; ?></h4>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-          </a>
-        <?php } ?>
-      </div>
-      <div>
-        <?php if ($event_cta_two) { ?>
-          <a class="btn-link" href="<?php echo $event_cta_two['url']; ?>" target="<?php echo $event_cta_two['target']; ?>">
-            <h4 class="btn-link-text red"><?php echo $event_cta_two['title']; ?></h4>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-          </a>
-        <?php } ?>
-        <?php if ($event_cta_four) { ?>
-          <a class="btn-link" href="<?php echo $event_cta_four['url']; ?>" target="<?php echo $event_cta_four['target']; ?>">
-            <h4 class="btn-link-text red"><?php echo $event_cta_four['title']; ?></h4>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
-          </a>
-        <?php } ?>
+    <div class="info-section-container">
+      <h2 class="event-location-label">LOCATION</h2>
+      <p class="event-location"><?php echo $event_location_title ?></p>
+      <h3 class="event-date-label">DATE</h3>
+      <p class="event-date"><?php echo $start_date_string ?> - <?php echo $end_date_string ?></p>
+      <hr />
+      <div class="event-links">
+        <div>
+          <?php if ($event_cta_one) { ?>
+            <a class="btn-link" href="<?php echo $event_cta_one['url']; ?>" target="<?php echo $event_cta_one['target']; ?>">
+              <h4 class="btn-link-text red"><?php echo $event_cta_one['title']; ?></h4>
+              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+            </a>
+          <?php } ?>
+          <?php if ($event_cta_three) { ?>
+            <a class="btn-link" href="<?php echo $event_cta_three['url']; ?>" target="<?php echo $event_cta_three['target']; ?>">
+              <h4 class="btn-link-text red"><?php echo $event_cta_three['title']; ?></h4>
+              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+            </a>
+          <?php } ?>
+        </div>
+        <div>
+          <?php if ($event_cta_two) { ?>
+            <a class="btn-link" href="<?php echo $event_cta_two['url']; ?>" target="<?php echo $event_cta_two['target']; ?>">
+              <h4 class="btn-link-text red"><?php echo $event_cta_two['title']; ?></h4>
+              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+            </a>
+          <?php } ?>
+          <?php if ($event_cta_four) { ?>
+            <a class="btn-link" href="<?php echo $event_cta_four['url']; ?>" target="<?php echo $event_cta_four['target']; ?>">
+              <h4 class="btn-link-text red"><?php echo $event_cta_four['title']; ?></h4>
+              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+            </a>
+          <?php } ?>
+        </div>
       </div>
     </div>
   </div>
