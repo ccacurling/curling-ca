@@ -3214,6 +3214,10 @@
   padding-right: 20px;
 }
 
+.edit-post-layout__content .block-hero-carousel .ms-container {
+  background-color: #ffffff;
+}
+
 .edit-post-layout__content .block-hero-carousel .ms-view {
   height: 540px !important;
 }
