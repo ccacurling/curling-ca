@@ -240,18 +240,17 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-
-  @include responsive-min($responsive-laptop) {
-    height: auto;
-    object-fit: cover;
-  }
 }
 
 .image-carousel-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  
+  @include responsive-min($responsive-laptop) {
+    height: auto;
+    object-fit: cover;
+  }
 }
 
 .image-carousel-image-0 {
