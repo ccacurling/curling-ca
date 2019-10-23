@@ -9,6 +9,8 @@
     $category_slug = '';
     $is_category = is_category();
 
+    $home_url = get_home_url();
+
     $site_list = [];
 
     if (!$is_event) {
@@ -148,7 +150,7 @@
                       <?php
                           foreach( $top_left_menu_items as $menu_item ) {
                       ?>
-                          <li class="menu-item menu-item-selectable">
+                          <li class="menu-item menu-item-selectable <?php echo $menu_item->url && $home_url === $menu_item->url ? 'menu-item-top-nav-selected' : ''; ?>">
                             <?php
                               if ($menu_item->url) {
                             ?>
