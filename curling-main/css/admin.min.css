@@ -5964,7 +5964,6 @@
 
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .image-carousel-image {
-    height: auto;
     object-fit: cover;
   }
 }

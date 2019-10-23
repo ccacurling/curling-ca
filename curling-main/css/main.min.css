@@ -5942,7 +5942,6 @@ li {
 
 @media only screen and (min-width: 999px) {
   .image-carousel-image {
-    height: auto;
     object-fit: cover;
   }
 }
