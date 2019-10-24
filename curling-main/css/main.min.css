@@ -3057,7 +3057,7 @@ li {
     padding-right: 4.7%;
     width: 39.2%;
     min-height: 700px;
-    z-index: 1;
+    z-index: 0;
   }
 }
 
