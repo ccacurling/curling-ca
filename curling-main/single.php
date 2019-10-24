@@ -50,9 +50,13 @@
             while (have_posts()) : 
               the_post();
           ?>
-            <h1 class="curling-post-title"><?php the_title(); ?></h1>
+            <h2 class="curling-post-title"><?php the_title(); ?></h2>
+              <div class="curling-post-content">
+                <?php
+                  the_content();
+                ?>
+              </div>
           <?php
-                the_content();
               endwhile;
             endif; 
           ?>

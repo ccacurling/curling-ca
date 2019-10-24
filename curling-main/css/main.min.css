@@ -1069,6 +1069,32 @@ li {
   margin-bottom: 35px;
 }
 
+.curling-post-content {
+  font-family: "Meta Serif Pro";
+  line-height: 18px;
+  letter-spacing: 0;
+  font-size: 14px;
+  color: #000000;
+}
+
+@media only screen and (min-width: 999px) {
+  .curling-post-content {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+}
+
+.curling-post-content a {
+  font-style: italic;
+  text-decoration: underline;
+}
+
+.curling-post-content a:hover {
+  cursor: pointer;
+  color: #f16682;
+}
+
 .header-main .menu-nav-mobile {
   margin-top: 13px;
   margin-bottom: 11px;

@@ -13,6 +13,23 @@
 
     $site_list = [];
 
+    $current_language = [
+      'code' => 'en',
+      'url' => get_permalink()
+    ];
+    $translation_language = [
+      'code' => 'fr',
+      'url' => get_permalink()
+    ];
+    $languages = function_exists('icl_get_languages') ? icl_get_languages() : [];
+    foreach ($languages as $key => $language) {
+      if ($language['active']) {
+        $current_language = $language;
+      } else {
+        $translation_language = $language;
+      }
+    }
+
     $current_menu_item = null;
 
     if (!$is_event) {
@@ -59,13 +76,6 @@
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
-
-    $languages = function_exists('icl_get_languages') ? icl_get_languages() : [];
-    foreach ($languages as $key => $language) {
-      if ($language['active']) {
-        unset($languages[$key]);
-      }
-    }
 
     $url = $is_category && $category ? get_category_link($category) : get_permalink();
     
@@ -217,25 +227,13 @@
                 </a>
               </li>
             </ul>
-            <?php
-              if (count($languages) > 0) {
-            ?>
-              <ul class="menu-nav menu-nav-language">
-                <?php 
-                  foreach ($languages as $key => $language) {
-                ?>
-                  <li class="menu-item menu-item-language menu-item-selectable">
-                    <a class="clear" href="<?php echo $language['url']; ?>">
-                      <h4 class="menu-item-content menu-item-small"><?php echo $language['code']; ?></h4>
-                    </a>
-                  </li>
-                <?php
-                  }
-                ?>
-              </ul>
-            <?php
-              }
-            ?>
+            <ul class="menu-nav menu-nav-language">
+              <li class="menu-item menu-item-language menu-item-selectable">
+                <a class="clear" href="<?php echo $translation_language['url']; ?>">
+                  <h4 class="menu-item-content menu-item-small"><?php echo $translation_language['code']; ?></h4>
+                </a>
+              </li>
+            </ul>
           <?php
             }
           ?>
