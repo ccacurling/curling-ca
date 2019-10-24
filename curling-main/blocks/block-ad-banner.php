@@ -4,7 +4,7 @@
  *
  * This is the template that displays the video block.
  */
-  error_log( "Banner Type" . get_field('banner_type') );
+  //error_log( "Banner Type" . get_field('banner_type') );
 
   if ( get_field('banner_type') == 'custom' ) {
     $adsnippet = get_field('adsnippet');
