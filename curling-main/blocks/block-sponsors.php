@@ -5,11 +5,11 @@
  * This is the template that displays the sponsors block.
  */
 
-  $block_title = get_field( 'block_title', $block->ID );
-  $block_background = get_field( 'block_background_color', $block->ID );
-  $block_background_mobile = get_field( 'block_background_color_mobile', $block->ID );
-  $block_content_alignment = get_field( 'block_content_alignment', $block->ID );
-  $sponsor_columns = get_field( 'sponsor_columns', $block->ID );
+  $block_title = get_field( 'block_title');
+  $block_background = get_field( 'block_background_color');
+  $block_background_mobile = get_field( 'block_background_color_mobile');
+  $block_content_alignment = get_field( 'block_content_alignment');
+  $sponsor_columns = get_field( 'sponsor_columns');
 
   // Handle background selection classes
   $block_background_class = $block_background === 'White' ? 'has-white-bg' : 'has-grey-bg';
@@ -53,12 +53,12 @@
 
 ?>
 
-<section id="<?php echo $id ?>" class="block-sponsors <?php echo $block_background_class; ?> <?php echo $block_template_class; ?>">
+<section class="block-sponsors <?php echo $block_background_class; ?> <?php echo $block_template_class; ?>">
   <div class="content content-fixed">
     <?php
       if ($sponsor_columns == 1) {
     ?>
-      <h4><?php echo strtoupper( $block_title ); ?></h4>
+      <h3><?php echo strtoupper( $block_title ); ?></h3>
     <?php
       } else {
     ?>
@@ -110,7 +110,7 @@
           $sponsor_type = get_sub_field( 'type' );
           $sponsor_link = get_sub_field( 'sponsor_cta' );
           $sponsor      = get_sub_field( 'sponsor' ); 
-          $logo_src     = get_field( 'featured_image', $sponsor->ID );
+          $logo_src     = get_the_post_thumbnail_url( $sponsor );
           $sponsor_container_classes = 'sponsor-container';
           if ($sponsor_link) {
             $sponsor_container_classes .= $sponsor_type && $sponsor_link ? ' has-title-and-link' : '';
@@ -131,7 +131,7 @@
             <?php } ?>
       
             <div class="sponsor">
-              <img src="<?php echo $logo_src['url']; ?>" alt="<?php echo $sponsor->post_title; ?>" />
+              <img src="<?php echo $logo_src; ?>" alt="<?php echo $sponsor->post_title; ?>" />
             </div>
   
           </div>

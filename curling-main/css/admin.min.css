@@ -4847,17 +4847,18 @@
 
 .edit-post-layout__content .block-sponsors .content .sponsors-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  width: 102.5%;
   position: relative;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
 .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container {
-  flex: 1 1 185px;
+  flex: 0 1 170px;
   max-height: 310px;
   display: flex;
-  padding: 1.25rem 0;
+  padding: 1.25rem 15px;
   flex-direction: column;
   justify-content: flex-end;
 }
@@ -5064,10 +5065,6 @@
 @media only screen and (max-width: 481px) {
   .edit-post-layout__content .block-sponsors {
     padding: 0.5rem 0;
-  }
-  .edit-post-layout__content .block-sponsors h2 {
-    position: relative;
-    left: 1.1rem;
   }
   .edit-post-layout__content .block-sponsors .content {
     margin-left: 0rem;
