@@ -67,7 +67,7 @@ body {
 }
 
 body {
-  overflow: hidden;
+  overflow: visible;
 }
 
 *,
@@ -1083,10 +1083,18 @@ li {
 }
 
 .header-main .nav-menu-popup-current {
+  max-width: 1440px;
+}
+
+.header-main .nav-menu-popup-current .nav-menu-popup-list {
+  max-width: 1170px;
+  padding-left: 100px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 100px;
-  max-width: 1170px;
+}
+
+.header-main .nav-menu-popup {
+  border: 1px solid #f2f2f2;
 }
 
 .header-main .nav-menu-popup .nav-menu-popup-list {
@@ -1285,6 +1293,7 @@ li {
   margin-right: auto;
   max-width: 1170px;
   background-color: #ed1940;
+  border: 1px solid #f2f2f2;
 }
 
 .header-event .nav-menu-popup.nav-menu-popup-active {
@@ -2037,6 +2046,8 @@ li {
   .header-desktop {
     display: block;
     position: relative;
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+    z-index: 1;
   }
 }
 
@@ -2173,7 +2184,6 @@ li {
   transform: translateY(0%);
   transform-origin: top center;
   transition: transform 0.25s ease-out;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
   z-index: 3;
 }
 

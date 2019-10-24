@@ -75,6 +75,8 @@
   @include responsive-min($responsive-laptop) {
     display: block;
     position: relative;
+    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.15);
+    z-index: 1;
   }
 }
 
@@ -213,7 +215,6 @@
   transform: translateY(0%);
   transform-origin: top center;
   transition: transform 0.25s ease-out;
-  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.15);
   z-index: 3;
   
   // &:not(.nav-menu-popup-active) {

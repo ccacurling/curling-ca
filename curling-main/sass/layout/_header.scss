@@ -13,10 +13,18 @@
   }
 
   .nav-menu-popup-current {
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 100px;
-    max-width: $full-width-wrapper;
+    max-width: $full-width-max;
+
+    .nav-menu-popup-list {
+      max-width: $full-width-wrapper;
+      padding-left: 100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .nav-menu-popup {
+    border: 1px solid $cool-light-gray;
   }
 
   .nav-menu-popup .nav-menu-popup-list {
@@ -231,6 +239,7 @@
     margin-right: auto;
     max-width: $full-width-wrapper;
     background-color: $red;
+    border: 1px solid $cool-light-gray;
 
     // &:not(.nav-menu-popup-active) {
     //   top: 170px;
