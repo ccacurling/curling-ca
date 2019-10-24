@@ -202,14 +202,15 @@ function block_3_column_init() {
 }
 
 function add_curling_styles() {
-    wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css");
-    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css');
-    wp_enqueue_style('masterslider', get_stylesheet_directory_uri() . '/css/masterslider.main.css');
+    $nodeps = '';
+    wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css", $nodeps, filemtime( get_stylesheet_directory() . '/css/vendor/lity.min.css') );
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css', $nodeps, filemtime( get_stylesheet_directory() . '/css/main.min.css') );
+    wp_enqueue_style('masterslider', get_stylesheet_directory_uri() . '/css/masterslider.main.css', $nodeps, filemtime( get_stylesheet_directory() . '/css/masterslider.main.css') );
     
-    wp_enqueue_script('masterslider', get_stylesheet_directory_uri() . "/js/vendor/masterslider.min.js", [ 'jquery' ], '1.0.0');
-    wp_enqueue_script('slick', get_stylesheet_directory_uri() . "/js/vendor/slick.min.js", [ 'jquery' ], '1.8.1');
-    wp_enqueue_script('litty', get_stylesheet_directory_uri() . "/js/vendor/lity.min.js", [ 'jquery' ], '3.1.0');
-    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery', 'slick' ], '2.4.0');
+    wp_enqueue_script('masterslider', get_stylesheet_directory_uri() . "/js/vendor/masterslider.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/masterslider.min.js') );
+    wp_enqueue_script('slick', get_stylesheet_directory_uri() . "/js/vendor/slick.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/slick.min.js') );
+    wp_enqueue_script('litty', get_stylesheet_directory_uri() . "/js/vendor/lity.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/lity.min.js') );
+    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery', 'slick' ], filemtime( get_stylesheet_directory() . '/js/dist/main.min.js') );
 
     wp_localize_script( 'main', 'curling_ajax', [ 
       'ajax_url' => admin_url( 'admin-ajax.php' )
@@ -217,14 +218,15 @@ function add_curling_styles() {
 }
 
 function add_curling_admin_styles() {
-    wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css");
-    wp_enqueue_style('admin', get_stylesheet_directory_uri() . '/css/admin.min.css');
-    wp_enqueue_style('masterslider', get_stylesheet_directory_uri() . '/css/masterslider.main.css');
+    $nodeps = '';
+    wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css", $nodeps, filemtime( get_stylesheet_directory() . '/css/vendor/lity.min.css') );
+    wp_enqueue_style('admin', get_stylesheet_directory_uri() . '/css/admin.min.css', $nodeps, filemtime( get_stylesheet_directory() . '/css/admin.min.css') );
+    wp_enqueue_style('masterslider', get_stylesheet_directory_uri() . '/css/masterslider.main.css', $nodeps, filemtime( get_stylesheet_directory() . '/css/masterslider.main.css') );
     
-    wp_enqueue_script('masterslider', get_stylesheet_directory_uri() . "/js/vendor/masterslider.min.js", [ 'jquery' ], '1.0.0');
-    wp_enqueue_script('slick', get_stylesheet_directory_uri() . "/js/vendor/slick.min.js", [ 'jquery' ], '1.8.1');
-    wp_enqueue_script('litty', get_stylesheet_directory_uri() . "/js/vendor/lity.min.js", [ 'jquery' ], '3.1.0');
-    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery', 'slick' ], '2.4.0');
+    wp_enqueue_script('masterslider', get_stylesheet_directory_uri() . "/js/vendor/masterslider.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/masterslider.min.js') );
+    wp_enqueue_script('slick', get_stylesheet_directory_uri() . "/js/vendor/slick.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/slick.min.js') );
+    wp_enqueue_script('litty', get_stylesheet_directory_uri() . "/js/vendor/lity.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/lity.min.js') );
+    wp_enqueue_script('main', get_stylesheet_directory_uri() . "/js/dist/main.min.js", [ 'jquery', 'slick' ], filemtime( get_stylesheet_directory() . '/js/dist/main.min.js') );
 
     wp_localize_script( 'main', 'curling_ajax', [ 
       'ajax_url' => admin_url( 'admin-ajax.php' )
@@ -1048,14 +1050,8 @@ function create_nav_structure(){
         'menu-item-url' => 'https://shop.curling.ca', 
         'menu-item-type' => 'custom',
         'menu-item-status' => 'publish'));
-
-        
-      
     }
-
   }
-
-
 }
 
 
