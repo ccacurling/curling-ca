@@ -1127,7 +1127,9 @@
 }
 
 .edit-post-layout__content .header-main .nav-menu-popup {
-  border: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+  border-left: 1px solid #f2f2f2;
+  border-right: 1px solid #f2f2f2;
 }
 
 .edit-post-layout__content .header-main .nav-menu-popup .nav-menu-popup-list {
