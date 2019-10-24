@@ -1664,6 +1664,7 @@
 }
 
 .edit-post-layout__content .block-accordion-container.accordion-container-single {
+  background-color: #ffffff;
   border: 1px solid #f2f2f2;
   box-shadow: -10px 9px 21px 0 rgba(76, 76, 78, 0.1);
   border-radius: 2px;
