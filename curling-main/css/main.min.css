@@ -5903,6 +5903,16 @@ li {
   height: 100%;
 }
 
+.image-carousel-slides .slick-track {
+  height: auto;
+}
+
+@media only screen and (min-width: 769px) {
+  .image-carousel-slides .slick-track {
+    height: 568px;
+  }
+}
+
 .image-carousel-rtl .image-carousel-slide {
   flex-direction: row-reverse;
 }

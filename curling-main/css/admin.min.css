@@ -5925,6 +5925,16 @@
   height: 100%;
 }
 
+.edit-post-layout__content .image-carousel-slides .slick-track {
+  height: auto;
+}
+
+@media only screen and (min-width: 769px) {
+  .edit-post-layout__content .image-carousel-slides .slick-track {
+    height: 568px;
+  }
+}
+
 .edit-post-layout__content .image-carousel-rtl .image-carousel-slide {
   flex-direction: row-reverse;
 }
