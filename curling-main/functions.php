@@ -205,7 +205,6 @@ function add_curling_styles() {
     $nodeps = '';
     wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css", $nodeps, filemtime( get_stylesheet_directory() . '/css/vendor/lity.min.css') );
     wp_enqueue_style('main', get_stylesheet_directory_uri() . '/css/main.min.css', $nodeps, filemtime( get_stylesheet_directory() . '/css/main.min.css') );
-    wp_enqueue_style('masterslider', get_stylesheet_directory_uri() . '/css/masterslider.main.css', $nodeps, filemtime( get_stylesheet_directory() . '/css/masterslider.main.css') );
     
     wp_enqueue_script('masterslider', get_stylesheet_directory_uri() . "/js/vendor/masterslider.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/masterslider.min.js') );
     wp_enqueue_script('slick', get_stylesheet_directory_uri() . "/js/vendor/slick.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/slick.min.js') );
@@ -221,7 +220,6 @@ function add_curling_admin_styles() {
     $nodeps = '';
     wp_enqueue_style('litty', get_stylesheet_directory_uri() . "/css/vendor/lity.min.css", $nodeps, filemtime( get_stylesheet_directory() . '/css/vendor/lity.min.css') );
     wp_enqueue_style('admin', get_stylesheet_directory_uri() . '/css/admin.min.css', $nodeps, filemtime( get_stylesheet_directory() . '/css/admin.min.css') );
-    wp_enqueue_style('masterslider', get_stylesheet_directory_uri() . '/css/masterslider.main.css', $nodeps, filemtime( get_stylesheet_directory() . '/css/masterslider.main.css') );
     
     wp_enqueue_script('masterslider', get_stylesheet_directory_uri() . "/js/vendor/masterslider.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/masterslider.min.js') );
     wp_enqueue_script('slick', get_stylesheet_directory_uri() . "/js/vendor/slick.min.js", [ 'jquery' ], filemtime( get_stylesheet_directory() . '/js/vendor/slick.min.js') );
