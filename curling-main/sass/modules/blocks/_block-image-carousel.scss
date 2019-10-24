@@ -21,7 +21,7 @@
   padding-right: 20px;
   max-width: 1000px;
 
-  @include responsive-max($responsive-laptop) {
+  @include responsive-min($responsive-laptop) {
     padding-right: 100px;
   }
 }
