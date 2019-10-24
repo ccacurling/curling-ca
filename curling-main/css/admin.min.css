@@ -1115,6 +1115,13 @@
   background-color: #ed1940;
 }
 
+.edit-post-layout__content .header-main .nav-menu-popup-current {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 100px;
+  max-width: 1170px;
+}
+
 .edit-post-layout__content .header-main .nav-menu-popup .nav-menu-popup-list {
   max-width: 1170px;
   padding-left: 100px;
@@ -2164,6 +2171,10 @@
   margin-right: auto;
   max-width: 1170px;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+.edit-post-layout__content .nav-menu-primary-container {
+  position: relative;
 }
 
 .edit-post-layout__content .nav-menu-popup-container {
