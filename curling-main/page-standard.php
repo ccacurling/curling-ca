@@ -1,7 +1,7 @@
 
 <?php
 /*
- * Template Name:  Home Page 
+ * Template Name: Standard Page
  */
 include 'page.php';
 ?>

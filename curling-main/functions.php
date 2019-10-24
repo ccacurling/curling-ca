@@ -8,6 +8,8 @@ add_action('init', 'create_draw_schedule_post_type');
 add_action('init', 'create_job_post_type');
 add_action('after_setup_theme', 'create_nav_structure');
 
+add_action( 'init', 'register_template_hpa' );
+
 include 'blocks/functions.php';
 include 'functions-ajax.php';
 
@@ -147,7 +149,7 @@ function block_2_column_init() {
       },
       'attributes' => [
         'type' => [
-          'default' => '25_75',
+          'default' => '50-50',
           'type' => 'string'
         ],
         'is_fullwidth' => [
@@ -1052,9 +1054,9 @@ function create_nav_structure(){
   }
 }
 
-/*
+
 //Setup Block Templates
-function myplugin_register_template() {
+function register_template_hpa() {
   $post_type_object = get_post_type_object( 'post' );
 
   $template_image = array();
@@ -1076,6 +1078,3 @@ function myplugin_register_template() {
       $template_label
   );
 }
-add_action( 'init', 'myplugin_register_template' );
-*/
-

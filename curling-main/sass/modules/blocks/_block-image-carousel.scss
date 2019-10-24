@@ -18,8 +18,12 @@
   margin-right: auto;
   padding-top: 70px;
   padding-left: 20px;
-  padding-right: 100px;
+  padding-right: 20px;
   max-width: 1000px;
+
+  @include responsive-min($responsive-laptop) {
+    padding-right: 100px;
+  }
 }
 
 .image-carousel-accordion {
@@ -202,6 +206,14 @@
   display: none;
   min-width: 0;
   height: 100%;
+
+  .slick-track {
+    height: auto;
+
+    @include responsive-min($responsive-tablet) {
+      height: 568px;
+    }
+  }
 }
 
 .image-carousel-rtl .image-carousel-slide {

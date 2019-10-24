@@ -36,7 +36,7 @@ registerBlockType("cossette/block-column-2", {
   category: "common",
   attributes: {
     type: {
-      default: '50_50',
+      default: '50-50',
       type: "string"
     },
     is_fullwidth: {

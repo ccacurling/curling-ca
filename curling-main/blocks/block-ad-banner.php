@@ -1,23 +1,23 @@
 <?php
 /**
- * Block Name: Video
+ * Block Name: Ad Banner
  *
- * This is the template that displays the video block.
+ * This is the template that displays the ad banner block.
  */
-  //error_log( "Banner Type" . get_field('banner_type') );
+  
+  $banner_type = get_field('banner_type');
 
-  if ( get_field('banner_type') == 'custom' ) {
+  if ( $banner_type == 'custom' ) {
     $adsnippet = get_field('adsnippet');
-  } else if ( get_field('banner_type') == 'wide' ) {
+  } else if ( $banner_type == 'wide' ) {
     $adsnippet = get_field('ad_snippet_wide', 'Options');
-  } else if ( get_field('banner_type') == 'square' ) {
+  } else if ( $banner_type == 'square' ) {
     $adsnippet = get_field('ad_snippet_square', 'Options');
   } else {
     $adsnippet = get_field('ad_snippet_square_national', 'Options');
   }
 ?>
-
-<section class="block-ad-banner">
+<section class="block-ad-banner <?php echo $banner_type === 'wide' ? 'ad-banner-wide' : ''; ?>">
   <?php 
     if ($adsnippet) {
       echo $adsnippet; 
