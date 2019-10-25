@@ -15,8 +15,6 @@
     $adsnippet = '';
     if ( $top_nav_ad_type == 'custom' ) {
       $adsnippet = get_field('adsnippet');
-    } else if ( $top_nav_ad_type == 'wide' ) {
-      $adsnippet = get_field('ad_snippet_wide', 'Options');
     } else if ( $top_nav_ad_type == 'square' ) {
       $adsnippet = get_field('ad_snippet_square', 'Options');
     } else {
