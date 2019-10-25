@@ -55,7 +55,7 @@
           $event_date_end = get_field( 'event_date_end', 'option' );
           $end = strtotime($event_date_end);
           $current = time();
-          $has_not_passed = $current >= $end;
+          $has_not_passed = $current <= $end;
         }
         restore_current_blog();
         return $is_event && $has_not_passed;
@@ -70,9 +70,6 @@
         restore_current_blog();
         return ($astart < $bstart) ? -1 : 1; 
       });
-
-      // TODO: TEMP!! This is only here to test the pagination functionality of the events feed
-      // $site_list = array_merge($site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list);
     }
 
     if ($is_category) {
@@ -617,6 +614,7 @@ function create_menu_bar_simple_item($parent_id, $menu_items, $is_selected = fal
         $start_date_value = get_field( 'event_date_start', 'Options' );
         $end_date_value = get_field( 'event_date_end', 'Options' );
         $timezone = get_field( 'event_timezone', 'Options' );
+        $home_url = get_home_url( $site->blog_id );
 
         $start_date_value = $start_date_value ? $start_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
         $end_date_value = $end_date_value ? $end_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
@@ -636,10 +634,12 @@ function create_menu_bar_simple_item($parent_id, $menu_items, $is_selected = fal
         restore_current_blog();
     ?>
       <li class="menu-subitem menu-subitem-event">
-        <div class="menu-subitem-wrapper menu-item-selectable">
-          <span class="menu-item-content menu-item-title menu-item-subtitle gray"><?php echo $name; ?></span>
-          <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray"><?php echo $date; ?></span>
-        </div>
+        <a class="clear" href="<?php echo $home_url; ?>">
+          <div class="menu-subitem-wrapper menu-item-selectable">
+            <span class="menu-item-content menu-item-title menu-item-subtitle gray"><?php echo $name; ?></span>
+            <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray"><?php echo $date; ?></span>
+          </div>
+        </a>
         <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
       </li>
     <?php
