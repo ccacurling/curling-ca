@@ -11,6 +11,18 @@
 
     $home_url = get_home_url().'/';
 
+    $top_nav_ad_type = get_field( 'top_nav_ad_type', 'Options');
+    $adsnippet = '';
+    if ( $top_nav_ad_type == 'custom' ) {
+      $adsnippet = get_field('adsnippet');
+    } else if ( $top_nav_ad_type == 'wide' ) {
+      $adsnippet = get_field('ad_snippet_wide', 'Options');
+    } else if ( $top_nav_ad_type == 'square' ) {
+      $adsnippet = get_field('ad_snippet_square', 'Options');
+    } else {
+      $adsnippet = get_field('ad_snippet_square_national', 'Options');
+    }
+
     $site_list = [];
 
     $current_language = [
@@ -293,7 +305,7 @@
             <?php
               foreach( $menu_items as $id => $menu_item ) {
                 if ($menu_item->is_event_menu) {
-                  create_menu_bar_event_item($menu_item->ID, $site_list);
+                  create_menu_bar_event_item($menu_item->ID, $site_list, $adsnippet);
                 } else if ($menu_item->children) {
                   if ($menu_item->is_current_page && $current_menu_item == null) {
                     $current_menu_item = [
@@ -325,7 +337,7 @@
         <?php
           foreach( $menu_items as $id => $menu_item ) {
             if ($menu_item->is_event_menu) {
-              create_menu_bar_event_item($menu_item->ID, $site_list);
+              create_menu_bar_event_item($menu_item->ID, $site_list, $adsnippet);
             } else if ($menu_item->children) {
               if ($menu_item->is_current_page && $current_menu_item == null) {
                 $current_menu_item = [
@@ -528,7 +540,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
 ?>
 
 <?php
-function create_menu_bar_event_item($parent_id, $site_list) {
+function create_menu_bar_event_item($parent_id, $site_list, $adsnippet = '') {
 ?>
   <div class="nav-menu-popup nav-menu-popup-event" data-name="<?php echo $parent_id; ?>">
     <div class="nav-menu-popup-wrapper content-fixed-padding">
@@ -541,7 +553,11 @@ function create_menu_bar_event_item($parent_id, $site_list) {
         <?php event_posters($site_list); ?>
       </div>
       <div class="nav-menu-popup-event-right">
-        <img class="ad" src="<?php echo get_stylesheet_directory_uri()."/images/img-ad-sample.png"; ?>" alt="Ad" />
+        <?php
+          if ($adsnippet) {
+            echo $adsnippet; 
+          }
+        ?>
       </div>
     </div>
   </div>
