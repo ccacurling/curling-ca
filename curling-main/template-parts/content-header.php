@@ -1,9 +1,21 @@
 <?php
     global $wp;
     $current_page_title = get_the_title();
+    $current_page_id = get_the_id();
+
     $is_event = get_field('is_event', 'Options');
 
     $logo = get_field('event_logo', 'Options');
+
+    $our_organization_pages = get_field('our_organization_pages', 'Options');
+    $is_our_organization = false;
+
+    foreach ($our_organization_pages as $key => $page) {
+      if ($page->ID === $current_page_id) {
+        $is_our_organization = true;
+        break;
+      }
+    }
 
     $category = null;
     $category_slug = '';
@@ -79,7 +91,15 @@
 
     $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Top Left' ) ? wp_get_nav_menu_items( 'Menu - Top Left' ) : [];
     $top_right_menu_items = wp_get_nav_menu_items( 'Menu - Top Right' ) ? wp_get_nav_menu_items( 'Menu - Top Right' ) : [];
-    $primary_menu_items = wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) ? wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) : [];
+    $primary_menu_items = [];
+    
+    if ($is_our_organization) {
+      $primary_menu_items = wp_get_nav_menu_items( 'Menu - Our Organization' );
+    } else if ($is_event) {
+      $primary_menu_items = wp_get_nav_menu_items( 'Menu - Events' );
+    } else {
+      $primary_menu_items = wp_get_nav_menu_items( 'Menu - Main' );
+    }
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
