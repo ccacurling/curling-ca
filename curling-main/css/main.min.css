@@ -7066,6 +7066,12 @@ h1.page-intro-main-headline {
   }
 }
 
+@media only screen and (min-width: 999px) {
+  .team-small-container:hover .team-small-location {
+    display: none;
+  }
+}
+
 .team-small-container:hover .team-small-members-container {
   display: block;
 }
@@ -7081,10 +7087,11 @@ h1.page-intro-main-headline {
 }
 
 .team-small-info {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 36px;
   padding-left: 18px;
-  padding-right: 18px;
+  padding-right: 52px;
 }
 
 .team-small-title {
@@ -7092,6 +7099,10 @@ h1.page-intro-main-headline {
   margin-bottom: 20px;
   max-width: 220px;
   line-height: 52px;
+}
+
+.team-small-location {
+  margin-bottom: 20px;
 }
 
 .team-small-members-container {
@@ -7112,6 +7123,22 @@ h1.page-intro-main-headline {
 
 .team-small-link-container {
   margin-bottom: 20px;
+}
+
+.team-small-social {
+  display: flex;
+  position: absolute;
+  top: 25px;
+  right: 18px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-small-social-icon {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .block-featured-event {

@@ -7088,6 +7088,12 @@
   }
 }
 
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .team-small-container:hover .team-small-location {
+    display: none;
+  }
+}
+
 .edit-post-layout__content .team-small-container:hover .team-small-members-container {
   display: block;
 }
@@ -7103,10 +7109,11 @@
 }
 
 .edit-post-layout__content .team-small-info {
+  position: relative;
   padding-top: 20px;
   padding-bottom: 36px;
   padding-left: 18px;
-  padding-right: 18px;
+  padding-right: 52px;
 }
 
 .edit-post-layout__content .team-small-title {
@@ -7114,6 +7121,10 @@
   margin-bottom: 20px;
   max-width: 220px;
   line-height: 52px;
+}
+
+.edit-post-layout__content .team-small-location {
+  margin-bottom: 20px;
 }
 
 .edit-post-layout__content .team-small-members-container {
@@ -7134,6 +7145,22 @@
 
 .edit-post-layout__content .team-small-link-container {
   margin-bottom: 20px;
+}
+
+.edit-post-layout__content .team-small-social {
+  display: flex;
+  position: absolute;
+  top: 25px;
+  right: 18px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-post-layout__content .team-small-social-icon {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .edit-post-layout__content .block-featured-event {

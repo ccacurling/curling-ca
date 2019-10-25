@@ -240,14 +240,13 @@ function create_taxonomy() {
 }
 
 function create_post_type() {
-    $is_event = function_exists('get_field') ? get_field('is_event', 'Options') : false;
     register_post_type('Team', [
         'labels' => [
             'name' => __('Team'),
             'singular_name' => __('Team'),
         ],
         'menu_icon' => 'dashicons-megaphone',
-        'public' => $is_event,
+        'public' => true,
         // 'taxonomies' => [ 'team_tag' ],
         'supports' => ['title', 'thumbnail'],
         'has_archive' => true,

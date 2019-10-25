@@ -11,6 +11,9 @@ $team_small_link = get_field( 'team_small_link' );
 
 $team_small_thumbnail = get_the_post_thumbnail_url( $team_small_post, 'large' );
 $team_small_title = get_the_title( $team_small_post );
+$team_small_location_name = get_field( 'team_location_name', $team_small_post );
+$team_small_team_city = get_field( 'team_city', $team_small_post );
+$team_small_social_media = get_field( 'social_media_links', $team_small_post );
 $team_small_members = get_field( 'team_members', $team_small_post );
 
 ?>
@@ -31,6 +34,15 @@ $team_small_members = get_field( 'team_members', $team_small_post );
         if ($team_small_title) {
       ?>
         <h2 class="team-small-title"><?php echo $team_small_title; ?></h2>
+      <?php
+        }
+      ?>
+      <?php
+        if ($team_small_location_name || $team_small_team_city) {
+      ?>
+        <p class="team-small-location">
+          <?php echo $team_small_location_name ? $team_small_location_name : ''; ?><?php echo $team_small_location_name && $team_small_team_city ? ', ' : ''; ?><?php echo $team_small_team_city ? $team_small_team_city : ''; ?>
+        </p>
       <?php
         }
       ?>
@@ -68,6 +80,36 @@ $team_small_members = get_field( 'team_members', $team_small_post );
           <h4 class="btn-link-text red"><?php echo $team_small_link['title']; ?></h4>
           <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="arrow-right">
         </a>
+      <?php
+        }
+      ?>
+
+      <?php
+        if ($team_small_social_media) {
+      ?>
+        <div class="team-small-social">
+          <?php
+            if ($team_small_social_media['facebook']) {
+          ?>
+            <a href="<?php echo 'https://www.facebook.com/'.$team_small_social_media['facebook']; ?>" target="_blank"><img class="team-small-social-icon" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook-gray.svg"; ?>" alt="facebook" /></a>
+          <?php
+            }
+          ?>
+          <?php
+            if ($team_small_social_media['twitter']) {
+          ?>
+            <a href="<?php echo 'https://twitter.com/'.$team_small_social_media['twitter']; ?>" target="_blank"><img class="team-small-social-icon" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter-gray.svg"; ?>" alt="twitter" /></a>
+          <?php
+            }
+          ?>
+          <?php
+            if ($team_small_social_media['instagram']) {
+          ?>
+            <a href="<?php echo 'https://www.instagram.com/'.$team_small_social_media['instagram']; ?>" target="_blank"><img class="team-small-social-icon" src="<?php echo get_stylesheet_directory_uri()."/images/icon-instagram-gray.svg"; ?>" alt="instagram" /></a>
+          <?php
+            }
+          ?>
+        </div>
       <?php
         }
       ?>
