@@ -35,6 +35,7 @@ jQuery(document).ready(function($) {
           fillMode: 'cover',
           autoplay: true,
           slideshowDelay: 5,
+          overPause: false,
           pauseOnHover: false,
           controls: {
             thumblist: {

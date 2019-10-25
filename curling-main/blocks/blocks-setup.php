@@ -2970,6 +2970,76 @@ acf_add_local_field_group(array(
 					),
 				),
 			),
+    ),
+    array(
+			'key' => 'field_5db33536d9103',
+			'label' => 'Nav Settings',
+			'name' => '',
+			'type' => 'tab',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'placement' => 'top',
+			'endpoint' => 0,
+		),
+		array(
+			'key' => 'field_5db33457d812b',
+			'label' => 'Top Nav Ad Type',
+			'name' => 'top_nav_ad_type',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 1,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				'square' => 'Square Style (300 x 250) - Local',
+				'square_national' => 'Square Style (300 x 250) - National',
+				'custom' => 'Enter Custom Snippet',
+			),
+			'default_value' => array(
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+		array(
+			'key' => 'field_5db335eed9104',
+			'label' => 'Custom Ad Snippet',
+			'name' => 'custom_ad_snippet',
+			'type' => 'textarea',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => array(
+				array(
+					array(
+						'field' => 'field_5db33457d812b',
+						'operator' => '==',
+						'value' => 'custom\'',
+					),
+				),
+			),
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'maxlength' => '',
+			'rows' => '',
+			'new_lines' => '',
 		),
 	),
 	'location' => array(
@@ -3515,6 +3585,22 @@ acf_add_local_field_group(array(
 	'key' => 'group_5d716238640a0',
 	'title' => 'Sponsors',
 	'fields' => array(
+		array(
+			'key' => 'field_5db243308c81b',
+			'label' => 'Link',
+			'name' => 'sponsor_link',
+			'type' => 'url',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+		),
 	),
 	'location' => array(
 		array(
@@ -3526,7 +3612,7 @@ acf_add_local_field_group(array(
 		),
 	),
 	'menu_order' => 0,
-	'position' => 'normal',
+	'position' => 'side',
 	'style' => 'default',
 	'label_placement' => 'top',
 	'instruction_placement' => 'label',
@@ -4986,11 +5072,11 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
-	'key' => 'group_5d7aa548d395b',
+	'key' => 'group_5d8bfb412dbf7',
 	'title' => 'Events Feed',
 	'fields' => array(
 		array(
-			'key' => 'field_5d7aa5579a611',
+			'key' => 'field_5d8bfb418d764',
 			'label' => 'Title',
 			'name' => 'events_feed_title',
 			'type' => 'text',
@@ -5009,7 +5095,7 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_5d7aa55e9a612',
+			'key' => 'field_5d8bfb418d772',
 			'label' => 'Category',
 			'name' => 'events_feed_category',
 			'type' => 'taxonomy',
@@ -5543,6 +5629,25 @@ acf_add_local_field_group(array(
 			'return_format' => 'value',
 			'ajax' => 0,
 			'placeholder' => '',
+    ),
+    array(
+			'key' => 'field_5db32a027897b',
+			'label' => 'Open in New Tab',
+			'name' => 'target_blank',
+			'type' => 'true_false',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
 		),
 	),
 	'location' => array(

@@ -6,6 +6,7 @@
  */
 $design = get_field('button_design'); //Callout Title
 $text_size = get_field('text_size');
+$target_blank = get_field( 'target_blank' );
 
 $bg_color = "red";
 $color = "white";
@@ -45,7 +46,7 @@ if ( !isset($link_label) || empty($link_label) ){
 }
 ?>
 <div class="<?php echo $align; ?>">
-  <a href="<?php echo $link; ?>" class="<?php echo $button_class; ?> text-<?php echo $text_size; ?>">
+  <a class="<?php echo $button_class; ?> text-<?php echo $text_size; ?>"  href="<?php echo $link; ?>" target="<?php echo $target_blank ? '_blank' : '_self'; ?>">
     <?php echo $link_label; ?>
   </a>
 </div>

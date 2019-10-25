@@ -5,3 +5,27 @@
 .curling-post-title {
   margin-bottom: 35px;
 }
+
+.curling-post-content {
+  font-family: $meta-serif-pro;
+  line-height: 18px;
+  letter-spacing: 0;
+  font-size: 14px;
+  color: $black;
+
+  @include responsive-min($responsive-laptop) {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+
+  a {
+    font-style: italic;
+    text-decoration: underline;
+
+    &:hover {
+      cursor: pointer;
+      color: $pink;
+    }
+  }
+}

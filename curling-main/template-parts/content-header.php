@@ -11,7 +11,36 @@
 
     $home_url = get_home_url().'/';
 
+    $top_nav_ad_type = get_field( 'top_nav_ad_type', 'Options');
+    $adsnippet = '';
+    if ( $top_nav_ad_type == 'custom' ) {
+      $adsnippet = get_field('adsnippet');
+    } else if ( $top_nav_ad_type == 'square' ) {
+      $adsnippet = get_field('ad_snippet_square', 'Options');
+    } else {
+      $adsnippet = get_field('ad_snippet_square_national', 'Options');
+    }
+
     $site_list = [];
+
+    $current_language = [
+      'code' => 'en',
+      'url' => get_permalink()
+    ];
+    $translation_language = [
+      'code' => 'fr',
+      'url' => get_permalink()
+    ];
+    $languages = function_exists('icl_get_languages') ? icl_get_languages() : [];
+    foreach ($languages as $key => $language) {
+      if ($language['active']) {
+        $current_language = $language;
+      } else {
+        $translation_language = $language;
+      }
+    }
+
+    $current_menu_item = null;
 
     if (!$is_event) {
       if (function_exists( "get_sites" )) {
@@ -26,7 +55,7 @@
           $event_date_end = get_field( 'event_date_end', 'option' );
           $end = strtotime($event_date_end);
           $current = time();
-          $has_not_passed = $current >= $end;
+          $has_not_passed = $current <= $end;
         }
         restore_current_blog();
         return $is_event && $has_not_passed;
@@ -41,9 +70,6 @@
         restore_current_blog();
         return ($astart < $bstart) ? -1 : 1; 
       });
-
-      // TODO: TEMP!! This is only here to test the pagination functionality of the events feed
-      // $site_list = array_merge($site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list, $site_list);
     }
 
     if ($is_category) {
@@ -57,13 +83,6 @@
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
-
-    $languages = function_exists('icl_get_languages') ? icl_get_languages() : [];
-    foreach ($languages as $key => $language) {
-      if ($language['active']) {
-        unset($languages[$key]);
-      }
-    }
 
     $url = $is_category && $category ? get_category_link($category) : get_permalink();
     
@@ -133,190 +152,209 @@
 </div>
 
 <div class="header header-desktop <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav">
-    <div class="nav-menu-top-container">
-      <div class="nav-menu-top">
-          <div class="nav-menu-top-wrapper content content-container">
-              <div class="nav-menu-top-left-wrapper">
+  <div class="nav-menu-top-container">
+    <div class="nav-menu-top">
+      <div class="nav-menu-top-wrapper content content-container">
+        <div class="nav-menu-top-left-wrapper">
+          <?php
+            if ($is_event) {
+          ?>
+            <a href="<?php echo get_home_url(); ?>">
+              <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
+            </a>
+          <?php
+            }
+          ?>
+          <ul class="menu-top-nav menu-nav">
+            <?php
+              foreach( $top_left_menu_items as $menu_item ) {
+            ?>
+              <li class="menu-item menu-item-selectable <?php echo $menu_item->url && $home_url === $menu_item->url ? 'menu-item-top-nav-selected' : ''; ?>">
+                <?php
+                  if ($menu_item->url) {
+                ?>
+                  <a class="clear" href="<?php echo $menu_item->url; ?>">
+                <?php
+                  }
+                ?>
+                  <h4 class="menu-item-top-nav menu-item-content menu-item-link"><?php echo $menu_item->title; ?></h4>
+                <?php
+                  if ($menu_item->url) {
+                ?>
+                  </a>
+                <?php
+                  }
+                ?>
+              </li>
+            <?php
+              }
+            ?>
+          </ul>
+        </div>
+
+        <div class="nav-menu-top-right-wrapper">
+          <?php
+            if ($top_right_menu_items) {
+          ?>
+            <ul class="menu-nav">
+              <?php
+                foreach( $top_right_menu_items as $menu_item ) {
+              ?>
+                <li class="menu-item menu-item-selectable">
                   <?php
-                    if ($is_event) {
+                    if ($menu_item->url) {
                   ?>
-                    <a href="<?php echo get_home_url(); ?>">
-                        <img class="menu-event-logo" src="<?php echo $is_event ? get_stylesheet_directory_uri()."/images/logo-event.svg" : ''; ?>" alt="logo" />
+                    <a class="clear" href="<?php echo $menu_item->url; ?>">
+                  <?php
+                    }
+                  ?>
+                    <h4 class="menu-item-content menu-item-small menu-item-link"><?php echo $menu_item->title; ?></h4>
+                  <?php
+                    if ($menu_item->url) {
+                  ?>
                     </a>
                   <?php
                     }
                   ?>
-                  <ul class="menu-top-nav menu-nav">
-                      <?php
-                          foreach( $top_left_menu_items as $menu_item ) {
-                      ?>
-                          <li class="menu-item menu-item-selectable <?php echo $menu_item->url && $home_url === $menu_item->url ? 'menu-item-top-nav-selected' : ''; ?>">
-                            <?php
-                              if ($menu_item->url) {
-                            ?>
-                              <a class="clear" href="<?php echo $menu_item->url; ?>">
-                            <?php
-                              }
-                            ?>
-                              <h4 class="menu-item-top-nav menu-item-content menu-item-link"><?php echo $menu_item->title; ?></h4>
-                            <?php
-                              if ($menu_item->url) {
-                            ?>
-                              </a>
-                            <?php
-                              }
-                            ?>
-                          </li>
-                      <?php
-                          }
-                      ?>
-                  </ul>
-              </div>
-              <div class="nav-menu-top-right-wrapper">
-                  <?php
-                      if ($top_right_menu_items) {
-                  ?>
-                      <ul class="menu-nav">
-                          <?php
-                              foreach( $top_right_menu_items as $menu_item ) {
-                          ?>
-                              <li class="menu-item menu-item-selectable">
-                                <?php
-                                  if ($menu_item->url) {
-                                ?>
-                                  <a class="clear" href="<?php echo $menu_item->url; ?>">
-                                <?php
-                                  }
-                                ?>
-                                  <h4 class="menu-item-content menu-item-small menu-item-link"><?php echo $menu_item->title; ?></h4>
-                                <?php
-                                  if ($menu_item->url) {
-                                ?>
-                                  </a>
-                                <?php
-                                  }
-                                ?>
-                              </li>
-                          <?php
-                              }
-                          ?>
-                          <li class="menu-item menu-item-selectable search-menu">
-                            <a class="clear search-menu-link" href="#">
-                              <h4 class="menu-item-content menu-item-small menu-item-link"><?php echo __("Search"); ?></h4>
-                            </a>
-                          </li>
-                          <li class="search-bar hide">
-                            <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
-                          </li>
-                          <li class="menu-item menu-item-donate">
-                            <a class="menu-item-donate-link clear" href="">
-                              <h4 class="menu-item-small inverted"><?php echo __("Donate"); ?></h4>
-                            </a>
-                          </li>
-                      </ul>
-                      <?php
-                        if (count($languages) > 0) {
-                      ?>
-                      <ul class="menu-nav menu-nav-language">
-                        <?php 
-                          foreach ($languages as $key => $language) {
-                        ?>
-                          <li class="menu-item menu-item-language menu-item-selectable">
-                            <a class="clear" href="<?php echo $language['url']; ?>">
-                              <h4 class="menu-item-content menu-item-small"><?php echo $language['code']; ?></h4>
-                            </a>
-                          </li>
-                        <?php
-                          }
-                        ?>
-                      </ul>
-                  <?php
-                      }
-                    }
-                  ?>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
-        <div class="nav-menu-primary-wrapper content content-container">
+                </li>
               <?php
-                if ($logo) {
+                }
               ?>
-                <a href="<?php echo get_home_url(); ?>">
-                    <img class="menu-logo" src="<?php echo $logo['url']; ?>" alt="Site Logo" />
+              <li class="menu-item menu-item-selectable search-menu">
+                <a class="clear search-menu-link" href="#">
+                  <h4 class="menu-item-content menu-item-small menu-item-link"><?php echo __("Search"); ?></h4>
+                </a>
+              </li>
+              <li class="search-bar hide">
+                <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
+              </li>
+              <li class="menu-item menu-item-donate">
+                <a class="menu-item-donate-link clear" href="">
+                  <h4 class="menu-item-small inverted"><?php echo __("Donate"); ?></h4>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-nav menu-nav-language">
+              <li class="menu-item menu-item-language menu-item-selectable">
+                <a class="clear" href="<?php echo $translation_language['url']; ?>">
+                  <h4 class="menu-item-content menu-item-small"><?php echo $translation_language['code']; ?></h4>
+                </a>
+              </li>
+            </ul>
+          <?php
+            }
+          ?>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-menu-primary-container">
+    <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
+      <div class="nav-menu-primary-wrapper content content-container">
+        <?php
+          if ($logo) {
+        ?>
+          <a href="<?php echo get_home_url(); ?>">
+            <img class="menu-logo" src="<?php echo $logo['url']; ?>" alt="Site Logo" />
+          </a>
+        <?php
+          }
+        ?>
+        <ul class="menu-nav nav-left-offset">
+          <?php
+            foreach ($menu_items as $id => $item) {
+          ?>
+            <li class="menu-item <?php echo $item->is_current_page ? 'menu-item-selected' : ''; ?> <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
+              <?php
+                if ($item->url) {
+              ?>
+                <a class="menu-item-link" href="<?php echo $item->url; ?>">
+              <?php
+                }
+              ?>
+              <h4 class="menu-item-content menu-item-title <?php echo !$item->url ? 'menu-item-link' : ''; ?>"><?php echo $item->title; ?></h4>
+              <?php 
+                if ($item->children != null && count($item->children) > 0) {
+              ?>
+                <img class="menu-item-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-down".($is_event ? '-gray' : '').".svg"; ?>" alt="Triangle" />
+              <?php
+                }
+              ?>
+              <?php
+                if ($item->url) {
+              ?>
                 </a>
               <?php
                 }
               ?>
-              <ul class="menu-nav nav-left-offset">
-                  <?php
-                      foreach ($menu_items as $id => $item) {
-                  ?>
-                      <li class="menu-item <?php echo $item->is_current_page ? 'menu-item-selected' : ''; ?> <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
-                        <?php
-                          if ($item->url) {
-                        ?>
-                          <a class="menu-item-link" href="<?php echo $item->url; ?>">
-                        <?php
-                          }
-                        ?>
-                          <h4 class="menu-item-content menu-item-title <?php echo !$item->url ? 'menu-item-link' : ''; ?>"><?php echo $item->title; ?></h4>
-                          <?php 
-                              if ($item->children != null && count($item->children) > 0) {
-                          ?>
-                              <img class="menu-item-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-down".($is_event ? '-gray' : '').".svg"; ?>" alt="Triangle" />
-                          <?php
-                              }
-                          ?>
-                        <?php
-                          if ($item->url) {
-                        ?>
-                          </a>
-                        <?php
-                          }
-                        ?>
-                      </li>
-                  <?php
-                      }
-                  ?>
-              </ul>
-              <?php
-                if ($is_event) {
-              ?>
-                <div class="nav-menu-popup-container">
-                  <?php
-                      foreach( $menu_items as $id => $menu_item ) {
-                          if ($menu_item->is_event_menu) {
-                            create_menu_bar_event_item($menu_item->ID, $site_list);
-                          } else if ($menu_item->children) {
-                            create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
-                          }
-                      }
-                  ?>
-                </div>
-              <?php
+            </li>
+          <?php
+            }
+          ?>
+        </ul>
+        <?php
+          if ($is_event) {
+        ?>
+          <div class="nav-menu-popup-container">
+            <?php
+              foreach( $menu_items as $id => $menu_item ) {
+                if ($menu_item->is_event_menu) {
+                  create_menu_bar_event_item($menu_item->ID, $site_list, $adsnippet);
+                } else if ($menu_item->children) {
+                  if ($menu_item->is_current_page && $current_menu_item == null) {
+                    $current_menu_item = [
+                      'id' => $menu_item->ID, 
+                      'children' => $menu_item->children
+                    ];
+                  } else {
+                    create_menu_bar_simple_item($menu_item->ID, $menu_item->children);
+                  }
                 }
-              ?>
-        </div>
+              }
+            ?>
+            <?php
+              if ($current_menu_item && $is_event) {
+                create_menu_bar_simple_item($current_menu_item['id'], $current_menu_item['children'], true, $is_event);
+              }
+            ?>
+          </div>
+        <?php
+          }
+        ?>
+      </div>
     </div>
+
     <?php
       if (!$is_event) {
     ?>
       <div class="nav-menu-popup-container">
         <?php
-            foreach( $menu_items as $id => $menu_item ) {
-                if ($menu_item->is_event_menu) {
-                  create_menu_bar_event_item($menu_item->ID, $site_list);
-                } else if ($menu_item->children) {
-                  create_menu_bar_simple_item($menu_item->ID, $menu_item->children, $menu_item->is_current_page);
-                }
+          foreach( $menu_items as $id => $menu_item ) {
+            if ($menu_item->is_event_menu) {
+              create_menu_bar_event_item($menu_item->ID, $site_list, $adsnippet);
+            } else if ($menu_item->children) {
+              if ($menu_item->is_current_page && $current_menu_item == null) {
+                $current_menu_item = [
+                  'id' => $menu_item->ID, 
+                  'children' => $menu_item->children
+                ];
+              } else {
+                create_menu_bar_simple_item($menu_item->ID, $menu_item->children);
+              }
             }
+          }
         ?>
       </div>
     <?php
       }
     ?>
+  </div>
+  <?php
+    if ($current_menu_item && !$is_event) {
+      create_menu_bar_simple_item($current_menu_item['id'], $current_menu_item['children'], true, $is_event);
+    }
+  ?>
 </div>
 
 <?php
@@ -497,7 +535,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
 ?>
 
 <?php
-function create_menu_bar_event_item($parent_id, $site_list) {
+function create_menu_bar_event_item($parent_id, $site_list, $adsnippet = '') {
 ?>
   <div class="nav-menu-popup nav-menu-popup-event" data-name="<?php echo $parent_id; ?>">
     <div class="nav-menu-popup-wrapper content-fixed-padding">
@@ -510,7 +548,11 @@ function create_menu_bar_event_item($parent_id, $site_list) {
         <?php event_posters($site_list); ?>
       </div>
       <div class="nav-menu-popup-event-right">
-        <img class="ad" src="<?php echo get_stylesheet_directory_uri()."/images/img-ad-sample.png"; ?>" alt="Ad" />
+        <?php
+          if ($adsnippet) {
+            echo $adsnippet; 
+          }
+        ?>
       </div>
     </div>
   </div>
@@ -519,9 +561,9 @@ function create_menu_bar_event_item($parent_id, $site_list) {
 ?>
 
 <?php
-function create_menu_bar_simple_item($parent_id, $menu_items, $is_current_page = false) {
+function create_menu_bar_simple_item($parent_id, $menu_items, $is_selected = false, $is_event = false) {
 ?>
-  <div class="nav-menu-popup <?php echo $is_current_page ? 'nav-menu-popup-active' : ''; ?>" data-name="<?php echo $parent_id; ?>">
+  <div class="<?php echo $is_selected ? ($is_event ? 'nav-menu-popup nav-menu-popup-active' : 'nav-menu-popup-current') : 'nav-menu-popup'; ?>" <?php echo $is_selected ? '' : 'data-name="'.$parent_id.'"'; ?>>
     <ul class="nav-menu-popup-list">
       <?php
         foreach ($menu_items as $key => $menu_subitem) {
@@ -572,6 +614,7 @@ function create_menu_bar_simple_item($parent_id, $menu_items, $is_current_page =
         $start_date_value = get_field( 'event_date_start', 'Options' );
         $end_date_value = get_field( 'event_date_end', 'Options' );
         $timezone = get_field( 'event_timezone', 'Options' );
+        $home_url = get_home_url( $site->blog_id );
 
         $start_date_value = $start_date_value ? $start_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
         $end_date_value = $end_date_value ? $end_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
@@ -591,10 +634,12 @@ function create_menu_bar_simple_item($parent_id, $menu_items, $is_current_page =
         restore_current_blog();
     ?>
       <li class="menu-subitem menu-subitem-event">
-        <div class="menu-subitem-wrapper menu-item-selectable">
-          <span class="menu-item-content menu-item-title menu-item-subtitle gray"><?php echo $name; ?></span>
-          <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray"><?php echo $date; ?></span>
-        </div>
+        <a class="clear" href="<?php echo $home_url; ?>">
+          <div class="menu-subitem-wrapper menu-item-selectable">
+            <span class="menu-item-content menu-item-title menu-item-subtitle gray"><?php echo $name; ?></span>
+            <span class="menu-item-content menu-item-title menu-item-subtitle menu-item-info gray"><?php echo $date; ?></span>
+          </div>
+        </a>
         <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right.svg"; ?>" alt="arrow-right" />
       </li>
     <?php
