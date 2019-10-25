@@ -110,6 +110,7 @@
           $sponsor_type = get_sub_field( 'type' );
           $sponsor_link = get_sub_field( 'sponsor_cta' );
           $sponsor      = get_sub_field( 'sponsor' ); 
+          $sponsor_link_cta = get_field( 'sponsor_link', $sponsor ); 
           $logo_src     = get_the_post_thumbnail_url( $sponsor );
           $sponsor_container_classes = 'sponsor-container';
           if ($sponsor_link) {
@@ -130,9 +131,23 @@
               </a>
             <?php } ?>
       
-            <div class="sponsor">
-              <img src="<?php echo $logo_src; ?>" alt="<?php echo $sponsor->post_title; ?>" />
-            </div>
+            <?php
+              if ($sponsor_link_cta) {
+                ?>
+              <a href="<?php echo $sponsor_link_cta; ?>" target="_blank">
+                  <?php
+              }
+              ?>
+              <div class="sponsor">
+                <img src="<?php echo $logo_src; ?>" alt="<?php echo $sponsor->post_title; ?>" />
+              </div>
+            <?php
+              if ($sponsor_link_cta) {
+            ?>
+              </a>
+            <?php
+              }
+            ?>
   
           </div>
     

@@ -1,4 +1,3 @@
-<?php echo !WP_DEBUG ? '' : "<!-- Begin output from ".basename(__FILE__)."-->"; ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -23,4 +22,3 @@
     <header>
         <?php get_template_part('template-parts/content', 'header'); ?>
     </header>
-<?php echo !WP_DEBUG ? '' : "<!-- End output from ".basename(__FILE__)."-->"; ?>
