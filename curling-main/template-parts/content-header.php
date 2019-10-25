@@ -188,8 +188,17 @@
           <ul class="menu-top-nav menu-nav">
             <?php
               foreach( $top_left_menu_items as $menu_item ) {
+                $is_our_organization_menu = false;
+                if ($is_our_organization) {
+                  foreach ($our_organization_pages as $key => $page) {
+                    if ($page->ID == $menu_item->object_id) {
+                      $is_our_organization_menu = true;
+                      break;
+                    }
+                  }
+                }
             ?>
-              <li class="menu-item menu-item-selectable <?php echo $menu_item->url && $home_url === $menu_item->url ? 'menu-item-top-nav-selected' : ''; ?>">
+              <li class="menu-item menu-item-selectable <?php echo $menu_item->url && (($home_url === $menu_item->url && !$is_our_organization) || ($is_our_organization && $is_our_organization_menu)) ? 'menu-item-top-nav-selected' : ''; ?>">
                 <?php
                   if ($menu_item->url) {
                 ?>
