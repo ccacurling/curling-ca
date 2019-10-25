@@ -6046,6 +6046,77 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+//CTRS Events
+acf_add_local_field_group(array(
+	'key' => 'group_5db3615281ddd',
+	'title' => 'CTRS Events Fields',
+	'fields' => array(
+		array(
+			'key' => 'field_5db3616458b84',
+			'label' => 'Event Year',
+			'name' => 'year',
+			'type' => 'text',
+			'instructions' => 'Enter in the year to fetch.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => 2020,
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5db3622e58b85',
+			'label' => 'Event Type',
+			'name' => 'type_id',
+			'type' => 'select',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'choices' => array(
+				82 => 'Women\'s',
+				81 => 'Men\'s',
+			),
+			'default_value' => array(
+				0 => 82,
+			),
+			'allow_null' => 0,
+			'multiple' => 0,
+			'ui' => 0,
+			'return_format' => 'value',
+			'ajax' => 0,
+			'placeholder' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/ctrs-events',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 acf_add_local_field_group(array(
 	'key' => 'group_5d97ae4f3917a',
 	'title' => 'Simple Callout',
