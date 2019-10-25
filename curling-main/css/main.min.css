@@ -4902,6 +4902,10 @@ li {
   color: #ed1940;
 }
 
+.block-sponsors .content .sponsors-section .sponsor-container .sponsor-container-link {
+  padding-bottom: 1.25rem;
+}
+
 .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
   background-color: white;
   width: 170px;
@@ -7060,6 +7064,10 @@ h1.page-intro-main-headline {
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
+.team-small-container {
+  background-color: #ffffff;
+}
+
 @media only screen and (min-width: 999px) {
   .team-small-container:hover .team-small-title {
     display: none;
@@ -7119,6 +7127,10 @@ h1.page-intro-main-headline {
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.team-small-member-position {
+  word-break: normal;
 }
 
 .team-small-link-container {
@@ -7860,7 +7872,14 @@ h1.page-intro-main-headline {
 }
 
 .block-slash {
+  display: none;
   position: relative;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-slash {
+    display: block;
+  }
 }
 
 .block-slash-container {
@@ -7873,13 +7892,19 @@ h1.page-intro-main-headline {
 .block-slash-img-container {
   position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   z-index: -2;
 }
 
+.block-slash-img-container.block-slash-img-left .block-slash-img {
+  transform: translate(0, -8%);
+}
+
 .block-slash-img-container.block-slash-img-right {
-  top: 0;
-  transform: translate(0, -85%);
+  left: auto;
+  right: 0;
+  transform: translate(0, -97%);
 }
 
 .block-slash-img-container.block-slash-img-right .block-slash-img {
@@ -7893,9 +7918,10 @@ h1.page-intro-main-headline {
 
 .slash {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -53%);
-  width: 1440px;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  width: 100%;
   max-width: none;
   max-height: none;
   z-index: -3;
@@ -7903,7 +7929,7 @@ h1.page-intro-main-headline {
 
 .slash-mask {
   z-index: -1;
-  transform: translate(-50%, -15.4%);
+  transform: translate(0, 0);
 }
 
 .championship-archive-top-container {

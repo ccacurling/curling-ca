@@ -4924,6 +4924,10 @@
   color: #ed1940;
 }
 
+.edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container .sponsor-container-link {
+  padding-bottom: 1.25rem;
+}
+
 .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
   background-color: white;
   width: 170px;
@@ -7082,6 +7086,10 @@
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
+.edit-post-layout__content .team-small-container {
+  background-color: #ffffff;
+}
+
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .team-small-container:hover .team-small-title {
     display: none;
@@ -7141,6 +7149,10 @@
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.edit-post-layout__content .team-small-member-position {
+  word-break: normal;
 }
 
 .edit-post-layout__content .team-small-link-container {
@@ -7558,7 +7570,14 @@
 }
 
 .edit-post-layout__content .block-slash {
+  display: none;
   position: relative;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-slash {
+    display: block;
+  }
 }
 
 .edit-post-layout__content .block-slash-container {
@@ -7571,13 +7590,19 @@
 .edit-post-layout__content .block-slash-img-container {
   position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   z-index: -2;
 }
 
+.edit-post-layout__content .block-slash-img-container.block-slash-img-left .block-slash-img {
+  transform: translate(0, -8%);
+}
+
 .edit-post-layout__content .block-slash-img-container.block-slash-img-right {
-  top: 0;
-  transform: translate(0, -85%);
+  left: auto;
+  right: 0;
+  transform: translate(0, -97%);
 }
 
 .edit-post-layout__content .block-slash-img-container.block-slash-img-right .block-slash-img {
@@ -7591,9 +7616,10 @@
 
 .edit-post-layout__content .slash {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -53%);
-  width: 1440px;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  width: 100%;
   max-width: none;
   max-height: none;
   z-index: -3;
@@ -7601,7 +7627,7 @@
 
 .edit-post-layout__content .slash-mask {
   z-index: -1;
-  transform: translate(-50%, -15.4%);
+  transform: translate(0, 0);
 }
 
 .edit-post-layout__content .championship-archive-top-container {

@@ -1,5 +1,10 @@
 .block-slash {
+  display: none;
   position: relative;
+
+  @include responsive-min($responsive-laptop) {
+    display: block;
+  }
 }
 
 .block-slash-container {
@@ -12,16 +17,18 @@
 .block-slash-img-container {
   position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   z-index: -2;
 
   &.block-slash-img-left .block-slash-img {
-
+    transform: translate(0, -8%);
   }
 
   &.block-slash-img-right {
-    top: 0;
-    transform: translate(0, -85%);
+    left: auto;
+    right: 0;
+    transform: translate(0, -97%);
 
     .block-slash-img {
       margin-left: auto;
@@ -36,9 +43,10 @@
 
 .slash {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -53%);
-  width: 1440px;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  width: 100%;
   max-width: none;
   max-height: none;
   z-index: -3;
@@ -46,5 +54,5 @@
 
 .slash-mask {
   z-index: -1;
-  transform: translate(-50%, -15.4%);
+  transform: translate(0, 0);
 }

@@ -126,7 +126,7 @@
             <?php } ?>
             
             <?php if ($sponsor_link) { ?>
-              <a href="<?php echo $sponsor_link['url']; ?>" target="<?php echo $sponsor_link['target']; ?>">
+              <a class="sponsor-container-link" href="<?php echo $sponsor_link['url']; ?>" target="<?php echo $sponsor_link['target']; ?>">
                 <?php echo strtoupper( $sponsor_link['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
               </a>
             <?php } ?>
