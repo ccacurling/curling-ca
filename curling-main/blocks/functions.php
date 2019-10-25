@@ -408,6 +408,16 @@ function acf_blocks_init() {
     ]);
 
     acf_register_block([
+      'name'						=> 'ctrs-events',
+      'title'						=> __('CTRS Events'),
+      'description'			=> __('A block to render a container CTRS Events'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'ctrs', 'standings', 'events' ]
+    ]);
+
+    acf_register_block([
       'name'						=> 'simple-callout',
       'title'						=> __('Simple Callout'),
       'description'			=> __('A block to render a simple callout block'),
