@@ -4986,11 +4986,11 @@ acf_add_local_field_group(array(
 ));
 
 acf_add_local_field_group(array(
-	'key' => 'group_5d7aa548d395b',
+	'key' => 'group_5d8bfb412dbf7',
 	'title' => 'Events Feed',
 	'fields' => array(
 		array(
-			'key' => 'field_5d7aa5579a611',
+			'key' => 'field_5d8bfb418d764',
 			'label' => 'Title',
 			'name' => 'events_feed_title',
 			'type' => 'text',
@@ -5009,7 +5009,7 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_5d7aa55e9a612',
+			'key' => 'field_5d8bfb418d772',
 			'label' => 'Category',
 			'name' => 'events_feed_category',
 			'type' => 'taxonomy',
