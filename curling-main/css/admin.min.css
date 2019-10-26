@@ -786,7 +786,7 @@
   margin-bottom: 20px;
 }
 
-.edit-post-layout__content .block-container .wp-block-cossette-block-container > li {
+.edit-post-layout__content .block-container .wp-block-cossette-block-container > ul > li {
   margin-left: 20px;
   margin-bottom: 30px;
 }
@@ -1807,6 +1807,7 @@
   border-radius: 2px;
   font-size: 33px;
   letter-spacing: 2px;
+  line-height: 33px;
 }
 
 @media only screen and (min-width: 1441px) {

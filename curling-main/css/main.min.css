@@ -753,7 +753,7 @@ li {
   margin-bottom: 20px;
 }
 
-.block-container .wp-block-cossette-block-container > li {
+.block-container .wp-block-cossette-block-container > ul > li {
   margin-left: 20px;
   margin-bottom: 30px;
 }
@@ -1777,6 +1777,7 @@ li {
   border-radius: 2px;
   font-size: 33px;
   letter-spacing: 2px;
+  line-height: 33px;
 }
 
 @media only screen and (min-width: 1441px) {
