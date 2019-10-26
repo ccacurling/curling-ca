@@ -1155,7 +1155,7 @@
 
 .edit-post-layout__content .header-main .nav-menu-popup-current .nav-menu-popup-list {
   max-width: 1170px;
-  padding-left: 100px;
+  padding-left: 130px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1168,7 +1168,7 @@
 
 .edit-post-layout__content .header-main .nav-menu-popup .nav-menu-popup-list {
   max-width: 1170px;
-  padding-left: 100px;
+  padding-left: 130px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -2557,8 +2557,8 @@
   align-items: center;
   padding-top: 14px;
   padding-bottom: 14px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 .edit-post-layout__content .menu-item-underline {
