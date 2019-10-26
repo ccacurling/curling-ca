@@ -208,7 +208,7 @@
     }
   ?>
 
-<div class="content-post content content-full-wrapper content-anchor">
+<div class="content-post content-full-wrapper content-anchor">
   <section class="block-news-feed js-news-feed" data-category="<?php echo $category ? $category->slug : ''; ?>">
     <div class="news-feed-title-container">
       <h3><?php echo $category ? $category->name : ''; ?></h3>

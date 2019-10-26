@@ -174,7 +174,7 @@
 <div class="header header-desktop <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav">
   <div class="nav-menu-top-container">
     <div class="nav-menu-top">
-      <div class="nav-menu-top-wrapper content content-container">
+      <div class="nav-menu-top-wrapper content-container">
         <div class="nav-menu-top-left-wrapper">
           <?php
             if ($is_event) {
@@ -280,7 +280,7 @@
 
   <div class="nav-menu-primary-container">
     <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
-      <div class="nav-menu-primary-wrapper content content-container">
+      <div class="nav-menu-primary-wrapper content-container">
         <?php
           if ($logo) {
         ?>

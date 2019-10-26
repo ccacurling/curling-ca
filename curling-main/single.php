@@ -19,7 +19,7 @@
 <?php
   get_header();
 ?>
-<div class="content-post content content-full-wrapper content-anchor">
+<div class="content-post content-full-wrapper content-anchor">
   <div class="block-column column-16-84 column-fullwidth">
     <div class="wp-block-cossette-block-column-2">
       <div class="post-content wp-block-columns has-2-columns">
