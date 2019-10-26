@@ -6056,7 +6056,7 @@ acf_add_local_field_group(array(
 			'label' => 'Event Year',
 			'name' => 'year',
 			'type' => 'text',
-			'instructions' => 'Enter in the year to fetch.',
+			'instructions' => 'Enter in the latest year to fetch. E.G. "2020" will retrieve 2019-2020',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -6065,7 +6065,7 @@ acf_add_local_field_group(array(
 				'id' => '',
 			),
 			'default_value' => '',
-			'placeholder' => 2020,
+			'placeholder' => '2020 (this will retrieve 2019-2020)',
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => '',
