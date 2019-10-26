@@ -562,18 +562,26 @@ li {
 }
 
 .content-fixed {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1440px;
 }
 
 .content-full-wrapper {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1170px;
 }
 
 .content-small-wrapper {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 840px;
 }
 
 .content-container {
+  margin-left: auto;
+  margin-right: auto;
   max-width: 1200px;
 }
 
@@ -743,6 +751,11 @@ li {
 
 .block-container .wp-block-cossette-block-container > p {
   margin-bottom: 20px;
+}
+
+.block-container .wp-block-cossette-block-container > ul > li {
+  margin-left: 20px;
+  margin-bottom: 30px;
 }
 
 .block-container .narrow-width {
@@ -1114,7 +1127,7 @@ li {
 
 .header-main .nav-menu-popup-current .nav-menu-popup-list {
   max-width: 1170px;
-  padding-left: 100px;
+  padding-left: 130px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1127,7 +1140,7 @@ li {
 
 .header-main .nav-menu-popup .nav-menu-popup-list {
   max-width: 1170px;
-  padding-left: 100px;
+  padding-left: 130px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1308,6 +1321,8 @@ li {
 }
 
 .header-event .nav-menu-primary-wrapper {
+  margin-left: auto;
+  margin-right: auto;
   background-color: #ffffff;
 }
 
@@ -1611,6 +1626,7 @@ li {
   border-top: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8;
   border-right: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
 }
 
 .block-accordion-container:last-of-type {
@@ -1761,6 +1777,7 @@ li {
   border-radius: 2px;
   font-size: 33px;
   letter-spacing: 2px;
+  line-height: 33px;
 }
 
 @media only screen and (min-width: 1441px) {
@@ -2524,8 +2541,8 @@ li {
   align-items: center;
   padding-top: 14px;
   padding-bottom: 14px;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 .menu-item-underline {
@@ -4902,6 +4919,10 @@ li {
   color: #ed1940;
 }
 
+.block-sponsors .content .sponsors-section .sponsor-container .sponsor-container-link {
+  padding-bottom: 1.25rem;
+}
+
 .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
   background-color: white;
   width: 170px;
@@ -7060,6 +7081,10 @@ h1.page-intro-main-headline {
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
+.team-small-container {
+  background-color: #ffffff;
+}
+
 @media only screen and (min-width: 999px) {
   .team-small-container:hover .team-small-title {
     display: none;
@@ -7119,6 +7144,10 @@ h1.page-intro-main-headline {
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.team-small-member-position {
+  word-break: normal;
 }
 
 .team-small-link-container {
@@ -7860,7 +7889,14 @@ h1.page-intro-main-headline {
 }
 
 .block-slash {
+  display: none;
   position: relative;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-slash {
+    display: block;
+  }
 }
 
 .block-slash-container {
@@ -7873,13 +7909,19 @@ h1.page-intro-main-headline {
 .block-slash-img-container {
   position: absolute;
   left: 0;
+  bottom: 0;
   width: 100%;
   z-index: -2;
 }
 
+.block-slash-img-container.block-slash-img-left .block-slash-img {
+  transform: translate(0, -8%);
+}
+
 .block-slash-img-container.block-slash-img-right {
-  top: 0;
-  transform: translate(0, -85%);
+  left: auto;
+  right: 0;
+  transform: translate(0, -97%);
 }
 
 .block-slash-img-container.block-slash-img-right .block-slash-img {
@@ -7893,9 +7935,10 @@ h1.page-intro-main-headline {
 
 .slash {
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -53%);
-  width: 1440px;
+  bottom: 0;
+  left: 0;
+  transform: translate(0, 0);
+  width: 100%;
   max-width: none;
   max-height: none;
   z-index: -3;
@@ -7903,7 +7946,7 @@ h1.page-intro-main-headline {
 
 .slash-mask {
   z-index: -1;
-  transform: translate(-50%, -15.4%);
+  transform: translate(0, 0);
 }
 
 .championship-archive-top-container {

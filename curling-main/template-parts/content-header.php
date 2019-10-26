@@ -1,9 +1,21 @@
 <?php
     global $wp;
     $current_page_title = get_the_title();
+    $current_page_id = get_the_id();
+
     $is_event = get_field('is_event', 'Options');
 
     $logo = get_field('event_logo', 'Options');
+
+    $our_organization_pages = get_field('our_organization_pages', 'Options');
+    $is_our_organization = false;
+
+    foreach ($our_organization_pages as $key => $page) {
+      if ($page->ID === $current_page_id) {
+        $is_our_organization = true;
+        break;
+      }
+    }
 
     $category = null;
     $category_slug = '';
@@ -79,7 +91,15 @@
 
     $top_left_menu_items = wp_get_nav_menu_items( 'Menu - Top Left' ) ? wp_get_nav_menu_items( 'Menu - Top Left' ) : [];
     $top_right_menu_items = wp_get_nav_menu_items( 'Menu - Top Right' ) ? wp_get_nav_menu_items( 'Menu - Top Right' ) : [];
-    $primary_menu_items = wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) ? wp_get_nav_menu_items( $is_event ? 'Menu - Events' : 'Menu - Main' ) : [];
+    $primary_menu_items = [];
+    
+    if ($is_our_organization) {
+      $primary_menu_items = wp_get_nav_menu_items( 'Menu - Our Organization' );
+    } else if ($is_event) {
+      $primary_menu_items = wp_get_nav_menu_items( 'Menu - Events' );
+    } else {
+      $primary_menu_items = wp_get_nav_menu_items( 'Menu - Main' );
+    }
 
     $header_config = isset($header_config) ? $header_config : null;
     $header_color = parse_config($header_config, 'header_color', 'red');
@@ -154,7 +174,7 @@
 <div class="header header-desktop <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav">
   <div class="nav-menu-top-container">
     <div class="nav-menu-top">
-      <div class="nav-menu-top-wrapper content content-container">
+      <div class="nav-menu-top-wrapper content-container">
         <div class="nav-menu-top-left-wrapper">
           <?php
             if ($is_event) {
@@ -168,8 +188,17 @@
           <ul class="menu-top-nav menu-nav">
             <?php
               foreach( $top_left_menu_items as $menu_item ) {
+                $is_our_organization_menu = false;
+                if ($is_our_organization) {
+                  foreach ($our_organization_pages as $key => $page) {
+                    if ($page->ID == $menu_item->object_id) {
+                      $is_our_organization_menu = true;
+                      break;
+                    }
+                  }
+                }
             ?>
-              <li class="menu-item menu-item-selectable <?php echo $menu_item->url && $home_url === $menu_item->url ? 'menu-item-top-nav-selected' : ''; ?>">
+              <li class="menu-item menu-item-selectable <?php echo $menu_item->url && (($home_url === $menu_item->url && !$is_our_organization) || ($is_our_organization && $is_our_organization_menu)) ? 'menu-item-top-nav-selected' : ''; ?>">
                 <?php
                   if ($menu_item->url) {
                 ?>
@@ -251,7 +280,7 @@
 
   <div class="nav-menu-primary-container">
     <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
-      <div class="nav-menu-primary-wrapper content content-container">
+      <div class="nav-menu-primary-wrapper content-container">
         <?php
           if ($logo) {
         ?>

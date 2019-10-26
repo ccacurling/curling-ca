@@ -14,7 +14,7 @@
   $job_ad = get_field( 'jobs_ad_space' );
 ?>
 
-<section class="block-jobs content content-full-wrapper">
+<section class="block-jobs content-full-wrapper">
   <div class="jobs-container">
     <?php
       if ($jobs_include_ad) {

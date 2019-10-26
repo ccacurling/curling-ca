@@ -535,6 +535,11 @@ function create_nav_structure(){
   } else {
     $is_event = false;
   }
+
+  //Menu - Our Organization
+  if ( !wp_get_nav_menu_object( 'Menu - Our Organization' ) ){
+    wp_create_nav_menu('Menu - Our Organization');
+  }
   
   //Menu - Top Left
   if ( !wp_get_nav_menu_object( 'Menu - Top Left' ) ){

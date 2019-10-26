@@ -5,6 +5,10 @@
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
+.team-small-container {
+  background-color: $white;
+}
+
 .team-small-container:hover {
   .team-small-title {
     @include responsive-min($responsive-laptop) {
@@ -64,6 +68,10 @@
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+.team-small-member-position {
+  word-break: normal;
 }
 
 .team-small-link-container {

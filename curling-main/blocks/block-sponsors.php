@@ -54,7 +54,7 @@
 ?>
 
 <section class="block-sponsors <?php echo $block_background_class; ?> <?php echo $block_template_class; ?>">
-  <div class="content content-fixed">
+  <div class="content-fixed">
     <?php
       if ($sponsor_columns == 1) {
     ?>
@@ -126,7 +126,7 @@
             <?php } ?>
             
             <?php if ($sponsor_link) { ?>
-              <a href="<?php echo $sponsor_link['url']; ?>" target="<?php echo $sponsor_link['target']; ?>">
+              <a class="sponsor-container-link" href="<?php echo $sponsor_link['url']; ?>" target="<?php echo $sponsor_link['target']; ?>">
                 <?php echo strtoupper( $sponsor_link['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
               </a>
             <?php } ?>
