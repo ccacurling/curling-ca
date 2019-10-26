@@ -407,6 +407,17 @@ function acf_blocks_init() {
       'keywords'				=> [ 'ctrs', 'standings' ]
     ]);
 
+    //CTRS block-ctrs-eventresults
+    acf_register_block([
+      'name'						=> 'ctrs-eventresults',
+      'title'						=> __('CTRS Event Results'),
+      'description'			=> __('A block to render a container CTRS Event Results'),
+      'render_callback'	=> 'block_render_callback',
+      'category'				=> 'common',
+      'icon'						=> 'admin-comments',
+      'keywords'				=> [ 'ctrs', 'standings', 'events', 'results' ]
+    ]);
+
     acf_register_block([
       'name'						=> 'ctrs-events',
       'title'						=> __('CTRS Events'),

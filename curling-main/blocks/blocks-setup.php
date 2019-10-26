@@ -6117,6 +6117,50 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
+//CTRS Event Results
+acf_add_local_field_group(array(
+	'key' => 'group_5db4d13db0a38',
+	'title' => 'CTRS Event Results',
+	'fields' => array(
+		array(
+			'key' => 'field_5db4d155085a7',
+			'label' => 'Event ID',
+			'name' => 'event_id',
+			'type' => 'text',
+			'instructions' => 'Enter in the Event ID. Defaults to 4322',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => 4322,
+			'placeholder' => 4322,
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/ctrs-eventresults',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 acf_add_local_field_group(array(
 	'key' => 'group_5d97ae4f3917a',
 	'title' => 'Simple Callout',
