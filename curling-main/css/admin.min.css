@@ -786,6 +786,11 @@
   margin-bottom: 20px;
 }
 
+.edit-post-layout__content .block-container .wp-block-cossette-block-container > li {
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+
 .edit-post-layout__content .block-container .narrow-width {
   margin-left: auto;
   margin-right: auto;
