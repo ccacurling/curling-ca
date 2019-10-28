@@ -263,10 +263,18 @@
 
 .edit-post-layout__content li {
   font-family: "Meta Serif Pro";
-  font-size: 20px;
-  color: #000000;
+  line-height: 18px;
   letter-spacing: 0;
-  line-height: 23px;
+  font-size: 14px;
+  color: #000000;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content li {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
 }
 
 .edit-post-layout__content .inverted {
@@ -682,6 +690,10 @@
 
 .edit-post-layout__content .xdebug-error th {
   background-color: #4c4c4e !important;
+}
+
+.edit-post-layout__content .post-password-form {
+  padding: 100px;
 }
 
 .edit-post-layout__content .featured-indicator {
@@ -2684,8 +2696,6 @@
 }
 
 .edit-post-layout__content .ad-banner-wide {
-  margin-top: 80px;
-  margin-bottom: 100px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;

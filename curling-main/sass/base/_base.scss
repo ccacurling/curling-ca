@@ -137,9 +137,6 @@ p {
     line-height: 18px;
     letter-spacing: 0;
     font-size: 14px;
-    // font-size: 14.7px;
-    // letter-spacing: 0;
-    // line-height: 19px;
     color: $black;
     
     @include responsive-min($responsive-laptop) {
@@ -171,10 +168,16 @@ p {
 
 li {
     font-family: $meta-serif-pro;
-    font-size: 20px;
-    color: $black;
+    line-height: 18px;
     letter-spacing: 0;
-    line-height: 23px;
+    font-size: 14px;
+    color: $black;
+    
+    @include responsive-min($responsive-laptop) {
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 20px;
+    }
 }
 
 .inverted {

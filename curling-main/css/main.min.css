@@ -235,10 +235,18 @@ p a:hover {
 
 li {
   font-family: "Meta Serif Pro";
-  font-size: 20px;
-  color: #000000;
+  line-height: 18px;
   letter-spacing: 0;
-  line-height: 23px;
+  font-size: 14px;
+  color: #000000;
+}
+
+@media only screen and (min-width: 999px) {
+  li {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
 }
 
 .inverted {
@@ -649,6 +657,10 @@ li {
 
 .xdebug-error th {
   background-color: #4c4c4e !important;
+}
+
+.post-password-form {
+  padding: 100px;
 }
 
 .featured-indicator {
@@ -2662,8 +2674,6 @@ li {
 }
 
 .ad-banner-wide {
-  margin-top: 80px;
-  margin-bottom: 100px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
