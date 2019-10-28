@@ -5072,35 +5072,35 @@ li {
   .block-sponsors {
     padding: 2.25rem 0;
   }
-  .block-sponsors .content {
+  .block-sponsors .block-sponsors-content {
     margin-left: 3rem;
   }
-  .block-sponsors .content p {
+  .block-sponsors .block-sponsors-content p {
     padding-bottom: 0.5rem;
   }
-  .block-sponsors .content .cta-section {
+  .block-sponsors .block-sponsors-content .cta-section {
     flex-direction: column;
     width: 100%;
   }
-  .block-sponsors .content .sponsors-section .has-title-and-link ~ .has-title h3 {
+  .block-sponsors .block-sponsors-content .sponsors-section .has-title-and-link ~ .has-title h3 {
     padding-bottom: 2.5rem;
   }
-  .block-sponsors .content .content-right-aligned {
+  .block-sponsors .block-sponsors-content .content-right-aligned {
     justify-content: unset;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column {
     max-width: 100%;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
     margin: 0;
     left: 0;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
     margin: 0;
     top: 0.5rem;
     left: 0;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
     align-self: flex-start;
   }
   .block-sponsors.white-bg-on-mobile {
@@ -5115,73 +5115,73 @@ li {
   .block-sponsors {
     padding: 0.5rem 0;
   }
-  .block-sponsors .content {
+  .block-sponsors .block-sponsors-content {
     margin-left: 0rem;
   }
-  .block-sponsors .content .content-centered {
+  .block-sponsors .block-sponsors-content .content-centered {
     width: 100%;
   }
-  .block-sponsors .content .content-centered .sponsors-section .sponsor-container a {
+  .block-sponsors .block-sponsors-content .content-centered .sponsors-section .sponsor-container a {
     position: relative;
     left: 1.1rem;
     top: 0.5rem;
   }
-  .block-sponsors .content .sponsors-section .sponsor-container p {
+  .block-sponsors .block-sponsors-content .sponsors-section .sponsor-container p {
     padding-bottom: 0.5rem;
   }
-  .block-sponsors .content .sponsors-section .sponsor-container h3 {
+  .block-sponsors .block-sponsors-content .sponsors-section .sponsor-container h3 {
     position: relative;
     left: 1.1rem;
   }
-  .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
+  .block-sponsors .block-sponsors-content .sponsors-section .sponsor-container .sponsor {
     width: 150px;
     height: 150px;
     align-self: center;
   }
-  .block-sponsors .content .cta-section {
+  .block-sponsors .block-sponsors-content .cta-section {
     position: relative;
     left: 1rem;
     flex-direction: column;
     width: 100%;
   }
-  .block-sponsors .content .content-left-aligned .sponsor-container {
+  .block-sponsors .block-sponsors-content .content-left-aligned .sponsor-container {
     flex: 1 1 100%;
   }
-  .block-sponsors .content .content-left-aligned .sponsor-container .sponsor {
+  .block-sponsors .block-sponsors-content .content-left-aligned .sponsor-container .sponsor {
     align-self: flex-start;
     margin-left: 1.1rem;
   }
-  .block-sponsors .content .content-left-aligned .sponsor-container a {
+  .block-sponsors .block-sponsors-content .content-left-aligned .sponsor-container a {
     position: relative;
     left: 1.1rem;
     top: 0.5rem;
   }
-  .block-sponsors .content .sponsors-section.two-columns {
+  .block-sponsors .block-sponsors-content .sponsors-section.two-columns {
     max-width: 50%;
   }
-  .block-sponsors .content .content-right-aligned {
+  .block-sponsors .block-sponsors-content .content-right-aligned {
     justify-content: unset;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column {
     max-width: 100%;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
     left: 1.1rem;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
     top: 0.5rem;
     left: 1.1rem;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
     align-self: center;
   }
 }
 
 @media only screen and (max-width: 370px) {
-  .block-sponsors .content .sponsor-container {
+  .block-sponsors .block-sponsors-content .sponsor-container {
     flex: 1 1 160px;
   }
-  .block-sponsors .content .sponsor-container .sponsor {
+  .block-sponsors .block-sponsors-content .sponsor-container .sponsor {
     align-self: flex-start;
     margin-left: 1.1rem;
     width: 150px;
@@ -5193,25 +5193,25 @@ li {
 }
 
 @media only screen and (max-width: 1338px) {
-  .block-sponsors .content .cta-section {
+  .block-sponsors .block-sponsors-content .cta-section {
     flex-direction: column;
   }
-  .block-sponsors .content .cta-section p {
+  .block-sponsors .block-sponsors-content .cta-section p {
     padding-bottom: 0.5rem;
   }
-  .block-sponsors .content .content-right-aligned {
+  .block-sponsors .block-sponsors-content .content-right-aligned {
     justify-content: unset;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
     left: 0;
     margin: 0;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
     top: 0.5rem;
     left: 0;
     margin: 0;
   }
-  .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
+  .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
     align-self: flex-start;
   }
 }

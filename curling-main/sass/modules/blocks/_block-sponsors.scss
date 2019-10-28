@@ -229,7 +229,7 @@
   .block-sponsors {
     padding: 2.25rem 0;
 
-    .content {
+    .block-sponsors-content {
       margin-left: 3rem;
 
       p {
@@ -286,7 +286,7 @@
   .block-sponsors {
     padding: 0.5rem 0;
 
-    .content {
+    .block-sponsors-content {
       margin-left: 0rem;
 
       .content-centered {
@@ -378,7 +378,7 @@
 
 @include responsive-max(369px) {
   .block-sponsors {
-    .content {
+    .block-sponsors-content {
       .sponsor-container {
         flex: 1 1 160px;
 
@@ -405,7 +405,7 @@
 
 @include responsive-max(1337px) {
   .block-sponsors {
-    .content {
+    .block-sponsors-content {
 
       .cta-section {
         flex-direction: column;
