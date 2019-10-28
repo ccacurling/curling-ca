@@ -1080,3 +1080,9 @@ function register_template_hpa() {
       $template_label
   );
 }
+
+/* ------- Line Break Shortcode --------*/
+function cca_line_break_shortcode() {
+	return '<br />';
+}
+add_shortcode( 'br', 'cca_line_break_shortcode' );
