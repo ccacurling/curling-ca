@@ -175,6 +175,18 @@ li {
     color: $black;
     letter-spacing: 0;
     line-height: 23px;
+    list-style-type: none;
+
+    &:before {
+      position: relative;
+      left: -25px;
+      content: '-';
+      font-family: $meta-serif-pro;
+      font-size: 20px;
+      color: $black;
+      letter-spacing: 0;
+      line-height: 23px;
+    }
 }
 
 .inverted {
