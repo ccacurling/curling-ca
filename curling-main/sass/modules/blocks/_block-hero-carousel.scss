@@ -1,4 +1,6 @@
 .block-hero-carousel {
+  min-height: 600px;
+
   .ms-container {
     background-color: $white;
   }
@@ -26,6 +28,7 @@
       margin-top: 0;
       width: 140px!important;
       background-color: $white;
+      border: none;
 
       @include responsive-min($responsive-tablet) {
         width: 370px!important;

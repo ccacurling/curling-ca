@@ -877,21 +877,21 @@
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 7.5px;
+  margin-right: 7.5px;
 }
 
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:first-child,
   .edit-post-layout__content .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column:first-child {
-    padding-right: 15px;
+    margin-left: -7.5px;
   }
 }
 
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child,
   .edit-post-layout__content .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column:last-child {
-    padding-left: 15px;
+    margin-right: -7.5px;
   }
 }
 
@@ -3293,6 +3293,10 @@
   padding-right: 20px;
 }
 
+.edit-post-layout__content .block-hero-carousel {
+  min-height: 600px;
+}
+
 .edit-post-layout__content .block-hero-carousel .ms-container {
   background-color: #ffffff;
 }
@@ -3327,6 +3331,7 @@
   margin-top: 0;
   width: 140px !important;
   background-color: #ffffff;
+  border: none;
 }
 
 @media only screen and (min-width: 769px) {

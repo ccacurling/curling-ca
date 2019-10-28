@@ -194,24 +194,19 @@
         position: relative;
         margin-top: 0;
         margin-bottom: 0;
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 7.5px;
+        margin-right: 7.5px;
       }
 
       .wp-block-column:first-child {
         @include responsive-min($responsive-laptop) {
-          padding-right: 15px;
+          margin-left: -7.5px;
         }
       }
 
       .wp-block-column:last-child {
         @include responsive-min($responsive-laptop) {
-          padding-left: 15px;
-        }
-      }
-      .wp-block-column:not(:first-child) {
-        @include responsive-max($responsive-laptop) {
-          // margin-top: 40px;
+          margin-right: -7.5px;
         }
       }
     }

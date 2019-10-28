@@ -56,7 +56,7 @@
                 $previous_item = $sidebar_sublink;
               }
         ?>
-          <li class="sidebar-item <?php echo $sidebar_sublink && $sidebar_sublink['url'] == $current ? 'sidebar-item-current' : ''; ?>"><?php echo $sidebar_sublink ? $sidebar_sublink['title'] : ''; ?></li>
+          <li class="sidebar-item <?php echo $sidebar_sublink && $sidebar_sublink['url'] == $current ? 'sidebar-item-current' : ''; ?>"><a class="clear" href="<?php echo $sidebar_sublink ? $sidebar_sublink['url'] : ''; ?>" target="<?php echo $sidebar_sublink ? $sidebar_sublink['target'] : ''; ?>"><?php echo $sidebar_sublink ? $sidebar_sublink['title'] : ''; ?></a></li>
         <?php
             }
           }
