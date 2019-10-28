@@ -7,12 +7,12 @@
   &.one-column {
     padding: 0;
 
-    .content .cta-section {
+    .sponsors-content .cta-section {
       width: 100%;
     }
   }
 
-  .content {
+  .sponsors-content {
     max-width: $full-width-wrapper;
 
     h2 {
@@ -35,6 +35,7 @@
       .sponsor-container {
         flex: 0 1 170px;
         max-height: 310px;
+        max-width: 200px;
         display: flex;
         padding: 1.25rem 15px;
         flex-direction: column;
@@ -81,7 +82,7 @@
         }
 
         a {
-          padding-bottom: 1.25rem;
+          // padding-bottom: 1.25rem;
         }
       }
 
@@ -229,7 +230,7 @@
   .block-sponsors {
     padding: 2.25rem 0;
 
-    .block-sponsors-content {
+    .sponsors-content {
       margin-left: 3rem;
 
       p {
@@ -286,7 +287,7 @@
   .block-sponsors {
     padding: 0.5rem 0;
 
-    .block-sponsors-content {
+    .sponsors-content {
       margin-left: 0rem;
 
       .content-centered {
@@ -378,7 +379,7 @@
 
 @include responsive-max(369px) {
   .block-sponsors {
-    .block-sponsors-content {
+    .sponsors-content {
       .sponsor-container {
         flex: 1 1 160px;
 
@@ -405,7 +406,7 @@
 
 @include responsive-max(1337px) {
   .block-sponsors {
-    .block-sponsors-content {
+    .sponsors-content {
 
       .cta-section {
         flex-direction: column;
