@@ -84,6 +84,23 @@
   background-image: url(../images/arrow-right-large-red.svg);
 }
 
+.wp-block-column > ul > li {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+
+  &:before {
+    position: relative;
+    left: -25px;
+    content: '-';
+    font-family: $meta-serif-pro;
+    font-size: 20px;
+    color: $black;
+    letter-spacing: 0;
+    line-height: 23px;
+  }
+}
+
 .block-container {
   margin-left: auto;
   margin-right: auto;
@@ -106,12 +123,12 @@
 
     ul > li {
       margin-left: 20px;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       list-style-type: none;
 
       &:before {
         position: relative;
-        left: -25px;
+        left: -18px;
         content: '-';
         font-family: $meta-serif-pro;
         font-size: 20px;

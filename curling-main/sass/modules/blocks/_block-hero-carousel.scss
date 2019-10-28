@@ -1,6 +1,10 @@
 .block-hero-carousel {
   min-height: 600px;
 
+  .master-slider {
+    // transition-duration: 0.5s!important;
+  }
+
   .ms-container {
     background-color: $white;
   }

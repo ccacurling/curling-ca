@@ -749,6 +749,23 @@ li {
   background-image: url(../images/arrow-right-large-red.svg);
 }
 
+.wp-block-column > ul > li {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.wp-block-column > ul > li:before {
+  position: relative;
+  left: -25px;
+  content: '-';
+  font-family: "Meta Serif Pro";
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23px;
+}
+
 .block-container {
   margin-left: auto;
   margin-right: auto;
@@ -771,13 +788,13 @@ li {
 
 .block-container .wp-block-cossette-block-container > ul > li {
   margin-left: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   list-style-type: none;
 }
 
 .block-container .wp-block-cossette-block-container > ul > li:before {
   position: relative;
-  left: -25px;
+  left: -18px;
   content: '-';
   font-family: "Meta Serif Pro";
   font-size: 20px;
