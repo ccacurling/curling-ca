@@ -309,6 +309,10 @@
   text-align: right;
 }
 
+.edit-post-layout__content .p1 {
+  padding: 10px 0;
+}
+
 .edit-post-layout__content .wp-block {
   max-width: 100%;
 }

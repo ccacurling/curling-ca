@@ -281,6 +281,10 @@ li {
   text-align: right;
 }
 
+.p1 {
+  padding: 10px 0;
+}
+
 /**
   * Vendor Imports
   */
