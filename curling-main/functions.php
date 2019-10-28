@@ -58,7 +58,7 @@ function block_accordion_container_init() {
             '<div class="accordion-container-links">'.
             '<a class="accordion-container-link accordion-container-link-open gray js-accordion-trigger" href="#" onClick="return false;"><p class="js-accordion-trigger-text" data-trigger-show="'.$attributes['show_label'].'" data-trigger-hide="'.$attributes['hide_label'].'">'.$attributes['show_label'].'</p></a>'.
             ($attributes['is_single_item'] ? '<a class="accordion-container-link accordion-container-link-close gray js-accordion-trigger" href="#" onClick="return false;"><img class="" src="'.get_stylesheet_directory_uri().'/images/symbol-close.svg" alt="Site Logo" /></a>' : '').
-            '<a class="accordion-container-link gray js-accordion-trigger" href="#" onClick="return false;"><p>'.$attributes['additional_link_title'].'</p></a>'.
+            ($attributes['additional_link_title'] ? '<a class="accordion-container-link gray js-accordion-trigger" href="'.$attributes['additional_link_url'].'" target="'.$attributes['additional_link_target'].'"><p>'.$attributes['additional_link_title'].'</p></a>' : '').
             '</div>'.
             '</div>'.
             '<div class="accordion-container-border"></div>'.
