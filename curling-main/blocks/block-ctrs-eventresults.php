@@ -4,7 +4,7 @@
  */
 
 //$year = get_field('year');
-$event_id = get_field('eventid');
+$event_id = get_field('event_id');
 
 function cca_ctrs_event_results ($eid) {
 	$eventid = $eid; //$_POST["eventid"];
