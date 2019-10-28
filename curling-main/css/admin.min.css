@@ -5094,35 +5094,35 @@
   .edit-post-layout__content .block-sponsors {
     padding: 2.25rem 0;
   }
-  .edit-post-layout__content .block-sponsors .content {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content {
     margin-left: 3rem;
   }
-  .edit-post-layout__content .block-sponsors .content p {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content p {
     padding-bottom: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .cta-section {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .cta-section {
     flex-direction: column;
     width: 100%;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsors-section .has-title-and-link ~ .has-title h3 {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .sponsors-section .has-title-and-link ~ .has-title h3 {
     padding-bottom: 2.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned {
     justify-content: unset;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column {
     max-width: 100%;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
     margin: 0;
     left: 0;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
     margin: 0;
     top: 0.5rem;
     left: 0;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
     align-self: flex-start;
   }
   .edit-post-layout__content .block-sponsors.white-bg-on-mobile {
@@ -5137,73 +5137,73 @@
   .edit-post-layout__content .block-sponsors {
     padding: 0.5rem 0;
   }
-  .edit-post-layout__content .block-sponsors .content {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content {
     margin-left: 0rem;
   }
-  .edit-post-layout__content .block-sponsors .content .content-centered {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-centered {
     width: 100%;
   }
-  .edit-post-layout__content .block-sponsors .content .content-centered .sponsors-section .sponsor-container a {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-centered .sponsors-section .sponsor-container a {
     position: relative;
     left: 1.1rem;
     top: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container p {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .sponsors-section .sponsor-container p {
     padding-bottom: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container h3 {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .sponsors-section .sponsor-container h3 {
     position: relative;
     left: 1.1rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsors-section .sponsor-container .sponsor {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .sponsors-section .sponsor-container .sponsor {
     width: 150px;
     height: 150px;
     align-self: center;
   }
-  .edit-post-layout__content .block-sponsors .content .cta-section {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .cta-section {
     position: relative;
     left: 1rem;
     flex-direction: column;
     width: 100%;
   }
-  .edit-post-layout__content .block-sponsors .content .content-left-aligned .sponsor-container {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-left-aligned .sponsor-container {
     flex: 1 1 100%;
   }
-  .edit-post-layout__content .block-sponsors .content .content-left-aligned .sponsor-container .sponsor {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-left-aligned .sponsor-container .sponsor {
     align-self: flex-start;
     margin-left: 1.1rem;
   }
-  .edit-post-layout__content .block-sponsors .content .content-left-aligned .sponsor-container a {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-left-aligned .sponsor-container a {
     position: relative;
     left: 1.1rem;
     top: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsors-section.two-columns {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .sponsors-section.two-columns {
     max-width: 50%;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned {
     justify-content: unset;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column {
     max-width: 100%;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
     left: 1.1rem;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
     top: 0.5rem;
     left: 1.1rem;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
     align-self: center;
   }
 }
 
 @media only screen and (max-width: 370px) {
-  .edit-post-layout__content .block-sponsors .content .sponsor-container {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .sponsor-container {
     flex: 1 1 160px;
   }
-  .edit-post-layout__content .block-sponsors .content .sponsor-container .sponsor {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .sponsor-container .sponsor {
     align-self: flex-start;
     margin-left: 1.1rem;
     width: 150px;
@@ -5215,25 +5215,25 @@
 }
 
 @media only screen and (max-width: 1338px) {
-  .edit-post-layout__content .block-sponsors .content .cta-section {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .cta-section {
     flex-direction: column;
   }
-  .edit-post-layout__content .block-sponsors .content .cta-section p {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .cta-section p {
     padding-bottom: 0.5rem;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned {
     justify-content: unset;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container h3 {
     left: 0;
     margin: 0;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container a {
     top: 0.5rem;
     left: 0;
     margin: 0;
   }
-  .edit-post-layout__content .block-sponsors .content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
+  .edit-post-layout__content .block-sponsors .block-sponsors-content .content-right-aligned .sponsors-section.one-column .sponsor-container .sponsor {
     align-self: flex-start;
   }
 }
