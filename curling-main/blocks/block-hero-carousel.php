@@ -37,6 +37,7 @@
         $featured_post_thumbnail = get_image( $featured_post, 'small' );
         $featured_post_hero = get_image( $featured_post, 'large' );
         $featured_post_title = get_the_title( $featured_post );
+        $featured_post_url = get_permalink( $featured_post );
 
         if (!$featured_post_thumbnail) {
           $featured_post_thumbnail = get_stylesheet_directory_uri()."/images/img-blank.svg";
@@ -48,16 +49,18 @@
     ?>
       <div class="ms-slide">
         <div class="hero-carousel-caption-container">
-          <img class="hero-carousel-image" src="<?php echo $featured_post_thumbnail; ?>" data-src="<?php echo $featured_post_thumbnail; ?>" alt=""/>     
-          <h1 class="hero-carousel-caption"><?php echo $featured_post_title; ?></h1>
+          <img class="hero-carousel-image" src="<?php echo $featured_post_thumbnail; ?>" data-src="<?php echo $featured_post_thumbnail; ?>" alt="Hero Image"/>     
+          <h1 class="hero-carousel-caption inverted"><?php echo $featured_post_title; ?></h1>
         </div>
         <div class="hero-carousel-thumbnail ms-thumb">
-          <div class="hero-carousel-thumbnail-top">
-            <img class="hero-carousel-thumbnail-image" src="<?php echo $featured_post_thumbnail; ?>" alt=""/>
-            <div class="hero-carousel-thumbnail-content">
-              <h3 class="hero-carousel-thumbnail-text"><?php echo $featured_post_title; ?></h3>
+          <a class="hero-carousel-thumbnail-link clear" href="<?php echo $featured_post_url; ?>" target="_self">
+            <div class="hero-carousel-thumbnail-top">
+              <img class="hero-carousel-thumbnail-image" src="<?php echo $featured_post_thumbnail; ?>" alt="Thumbnail"/>
+              <div class="hero-carousel-thumbnail-content">
+                <h3 class="hero-carousel-thumbnail-text"><?php echo $featured_post_title; ?></h3>
+              </div>
             </div>
-          </div>
+          </a>
           <div class="hero-carousel-thumbnail-timer">
             <div class="hero-carousel-thumbnail-timer-progress js-hero-carousel-thumbnail-timer-progress"></div>
           </div>

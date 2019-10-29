@@ -94,6 +94,10 @@
   }
 }
 
+.hero-carousel-thumbnail-link {
+  height: 100%;
+}
+
 .hero-carousel-thumbnail-top {
   display: flex;
   height: 100%;
@@ -157,15 +161,14 @@
   -webkit-line-clamp: 4;
   word-wrap: break-word;
   text-overflow: ellipsis;
-  color: $white;
   z-index: 1;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.50);
 
   @include responsive-min($responsive-tablet) {
     left: 130px;
     padding-left: 0;
     padding-right: 0;
-    max-width: 560px;
-    color: $black;
+    max-width: 50%;
   }
 }
 

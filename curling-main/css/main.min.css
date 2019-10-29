@@ -3416,6 +3416,10 @@ li {
   }
 }
 
+.hero-carousel-thumbnail-link {
+  height: 100%;
+}
+
 .hero-carousel-thumbnail-top {
   display: flex;
   height: 100%;
@@ -3481,8 +3485,8 @@ li {
   -webkit-line-clamp: 4;
   word-wrap: break-word;
   text-overflow: ellipsis;
-  color: #ffffff;
   z-index: 1;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 769px) {
@@ -3490,8 +3494,7 @@ li {
     left: 130px;
     padding-left: 0;
     padding-right: 0;
-    max-width: 560px;
-    color: #000000;
+    max-width: 50%;
   }
 }
 
