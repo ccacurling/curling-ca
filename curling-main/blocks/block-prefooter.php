@@ -18,10 +18,7 @@ $prefooter_image_x_offset = get_field( 'prefooter_image_x_offset' );
 $prefooter_image_y_offset = get_field( 'prefooter_image_y_offset' );
 
 $prefooter_button_one = get_field( 'prefooter_button_one' );
-$prefooter_button_one_label = get_field( 'prefooter_button_one_label' );
-
 $prefooter_button_two = get_field( 'prefooter_button_two' );
-$prefooter_button_two_label = get_field( 'prefooter_button_two_label' );
 
 if ( !isset($prefooter_button_one_label) || empty($prefooter_button_one_label) ){
   $prefooter_button_one_label = $prefooter_button_one;
@@ -31,6 +28,9 @@ if ( !isset($prefooter_button_two_label) || empty($prefooter_button_two_label) )
   $prefooter_button_two_label = $prefooter_button_two;
 }
 
+$prefooter_shop_link = get_field( 'settings_shop_link', 'Options' );
+$prefooter_donate_link = get_field( 'settings_donate_link', 'Options' );
+
 ?>
 
 <div class="block-prefooter <?php echo $prefooter_enable_background ? '' : 'block-prefooter-simple'; ?> <?php echo !$prefooter_enable_background ? 'block-prefooter-'.$prefooter_background_colour : 'block-prefooter-white'?>">
@@ -39,11 +39,15 @@ if ( !isset($prefooter_button_two_label) || empty($prefooter_button_two_label) )
     <p class="block-prefooter-info-body"><?php echo $prefooter_body; ?></p>
     <div class="block-prefooter-info-btns">
       <?php if ( isset($prefooter_button_one) && !empty($prefooter_button_one) ) { ?>
-        <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_button_one; ?>" target="none"><?php echo $prefooter_button_one_label; ?></a>
-      <?php }?>
-      <?php if ( isset($prefooter_button_one) && !empty($prefooter_button_one) ) { ?>
-        <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_button_two; ?>" target="none"><?php echo $prefooter_button_two_label; ?></a>
-      <?php }?>
+        <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_button_one['url']; ?>" target="<?php echo $prefooter_button_one['target']; ?>"><?php echo $prefooter_button_one['title']; ?></a>
+      <?php } else { ?>
+        <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_shop_link['url']; ?>" target="<?php echo $prefooter_shop_link['target']; ?>"><?php echo $prefooter_shop_link['title']; ?></a>
+      <?php } ?>
+      <?php if ( isset($prefooter_button_two) && !empty($prefooter_button_two) ) { ?>
+        <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_button_two['url']; ?>" target="<?php echo $prefooter_button_two['target']; ?>"><?php echo $prefooter_button_two['title']; ?></a>
+        <?php } else { ?>
+        <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_donate_link['url']; ?>" target="<?php echo $prefooter_donate_link['target']; ?>"><?php echo $prefooter_donate_link['title']; ?></a>
+      <?php } ?>
     </div>
   </div>
   <?php
