@@ -52,18 +52,19 @@ function block_accordion_container_init() {
   register_block_type('cossette/block-accordion-container', array(
       'editor_script' => 'cossette-block-accordion-container',
       'render_callback' => function( $attributes, $content = '' ) {
-          return '<div class="block-accordion-container '.($attributes['is_single_item'] ? 'accordion-container-single ' : ' ').'js-accordion">'.
+          $id = rand(10000000, 99999999);
+          return '<div class="block-accordion-container '.($attributes['is_single_item'] ? 'accordion-container-single ' : ' ').'js-accordion" data-id="'.$id.'">'.
             '<div class="accordion-container-top">'.
             '<'.($attributes['is_single_item'] ? 'h3' : 'h4').' class="gray">'.$attributes['title'].'</'.($attributes['is_single_item'] ? 'h3' : 'h4').'>'.
             '<div class="accordion-container-links">'.
-            '<a class="accordion-container-link accordion-container-link-open gray js-accordion-trigger" href="#" onClick="return false;"><p class="js-accordion-trigger-text" data-trigger-show="'.$attributes['show_label'].'" data-trigger-hide="'.$attributes['hide_label'].'">'.$attributes['show_label'].'</p></a>'.
-            ($attributes['is_single_item'] ? '<a class="accordion-container-link accordion-container-link-close gray js-accordion-trigger" href="#" onClick="return false;"><img class="" src="'.get_stylesheet_directory_uri().'/images/symbol-close.svg" alt="Site Logo" /></a>' : '').
-            ($attributes['additional_link_title'] ? '<a class="accordion-container-link gray js-accordion-trigger" href="'.$attributes['additional_link_url'].'" target="'.$attributes['additional_link_target'].'"><p>'.$attributes['additional_link_title'].'</p></a>' : '').
+            '<a class="accordion-container-link accordion-container-link-open gray js-accordion-trigger" href="#" onClick="return false;" data-id="'.$id.'"><p class="js-accordion-trigger-text" data-trigger-show="'.$attributes['show_label'].'" data-trigger-hide="'.$attributes['hide_label'].'" data-id="'.$id.'">'.$attributes['show_label'].'</p></a>'.
+            ($attributes['is_single_item'] ? '<a class="accordion-container-link accordion-container-link-close gray js-accordion-trigger" href="#" onClick="return false;" data-id="'.$id.'"><img class="" src="'.get_stylesheet_directory_uri().'/images/symbol-close.svg" alt="Site Logo" /></a>' : '').
+            ($attributes['additional_link_title'] ? '<a class="accordion-container-link gray js-accordion-trigger" href="'.$attributes['additional_link_url'].'" target="'.$attributes['additional_link_target'].'" data-id="'.$id.'"><p>'.$attributes['additional_link_title'].'</p></a>' : '').
             '</div>'.
             '</div>'.
             '<div class="accordion-container-border"></div>'.
-            '<div class="accordion-container-content js-accordion-content">'.
-            (!$attributes['is_single_item'] ? '<a class="accordion-container-link gray js-accordion-trigger" href="#" onClick="return false;"><img class="accordion-container-close" src="'.get_stylesheet_directory_uri().'/images/symbol-close.svg" alt="Site Logo" /></a>' : '').
+            '<div class="accordion-container-content js-accordion-content" data-id="'.$id.'">'.
+            (!$attributes['is_single_item'] ? '<a class="accordion-container-link gray js-accordion-trigger" href="#" onClick="return false;" data-id="'.$id.'"><img class="accordion-container-close" src="'.get_stylesheet_directory_uri().'/images/symbol-close.svg" alt="Site Logo" /></a>' : '').
             $content.
             '</div>'.
             '</div>';

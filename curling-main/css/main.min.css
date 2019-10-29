@@ -214,13 +214,14 @@ p {
 }
 
 p a {
-  font-style: italic;
+  font-style: normal;
   text-decoration: underline;
+  color: #000000;
 }
 
 p a:hover {
   cursor: pointer;
-  color: #f16682;
+  color: #ed1940;
 }
 
 .subdomain {
@@ -1884,7 +1885,7 @@ li {
   content: '';
   cursor: pointer;
   height: 3px;
-  background: #F16681;
+  background: #f16682;
   -webkit-transition: all 150ms;
   -o-transition: all 150ms;
   transition: all 150ms;

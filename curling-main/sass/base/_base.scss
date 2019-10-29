@@ -146,12 +146,13 @@ p {
     }
 
     a{
-        font-style: italic;
+        font-style: normal;
         text-decoration: underline;
+        color: $black;
 
         &:hover {
             cursor: pointer;
-            color: $pink;
+            color: $red;
         }
     }
 }

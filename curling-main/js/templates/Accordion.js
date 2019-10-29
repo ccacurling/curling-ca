@@ -16,14 +16,15 @@ jQuery(document).ready(function($) {
   class Accordion {
     constructor(element, options) {
       this.accordion = element;
-      this.trigger = this.accordion.find('.js-accordion-trigger');
-      this.content = this.accordion.find('.js-accordion-content');
+      this.id = element.data('id');
+      this.trigger = this.accordion.find(`.js-accordion-trigger[data-id="${this.id}"]`);
+      this.content = this.accordion.children(`.js-accordion-content[data-id="${this.id}"]`);
 
       if (this.trigger) {
         this.trigger.click(() => {
           this.accordion.toggleClass('active');
 
-          const $text = this.trigger.find('.js-accordion-trigger-text');
+          const $text = this.trigger.find(`.js-accordion-trigger-text[data-id="${this.id}"]`);
           
           if ($text) {
             const show = $text.data('trigger-show');

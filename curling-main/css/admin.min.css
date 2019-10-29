@@ -242,13 +242,14 @@
 }
 
 .edit-post-layout__content p a {
-  font-style: italic;
+  font-style: normal;
   text-decoration: underline;
+  color: #000000;
 }
 
 .edit-post-layout__content p a:hover {
   cursor: pointer;
-  color: #f16682;
+  color: #ed1940;
 }
 
 .edit-post-layout__content .subdomain {
@@ -1914,7 +1915,7 @@
   content: '';
   cursor: pointer;
   height: 3px;
-  background: #F16681;
+  background: #f16682;
   -webkit-transition: all 150ms;
   -o-transition: all 150ms;
   transition: all 150ms;
