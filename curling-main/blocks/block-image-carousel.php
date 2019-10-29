@@ -19,11 +19,13 @@ $carousel_gallery = get_field( 'image_carousel_gallery' );
 $carousel_gallery_chucks = $carousel_gallery ? array_chunk($carousel_gallery, 4) : [];
 $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' );
 
+$id = rand(10000000, 99999999);
+
 ?>
 
 <section class="block-image-carousel <?php echo $carousel_background_colour === 'gray' ? 'image-carousel-gray' : ''; ?> image-carousel-<?php echo $carousel_type; ?> js-image-carousel">
-  <div class="image-carousel-container <?php echo $carousel_accordion_on_mobile ? 'image-carousel-accordion  js-accordion' : ''; ?>">
-    <div class="image-carousel-sub-container <?php echo !$carousel_top_body ? 'image-carousel-nobody' : ''; ?> <?php echo $carousel_accordion_on_mobile ? 'image-carousel-trigger js-accordion-trigger' : ''; ?>">
+  <div class="image-carousel-container <?php echo $carousel_accordion_on_mobile ? 'image-carousel-accordion  js-accordion' : ''; ?>" data-id="<?php echo $id; ?>">
+    <div class="image-carousel-sub-container <?php echo !$carousel_top_body ? 'image-carousel-nobody' : ''; ?> <?php echo $carousel_accordion_on_mobile ? 'image-carousel-trigger js-accordion-trigger' : ''; ?>"  data-id="<?php echo $id; ?>">
       <?php
         if ($carousel_type == 'normal') {
       ?>
@@ -47,7 +49,7 @@ $carousel_masterslider_alias = get_field( 'image_carousel_master_slider_alias' )
     <?php
       if ($carousel_accordion_on_mobile) {
     ?>
-      <div class="image-carousel-content js-accordion-content">  
+      <div class="image-carousel-content js-accordion-content" data-id="<?php echo $id; ?>">  
     <?php
       }
     ?>

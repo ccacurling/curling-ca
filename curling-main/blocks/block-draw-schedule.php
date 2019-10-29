@@ -16,15 +16,15 @@
   $date_string = date_format($date, 'l, F j');
 
   $draws = get_field('schedule_draws', $draw_schedule);
-
+  $id = rand(10000000, 99999999);
 ?>
 
-<section class="block-schedule js-schedule js-accordion">
-  <div class="schedule-date-container js-accordion-trigger">
+<section class="block-schedule js-schedule js-accordion" data-id="<?php echo $id; ?>">
+  <div class="schedule-date-container js-accordion-trigger" data-id="<?php echo $id; ?>">
     <h3 class="schedule-date js-schedule-title"><?php echo $date_string; ?></h3>
     <img class="schedule-date-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-down.svg"; ?>" alt="Triangle">
   </div>
-  <div class="schedule-details js-accordion-content">
+  <div class="schedule-details js-accordion-content" data-id="<?php echo $id; ?>">
     <div class="schedule-info-container">
       <?php
         if ($draw_schedule_info) {
