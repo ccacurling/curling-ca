@@ -927,9 +927,36 @@ acf_add_local_field_group(array(
 			'collapsed' => '',
 			'min' => 1,
 			'max' => 3,
-			'layout' => 'table',
-			'button_label' => 'Add Post',
+			'layout' => 'block',
+			'button_label' => 'Add Item',
 			'sub_fields' => array(
+				array(
+					'key' => 'field_5db9cc468f993',
+					'label' => 'Type',
+					'name' => 'hero_carousel_item_type',
+					'type' => 'select',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => 0,
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'choices' => array(
+						'post' => 'Post',
+						'video' => 'Video',
+						'youtube_video' => 'YouTube Video',
+					),
+					'default_value' => array(
+					),
+					'allow_null' => 0,
+					'multiple' => 0,
+					'ui' => 0,
+					'return_format' => 'value',
+					'ajax' => 0,
+					'placeholder' => '',
+				),
 				array(
 					'key' => 'field_5d965d79cd8a0',
 					'label' => 'Featured Post',
@@ -937,7 +964,15 @@ acf_add_local_field_group(array(
 					'type' => 'post_object',
 					'instructions' => '',
 					'required' => 0,
-					'conditional_logic' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5db9cc468f993',
+								'operator' => '==',
+								'value' => 'post',
+							),
+						),
+					),
 					'wrapper' => array(
 						'width' => '',
 						'class' => '',
@@ -951,6 +986,157 @@ acf_add_local_field_group(array(
 					'multiple' => 0,
 					'return_format' => 'object',
 					'ui' => 1,
+				),
+				array(
+					'key' => 'field_5db9ccbb8f994',
+					'label' => 'Title',
+					'name' => 'hero_carousel_title',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5db9cc468f993',
+								'operator' => '==',
+								'value' => 'video',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5db9cc468f993',
+								'operator' => '==',
+								'value' => 'youtube_video',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5db9ce36015f7',
+					'label' => 'YouTube Video ID',
+					'name' => 'hero_carousel_youtube_video_id',
+					'type' => 'text',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5db9cc468f993',
+								'operator' => '==',
+								'value' => 'youtube_video',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
+					'prepend' => '',
+					'append' => '',
+					'maxlength' => '',
+				),
+				array(
+					'key' => 'field_5db9db981f757',
+					'label' => 'Video',
+					'name' => 'hero_carousel_video',
+					'type' => 'file',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5db9cc468f993',
+								'operator' => '==',
+								'value' => 'video',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'library' => 'all',
+					'min_size' => '',
+					'max_size' => '',
+					'mime_types' => 'avi,mp4,m4p,m4v,ogg,mpg,mp2,mpeg,mpe,mpv',
+				),
+				array(
+					'key' => 'field_5db9dfda7786c',
+					'label' => 'Video Thumbnail',
+					'name' => 'hero_carousel_video_thumbnail',
+					'type' => 'image',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5db9cc468f993',
+								'operator' => '==',
+								'value' => 'video',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'return_format' => 'array',
+					'preview_size' => 'medium',
+					'library' => 'all',
+					'min_width' => '',
+					'min_height' => '',
+					'min_size' => '',
+					'max_width' => '',
+					'max_height' => '',
+					'max_size' => '',
+					'mime_types' => '',
+				),
+				array(
+					'key' => 'field_5db9cce58f995',
+					'label' => 'Link',
+					'name' => 'hero_carousel_link',
+					'type' => 'url',
+					'instructions' => '',
+					'required' => 0,
+					'conditional_logic' => array(
+						array(
+							array(
+								'field' => 'field_5db9cc468f993',
+								'operator' => '==',
+								'value' => 'video',
+							),
+						),
+						array(
+							array(
+								'field' => 'field_5db9cc468f993',
+								'operator' => '==',
+								'value' => 'youtube_video',
+							),
+						),
+					),
+					'wrapper' => array(
+						'width' => '',
+						'class' => '',
+						'id' => '',
+					),
+					'default_value' => '',
+					'placeholder' => '',
 				),
 			),
 		),

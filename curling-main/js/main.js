@@ -31,6 +31,24 @@ jQuery(document).ready(function($) {
     dots: true,
   });
 
+  $(document).on('lity:close', (event, instance) => {
+    $('.js-hero-carousel').each((i, element) => {
+      const $this = $(element);
+
+      const carousel = $this.data('hero.carousel');
+      carousel.resume();
+    });
+  });
+
+  $(document).on('lity:open', (event, instance) => {
+      $('.js-hero-carousel').each((i, element) => {
+        const $this = $(element);
+
+        const carousel = $this.data('hero.carousel');
+        carousel.pause();
+      });
+  });
+
   // Handle on load slick for mobile devices and small desktop windows
   responsivelySlick($, $(window).width());
 

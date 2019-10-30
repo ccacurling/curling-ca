@@ -20,6 +20,14 @@ jQuery(document).ready(function($) {
       this.init();
     }
 
+    pause() {
+      this.masterSlider.api.pause();
+    }
+
+    resume() {
+      this.masterSlider.api.resume();
+    }
+
     init() {
       this.slider.each((i, element) => {
         const $this = $(element);
