@@ -157,6 +157,31 @@ p {
     }
 }
 
+.wp-block-table > tbody > tr > td {
+  font-family: $meta-serif-pro;
+  line-height: 18px;
+  letter-spacing: 0;
+  font-size: 14px;
+  color: $black;
+  
+  @include responsive-min($responsive-laptop) {
+    font-size: 16px;
+    letter-spacing: 0;
+    line-height: 20px;
+  }
+
+  a{
+    font-style: normal;
+    text-decoration: underline;
+    color: $black;
+
+    &:hover {
+      cursor: pointer;
+      color: $red;
+    }
+  }
+}
+
 .subdomain {
   font-family: $knockout;
   font-size: 18px;
