@@ -147,7 +147,7 @@
 
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .text-highlight {
-    font-size: 200px;
+    font-size: 140px;
     letter-spacing: 3.08px;
     line-height: 160px;
   }
@@ -3810,6 +3810,7 @@
 .edit-post-layout__content .package-price-dollar-symbol,
 .edit-post-layout__content .package-price-cents {
   margin-bottom: 18px;
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 999px) {
@@ -3818,6 +3819,10 @@
     margin-top: 19px;
     margin-bottom: 0;
   }
+}
+
+.edit-post-layout__content .package-price-cents {
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 999px) {
@@ -3830,11 +3835,12 @@
 
 .edit-post-layout__content .package-price-dollar {
   line-height: 106px;
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .package-price-dollar {
-    line-height: 150px;
+    line-height: 130px;
   }
 }
 
@@ -3877,6 +3883,11 @@
   }
 }
 
+.edit-post-layout__content .package-info-container a {
+  display: block;
+  color: #000000;
+}
+
 .edit-post-layout__content .package-button-container {
   margin-top: 32px;
   padding-top: 19px;
@@ -3898,6 +3909,7 @@
 
 .edit-post-layout__content .package-button-text {
   font-size: 34px;
+  line-height: normal;
 }
 
 .edit-post-layout__content .block-package-small {

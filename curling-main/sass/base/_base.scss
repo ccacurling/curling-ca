@@ -61,7 +61,7 @@ img {
     color: $black;
     text-transform: uppercase;
     @include responsive-min($responsive-laptop) {
-      font-size: 200px;
+      font-size: 140px;
       letter-spacing: 3.08px;
       line-height: 160px;
     }

@@ -119,7 +119,7 @@ img {
 
 @media only screen and (min-width: 999px) {
   .text-highlight {
-    font-size: 200px;
+    font-size: 140px;
     letter-spacing: 3.08px;
     line-height: 160px;
   }
@@ -3788,6 +3788,7 @@ li {
 .package-price-dollar-symbol,
 .package-price-cents {
   margin-bottom: 18px;
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 999px) {
@@ -3796,6 +3797,10 @@ li {
     margin-top: 19px;
     margin-bottom: 0;
   }
+}
+
+.package-price-cents {
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 999px) {
@@ -3808,11 +3813,12 @@ li {
 
 .package-price-dollar {
   line-height: 106px;
+  white-space: nowrap;
 }
 
 @media only screen and (min-width: 999px) {
   .package-price-dollar {
-    line-height: 150px;
+    line-height: 130px;
   }
 }
 
@@ -3855,6 +3861,11 @@ li {
   }
 }
 
+.package-info-container a {
+  display: block;
+  color: #000000;
+}
+
 .package-button-container {
   margin-top: 32px;
   padding-top: 19px;
@@ -3876,6 +3887,7 @@ li {
 
 .package-button-text {
   font-size: 34px;
+  line-height: normal;
 }
 
 .block-package-small {

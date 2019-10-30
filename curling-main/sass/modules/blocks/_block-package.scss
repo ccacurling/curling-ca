@@ -137,6 +137,7 @@
 .package-price-dollar-symbol,
 .package-price-cents {
   margin-bottom: 18px;
+  white-space: nowrap;
   @include responsive-min($responsive-laptop) {
     margin-top: 19px;
     margin-bottom: 0;
@@ -144,6 +145,7 @@
 }
 
 .package-price-cents {
+  white-space: nowrap;
   @include responsive-min($responsive-laptop) {
     position: relative;
     left: -8px;
@@ -153,8 +155,9 @@
 
 .package-price-dollar {
   line-height: 106px;
+  white-space: nowrap;
   @include responsive-min($responsive-laptop) {
-    line-height: 150px;
+    line-height: 130px;
   }
 }
 
@@ -187,6 +190,11 @@
       letter-spacing: 0.7px;
     }
   }
+
+  a {
+    display: block;
+    color: $black;
+  }
 }
 
 .package-button-container {
@@ -207,4 +215,5 @@
 
 .package-button-text {
   font-size: 34px;
+  line-height: normal;
 }
