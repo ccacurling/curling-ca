@@ -541,6 +541,11 @@ function create_nav_structure(){
   if ( !wp_get_nav_menu_object( 'Menu - Our Organization' ) ){
     wp_create_nav_menu('Menu - Our Organization');
   }
+
+    //Menu - About Curling
+    if ( !wp_get_nav_menu_object( 'Menu - About Curling' ) ){
+      wp_create_nav_menu('Menu - About Curling');
+    }
   
   //Menu - Top Left
   if ( !wp_get_nav_menu_object( 'Menu - Top Left' ) ){

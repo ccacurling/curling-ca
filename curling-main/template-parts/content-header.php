@@ -7,6 +7,16 @@
 
     $logo = get_field('event_logo', 'Options');
 
+    $about_curling_pages = get_field('about_curling_pages', 'Options');
+    $is_about_curling = false;
+
+    foreach ($about_curling_pages as $key => $page) {
+      if ($page->ID === $current_page_id) {
+        $is_about_curling = true;
+        break;
+      }
+    }
+
     $our_organization_pages = get_field('our_organization_pages', 'Options');
     $is_our_organization = false;
 
@@ -95,6 +105,8 @@
     
     if ($is_our_organization) {
       $primary_menu_items = wp_get_nav_menu_items( 'Menu - Our Organization' );
+    } else if ($is_about_curling) {
+      $primary_menu_items = wp_get_nav_menu_items( 'Menu - About Curling' );
     } else if ($is_event) {
       $primary_menu_items = wp_get_nav_menu_items( 'Menu - Events' );
     } else {
@@ -189,6 +201,7 @@
             <?php
               foreach( $top_left_menu_items as $menu_item ) {
                 $is_our_organization_menu = false;
+                $is_about_curling_menu = false;
                 if ($is_our_organization) {
                   foreach ($our_organization_pages as $key => $page) {
                     if ($page->ID == $menu_item->object_id) {
@@ -196,9 +209,16 @@
                       break;
                     }
                   }
+                } else if ($is_about_curling) {
+                  foreach ($about_curling_pages as $key => $page) {
+                    if ($page->ID == $menu_item->object_id) {
+                      $is_about_curling_menu = true;
+                      break;
+                    }
+                  }
                 }
             ?>
-              <li class="menu-item menu-item-selectable <?php echo $menu_item->url && (($home_url === $menu_item->url && !$is_our_organization) || ($is_our_organization && $is_our_organization_menu)) ? 'menu-item-top-nav-selected' : ''; ?>">
+              <li class="menu-item menu-item-selectable <?php echo $menu_item->url && (($home_url === $menu_item->url && !$is_our_organization && !$is_about_curling) || ($is_our_organization && $is_our_organization_menu) || ($is_about_curling && $is_about_curling_menu)) ? 'menu-item-top-nav-selected' : ''; ?>">
                 <?php
                   if ($menu_item->url) {
                 ?>
