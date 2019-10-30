@@ -3,6 +3,9 @@
     $current_page_title = get_the_title();
     $current_page_id = get_the_id();
 
+    $shop_link = get_field( 'settings_shop_link', 'Options' );
+    $donate_link = get_field( 'settings_donate_link', 'Options' );
+
     $is_event = get_field('is_event', 'Options');
 
     $logo = get_field('event_logo', 'Options');
@@ -278,7 +281,7 @@
                 <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
               </li>
               <li class="menu-item menu-item-donate">
-                <a class="menu-item-donate-link clear" href="">
+                <a class="menu-item-donate-link clear" href="<?php echo $donate_link['url']; ?>">
                   <h4 class="menu-item-small inverted"><?php echo __("Donate"); ?></h4>
                 </a>
               </li>
@@ -509,7 +512,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
       <div class="nav-menu-popout-bottom-mobile">
         <div class="menu-item menu-item-donate">
           <a class="menu-item-donate-link clear" href="">
-            <h4 class="menu-item-small inverted">Donate</h4>
+            <h4 class="menu-item-small inverted"><?php echo __("Donate"); ?></h4>
           </a>
         </div>
         <div class="nav-menu-social-mobile">
