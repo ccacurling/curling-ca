@@ -21,7 +21,7 @@ $package_btn_text_colour = $package_colour === 'white' || $package_colour === 'g
 <section class="block-package block-package-<?php echo $package_colour; ?>">
   <div class="package-price-container">
     <div class="package-price-wrapper">
-      <h2 class="package-price-dollar-symbol <?php echo $package_price_colour; ?>">$</h2>
+      <h2 class="package-price-dollar-symbol <?php echo $package_price_colour; ?>"><?php echo __("$"); ?></h2>
       <span class="package-price-dollar text-highlight <?php echo $package_price_colour; ?>"><?php echo $package_price_split[0]; ?></span>
       <h2 class="package-price-cents <?php echo $package_price_colour; ?>">.<?php echo $package_price_split[1]; ?></h2>
   </div>

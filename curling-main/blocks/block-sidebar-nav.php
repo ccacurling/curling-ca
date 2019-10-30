@@ -69,14 +69,14 @@
     ?>
       <div class="sidebar-controls-container">
         <?php if ($previous_item) { ?>
-          <a class="sidebar-controls sidebar-controls-previous btn" href="<?php echo $previous_item['url']; ?>">Previous</a>
+          <a class="sidebar-controls sidebar-controls-previous btn" href="<?php echo $previous_item['url']; ?>"><?php echo __("Previous"); ?></a>
         <?php } else { ?>
-          <span class="sidebar-controls sidebar-controls-previous btn disabled">Previous</span>
+          <span class="sidebar-controls sidebar-controls-previous btn disabled"><?php echo __("Previous"); ?></span>
         <?php } ?>
         <?php if ($next_item) { ?>
-          <a class="sidebar-controls sidebar-controls-next btn" <?php echo $next_item ? 'href="'.$next_item['url'].'"' : ''; ?>>Next</a>
+          <a class="sidebar-controls sidebar-controls-next btn" <?php echo $next_item ? 'href="'.$next_item['url'].'"' : ''; ?>><?php echo __("Next"); ?></a>
         <?php } else { ?>
-          <span class="sidebar-controls sidebar-controls-next btn disabled">Next</span>
+          <span class="sidebar-controls sidebar-controls-next btn disabled"><?php echo __("Next"); ?></span>
         <?php } ?>
       </div>
     <?php

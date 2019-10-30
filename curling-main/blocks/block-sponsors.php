@@ -89,7 +89,7 @@
                 $target    = get_sub_field( 'link_target' ); ?>
         
                 <a class="cta-link" href="<?php echo $link_url ? $link_url : $page_link ?>" target="<?php echo $target ?>">
-                  <?php echo strtoupper( $cta_text ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+                  <?php echo strtoupper( $cta_text ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("red-arrow"); ?>" />
                 </a>
         
               <?php } ?>
@@ -127,7 +127,7 @@
             
             <?php if ($sponsor_link) { ?>
               <a class="sponsor-container-link" href="<?php echo $sponsor_link['url']; ?>" target="<?php echo $sponsor_link['target']; ?>">
-                <?php echo strtoupper( $sponsor_link['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+                <?php echo strtoupper( $sponsor_link['title'] ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("red-arrow"); ?>" />
               </a>
             <?php } ?>
       
@@ -160,7 +160,7 @@
           <?php } ?>
     
         <?php } else { ?>
-          <h3>No sponsors selected</h3>
+          <h3><?php echo __("No sponsors selected"); ?></h3>
         <?php } ?>
     
       </div>
@@ -188,7 +188,7 @@
                 $target    = get_sub_field( 'link_target' ); ?>
         
                 <a class="cta-link" href="<?php echo $link_url ? $link_url : $page_link ?>" target="<?php echo $target ?>">
-                  <?php echo strtoupper( $cta_text ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+                  <?php echo strtoupper( $cta_text ); ?> <img src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("red-arrow"); ?>" />
                 </a>
         
               <?php } ?>

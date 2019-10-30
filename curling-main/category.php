@@ -112,7 +112,7 @@
       <?php
         if ($image) {
       ?>
-        <img class="hero-background-image" src="<?php echo $image; ?>" alt="Background" />
+        <img class="hero-background-image" src="<?php echo $image; ?>" alt="<?php echo __("Background"); ?>" />
       <?php
         }
       ?>
@@ -234,7 +234,7 @@
               <?php
                 if ($post_thumbnail) {
               ?>
-                <img class="news-feed-thumbnail" src="<?php echo $post_thumbnail; ?>" alt="">
+                <img class="news-feed-thumbnail" src="<?php echo $post_thumbnail; ?>" alt="<?php echo __("Thumbnail"); ?>">
               <?php
                 }
                 if ($post_caption) {
@@ -270,7 +270,7 @@
               ?>
               <a class="news-feed-link news-promo-link btn-link" href="<?php echo $post_link; ?>">
                 <h4 class="btn-link-text red" href="">Continue Reading</h4>
-                <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right">
+                <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>">
               </a>
               <?php
                 }

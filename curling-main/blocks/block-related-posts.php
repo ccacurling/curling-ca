@@ -63,7 +63,7 @@ function get_recent_posts($related_posts_categories) {
         <?php 
           if ($callout_image1) {
         ?>
-          <img class="callout-thumbnail" src="<?php echo $callout_image1; ?>" alt="Related" />
+          <img class="callout-thumbnail" src="<?php echo $callout_image1; ?>" alt="<?php echo __("Related"); ?>" />
         <?php
           }
         ?>
@@ -88,7 +88,7 @@ function get_recent_posts($related_posts_categories) {
         ?>
           <a class="callout-link btn-link" href="<?php echo $callout_link1; ?>" target="blank">
             <h3 class="btn-link-text red"><?php echo $post1_cta; ?></h3>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" />
           </a>
         <?php
           }
@@ -103,7 +103,7 @@ function get_recent_posts($related_posts_categories) {
         <?php 
           if ($callout_image2) {
         ?>
-          <img class="callout-thumbnail" src="<?php echo $callout_image2; ?>" alt="Related" />
+          <img class="callout-thumbnail" src="<?php echo $callout_image2; ?>" alt="<?php echo __("Related"); ?>" />
         <?php
           }
         ?>
@@ -128,7 +128,7 @@ function get_recent_posts($related_posts_categories) {
         ?>
           <a class="callout-link btn-link" href="<?php echo $callout_link2; ?>" target="blank">
             <h3 class="btn-link-text red"><?php echo $post2_cta; ?></h3>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" />
           </a>
         <?php
           }

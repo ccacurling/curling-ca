@@ -21,8 +21,8 @@
     ?>
       <div class="video-promo-thumbnail callout-thumbnail-container">
         <a href="<?php echo $link; ?>" data-lity> 
-          <img class="callout-thumbnail" src="<?php echo $thumbnail; ?>" alt="Youtube Thumbnail" />
-          <img class="video-promo-img-play js-btn-play" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-play-arrow.svg" alt="Play" />
+          <img class="callout-thumbnail" src="<?php echo $thumbnail; ?>" alt="<?php echo __("Youtube Thumbnail"); ?>" />
+          <img class="video-promo-img-play js-btn-play" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-play-arrow.svg" alt="<?php echo __("Play"); ?>" />
         </a>
       </div>
     <?php
@@ -39,7 +39,7 @@
       ?>
         <a class="callout-link btn-link" href="<?php echo $link; ?>" target="_blank">
           <h4 class="btn-link-text red"><?php echo $video_promo_link_label ?></h4>
-          <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+          <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" />
         </a>
       <?php
         }

@@ -64,21 +64,21 @@
       <div class="ms-slide">
         <div class="hero-carousel-caption-container">
           <?php if ($type === 'post') { ?>
-            <img class="hero-carousel-image" src="<?php echo $featured_post_thumbnail; ?>" data-src="<?php echo $featured_post_thumbnail; ?>" alt="Hero Image"/>     
+            <img class="hero-carousel-image" src="<?php echo $featured_post_thumbnail; ?>" data-src="<?php echo $featured_post_thumbnail; ?>" alt="<?php echo __("Hero Image"); ?>"/>     
             <h1 class="hero-carousel-caption inverted"><a class="clear" href="<?php echo $featured_post_url; ?>"><?php echo $featured_post_title; ?></a></h1>
           <?php } else if ($type === 'youtube_video') { ?>
             <div class="hero-carousel-image">
               <a href="<?php echo $video_url; ?>" data-lity>
-                <img class="callout-thumbnail" src="<?php echo $video_thumbnail; ?>" alt="Youtube Thumbnail" />
-                <img class="video-promo-img-play js-btn-play" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-play-arrow.svg" alt="Play" />
+                <img class="callout-thumbnail" src="<?php echo $video_thumbnail; ?>" alt="<?php echo __("Youtube Thumbnail"); ?>" />
+                <img class="video-promo-img-play js-btn-play" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-play-arrow.svg" alt="<?php echo __("Play"); ?>" />
               </a>
             </div>
             <a class="clear" href="<?php echo $video_link; ?>"><h1 class="hero-carousel-caption inverted"><?php echo $video_title; ?></h1></a>
           <?php } else { ?>
             <div class="hero-carousel-image">
               <a href="<?php echo $video_video['url']; ?>" data-lity>
-                <img class="callout-thumbnail" src="<?php echo $video_thumbnail['url']; ?>" alt="Youtube Thumbnail" />
-                <img class="video-promo-img-play js-btn-play" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-play-arrow.svg" alt="Play" />
+                <img class="callout-thumbnail" src="<?php echo $video_thumbnail['url']; ?>" alt="<?php echo __("Youtube Thumbnail"); ?>" />
+                <img class="video-promo-img-play js-btn-play" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-play-arrow.svg" alt="<?php echo __("Play"); ?>" />
               </a>
             </div>
             <a class="clear" href="<?php echo $video_link; ?>"><h1 class="hero-carousel-caption inverted"><?php echo $video_title; ?></h1></a>
@@ -87,21 +87,21 @@
         <div class="hero-carousel-thumbnail ms-thumb">
           <?php if ($type === 'post') { ?>
               <div class="hero-carousel-thumbnail-top">
-                <img class="hero-carousel-thumbnail-image" src="<?php echo $featured_post_thumbnail; ?>" alt="Thumbnail"/>
+                <img class="hero-carousel-thumbnail-image" src="<?php echo $featured_post_thumbnail; ?>" alt="<?php echo __("Thumbnail"); ?>"/>
                 <div class="hero-carousel-thumbnail-content">
                   <h3 class="hero-carousel-thumbnail-text"><?php echo $featured_post_title; ?></h3>
                 </div>
               </div>
           <?php } else if ($type === 'youtube_video') { ?>
               <div class="hero-carousel-thumbnail-top">
-                <img class="hero-carousel-thumbnail-image" src="<?php echo $video_thumbnail; ?>" alt="Thumbnail"/>
+                <img class="hero-carousel-thumbnail-image" src="<?php echo $video_thumbnail; ?>" alt="<?php echo __("Thumbnail"); ?>"/>
                 <div class="hero-carousel-thumbnail-content">
                   <h3 class="hero-carousel-thumbnail-text"><?php echo $video_title; ?></h3>
                 </div>
               </div>
           <?php } else { ?>
               <div class="hero-carousel-thumbnail-top">
-                <img class="hero-carousel-thumbnail-image" src="<?php echo $video_thumbnail['url']; ?>" alt="Thumbnail"/>
+                <img class="hero-carousel-thumbnail-image" src="<?php echo $video_thumbnail['url']; ?>" alt="<?php echo __("Thumbnail"); ?>"/>
                 <div class="hero-carousel-thumbnail-content">
                   <h3 class="hero-carousel-thumbnail-text"><?php echo $video_title; ?></h3>
                 </div>

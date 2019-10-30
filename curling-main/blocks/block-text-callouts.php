@@ -42,7 +42,7 @@
   
           <a href="<?php echo $callout['link']; ?>">
             <?php echo $callout['link_label']; ?> 
-            <img src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="red-arrow" />
+            <img src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("red-arrow"); ?>" />
           </a>
         </div>
       </div>

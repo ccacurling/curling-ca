@@ -86,7 +86,7 @@
       if ($site['is_live']) {
     ?>
       <div class="event-info-live-container">
-        <h4 class="event-info-live-text inverted">Live now</h4>
+        <h4 class="event-info-live-text inverted"><?php echo __("Live now"); ?></h4>
       </div>
     <?php
       }
@@ -95,7 +95,7 @@
       <?php
         if ($site['event_logo']) {
       ?>
-        <img class="event-info-top-image" src="<?php echo $site['event_logo']['url']; ?>" alt="Event Logo" />
+        <img class="event-info-top-image" src="<?php echo $site['event_logo']['url']; ?>" alt="<?php echo __("Event Logo"); ?>" />
       <?php
         }
       ?>
@@ -113,7 +113,7 @@
         <?php
           if ($site['operated_by']) {
         ?>
-          <p class="block-event-sponsor-operated-by">Operated by <?php echo $site['operated_by']; ?></p>
+          <p class="block-event-sponsor-operated-by"><?php echo __("Operated by"); ?> <?php echo $site['operated_by']; ?></p>
         <?php
           }
         ?>
@@ -136,7 +136,7 @@
         <?php
           if ($site['buy_tickets_link']) {
         ?>
-          <a class="block-event-sponsor-tickets-btn btn btn-red" href="<?php echo $site['buy_tickets_link']; ?>" target="blank">Find Tickets</a>
+          <a class="block-event-sponsor-tickets-btn btn btn-red" href="<?php echo $site['buy_tickets_link']; ?>" target="blank"><?php echo __("Find Tickets"); ?></a>
         <?php
           }
         ?>
@@ -144,21 +144,21 @@
           <?php
             if ($site['event_page_link']) {  
           ?>
-            <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $site['event_page_link']; ?>">More Information</a>
+            <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $site['event_page_link']; ?>"><?php echo __("More Information"); ?></a>
             <?php
             }
           ?>
           <?php
             if ($site['draw_schedule_link']) {
           ?>
-            <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $site['draw_schedule_link']; ?>">Event Schedule</a>
+            <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $site['draw_schedule_link']; ?>"><?php echo __("Event Schedule"); ?></a>
           <?php
             }
           ?>
           <?php
             if ($site['meet_the_teams_link']) {
           ?>
-            <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $site['meet_the_teams_link']; ?>">Meet the teams</a>
+            <a class="block-event-sponsor-link subdomain red arrow-right-large-red" target="blank" href="<?php echo $site['meet_the_teams_link']; ?>"><?php echo __("Meet the teams"); ?></a>
           <?php
             }
           ?>

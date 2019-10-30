@@ -650,7 +650,7 @@ function create_menu_bar_simple_item($parent_id, $menu_items, $is_selected = fal
   function event_submenu($site_list) {
     
 ?>
-  <h2 class="menu-event-h2 gray">EXPLORE ALL UPCOMING EVENTS</h2>
+  <h2 class="menu-event-h2 gray"><?php echo __("EXPLORE ALL UPCOMING EVENTS"); ?></h2>
   <ul class="menu-nav menu-nav-events">
     <?php
       $i = 0;
@@ -749,8 +749,8 @@ function create_menu_bar_simple_item($parent_id, $menu_items, $is_selected = fal
           <span class="menu-event-poster-location"><?php echo $location; ?></span>
           <div class="menu-event-poster-link-container">
             <div class="menu-event-poster-link-wrapper">
-              <a class="menu-event-poster-link btn-link-text red arrow-right-small-red-open" href="<?php echo $url; ?>">More Info</a>
-              <a class="menu-event-poster-link btn-link-text red arrow-right-small-red-open" href="<?php echo $tickets_link; ?>">Tickets</a>
+              <a class="menu-event-poster-link btn-link-text red arrow-right-small-red-open" href="<?php echo $url; ?>"><?php echo __("More Info"); ?></a>
+              <a class="menu-event-poster-link btn-link-text red arrow-right-small-red-open" href="<?php echo $tickets_link; ?>"><?php echo __("Tickets"); ?></a>
             </div>
           </div>
         </div>

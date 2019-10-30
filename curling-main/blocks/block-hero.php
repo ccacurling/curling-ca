@@ -74,9 +74,9 @@ if ($image) {
           if ($external_video) {
         ?>
           <a class="hero-background-video" href="<?php echo $external_video; ?>" data-lity>
-            <img class="hero-background-image" src="<?php echo $image; ?>" alt="Background" />
+            <img class="hero-background-image" src="<?php echo $image; ?>" alt="<?php echo __("Background"); ?>" />
           </a>
-          <img class="hero-background-play-image js-btn-play" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-play-arrow.svg" alt="Play" />
+          <img class="hero-background-play-image js-btn-play" src="<?php echo get_stylesheet_directory_uri(); ?>/images/icon-play-arrow.svg" alt="<?php echo __("Play"); ?>" />
         <?php
           }
         ?>
@@ -84,7 +84,7 @@ if ($image) {
     <?php
       } else if ($image) {
     ?>
-      <img class="hero-background-image" src="<?php echo $image; ?>" alt="Background" />
+      <img class="hero-background-image" src="<?php echo $image; ?>" alt="<?php echo __("Background"); ?>" />
     <?php
       }
     ?>
@@ -165,7 +165,7 @@ if ($image) {
         <div class="hero-link-container">
           <a class="btn-link" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>">
             <h4 class="btn-link-text red"><?php echo $link['title']; ?></h4>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" />
           </a>
         </div>
       <?php

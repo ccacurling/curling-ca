@@ -58,15 +58,15 @@ $prefooter_donate_link = get_field( 'settings_donate_link', 'Options' );
     ?>
       <div class="block-prefooter-img-container block-prefooter-img-<?php echo ($prefooter_type === 'tlbr' ? 'right' : 'left'); ?>"
         style="bottom:<?php echo $prefooter_image_y_offset;?>px;<?php echo ($prefooter_type === 'tlbr' ? 'right' : 'left'); ?>:<?php echo $prefooter_image_x_offset; ?>px">
-        <img class="block-prefooter-img" src="<?php echo $prefooter_image['url']; ?>" alt="" />
+        <img class="block-prefooter-img" src="<?php echo $prefooter_image['url']; ?>" alt="<?php echo $prefooter_image['alt']; ?>" />
       </div>
     <?php
       }
     ?>
     <div class="prefooter-slash-container prefooter-slash-<?php echo $prefooter_type; ?>">
-      <img class="prefooter-slash prefooter-slash-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide.svg" alt="" />
-      <img class="prefooter-slash prefooter-slash-mask prefooter-slash-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide-mask.svg" alt="" />
-      <img class="prefooter-slash prefooter-slash-2" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide.svg" alt="" />
+      <img class="prefooter-slash prefooter-slash-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide.svg" alt="<?php echo __("Slash"); ?>" />
+      <img class="prefooter-slash prefooter-slash-mask prefooter-slash-1" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide-mask.svg" alt="<?php echo __("Slash"); ?>" />
+      <img class="prefooter-slash prefooter-slash-2" src="<?php echo get_stylesheet_directory_uri(); ?>/images/img-slash-large-wide.svg" alt="<?php echo __("Slash"); ?>" />
     </div>
     <?php
     }

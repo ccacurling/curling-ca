@@ -17,9 +17,9 @@
     <p class="activity-description"><?php echo $activity_description; ?></p>
     <div class="schedule-table desktop-table">
       <div class="table-title-row">
-        <div><h3>DATE</h3></div>
-        <div><h3>TIME</h3></div>
-        <div><h3>PARTICIPANTS</h3></div>
+        <div><h3><?php echo __("DATE"); ?></h3></div>
+        <div><h3><?php echo __("TIME"); ?></h3></div>
+        <div><h3><?php echo __("PARTICIPANTS"); ?></h3></div>
       </div>
       <?php if ( have_rows( 'activity_details', $post_id) ) {
         while ( the_repeater_field( 'activity_details', $post_id ) ) {
@@ -31,7 +31,7 @@
             <div><p><?php echo $date ?></p></div>
             <div><p><?php echo $time ?></p></div>
             <!-- Fix participants, check if it should just be a text field -->
-            <div><p><?php echo $participants[0]->post_title . " vs. " . $participants[1]->post_title; ?></p></div>
+            <div><p><?php echo $participants[0]->post_title . " ".__("vs")." " . $participants[1]->post_title; ?></p></div>
           </div>
   
         <?php } ?>
@@ -41,8 +41,8 @@
     <!-- Mobile table, hidden until breakpoint 998px -->
     <div class="schedule-table mobile-table">
       <div class="table-title-row">
-        <div><h3>DATE & TIME</h3></div>
-        <div><h3>PARTICIPANTS</h3></div>
+        <div><h3><?php echo __("DATE & TIME"); ?></h3></div>
+        <div><h3><?php echo __("PARTICIPANTS"); ?></h3></div>
       </div>
       <?php if ( have_rows( 'activity_details', $post_id) ) {
         while ( the_repeater_field( 'activity_details', $post_id ) ) {

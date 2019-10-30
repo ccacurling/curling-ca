@@ -23,10 +23,10 @@ $ticket_secondary_colour = $ticket_colour === 'white' ? 'red' : ($ticket_colour 
   <div class="ticket-header">
     <h2 class="ticket-title <?php echo $ticket_primary_colour; ?>"><?php echo $ticket_title; ?></h2>
   </div>
-  <h4 class="ticket-price-title <?php echo $ticket_primary_colour; ?>">From:</h4>
+  <h4 class="ticket-price-title <?php echo $ticket_primary_colour; ?>"><?php echo __("From:"); ?></h4>
   <div class="ticket-price-container">
     <div class="ticket-price-wrapper">
-      <h2 class="ticket-price-dollar-symbol <?php echo $ticket_price_colour; ?>">$</h2>
+      <h2 class="ticket-price-dollar-symbol <?php echo $ticket_price_colour; ?>"><?php echo __("$"); ?></h2>
       <h1 class="ticket-price-dollar text-highlight <?php echo $ticket_price_colour; ?>"><?php echo $ticket_price_split[0]; ?></h1>
       <h2 class="ticket-price-cents <?php echo $ticket_price_colour; ?>">.<?php echo $ticket_price_split[1]; ?></h2>
   </div>
@@ -34,7 +34,7 @@ $ticket_secondary_colour = $ticket_colour === 'white' ? 'red' : ($ticket_colour 
   </div>
   <div class="ticket-options-wrapper">
     <div class="ticket-option-title-wrapper">
-      <h4 class="ticket-option-title <?php echo $ticket_primary_colour; ?>">Options:</h4>
+      <h4 class="ticket-option-title <?php echo $ticket_primary_colour; ?>"><?php echo __("Options:"); ?></h4>
     </div>  
     <?php
       if ($ticket_options) {

@@ -63,7 +63,7 @@
       ?>
         <a class="callout-link btn-link" href="<?php echo $callout_link['url']; ?>" target="<?php echo $callout_link['target']; ?>">
           <h4 class="btn-link-text red"><?php echo $callout_link['title']; ?></h4>
-          <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+          <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" />
         </a>
       <?php
         }

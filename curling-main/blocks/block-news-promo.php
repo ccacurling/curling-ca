@@ -25,7 +25,7 @@ $date_string = $date ? $date->format('F j, Y') : '';
         if ($promo_thumbnail) {
       ?>
         <div class="news-promo-thumbnail-container">
-          <img class="news-promo-thumbnail" src="<?php echo $promo_thumbnail; ?>" alt="" />
+          <img class="news-promo-thumbnail" src="<?php echo $promo_thumbnail; ?>" alt="<?php echo __("Thumbnail"); ?>" />
           <?php
             if ($promo_image_caption) {
           ?>
@@ -56,8 +56,8 @@ $date_string = $date ? $date->format('F j, Y') : '';
         <h4 class="news-promo-date"><?php echo $date_string; ?></h4>
         <p class="news-promo-excerpt"><?php echo $promo_post->post_excerpt; ?></p>
         <a class="news-promo-link btn-link" href="<?php echo get_permalink($promo_post->ID); ?>">
-          <h4 class="btn-link-text red">Continue Reading</h4>
-          <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+          <h4 class="btn-link-text red"><?php echo __("Continue Reading"); ?></h4>
+          <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" />
         </a>
       </div>
     </div>

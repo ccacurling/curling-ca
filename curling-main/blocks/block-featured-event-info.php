@@ -93,7 +93,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
   <div class="block-featured-event-wrapper block-featured-event-top-wrapper">
     <div class="block-featured-event-top-left-wrapper">
       <div class="">
-        <p class="item-label">EXT EVENT</p>
+        <p class="item-label"><?php echo __("EXT EVENT"); ?></p>
       </div>
       <?php
         if ($name) {
@@ -105,7 +105,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
       <?php
         if ($operated_by) {
       ?>
-        <p class="block-featured-event-operated-by">Operated by <?php echo $operated_by; ?></p>
+        <p class="block-featured-event-operated-by"><?php echo __("Operated by"); ?> <?php echo $operated_by; ?></p>
       <?php
         }
       ?>
@@ -114,7 +114,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
       <?php
         if ($buy_tickets_link) {
       ?>
-        <a href="<?php echo $buy_tickets_link; ?>" target="blank" class="btn btn-large btn-red">Buy Tickets</a>
+        <a href="<?php echo $buy_tickets_link; ?>" target="blank" class="btn btn-large btn-red"><?php echo __("Buy Tickets"); ?></a>
       <?php
         }
       ?>
@@ -123,7 +123,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 	<div class="block-featured-event-wrapper">
     <div class="block-featured-event-scores<?php echo $show_time ? '-mobile' : ''; ?>">
       <a class="clear block-featured-event-scores-link" href="" target="">
-        <h3 class="inverted arrow-right-item arrow-right-extralarge-white">See the latest scores</h3>
+        <h3 class="inverted arrow-right-item arrow-right-extralarge-white"><?php echo __("See the latest scores"); ?></h3>
       </a>
     </div>
     <?php
@@ -135,7 +135,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
             <h2 class="inverted js-days"><?php echo $days; ?></h2>
           </div>
           <div class="block-featured-event-label">
-            <h4 class="inverted">DAYS</h4>
+            <h4 class="inverted"><?php echo __("DAYS"); ?></h4>
           </div>
         </div>
         <div class="block-featured-event-counter-container block-featured-event-hours-container block-featured-event-border-right">
@@ -143,7 +143,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
             <h2 class="inverted js-hours"><?php echo $hours; ?></h2>
           </div>
           <div class="block-featured-event-label">
-            <h4 class="inverted">HOURS</h4>
+            <h4 class="inverted"><?php echo __("HOURS"); ?></h4>
           </div>
         </div>
         <div class="block-featured-event-counter-container block-featured-event-minutes-container block-featured-event-border-right">
@@ -151,7 +151,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
             <h2 class="inverted js-minutes"><?php echo $minutes; ?></h2>
           </div>
           <div class="block-featured-event-label">
-            <h4 class="inverted">MINUTES</h4>
+            <h4 class="inverted"><?php echo __("MINUTES"); ?></h4>
           </div>
         </div>
         <div class="block-featured-event-counter-container block-featured-event-seconds-container">
@@ -159,7 +159,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
             <h2 class="inverted js-seconds"><?php echo $seconds; ?></h2>
           </div>
           <div class="block-featured-event-label">
-            <h4 class="inverted">SECONDS</h4>
+            <h4 class="inverted"><?php echo __("SECONDS"); ?></h4>
           </div>
         </div>
       </div>
@@ -206,7 +206,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
             foreach ($sponsor['sponsors'] as $key => $sponsor_image) {
           ?>
             <div class="block-featured-event-sponsor">
-              <img src="<?php echo $sponsor_image['url']; ?>" alt="sponsor" />
+              <img src="<?php echo $sponsor_image['url']; ?>" alt="<?php echo __("sponsor"); ?>" />
             </div>
           <?php
             }
@@ -248,7 +248,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
       if ($draw_schedule_link) {
     ?>
       <a class="block-featured-event-cta" href="<?php echo $draw_schedule_link; ?>" target="_blank">
-        <h3 class="block-featured-event-cta-text">Draw Schedule</h3>
+        <h3 class="block-featured-event-cta-text"><?php echo __("Draw Schedule"); ?></h3>
       </a>
     <?php
       }
@@ -257,7 +257,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
       if ($draw_schedule_link) {
     ?>
       <a class="block-featured-event-cta" href="<?php echo $where_to_watch_link; ?>" target="_blank">
-        <h3 class="block-featured-event-cta-text">Where to Watch</h3>
+        <h3 class="block-featured-event-cta-text"><?php echo __("Where to Watch"); ?></h3>
       </a>
     <?php
       }
@@ -266,7 +266,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
       if ($draw_schedule_link) {
     ?>
       <a class="block-featured-event-cta" href="<?php echo $meet_the_teams_link; ?>" target="_blank">
-        <h3 class="block-featured-event-cta-text">Meet the Team</h3>
+        <h3 class="block-featured-event-cta-text"><?php echo __("Meet the Team"); ?></h3>
       </a>
     <?php
       }

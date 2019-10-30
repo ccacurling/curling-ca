@@ -42,7 +42,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 					<h2 class="js-days"><?php echo $days; ?></h2>
 				</div>
 				<div class="block-timer-label">
-					<h4>DAYS</h4>
+					<h4><?php echo __("DAYS"); ?></h4>
 				</div>
 			</div>
 			<div class="block-timer-counter-container block-timer-hours-container block-timer-border-right">
@@ -50,7 +50,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 					<h2 class="js-hours"><?php echo $hours; ?></h2>
 				</div>
 				<div class="block-timer-label">
-					<h4>HOURS</h4>
+					<h4><?php echo __("HOURS"); ?></h4>
 				</div>
 			</div>
 			<div class="block-timer-counter-container block-timer-minutes-container block-timer-border-right">
@@ -58,7 +58,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 					<h2 class="js-minutes"><?php echo $minutes; ?></h2>
 				</div>
 				<div class="block-timer-label">
-					<h4>MINUTES</h4>
+					<h4><?php echo __("MINUTES"); ?></h4>
 				</div>
 			</div>
 			<div class="block-timer-counter-container block-timer-seconds-container">
@@ -66,7 +66,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 					<h2 class="js-seconds"><?php echo $seconds; ?></h2>
 				</div>
 				<div class="block-timer-label">
-					<h4>SECONDS</h4>
+					<h4><?php echo __("SECONDS"); ?></h4>
 				</div>
 			</div>
 		</div>
@@ -81,7 +81,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
         <div class="block-timer-link-container">
           <a href="<?php echo $timer_link['url']; ?>" target="<?php echo $timer_link['target']; ?>">
           <h4 class="btn-link-text inverted"><?php echo $timer_link['title']; ?></h4>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-white.svg"; ?>" alt="arrow-right" />
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-white.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" />
           </a>
         </div>
       <?php

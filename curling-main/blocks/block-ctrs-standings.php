@@ -91,7 +91,7 @@
       ?>
         </div>
       <?php if ( isset($womens_full_link) && !empty($womens_full_link) ) { ?>
-        <a href="<?php echo $womens_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" /></a>
+        <a href="<?php echo $womens_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" /></a>
       <?php } ?>
       </div>
 
@@ -117,7 +117,7 @@
       ?>
         </div>
       <?php if ( isset($mens_full_link) && !empty($mens_full_link) ) { ?>
-        <a href="<?php echo $mens_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" /></a>
+        <a href="<?php echo $mens_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" /></a>
       <?php } ?>
       </div>
 
@@ -149,7 +149,7 @@
       ?>
         </div>
       <?php if ( isset($doubles_full_link) && !empty($doubles_full_link) ) { ?>
-        <a href="<?php echo $doubles_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" /></a>
+        <a href="<?php echo $doubles_full_link; ?>" class="standings-link"><?php echo __("View Full Standings");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" /></a>
       <?php } ?>
       </div>
     </div>
@@ -178,7 +178,7 @@
       ?>
         </div>
       <?php if ( isset($macup_full_link) && !empty($macup_full_link) ) { ?>
-        <a href="<?php echo $macup_full_link; ?>" class="standings-link"><?php echo __("Learn More");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" /></a>
+        <a href="<?php echo $macup_full_link; ?>" class="standings-link"><?php echo __("Learn More");?><img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" /></a>
       <?php } ?>
       </div>
     </div>

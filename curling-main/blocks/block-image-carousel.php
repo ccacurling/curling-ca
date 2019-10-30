@@ -40,7 +40,7 @@ $id = rand(10000000, 99999999);
       <?php
         if ($carousel_accordion_on_mobile) {
       ?>
-        <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="triangle right" />
+        <img class="arrow-right" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-right-white.svg"; ?>" alt="<?php echo __("triangle right"); ?>" />
       <?php
         }
       ?>
@@ -83,9 +83,9 @@ $id = rand(10000000, 99999999);
             </div>
             <div class="image-carousel-navigation js-carousel-mobile-nav">
               <div class="image-carousel-navigation-arrows">
-                <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-prev js-carousel-mobile-nav-prev"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-left-nav-white.svg"; ?> alt=""/></button>
+                <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-prev js-carousel-mobile-nav-prev"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-left-nav-white.svg"; ?> alt="<?php echo __("Previous"); ?>"/></button>
                 <h4 class="image-carousel-navigation-pagination js-carousel-mobile-nav-pagination"></h4>
-                <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-next js-carousel-mobile-nav-next"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-right-nav-white.svg"; ?> alt=""/></button>
+                <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-next js-carousel-mobile-nav-next"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-right-nav-white.svg"; ?> alt="<?php echo __("Next"); ?>"/></button>
               </div>
             </div>
           </div>
@@ -132,9 +132,9 @@ $id = rand(10000000, 99999999);
           </div>
           <div class="image-carousel-navigation js-carousel-nav">
             <div class="image-carousel-navigation-arrows">
-              <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-prev js-carousel-nav-prev"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-left-nav-white.svg"; ?> alt=""/></button>
+              <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-prev js-carousel-nav-prev"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-left-nav-white.svg"; ?> alt="<?php echo __("Previous"); ?>"/></button>
               <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination"></h4>
-              <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-next js-carousel-nav-next"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-right-nav-white.svg"; ?> alt=""/></button>
+              <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-next js-carousel-nav-next"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-right-nav-white.svg"; ?> alt="<?php echo __("Next"); ?>"/></button>
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ $id = rand(10000000, 99999999);
             foreach ($carousel_gallery as $key => $image) {
           ?>
             <div class="ms-slide">
-                <img src="<?php echo $image['url']; ?>" data-src="<?php echo $image['url']; ?>" alt="image-<?php echo $key; ?>"/>     
+                <img src="<?php echo $image['url']; ?>" data-src="<?php echo $image['url']; ?>" alt="<?php echo __("Image"); ?> <?php echo $key; ?>"/>     
             </div>
           <?php
             }
@@ -189,7 +189,7 @@ $id = rand(10000000, 99999999);
             ?>
             <a class="image-carousel-link  btn-link clear" href="<?php echo $image_link['url']; ?>" target="<?php echo $image_link['target']; ?>">
               <h4 class="btn-link-text red"><?php echo $image_link['title']; ?></h4>
-              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="arrow-right">
+              <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri() . "/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("Right Arrow"); ?>">
             </a>
             <?php
               }

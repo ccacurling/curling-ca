@@ -18,7 +18,7 @@ $featured_team_link = get_field( 'featured_team_link' );
       if ($featured_team_thumbnail) {
     ?>
       <div class="featured-team-thumbnail-container">
-        <img class="featured-team-thumbnail" src="<?php echo $featured_team_thumbnail; ?>" alt="" />
+        <img class="featured-team-thumbnail" src="<?php echo $featured_team_thumbnail; ?>" alt="<?php echo __("thumbnail"); ?>" />
       </div>
     <?php
       }
@@ -51,8 +51,8 @@ $featured_team_link = get_field( 'featured_team_link' );
           if ($featured_team) {
         ?>
           <a class="featured-team-link btn-link" href="<?php echo get_permalink($featured_team->ID); ?>">
-            <h4 class="btn-link-text red">Meet the team</h4>
-            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="arrow-right" />
+            <h4 class="btn-link-text red"><?php echo __("Meet the team"); ?></h4>
+            <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>" />
           </a>
         <?php
           }

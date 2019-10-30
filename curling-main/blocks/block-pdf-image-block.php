@@ -29,7 +29,7 @@
           <?php } ?>
           
           <?php if ($pdf) { ?>
-            <a href="<?php echo $pdf ?>" target="_blank"><button class="btn">Download PDF</button></a>
+            <a href="<?php echo $pdf ?>" target="_blank"><button class="btn"><?php echo __("Download PDF"); ?></button></a>
           <?php } ?>
 
         </div>
@@ -37,7 +37,7 @@
       <?php } ?>
     <?php } else { ?>
 
-      <h2>No PDF's selected</h2>
+      <h2><?php echo __("No PDF's selected"); ?></h2>
 
     <?php } ?>
   </div>

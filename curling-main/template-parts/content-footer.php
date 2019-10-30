@@ -33,7 +33,7 @@
       </div>
       <div class="footer-content-right-wrapper">
           <div>
-            <h4 class="newsletter-signup-title inverted">Sign up for the Newsletter</h4>
+            <h4 class="newsletter-signup-title inverted"><?php echo __("Sign up for the Newsletter"); ?></h4>
             <!-- <form id="newsletter-signup" class="footer-form">
                 <input class="newsletter-signup-input" type="text" />
                 <button class="newsletter-signup-submit btn btn-small btn-red" type="submit">Submit</button>
@@ -58,7 +58,7 @@
   <div class="footer-legal-wrapper">
       <div class="footer-legal-content">
           <div class="footer-legal-content-left-wrapper">
-              <p class="legal">© 2019 CURLING CANADA. ALL RIGHTS RESERVED.</p>
+              <p class="legal"><?php echo __("© 2019 CURLING CANADA. ALL RIGHTS RESERVED."); ?></p>
           </div>
           <div class="footer-legal-content-right-wrapper">
               <?php
@@ -69,7 +69,7 @@
                           foreach( $primary_menu_items as $menu_item ) {
                       ?>
                           <li class="menu-item-selectable menu-item">
-                            <a class="clear" href="">
+                            <a class="clear" href="<?php echo $menu_item->url; ?>">
                               <h4 class="menu-item-content legal menu-item-link"><?php echo $menu_item->title; ?></h4>
                             </a>
                           </li>

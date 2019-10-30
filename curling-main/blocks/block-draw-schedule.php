@@ -22,7 +22,7 @@
 <section class="block-schedule js-schedule js-accordion" data-id="<?php echo $id; ?>">
   <div class="schedule-date-container js-accordion-trigger" data-id="<?php echo $id; ?>">
     <h3 class="schedule-date js-schedule-title"><?php echo $date_string; ?></h3>
-    <img class="schedule-date-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-down.svg"; ?>" alt="Triangle">
+    <img class="schedule-date-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/triangle-down.svg"; ?>" alt="<?php echo __("Triangle"); ?>">
   </div>
   <div class="schedule-details js-accordion-content" data-id="<?php echo $id; ?>">
     <div class="schedule-info-container">
