@@ -51,11 +51,21 @@
             ?>
           </div>
           <div class="footer-nav-menu-social">
+            <?php if ($facebook) { ?>
               <a href="<?php echo $facebook; ?>" target="_blank"><img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook-white.svg"; ?>" alt="social" /></a>
+            <?php } ?>
+            <?php if ($twitter) { ?>
               <a href="<?php echo $twitter; ?>" target="_blank"><img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-twitter-white.svg"; ?>" alt="social" /></a>
+            <?php } ?>
+            <?php if ($instagram) { ?>
               <a href="<?php echo $instagram; ?>" target="_blank"><img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-instagram-white.svg"; ?>" alt="social" /></a>
+            <?php } ?>
+            <?php if ($youtube) { ?>
               <a href="<?php echo $youtube; ?>" target="_blank"><img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-youtube-white.svg"; ?>" alt="social" /></a>
+            <?php } ?>
+            <?php if ($linkedin) { ?>
               <a href="<?php echo $linkedin; ?>" target="_blank"><img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-linkedin-white.svg"; ?>" alt="social" /></a>
+            <?php } ?>
           </div>
       </div>
   </div>
