@@ -108,6 +108,13 @@
   padding-right: $fixed-padding-right-lg;
   max-width: 1210px;
 
+  .wp-block-table > tbody > tr > td {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .wp-block-cossette-block-container > {
     h1, h2 {
       margin-bottom: 70px;

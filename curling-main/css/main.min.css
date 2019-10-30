@@ -807,6 +807,13 @@ li {
   max-width: 1210px;
 }
 
+.block-container .wp-block-table > tbody > tr > td {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .block-container .wp-block-cossette-block-container > h1, .block-container .wp-block-cossette-block-container > h2 {
   margin-bottom: 70px;
 }
