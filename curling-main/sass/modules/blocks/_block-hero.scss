@@ -215,6 +215,24 @@
   }
   
   &.left {
+    &.featured {
+      width: 40%;
+      bottom: 40px;
+      
+      .hero-body-container {
+        display: none;
+      }
+
+      .hero-link-container {
+        padding-top: 10px;
+      }
+
+     .hero-title-container {
+       padding-bottom: 10px;
+       width: 100%;
+     }
+    }
+
     .hero-title-container {
       padding-top: 20px;
       padding-bottom: 26px;
