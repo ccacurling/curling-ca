@@ -39,7 +39,7 @@
       </div>
       <div class="footer-content-right-wrapper">
           <div>
-            <h4 class="newsletter-signup-title inverted"><?php echo __("Sign up for the Newsletter"); ?></h4>
+          <a href="https://mailchi.mp/curling.ca/collective" target="_blank"><h4 class="newsletter-signup-title inverted"><?php echo __("Sign up for the Newsletter"); ?></h4></a>
             <!-- <form id="newsletter-signup" class="footer-form">
                 <input class="newsletter-signup-input" type="text" />
                 <button class="newsletter-signup-submit btn btn-small btn-red" type="submit">Submit</button>
