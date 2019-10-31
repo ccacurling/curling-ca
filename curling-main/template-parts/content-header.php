@@ -569,7 +569,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
     <div class="nav-menu-popout-bottom-mobile">
       <div class="menu-item menu-item-donate">
         <a class="menu-item-donate-link clear" href="">
-          <h4 class="menu-item-small inverted">Donate</h4>
+          <h4 class="menu-item-small inverted"><?php echo __('Donate'); ?></h4>
         </a>
       </div>
       <div class="nav-menu-social-mobile">
