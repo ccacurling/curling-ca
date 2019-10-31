@@ -317,15 +317,15 @@
           <?php
             foreach ($menu_items as $id => $item) {
           ?>
-            <li class="menu-item <?php echo $item->is_current_page ? 'menu-item-selected' : ''; ?> <?php echo !$item->url ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
+            <li class="menu-item <?php echo $item->is_current_page ? 'menu-item-selected' : ''; ?> <?php echo !$item->url || $item->url === '#' ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
               <?php
-                if ($item->url) {
+                if ($item->url && $item->url !== '#') {
               ?>
                 <a class="menu-item-link" href="<?php echo $item->url; ?>">
               <?php
                 }
               ?>
-              <h4 class="menu-item-content menu-item-title <?php echo !$item->url ? 'menu-item-link' : ''; ?>"><?php echo $item->title; ?></h4>
+              <h4 class="menu-item-content menu-item-title <?php echo !$item->url || $item->url === '#'? 'menu-item-link' : ''; ?>"><?php echo $item->title; ?></h4>
               <?php 
                 if ($item->children != null && count($item->children) > 0) {
               ?>
@@ -334,7 +334,7 @@
                 }
               ?>
               <?php
-                if ($item->url) {
+                if ($item->url && $item->url !== '#') {
               ?>
                 </a>
               <?php

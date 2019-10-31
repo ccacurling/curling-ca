@@ -1228,6 +1228,7 @@ li {
 
 .header-main .nav-menu-popup-current {
   max-width: 1440px;
+  background-color: #ffffff;
 }
 
 .header-main .nav-menu-popup-current .nav-menu-popup-list {
@@ -3143,6 +3144,10 @@ li {
 .block-hero-inner.left.featured .hero-title-container {
   padding-bottom: 10px;
   width: 100%;
+}
+
+.block-hero-inner.left.featured .hero-title {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .block-hero-inner.left .hero-title-container {

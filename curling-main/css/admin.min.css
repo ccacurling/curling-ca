@@ -1261,6 +1261,7 @@
 
 .edit-post-layout__content .header-main .nav-menu-popup-current {
   max-width: 1440px;
+  background-color: #ffffff;
 }
 
 .edit-post-layout__content .header-main .nav-menu-popup-current .nav-menu-popup-list {
@@ -3042,6 +3043,10 @@
 .edit-post-layout__content .block-hero-inner.left.featured .hero-title-container {
   padding-bottom: 10px;
   width: 100%;
+}
+
+.edit-post-layout__content .block-hero-inner.left.featured .hero-title {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .edit-post-layout__content .block-hero-inner.left .hero-title-container {
