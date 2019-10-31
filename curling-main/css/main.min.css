@@ -843,6 +843,14 @@ li {
   line-height: 23px;
 }
 
+.block-container .wp-block-cossette-block-container > ul > li a {
+  color: #000000;
+}
+
+.block-container .wp-block-cossette-block-container > ul > li a:hover {
+  color: #ed1940;
+}
+
 .block-container .narrow-width {
   margin-left: auto;
   margin-right: auto;
@@ -3117,6 +3125,24 @@ li {
     min-width: 200px;
     border-bottom: none;
   }
+}
+
+.block-hero-inner.left.featured {
+  width: 40%;
+  bottom: 40px;
+}
+
+.block-hero-inner.left.featured .hero-body-container {
+  display: none;
+}
+
+.block-hero-inner.left.featured .hero-link-container {
+  padding-top: 10px;
+}
+
+.block-hero-inner.left.featured .hero-title-container {
+  padding-bottom: 10px;
+  width: 100%;
 }
 
 .block-hero-inner.left .hero-title-container {

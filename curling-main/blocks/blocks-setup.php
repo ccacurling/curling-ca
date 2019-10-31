@@ -700,20 +700,7 @@ acf_add_local_field_group(array(
 			'type' => 'select',
 			'instructions' => '',
 			'required' => 0,
-			'conditional_logic' => array(
-				array(
-					array(
-						'field' => 'field_5d703f2776419',
-						'operator' => '==',
-						'value' => '1',
-					),
-					array(
-						'field' => 'field_5d8940f4adb87',
-						'operator' => '!=',
-						'value' => '1',
-					),
-				),
-			),
+			'conditional_logic' => 0,
 			'wrapper' => array(
 				'width' => '',
 				'class' => '',

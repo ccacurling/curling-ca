@@ -143,6 +143,13 @@
         letter-spacing: 0;
         line-height: 23px;
       }
+
+      a {
+        color: $black;
+        &:hover {
+          color: $red;
+        }
+      }
     }
   }
 

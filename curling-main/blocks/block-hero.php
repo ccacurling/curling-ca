@@ -15,9 +15,9 @@ $external_video = $hero_featured_post ? null : get_field( 'hero_external_video_l
 
 $hero_size = $hero_featured_post ? 'large' : get_field( 'hero_size' );
 $headline = $hero_featured_post ? get_the_title($hero_featured_post) : get_field( 'hero_headline' );
-$text_position = $hero_featured_post ? 'centre' : (get_field( 'hero_text_position' ) ? get_field( 'hero_text_position' ) : 'left');
-$show_post_type = $hero_featured_post ? true : get_field( 'hero_show_post_type' );
-$show_date = $hero_featured_post ? true : get_field( 'hero_show_date' );
+$text_position = get_field( 'hero_text_position' );
+$show_post_type = $hero_featured_post ? ($text_position === 'left' ? false : true) : get_field( 'hero_show_post_type' );
+$show_date = $hero_featured_post ? ($text_position === 'left' ? false : true) : get_field( 'hero_show_date' );
 $date = $hero_featured_post ? get_the_date('M j, Y', $hero_featured_post) : get_the_date('M j, Y');
 $body = $hero_featured_post ? get_the_excerpt($hero_featured_post) : get_field( 'hero_body' );
 $caption = $hero_featured_post ? get_field( 'featured_image_caption', $hero_featured_post ) : get_field( 'hero_caption' );
@@ -120,7 +120,7 @@ if ($image) {
   <?php
     } else {
   ?>
-    <div class="block-hero-inner <?php echo $text_position; ?> js-hero-content">
+    <div class="block-hero-inner <?php echo $text_position; ?> <?php echo $hero_featured_post ? 'featured' : ''; ?> js-hero-content">
       <?php 
         if ($show_post_type) {
       ?>
