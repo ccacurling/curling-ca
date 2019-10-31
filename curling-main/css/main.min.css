@@ -3517,7 +3517,8 @@ li {
 .hero-carousel-caption {
   display: -webkit-box;
   position: absolute;
-  margin-top: 113px;
+  bottom: 0;
+  margin-bottom: 113px;
   padding-left: 10px;
   padding-right: 10px;
   max-width: 100%;
