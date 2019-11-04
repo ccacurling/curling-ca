@@ -89,13 +89,10 @@
 .edit-post-layout__content html,
 .edit-post-layout__content body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: visible;
+  overflow-y: hidden;
   color: #000000;
   font-family: "Knockout";
-}
-
-.edit-post-layout__content body {
-  overflow: visible;
 }
 
 .edit-post-layout__content *,

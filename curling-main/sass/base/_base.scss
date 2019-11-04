@@ -6,13 +6,10 @@ html {
 html,
 body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: visible;
+    overflow-y: hidden;
     color: $black;
     font-family: $knockout;
-}
-
-body {
-  overflow: visible;
 }
 
 *,

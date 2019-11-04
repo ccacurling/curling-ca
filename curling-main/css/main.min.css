@@ -61,13 +61,10 @@ html {
 html,
 body {
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: visible;
+  overflow-y: hidden;
   color: #000000;
   font-family: "Knockout";
-}
-
-body {
-  overflow: visible;
 }
 
 *,
