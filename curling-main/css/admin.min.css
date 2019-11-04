@@ -84,15 +84,19 @@
 .edit-post-layout__content html {
   box-sizing: border-box;
   font-size: 100%;
+  overflow-x: hidden;
 }
 
 .edit-post-layout__content html,
 .edit-post-layout__content body {
   max-width: 100%;
-  overflow-x: visible;
-  overflow-y: hidden;
   color: #000000;
   font-family: "Knockout";
+}
+
+.edit-post-layout__content body {
+  overflow-x: visible;
+  overflow-y: hidden;
 }
 
 .edit-post-layout__content *,

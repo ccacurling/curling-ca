@@ -1,15 +1,19 @@
 html {
     box-sizing: border-box;
     font-size: 100%;
+    overflow-x: hidden;
 }
 
 html,
 body {
     max-width: 100%;
-    overflow-x: visible;
-    overflow-y: hidden;
     color: $black;
     font-family: $knockout;
+}
+
+body {
+  overflow-x: visible;
+  overflow-y: hidden;
 }
 
 *,
