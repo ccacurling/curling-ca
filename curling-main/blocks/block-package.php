@@ -16,24 +16,32 @@ $package_price_split = explode('.', $package_price);
 $package_price_colour = $package_colour === 'red' || $package_colour === 'gray' ? 'inverted' : ($package_colour === 'white' ? 'red' : 'inverted');
 $package_btn_colour = $package_colour === 'red' ? 'white' : ($package_colour === 'white' || $package_colour === 'gray' ? 'red' : '');
 $package_btn_text_colour = $package_colour === 'white' || $package_colour === 'gray' ? 'white' : '';
+
+$price_html = "";
+$current_lang = apply_filters( 'wpml_current_language', NULL );
+if ( $current_lang == "fr" ) {
+  $price_html .= "<span class='package-price-dollar text-highlight $package_price_colour'>{$package_price_split[0]}</span>";
+  $price_html .= "<h2 class='package-price-cents $package_price_colour'>,{$package_price_split[1]}</h2>";
+  $price_html .= "<h2 class='package-price-dollar-symbol $package_price_colour'> $</h2>";
+} else {
+  $price_html .= "<h2 class='package-price-dollar-symbol $package_price_colour'>$</h2>";
+  $price_html .= "<span class='package-price-dollar text-highlight $package_price_colour'>{$package_price_split[0]}</span>";
+  $price_html .= "<h2 class='package-price-cents $package_price_colour'>.{$package_price_split[1]}</h2>";
+}
 ?>
 
 <section class="block-package block-package-<?php echo $package_colour; ?>">
   <div class="package-price-container">
-    <div class="package-price-wrapper">
-      <h2 class="package-price-dollar-symbol <?php echo $package_price_colour; ?>"><?php echo __("$"); ?></h2>
-      <span class="package-price-dollar text-highlight <?php echo $package_price_colour; ?>"><?php echo $package_price_split[0]; ?></span>
-      <h2 class="package-price-cents <?php echo $package_price_colour; ?>">.<?php echo $package_price_split[1]; ?></h2>
-  </div>
+    <div class="package-price-wrapper english-price">
+      <?php echo $price_html; ?>
+    </div>
     <h4 class="package-price-info <?php echo $package_price_colour; ?>"><?php echo $package_price_info; ?></h4>
   </div>
   <div class="package-wrapper">
     <h2 class="package-name"><?php echo $package_name; ?></h2>
     <div class="package-price-container-mobile">
-      <div class="package-price-wrapper">
-        <h2 class="package-price-dollar-symbol <?php echo $package_price_colour; ?>">$</h2>
-        <span class="package-price-dollar text-highlight <?php echo $package_price_colour; ?>"><?php echo $package_price_split[0]; ?></span>
-        <h2 class="package-price-cents <?php echo $package_price_colour; ?>">.<?php echo $package_price_split[1]; ?></h2>
+      <div class="package-price-wrapper english-price">
+        <?php echo $price_html; ?>
       </div>
       <h4 class="package-price-info <?php echo $package_price_colour; ?>"><?php echo $package_price_info; ?></h4>
     </div>
