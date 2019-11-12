@@ -180,8 +180,12 @@
   <?php
     create_main_menu_mobile($top_right_menu_items, $menu_items, [
       'is_submenu' => $is_submenu,
-      'current_page_title' => $current_page_title
-    ]);
+      'current_page_title' => $current_page_title,
+      'is_curling' => !($is_our_organization || $is_about_curling),
+      'is_our_organization' => $is_our_organization,
+      'is_about_curling' => $is_about_curling,
+      'is_event' => $is_event,
+    ], $top_left_menu_items);
     create_submenus_mobile($menu_items);
   ?>
 </div>
@@ -410,7 +414,7 @@
 </div>
 
 <?php
-function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
+function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $top_level_menu) {
 ?>
   <div class="nav-menu-popout-mobile <?php echo $options['is_submenu'] ? 'nav-menu-popout-submenu-mobile' : ''; ?> js-cta-popout-mobile" data-id="0">
     <div class="nav-menu-top-right-mobile <?php echo $options['is_submenu'] ? 'js-nav-title-mobile' : ''; ?>">
@@ -449,6 +453,63 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
       </div>
     </div>
     <div class="menu-list-container-mobile">
+      
+      <?php //Check which Site Area we're on 
+      //print_r($top_level_menu); ?>
+
+      <?php if ( $options['is_curling'] ) : ?>
+
+        <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[0]->url ? 'data-link="'.$top_level_menu[0]->url.'"' : ''; ?>>
+          <li class="menu-item-mobile menu-item-main-mobile">
+            <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+              <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[0]->title; ?></h4>
+            </div>
+          </li>
+        </ul>
+
+      <?php elseif ( $options['is_our_organization'] ) : ?>
+      
+        <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[0]->url ? 'data-link="'.$top_level_menu[0]->url.'"' : ''; ?>>
+          <li class="menu-item-mobile menu-item-main-mobile">
+            <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+              <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[0]->title; ?></h4>
+            </div>
+          </li>
+        </ul>
+        <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[1]->url ? 'data-link="'.$top_level_menu[1]->url.'"' : ''; ?>>
+          <li class="menu-item-mobile menu-item-main-mobile">
+            <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+              <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[1]->title; ?></h4>
+            </div>
+          </li>
+        </ul>
+
+      <?php elseif ( $options['is_about_curling'] ) : ?>
+
+        <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[0]->url ? 'data-link="'.$top_level_menu[0]->url.'"' : ''; ?>>
+          <li class="menu-item-mobile menu-item-main-mobile">
+            <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+              <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[0]->title; ?></h4>
+            </div>
+          </li>
+        </ul>
+        <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[1]->url ? 'data-link="'.$top_level_menu[1]->url.'"' : ''; ?>>
+          <li class="menu-item-mobile menu-item-main-mobile">
+            <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+              <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[1]->title; ?></h4>
+            </div>
+          </li>
+        </ul>
+        <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[2]->url ? 'data-link="'.$top_level_menu[2]->url.'"' : ''; ?>>
+          <li class="menu-item-mobile menu-item-main-mobile">
+            <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+              <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[2]->title; ?></h4>
+            </div>
+          </li>
+        </ul>
+
+      <?php endif; ?>
+      
       <?php
           foreach( $nav_items as $menu_item ) {
       ?>
@@ -509,6 +570,41 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = []) {
       <?php
           }
       ?>
+
+<?php if ( $options['is_curling'] ) : ?>
+
+<ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[1]->url ? 'data-link="'.$top_level_menu[1]->url.'"' : ''; ?>>
+  <li class="menu-item-mobile menu-item-main-mobile">
+    <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+      <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[1]->title; ?></h4>
+    </div>
+  </li>
+</ul>
+<ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[2]->url ? 'data-link="'.$top_level_menu[2]->url.'"' : ''; ?>>
+  <li class="menu-item-mobile menu-item-main-mobile">
+    <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+      <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[2]->title; ?></h4>
+    </div>
+  </li>
+</ul>
+
+<?php elseif ( $options['is_our_organization'] ) : ?>
+
+<ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[2]->url ? 'data-link="'.$top_level_menu[2]->url.'"' : ''; ?>>
+  <li class="menu-item-mobile menu-item-main-mobile">
+    <div class="menu-item-container-mobile js-cta-menu-item-mobile ultra-top-level">
+      <h4 class="menu-item-title-mobile inverted"><?php echo $top_level_menu[2]->title; ?></h4>
+    </div>
+  </li>
+</ul>
+
+<?php elseif ( $options['is_about_curling'] ) : ?>
+
+
+
+<?php endif; ?>
+
+
       <div class="nav-menu-popout-bottom-mobile">
         <div class="menu-item menu-item-donate">
           <a class="menu-item-donate-link clear" href="">

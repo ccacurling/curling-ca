@@ -360,6 +360,11 @@
   padding-left: 19px;
   padding-right: 19px;
   background-color: $gray;
+
+  &.ultra-top-level {
+    background-color: $red;
+  }
+
 }
 
 .menu-item-subcontainer-mobile {
