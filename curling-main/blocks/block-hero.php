@@ -25,6 +25,8 @@ $link = $hero_featured_post ? [ 'url' => get_post_permalink($hero_featured_post)
 
 $post_type = $hero_featured_post ? get_post_type( $hero_featured_post->ID ) : get_post_type( get_the_ID() );
 
+$title_colour = get_field("title_colour");
+
 $hero_class = '';
 
 function get_hero_image($hero_featured_post) {
@@ -134,13 +136,13 @@ if ($image) {
         <?php 
           if ($text_position === 'centre') {
         ?>
-          <h2 class="hero-title">
+          <h2 class="hero-title" style="color:<?php echo $title_colour;?>;">
             <?php echo $headline; ?>
           </h2>
         <?php
           } else {
         ?>
-          <h2 class="hero-title">
+          <h2 class="hero-title" style="color:<?php echo $title_colour;?>;">
             <?php echo $headline; ?>
           </h2>
         <?php

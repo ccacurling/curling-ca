@@ -874,6 +874,21 @@ acf_add_local_field_group(array(
 			'return_format' => 'object',
 			'ui' => 1,
 		),
+		array(
+			'key' => 'field_5dcb4e5d04b6d',
+			'label' => 'Title Colour',
+			'name' => 'title_colour',
+			'type' => 'color_picker',
+			'instructions' => 'Select a Colour for the Hero Title. Defaults to black.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '#000000',
+		),
 	),
 	'location' => array(
 		array(
