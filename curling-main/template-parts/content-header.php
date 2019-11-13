@@ -467,7 +467,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $to
           </li>
         </ul>
 
-      <?php elseif ( $options['is_our_organization'] ) : ?>
+      <?php elseif ( $options['is_about_curling'] ) : ?>
       
         <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[0]->url ? 'data-link="'.$top_level_menu[0]->url.'"' : ''; ?>>
           <li class="menu-item-mobile menu-item-main-mobile">
@@ -484,7 +484,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $to
           </li>
         </ul>
 
-      <?php elseif ( $options['is_about_curling'] ) : ?>
+      <?php elseif ( $options['is_our_organization'] ) : ?>
 
         <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[0]->url ? 'data-link="'.$top_level_menu[0]->url.'"' : ''; ?>>
           <li class="menu-item-mobile menu-item-main-mobile">
@@ -588,7 +588,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $to
   </li>
 </ul>
 
-<?php elseif ( $options['is_our_organization'] ) : ?>
+<?php elseif ( $options['is_about_curling'] ) : ?>
 
 <ul class="menu-list-mobile js-cta-menu-list-mobile" <?php echo $top_level_menu[2]->url ? 'data-link="'.$top_level_menu[2]->url.'"' : ''; ?>>
   <li class="menu-item-mobile menu-item-main-mobile">
@@ -598,7 +598,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $to
   </li>
 </ul>
 
-<?php elseif ( $options['is_about_curling'] ) : ?>
+<?php elseif ( $options['is_our_organization'] ) : ?>
 
 
 
