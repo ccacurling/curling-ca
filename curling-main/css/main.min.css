@@ -7779,6 +7779,12 @@ h1.page-intro-main-headline {
   width: 100%;
 }
 
+@media only screen and (max-width: 999px) {
+  .ctrs-container .ctrs-wrapper {
+    flex-direction: column;
+  }
+}
+
 .ctrs-container .ctrs-wrapper .ctrs-standings-list {
   display: flex;
   flex-direction: column;
@@ -7888,7 +7894,7 @@ h1.page-intro-main-headline {
 
 @media only screen and (max-width: 999px) {
   .ctrs-container {
-    display: none;
+    /*display: none;*/
   }
 }
 

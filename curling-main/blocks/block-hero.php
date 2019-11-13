@@ -26,6 +26,9 @@ $link = $hero_featured_post ? [ 'url' => get_post_permalink($hero_featured_post)
 $post_type = $hero_featured_post ? get_post_type( $hero_featured_post->ID ) : get_post_type( get_the_ID() );
 
 $title_colour = get_field("title_colour");
+if ( empty($title_colour) ) {
+  $title_colour = "#000000";
+}
 
 $hero_class = '';
 

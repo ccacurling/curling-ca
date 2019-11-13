@@ -24,6 +24,10 @@
     max-width: 1170px;
     width: 100%;
 
+    @include responsive-max($responsive-laptop){
+      flex-direction: column;
+    }
+
     
 
     .ctrs-standings-list {
@@ -133,7 +137,7 @@
   }
 
   @include responsive-max($responsive-laptop){
-    display: none;
+    /*display: none;*/
   }
 
 }

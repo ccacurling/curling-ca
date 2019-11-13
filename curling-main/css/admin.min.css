@@ -7999,6 +7999,12 @@
   width: 100%;
 }
 
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .ctrs-container .ctrs-wrapper {
+    flex-direction: column;
+  }
+}
+
 .edit-post-layout__content .ctrs-container .ctrs-wrapper .ctrs-standings-list {
   display: flex;
   flex-direction: column;
@@ -8108,7 +8114,7 @@
 
 @media only screen and (max-width: 999px) {
   .edit-post-layout__content .ctrs-container {
-    display: none;
+    /*display: none;*/
   }
 }
 

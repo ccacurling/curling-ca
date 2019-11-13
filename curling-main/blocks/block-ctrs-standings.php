@@ -8,7 +8,7 @@
 
   
   function ccm_get_mens_standing() {
-    $eventyear2 = 2019;
+    $eventyear2 = 2020;
 	  $eventtypeid2 = 81;
 	  
 	  $filename2 = "http://ctrs.curling.ca/eventtype" . $eventtypeid2 . "_year" . $eventyear2 . ".xml";
@@ -18,7 +18,7 @@
   }
 
   function ccm_get_womens_standing(){
-    $eventyear1 = 2019;
+    $eventyear1 = 2020;
     $eventtypeid1 = 82;
     
     $filename1="http://ctrs.curling.ca/eventtype" . $eventtypeid1 . "_year" . $eventyear1 . ".xml";
