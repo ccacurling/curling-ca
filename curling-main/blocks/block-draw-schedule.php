@@ -13,7 +13,18 @@
   $schedule_date = get_field('schedule_date', $draw_schedule);
 
   $date = date_create_from_format('Ymd', $schedule_date );
-  $date_string = date_format($date, 'l, F j');
+  
+  echo "<pre class='debug' style='display:none;'>";
+  print_r($date); 
+  echo "</pre>";
+
+  $current_lang = apply_filters( 'wpml_current_language', NULL );
+  if ( $current_lang == "fr" ) {
+    $date_string = dateToFrench($date, 'l j F');
+  } else {
+    $date_string = date_format($date, 'l, F j');
+  }
+
 
   $draws = get_field('schedule_draws', $draw_schedule);
   $id = rand(10000000, 99999999);
@@ -38,7 +49,13 @@
       <?php
         foreach ($draws as $key => $draw) {
           $time = date_create_from_format('H:i:s', $draw['draw_time'] );
-          $time_string = date_format($time, 'g:i A');
+
+          if ($current_lang == 'fr') {
+            $time_string = date_format($time, 'G:i');
+          } else {
+            $time_string = date_format($time, 'g:i A');
+          }
+          
           $draw_link = $draw['draw_link'];
       ?>
           <div class="schedule-match-container">

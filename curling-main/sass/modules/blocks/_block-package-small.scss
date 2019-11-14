@@ -6,8 +6,8 @@
 .package-small-wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 95px;
-  padding-bottom: 43px;
+  padding-top: 100px;
+  padding-bottom: 38px;
   padding-left: 20px;
   padding-right: 20px;
   background-size: 205px 120px;
@@ -34,8 +34,11 @@
   }
 
   .package-small-info-container {
-    h1, h2, h3, h4, p {
+    h1, h2, h3, h4, p, ul, li {
       color: $white;
+    }
+    ul {
+      padding-left: 18px;
     }
   }
 }

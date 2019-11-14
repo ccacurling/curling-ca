@@ -39,12 +39,12 @@ $prefooter_donate_link = get_field( 'settings_donate_link', 'Options' );
     <p class="block-prefooter-info-body"><?php echo $prefooter_body; ?></p>
     <div class="block-prefooter-info-btns">
       <?php //if ( isset($prefooter_button_one) && !empty($prefooter_button_one) ) { ?>
-        <!-- a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_button_one['url']; ?>" target="<?php echo $prefooter_button_one['target']; ?>"><?php echo $prefooter_button_one['title']; ?></a -->
+        <!-- a class="block-prefooter-info-btn btn btn-large <?php //echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php //echo $prefooter_button_one['url']; ?>" target="<?php //echo $prefooter_button_one['target']; ?>"><?php //echo $prefooter_button_one['title']; ?></a -->
       <?php //} else { ?>
         <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_shop_link['url']; ?>" target="<?php echo $prefooter_shop_link['target']; ?>"><?php echo $prefooter_shop_link['title']; ?></a>
       <?php //} ?>
       <?php //if ( isset($prefooter_button_two) && !empty($prefooter_button_two) ) { ?>
-        <!-- a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_button_two['url']; ?>" target="<?php echo $prefooter_button_two['target']; ?>"><?php echo $prefooter_button_two['title']; ?></a -->
+        <!-- a class="block-prefooter-info-btn btn btn-large <?php //echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php //echo $prefooter_button_two['url']; ?>" target="<?php //echo $prefooter_button_two['target']; ?>"><?php //echo $prefooter_button_two['title']; ?></a -->
         <?php //} else { ?>
         <a class="block-prefooter-info-btn btn btn-large <?php echo $prefooter_enable_background ? 'btn-white' : 'btn-red'; ?>" href="<?php echo $prefooter_donate_link['url']; ?>" target="<?php echo $prefooter_donate_link['target']; ?>"><?php echo $prefooter_donate_link['title']; ?></a>
       <?php //} ?>

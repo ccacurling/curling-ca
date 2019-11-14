@@ -265,3 +265,27 @@
     }
 
 }
+
+/* Style Hack - Sponsor Carousel Slick - This is a carry over Curling Shortcode */
+
+.wpls-logo-showcase .slick-track {
+    height: auto;
+}
+
+/* Search Page */
+.search {
+    h1.archive-title {
+        margin-top: 80px;
+        margin-bottom: 40px;
+        font-size: 60px;
+    }
+    article {
+        margin: 20px 0;
+        header, section, footer {
+            padding: 10px;
+        }
+    }
+    h3.search-title {
+        font-size: 24px;
+    }
+}

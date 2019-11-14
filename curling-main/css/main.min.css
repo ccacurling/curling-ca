@@ -3982,8 +3982,8 @@ li {
 .package-small-wrapper {
   display: flex;
   flex-direction: column;
-  padding-top: 95px;
-  padding-bottom: 43px;
+  padding-top: 100px;
+  padding-bottom: 38px;
   padding-left: 20px;
   padding-right: 20px;
   background-size: 205px 120px;
@@ -4010,8 +4010,12 @@ li {
   color: #ffffff;
 }
 
-.block-package-small-gray .package-small-wrapper .package-small-info-container h1, .block-package-small-gray .package-small-wrapper .package-small-info-container h2, .block-package-small-gray .package-small-wrapper .package-small-info-container h3, .block-package-small-gray .package-small-wrapper .package-small-info-container h4, .block-package-small-gray .package-small-wrapper .package-small-info-container p {
+.block-package-small-gray .package-small-wrapper .package-small-info-container h1, .block-package-small-gray .package-small-wrapper .package-small-info-container h2, .block-package-small-gray .package-small-wrapper .package-small-info-container h3, .block-package-small-gray .package-small-wrapper .package-small-info-container h4, .block-package-small-gray .package-small-wrapper .package-small-info-container p, .block-package-small-gray .package-small-wrapper .package-small-info-container ul, .block-package-small-gray .package-small-wrapper .package-small-info-container li {
   color: #ffffff;
+}
+
+.block-package-small-gray .package-small-wrapper .package-small-info-container ul {
+  padding-left: 18px;
 }
 
 .block-package-small-red .package-small-wrapper {
@@ -8525,6 +8529,30 @@ h1.page-intro-main-headline {
     max-width: 400px;
     margin-right: 30px;
   }
+}
+
+/* Style Hack - Sponsor Carousel Slick - This is a carry over Curling Shortcode */
+.wpls-logo-showcase .slick-track {
+  height: auto;
+}
+
+/* Search Page */
+.search h1.archive-title {
+  margin-top: 80px;
+  margin-bottom: 40px;
+  font-size: 60px;
+}
+
+.search article {
+  margin: 20px 0;
+}
+
+.search article header, .search article section, .search article footer {
+  padding: 10px;
+}
+
+.search h3.search-title {
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=main.min.css.map */
