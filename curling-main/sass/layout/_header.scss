@@ -210,8 +210,11 @@
   }
 
   .menu-logo {
-    top: 12px;
-    margin-left: 7.5%;
+    top: 0;
+    margin-left: 12px;
+    @include responsive-min($responsive-laptop) {
+      max-width: 228px;
+    }
   }
 
   .nav-left-offset {

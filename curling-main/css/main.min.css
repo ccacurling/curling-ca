@@ -1410,8 +1410,14 @@ li {
 }
 
 .header-event .menu-logo {
-  top: 12px;
-  margin-left: 7.5%;
+  top: 0;
+  margin-left: 12px;
+}
+
+@media only screen and (min-width: 999px) {
+  .header-event .menu-logo {
+    max-width: 228px;
+  }
 }
 
 .header-event .nav-left-offset {
@@ -3156,7 +3162,7 @@ li {
 }
 
 .block-hero-inner.left .hero-title-container {
-  padding-top: 20px;
+  padding-top: 60px;
   padding-bottom: 26px;
   width: 55%;
 }
@@ -7225,6 +7231,7 @@ h1.page-intro-main-headline {
   margin-bottom: 20px;
   max-width: 290px;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+  min-height: 470px;
 }
 
 .team-small-container {
@@ -7270,6 +7277,7 @@ h1.page-intro-main-headline {
   margin-bottom: 20px;
   max-width: 220px;
   line-height: 52px;
+  font-size: 40px;
 }
 
 .team-small-location {
