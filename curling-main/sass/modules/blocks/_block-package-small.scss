@@ -14,6 +14,9 @@
   background-position: 0% 0%;
   background-repeat: no-repeat;
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
+  ul {
+    padding-left: 18px;
+  }
 }
 
 .block-package-small-white .package-small-wrapper {
@@ -125,4 +128,7 @@
 
 .package-small-button-text {
   font-size: 34px;
+  a {
+    line-height: normal;
+  }
 }

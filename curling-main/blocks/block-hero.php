@@ -4,6 +4,7 @@
  *
  * This is the template that displays the hero block.
  */
+$current_lang = apply_filters( 'wpml_current_language', NULL );
 
 $hero_featured_post = get_field('hero_featured_post');
 
@@ -18,7 +19,20 @@ $headline = $hero_featured_post ? get_the_title($hero_featured_post) : get_field
 $text_position = get_field( 'hero_text_position' );
 $show_post_type = $hero_featured_post ? ($text_position === 'left' ? false : true) : get_field( 'hero_show_post_type' );
 $show_date = $hero_featured_post ? ($text_position === 'left' ? false : true) : get_field( 'hero_show_date' );
-$date = $hero_featured_post ? get_the_date('M j, Y', $hero_featured_post) : get_the_date('M j, Y');
+
+
+if ($current_lang == "fr") {
+  $date = convertDateToFrenchShort($hero_featured_post ? get_the_date('j M Y', $hero_featured_post) : get_the_date('j M Y'));
+} else {
+  $date = $hero_featured_post ? get_the_date('M j, Y', $hero_featured_post) : get_the_date('M j, Y');
+}
+
+echo "<pre class='debug' style='display:none;'>";
+print_r($current_lang);
+print_r($date);
+echo "</pre>";
+
+
 $body = $hero_featured_post ? get_the_excerpt($hero_featured_post) : get_field( 'hero_body' );
 $caption = $hero_featured_post ? get_field( 'featured_image_caption', $hero_featured_post ) : get_field( 'hero_caption' );
 $link = $hero_featured_post ? [ 'url' => get_post_permalink($hero_featured_post), 'target' => '_self', 'title' => 'Continue Reading' ] : get_field( 'hero_link' );

@@ -1103,3 +1103,11 @@ function dateToFrench($date, $format) {
   
   return str_replace($english_months, $french_months, str_replace($english_days, $french_days, date_format($date, $format) ) );
 }
+
+function convertDateToFrenchShort($date) {
+
+  $english_months = array('Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec');
+  $french_months = array('jan', 'fév', 'mars', 'avr', 'mai', 'juin', 'juil', 'août', 'sept', 'oct', 'nov', 'déc');
+
+  return str_replace($english_months, $french_months, $date);
+}

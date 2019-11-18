@@ -673,6 +673,10 @@
   margin-top: 80px;
 }
 
+.edit-post-layout__content .content-post.event-post {
+  margin-top: 180px;
+}
+
 .edit-post-layout__content .content-social-share {
   display: flex;
   flex-direction: column;
@@ -3038,6 +3042,19 @@
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .edit-post-layout__content .block-hero-inner {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    min-width: 200px;
+    border-bottom: none;
+  }
+}
+
 .edit-post-layout__content .block-hero-inner.left.featured {
   width: 40%;
   bottom: 40px;
@@ -4014,6 +4031,10 @@
   box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
+.edit-post-layout__content .package-small-wrapper ul {
+  padding-left: 18px;
+}
+
 .edit-post-layout__content .block-package-small-white .package-small-wrapper {
   background-color: #ffffff;
   background-image: url("../images/symbol-slash.svg");
@@ -4120,6 +4141,10 @@
 
 .edit-post-layout__content .package-small-button-text {
   font-size: 34px;
+}
+
+.edit-post-layout__content .package-small-button-text a {
+  line-height: normal;
 }
 
 .edit-post-layout__content .block-ticket {
@@ -7742,6 +7767,11 @@
   position: absolute;
   top: 0;
   left: 0;
+}
+
+.edit-post-layout__content .wp-block-column .block-video {
+  margin-top: 20px;
+  min-height: 318px;
 }
 
 .edit-post-layout__content .block-slash {

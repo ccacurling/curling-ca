@@ -5,6 +5,7 @@
 ?>
 
 <?php
+  $current_lang = apply_filters( 'wpml_current_language', NULL );
   $category = get_queried_object();
   
   $page = 1;
@@ -41,12 +42,19 @@
     $total_pages = ceil($total / $n);
 
     $posts = array_map(function($post) {
+      $current_lang = apply_filters( 'wpml_current_language', NULL );
       $promo_thumbnail = get_the_post_thumbnail_url( $post, 'large' );
       $promo_date = $post->post_date;
       $promo_image_caption = get_field( 'featured_image_caption', $post );
 
       $date = date_create_from_format('Y-m-d H:i:s', $promo_date);
       $date_string = $date->format('F j, Y');
+
+      if ($current_lang == "fr") {
+        $date_string = dateToFrench($date, 'j F Y');
+      } else {
+        $date_string = $date->format('F j, Y');
+      }
 
       $link = get_permalink($post);
 
@@ -70,7 +78,15 @@
   $image = get_image($featured_post);
 
   $headline = $featured_post ? $featured_post->post_title : '';
-  $date = $featured_post ? get_the_date('M j, Y', $featured_post) : '';
+
+  
+  
+  if ($current_lang == "fr") {
+    $date = convertDateToFrenchShort( $featured_post ? get_the_date('j M Y', $featured_post) : '' );
+  } else {
+    $date = $featured_post ? get_the_date('M j, Y', $featured_post) : '';
+  }
+  
   $body = $featured_post ? $featured_post->post_excerpt : '';
   $caption = $featured_post ? get_field( 'featured_image_caption', $featured_post ) : '';
   $link = $featured_post ? [ 'url' => get_post_permalink($featured_post), 'target' => '_self', 'title' => 'Continue Reading' ] : '';
@@ -269,7 +285,7 @@
                 if ($post_link) {
               ?>
               <a class="news-feed-link news-promo-link btn-link" href="<?php echo $post_link; ?>">
-                <h4 class="btn-link-text red" href="">Continue Reading</h4>
+                <h4 class="btn-link-text red" href=""><?php echo _("Continue Reading"); ?></h4>
                 <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>">
               </a>
               <?php

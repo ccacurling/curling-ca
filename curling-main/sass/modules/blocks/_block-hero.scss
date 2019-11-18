@@ -213,6 +213,17 @@
     min-width: 200px;
     border-bottom: none;
   }
+
+  @include responsive-max($responsive-tablet - 1) {
+    display: flex;
+    position: absolute;
+    left: 10%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    min-width: 200px;
+    border-bottom: none;
+  }
   
   &.left {
     &.featured {
