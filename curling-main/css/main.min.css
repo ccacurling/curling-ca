@@ -1012,7 +1012,8 @@ li {
 }
 
 .curling-sidebar {
-  display: none;
+  /*display: none;*/
+  display: block;
   position: relative;
 }
 
@@ -1078,6 +1079,32 @@ li {
   list-style-type: none;
 }
 
+@media only screen and (max-width: 999px) {
+  .sidebar-list.sidebar-collapsed {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .sidebar-list.sidebar-expanded {
+    display: block;
+  }
+}
+
+.trigger-subnav-links {
+  display: none;
+}
+
+@media only screen and (max-width: 999px) {
+  .trigger-subnav-links {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    z-index: 100;
+  }
+}
+
 .sidebar-item {
   position: relative;
   padding-top: 12px;
@@ -1130,6 +1157,12 @@ li {
   flex-direction: row;
   flex-wrap: nowrap;
   border-top: 1px solid #d8d8d8;
+}
+
+@media only screen and (max-width: 999px) {
+  .sidebar-controls-container {
+    display: none;
+  }
 }
 
 .sidebar-controls.btn, .sidebar-controls.newsletter-signup-submit, .footer-content-right-wrapper .sidebar-controls.wpcf7-submit, .mailing-list .field-row input.sidebar-controls[type=submit] {

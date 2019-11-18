@@ -11,6 +11,7 @@ import './templates/FindClub.js';
 import './templates/Timer.js';
 import './templates/CTRS.js';
 import './templates/SearchHandler.js';
+import './templates/SidebarNav.js';
 
 jQuery(document).ready(function($) {
   $('.js-curling-nav').curlingNav();

@@ -18,6 +18,9 @@
 <section class="curling-sidebar">
   <div class="sidebar-container">
     <div class="sidebar-nav-container">
+      <?php if ( count($links) > 1 ) { ?>
+        <img class="trigger-subnav-links" src="<?php echo get_stylesheet_directory_uri(); ?>/images/triangle-down-gray.svg" alt="<?php echo __("Triangle"); ?>" />
+      <?php } ?>
       <?php
         foreach ($links as $key => $link) {
           $link_link = $link['sidebar_link'];
@@ -40,7 +43,7 @@
             }
           ?>
         </p>
-        <ul class="sidebar-list">
+        <ul class="sidebar-list sidebar-collapsed">
       <?php
           $link_sublinks = $link['sidebar_sublinks'];
           if ($link_sublinks) {
