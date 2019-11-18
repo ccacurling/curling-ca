@@ -285,7 +285,7 @@
                 if ($post_link) {
               ?>
               <a class="news-feed-link news-promo-link btn-link" href="<?php echo $post_link; ?>">
-                <h4 class="btn-link-text red" href=""><?php echo _("Continue Reading"); ?></h4>
+                <h4 class="btn-link-text red" href=""><?php echo __("Continue Reading"); ?></h4>
                 <img class="btn-link-arrow" src="<?php echo get_stylesheet_directory_uri()."/images/arrow-right-large-red.svg"; ?>" alt="<?php echo __("arrow-right"); ?>">
               </a>
               <?php
