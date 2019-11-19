@@ -233,7 +233,7 @@
                 <?php
                   }
                 ?>
-                  <h4 class="menu-item-top-nav menu-item-content menu-item-link"><?php echo $menu_item->title; ?></h4>
+                  <h4 class="menu-item-top-nav menu-item-content menu-item-link gray"><?php echo $menu_item->title; ?></h4>
                 <?php
                   if ($menu_item->url) {
                 ?>
@@ -264,7 +264,7 @@
                   <?php
                     }
                   ?>
-                    <h4 class="menu-item-content menu-item-small menu-item-link"><?php echo $menu_item->title; ?></h4>
+                    <h4 class="menu-item-content menu-item-small menu-item-link gray"><?php echo $menu_item->title; ?></h4>
                   <?php
                     if ($menu_item->url) {
                   ?>
@@ -278,13 +278,13 @@
               ?>
               <li class="menu-item menu-item-selectable search-menu">
                 <a class="clear search-menu-link" href="#">
-                  <h4 class="menu-item-content menu-item-small menu-item-link"><?php echo __("Search"); ?></h4>
+                  <h4 class="menu-item-content menu-item-small menu-item-link gray"><?php echo __("Search"); ?></h4>
                 </a>
               </li>
               <li class="search-bar hide">
                 <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
               </li>
-              <li class="menu-item menu-item-donate">
+              <li class="btn menu-item menu-item-donate">
                 <a class="menu-item-donate-link clear" href="<?php echo $donate_link['url']; ?>">
                   <h4 class="menu-item-small inverted"><?php echo __("Donate"); ?></h4>
                 </a>
@@ -293,7 +293,7 @@
             <ul class="menu-nav menu-nav-language">
               <li class="menu-item menu-item-language menu-item-selectable">
                 <a class="clear" href="<?php echo $translation_language['url']; ?>">
-                  <h4 class="menu-item-content menu-item-small"><?php echo $translation_language['code']; ?></h4>
+                  <h4 class="menu-item-content menu-item-small gray"><?php echo $translation_language['code']; ?></h4>
                 </a>
               </li>
             </ul>
@@ -606,7 +606,7 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $to
 
 
       <div class="nav-menu-popout-bottom-mobile">
-        <div class="menu-item menu-item-donate">
+        <div class="btn menu-item menu-item-donate">
           <a class="menu-item-donate-link clear" href="">
             <h4 class="menu-item-small inverted"><?php echo __("Donate"); ?></h4>
           </a>
@@ -663,7 +663,7 @@ function create_popup_mobile($menu_subitem, $parent = NULL) {
     ?>
     </ul>
     <div class="nav-menu-popout-bottom-mobile">
-      <div class="menu-item menu-item-donate">
+      <div class="btn menu-item menu-item-donate">
         <a class="menu-item-donate-link clear" href="">
           <h4 class="menu-item-small inverted"><?php echo __('Donate'); ?></h4>
         </a>

@@ -1276,12 +1276,6 @@ li {
   margin-right: auto;
 }
 
-.header-main .nav-menu-popup {
-  border-bottom: 1px solid #f2f2f2;
-  border-left: 1px solid #f2f2f2;
-  border-right: 1px solid #f2f2f2;
-}
-
 .header-main .nav-menu-popup .nav-menu-popup-list {
   max-width: 1170px;
   padding-left: 130px;
@@ -1879,7 +1873,7 @@ li {
 }
 
 .btn, .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit, .mailing-list .field-row input[type=submit] {
-  padding: 16px 52px 14px;
+  padding: 14px 52px 14px;
   background: none;
   cursor: pointer;
   display: inline-block;
@@ -1899,7 +1893,6 @@ li {
   font-size: 20px;
   max-width: 100%;
   white-space: normal;
-  transition: background-color 0.3s ease-out, color 0.3s ease-out;
 }
 
 .btn img, .newsletter-signup-submit img, .footer-content-right-wrapper .wpcf7-submit img, .mailing-list .field-row input[type=submit] img {
@@ -1908,8 +1901,8 @@ li {
 }
 
 .btn:hover, .newsletter-signup-submit:hover, .footer-content-right-wrapper .wpcf7-submit:hover, .mailing-list .field-row input:hover[type=submit] {
-  background-color: #fff26e;
-  color: #000000;
+  background: #f3607b;
+  transition: background-color 0.3s ease-in;
   cursor: pointer;
 }
 
@@ -1922,8 +1915,8 @@ li {
 }
 
 .btn-large {
-  padding-top: 19px;
-  padding-bottom: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   border-radius: 2px;
   font-size: 33px;
   letter-spacing: 2px;
@@ -2240,7 +2233,6 @@ li {
   .header-desktop {
     display: block;
     position: relative;
-    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
     z-index: 1;
   }
 }
@@ -2353,7 +2345,6 @@ li {
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
-  box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.15);
 }
 
 .nav-menu-primary-container {
@@ -2563,11 +2554,6 @@ li {
 }
 
 .menu-item .menu-item-link {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.menu-item .menu-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2597,10 +2583,12 @@ li {
   padding-bottom: 0;
   padding-left: 0;
   padding-right: 0;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .menu-item-donate .menu-item-donate-link {
+  padding-top: 0;
+  padding-bottom: 0;
   padding-left: 14px;
   padding-right: 14px;
 }
@@ -2922,7 +2910,7 @@ li {
 }
 
 .simple-callout-link {
-  padding-top: 12px;
+  padding-top: 18px;
   padding-bottom: 18px;
   padding-left: 20px;
   padding-right: 20px;
@@ -6513,8 +6501,16 @@ li {
   background-color: #ed1940;
 }
 
+.styled-button.background-red:hover {
+  background: #f3607b;
+}
+
 .styled-button.background-white {
   background-color: #ffffff;
+}
+
+.styled-button.background-white:hover {
+  background: white;
 }
 
 .styled-button.color-white {
@@ -6550,6 +6546,11 @@ li {
 .styled-button.text-large {
   font-size: 50.4px;
   line-height: 50.4px;
+}
+
+.styled-button:hover {
+  transition: background-color 0.3s ease-in;
+  cursor: pointer;
 }
 
 p.item-label {
