@@ -8709,7 +8709,7 @@ h1.page-intro-main-headline {
 
 /* Twitter IPhone Hack */
 .twitter-timeline {
-  max-width: 100vw !important;
+  width: 100vw !important;
 }
 
 /*# sourceMappingURL=main.min.css.map */
