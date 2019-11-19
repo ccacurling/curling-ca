@@ -8622,4 +8622,54 @@ h1.page-intro-main-headline {
   font-size: 24px;
 }
 
+.wp-block-list {
+  list-style: none;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.wp-block-list li {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.wp-block-list li:before {
+  font-family: "Meta Serif Pro";
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23px;
+  display: inline-block;
+  content: "–";
+  width: 20px;
+  margin-left: -20px;
+  left: 0;
+}
+
+.wp-block-column > ul {
+  list-style: none;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.wp-block-column > ul li {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.wp-block-column > ul li:before {
+  font-family: "Meta Serif Pro";
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23px;
+  display: inline-block;
+  content: "–";
+  width: 20px;
+  margin-left: -20px;
+  left: 0;
+}
+
 /*# sourceMappingURL=main.min.css.map */

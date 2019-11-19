@@ -1111,3 +1111,17 @@ function convertDateToFrenchShort($date) {
 
   return str_replace($english_months, $french_months, $date);
 }
+
+//Allows for Gutenberg Block Manipulation
+function guten_enqueue() {
+
+  error_log("---- GOT HERE ---");
+
+  $file = get_stylesheet_directory_uri().'/js/guten.js';
+  $filem = get_stylesheet_directory().'/js/guten.js';
+  
+
+  wp_enqueue_script( 'gutenberg-script', $file, array( 'wp-blocks', 'wp-dom-ready', 'wp-edit-post' ), filemtime( $filem ) );
+}
+add_action( 'enqueue_block_editor_assets', 'guten_enqueue' );
+//add_action( 'wp_enqueue_scripts', 'guten_enqueue' );
