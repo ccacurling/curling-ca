@@ -340,3 +340,31 @@
         left: 0;
     }
 }
+
+.block-container .wp-block-cossette-block-container > ul {
+    list-style: none;
+    margin-left: 20px;
+    padding-left: 10px;
+    li {
+        margin-left: 20px;
+        margin-bottom: 20px;
+        list-style-type: none;
+    }
+    li:before {
+        font-family: "Meta Serif Pro";
+        font-size: 20px;
+        color: #000000;
+        letter-spacing: 0;
+        line-height: 23px;
+        display: inline-block;
+        content: "–";
+        width: 20px;
+        margin-left: -20px;
+        left: 0;
+    }
+}
+
+/* Twitter IPhone Hack */
+.twitter-timeline {
+	width: 100vw !important;
+}

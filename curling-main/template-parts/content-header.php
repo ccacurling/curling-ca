@@ -185,7 +185,7 @@
       'is_our_organization' => $is_our_organization,
       'is_about_curling' => $is_about_curling,
       'is_event' => $is_event,
-    ], $top_left_menu_items);
+    ], $top_left_menu_items, $translation_language);
     create_submenus_mobile($menu_items);
   ?>
 </div>
@@ -286,7 +286,7 @@
               </li>
               <li class="btn menu-item menu-item-donate">
                 <a class="menu-item-donate-link clear" href="<?php echo $donate_link['url']; ?>">
-                  <h4 class="menu-item-small inverted"><?php echo __("Donate"); ?></h4>
+                  <h4 class="menu-item-small inverted"><?php echo __("Donate", "curling-main-theme"); ?></h4>
                 </a>
               </li>
             </ul>
@@ -414,8 +414,7 @@
 </div>
 
 <?php
-function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $top_level_menu) {
-?>
+function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $top_level_menu, $translation_language) { ?>
   <div class="nav-menu-popout-mobile <?php echo $options['is_submenu'] ? 'nav-menu-popout-submenu-mobile' : ''; ?> js-cta-popout-mobile" data-id="0">
     <div class="nav-menu-top-right-mobile <?php echo $options['is_submenu'] ? 'js-nav-title-mobile' : ''; ?>">
       <div class="menu-nav-mobile <?php echo $options['is_submenu'] ? 'menu-submenunav-mobile' : ''; ?>">
@@ -450,6 +449,11 @@ function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $to
       <?php
         }
       ?>
+      </div>
+      <div class="mobile-language-selector">
+        <a class="clear" href="<?php echo $translation_language['url']; ?>">
+          <h4 class="menu-item-content menu-item-small"><?php echo $translation_language['code']; ?></h4>
+        </a>
       </div>
     </div>
     <div class="menu-list-container-mobile">

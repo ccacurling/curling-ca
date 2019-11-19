@@ -2241,6 +2241,16 @@
   cursor: pointer;
 }
 
+.edit-post-layout__content .mobile-language-selector {
+  min-width: 40px;
+}
+
+.edit-post-layout__content .mobile-language-selector h4 {
+  padding: 20px;
+  font-size: 20px;
+  border-left: 2px solid #d8d8d8;
+}
+
 .edit-post-layout__content .menu-subnav-mobile {
   justify-content: flex-start;
   width: auto;
@@ -8314,6 +8324,12 @@
   padding-bottom: 20px;
   padding-left: 30px;
   padding-right: 100px;
+}
+
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .download-item-inner {
+    flex-direction: column;
+  }
 }
 
 .edit-post-layout__content .download-item-title {

@@ -2219,6 +2219,16 @@ li {
   cursor: pointer;
 }
 
+.mobile-language-selector {
+  min-width: 40px;
+}
+
+.mobile-language-selector h4 {
+  padding: 20px;
+  font-size: 20px;
+  border-left: 2px solid #d8d8d8;
+}
+
 .menu-subnav-mobile {
   justify-content: flex-start;
   width: auto;
@@ -8096,6 +8106,12 @@ h1.page-intro-main-headline {
   padding-right: 100px;
 }
 
+@media only screen and (max-width: 999px) {
+  .download-item-inner {
+    flex-direction: column;
+  }
+}
+
 .download-item-title {
   margin-bottom: 0;
 }
@@ -8671,6 +8687,36 @@ h1.page-intro-main-headline {
   width: 20px;
   margin-left: -20px;
   left: 0;
+}
+
+.block-container .wp-block-cossette-block-container > ul {
+  list-style: none;
+  margin-left: 20px;
+  padding-left: 10px;
+}
+
+.block-container .wp-block-cossette-block-container > ul li {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.block-container .wp-block-cossette-block-container > ul li:before {
+  font-family: "Meta Serif Pro";
+  font-size: 20px;
+  color: #000000;
+  letter-spacing: 0;
+  line-height: 23px;
+  display: inline-block;
+  content: "–";
+  width: 20px;
+  margin-left: -20px;
+  left: 0;
+}
+
+/* Twitter IPhone Hack */
+.twitter-timeline {
+  width: 100vw !important;
 }
 
 /*# sourceMappingURL=main.min.css.map */
