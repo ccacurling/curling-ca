@@ -8325,6 +8325,12 @@
   padding-right: 100px;
 }
 
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .download-item-inner {
+    flex-direction: column;
+  }
+}
+
 .edit-post-layout__content .download-item-title {
   margin-bottom: 0;
 }
