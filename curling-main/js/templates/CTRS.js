@@ -12,14 +12,17 @@ jQuery(document).ready(function($) {
                     $(".ctrs-standings").removeClass("hide");
                     $(".ctrs-doubles").addClass("hide");
                     $(".ctrs-cup").addClass("hide");
+                    $(".ctrs-main-title").removeClass("hide");
                 } else if ( $(this).hasClass("ctrs-menu-doubles") ) {
                     $(".ctrs-doubles").removeClass("hide");
                     $(".ctrs-standings").addClass("hide");
                     $(".ctrs-cup").addClass("hide");
+                    $(".ctrs-main-title").addClass("hide");
                 } else if ( $(this).hasClass("ctrs-menu-cup") ) {
                     $(".ctrs-cup").removeClass("hide");
                     $(".ctrs-standings").addClass("hide");
                     $(".ctrs-doubles").addClass("hide");
+                    $(".ctrs-main-title").addClass("hide");
                 }
             }
         });

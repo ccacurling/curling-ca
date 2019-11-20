@@ -63,7 +63,7 @@
       <span class='ctrs-menu ctrs-menu-cup'><?php echo __("The MA Cup: Top 5"); ?></span>
     </div>
   <?php } ?>
-    <h3><?php echo __("Canada Team Ranking System (CTRS)"); ?></h3>
+    <h3 class="ctrs-main-title"><?php echo __("Canada Team Ranking System (CTRS)"); ?></h3>
 
     <!-- CTRS Standings -->
     <div class="ctrs-wrapper ctrs-standings">
