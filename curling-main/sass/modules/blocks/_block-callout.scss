@@ -44,6 +44,9 @@
 
 .callout-thumbnail-container {
   height: 288px;
+  border-top: 1px solid $cool-light-gray;
+  border-left: 1px solid $cool-light-gray;
+  border-right: 1px solid $cool-light-gray;
 }
 
 .callout-thumbnail {
