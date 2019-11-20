@@ -22,6 +22,7 @@ function ajax_news_request() {
         'offset' => $offset,
         'orderby' => 'date',
         'order'   => 'DESC',
+        'suppress_filters' => false, 
         'post_status' => 'publish'
     ];
 
@@ -30,6 +31,7 @@ function ajax_news_request() {
       'posts_per_page' => -1,
       'fields' => 'ids',
       'no_found_rows' => true,
+      'suppress_filters' => false, 
       'post_status' => 'publish'
     ];
 
