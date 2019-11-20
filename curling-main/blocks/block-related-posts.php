@@ -72,7 +72,7 @@ function get_recent_posts($related_posts_categories) {
         <?php
           if ($callout_title1) {
         ?>
-          <h4 class="callout-title"><?php echo $callout_title1; ?></h4>
+          <h3 class="callout-title"><?php echo $callout_title1; ?></h3>
         <?php
           }
         ?>
@@ -112,7 +112,7 @@ function get_recent_posts($related_posts_categories) {
         <?php
           if ($callout_title2) {
         ?>
-          <h4 class="callout-title"><?php echo $callout_title2; ?></h4>
+          <h3 class="callout-title"><?php echo $callout_title2; ?></h3>
         <?php
           }
         ?>
