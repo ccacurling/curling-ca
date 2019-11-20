@@ -1053,7 +1053,7 @@
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .curling-sidebar {
     display: block;
-    margin-top: 120px;
+    margin-top: 136px;
   }
 }
 
@@ -6612,7 +6612,7 @@
 }
 
 .edit-post-layout__content .block-item-label p.item-label {
-  margin-top: 60px;
+  margin-top: 72px;
   margin-bottom: 30px;
 }
 
@@ -7111,7 +7111,7 @@
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-page-intro {
-    margin-top: 60px;
+    margin-top: 72px;
   }
 }
 
