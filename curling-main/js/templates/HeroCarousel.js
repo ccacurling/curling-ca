@@ -42,7 +42,7 @@ jQuery(document).ready(function($) {
           view: 'fade',
           fillMode: 'cover',
           autoplay: true,
-          slideshowDelay: 5,
+          slideshowDelay: 7,
           overPause: false,
           pauseOnHover: false,
           controls: {

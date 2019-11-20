@@ -4,7 +4,7 @@
 }
 
 .btn {
-    padding: 16px 52px 14px;
+    padding: 14px 52px 14px;
     background: none;
     cursor: pointer;
     display: inline-block;
@@ -24,7 +24,6 @@
     @include font-size(20px);
     max-width: 100%;
     white-space: normal;
-    transition: background-color 0.3s ease-out, color 0.3s ease-out;
 
     img {
         margin-left: 14px;
@@ -32,8 +31,8 @@
     }
 
     &:hover {
-        background-color: $yellow;
-        color: $black;
+        background: lighten($red, 15%);
+        transition: background-color 0.3s ease-in;
         cursor: pointer;
     }
 }
@@ -47,8 +46,8 @@
 }
 
 .btn-large {
-  padding-top: 19px;
-  padding-bottom: 26px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   border-radius: 2px;
   font-size: 33px;
   letter-spacing: 2px;

@@ -1,9 +1,15 @@
 .styled-button {
   &.background-red {
     background-color: $red;
+    &:hover {
+      background: lighten($red, 15%);
+    }
   }
   &.background-white {
     background-color: $white;
+    &:hover {
+      background: lighten($white, 15%);
+    }
   }
   &.color-white {
     color: $white;
@@ -31,5 +37,10 @@
   &.text-large {
     font-size: 50.4px;
     line-height: 50.4px;
+  }
+
+  &:hover {
+    transition: background-color 0.3s ease-in;
+    cursor: pointer;
   }
 }

@@ -61,7 +61,7 @@
           $video_link = $post['hero_carousel_link'];
         }
     ?>
-      <div class="ms-slide">
+      <div class="ms-slide" data-delay="7">
         <div class="hero-carousel-caption-container">
           <?php if ($type === 'post') { ?>
             <img class="hero-carousel-image" src="<?php echo $featured_post_thumbnail; ?>" data-src="<?php echo $featured_post_thumbnail; ?>" alt="<?php echo __("Hero Image"); ?>"/>     
