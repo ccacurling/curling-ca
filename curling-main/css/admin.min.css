@@ -1053,12 +1053,12 @@
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .curling-sidebar {
     display: block;
-    margin-top: 120px;
+    margin-top: 136px;
   }
 }
 
 .edit-post-layout__content .sidebar-container {
-  padding-top: 33px;
+  padding-top: 8px;
   background-color: #f2f2f2;
   border: 1px solid #d8d8d8;
   box-shadow: -7px 10px 24px 0 rgba(76, 76, 78, 0.1);
@@ -2253,6 +2253,7 @@
   padding: 20px;
   font-size: 20px;
   border-left: 2px solid #d8d8d8;
+  color: #4c4c4e;
 }
 
 .edit-post-layout__content .menu-subnav-mobile {
@@ -2717,8 +2718,8 @@
   display: flex;
   position: relative;
   align-items: center;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 2.5%;
   padding-right: 2.5%;
 }
@@ -2824,15 +2825,9 @@
 }
 
 .edit-post-layout__content .ad-banner-wide {
-  margin-top: 60px;
-  margin-bottom: 60px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
-}
-
-.edit-post-layout__content .ad-banner-wide + .ad-banner-wide {
-  margin-top: -20px;
 }
 
 .edit-post-layout__content .block-hero {
@@ -5645,6 +5640,7 @@
 
 .edit-post-layout__content .news-feed-pagination {
   display: flex;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
@@ -6618,7 +6614,7 @@
 }
 
 .edit-post-layout__content .block-item-label p.item-label {
-  margin-top: 60px;
+  margin-top: 72px;
   margin-bottom: 30px;
 }
 
@@ -7117,7 +7113,7 @@
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-page-intro {
-    margin-top: 60px;
+    margin-top: 72px;
   }
 }
 

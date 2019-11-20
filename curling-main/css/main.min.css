@@ -1020,12 +1020,12 @@ li {
 @media only screen and (min-width: 999px) {
   .curling-sidebar {
     display: block;
-    margin-top: 120px;
+    margin-top: 136px;
   }
 }
 
 .sidebar-container {
-  padding-top: 33px;
+  padding-top: 8px;
   background-color: #f2f2f2;
   border: 1px solid #d8d8d8;
   box-shadow: -7px 10px 24px 0 rgba(76, 76, 78, 0.1);
@@ -2231,6 +2231,7 @@ li {
   padding: 20px;
   font-size: 20px;
   border-left: 2px solid #d8d8d8;
+  color: #4c4c4e;
 }
 
 .menu-subnav-mobile {
@@ -2695,8 +2696,8 @@ li {
   display: flex;
   position: relative;
   align-items: center;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   padding-left: 2.5%;
   padding-right: 2.5%;
 }
@@ -2802,15 +2803,9 @@ li {
 }
 
 .ad-banner-wide {
-  margin-top: 60px;
-  margin-bottom: 60px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
-}
-
-.ad-banner-wide + .ad-banner-wide {
-  margin-top: -20px;
 }
 
 .block-broadcast-callout .callout-wrapper {
@@ -5623,6 +5618,7 @@ li {
 
 .news-feed-pagination {
   display: flex;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   max-width: 1170px;
@@ -6596,7 +6592,7 @@ p.item-label {
 }
 
 .block-item-label p.item-label {
-  margin-top: 60px;
+  margin-top: 72px;
   margin-bottom: 30px;
 }
 
@@ -7063,7 +7059,7 @@ p.item-label {
 
 @media only screen and (min-width: 769px) {
   .block-page-intro {
-    margin-top: 60px;
+    margin-top: 72px;
   }
 }
 
