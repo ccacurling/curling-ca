@@ -7148,11 +7148,19 @@ h1.page-intro-main-headline {
 
 .block-related-posts {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-related-posts {
+    flex-wrap: nowrap;
+  }
 }
 
 .block-related-callout {
-  flex-basis: 50%;
+  flex-basis: 100%;
   max-width: none;
 }
 
@@ -7176,6 +7184,12 @@ h1.page-intro-main-headline {
 .block-related-callout .callout-info {
   min-height: 218px;
   background-color: #f2f2f2;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-related-callout {
+    flex-basis: 50%;
+  }
 }
 
 .activity-schedule-block {

@@ -6620,11 +6620,19 @@
 
 .edit-post-layout__content .block-related-posts {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-related-posts {
+    flex-wrap: nowrap;
+  }
 }
 
 .edit-post-layout__content .block-related-callout {
-  flex-basis: 50%;
+  flex-basis: 100%;
   max-width: none;
 }
 
@@ -6648,6 +6656,12 @@
 .edit-post-layout__content .block-related-callout .callout-info {
   min-height: 218px;
   background-color: #f2f2f2;
+}
+
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .block-related-callout {
+    flex-basis: 50%;
+  }
 }
 
 .edit-post-layout__content .presented-by-box {
