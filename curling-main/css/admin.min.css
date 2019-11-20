@@ -3468,6 +3468,7 @@
 
 .edit-post-layout__content .block-hero-carousel {
   min-height: 600px;
+  overflow-x: hidden;
 }
 
 .edit-post-layout__content .block-hero-carousel .ms-container {

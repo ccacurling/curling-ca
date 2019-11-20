@@ -3446,6 +3446,7 @@ li {
 
 .block-hero-carousel {
   min-height: 600px;
+  overflow-x: hidden;
 }
 
 .block-hero-carousel .ms-container {
