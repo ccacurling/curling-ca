@@ -6599,7 +6599,7 @@
 .edit-post-layout__content p.item-label {
   display: inline-block;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   padding: 3px 8.5px;
   font-size: 12px;
   background-color: #4c4c4e;
@@ -7117,7 +7117,7 @@
 
 @media only screen and (min-width: 769px) {
   .edit-post-layout__content .block-page-intro {
-    margin-top: 50px;
+    margin-top: 60px;
   }
 }
 

@@ -6577,7 +6577,7 @@ li {
 p.item-label {
   display: inline-block;
   margin-top: 0;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   padding: 3px 8.5px;
   font-size: 12px;
   background-color: #4c4c4e;
@@ -7063,7 +7063,7 @@ p.item-label {
 
 @media only screen and (min-width: 769px) {
   .block-page-intro {
-    margin-top: 50px;
+    margin-top: 60px;
   }
 }
 
