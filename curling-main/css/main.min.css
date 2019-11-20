@@ -7164,12 +7164,16 @@ h1.page-intro-main-headline {
   max-width: none;
 }
 
-.block-related-callout:first-child {
-  padding-right: 15px;
+@media only screen and (min-width: 999px) {
+  .block-related-callout:first-child {
+    padding-right: 15px;
+  }
 }
 
-.block-related-callout:last-child {
-  padding-left: 15px;
+@media only screen and (min-width: 999px) {
+  .block-related-callout:last-child {
+    padding-left: 15px;
+  }
 }
 
 .block-related-callout .callout-wrapper {

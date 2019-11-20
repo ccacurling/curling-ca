@@ -14,11 +14,15 @@
   max-width: none;
 
   &:first-child {
-    padding-right: 15px;
+    @include responsive-min($responsive-laptop) {
+      padding-right: 15px;
+    }
   }
 
   &:last-child {
-    padding-left: 15px;
+    @include responsive-min($responsive-laptop) {
+      padding-left: 15px;
+    }
   }
 
   .callout-wrapper {
