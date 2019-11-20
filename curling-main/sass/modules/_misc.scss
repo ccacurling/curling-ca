@@ -368,5 +368,9 @@
 .twitter-timeline {
   margin-top: 11px!important;
   margin-bottom: 11px!important;
-	width: 100vw!important;
+  width: 100vw!important;
+  box-shadow: -7px 16px 43px 0 rgba(76,76,78,0.10)!important;
+  border: 1px solid $cool-light-gray!important;
+  border-radius: 5px!important;
+  background-color: $white!important;
 }

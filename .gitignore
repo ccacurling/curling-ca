@@ -2,3 +2,4 @@ node_modules/
 *.lock
 *.map
 curling-main/vendor
+*.backup
