@@ -2802,15 +2802,9 @@ li {
 }
 
 .ad-banner-wide {
-  margin-top: 60px;
-  margin-bottom: 60px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: center;
-}
-
-.ad-banner-wide + .ad-banner-wide {
-  margin-top: -20px;
 }
 
 .block-broadcast-callout .callout-wrapper {
