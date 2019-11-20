@@ -937,21 +937,21 @@ li {
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 7.5px;
-  margin-right: 7.5px;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 @media only screen and (min-width: 999px) {
   .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:first-child,
   .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column:first-child {
-    margin-left: -7.5px;
+    margin-left: -15px;
   }
 }
 
 @media only screen and (min-width: 999px) {
   .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child,
   .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column:last-child {
-    margin-right: -7.5px;
+    margin-right: -15px;
   }
 }
 

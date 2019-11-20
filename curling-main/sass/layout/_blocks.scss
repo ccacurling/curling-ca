@@ -232,19 +232,19 @@
         position: relative;
         margin-top: 0;
         margin-bottom: 0;
-        margin-left: 7.5px;
-        margin-right: 7.5px;
+        margin-left: 15px;
+        margin-right: 15px;
       }
 
       .wp-block-column:first-child {
         @include responsive-min($responsive-laptop) {
-          margin-left: -7.5px;
+          margin-left: -15px;
         }
       }
 
       .wp-block-column:last-child {
         @include responsive-min($responsive-laptop) {
-          margin-right: -7.5px;
+          margin-right: -15px;
         }
       }
     }
