@@ -1020,7 +1020,7 @@ li {
 @media only screen and (min-width: 999px) {
   .curling-sidebar {
     display: block;
-    margin-top: 110px;
+    margin-top: 120px;
   }
 }
 
@@ -1191,6 +1191,10 @@ li {
   background-color: #f2f2f2;
   color: #d8d8d8;
   cursor: default;
+}
+
+.tablepress-31 a {
+  color: #ed1940;
 }
 
 .social-share-heading {
@@ -6592,7 +6596,7 @@ p.item-label {
 }
 
 .block-item-label p.item-label {
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 

@@ -1053,7 +1053,7 @@
 @media only screen and (min-width: 999px) {
   .edit-post-layout__content .curling-sidebar {
     display: block;
-    margin-top: 110px;
+    margin-top: 120px;
   }
 }
 
@@ -1224,6 +1224,10 @@
   background-color: #f2f2f2;
   color: #d8d8d8;
   cursor: default;
+}
+
+.edit-post-layout__content .tablepress-31 a {
+  color: #ed1940;
 }
 
 .edit-post-layout__content .social-share-heading {
@@ -6614,7 +6618,7 @@
 }
 
 .edit-post-layout__content .block-item-label p.item-label {
-  margin-top: 50px;
+  margin-top: 60px;
   margin-bottom: 30px;
 }
 
