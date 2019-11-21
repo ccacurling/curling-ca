@@ -819,6 +819,10 @@ li {
   padding-right: 15px;
 }
 
+.block-container .wp-block-cossette-block-container > h1.nomargin, .block-container .wp-block-cossette-block-container > h2.nomargin, .block-container .wp-block-cossette-block-container > h3.nomargin, .block-container .wp-block-cossette-block-container > h4.nomargin, .block-container .wp-block-cossette-block-container > p.nomargin, .block-container .wp-block-cossette-block-container > ul.nomargin, .block-container .wp-block-cossette-block-container > li.nomargin {
+  margin-bottom: 0;
+}
+
 .block-container .wp-block-cossette-block-container > h1, .block-container .wp-block-cossette-block-container > h2 {
   margin-bottom: 70px;
 }

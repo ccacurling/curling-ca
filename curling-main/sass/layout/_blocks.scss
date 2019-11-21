@@ -116,6 +116,11 @@
   }
 
   .wp-block-cossette-block-container > {
+    h1, h2, h3, h4, p, ul, li {
+      &.nomargin {
+        margin-bottom: 0;
+      }
+    }
     h1, h2 {
       margin-bottom: 70px;
     }
