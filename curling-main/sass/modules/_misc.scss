@@ -23,6 +23,9 @@
             height: 42px;
             padding-left: 20px;
             flex-basis: 100%;
+            &:focus {
+              outline: none;
+            }
         }
         .map-switcher {
             display: flex;
@@ -36,6 +39,8 @@
                 border: 1px solid #979797;
                 font-family: "Knockout";
                 text-transform: uppercase;
+                line-height: 26px;
+
                 &.selected{
                     background-color: #ED1940;
                     color: #FFF;
@@ -168,24 +173,31 @@
     }
 }
 
-.dataTables_wrapper .dataTables_paginate {
+.dataTables_wrapper .dataTables_paginate.paging_simple_numbers {
 
     .ellipsis {
         display: none;
     }
 
     .paginate_button{
-        width: 32px;
-        max-width: 32px;
+      padding: 8px 16px;
+        width: auto;
+        max-width: none;
         min-width: unset;
         background: unset !important;
-        background-color: #FFF;
-        border: 1px solid #D8D8D8 !important;
-        margin: 0px !important;
+        background-color: $white;
+        border: 1px solid $light-gray !important;
+        margin: 0 !important;
+        &:hover {
+          color: $black !important;
+        }
 
         &.current {
-            background-color: #ED1940 !important;
-            color: #fff !important;
+            background-color: $red !important;
+            color: $white !important;
+            &:hover {
+              color: $white !important;
+            }
         }
         &.previous, &.next {
             max-width: unset;
@@ -373,4 +385,71 @@
   border: 1px solid $cool-light-gray!important;
   border-radius: 5px!important;
   background-color: $white!important;
+}
+
+.wpgmza-store-locator.wpgmza_sl_main_div {
+  top:0;
+  margin-bottom: 20px;
+}
+
+.wpgmza_marker_holder th {
+  text-shadow: none;
+}
+
+.wpgmza_table {
+  tbody {
+    border: 1px solid $light-gray;
+    box-shadow: -10px 9px 21px 0 rgba(76,76,78,0.10);
+    border-radius: 2px;
+  }
+}
+
+.dataTables_wrapper .dataTables_paginate span .paginate_button.current {
+  color: $white!important;
+}
+
+.wpgmza-store-locator.wpgmza_sl_main_div .wpgmza-form-field__label,
+.wpgmza_marker_holder table.dataTable thead th {
+  font-family: $knockout;
+  font-size: 20px;
+  color: $gray;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.wpgmza_sl_radius_select {
+  margin-bottom: 20px;
+  height: 42px;
+  background-color: $white;
+  border: 1px solid $light-gray;
+  font-family: $meta-serif-pro;
+  font-size: 14px;
+  color: $gray;
+  letter-spacing: 0;
+  line-height: 18px;
+  border-radius: 2px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div {
+  .map-switcher {
+    .listview-button {
+      border-radius: 2px 0 0 2px;
+    }
+    
+    .mapview-button {
+      border-radius: 0 2px 2px 0;
+    }
+
+    .listview-button, .mapview-button {
+      &.selected {
+        border: none;
+      }
+    }
+  }
 }

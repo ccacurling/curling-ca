@@ -8430,6 +8430,10 @@ h1.page-intro-main-headline {
   flex-basis: 100%;
 }
 
+.wpgmza-store-locator .wpgmza_sl_query_div .wpgmza-form-field__input.addressInput:focus {
+  outline: none;
+}
+
 .wpgmza-store-locator .wpgmza_sl_query_div .map-switcher {
   display: flex;
   flex-direction: row;
@@ -8443,6 +8447,7 @@ h1.page-intro-main-headline {
   border: 1px solid #979797;
   font-family: "Knockout";
   text-transform: uppercase;
+  line-height: 26px;
 }
 
 .wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .listview-button.selected, .wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .mapview-button.selected {
@@ -8582,26 +8587,35 @@ h1.page-intro-main-headline {
   letter-spacing: 1px;
 }
 
-.dataTables_wrapper .dataTables_paginate .ellipsis {
+.dataTables_wrapper .dataTables_paginate.paging_simple_numbers .ellipsis {
   display: none;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-  width: 32px;
-  max-width: 32px;
+.dataTables_wrapper .dataTables_paginate.paging_simple_numbers .paginate_button {
+  padding: 8px 16px;
+  width: auto;
+  max-width: none;
   min-width: unset;
   background: unset !important;
-  background-color: #FFF;
-  border: 1px solid #D8D8D8 !important;
-  margin: 0px !important;
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8 !important;
+  margin: 0 !important;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button.current {
-  background-color: #ED1940 !important;
-  color: #fff !important;
+.dataTables_wrapper .dataTables_paginate.paging_simple_numbers .paginate_button:hover {
+  color: #000000 !important;
 }
 
-.dataTables_wrapper .dataTables_paginate .paginate_button.previous, .dataTables_wrapper .dataTables_paginate .paginate_button.next {
+.dataTables_wrapper .dataTables_paginate.paging_simple_numbers .paginate_button.current {
+  background-color: #ed1940 !important;
+  color: #ffffff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate.paging_simple_numbers .paginate_button.current:hover {
+  color: #ffffff !important;
+}
+
+.dataTables_wrapper .dataTables_paginate.paging_simple_numbers .paginate_button.previous, .dataTables_wrapper .dataTables_paginate.paging_simple_numbers .paginate_button.next {
   max-width: unset;
   width: unset;
 }
@@ -8790,6 +8804,65 @@ h1.page-intro-main-headline {
   border: 1px solid #f2f2f2 !important;
   border-radius: 5px !important;
   background-color: #ffffff !important;
+}
+
+.wpgmza-store-locator.wpgmza_sl_main_div {
+  top: 0;
+  margin-bottom: 20px;
+}
+
+.wpgmza_marker_holder th {
+  text-shadow: none;
+}
+
+.wpgmza_table tbody {
+  border: 1px solid #d8d8d8;
+  box-shadow: -10px 9px 21px 0 rgba(76, 76, 78, 0.1);
+  border-radius: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate span .paginate_button.current {
+  color: #ffffff !important;
+}
+
+.wpgmza-store-locator.wpgmza_sl_main_div .wpgmza-form-field__label,
+.wpgmza_marker_holder table.dataTable thead th {
+  font-family: "Knockout";
+  font-size: 20px;
+  color: #4c4c4e;
+  letter-spacing: 0.8px;
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.wpgmza_sl_radius_select {
+  margin-bottom: 20px;
+  height: 42px;
+  background-color: #ffffff;
+  border: 1px solid #d8d8d8;
+  font-family: "Meta Serif Pro";
+  font-size: 14px;
+  color: #4c4c4e;
+  letter-spacing: 0;
+  line-height: 18px;
+  border-radius: 2px;
+}
+
+.wpgmza_sl_radius_select:focus {
+  outline: none;
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .listview-button {
+  border-radius: 2px 0 0 2px;
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .mapview-button {
+  border-radius: 0 2px 2px 0;
+}
+
+.wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .listview-button.selected, .wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .mapview-button.selected {
+  border: none;
 }
 
 /*# sourceMappingURL=main.min.css.map */
