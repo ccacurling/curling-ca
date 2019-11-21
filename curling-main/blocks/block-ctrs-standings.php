@@ -70,7 +70,7 @@
 
       <div class="ctrs-standings-list womens-list">
         <h3><?php echo __("CTRS Standings Womens"); ?></h3>
-        <div class="stadings-container">
+        <div class="standings-container">
 
       <?php
         $counter = 0;
@@ -98,7 +98,7 @@
     
       <div class="ctrs-standings-list mens-list">
         <h3><?php echo __("CTRS Standings Mens"); ?></h3>
-        <div class="stadings-container">
+        <div class="standings-container">
       <?php
         $counter = 0;
         foreach ($mens_standing as $team) {
@@ -132,7 +132,7 @@
 
       <div class="ctrs-standings-list">
         <h3><?php echo __("Mixed Doubles Rankings"); ?></h3>
-        <div class="stadings-container">
+        <div class="standings-container">
 
       <?php
         $counter = 0;
@@ -161,7 +161,7 @@
 
       <div class="ctrs-standings-list">
         <h3><?php echo __("MA Cup: Top 5"); ?></h3>
-        <div class="stadings-container">
+        <div class="standings-container">
 
       <?php
         $counter = 0;
