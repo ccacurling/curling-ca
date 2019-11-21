@@ -1134,3 +1134,26 @@ function guten_enqueue() {
 }
 add_action( 'enqueue_block_editor_assets', 'guten_enqueue' );
 //add_action( 'wp_enqueue_scripts', 'guten_enqueue' );
+
+/* Block Hero function */
+function get_hero_image($hero_featured_post) {
+  if ($hero_featured_post) {
+    $image = get_field( 'hero_image', $hero_featured_post->ID);
+    if ($image) {
+      return $image['url'];
+    } else if (has_post_thumbnail( $hero_featured_post, 'large' )) {
+      return get_the_post_thumbnail_url( $hero_featured_post, 'large' );
+    } else {
+      $image = get_field( 'hero_image' );
+      if ($image) {
+        return $image['url'];
+      }
+    }
+  }
+  $image = get_field( 'hero_image' );
+  if ($image) {
+    return $image['url'];
+  } else {
+    return null;
+  }
+}
