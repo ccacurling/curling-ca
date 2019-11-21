@@ -326,4 +326,24 @@
       }
     }
   }
+
+  &.equal-height {
+    > .wp-block-cossette-block-column-2 > .wp-block-columns,
+    > .wp-block-cossette-block-column-3 > .wp-block-columns {
+      > .wp-block-column {
+        flex: 1;
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        > div[class^="block-"]:only-child,
+        > section[class^="block-"]:only-child {
+          margin: 0;
+          height: 100%;
+        }
+      }
+    }
+  }
 }

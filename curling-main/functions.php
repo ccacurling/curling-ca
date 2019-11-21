@@ -146,6 +146,7 @@ function block_2_column_init() {
             ($attributes['is_fullwidth'] ? ' ' : 'column-smallwidth ' ).
             ($attributes['left_column_is_sidebar'] ? ' '.'column-sidebar ' : ' ' ).
             ($attributes['nopadding'] ? 'no-padding ' : ' ').
+            ($attributes['equalheight'] ? 'equal-height ' : ' ').
             '">'.$content.'</div>';
       },
       'attributes' => [
@@ -162,6 +163,10 @@ function block_2_column_init() {
           'type' => 'boolean'
         ],
         'nopadding' => [
+          'default' => false,
+          'type' => 'boolean'
+        ],
+        'equalheight' => [
           'default' => false,
           'type' => 'boolean'
         ]
@@ -195,6 +200,10 @@ function block_3_column_init() {
           'type' => 'boolean'
         ],
         'nopadding' => [
+          'default' => false,
+          'type' => 'boolean'
+        ],
+        'equalheight' => [
           'default' => false,
           'type' => 'boolean'
         ]
