@@ -46,27 +46,7 @@ if ( empty($title_colour) ) {
 
 $hero_class = '';
 
-function get_hero_image($hero_featured_post) {
-  if ($hero_featured_post) {
-    $image = get_field( 'hero_image', $hero_featured_post->ID);
-    if ($image) {
-      return $image['url'];
-    } else if (has_post_thumbnail( $hero_featured_post, 'large' )) {
-      return get_the_post_thumbnail_url( $hero_featured_post, 'large' );
-    } else {
-      $image = get_field( 'hero_image' );
-      if ($image) {
-        return $image['url'];
-      }
-    }
-  }
-  $image = get_field( 'hero_image' );
-  if ($image) {
-    return $image['url'];
-  } else {
-    return null;
-  }
-}
+
 
 if ($image) {
   switch ($hero_size) {

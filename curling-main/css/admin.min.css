@@ -8174,7 +8174,7 @@
   color: #4C4C4E;
 }
 
-.edit-post-layout__content .ctrs-container .ctrs-wrapper .ctrs-standings-list .stadings-container {
+.edit-post-layout__content .ctrs-container .ctrs-wrapper .ctrs-standings-list .standings-container {
   border: 1px solid #979797;
   border-top: none;
 }
@@ -8396,6 +8396,16 @@
 @media only screen and (max-width: 999px) {
   .edit-post-layout__content .download-item-inner {
     flex-direction: column;
+    padding-right: 30px;
+  }
+  .edit-post-layout__content .download-item-inner .btn-large {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 2px;
+    font-size: 20px;
+    letter-spacing: 2px;
+    line-height: 25px;
+    margin-top: 10px;
   }
 }
 
