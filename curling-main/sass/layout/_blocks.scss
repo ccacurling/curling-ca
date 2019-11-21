@@ -116,6 +116,11 @@
   }
 
   .wp-block-cossette-block-container > {
+    h1, h2, h3, h4, p, ul, li {
+      &.nomargin {
+        margin-bottom: 0;
+      }
+    }
     h1, h2 {
       margin-bottom: 70px;
     }
@@ -232,19 +237,19 @@
         position: relative;
         margin-top: 0;
         margin-bottom: 0;
-        margin-left: 7.5px;
-        margin-right: 7.5px;
+        margin-left: 15px;
+        margin-right: 15px;
       }
 
       .wp-block-column:first-child {
         @include responsive-min($responsive-laptop) {
-          margin-left: -7.5px;
+          margin-left: -15px;
         }
       }
 
       .wp-block-column:last-child {
         @include responsive-min($responsive-laptop) {
-          margin-right: -7.5px;
+          margin-right: -15px;
         }
       }
     }
@@ -323,6 +328,33 @@
       }
       .wp-block-column:last-child {
         flex-basis: 25%;
+      }
+    }
+  }
+
+  &.equal-height {
+    > .wp-block-cossette-block-column-2 > .wp-block-columns,
+    > .wp-block-cossette-block-column-3 > .wp-block-columns {
+      .wp-block-column {
+        flex: 1;
+        &:first-child {
+          @include responsive-min($responsive-laptop) {
+            margin-left: 0;
+          }
+        }
+        &:last-child {
+          @include responsive-min($responsive-laptop) {
+            margin-right: 0;
+          }
+        }
+        > div[class^="block-"]:only-child,
+        > section[class^="block-"]:only-child {
+          height: 100%;
+
+          @include responsive-min($responsive-laptop) {
+            margin: 0;
+          }
+        }
       }
     }
   }

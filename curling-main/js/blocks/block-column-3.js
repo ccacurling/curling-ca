@@ -45,6 +45,10 @@ registerBlockType("cossette/block-column-3", {
     nopadding : {
       default: false,
       type: "boolean"
+    },
+    equalheight: {
+      default: false,
+      type: "boolean"
     }
   },
   // TODO: This is a hack which forces the template to appear valid.
@@ -74,6 +78,16 @@ registerBlockType("cossette/block-column-3", {
               onChange={(nopadding) => {
                 setAttributes({
                   nopadding
+                });
+              }}
+            />
+            <CheckboxControl
+              value={attributes.equalheight}
+              label={__('Equal Height')}
+              checked={attributes.equalheight}
+              onChange={(equalheight) => {
+                setAttributes({
+                  equalheight
                 });
               }}
             />

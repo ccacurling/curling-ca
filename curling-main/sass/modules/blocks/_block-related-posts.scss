@@ -1,18 +1,28 @@
 .block-related-posts {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include responsive-min($responsive-laptop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .block-related-callout {
-  flex-basis: 50%;
+  flex-basis: 100%;
   max-width: none;
 
   &:first-child {
-    padding-right: 15px;
+    @include responsive-min($responsive-laptop) {
+      padding-right: 15px;
+    }
   }
 
   &:last-child {
-    padding-left: 15px;
+    @include responsive-min($responsive-laptop) {
+      padding-left: 15px;
+    }
   }
 
   .callout-wrapper {
@@ -27,5 +37,9 @@
   .callout-info {
     min-height: 218px;
     background-color: $cool-light-gray;
+  }
+
+  @include responsive-min($responsive-laptop) {
+    flex-basis: 50%;
   }
 }
