@@ -47,6 +47,10 @@
     $doubles_full_link = get_field('doubles_full_link');
     
     $macup = get_field("ma_cup_ranking");
+    if ( !is_array($macup) ) {
+      $macup = array();
+    }
+
     $macup_full_link = get_field('ma_cup_full_link');
 
   }

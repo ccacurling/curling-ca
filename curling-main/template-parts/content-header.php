@@ -11,6 +11,11 @@
     $logo = get_field('event_logo', 'Options');
 
     $about_curling_pages = get_field('about_curling_pages', 'Options');
+    if ( !is_array($about_curling_pages) ) {
+      $about_curling_pages = array();
+    }
+
+
     $is_about_curling = false;
 
     foreach ($about_curling_pages as $key => $page) {
