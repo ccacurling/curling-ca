@@ -44,13 +44,15 @@
   if ($full_menu) {
     //Get the full standings
     $doubles_rankings = get_field("doubles_ranking");
+    if ( !is_array($doubles_rankings) ) {
+      $doubles_rankings = array();
+    }
     $doubles_full_link = get_field('doubles_full_link');
     
     $macup = get_field("ma_cup_ranking");
     if ( !is_array($macup) ) {
       $macup = array();
     }
-
     $macup_full_link = get_field('ma_cup_full_link');
 
   }

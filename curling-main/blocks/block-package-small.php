@@ -33,7 +33,7 @@ if ($current_lang == "fr") {
 
 ?>
 
-<section class="lang-<?php echo current_lang; ?> block-package-small block-package-small-<?php echo $package_small_colour; ?>">
+<section class="lang-<?php echo $current_lang; ?> block-package-small block-package-small-<?php echo $package_small_colour; ?>">
   <div class="package-small-wrapper">
     <h2 class="package-small-name"><?php echo $package_small_name; ?></h2>
     <div class="package-small-price-container">
