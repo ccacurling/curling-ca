@@ -941,21 +941,29 @@ li {
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 999px) {
+  .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column,
+  .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
 }
 
 @media only screen and (min-width: 999px) {
   .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:first-child,
   .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column:first-child {
-    margin-left: -15px;
+    margin-left: 0;
   }
 }
 
 @media only screen and (min-width: 999px) {
   .block-column .wp-block-cossette-block-column-2 > .wp-block-columns > .wp-block-column:last-child,
   .block-column .wp-block-cossette-block-column-3 > .wp-block-columns > .wp-block-column:last-child {
-    margin-right: -15px;
+    margin-right: 0;
   }
 }
 
@@ -8879,6 +8887,10 @@ h1.page-intro-main-headline {
 
 .wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .listview-button.selected, .wpgmza-store-locator .wpgmza_sl_query_div .map-switcher .mapview-button.selected {
   border: none;
+}
+
+.width-50 {
+  width: 50%;
 }
 
 /*# sourceMappingURL=main.min.css.map */
