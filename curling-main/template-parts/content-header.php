@@ -26,6 +26,9 @@
     }
 
     $our_organization_pages = get_field('our_organization_pages', 'Options');
+    if ( !is_array($our_organization_pages) ){
+      $our_organization_pages = array();
+    }
     $is_our_organization = false;
 
     foreach ($our_organization_pages as $key => $page) {
@@ -290,7 +293,11 @@
                 <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
               </li>
               <li class="btn menu-item menu-item-donate">
-                <a class="menu-item-donate-link clear" href="<?php echo $donate_link['url']; ?>">
+                <pre class='debug' style='display: none;'>
+                <?php var_dump($donate_link); ?>
+                </pre>
+                <a class="menu-item-donate-link clear" href="<?php echo $donate_link["url"]; ?>">
+                  
                   <h4 class="menu-item-small inverted"><?php echo __("Donate", "curling-main-theme"); ?></h4>
                 </a>
               </li>

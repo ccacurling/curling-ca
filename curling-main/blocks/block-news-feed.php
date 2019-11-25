@@ -8,6 +8,7 @@
 
 <?php
   $news_feed_category = get_field( 'news_feed_category' );
+  $lang = apply_filters( 'wpml_current_language', NULL ); //Store current language
 
   $category = "";
 
@@ -25,6 +26,6 @@
   }
 ?>
 
-<section class="block-news-feed js-news-feed <?php echo is_admin() ? 'block-admin' : ''; ?>" data-category="<?php echo $category; ?>">
+<section class="block-news-feed js-news-feed <?php echo is_admin() ? 'block-admin' : ''; ?>" data-category="<?php echo $category; ?>" data-lang="<?php echo $lang; ?>">
  <div class="js-news-feed-items"></div>
 </section>

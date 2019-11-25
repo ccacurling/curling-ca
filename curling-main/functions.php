@@ -1112,7 +1112,7 @@ function convertDateToFrenchShort($date) {
 //Allows for Gutenberg Block Manipulation
 function guten_enqueue() {
 
-  error_log("---- GOT HERE ---");
+  //error_log("---- GOT HERE ---");
 
   $file = get_stylesheet_directory_uri().'/js/guten.js';
   $filem = get_stylesheet_directory().'/js/guten.js';
