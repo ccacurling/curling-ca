@@ -13,7 +13,7 @@ function ajax_news_request() {
     
     if ( isset($_POST['lang']) && !empty($_POST['lang']) ){
       do_action( 'wpml_switch_language', $_POST['lang'] );
-      error_log("News Feed - Setting Language: " . $_POST['lang']);
+      //error_log("News Feed - Setting Language: " . $_POST['lang']);
     }
     
 
@@ -60,7 +60,12 @@ function ajax_news_request() {
         $promo_image_caption = get_field( 'featured_image_caption', $post );
 
         $date = date_create_from_format('Y-m-d H:i:s', $promo_date);
-        $date_string = $date->format('F j, Y');
+
+        if ( $_POST['lang'] == 'fr' ){
+          $date_string = $date->format('j F Y');
+        } else {
+          $date_string = $date->format('F j, Y');
+        }
 
         $link = get_permalink($post);
 
