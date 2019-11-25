@@ -25,18 +25,6 @@ add_action('init', 'block_accordion_container_init');
 // Pull in Eventum-child custom post type registration for speakers (Teams)
 remove_action( 'init', 'themeum_eventum_post_type_speaker');
 add_action('init','my_themeum_eventum_post_type_speaker');
-add_filter( 'term_link', 'wpa_alter_cat_links', 10, 3 );
-
-function wpa_alter_cat_links( $termlink, $term, $taxonomy ){
-  if( 'category' != $taxonomy ) return $termlink;
-
-  $url = '/category-'.$term->slug;
-  if (get_page_by_path($url)) {
-    return get_site_url().$url;
-  } else {
-    return $termlink;
-  }
-}
 
 function block_accordion_container_init() {
   $file = get_stylesheet_directory_uri().'/js/dist/block-accordion-container.min.js';
