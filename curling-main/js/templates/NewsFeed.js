@@ -71,6 +71,8 @@ jQuery(document).ready(function($) {
     }
     
     addPosts(posts, data)  {
+      const lang = this.element.data('lang');
+
       if (this.newsFeedItems) {
         for (let i = 0; i < posts.length; ++i) {
           const post = posts[i];
@@ -128,7 +130,7 @@ jQuery(document).ready(function($) {
 
           const $newsDate = $('<h4>', {
             class: 'news-promo-date'
-          }).text(post['date'] ? post['date'] : '');
+          }).text(post['date'] ? dateToFrench(post['date'], lang) : '');
 
           const $newsExerpt = $('<p>', {
             class: 'news-feed-excerpt news-promo-excerpt'
@@ -142,13 +144,13 @@ jQuery(document).ready(function($) {
           const $newsLinkButton = $('<h4>', {
             class: 'btn-link-text red',
             href: ''
-          }).text('Continue Reading');
+          }).text(lang == 'fr' ? 'Continuez à lire' : 'Continue Reading');
 
           const $newsLinkArrow = $('<img>', {
             class: 'btn-link-arrow',
             src: data['arrowImageRed'],
             alt: 'arrow-right'
-          }).text('Continue Reading');
+          }).text(lang == 'fr' ? 'Continuez à lire' : 'Continue Reading');
 
           $newsFeedInfo.append($newsTitle);
           $newsFeedInfo.append($newsDate);
@@ -285,18 +287,31 @@ jQuery(document).ready(function($) {
   jQuery.fn.newsFeed.Constructor = NewsFeed;
 });
 
-/*
-var getUrlParameter = function getUrlParameter(sParam) {
-  var sPageURL = window.location.search.substring(1),
-      sURLVariables = sPageURL.split('&'),
-      sParameterName,
-      i;
+function dateToFrench(date, lang) {
+    //console.log("Converting Date to: " + lang);
+    //console.log("For date: " + date);
+  if (lang == 'fr') {
+    
+    //english_days = array('Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday');
+    //french_days = array('lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche');
+    var english_months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    var french_months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+  
+    var newdate = date;
+  
+    //console.log("Checking for english");
+    for (var i = 0; i < 12; i++){
 
-  for (i = 0; i < sURLVariables.length; i++) {
-      sParameterName = sURLVariables[i].split('=');
+      //console.log(english_months[i]);
+      //console.log(french_months[i]);
 
-      if (sParameterName[0] === sParam) {
-          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
-      }
+      newdate = newdate.replace( english_months[i], french_months[i] );
+      //console.log(newdate);
+    }
+
+    return newdate;
+  } else {
+    return date;
   }
-};*/
+
+}
