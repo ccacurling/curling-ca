@@ -7,6 +7,16 @@ add_action('wp_ajax_ajax_events_request', 'ajax_events_request');
 
 function ajax_news_request() {
 
+    //$lang = apply_filters( 'wpml_current_language', NULL ); //Store current language
+    //error_log($lang);
+
+    
+    if ( isset($_POST['lang']) && !empty($_POST['lang']) ){
+      do_action( 'wpml_switch_language', $_POST['lang'] );
+      error_log("News Feed - Setting Language: " . $_POST['lang']);
+    }
+    
+
     $page = filter_var($_POST['page'], FILTER_SANITIZE_NUMBER_INT);
     $n = filter_var($_POST['n'], FILTER_SANITIZE_NUMBER_INT);
     $category = filter_var($_POST['category'], FILTER_SANITIZE_STRING);

@@ -39,6 +39,7 @@ jQuery(document).ready(function($) {
 
     getAjaxRequest(page, n) {
       const category = this.element.data('category');
+      const lang = this.element.data('lang');
 
       if (category) {
         $.ajax({
@@ -48,6 +49,7 @@ jQuery(document).ready(function($) {
             'action': 'ajax_news_request',
             'page': page,
             'n': n,
+            'lang': lang,
             'category': category
           },
           dataType: 'json',
@@ -282,3 +284,19 @@ jQuery(document).ready(function($) {
   
   jQuery.fn.newsFeed.Constructor = NewsFeed;
 });
+
+/*
+var getUrlParameter = function getUrlParameter(sParam) {
+  var sPageURL = window.location.search.substring(1),
+      sURLVariables = sPageURL.split('&'),
+      sParameterName,
+      i;
+
+  for (i = 0; i < sURLVariables.length; i++) {
+      sParameterName = sURLVariables[i].split('=');
+
+      if (sParameterName[0] === sParam) {
+          return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+      }
+  }
+};*/
