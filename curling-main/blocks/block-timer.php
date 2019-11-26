@@ -12,6 +12,8 @@ $timezone = get_field( 'event_timezone', 'Options' );
 $location = get_field( 'event_location_title', 'Options' );
 $timer_link = get_field( 'event_location_page_link', 'Options' );
 
+$lang = apply_filters( 'wpml_current_language', NULL ); //Store current language
+
 $start_date_value = $start_date_value ? $start_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
 $end_date_value = $end_date_value ? $end_date_value.' '.$timezone : '2019-01-01 00:00:00 '.$timezone;
 
@@ -22,9 +24,16 @@ $current_date = new DateTime();
 $start_date_unix = $start_date ? date_format($start_date, 'U') : 0;
 $current_date_unix = date_format($current_date, 'U');
 
-$start_date_string = $start_date ? $start_date->format('F j') : '';
-$end_date_short_string = $end_date ? $end_date->format('F j') : '';
-$end_date_string = $end_date ? $end_date->format('F j Y') : '';
+if ($lang == 'fr') {
+	$start_date_string = $start_date ?  dateToFrench($start_date, 'j F') : '';
+	$end_date_short_string = $end_date ? dateToFrench($end_date, 'j F') : '';
+	$end_date_string = $end_date ? dateToFrench($end_date, 'j F Y') : '';
+} else {
+	$start_date_string = $start_date ? $start_date->format('F j') : '';
+	$end_date_short_string = $end_date ? $end_date->format('F j') : '';
+	$end_date_string = $end_date ? $end_date->format('F j Y') : '';
+}
+
 
 $totalseconds = ((int)$start_date_unix - (int)$current_date_unix);
 $totalseconds = $totalseconds < 0 ? 0 : $totalseconds;

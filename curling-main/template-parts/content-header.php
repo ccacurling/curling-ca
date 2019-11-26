@@ -8,7 +8,21 @@
 
     $is_event = get_field('is_event', 'Options');
 
-    $logo = get_field('event_logo', 'Options');
+    $lang = apply_filters( 'wpml_current_language', NULL ); //Store current language
+
+
+    if ($lang == "fr") {
+
+      $logo = get_field('event_logo_fr', 'Options');
+      
+      if ($logo == false){
+        $logo = get_field('event_logo', 'Options');
+      }
+
+    } else {
+      $logo = get_field('event_logo', 'Options');
+    }
+
 
     $about_curling_pages = get_field('about_curling_pages', 'Options');
     if ( !is_array($about_curling_pages) ) {
