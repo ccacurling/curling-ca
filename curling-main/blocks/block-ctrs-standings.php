@@ -34,6 +34,17 @@
 
   $mens_full_link = get_field('mens_full_link');
   $womens_full_link = get_field('womens_full_link');
+
+  $details_page_link = get_field('details_page_link');
+
+  $details_copy = __("Details");
+
+
+  //error_log("Details Page Link outside" . print_r($details_page_link,true ));
+  
+  if ( !isset($details_page_link) || empty($details_page_link) ) {
+    $details_page_link = "https://www.curling.ca/team-canada/ctrs-team-results/";
+  }
   
 
   $number_to_show = get_field('number_to_show');
@@ -88,7 +99,9 @@
             $row_class = "ctrs-even-row";
           }
 
-          echo "<p class='{$row_class}'><span class='name'>{$team->skipfirstname} {$team->skiplastname}</span><span class='score'>{$team->points}</span></p>";
+          
+          echo "<p class='{$row_class}'><span class='name'>{$team->skipfirstname} {$team->skiplastname}</span><span class='prov'> ({$team->province})</span><span class='score'>{$team->points}</span>".
+          "<span class='ctrs-detail-link'><a href='{$details_page_link}?teamid=$team->teamid'>$details_copy</a></span></p>";
           if ($counter == $number_to_show){
             break;
           }
@@ -115,7 +128,8 @@
             $row_class = "ctrs-even-row";
           }
 
-          echo "<p class='{$row_class}'><span class='name'>{$team->skipfirstname} {$team->skiplastname}</span><span class='score'>{$team->points}</span></p>";
+          echo "<p class='{$row_class}'><span class='name'>{$team->skipfirstname} {$team->skiplastname}</span><span class='prov'> ({$team->province})</span><span class='score'>{$team->points}</span>".
+          "<span class='ctrs-detail-link'><a href='{$details_page_link}?teamid=$team->teamid'>$details_copy</a></span></p>";
           if ($counter == $number_to_show){
             break;
           }

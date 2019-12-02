@@ -126,7 +126,7 @@ jQuery(document).ready(function($) {
 
           const $newsTitle = $('<h3>', {
             class: 'news-promo-title'
-          }).text(post['title'] ? post['title'] : '');
+          }).text(post['title'] ? post['title'].replace(/&amp;/g, '&') : '');
 
           const $newsDate = $('<h4>', {
             class: 'news-promo-date'

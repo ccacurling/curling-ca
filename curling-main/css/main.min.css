@@ -4957,6 +4957,7 @@ li {
 
 .block-prefooter-simple .block-prefooter-info-btns {
   justify-content: center;
+  margin: 0 auto;
 }
 
 .block-prefooter-gray {
@@ -7988,11 +7989,19 @@ h1.page-intro-main-headline {
 }
 
 .ctrs-container .ctrs-wrapper .ctrs-standings-list p span.name {
-  padding-left: 68px;
+  padding-left: 20px;
 }
 
 .ctrs-container .ctrs-wrapper .ctrs-standings-list p span.score {
-  padding-right: 60px;
+  padding-right: 0px;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list p span.prov {
+  width: 192px;
+}
+
+.ctrs-container .ctrs-wrapper .ctrs-standings-list p .ctrs-detail-link {
+  padding-right: 20px;
 }
 
 .ctrs-container .ctrs-doubles .ctrs-standings-list p span.name {
