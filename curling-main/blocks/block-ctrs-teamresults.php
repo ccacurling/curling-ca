@@ -6,134 +6,115 @@
 
 $teamid = $_GET["teamid"];
 
+$events_details_link = get_field("event_details_link");
+
+if (!$events_details_link){
+	$events_details_link = "/ctrs-event-results";
+}
+
+$events_details_link .= '/' . $addLanguageUrl;
+
 $language = apply_filters( 'wpml_current_language', NULL );
 
 
 function do_ctrs_team_results ($teamid, $language) {
 	
 	$addLanguageUrl = "";
-	
 	$eventsPlayedInText = "Events this team has played in:";
+
 	if ($language=="fr") {
 	  $addLanguageUrl = "?lang=fr";
 	  $eventsPlayedInText = "Événements joué par cette équipe :";
 	}
-		$maxeventcount = 8;
-		if ($teamid == "") {
-			$teamid = "97472";
-		}
-		$sxe = simplexml_load_file("http://ctrs.curling.ca/ctrsteam" . $teamid . ".xml");
-		
 
-		
-		$fourthpos = "Fourth";
-		$thirdpos = "Third";
-		$secondpos = "Second";
-		$leadpos = "Lead";
+	$maxeventcount = 8;
+
+	if ($teamid == "") {
+		$teamid = "97472"; //Default Team
+	}
+
+	$sxe = simplexml_load_file("http://ctrs.curling.ca/ctrsteam" . $teamid . ".xml");
+	
+	$fourthpos = "Fourth";
+	$thirdpos = "Third";
+	$secondpos = "Second";
+	$leadpos = "Lead";
+	
 	if ($language=="fr") {
 		$fourthpos = "4ème";
 		$thirdpos = "3ème";
 		$secondpos = "2ème";
 		$leadpos = "1er";
 	}	
-		if ($sxe->skipid == $sxe->fourthid):
-			$fourthpos = "Skip";
-		elseif ($sxe->skipid == $sxe->thirdid):
-			$thirdpos = "Skip";
-		elseif ($sxe->skipid == $sxe->secondid):
-			$secondpos = "Skip";	
-		elseif ($sxe->skipid == $sxe->leadid):
-			$leadpos = "Skip";
-		endif;
+	
+	if ($sxe->skipid == $sxe->fourthid):
+		$fourthpos = "Skip";
+	elseif ($sxe->skipid == $sxe->thirdid):
+		$thirdpos = "Skip";
+	elseif ($sxe->skipid == $sxe->secondid):
+		$secondpos = "Skip";	
+	elseif ($sxe->skipid == $sxe->leadid):
+		$leadpos = "Skip";
+	endif;
+
+
+
+	$main .= "<div class='ctrs-team-results-team-container'><h3 class='ctrs-team-results-title'>" . __("CTRS Team Results") . "</h3>";
+
+	$main .= "<div class='standings-container'>";
+
+	$main .= "<p class='ctrs-position'><span class='pos'>$fourthpos</span><span class='name'>{$sxe->fourthfirstname} {$sxe->fourthlastname}</span></p>";
+	$main .= "<p class='ctrs-position'><span class='pos'>$thirdpos</span><span class='name'>{$sxe->thirdfirstname} {$sxe->thirdlastname}</span></p>";
+	$main .= "<p class='ctrs-position'><span class='pos'>$secondpos</span><span class='name'>{$sxe->secondfirstname} {$sxe->secondlastname}</span></p>";
+	$main .= "<p class='ctrs-position'><span class='pos'>$leadpos</span><span class='name'>{$sxe->leadfirstname} {$sxe->leadlastname}</span></p>";
 			
-		$main .= "<table width='580' border='0' cellpadding='0' cellspacing='0'>
-		<tr>
-		<td width='100'><b>$fourthpos:</b></td>
+	if ($sxe->spareid <> 0):
+		$main .= "<p class='ctrs-position'><span class='pos'>Alt:</span><span class='name'>{$sxe->sparefirstname} {$sxe->sparelastname}</span></p>";
+	endif;
+	$main .= "</div></div>";
+	
 
-		<td width='480'>" . $sxe->fourthfirstname . " " . $sxe->fourthlastname . "</td>
-		</tr>
-		<tr>
-		<td width='100'><b>$thirdpos:</b></td>
-		<td width='480'>" . $sxe->thirdfirstname . " " . $sxe->thirdlastname . "</td>
-
-		</tr>
-		<tr>
-		<td width='100'><b>$secondpos:</b></td>
-		<td width='480'>" . $sxe->secondfirstname . " " . $sxe->secondlastname . "</td>
-		</tr>
+	$main .= "<div class='ctrs-team-results-team-container'><h4 class='ctrs-team-results-title'>" . __($eventsPlayedInText) . "</h4>";
+	$main .= "<div class='standings-container'>";
 
 
-		<tr>
-		<td width='100'><b>$leadpos:</b></td>
-		<td width='480'>" . $sxe->leadfirstname . " " . $sxe->leadlastname . "</td>
-		</tr>
-		<tr>";
-		
-		if ($sxe->spareid <> 0):
-
-			$main .= "<tr>
-				<td width='100'><b>Alt:</b></td>
-				<td width='480'>" . $sxe->sparefirstname . " " . $sxe->sparelastname . "</td>
-				</tr>";
-		endif;
-		$main .= "<tr>
-		<td colspan='2' class='title'>$eventsPlayedInText</td>
-		</tr>
-	   
-		<tr>
-		<td colspan='2'>
-		<table bgcolor='#999999' cellspacing='1' cellpadding='2' width='630' border='0'>
-			<tr bgcolor='#DADADA'>";
 	if ($language=="fr") {
-		$main .= "<td width='430'><b>Événement</b></td>
-			<td width='75' align='center'><b>Classement</b></td>
-			<td width='75' align='right'><b>Points</b></td>";
+		$main .= "<p class='title-row'><span class='event-name'>Événement</span><span>Classement</span><span>Points</span></p>";
 	} else {
-		$main .= "<td width='430'><b>Event Name</b></td>
-			<td width='75' align='center'><b>Standings</b></td>
-			<td width='75' align='right'><b>Points Won</b></td>";
+		$main .= "<p class='title-row'><span class='event-name'>Event Name</span><span>Standings</span><span>Points Won</span></p>";
 	}
-		$main .= "</tr>";
 
-		$eventcount = 0;
-		$pointstotal = 0.000;
-		foreach ($sxe->event as $event) {
-			$eventcount++;		
-			$eventpoints = number_format((double)$event->pointtotal, 3);
-			if ($eventcount <= $maxeventcount):
-				$pointstotal = number_format((double)$pointstotal + $eventpoints, 3);
-				$main .= "<form name=viewDetail action=../ctrs-event-results/$addLanguageUrl method=post>
-				<tr bgcolor='#CCCCFF'>
-					<td><input type=submit name=submit value=Details> <b>" . $event->eventname . "</b></td>
-					<td align=right><b>";
-					if ($event->qualifier == 1):
-						$main .= $event->place;
-					else:
-						$main .= "N/A";
-					endif;
-					$main .= "</b> </td>
-					<td align=right><b>" . $event->pointtotal . "</b> </td>
-				</tr>
-				<input name=eventid type=hidden value=" . $event->eventid . "></form>";
-			else:
-				$main .= "<form name=viewDetail action=../ctrs-event-results/$addLanguageUrl method=post>
-				<tr bgcolor='#DADADA'>
-					<td><input type=submit name=submit value=Details> <i>" . $event->eventname . "</i></td>
-					<td align=right><i>";
-					if ($event->qualifier == 1):
-						$main .= $event->place;
-					else:
-						$main .= "N/A";
-					endif;
-					$main .= "</i> </td>
-					<td align=right><i>" . $event->pointtotal . "</i> </td>
-				</tr>
-				<input name=eventid type=hidden value=" . $event->eventid . "></form>";
-			endif;
-		}
-		$main .= "<tr><td colspan=2 align=right><b>Total: (Best $maxeventcount Results)</b></td><td align=right><b>" . number_format((double)$pointstotal,3) . "</b> </td></tr>";
-		$main .= "</table></td></tr></table>";
-		return $main;
+
+	$eventcount = 0;
+	$pointstotal = 0.000;
+	
+	foreach ($sxe->event as $event) {
+		$eventcount++;		
+		$eventpoints = number_format((double)$event->pointtotal, 3);
+		if ($event->qualifier == 1):
+			$placename .= $event->place;
+		else:
+			$placename .= "N/A";
+		endif;
+
+		$pointstotal = number_format((double)$pointstotal + $eventpoints, 3);
+
+		$main .= "<form name=viewDetail action='$events_details_link' method='post'>";
+		
+		if ($eventcount <= $maxeventcount):
+			$main .= "<p class='rank-row'><span class='event-name'><input type=submit name=submit value=Details>$event->eventname</span><span>$placename</span><span>$event->pointtotal</span></p>";
+		else:
+			$main .= "<p class='old-rank-row'><span class='event-name'><input type=submit name=submit value=Details>$event->eventname</span><span>$placename</span><span>$event->pointtotal</span></p>";
+		endif;
+
+		$main .= "<input name=eventid type=hidden value=" . $event->eventid . "></form>";
+	}
+	
+	$main .= "<p class='total-row'><b>Total: (Best $maxeventcount Results) " . number_format((double)$pointstotal,3) . "</b></p>";
+
+	$main .= "</div></div>";
+
+	return $main;
 }
 
 

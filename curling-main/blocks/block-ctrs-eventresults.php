@@ -7,7 +7,11 @@
 $event_id = get_field('event_id');
 
 function cca_ctrs_event_results ($eid) {
-	$eventid = $eid; //$_POST["eventid"];
+	if (isset($eid) && !empty($eid)){
+		$eventid = $eid; //$_POST["eventid"];
+	} else {
+		$eventid = $_POST["eventid"];
+	}
 	$addLanguageUrl = "";
 	$language = $_GET['lang'];
 

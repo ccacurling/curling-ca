@@ -8288,6 +8288,95 @@
   }
 }
 
+.edit-post-layout__content .ctrs-container .ctrs-teams {
+  display: flex;
+  flex-direction: column;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .standings-container {
+  /*padding: 15px 0 15px 20px;*/
+  width: 100%;
+  background-color: #fff;
+  /*border: 1px solid #979797;*/
+  color: #4C4C4E;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .standings-container .ctrs-position {
+  display: flex;
+  justify-content: start;
+  margin: 5px 0;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .standings-container .ctrs-position .pos {
+  min-width: 80px;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container {
+  padding: 15px 20px 15px 20px;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #979797;
+  color: #4C4C4E;
+  margin: 20px 0;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .ctrs-team-results-title {
+  margin-bottom: 10px;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container .title-row {
+  font-weight: bold;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container .old-rank-row {
+  background-color: #F2F2F2;
+  font-style: italic;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container .total-row {
+  justify-content: end;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container p {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding: 10px 0;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container p span {
+  min-width: 200px;
+}
+
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container p span {
+    min-width: 160px;
+  }
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container p span.event-name {
+  min-width: 400px;
+}
+
+@media only screen and (max-width: 999px) {
+  .edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container p span.event-name {
+    min-width: 160px;
+    margin-right: 20px;
+  }
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container p span.event-name input {
+  margin-right: 10px;
+}
+
+.edit-post-layout__content .ctrs-team-results-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .edit-post-layout__content .jobs-container {
   display: flex;
   flex-wrap: wrap;

@@ -147,3 +147,80 @@
   }
 
 }
+.ctrs-container .ctrs-teams {
+  display: flex;
+  flex-direction: column;
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  .standings-container {
+    /*padding: 15px 0 15px 20px;*/
+    width: 100%;
+    background-color: #fff;
+    /*border: 1px solid #979797;*/
+    color: #4C4C4E;
+
+    .ctrs-position {
+      display: flex;
+      justify-content: start;
+      margin: 5px 0;
+      .pos {
+        min-width: 80px;
+      }
+    }
+  }
+
+  .ctrs-team-results-team-container {
+    padding: 15px 20px 15px 20px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #979797;
+    color: #4C4C4E;
+    margin: 20px 0;
+    .ctrs-team-results-title {
+      margin-bottom: 10px;
+    }
+    .standings-container {
+      .title-row {
+        font-weight: bold;
+      }
+      .rank-row {
+
+      }
+      .old-rank-row {
+        background-color: #F2F2F2;
+        font-style: italic;
+      }
+      .total-row {
+        justify-content: end;
+      }
+      p {
+        display: flex;
+        flex-direction: row;
+        justify-content: start;
+        padding: 10px 0;
+        span {
+          min-width: 200px;
+          @include responsive-max($responsive-laptop){
+            min-width: 160px;
+          }
+        }
+        span.event-name {
+          min-width: 400px;
+          @include responsive-max($responsive-laptop){
+            min-width: 160px;
+            margin-right: 20px;
+          }
+          input {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ctrs-team-results-title {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
