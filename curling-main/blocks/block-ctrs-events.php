@@ -35,6 +35,7 @@ function cca_ctrs_events($year, $type_id) {
 	$filename = "http://ctrs.curling.ca/" . $eventyear . "schedule_eventtype" . $eventtypeid . ".xml";
 
 	$sxe = simplexml_load_file($filename);
+	$bgcolor = "#FFFFFF";
 		    
 	foreach ($sxe->event as $event) {
 	

@@ -8167,6 +8167,15 @@
   }
 }
 
+.edit-post-layout__content .ctrs-container .ctrs-wrapper.full-width {
+  flex-direction: column;
+}
+
+.edit-post-layout__content .ctrs-container .ctrs-wrapper.full-width .ctrs-standings-list {
+  max-width: unset;
+  padding: 10px;
+}
+
 .edit-post-layout__content .ctrs-container .ctrs-wrapper .ctrs-standings-list {
   display: flex;
   flex-direction: column;

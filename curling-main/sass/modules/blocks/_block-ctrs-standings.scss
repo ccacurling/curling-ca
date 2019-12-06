@@ -28,6 +28,14 @@
       flex-direction: column;
     }
 
+    &.full-width {
+      flex-direction: column;
+      .ctrs-standings-list {
+        max-width: unset;
+        padding: 10px;
+      }
+    }
+
     
 
     .ctrs-standings-list {

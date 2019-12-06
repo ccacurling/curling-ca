@@ -7947,6 +7947,15 @@ h1.page-intro-main-headline {
   }
 }
 
+.ctrs-container .ctrs-wrapper.full-width {
+  flex-direction: column;
+}
+
+.ctrs-container .ctrs-wrapper.full-width .ctrs-standings-list {
+  max-width: unset;
+  padding: 10px;
+}
+
 .ctrs-container .ctrs-wrapper .ctrs-standings-list {
   display: flex;
   flex-direction: column;

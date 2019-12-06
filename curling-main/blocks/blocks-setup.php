@@ -6027,7 +6027,47 @@ acf_add_local_field_group(array(
 	'description' => '',
 ));
 
-//CTRS 
+//CTRS
+acf_add_local_field_group(array(
+	'key' => 'group_5de6e4e7f170f',
+	'title' => 'CTRS Team Results',
+	'fields' => array(
+		array(
+			'key' => 'field_5de6e4fab2f45',
+			'label' => 'Event Details Page Link',
+			'name' => 'event_details_link',
+			'type' => 'url',
+			'instructions' => 'This is the page where the "Details" button will link to. If left blank this will default to "/team-canada/ctrs-event-results" (https://curling.ca/team-canada/ctrs-event-results). To override you can use the shorthand url ("/something") or the full form ("https://curling.ca/something")',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '/team-canada/ctrs-event-results',
+		),
+	),
+	'location' => array(
+		array(
+			array(
+				'param' => 'block',
+				'operator' => '==',
+				'value' => 'acf/ctrs-teamresults',
+			),
+		),
+	),
+	'menu_order' => 0,
+	'position' => 'normal',
+	'style' => 'default',
+	'label_placement' => 'top',
+	'instruction_placement' => 'label',
+	'hide_on_screen' => '',
+	'active' => true,
+	'description' => '',
+));
+
 acf_add_local_field_group(array(
 	'key' => 'group_5d953e929f018',
 	'title' => 'CTRS Standings',
@@ -6052,6 +6092,25 @@ acf_add_local_field_group(array(
 			'min' => 1,
 			'max' => 100,
 			'step' => '',
+		),
+		array(
+			'key' => 'field_5de6e6c5ded68',
+			'label' => 'Full Width',
+			'name' => 'full_width',
+			'type' => 'true_false',
+			'instructions' => 'This option forces each standing (Women\'s/Mens) to be full width. Turn this on when placing this block within column structures that are too narrow for two columns of standings side-by-side.',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'message' => '',
+			'default_value' => 0,
+			'ui' => 0,
+			'ui_on_text' => '',
+			'ui_off_text' => '',
 		),
 		array(
 			'key' => 'field_5d953ed9f6367',
@@ -6441,7 +6500,7 @@ acf_add_local_field_group(array(
 			'label' => 'Event ID',
 			'name' => 'event_id',
 			'type' => 'text',
-			'instructions' => 'Enter in the Event ID. Defaults to 4322',
+			'instructions' => 'Enter in the Event ID. Defaults to 6015',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -6449,8 +6508,8 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => 4322,
-			'placeholder' => 4322,
+			'default_value' => 6015,
+			'placeholder' => 6015,
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => '',

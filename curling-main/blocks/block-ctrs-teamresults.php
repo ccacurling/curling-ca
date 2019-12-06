@@ -9,7 +9,7 @@ $teamid = $_GET["teamid"];
 $events_details_link = get_field("event_details_link");
 
 if (!$events_details_link){
-	$events_details_link = "/ctrs-event-results";
+	$events_details_link = "/team-canada/ctrs-event-results";
 }
 
 $events_details_link .= '/' . $addLanguageUrl;
@@ -17,7 +17,7 @@ $events_details_link .= '/' . $addLanguageUrl;
 $language = apply_filters( 'wpml_current_language', NULL );
 
 
-function do_ctrs_team_results ($teamid, $language) {
+function do_ctrs_team_results ($teamid, $language, $event_link) {
 	
 	$addLanguageUrl = "";
 	$eventsPlayedInText = "Events this team has played in:";
@@ -99,7 +99,7 @@ function do_ctrs_team_results ($teamid, $language) {
 
 		$pointstotal = number_format((double)$pointstotal + $eventpoints, 3);
 
-		$main .= "<form name=viewDetail action='$events_details_link' method='post'>";
+		$main .= "<form name=viewDetail action='$event_link' method='post'>";
 		
 		if ($eventcount <= $maxeventcount):
 			$main .= "<p class='rank-row'><span class='event-name'><input type=submit name=submit value=Details>$event->eventname</span><span>$placename</span><span>$event->pointtotal</span></p>";
@@ -122,6 +122,6 @@ function do_ctrs_team_results ($teamid, $language) {
 
 <section class="ctrs-container">
     <div class="ctrs-wrapper ctrs-teams">
-	<?php echo do_ctrs_team_results($teamid, $language); ?>
+	<?php echo do_ctrs_team_results($teamid, $language, $events_details_link); ?>
     </div>
 </section>

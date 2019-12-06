@@ -29,6 +29,8 @@
 
   $full_menu = get_field('full_menu');
 
+  $full_width = get_field('full_width');
+
   $mens_standing = ccm_get_mens_standing();
   $womens_standing = ccm_get_womens_standing();
 
@@ -83,7 +85,7 @@
     <h3 class="ctrs-main-title"><?php echo __("Canada Team Ranking System (CTRS)"); ?></h3>
 
     <!-- CTRS Standings -->
-    <div class="ctrs-wrapper ctrs-standings">
+    <div class="ctrs-wrapper ctrs-standings<?php echo $full_width ? ' full-width' : ''; ?>">
 
       <div class="ctrs-standings-list womens-list">
         <h3><?php echo __("CTRS Standings Womens"); ?></h3>
