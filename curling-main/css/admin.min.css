@@ -4979,7 +4979,7 @@
 
 .edit-post-layout__content .block-prefooter-simple .block-prefooter-info-btns {
   justify-content: center;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
 }
 
 .edit-post-layout__content .block-prefooter-gray {

@@ -4957,7 +4957,7 @@ li {
 
 .block-prefooter-simple .block-prefooter-info-btns {
   justify-content: center;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
 }
 
 .block-prefooter-gray {

@@ -8,6 +8,10 @@
 ?>
 
 <?php
+
+$current_lang = apply_filters( 'wpml_current_language', NULL );
+
+
 $prefooter_title = get_field( 'prefooter_title' );
 $prefooter_body = get_field( 'prefooter_body' );
 $prefooter_image = get_field( 'prefooter_image' );
@@ -28,8 +32,33 @@ if ( !isset($prefooter_button_two_label) || empty($prefooter_button_two_label) )
   $prefooter_button_two_label = $prefooter_button_two;
 }
 
+echo "<pre class='debug' style='display:none;'>";
+print_r($prefooter_shop_link);
+print_r($prefooter_donate_link);
+print_r($current_lang);
+echo "</pre>";
+
+
 $prefooter_shop_link = get_field( 'settings_shop_link', 'Options' );
 $prefooter_donate_link = get_field( 'settings_donate_link', 'Options' );
+
+if ($current_lang == "fr"){
+
+  if ($prefooter_shop_link['title'] == "Shop"){
+    $prefooter_shop_link['title'] = 'Boutique';
+  }
+  
+  if ($prefooter_donate_link['title'] == "Donate") {
+    $prefooter_donate_link['title'] = 'Dons';
+  }
+
+}
+
+echo "<pre class='debug' style='display:none;'>";
+print_r($prefooter_shop_link);
+print_r($prefooter_donate_link);
+print_r($current_lang);
+echo "</pre>";
 
 ?>
 
