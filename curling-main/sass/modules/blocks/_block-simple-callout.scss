@@ -46,6 +46,9 @@
 
 .simple-callout-title {
   margin-bottom: 12px;
+  @include responsive-min($responsive-laptop) {
+    font-size: 36px;
+  }
 }
 
 .simple-callout-description {

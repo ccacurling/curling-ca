@@ -2959,6 +2959,12 @@ li {
   margin-bottom: 12px;
 }
 
+@media only screen and (min-width: 999px) {
+  .simple-callout-title {
+    font-size: 36px;
+  }
+}
+
 .simple-callout-description {
   margin-bottom: 12px;
   font-size: 14px;
@@ -7426,7 +7432,7 @@ h1.page-intro-main-headline {
   margin-bottom: 20px;
   max-width: 220px;
   line-height: 52px;
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .team-small-location {

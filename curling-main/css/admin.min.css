@@ -3499,6 +3499,12 @@
   margin-bottom: 12px;
 }
 
+@media only screen and (min-width: 999px) {
+  .edit-post-layout__content .simple-callout-title {
+    font-size: 36px;
+  }
+}
+
 .edit-post-layout__content .simple-callout-description {
   margin-bottom: 12px;
   font-size: 14px;
@@ -7448,7 +7454,7 @@
   margin-bottom: 20px;
   max-width: 220px;
   line-height: 52px;
-  font-size: 40px;
+  font-size: 36px;
 }
 
 .edit-post-layout__content .team-small-location {
