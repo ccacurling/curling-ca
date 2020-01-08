@@ -4,7 +4,7 @@
  */
 
 
-$teamid = $_GET["teamid"];
+$teamid = $_REQUEST["teamid"];
 
 $events_details_link = get_field("event_details_link");
 
@@ -12,7 +12,7 @@ if (!$events_details_link){
 	$events_details_link = "/team-canada/ctrs-event-results";
 }
 
-$events_details_link .= '/' . $addLanguageUrl;
+//$events_details_link .= '/' . $addLanguageUrl;
 
 $language = apply_filters( 'wpml_current_language', NULL );
 

@@ -45,7 +45,7 @@
   //error_log("Details Page Link outside" . print_r($details_page_link,true ));
   
   if ( !isset($details_page_link) || empty($details_page_link) ) {
-    $details_page_link = "https://www.curling.ca/team-canada/ctrs-team-results/";
+    $details_page_link = "https://www.curling.ca/team-canada/canadian-team-ranking-system/ctrs-team-results/";
   }
   
 

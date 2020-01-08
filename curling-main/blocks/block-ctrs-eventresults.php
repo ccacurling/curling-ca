@@ -5,14 +5,25 @@
 
 //$year = get_field('year');
 $event_id = get_field('event_id');
+$team_results_link = get_field('team_results_link');
 
-function cca_ctrs_event_results ($eid) {
+function cca_ctrs_event_results ($eid, $team_results_link) {
 
-	if (isset($eid) && !empty($eid)){
+	
+
+	if (isset($_POST["eventid"]) && !empty($_POST["eventid"])){
+		$eventid = $_POST["eventid"];
+	} else if (isset($eid) && !empty($eid)){
 		$eventid = $eid; //$_POST["eventid"];
 	} else {
-		$eventid = $_POST["eventid"];
+		$eventid = "6015";//$_POST["eventid"];
 	}
+
+	error_log("EID: " . $eid);
+	error_log("POST EID: " . $_POST["eventid"]);
+	error_log("RESULT EID: " . $eventid);
+	
+	
 	$addLanguageUrl = "";
 	$language = $_GET['lang'];
 
@@ -21,14 +32,14 @@ function cca_ctrs_event_results ($eid) {
 	}
 
 	$view = $_POST["view"];
-	if ($eventid == "") {
-		$eventid = "6015";
-	}
+
 	$xmlfile = "http://ctrs.curling.ca/event" . $eventid . ".xml";
+
+	error_log($xmlfile);
 
 	$sxe = simplexml_load_file($xmlfile);
 
-	$eventid = $sxe->eventid;
+	//$eventid = $sxe->eventid;
 	$eventname = $sxe->eventname;
 	$eventyear = $sxe->eventyear;
 	$startdate = $sxe->startdate;
@@ -204,6 +215,8 @@ function cca_ctrs_event_results ($eid) {
 
 
 		$xmlfile = "http://ctrs.curling.ca/ctrs_event" . $eventid . "points.xml";
+
+		error_log($xmlfile);
 			
 		$sle = simplexml_load_file($xmlfile);
 
@@ -232,12 +245,17 @@ function cca_ctrs_event_results ($eid) {
 				$teamstanding = "N/A";
 			endif;
 					
-			$event_link = "../ctrs-team-results/$addLanguageUrl";
+			if ( isset($team_results_link) && !empty($team_results_link) ){
+				$event_link = $team_results_link . $addLanguageUrl;
+			} else {
+				$event_link = "../ctrs-team-results/$addLanguageUrl";
+			}
+			
 
 			$main .= "<form name=viewDetail action='$event_link' method='post'>";
 			$main .= "<p class='rank-row' style='background-color: $bgcolor;'>";
 			$main .= "<span class='event-name'><input type=submit name=submit value=Details>{$team->skiplastname}, {$team->skipfirstname}</span><span>$teamstanding</span><span>{$team->pointtotal}</span></p>";
-			$main .= "<input name=eventid type=hidden value=" . $team->teamid . "></form>";
+			$main .= "<input name=teamid type=hidden value=" . $team->teamid . "></form>";
 		}
 
 		$main .= "<p class='total-row'><b>" . number_format((double)$event_totalpoints,3) . "</b></p>";
@@ -250,6 +268,6 @@ function cca_ctrs_event_results ($eid) {
 ?>
 <section class="ctrs-container">
     <div class="ctrs-wrapper ctrs-teams">
-	<?php echo cca_ctrs_event_results($event_id); ?>
+	<?php echo cca_ctrs_event_results($event_id, $team_results_link); ?>
     </div>
 </section>

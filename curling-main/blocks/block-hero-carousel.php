@@ -51,7 +51,7 @@
         } else if ($type === 'youtube_video') {
           $video_title = $post['hero_carousel_title'];
           $video_youtube_video_id = $post['hero_carousel_youtube_video_id'];
-          $video_thumbnail = 'https://img.youtube.com/vi/'.$video_youtube_video_id.'/hqdefault.jpg';
+          $video_thumbnail = 'https://img.youtube.com/vi/'.$video_youtube_video_id.'/maxresdefault.jpg';
           $video_url = 'https://www.youtube.com/watch?v='.$video_youtube_video_id;
           $video_link = $post['hero_carousel_link'];
         } else {

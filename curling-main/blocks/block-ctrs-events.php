@@ -25,12 +25,11 @@ function cca_ctrs_events($year, $type_id) {
 	if ($language=="fr") {
 	  $addLanguageUrl = "?lang=fr";
 	}
-    $main = '';
-	$main .= "<table bgcolor=#999999 cellspacing=1 cellpadding=2 width=630 border=0>
-	    	<tr bgcolor=#DADADA>
-	    	<td width=530><b>Event</b></td>
-	    	<td width=100 align=center><b>Results</b></td>
-	    </tr>";
+	$main ="<style>.events-title span {font-family: 'Knockout';font-size: 20px;color: #000000;letter-spacing: 1px;line-height: 20px;font-weight: 300;text-transform: uppercase;} </style>";
+    $main .= "<div class='ctrs-team-results-team-container' style='width: 100%;'><div class='standings-container' style='border: 1px solid #979797;'>";
+	$main .= "<p class='title-row events-title' style='border-bottom: 1px solid #979797;padding: 20px;background-color:#fff;display: flex;flex-direction: row;justify-content: space-between;'>
+			<span style=''>Event</span>
+			<span style=''>Results</span></p>";
 
 	$filename = "http://ctrs.curling.ca/" . $eventyear . "schedule_eventtype" . $eventtypeid . ".xml";
 
@@ -66,14 +65,14 @@ function cca_ctrs_events($year, $type_id) {
 		endif;
 		        
 		$main .= "<form name=viewDetail action=../ctrs-event-results/$addLanguageUrl method=post>
-	        <tr bgcolor='$bgcolor'>
-	        <td valign=top><b>" . $event->eventname . "</b><br>" . $event->city . ", " . $event->prefix . "<br>" . $eventdate . "<br><a href='" . $event->website . "' target=_blank>" . $event->website . "</a></td>
-	        <td align=center><b><input type=submit name=submit value=Results></b></td>
-	        </tr>
-	        <input name=eventid type=hidden value=" . $event->eventid . "></form>";
+		<p class='rank-row' style='background-color: $bgcolor;padding: 20px;display: flex;flex-direction: row;justify-content: space-between;'>
+			<span class='event-name'>{$event->eventname}<br>{$event->city}, {$event->prefix}<br>{$eventdate}<br>
+				<a href='{$event->website}' target=_blank>{$event->website}</a></span>
+			<span><input name='eventid' type=hidden value=" . $event->eventid . "><input type=submit name=submit value=Results></span>
+		</p></form>";
 				
 	}
-	$main .= "</table>";
+	$main .= "</div></div>";
 	return $main;
 }
 ?>

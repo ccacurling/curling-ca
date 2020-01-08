@@ -6036,8 +6036,8 @@ acf_add_local_field_group(array(
 			'key' => 'field_5de6e4fab2f45',
 			'label' => 'Event Details Page Link',
 			'name' => 'event_details_link',
-			'type' => 'url',
-			'instructions' => 'This is the page where the "Details" button will link to. If left blank this will default to "/team-canada/ctrs-event-results" (https://curling.ca/team-canada/ctrs-event-results). To override you can use the shorthand url ("/something") or the full form ("https://curling.ca/something")',
+			'type' => 'link',
+			'instructions' => 'This is the page where the "Details" button will link to. If left blank this will default to "/ctrs-event-results" (https://curling.ca/ctrs-event-results).',
 			'required' => 0,
 			'conditional_logic' => 0,
 			'wrapper' => array(
@@ -6045,8 +6045,7 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
-			'placeholder' => '/team-canada/ctrs-event-results',
+			'return_format' => 'url',
 		),
 	),
 	'location' => array(
@@ -6513,6 +6512,23 @@ acf_add_local_field_group(array(
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => '',
+		),
+		array(
+			'key' => 'field_5e14f56df18ce',
+			'label' => 'Team Results Link',
+			'name' => 'team_results_link',
+			'type' => 'link',
+			'instructions' => 'Set the page where the details button will link to. The page should contain the CTRS Team Results Block in order to work. 
+
+If left blank, will default to "https://www.curling.ca/team-canada/canadian-team-ranking-system/ctrs-team-results/".',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'return_format' => 'url',
 		),
 	),
 	'location' => array(
