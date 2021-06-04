@@ -812,6 +812,10 @@ li {
   max-width: 1210px;
 }
 
+.curling-post-content .block-container {
+  padding-left: 0px;
+}
+
 .block-container .wp-block-table > tbody > tr > td {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1056,6 +1060,17 @@ li {
   .block-column.equal-height > .wp-block-cossette-block-column-3 > .wp-block-columns .wp-block-column > section[class^="block-"]:only-child {
     margin: 0;
   }
+}
+
+.curling-post-content .wp-block-image {
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.curling-post-content .wp-block-image img {
+  max-width: unset;
 }
 
 .curling-sidebar {
@@ -8153,7 +8168,7 @@ h1.page-intro-main-headline {
 }
 
 .ctrs-container .ctrs-teams .ctrs-team-results-team-container .standings-container p span.event-name {
-  min-width: 400px;
+  min-width: 500px;
 }
 
 @media only screen and (max-width: 999px) {
@@ -9004,6 +9019,14 @@ h1.page-intro-main-headline {
 
 .width-50 {
   width: 50%;
+}
+
+@media only screen and (max-width: 769px) {
+  .wp-block-media-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=main.min.css.map */

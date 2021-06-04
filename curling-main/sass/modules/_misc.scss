@@ -472,3 +472,11 @@
 .width-50 {
   width: 50%;
 }
+
+@media only screen and (max-width: 769px) {
+    .wp-block-media-text {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

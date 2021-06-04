@@ -108,6 +108,10 @@
   padding-right: $fixed-padding-right-lg;
   max-width: 1210px;
 
+  .curling-post-content & {
+    padding-left: 0px;
+  }
+
   .wp-block-table > tbody > tr > td {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -361,6 +365,20 @@
           }
         }
       }
+    }
+  }
+}
+
+.curling-post-content {
+
+  .wp-block-image {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    img {
+      max-width: unset;
     }
   }
 }

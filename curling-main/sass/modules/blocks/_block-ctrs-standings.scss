@@ -214,7 +214,7 @@
           }
         }
         span.event-name {
-          min-width: 400px;
+          min-width: 500px;
           @include responsive-max($responsive-laptop){
             min-width: 160px;
             margin-right: 20px;
