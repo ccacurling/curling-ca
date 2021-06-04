@@ -1065,8 +1065,10 @@ li {
 .curling-post-content .wp-block-image {
   overflow: hidden;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .curling-post-content .wp-block-image img {

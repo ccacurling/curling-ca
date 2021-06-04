@@ -1098,8 +1098,10 @@
 .edit-post-layout__content .curling-post-content .wp-block-image {
   overflow: hidden;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 
 .edit-post-layout__content .curling-post-content .wp-block-image img {

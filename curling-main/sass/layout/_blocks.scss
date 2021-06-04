@@ -374,9 +374,10 @@
   .wp-block-image {
     overflow: hidden;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    
+    align-items: center;
+    margin: 0;    
     img {
       max-width: unset;
     }
