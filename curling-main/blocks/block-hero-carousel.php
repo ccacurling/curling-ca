@@ -6,6 +6,7 @@
  */
   $featured_posts = get_field( 'hero_carousel_featured_posts' );
 
+if (!function_exists("get_image")){
   function get_image($hero_featured_post, $size = 'large') {
     if ($hero_featured_post) {
       $image = get_field( 'hero_image', $hero_featured_post->ID);
@@ -27,6 +28,7 @@
       return null;
     }
   }
+}
 ?>
 <section class="block-hero-carousel js-hero-carousel" >
   <div class="master-slider ms-skin-default js-slider" data-delay="5">

@@ -1064,7 +1064,8 @@ li {
 
 .curling-post-content .wp-block-image {
   overflow: hidden;
-  display: flex;
+  /*display: flex;*/
+  display: inline;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -1073,6 +1074,13 @@ li {
 
 .curling-post-content .wp-block-image img {
   max-width: unset;
+  width: 100%;
+  height: auto;
+}
+
+.wp-block-columns .wp-block-image img {
+  width: 100%;
+  height: auto;
 }
 
 .curling-sidebar {
