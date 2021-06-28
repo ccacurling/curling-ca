@@ -279,21 +279,9 @@
                 foreach( $top_right_menu_items as $menu_item ) {
               ?>
                 <li class="menu-item menu-item-selectable">
-                  <?php
-                    if ($menu_item->url) {
-                  ?>
-                    <a class="clear" href="<?php echo $menu_item->url; ?>">
-                  <?php
-                    }
-                  ?>
-                    <h4 class="menu-item-content menu-item-small menu-item-link gray"><?php echo $menu_item->title; ?></h4>
-                  <?php
-                    if ($menu_item->url) {
-                  ?>
+                    <a class="clear" href="<?php echo $menu_item->url ? $menu_item->url : '#'; ?>">
+                      <h4 class="menu-item-content menu-item-small menu-item-link gray"><?php echo $menu_item->title; ?></h4>
                     </a>
-                  <?php
-                    }
-                  ?>
                 </li>
               <?php
                 }
