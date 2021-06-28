@@ -78,8 +78,8 @@ h1 {
     text-transform: uppercase;
     @include responsive-min($responsive-laptop) {
       font-size: 60px;
-      line-height: 104px;
-      letter-spacing: 0.95px;
+      line-height: 52px;
+      letter-spacing: 0.6px;
     }
 }
 
@@ -93,8 +93,8 @@ h2 {
     text-transform: uppercase;
     @include responsive-min($responsive-laptop) {
       font-size: 35px;
-      letter-spacing: 0.6px;
-      line-height: 52px;
+      line-height: 32px;
+      letter-spacing: 1.2px;
     }
 }
 
@@ -108,8 +108,8 @@ h3 {
     text-transform: uppercase;
     @include responsive-min($responsive-laptop) {
       font-size: 30px;
+      line-height: 28px;
       letter-spacing: 1px;
-      line-height: 32px;
     }
 }
 
