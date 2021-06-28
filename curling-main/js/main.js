@@ -32,6 +32,13 @@ jQuery(document).ready(function($) {
     dots: true,
   });
 
+  //check window size, prevent tab ability if mobile menu is hidden
+  if ($(window).width() < 1000) {
+    $('a.clear').setAttribute("tabindex", "-1");
+  } else {
+    $('a.clear').removeAttribute("tabindex");
+  }
+
   $(document).on('lity:close', (event, instance) => {
     $('.js-hero-carousel').each((i, element) => {
       const $this = $(element);
