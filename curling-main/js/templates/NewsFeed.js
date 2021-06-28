@@ -224,14 +224,14 @@ jQuery(document).ready(function($) {
       }
       
       
-      const $divPagination = $('<div>', {
+      const $divPagination = $('<section>', {
         class: 'news-feed-pagination'
       });
 
       for (let i = 0; i < pages.length; ++i) {
         const page = pages[i];
 
-        const $paginationBlock = $('<div>', {
+        const $paginationBlock = $('<a>', {
           class: 'news-feed-pagination-block' + (page.isCurrent ? ' news-feed-pagination-block-selected' : '') + (page.large ? ' news-feed-pagination-block-large' : '')
         })
 
