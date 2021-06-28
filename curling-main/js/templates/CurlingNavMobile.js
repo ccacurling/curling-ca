@@ -87,6 +87,7 @@ jQuery(document).ready(function($) {
       const popups = this.element.find('.js-cta-popout-mobile[data-id="' + id + '"]');
       if (popups.length > 0) {
         popups.addClass('active');
+        popups.attr("aria-expanded", "true");
         return true;
       } else {
         return false;
@@ -97,6 +98,7 @@ jQuery(document).ready(function($) {
       $('.js-cta-popout-mobile').each((index, element) => {
           const $this = $(element);
           $this.removeClass('active');
+          $this.attr("aria-expanded", "false");
       });
     }
 
