@@ -56,6 +56,7 @@ jQuery(document).ready(function($) {
             } else {
               this.hideMenusMobile();
               $this.toggleClass('active');
+              $this.attr("aria-expanded", "true");
             }
           })
       });
@@ -106,6 +107,7 @@ jQuery(document).ready(function($) {
       $('.js-cta-menu-list-mobile').each((index, element) => {
         const $this = $(element);
         $this.removeClass('active');
+        $this.attr("aria-expanded", "false");
       });
     }
   }

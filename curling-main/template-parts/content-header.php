@@ -441,7 +441,7 @@
 
 <?php
 function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $top_level_menu, $translation_language) { ?>
-  <div class="nav-menu-popout-mobile <?php echo $options['is_submenu'] ? 'nav-menu-popout-submenu-mobile' : ''; ?> js-cta-popout-mobile" data-id="0" aria-expanded="false">
+  <div class="nav-menu-popout-mobile <?php echo $options['is_submenu'] ? 'nav-menu-popout-submenu-mobile' : ''; ?> js-cta-popout-mobile" data-id="0">
     <div class="nav-menu-top-right-mobile <?php echo $options['is_submenu'] ? 'js-nav-title-mobile' : ''; ?>">
       <div class="menu-nav-mobile <?php echo $options['is_submenu'] ? 'menu-submenunav-mobile' : ''; ?>">
       <?php
