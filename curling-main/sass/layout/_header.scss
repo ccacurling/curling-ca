@@ -215,6 +215,9 @@
     @include responsive-min($responsive-laptop) {
       max-width: 228px;
     }
+    &:focus-visible {
+      outline: black auto 1px;
+    }
   }
 
   .nav-left-offset {

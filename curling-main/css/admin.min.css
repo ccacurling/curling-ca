@@ -1314,6 +1314,9 @@
     max-width: 228px;
   }
 }
+.edit-post-layout__content .header-event .menu-logo:focus-visible {
+  outline: black auto 1px;
+}
 .edit-post-layout__content .header-event .nav-left-offset {
   padding-left: 18%;
   padding-right: 5%;

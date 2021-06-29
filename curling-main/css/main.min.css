@@ -1374,6 +1374,9 @@ li {
     max-width: 228px;
   }
 }
+.header-event .menu-logo:focus-visible {
+  outline: black auto 1px;
+}
 .header-event .nav-left-offset {
   padding-left: 18%;
   padding-right: 5%;
