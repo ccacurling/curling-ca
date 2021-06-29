@@ -19,7 +19,7 @@
 </head>
 
 <body class="<?php echo join(' ', get_body_class()); ?> content-fixed">
-	<a href="#main-content" id="#skip-to-main-content" style="display: none;"></a>
+	<a href="#main-content" id="#skip-to-main-content" style="display: none;">Skip To Main Content</a>
 	<header>
         <?php get_template_part('template-parts/content', 'header'); ?>
     </header>
