@@ -13,7 +13,9 @@ $file = get_field('download_item_callout_file');
 <section role="download" class="block-download-item-callout">
   <div class='download-item-inner'>
     <div class="download-item-left">
+    <?php if (!empty($title)): ?>
       <h3 class="download-item-title"><?php echo $title; ?></h3>
+    <?php endif; ?>
     </div>
       <?php 
         if ($file) { 

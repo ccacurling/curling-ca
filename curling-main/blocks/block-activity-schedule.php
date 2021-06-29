@@ -13,7 +13,9 @@
 
 <section class="activity-schedule-block">
   <div role="activities" class="content-container">
+  <?php if (!empty($activity_title)): ?>  
     <h3><?php echo $activity_title; ?></h3>
+  <?php endif; ?>
     <p class="activity-description"><?php echo $activity_description; ?></p>
     <div role="schedule" class="schedule-table desktop-table">
       <div role="table-title" class="table-title-row">

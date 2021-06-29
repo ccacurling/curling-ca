@@ -29,7 +29,9 @@
       }
     ?>
     <div class="callout-info callout-info-medium">
+      <?php if (!empty($video_promo_title)): ?>
         <h3 class="callout-title callout-title-medium"><?php echo $video_promo_title; ?></h3>
+      <?php endif; ?>
       <?php if ( isset($video_promo_text) && !empty($video_promo_text) ) { ?>
         <p class="callout-text"><?php echo __($video_promo_text); ?></p>
       <?php } ?>

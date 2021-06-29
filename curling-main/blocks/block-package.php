@@ -37,13 +37,17 @@ if ( $current_lang == "fr" ) {
     </div>
     <h4 class="package-price-info <?php echo $package_price_colour; ?>"><?php echo $package_price_info; ?></h4>
   </div>
-  <div class="package-wrapper">
+  <div class="package-wrapper"> 
+  <?php if (!empty($package_name)): ?>
     <h2 class="package-name"><?php echo $package_name; ?></h2>
+  <?php endif; ?>
     <div class="package-price-container-mobile">
       <div class="package-price-wrapper english-price">
         <?php echo $price_html; ?>
       </div>
+    <?php if (!empty($package_price_colour) && !empty($package_price_info)) : ?>
       <h4 class="package-price-info <?php echo $package_price_colour; ?>"><?php echo $package_price_info; ?></h4>
+    <?php endif; ?>
     </div>
     <div class="package-info-container">
       <?php echo $package_info; ?>

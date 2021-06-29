@@ -20,7 +20,9 @@ if ( !isset($link_label) || empty($link_label) ){
 <section class="block-single-callout block-single-callout-red<?php //echo $background_colour; ?>">
   <div class='callout-inner <?php echo $add_left_line ? 'left-line' : ''; ?>'>
     <div class="callout-left">
+    <?php if (!empty($title)): ?>
       <h3><?php echo $title; ?></h3>
+    <?php endif; ?>
       <p><?php echo $description; ?></p>
     </div>
 <?php if ( isset($link) && !empty($link) ) { ?>

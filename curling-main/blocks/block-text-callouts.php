@@ -33,9 +33,9 @@
       <?php } ?>
   
         <div class='callout-details <?php echo ($has_image ? 'has-image' : ''); ?>'>
-  
+        <?php if (!empty($callout['title'])): ?>
           <h4><?php echo $callout['title']; ?></h4>
-  
+        <?php endif; ?>
           <?php if (isset($callout['description']) && !empty($callout['description']) ){ 
             echo "<p>{$callout['description']}</p>";
           } ?> 

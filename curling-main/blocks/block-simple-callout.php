@@ -20,7 +20,9 @@ if ( !isset($link_label) || empty($link_label) ){
     <a class="simple-callout-link-mobile" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><h4 class="simple-callout-title-mobile arrow-right-large-gray gray"><?php echo $title; ?></h4></a>
   </div>
   <div role="callout-desktop" class="simple-callout-desktop">
-  <h2 class="simple-callout-title"><?php echo $title; ?></h2>
+  <?php if (!empty($title)): ?>
+    <h2 class="simple-callout-title"><?php echo $title; ?></h2>
+  <?php endif; ?>
   <p class="simple-callout-description"><?php echo $description; ?></p>
   <?php 
     if ( isset($link) ) { 
