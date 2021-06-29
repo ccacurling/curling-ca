@@ -14,12 +14,12 @@ $callout_pdf_schedule_link_text = get_field( 'callout_pdf_schedule_link_text' );
 $callout_pdf_schedule_link = get_field( 'callout_pdf_schedule_link' );
 ?>
 
-<section class="block-callout block-broadcast-callout">
+<section role="callout-block" class="block-callout block-broadcast-callout">
   <div class="callout-wrapper">
     <?php
       if ($callout_label) {
     ?>
-      <div class="callout-label">
+      <div role="label" class="callout-label">
         <h4 class="inverted"><?php echo $callout_label; ?></h4>
       </div>
     <?php
@@ -28,13 +28,13 @@ $callout_pdf_schedule_link = get_field( 'callout_pdf_schedule_link' );
     <?php 
       if ($callout_image) {
     ?>
-      <div class="callout-thumbnail-container">
+      <div role="thumbnail" class="callout-thumbnail-container">
         <img class="callout-thumbnail" src="<?php echo $callout_image['url']; ?>" alt="<?php echo $callout_image['alt']; ?>" />
       </div>
     <?php
       }
     ?>
-    <div class="callout-info">
+    <div role="info" class="callout-info">
       <?php
         if ($callout_title) {
       ?>

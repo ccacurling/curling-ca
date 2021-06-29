@@ -31,7 +31,7 @@ if (!function_exists("get_image")){
 }
 ?>
 <section class="block-hero-carousel js-hero-carousel" >
-  <div class="master-slider ms-skin-default js-slider" data-delay="5">
+  <div role="banner-carousel" class="master-slider ms-skin-default js-slider" data-delay="5">
     <?php 
       foreach ($featured_posts as $key => $post) {
         $type = $post['hero_carousel_item_type'];

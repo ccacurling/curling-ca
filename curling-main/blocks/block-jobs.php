@@ -15,7 +15,7 @@
 ?>
 
 <section class="block-jobs content-full-wrapper">
-  <div class="jobs-container">
+  <div role="jobs-info" class="jobs-container">
     <?php
       if ($jobs_include_ad) {
     ?>

@@ -14,7 +14,7 @@
   $link = 'https://www.youtube.com/watch?v='.$video_promo_youtube_video_id;
 ?>
 
-<section class="block-video-promo block-callout callout-colour-gray">
+<section role="video" class="block-video-promo block-callout callout-colour-gray">
   <div class="callout-wrapper">
     <?php 
       if ($thumbnail) {

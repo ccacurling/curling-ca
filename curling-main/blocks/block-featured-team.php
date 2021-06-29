@@ -13,7 +13,7 @@ $featured_team_link = get_field( 'featured_team_link' );
 ?>
 
 <section class="block-featured-team">
-  <div class="featured-team-container">
+  <div role="featured-team" class="featured-team-container">
     <?php 
       if ($featured_team_thumbnail) {
     ?>
@@ -23,7 +23,7 @@ $featured_team_link = get_field( 'featured_team_link' );
     <?php
       }
     ?>
-    <div class="featured-team-info">
+    <div role="info" class="featured-team-info">
       <div class="featured-team-info-container">
         <?php
           if ($featured_team) {

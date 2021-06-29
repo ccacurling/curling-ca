@@ -59,7 +59,7 @@ function do_ctrs_team_results ($teamid, $language, $event_link) {
 
 
 
-	$main .= "<div class='ctrs-team-results-team-container'><h3 class='ctrs-team-results-title'>" . __("CTRS Team Results") . "</h3>";
+	$main .= "<div role='team-results' class='ctrs-team-results-team-container'><h3 class='ctrs-team-results-title'>" . __("CTRS Team Results") . "</h3>";
 
 	$main .= "<div class='standings-container'>";
 
@@ -99,7 +99,7 @@ function do_ctrs_team_results ($teamid, $language, $event_link) {
 
 		$pointstotal = number_format((double)$pointstotal + $eventpoints, 3);
 
-		$main .= "<form name=viewDetail action='$event_link' method='post'>";
+		$main .= "<form role='form' name=viewDetail action='$event_link' method='post'>";
 		
 		if ($eventcount <= $maxeventcount):
 			$main .= "<p class='rank-row'><span class='event-name'><input type=submit name=submit value=Details>$event->eventname</span><span>$placename</span><span>$event->pointtotal</span></p>";

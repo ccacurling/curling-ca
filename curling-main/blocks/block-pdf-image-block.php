@@ -10,7 +10,7 @@
 
 <section id="<?php echo $id ?>" class="pdf-with-image-block-container">
 
-  <div class="pdf-section">
+  <div role="image" class="pdf-section">
 
     <?php if ( have_rows('pdfs') ) {
       while ( the_repeater_field( 'pdfs' ) ) {

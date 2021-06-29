@@ -46,7 +46,7 @@ if ( !isset($link_label) || empty($link_label) ){
   $link_label = $link;
 }
 ?>
-<div class="<?php echo $align; ?>">
+<div role="button" class="<?php echo $align; ?>">
   <a class="<?php echo $button_class; ?> text-<?php echo $text_size; ?> <?php echo $extraClasses ? $extraClasses : ''; ?>"  href="<?php echo $link; ?>" target="<?php echo $target_blank ? '_blank' : '_self'; ?>">
     <?php echo $link_label; ?>
   </a>

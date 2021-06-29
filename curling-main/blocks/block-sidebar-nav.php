@@ -16,7 +16,7 @@
 ?>
 
 <section class="curling-sidebar">
-  <div class="sidebar-container">
+  <div role="sidebar-nav" class="sidebar-container">
     <div class="sidebar-nav-container">
       <?php if ( count($links) > 1 ) { ?>
         <img class="trigger-subnav-links" src="<?php echo get_stylesheet_directory_uri(); ?>/images/triangle-down-gray.svg" alt="<?php echo __("Triangle"); ?>" />

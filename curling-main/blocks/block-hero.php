@@ -64,7 +64,7 @@ if ($image) {
 ?>
 
 <section class="block-hero <?php echo $hero_class; ?> <?php echo $is_event ? '' : 'block-hero-main'; ?> js-hero-container">
-  <div class="hero-media-container">
+  <div role="banner" class="hero-media-container">
   <?php
       if ($external_video) {
     ?>
