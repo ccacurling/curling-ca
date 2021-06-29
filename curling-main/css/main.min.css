@@ -3398,6 +3398,9 @@ li {
 
 .hero-carousel-caption {
   display: -webkit-box;
+  font-size: 120px;
+  line-height: 104px;
+  letter-spacing: 0.95px;
   position: absolute;
   bottom: 0;
   margin-bottom: 113px;
