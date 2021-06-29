@@ -1789,6 +1789,9 @@ li {
   transition: background-color 0.3s ease-in;
   cursor: pointer;
 }
+.btn:focus-visible, .mailing-list .field-row input[type=submit]:focus-visible, .newsletter-signup-submit:focus-visible, .footer-content-right-wrapper .wpcf7-submit:focus-visible {
+  outline: black auto 1px;
+}
 
 .btn-small, .mailing-list .field-row input[type=submit], .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
   padding-top: 10px;
