@@ -1676,7 +1676,6 @@
   border: none;
   background-color: #ed1940;
   color: #ffffff;
-  text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   font-family: "Knockout";
@@ -1802,7 +1801,6 @@
   align-items: center;
   color: inherit;
   cursor: pointer;
-  text-decoration: none;
 }
 .edit-post-layout__content .btn-link:hover .btn-link-arrow {
   margin-left: 16px;
@@ -3748,7 +3746,6 @@
 }
 .edit-post-layout__content .event-location-container .info-section .event-links div p a {
   color: #ed1940;
-  text-decoration: none;
   font-style: normal;
 }
 .edit-post-layout__content .event-location-container .info-section .event-links div p a img {
@@ -4440,7 +4437,6 @@
   white-space: nowrap;
 }
 .edit-post-layout__content .block-sponsors .sponsors-content .sponsors-section .sponsor-container a {
-  text-decoration: none;
   color: #ed1940;
 }
 .edit-post-layout__content .block-sponsors .sponsors-content .sponsors-section .sponsor-container .sponsor-container-link {
@@ -5796,7 +5792,6 @@
 }
 .edit-post-layout__content .text-callouts-group .single-text-callout .callout-details a {
   padding-bottom: 2rem;
-  text-decoration: none;
   color: red;
   text-transform: uppercase;
   align-self: flex-start;
