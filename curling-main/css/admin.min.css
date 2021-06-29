@@ -1696,6 +1696,9 @@
   transition: background-color 0.3s ease-in;
   cursor: pointer;
 }
+.edit-post-layout__content .btn:focus-visible, .edit-post-layout__content .newsletter-signup-submit:focus-visible, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit:focus-visible {
+  outline: black auto 1px;
+}
 .edit-post-layout__content .btn-small, .edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
   padding-top: 10px;
   padding-bottom: 10px;
