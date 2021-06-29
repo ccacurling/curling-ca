@@ -311,7 +311,6 @@
                 <?php var_dump($donate_link); ?>
                 </pre>
                 <a class="menu-item-donate-link clear" href="<?php echo $donate_link["url"]; ?>">
-                  
                   <h4 class="menu-item-small inverted"><?php echo __("Donate", "curling-main-theme"); ?></h4>
                 </a>
               </li>
