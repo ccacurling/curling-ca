@@ -10,7 +10,7 @@ $button_title = get_field('download_item_callout_button_title');
 $file = get_field('download_item_callout_file');
 ?>
 
-<section class="block-download-item-callout">
+<section role="download" class="block-download-item-callout">
   <div class='download-item-inner'>
     <div class="download-item-left">
       <h3 class="download-item-title"><?php echo $title; ?></h3>

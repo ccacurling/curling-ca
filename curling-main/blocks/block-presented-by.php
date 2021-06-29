@@ -12,7 +12,7 @@ if (!isset($label) || empty($label)) {
 }
 
 if ( isset($image) && !empty($image) ) { ?>
-<div class='presented-by-box'>
+<div role="credits" class='presented-by-box'>
     <h4 class="presented-by-label"><?php echo $label; ?></h4>
     <img src="<?php echo $image; ?>" class="presented-by-image"/>
 </div>

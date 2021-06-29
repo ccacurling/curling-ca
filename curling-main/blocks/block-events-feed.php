@@ -14,7 +14,7 @@
 ?>
 
 <section class="block-events-feed js-events-feed" data-category="<?php echo $category ? $category->slug : ''; ?>">
-  <div class="events-feed-title-container">
+  <div role="events" class="events-feed-title-container">
     <h3><?php echo $events_feed_title; ?></h3>
   </div>
  <div class="events-feed-items js-events-feed-items"></div>

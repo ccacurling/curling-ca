@@ -1314,6 +1314,9 @@
     max-width: 228px;
   }
 }
+.edit-post-layout__content .header-event .menu-logo:focus-visible {
+  outline: black auto 1px;
+}
 .edit-post-layout__content .header-event .nav-left-offset {
   padding-left: 18%;
   padding-right: 5%;
@@ -1695,6 +1698,9 @@
   background: #f3607b;
   transition: background-color 0.3s ease-in;
   cursor: pointer;
+}
+.edit-post-layout__content .btn:focus-visible, .edit-post-layout__content .newsletter-signup-submit:focus-visible, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit:focus-visible {
+  outline: black auto 1px;
 }
 .edit-post-layout__content .btn-small, .edit-post-layout__content .newsletter-signup-submit, .edit-post-layout__content .footer-content-right-wrapper .wpcf7-submit {
   padding-top: 10px;
@@ -2224,6 +2230,12 @@
 .edit-post-layout__content .menu-item-subsubcontainer-mobile {
   border-bottom: none;
 }
+.edit-post-layout__content .no-link:focus-visible {
+  outline: black auto 1px;
+}
+.edit-post-layout__content .no-link:hover {
+  cursor: default;
+}
 .edit-post-layout__content .menu-item {
   display: flex;
   position: relative;
@@ -2231,9 +2243,6 @@
 }
 .edit-post-layout__content .menu-item:hover {
   cursor: pointer;
-}
-.edit-post-layout__content .menu-item.no-link:hover {
-  cursor: default;
 }
 .edit-post-layout__content .menu-item.active, .edit-post-layout__content .menu-item.menu-item-selected {
   background-color: #ed1940;

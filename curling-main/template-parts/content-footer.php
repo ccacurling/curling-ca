@@ -16,7 +16,7 @@
       <div class="footer-content-left-wrapper">
         <a href="<?php echo get_home_url(); ?>" target="_blank"><img class="footer-logo" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main-footer.svg"; ?>" alt="Site Logo" /></a>
       </div>
-      <div class="footer-content-centre-wrapper">
+      <div role="footer-navigation" class="footer-content-centre-wrapper">
           <?php
               if ($top_left_menu_items) {
           ?>
@@ -50,7 +50,7 @@
             }
             ?>
           </div>
-          <div class="footer-nav-menu-social">
+          <div role="footer-navigation-social" class="footer-nav-menu-social">
             <?php if ($facebook) { ?>
               <a href="<?php echo $facebook; ?>" target="_blank"><img class="menu-item-social" src="<?php echo get_stylesheet_directory_uri()."/images/icon-facebook-white.svg"; ?>" alt="social" /></a>
             <?php } ?>

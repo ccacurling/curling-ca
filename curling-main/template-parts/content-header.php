@@ -192,7 +192,7 @@
 ?>
 
 <div class="header header-mobile <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav-mobile">
-  <div class="nav-menu-top-mobile <?php echo $is_submenu ? 'nav-menu-top-submenu-mobile' : ''; ?> js-cta-topmenu-mobile">
+  <div role="navigation-mobile" class="nav-menu-top-mobile <?php echo $is_submenu ? 'nav-menu-top-submenu-mobile' : ''; ?> js-cta-topmenu-mobile">
     <div></div>
     <a href="<?php echo get_home_url(); ?>">
         <img class="menu-logo-mobile" src="<?php echo get_stylesheet_directory_uri()."/images/logo-main.svg"; ?>" alt="Site Logo" />
@@ -213,7 +213,7 @@
 </div>
 
 <div class="header header-desktop <?php echo $is_event ? 'header-event' : 'header-main'; ?> js-curling-nav">
-  <div class="nav-menu-top-container">
+  <div role="navigaiton-desktop" class="nav-menu-top-container">
     <div class="nav-menu-top">
       <div class="nav-menu-top-wrapper content-container">
         <div class="nav-menu-top-left-wrapper">
@@ -270,7 +270,7 @@
           </ul>
         </div>
 
-        <div class="nav-menu-top-right-wrapper">
+        <div role="navigation-top-right" class="nav-menu-top-right-wrapper">
           <?php
             if ($top_right_menu_items) {
           ?>
@@ -298,7 +298,7 @@
               <?php
                 }
               ?>
-              <li class="menu-item menu-item-selectable search-menu">
+              <li role="search-bar" class="menu-item menu-item-selectable search-menu">
                 <a class="clear search-menu-link" href="#">
                   <h4 class="menu-item-content menu-item-small menu-item-link gray"><?php echo __("Search"); ?></h4>
                 </a>
@@ -306,7 +306,7 @@
               <li class="search-bar hide">
                 <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
               </li>
-              <li class="btn menu-item menu-item-donate">
+              <li class="btn menu-item menu-item-selectable menu-item-donate">
                 <pre class='debug' style='display: none;'>
                 <?php var_dump($donate_link); ?>
                 </pre>
@@ -331,7 +331,7 @@
     </div>
   </div>
 
-  <div class="nav-menu-primary-container">
+  <div role="navigation-primary" class="nav-menu-primary-container">
     <div class="nav-menu-primary <?php echo $is_event ? 'nav-menu-primary-event' : ''; ?>">
       <div class="nav-menu-primary-wrapper content-container">
         <?php
@@ -378,7 +378,7 @@
         <?php
           if ($is_event) {
         ?>
-          <div class="nav-menu-popup-container">
+          <div role="navigation-popup" class="nav-menu-popup-container">
             <?php
               foreach( $menu_items as $id => $menu_item ) {
                 if ($menu_item->is_event_menu) {
@@ -410,7 +410,7 @@
     <?php
       if (!$is_event) {
     ?>
-      <div class="nav-menu-popup-container">
+      <div role="navigation-popup" class="nav-menu-popup-container">
         <?php
           foreach( $menu_items as $id => $menu_item ) {
             if ($menu_item->is_event_menu) {
@@ -441,8 +441,8 @@
 
 <?php
 function create_main_menu_mobile($top_menu_items, $nav_items, $options = [], $top_level_menu, $translation_language) { ?>
-  <div class="nav-menu-popout-mobile <?php echo $options['is_submenu'] ? 'nav-menu-popout-submenu-mobile' : ''; ?> js-cta-popout-mobile" data-id="0" aria-expanded="false">
-    <div class="nav-menu-top-right-mobile <?php echo $options['is_submenu'] ? 'js-nav-title-mobile' : ''; ?>">
+  <div role="navigation-popup-mobile" class="nav-menu-popout-mobile <?php echo $options['is_submenu'] ? 'nav-menu-popout-submenu-mobile' : ''; ?> js-cta-popout-mobile" data-id="0">
+    <div role="navigation-top-right-mobile" class="nav-menu-top-right-mobile <?php echo $options['is_submenu'] ? 'js-nav-title-mobile' : ''; ?>">
       <div class="menu-nav-mobile <?php echo $options['is_submenu'] ? 'menu-submenunav-mobile' : ''; ?>">
       <?php
         if ($options['is_submenu']) {

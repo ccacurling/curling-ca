@@ -27,9 +27,11 @@ jQuery(document).ready(function($) {
         $multi.mouseenter(() => {
             $this.addClass('active');
             $popup.addClass('active');
+            $popup.attr("aria-expanded", "true");
         }).mouseleave(() => {
             $this.removeClass('active');
             $popup.removeClass('active');
+            $popup.attr("aria-expanded", "false");
         });
       });
     }

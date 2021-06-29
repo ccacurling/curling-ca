@@ -10,7 +10,7 @@
  ?>
 
  <section class="block-links">
-  <div class="block-links-container">
+  <div role="links" class="block-links-container">
     <div class="block-links-wrapper">
       <?php
         foreach ($links as $key => $link) {

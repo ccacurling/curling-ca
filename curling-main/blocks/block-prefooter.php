@@ -85,7 +85,7 @@ echo "</pre>";
     <?php
       if ($prefooter_image) {
     ?>
-      <div class="block-prefooter-img-container block-prefooter-img-<?php echo ($prefooter_type === 'tlbr' ? 'right' : 'left'); ?>"
+      <div role="image" class="block-prefooter-img-container block-prefooter-img-<?php echo ($prefooter_type === 'tlbr' ? 'right' : 'left'); ?>"
         style="bottom:<?php echo $prefooter_image_y_offset;?>px;<?php echo ($prefooter_type === 'tlbr' ? 'right' : 'left'); ?>:<?php echo $prefooter_image_x_offset; ?>px">
         <img class="block-prefooter-img" src="<?php echo $prefooter_image['url']; ?>" alt="<?php echo $prefooter_image['alt']; ?>" />
       </div>

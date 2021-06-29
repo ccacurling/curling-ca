@@ -24,7 +24,7 @@ $id = rand(10000000, 99999999);
 ?>
 
 <section class="block-image-carousel <?php echo $carousel_background_colour === 'gray' ? 'image-carousel-gray' : ''; ?> image-carousel-<?php echo $carousel_type; ?> js-image-carousel">
-  <div class="image-carousel-container <?php echo $carousel_accordion_on_mobile ? 'image-carousel-accordion  js-accordion' : ''; ?>" data-id="<?php echo $id; ?>">
+  <div role="image" class="image-carousel-container <?php echo $carousel_accordion_on_mobile ? 'image-carousel-accordion  js-accordion' : ''; ?>" data-id="<?php echo $id; ?>">
     <div class="image-carousel-sub-container <?php echo !$carousel_top_body ? 'image-carousel-nobody' : ''; ?> <?php echo $carousel_accordion_on_mobile ? 'image-carousel-trigger js-accordion-trigger' : ''; ?>"  data-id="<?php echo $id; ?>">
       <?php
         if ($carousel_type == 'normal') {

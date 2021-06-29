@@ -1374,6 +1374,9 @@ li {
     max-width: 228px;
   }
 }
+.header-event .menu-logo:focus-visible {
+  outline: black auto 1px;
+}
 .header-event .nav-left-offset {
   padding-left: 18%;
   padding-right: 5%;
@@ -1788,6 +1791,9 @@ li {
   background: #f3607b;
   transition: background-color 0.3s ease-in;
   cursor: pointer;
+}
+.btn:focus-visible, .mailing-list .field-row input[type=submit]:focus-visible, .newsletter-signup-submit:focus-visible, .footer-content-right-wrapper .wpcf7-submit:focus-visible {
+  outline: black auto 1px;
 }
 
 .btn-small, .mailing-list .field-row input[type=submit], .newsletter-signup-submit, .footer-content-right-wrapper .wpcf7-submit {
@@ -2399,6 +2405,13 @@ li {
   border-bottom: none;
 }
 
+.no-link:focus-visible {
+  outline: black auto 1px;
+}
+.no-link:hover {
+  cursor: default;
+}
+
 .menu-item {
   display: flex;
   position: relative;
@@ -2406,9 +2419,6 @@ li {
 }
 .menu-item:hover {
   cursor: pointer;
-}
-.menu-item.no-link:hover {
-  cursor: default;
 }
 .menu-item.active, .menu-item.menu-item-selected {
   background-color: #ed1940;

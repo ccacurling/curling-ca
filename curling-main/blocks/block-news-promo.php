@@ -20,7 +20,7 @@ $date_string = $date ? $date->format('F j, Y') : '';
   if ($promo_post) {
 ?>
   <section class="block-news-promo block-news-promo-<?php echo $promo_colour; ?>">
-    <div class="news-promo-container <?php echo $promo_is_large ? 'news-promo-large' : ''; ?>">
+    <div role="news-promo" class="news-promo-container <?php echo $promo_is_large ? 'news-promo-large' : ''; ?>">
       <?php 
         if ($promo_thumbnail) {
       ?>

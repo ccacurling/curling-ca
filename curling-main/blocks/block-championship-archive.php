@@ -11,7 +11,7 @@
   $id = rand(10000000, 99999999);
 ?>
 
-<section class="block-championship-archive"> 
+<section role="championship-block" class="block-championship-archive"> 
   <?php
     if ($championship_archives) {
       foreach ($championship_archives as $key => $championship_archive) {
@@ -20,7 +20,7 @@
       <?php
         if ($championship_archive['championship_events']) {
       ?>
-        <div class="championship-event-wrapper">
+        <div role="event" class="championship-event-wrapper">
         <?php
           foreach ($championship_archive['championship_events'] as $key => $championship_event) {
         ?>
@@ -30,7 +30,7 @@
             <p class="championship-event-trigger js-accordion-trigger-text" data-trigger-show="<?php echo __("Show All"); ?>" data-trigger-hide="<?php echo __("Hide All"); ?>" data-id="<?php echo $id; ?>"><?php echo __("Show All"); ?></p>
             <img class="championship-event-trigger-mobile " src="<?php echo get_stylesheet_directory_uri(); ?>/images/triangle-down-gray.svg" alt="<?php echo __("Triangle"); ?>" />
           </div>
-          <div class="championship-events-list-container js-accordion-content" data-id="<?php echo $id; ?>">
+          <div role="events-list" class="championship-events-list-container js-accordion-content" data-id="<?php echo $id; ?>">
             <?php
               if ($championship_event['championship_events']) {
             ?>

@@ -81,11 +81,11 @@
 
   function create_item($site) {
 ?>
-  <div class="block-event-slider-slide block-event-info block-event-info-row">
+  <div role="event-slider" class="block-event-slider-slide block-event-info block-event-info-row">
     <?php
       if ($site['is_live']) {
     ?>
-      <div class="event-info-live-container">
+      <div role="info" class="event-info-live-container">
         <h4 class="event-info-live-text inverted"><?php echo __("Live now"); ?></h4>
       </div>
     <?php
@@ -170,7 +170,7 @@
   }
 ?>
 <section class="block-event-slider">
-  <div class="event-slider-mobile">
+  <div role="mobile-slider" class="event-slider-mobile">
     <div class="event-slider js-slick">
       <?php
         foreach ($sites as $key => $site) {
@@ -179,7 +179,7 @@
       ?>
     </div>
   </div>
-  <div class="event-slider-desktop">
+  <div role="desktop-slider" class="event-slider-desktop">
     <div class="event-slider-header">
       <h2><?php echo $title; ?></h2>
       <a class="event-slider-link clear" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><h4 class="arrow-right-large-gray gray"><?php echo $link['title']; ?></h4></a>

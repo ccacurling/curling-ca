@@ -74,9 +74,9 @@
 
 <section class="ctrs-container">
   
-  <div class="ctrs-title-wrapper">
+  <div role="title" class="ctrs-title-wrapper">
   <?php if ($full_menu) { ?>
-    <div class='ctrs-menu-container'>
+    <div role="menu" class='ctrs-menu-container'>
       <span class='ctrs-menu ctrs-menu-standings selected'><?php echo __("CTRS Standings"); ?></span>
       <span class='ctrs-menu ctrs-menu-doubles'><?php echo __("Mixed Doubles Ranking"); ?></span>
       <span class='ctrs-menu ctrs-menu-cup'><?php echo __("The MA Cup: Top 5"); ?></span>
@@ -85,9 +85,9 @@
     <h3 class="ctrs-main-title"><?php echo __("Canada Team Ranking System (CTRS)"); ?></h3>
 
     <!-- CTRS Standings -->
-    <div class="ctrs-wrapper ctrs-standings<?php echo $full_width ? ' full-width' : ''; ?>">
+    <div role="standings" class="ctrs-wrapper ctrs-standings<?php echo $full_width ? ' full-width' : ''; ?>">
 
-      <div class="ctrs-standings-list womens-list">
+      <div role="women's" class="ctrs-standings-list womens-list">
         <h3><?php echo __("CTRS Standings Womens"); ?></h3>
         <div class="standings-container">
 
@@ -117,7 +117,7 @@
       </div>
 
     
-      <div class="ctrs-standings-list mens-list">
+      <div role="men's" class="ctrs-standings-list mens-list">
         <h3><?php echo __("CTRS Standings Mens"); ?></h3>
         <div class="standings-container">
       <?php
@@ -150,7 +150,7 @@
 
 
     <!-- CTRS Doubles -->
-    <div class="ctrs-wrapper ctrs-doubles hide">
+    <div role="doubles" class="ctrs-wrapper ctrs-doubles hide">
 
       <div class="ctrs-standings-list">
         <h3><?php echo __("Mixed Doubles Rankings"); ?></h3>
@@ -179,7 +179,7 @@
 
 
     <!-- CTRS MA Cup -->
-    <div class="ctrs-wrapper ctrs-cup hide">
+    <div role="ctrs-cup" class="ctrs-wrapper ctrs-cup hide">
 
       <div class="ctrs-standings-list">
         <h3><?php echo __("MA Cup: Top 5"); ?></h3>

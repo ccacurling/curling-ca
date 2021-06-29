@@ -390,16 +390,21 @@
   border-bottom: none;
 }
 
+.no-link {
+  &:focus-visible {
+    outline: black auto 1px;
+  }
+  &:hover {
+    cursor: default;
+  }
+}
+
 .menu-item {
   display: flex;
   position: relative;
   align-items: center;
   &:hover {
     cursor: pointer;
-  }
-
-  &.no-link:hover {
-    cursor: default;
   }
 
   &.active,

@@ -12,11 +12,11 @@
 ?>
 
 <section class="activity-schedule-block">
-  <div class="content-container">
+  <div role="activities" class="content-container">
     <h3><?php echo $activity_title; ?></h3>
     <p class="activity-description"><?php echo $activity_description; ?></p>
-    <div class="schedule-table desktop-table">
-      <div class="table-title-row">
+    <div role="schedule" class="schedule-table desktop-table">
+      <div role="table-title" class="table-title-row">
         <div><h3><?php echo __("DATE"); ?></h3></div>
         <div><h3><?php echo __("TIME"); ?></h3></div>
         <div><h3><?php echo __("PARTICIPANTS"); ?></h3></div>
@@ -27,7 +27,7 @@
           $time = get_sub_field( 'time' );
           $participants = get_sub_field( 'participants' ); ?>
   
-          <div class="activity-row">
+          <div role="activitiy" class="activity-row">
             <div><p><?php echo $date ?></p></div>
             <div><p><?php echo $time ?></p></div>
             <!-- Fix participants, check if it should just be a text field -->
@@ -39,7 +39,7 @@
     </div>
 
     <!-- Mobile table, hidden until breakpoint 998px -->
-    <div class="schedule-table mobile-table">
+    <div role="mobile-table" class="schedule-table mobile-table">
       <div class="table-title-row">
         <div><h3><?php echo __("DATE & TIME"); ?></h3></div>
         <div><h3><?php echo __("PARTICIPANTS"); ?></h3></div>

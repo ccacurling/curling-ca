@@ -19,12 +19,12 @@ $ticket_primary_colour = $ticket_colour === 'white' ? '' : ($ticket_colour === '
 $ticket_secondary_colour = $ticket_colour === 'white' ? 'red' : ($ticket_colour === 'gray' ? 'inverted' : '');
 ?>
 
-<section class="block-ticket block-ticket-<?php echo $ticket_colour; ?>">
-  <div class="ticket-header">
+<section role="ticket-info" class="block-ticket block-ticket-<?php echo $ticket_colour; ?>">
+  <div role="ticket-header" class="ticket-header">
     <h2 class="ticket-title <?php echo $ticket_primary_colour; ?>"><?php echo $ticket_title; ?></h2>
   </div>
   <h4 class="ticket-price-title <?php echo $ticket_primary_colour; ?>"><?php echo __("From:"); ?></h4>
-  <div class="ticket-price-container">
+  <div role="price" class="ticket-price-container">
     <div class="ticket-price-wrapper">
       <h2 class="ticket-price-dollar-symbol <?php echo $ticket_price_colour; ?>"><?php echo __("$"); ?></h2>
       <h1 class="ticket-price-dollar text-highlight <?php echo $ticket_price_colour; ?>"><?php echo $ticket_price_split[0]; ?></h1>
@@ -32,7 +32,7 @@ $ticket_secondary_colour = $ticket_colour === 'white' ? 'red' : ($ticket_colour 
   </div>
   <h4 class="ticket-price-info <?php echo $ticket_price_colour; ?>"><?php echo $ticket_price_info; ?></h4>
   </div>
-  <div class="ticket-options-wrapper">
+  <div role="options" class="ticket-options-wrapper">
     <div class="ticket-option-title-wrapper">
       <h4 class="ticket-option-title <?php echo $ticket_primary_colour; ?>"><?php echo __("Options:"); ?></h4>
     </div>  

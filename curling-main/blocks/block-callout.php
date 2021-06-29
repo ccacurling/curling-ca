@@ -14,18 +14,18 @@
   $callout_title_size = get_field( 'callout_title_size' );
 ?>
 
-<section class="block-callout callout-colour-<?php echo $callout_background_colour; ?>">
+<section role="callout-block" class="block-callout callout-colour-<?php echo $callout_background_colour; ?>">
   <div class="callout-wrapper callout-wrapper-<?php echo $callout_direction; ?>">
     <?php 
       if ($callout_image) {
     ?>
-      <div class="callout-thumbnail-container">
+      <div role="thumbnail" class="callout-thumbnail-container">
         <img class="callout-thumbnail" src="<?php echo $callout_image['url']; ?>" alt="<?php echo $callout_image['alt']; ?>" />
       </div>
     <?php
       }
     ?>
-    <div class="callout-info callout-info-<?php echo $callout_title_size; ?>">
+    <div role="info" class="callout-info callout-info-<?php echo $callout_title_size; ?>">
       <?php
         if ($callout_title) {
       ?>

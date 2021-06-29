@@ -58,7 +58,7 @@ function get_recent_posts($related_posts_categories) {
 
 <section class="block-related-posts content-full-wrapper">
   <section class="block-callout block-related-callout">
-    <div class="callout-wrapper">
+    <div role="related-posts" class="callout-wrapper">
       <div class="callout-thumbnail-container">
         <?php 
           if ($callout_image1) {
