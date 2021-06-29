@@ -390,7 +390,7 @@
   border-bottom: none;
 }
 
-.no-link
+.no-link {
   &:focus-visible {
     outline: black auto 1px;
   }
