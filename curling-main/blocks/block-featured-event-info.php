@@ -89,7 +89,7 @@ $minutes = floor(($totalseconds - ($days * (3600 * 24)) - ($hours * 3600)) / 60)
 $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($minutes * 60));
 
 ?>
-<div class="block-featured-event js-timer" data-date="<?php echo $start_date_unix; ?>">
+<div role="featured-event" class="block-featured-event js-timer" data-date="<?php echo $start_date_unix; ?>">
   <div class="block-featured-event-wrapper block-featured-event-top-wrapper">
     <div class="block-featured-event-top-left-wrapper">
       <div class="">
@@ -110,7 +110,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
         }
       ?>
     </div>
-    <div class="block-featured-event-top-right-wrapper">
+    <div role="buy-tickets" class="block-featured-event-top-right-wrapper">
       <?php
         if ($buy_tickets_link) {
       ?>
@@ -120,7 +120,7 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
       ?>
     </div>
   </div>
-	<div class="block-featured-event-wrapper">
+	<div role="featured" class="block-featured-event-wrapper">
     <div class="block-featured-event-scores<?php echo $show_time ? '-mobile' : ''; ?>">
       <a class="clear block-featured-event-scores-link" href="" target="">
         <h3 class="inverted arrow-right-item arrow-right-extralarge-white"><?php echo __("See the latest scores"); ?></h3>

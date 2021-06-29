@@ -68,7 +68,7 @@
   // $is_live = true; // TODO: TEST
 ?>
 
-<div class="block-event-info <?php echo $direction == 'left_to_right' ? 'block-event-info-row' : 'block-event-info-column'; ?> js-timer" data-date="<?php echo $start_date_unix; ?>">
+<div role="info" class="block-event-info <?php echo $direction == 'left_to_right' ? 'block-event-info-row' : 'block-event-info-column'; ?> js-timer" data-date="<?php echo $start_date_unix; ?>">
   <?php
     if ($is_live) {
   ?>

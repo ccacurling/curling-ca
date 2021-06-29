@@ -43,7 +43,7 @@ $minutes = floor(($totalseconds - ($days * (3600 * 24)) - ($hours * 3600)) / 60)
 $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($minutes * 60));
 
 ?>
-<div class="block-timer js-timer" data-date="<?php echo $start_date_unix; ?>">
+<div role="timer" class="block-timer js-timer" data-date="<?php echo $start_date_unix; ?>">
 	<div class="block-timer-wrapper">
 		<div class="block-timer-counter">
 			<div class="block-timer-counter-container block-timer-days-container block-timer-border-right">

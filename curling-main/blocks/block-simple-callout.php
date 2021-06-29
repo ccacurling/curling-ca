@@ -16,10 +16,10 @@ if ( !isset($link_label) || empty($link_label) ){
 ?>
 
 <section class="block-simple-callout">
-  <div class="simple-callout-mobile">
+  <div role="callout-mobile" class="simple-callout-mobile">
     <a class="simple-callout-link-mobile" href="<?php echo $link['url']; ?>" target="<?php echo $link['target']; ?>"><h4 class="simple-callout-title-mobile arrow-right-large-gray gray"><?php echo $title; ?></h4></a>
   </div>
-  <div class="simple-callout-desktop">
+  <div role="callout-desktop" class="simple-callout-desktop">
   <h2 class="simple-callout-title"><?php echo $title; ?></h2>
   <p class="simple-callout-description"><?php echo $description; ?></p>
   <?php 

@@ -26,7 +26,7 @@
 ?>
 
 <section id="<?php echo $id ?>" class="event-location-container">
-  <div class="info-section">
+  <div role="info" class="info-section">
     <div class="info-section-container">
       <h2 class="event-location-label"><?php echo __("LOCATION"); ?></h2>
       <p class="event-location"><?php echo $event_location_title ?></p>
@@ -65,7 +65,7 @@
       </div>
     </div>
   </div>
-  <div class="map-section">
+  <div role="map" class="map-section">
     <?php
       if ($event_map_id && !is_admin()) {
         echo do_shortcode( $shortcode );

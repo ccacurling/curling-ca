@@ -19,7 +19,7 @@ $team_small_members = get_field( 'team_members', $team_small_post );
 ?>
 
 <section class="block-team-small">
-  <div class="team-small-container">
+  <div role="team" class="team-small-container">
     <?php
       if ($team_small_title) {
     ?>

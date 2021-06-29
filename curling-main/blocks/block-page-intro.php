@@ -31,7 +31,7 @@ if ($has_featured_label) {
   } 
 ?>
 <div class="page-intro">
-    <div class="page-intro-main">
+    <div role="intro" class="page-intro-main">
 <?php
 
 //All the Presented By Stuff
