@@ -306,7 +306,7 @@
               <li class="search-bar hide">
                 <?php echo do_shortcode("[wpdreams_ajaxsearchlite]"); ?>
               </li>
-              <li class="btn menu-item menu-item-donate">
+              <li class="btn menu-item menu-item-selectable menu-item-donate">
                 <pre class='debug' style='display: none;'>
                 <?php var_dump($donate_link); ?>
                 </pre>
