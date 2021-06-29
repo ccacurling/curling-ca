@@ -64,7 +64,9 @@ echo "</pre>";
 
 <div class="block-prefooter <?php echo $prefooter_enable_background ? '' : 'block-prefooter-simple'; ?> <?php echo !$prefooter_enable_background ? 'block-prefooter-'.$prefooter_background_colour : 'block-prefooter-white'?>">
   <div class="block-prefooter-info <?php echo $prefooter_type ? ($prefooter_type === 'tlbr' ? 'block-prefooter-info-left' : 'block-prefooter-info-right') : ''; ?>">
-    <h1 class="block-prefooter-info-title"><?php echo $prefooter_title; ?></h1>
+    <?php if (!empty($prefooter_title)): ?>
+      <h1 class="block-prefooter-info-title"><?php echo $prefooter_title; ?></h1>
+    <?php endif; ?>
     <p class="block-prefooter-info-body"><?php echo $prefooter_body; ?></p>
     <div class="block-prefooter-info-btns">
       <?php //if ( isset($prefooter_button_one) && !empty($prefooter_button_one) ) { ?>

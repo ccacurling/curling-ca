@@ -55,8 +55,12 @@ if ($has_sponsor) {
 //Headline and Paragraph Stuff
 ?>
 <div class="page-intro-main-container <?php echo $cta ? 'has-cta' : ''; ?>">
+  <?php if (!empty($headline)): ?>
   <h1 class='page-intro-main-headline'><?php echo $headline; ?></h1>
-  <?php echo $content; ?>
+  <?php 
+  endif;
+  echo $content; 
+  ?>
 </div>
 
 <?php

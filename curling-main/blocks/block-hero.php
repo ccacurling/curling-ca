@@ -133,15 +133,15 @@ if ($image) {
         <?php 
           if ($text_position === 'centre') {
         ?>
-          <h2 class="hero-title" style="color:<?php echo $title_colour;?>;">
+          <h1 class="hero-title" style="color:<?php echo $title_colour;?>;">
             <?php echo $headline; ?>
-          </h2>
+          </h1>
         <?php
           } else {
         ?>
-          <h2 class="hero-title" style="color:<?php echo $title_colour;?>;">
+          <h1 class="hero-title" style="color:<?php echo $title_colour;?>;">
             <?php echo $headline; ?>
-          </h2>
+          </h1>
         <?php
           }
         ?>

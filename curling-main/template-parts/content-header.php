@@ -355,7 +355,7 @@
               <?php
                 }
               ?>
-              <h4 class="menu-item-content menu-item-title <?php echo !$item->url || $item->url === '#'? 'menu-item-link' : ''; ?>"><?php echo $item->title; ?></h4>
+                <h4 class="menu-item-content menu-item-title <?php echo !$item->url || $item->url === '#'? 'menu-item-link' : ''; ?>"><?php echo $item->title; ?></h4>
               <?php 
                 if ($item->children != null && count($item->children) > 0) {
               ?>

@@ -56,7 +56,7 @@
 <section class="block-sponsors <?php echo $block_background_class; ?> <?php echo $block_template_class; ?>">
   <div role="sponsors" class="sponsors-content content-fixed">
     <?php
-      if ($sponsor_columns == 1) {
+      if ($sponsor_columns == 1 && !empty($block_title)) {
     ?>
       <h3><?php echo strtoupper( $block_title ); ?></h3>
     <?php

@@ -169,7 +169,9 @@ $seconds = floor($totalseconds - ($days * (3600 * 24)) - ($hours * 3600) - ($min
 		<div class="block-featured-event-info-container">
 			<div class="block-featured-event-info-top">
 				<h3 class="block-featured-event-info-date inverted"><?php echo $start_date_string; ?><?php echo $start_date_string !== $end_date_short_string ? ' - '.$end_date_string : ''; ?></h3>
+      <?php if (!empty($location)): ?>
 				<h4 class="block-featured-event-info-location cool-gray"><?php echo $location; ?></h4>
+      <?php endif; ?>  
       </div>
       <?php
         if ($timer_link) {

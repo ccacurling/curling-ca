@@ -13,7 +13,9 @@
 
 <section class="block-schedule-links">
   <div role="schedule-links" class="schedule-links-heading-container">
+  <?php if (!empty($heading)): ?>  
     <h4><?php echo $heading; ?></h4>
+  <?php endif; ?>
   </div>
   <div class="schedule-links-container js-schedule-links">
   </div>

@@ -27,6 +27,7 @@ $id = rand(10000000, 99999999);
   <div role="image" class="image-carousel-container <?php echo $carousel_accordion_on_mobile ? 'image-carousel-accordion  js-accordion' : ''; ?>" data-id="<?php echo $id; ?>">
     <div class="image-carousel-sub-container <?php echo !$carousel_top_body ? 'image-carousel-nobody' : ''; ?> <?php echo $carousel_accordion_on_mobile ? 'image-carousel-trigger js-accordion-trigger' : ''; ?>"  data-id="<?php echo $id; ?>">
       <?php
+      if (!empty($carousel_type)) {
         if ($carousel_type == 'normal') {
       ?>
         <h3 class="image-carousel-title"><?php echo $carousel_title; ?></h3>
@@ -36,6 +37,7 @@ $id = rand(10000000, 99999999);
         <h2 class="image-carousel-title"><?php echo $carousel_title; ?></h2>
       <?php
         }
+      }
       ?>
       <?php
         if ($carousel_accordion_on_mobile) {
@@ -84,7 +86,7 @@ $id = rand(10000000, 99999999);
             <div class="image-carousel-navigation js-carousel-mobile-nav">
               <div class="image-carousel-navigation-arrows">
                 <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-prev js-carousel-mobile-nav-prev"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-left-nav-white.svg"; ?> alt="<?php echo __("Previous"); ?>"/></button>
-                <h4 class="image-carousel-navigation-pagination js-carousel-mobile-nav-pagination"></h4>
+                <!-- <h4 class="image-carousel-navigation-pagination js-carousel-mobile-nav-pagination"></h4> This was empty with no conditional logic. Commenting out for accessibility. -->
                 <button class="image-carousel-navigation-arrow image-carousel-navigation-arrow-next js-carousel-mobile-nav-next"><img src=<?php echo get_stylesheet_directory_uri()."/images/arrow-right-nav-white.svg"; ?> alt="<?php echo __("Next"); ?>"/></button>
               </div>
             </div>
@@ -153,8 +155,8 @@ $id = rand(10000000, 99999999);
             }
           ?>
           <div class="spacer"></div>
-          <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination desktop"></h4>
-          <h4 class="image-carousel-navigation-pagination js-carousel-mobile-nav-pagination mobile"></h4>
+          <!-- <h4 class="image-carousel-navigation-pagination js-carousel-nav-pagination desktop"></h4> -->
+          <!-- <h4 class="image-carousel-navigation-pagination js-carousel-mobile-nav-pagination mobile"></h4> -->
         </div>
       </div>
 

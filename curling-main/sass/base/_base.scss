@@ -78,8 +78,8 @@ h1 {
     text-transform: uppercase;
     @include responsive-min($responsive-laptop) {
       font-size: 60px;
-      line-height: 52px;
-      letter-spacing: 0.6px;
+      line-height: 50px;
+      letter-spacing: 0.95px;
     }
 }
 
@@ -87,14 +87,14 @@ h2 {
     font-family: $knockout;
     color: $black;
     font-size: 50.4px;
-    letter-spacing: 0.5px;
     line-height: 50.4px;
+    letter-spacing: 0.5px;
     font-weight: 300;
     text-transform: uppercase;
     @include responsive-min($responsive-laptop) {
-      font-size: 35px;
-      line-height: 32px;
-      letter-spacing: 1.2px;
+      font-size: 45px;
+      line-height: 40px;
+      letter-spacing: 0.8px;
     }
 }
 
@@ -102,13 +102,13 @@ h3 {
     font-family: $knockout;
     color: $black;
     font-size: 25px;
-    letter-spacing: 1px;
     line-height: 25px;
+    letter-spacing: 1px;
     font-weight: 300;
     text-transform: uppercase;
     @include responsive-min($responsive-laptop) {
       font-size: 30px;
-      line-height: 28px;
+      line-height: 25px;
       letter-spacing: 1px;
     }
 }

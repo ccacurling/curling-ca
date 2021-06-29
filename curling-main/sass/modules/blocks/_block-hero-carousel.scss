@@ -151,6 +151,9 @@
 
 .hero-carousel-caption {
   display: -webkit-box;
+  font-size: 120px;
+  line-height: 104px;
+  letter-spacing: 0.95px;
   position: absolute;
   bottom: 0;
   margin-bottom: 113px;
@@ -164,8 +167,7 @@
   word-wrap: break-word;
   text-overflow: ellipsis;
   z-index: 1;
-  text-shadow: 0 2px 4px rgba(0,0,0,0.50);
-
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 1px 7px 5px black;
   @include responsive-min($responsive-tablet) {
     left: 130px;
     padding-left: 0;

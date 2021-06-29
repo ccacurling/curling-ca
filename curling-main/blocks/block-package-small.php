@@ -35,12 +35,16 @@ if ($current_lang == "fr") {
 
 <section class="lang-<?php echo $current_lang; ?> block-package-small block-package-small-<?php echo $package_small_colour; ?>">
   <div class="package-small-wrapper">
+  <?php if (!empty($package_small_name)): ?>
     <h2 class="package-small-name"><?php echo $package_small_name; ?></h2>
+  <?php endif; ?>
     <div class="package-small-price-container">
       <div class="package-small-price-wrapper">
         <?php echo $price_markup; ?>
       </div>
-      <h4 class="package-small-price-info <?php echo $package_small_price_colour; ?>"><?php echo $package_small_price_info; ?></h4>
+      <?php if (!empty($package_small_price_colour) && !empty($package_small_price_info)): ?>
+        <h4 class="package-small-price-info <?php echo $package_small_price_colour; ?>"><?php echo $package_small_price_info; ?></h4>
+      <?php endif; ?>
     </div>
     <div class="package-small-info-container">
       <?php echo $package_small_info; ?>
