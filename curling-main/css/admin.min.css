@@ -2230,6 +2230,9 @@
 .edit-post-layout__content .menu-item-subsubcontainer-mobile {
   border-bottom: none;
 }
+.edit-post-layout__content .no-link:focus-visible {
+  outline: black auto 1px;
+}
 .edit-post-layout__content .menu-item {
   display: flex;
   position: relative;

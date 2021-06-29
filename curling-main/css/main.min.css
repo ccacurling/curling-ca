@@ -2405,6 +2405,10 @@ li {
   border-bottom: none;
 }
 
+.no-link:focus-visible {
+  outline: black auto 1px;
+}
+
 .menu-item {
   display: flex;
   position: relative;
