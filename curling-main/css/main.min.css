@@ -133,8 +133,8 @@ h1 {
 @media only screen and (min-width: 999px) {
   h1 {
     font-size: 60px;
-    line-height: 52px;
-    letter-spacing: 0.6px;
+    line-height: 50px;
+    letter-spacing: 0.95px;
   }
 }
 
@@ -142,16 +142,16 @@ h2 {
   font-family: "Knockout";
   color: #000000;
   font-size: 50.4px;
-  letter-spacing: 0.5px;
   line-height: 50.4px;
+  letter-spacing: 0.5px;
   font-weight: 300;
   text-transform: uppercase;
 }
 @media only screen and (min-width: 999px) {
   h2 {
-    font-size: 35px;
-    line-height: 32px;
-    letter-spacing: 1.2px;
+    font-size: 45px;
+    line-height: 40px;
+    letter-spacing: 0.8px;
   }
 }
 
@@ -159,15 +159,15 @@ h3 {
   font-family: "Knockout";
   color: #000000;
   font-size: 25px;
-  letter-spacing: 1px;
   line-height: 25px;
+  letter-spacing: 1px;
   font-weight: 300;
   text-transform: uppercase;
 }
 @media only screen and (min-width: 999px) {
   h3 {
     font-size: 30px;
-    line-height: 28px;
+    line-height: 25px;
     letter-spacing: 1px;
   }
 }
@@ -3412,7 +3412,7 @@ li {
   word-wrap: break-word;
   text-overflow: ellipsis;
   z-index: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 1px 7px 5px black;
 }
 @media only screen and (min-width: 769px) {
   .hero-carousel-caption {

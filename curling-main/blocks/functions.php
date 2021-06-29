@@ -106,13 +106,23 @@ function acf_blocks_init() {
     acf_register_block([
 		'name'				=> 'single-callout',
 		'title'				=> __('Single Callout'),
-		'description'		=> __('Used to a single callout'),
+		'description'		=> __('Used to show a single callout'),
 		'render_callback'	=> 'block_render_callback',
 		'category'			=> 'common',
 		'icon'				=> 'admin-comments',
 		  'keywords'			=> [ 'single', 'callout', 'cta' ]
 		]);
 
+    acf_register_block([
+      'name'				=> 'event-callout',
+      'title'				=> __('Event Callout'),
+      'description'		=> __('Used to display an event callout'),
+      'render_callback'	=> 'block_render_callback',
+      'category'			=> 'common',
+      'icon'				=> 'admin-comments',
+        'keywords'			=> [ 'event', 'callout', 'cta' ]
+      ]);
+      
     acf_register_block([
 			'name'						=> 'prefooter',
 			'title'						=> __('Pre-Footer'),
