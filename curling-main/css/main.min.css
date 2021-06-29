@@ -1769,7 +1769,6 @@ li {
   border: none;
   background-color: #ed1940;
   color: #ffffff;
-  text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   font-family: "Knockout";
@@ -1905,7 +1904,6 @@ li {
   align-items: center;
   color: inherit;
   cursor: pointer;
-  text-decoration: none;
 }
 .btn-link:hover .btn-link-arrow {
   margin-left: 16px;
@@ -4074,7 +4072,6 @@ li {
 }
 .event-location-container .info-section .event-links div p a {
   color: #ed1940;
-  text-decoration: none;
   font-style: normal;
 }
 .event-location-container .info-section .event-links div p a img {
@@ -4809,7 +4806,6 @@ li {
   white-space: nowrap;
 }
 .block-sponsors .sponsors-content .sponsors-section .sponsor-container a {
-  text-decoration: none;
   color: #ed1940;
 }
 .block-sponsors .sponsors-content .sponsors-section .sponsor-container .sponsor-container-link {
@@ -6244,7 +6240,6 @@ p.item-label {
 }
 .text-callouts-group .single-text-callout .callout-details a {
   padding-bottom: 2rem;
-  text-decoration: none;
   color: red;
   text-transform: uppercase;
   align-self: flex-start;
