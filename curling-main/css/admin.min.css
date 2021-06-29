@@ -2272,6 +2272,7 @@
   padding-right: 20px;
 }
 .edit-post-layout__content .menu-item-donate {
+  overflow: unset;
   margin-top: 11px;
   margin-bottom: 14px;
   margin-left: 5px;
