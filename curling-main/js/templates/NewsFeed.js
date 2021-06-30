@@ -232,7 +232,8 @@ jQuery(document).ready(function($) {
         const page = pages[i];
 
         const $paginationBlock = $('<a>', {
-          class: 'news-feed-pagination-block' + (page.isCurrent ? ' news-feed-pagination-block-selected' : '') + (page.large ? ' news-feed-pagination-block-large' : '')
+          class: 'news-feed-pagination-block' + (page.isCurrent ? ' news-feed-pagination-block-selected' : '') + (page.large ? ' news-feed-pagination-block-large' : ''),
+          tabindex: '0'
         })
 
         let $paginationContent;
