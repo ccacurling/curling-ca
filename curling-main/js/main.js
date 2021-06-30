@@ -98,6 +98,9 @@ jQuery(document).ready(function($) {
   $(".wp-block-image > figure > a").each(function() {
     addTabindexAttr($, $(this), -1);
   });
+  $(".twitter-timeline").each(function() {
+    addTabindexAttr($, $(this), -1);
+  });
 
 });
 
