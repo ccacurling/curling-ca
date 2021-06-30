@@ -8284,5 +8284,9 @@ h1.page-intro-main-headline {
     text-align: center;
   }
 }
+/** Form fields focused highlights */
+.fsFieldFocused {
+  outline: 2px solid white;
+}
 
 /*# sourceMappingURL=main.min.css.map */
