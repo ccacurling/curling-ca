@@ -337,7 +337,7 @@
           if ($logo) {
         ?>
           <a href="<?php echo get_home_url(); ?>">
-            <img class="menu-logo" src="<?php echo $logo['url']; ?>" alt="Site Logo" />
+            <img class="menu-logo" tabindex="0" src="<?php echo $logo['url']; ?>" alt="Curling Canada Logo"/>
           </a>
         <?php
           }

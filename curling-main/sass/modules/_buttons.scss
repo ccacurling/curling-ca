@@ -35,9 +35,6 @@
         transition: background-color 0.3s ease-in;
         cursor: pointer;
     }
-    &:focus-visible {
-        outline: black auto 1px;
-    }
 }
 
 .btn-small {
