@@ -8286,7 +8286,7 @@ h1.page-intro-main-headline {
 }
 /** Form fields focused highlights */
 .fsFieldFocused {
-  outline: 2px solid white;
+  outline: 2px solid darkgrey;
 }
 
 /*# sourceMappingURL=main.min.css.map */
