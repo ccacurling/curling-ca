@@ -67,7 +67,9 @@ if (!function_exists("get_image")){
         <div class="hero-carousel-caption-container">
           <?php if ($type === 'post') { ?>
             <img class="hero-carousel-image" src="<?php echo $featured_post_thumbnail; ?>" data-src="<?php echo $featured_post_thumbnail; ?>" alt="<?php echo __("Hero Image"); ?>"/>     
-            <h1 class="hero-carousel-caption inverted"><a class="clear" href="<?php echo $featured_post_url; ?>"><?php echo $featured_post_title; ?></a></h1>
+            <h1 class="hero-carousel-caption inverted">
+              <a class="clear" tabindex="-1" href="<?php echo $featured_post_url; ?>"><?php echo $featured_post_title; ?></a>
+            </h1>
           <?php } else if ($type === 'youtube_video') { ?>
             <div class="hero-carousel-image">
               <a href="<?php echo $video_url; ?>" data-lity>
@@ -90,21 +92,21 @@ if (!function_exists("get_image")){
           <?php if ($type === 'post') { ?>
               <div class="hero-carousel-thumbnail-top">
                 <img class="hero-carousel-thumbnail-image" src="<?php echo $featured_post_thumbnail; ?>" alt="<?php echo __("Thumbnail"); ?>"/>
-                <div class="hero-carousel-thumbnail-content">
+                <div class="hero-carousel-thumbnail-content" tabindex="0">
                   <h3 class="hero-carousel-thumbnail-text"><?php echo $featured_post_title; ?></h3>
                 </div>
               </div>
           <?php } else if ($type === 'youtube_video') { ?>
               <div class="hero-carousel-thumbnail-top">
                 <img class="hero-carousel-thumbnail-image" src="<?php echo $video_thumbnail; ?>" alt="<?php echo __("Thumbnail"); ?>"/>
-                <div class="hero-carousel-thumbnail-content">
+                <div class="hero-carousel-thumbnail-content" tabindex="0">
                   <h3 class="hero-carousel-thumbnail-text"><?php echo $video_title; ?></h3>
                 </div>
               </div>
           <?php } else { ?>
               <div class="hero-carousel-thumbnail-top">
                 <img class="hero-carousel-thumbnail-image" src="<?php echo $video_thumbnail['url']; ?>" alt="<?php echo __("Thumbnail"); ?>"/>
-                <div class="hero-carousel-thumbnail-content">
+                <div class="hero-carousel-thumbnail-content" tabindex="0">
                   <h3 class="hero-carousel-thumbnail-text"><?php echo $video_title; ?></h3>
                 </div>
               </div>
