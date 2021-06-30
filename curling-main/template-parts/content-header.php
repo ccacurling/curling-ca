@@ -346,7 +346,7 @@
           <?php
             foreach ($menu_items as $id => $item) {
           ?>
-            <li class="menu-item <?php echo $item->is_current_page ? 'menu-item-selected' : ''; ?> <?php echo !$item->url || $item->url === '#' ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>">
+            <li class="menu-item <?php echo $item->is_current_page ? 'menu-item-selected' : ''; ?> <?php echo !$item->url || $item->url === '#' ? 'no-link' : ''; ?>" data-menu="<?php echo $id; ?>" tabindex="<?php echo !$item->url || $item->url === '#' ? '0' : ''; ?>">
               <?php
                 if ($item->url && $item->url !== '#') {
               ?>
