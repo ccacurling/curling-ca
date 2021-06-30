@@ -8284,9 +8284,13 @@ h1.page-intro-main-headline {
     text-align: center;
   }
 }
-/** Form fields focused highlights */
-.fsFieldFocused {
-  outline: 2px solid darkgrey;
+*:focus-visible {
+  outline: 2px solid grey !important;
+}
+
+.wpcf7-form.init label {
+  color: black !important;
+  font-weight: bold !important;
 }
 
 /*# sourceMappingURL=main.min.css.map */
