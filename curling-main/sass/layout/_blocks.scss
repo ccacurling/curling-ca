@@ -383,6 +383,9 @@
       width: 100%;
       height: auto;
     }
+    &:focus-visible{
+      outline: 2px solid grey;
+    }
   }
 }
 .wp-block-columns .wp-block-image img {

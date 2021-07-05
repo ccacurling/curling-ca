@@ -987,6 +987,9 @@ li {
   width: 100%;
   height: auto;
 }
+.curling-post-content .wp-block-image:focus-visible {
+  outline: 2px solid grey;
+}
 
 .wp-block-columns .wp-block-image img {
   width: 100%;
