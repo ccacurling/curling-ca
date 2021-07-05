@@ -86,5 +86,21 @@ jQuery(document).ready(function($) {
       // Do nothing
     }
   }
+
+  // Adds tab-index to native Wordpress blocks elements in order to fix accessibility bug of no outline on tab navigation
+  function addTabindexAttr ($, htmlTag, tabindexNum) {
+    console.log("TEST htmltag/this: " + htmlTag);
+    $(htmlTag).attr('tabindex', tabindexNum);
+  }
+  $(".wp-block-image > figure").each(function() {
+    addTabindexAttr($, $(this), 0);
+  });
+  $(".wp-block-image > figure > a").each(function() {
+    addTabindexAttr($, $(this), -1);
+  });
+  $(".twitter-timeline").each(function() {
+    addTabindexAttr($, $(this), -1);
+  });
+
 });
 
